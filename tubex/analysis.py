@@ -141,3 +141,51 @@ def find_gaps(df: pd.DataFrame, demand_titles: list[str], patterns: dict) -> dic
     crowded = df["weekday"].value_counts()
     weekday_gap = [d for d in wd.index if wd[d] >= wd.median() and crowded.get(d, 0) <= crowded.median()]
     return {"topic_gaps": gaps, "format_gap": format_gap, "weekday_gap": weekday_gap}
+
+
+# ③' AIなし（無料）で作る穴場設計レポート ------------------------------------
+def rule_based_strategy(channels: pd.DataFrame, patterns: dict, gaps: dict) -> str:
+    lines = ["#### 1. 競合の伸びている共通点"]
+    lift = patterns["title_lift"]
+    for _, r in lift[lift["差"] > 0.05].iterrows():
+        lines.append(f"- **{r['要素']}**：伸びた動画の{r['伸びた動画での割合']:.0%}が使用（その他は{r['その他での割合']:.0%}）")
+    if patterns["hit_title_len"]:
+        lines.append(f"- タイトルは約**{patterns['hit_title_len']:.0f}字**が伸びやすい")
+    fmt = patterns["by_format"]
+    if not fmt.empty:
+        lines.append(f"- 最もヒット率が高い尺：**{fmt.index[0]}**（ヒット率{fmt['ヒット率'].iat[0]:.0%}）")
+    kw = patterns["keywords"]
+    hot = list(kw["キーワード"].head(5)) if not kw.empty else []
+    if hot:
+        lines.append(f"- 伸びた動画に多い言葉：{'、'.join(hot)}")
+    top = channels.iloc[0]
+    lines.append(f"- 今いちばん勢いがある競合：**{top['title']}**（1日あたり約{top['avg_views_per_day']:,.0f}再生）")
+
+    lines.append("\n#### 2. 穴場ポジション")
+    tg = gaps["topic_gaps"]
+    niches = list(tg["テーマ語"].head(5)) if not tg.empty else []
+    if niches:
+        lines.append(f"- 需要があるのに競合が手薄なテーマ：**{'、'.join(niches)}**")
+        lines.append(f"- 切り口案：「{niches[0]}」を、競合の勝ちパターン（{hot[0] if hot else '数字入りタイトル'}など）で攻める")
+    if not gaps["format_gap"].empty:
+        lines.append(f"- 空いている尺：**{'、'.join(gaps['format_gap'].index)}**")
+    if gaps["weekday_gap"]:
+        lines.append(f"- 投稿が少なく伸びやすい曜日：**{'、'.join(gaps['weekday_gap'])}**")
+
+    lines.append("\n#### 3. 企画タイトルのたたき台")
+    use_num = "数字" in "".join(lift[lift["差"] > 0]["要素"])
+    use_neg = "ネガティブ" in "".join(lift[lift["差"] > 0]["要素"])
+    templates = [
+        "【初心者向け】{n}を始める前に知りたいこと" + ("5選" if use_num else ""),
+        "{n}で" + ("失敗する人の共通点" if use_neg else "結果が出る人の共通点"),
+        "{n}を1週間やってみた結果",
+        "誰も教えない{n}の本当のやり方",
+        "{n}　{h}と比べてどっちがいい？",
+    ]
+    for n in niches[:3] or ["（キーワード指定で表示）"]:
+        for t in templates[:3]:
+            lines.append(f"- " + t.format(n=n, h=hot[0] if hot else "定番"))
+    lines.append("\n#### 4. 最初の30日で見る数字")
+    lines.append("- 各動画の再生数が自分のチャンネル中央値の2倍を超えたか → 超えたテーマを深掘り")
+    lines.append("- 登録者あたり再生（views_per_sub）が1を超えるか → 超えれば登録者以外に届いている")
+    return "\n".join(lines)

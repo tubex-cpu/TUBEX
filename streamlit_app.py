@@ -2,7 +2,7 @@ import os
 
 import streamlit as st
 
-from tubex.analysis import build_video_frame, channel_summary, find_gaps, growth_patterns
+from tubex.analysis import build_video_frame, channel_summary, find_gaps, growth_patterns, rule_based_strategy
 from tubex.youtube import YouTubeClient
 
 st.set_page_config(page_title="TUBEX", layout="wide")
@@ -98,7 +98,10 @@ a.dataframe(g["format_gap"], use_container_width=True)
 b.markdown("**空いている曜日（投稿が少ない × 伸びやすい）**")
 b.write("、".join(g["weekday_gap"]) or "—")
 
-st.markdown("#### 🤖 AIで穴場ポジションと企画10本を設計")
+st.markdown("#### 📝 穴場設計レポート（無料・AI不要）")
+st.markdown(rule_based_strategy(res["channels"], p, g))
+
+st.markdown("#### 🤖 AIでさらに詳しく設計（任意・Anthropic API）")
 if st.button("戦略を生成", disabled=not claude_key):
     from tubex.ai import design_strategy
 
