@@ -111,3 +111,30 @@ export const Icon: React.FC<{name: IconName; t: number; size?: number}> = ({name
     </svg>
   );
 };
+
+// Thumbnail-only original SVG. Cassiopea rests bell-down, oral arms upward.
+// The tired face is a visual metaphor for the next-day activity reduction.
+export const SleepyCassiopea: React.FC = () => (
+  <svg width="445" height="460" viewBox="0 0 445 460" aria-label="寝不足のサカサクラゲを表すイラスト">
+    <ellipse cx="222" cy="419" rx="170" ry="19" fill="#060c29" opacity=".55" />
+    <g fill="none" strokeLinecap="round" strokeLinejoin="round">
+      <g stroke="#db689f" strokeWidth="31">
+        <path d="M155 293 Q125 244 129 192 Q131 151 98 114" />
+        <path d="M194 289 Q168 210 191 165 Q213 119 183 66" />
+        <path d="M239 286 Q273 212 250 160 Q233 119 267 83" />
+        <path d="M284 293 Q327 245 310 189 Q300 151 339 130" />
+      </g>
+      <g stroke="#ff9fc6" strokeWidth="18">
+        <path d="M129 196 L92 171 M131 155 L154 127 M185 205 L154 180 M195 155 L230 128 M186 102 L153 82 M254 182 L287 152 M250 132 L218 107 M315 224 L347 200 M313 169 L284 142" />
+      </g>
+    </g>
+    <path d="M64 303 Q222 251 381 303 C368 375 316 411 222 413 C128 411 77 375 64 303Z" fill="#ff9fc6" stroke="#ffd2e4" strokeWidth="8" />
+    <path d="M68 304 Q222 351 377 304" fill="none" stroke="#db689f" strokeWidth="9" />
+    <g fill="none" stroke="#35274e" strokeWidth="9" strokeLinecap="round">
+      <path d="M133 348 Q153 360 174 346 M266 346 Q286 360 307 348" />
+      <path d="M203 384 Q220 373 237 383" strokeWidth="7" />
+    </g>
+    <path d="M137 367 Q153 374 172 366 M269 366 Q287 375 304 367" fill="none" stroke="#bd6793" strokeWidth="7" strokeLinecap="round" />
+    <path d="M359 255 Q390 288 376 299 Q354 304 359 255Z" fill="#96def2" />
+  </svg>
+);
