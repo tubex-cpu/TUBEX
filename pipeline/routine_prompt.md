@@ -2,7 +2,9 @@
 
 - スケジュール：毎日 8:52（Asia/Tokyo）
 - リポジトリ：`tubex-cpu/TUBEX` を追加（GitHub 接続を有効にする）
-- 環境：`YOUTUBE_API_KEY`（環境変数）と許可ドメイン `www.googleapis.com`（YouTube Data API）・`i.ytimg.com`（サムネ画像）を設定した環境
+- 環境：環境変数 `YOUTUBE_API_KEY` を設定し、ネットワークアクセスの許可ドメイン（Allowed domains）に次を入れた環境
+  - `www.googleapis.com`（YouTube Data API）・`i.ytimg.com`（サムネ画像）
+  - **「パッケージマネージャー（Allow package managers / default list）」のチェックは入れたまま**にする（`apt-get install`（Ubuntu ミラー）と `npm install`（registry.npmjs.org）に必要。外すと動画・音声の準備で失敗する）
 - 指示文（下をそのまま貼る）：
 
 ```
