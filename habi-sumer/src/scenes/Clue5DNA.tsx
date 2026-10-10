@@ -3,15 +3,16 @@ import {Beat, captionFrame} from '../components/Beat';
 import {HaploTree, ReedMarsh} from '../components/Illustrations';
 import {DnaHelix, EgyptGenome, FatherSon, Footprints, HotBone, MesopotamiaMap, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
-import {VerdictStamp} from '../components/VerdictStamp';
+import {GavelVerdict} from '../components/GavelVerdict';
 import {clue5DNACaptions as c} from '../data/captions';
+import {clue5DNAMouth as mouth} from '../data/mouth';
 import {colors} from '../theme';
 
 // 16:38 第5の手がかり 神の遺伝子
 export const Clue5DNA = () => {
 	const {fps} = useVideoConfig();
 	return (
-		<SceneFrame captions={c} label="第5の手がかり" title="日本人だけの「神の遺伝子」？" tint="#2a1f3d">
+		<SceneFrame captions={c} voice="Clue5DNA" mouth={mouth} expressions={{0: 'doubt', 8: 'think', 19: 'stern', 28: 'closed'}} hideAvatar={[[24, 27]]} label="第5の手がかり" title="日本人だけの「神の遺伝子」？" tint="#2a1f3d">
 			<Beat name="神の遺伝子" captions={c} from={0} to={2}>
 				<Visual label="日本人だけが持つ「神の遺伝子」？" labelColor={colors.goldSoft}>
 					<DnaHelix halo />
@@ -52,7 +53,7 @@ export const Clue5DNA = () => {
 				</Visual>
 			</Beat>
 			<Beat name="判決" captions={c} from={24} to={27}>
-				<VerdictStamp verdict="wrong" from={captionFrame(c, 24, 25, fps)} premountFor={fps} />
+				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 24, 25, fps)} />
 			</Beat>
 			<Beat name="珍しい≠優れている" captions={c} from={28}>
 				<Visual label="遺伝子が、本当に記録しているもの">

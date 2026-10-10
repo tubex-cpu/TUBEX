@@ -1,9 +1,10 @@
 import {interpolate, useCurrentFrame} from 'remotion';
 import {Beat} from '../components/Beat';
-import {Habi} from '../components/Habi';
 import {ClueIcon, type ClueKind, ScaleBalance, Visual} from '../components/Scenery';
+import {CourtWithText} from '../components/CourtImage';
 import {SceneFrame} from '../components/SceneFrame';
 import {judgeEntranceCaptions as c} from '../data/captions';
+import {judgeEntranceMouth as mouth} from '../data/mouth';
 import {colors, gothicFamily, minchoFamily} from '../theme';
 
 const clues = ['海峡の岩', '100年前の言葉', '菊の紋', '最新AI', '神の遺伝子'];
@@ -39,16 +40,13 @@ const ClueRow = () => {
 
 // 1:07 ハビ判事登場
 export const JudgeEntrance = () => (
-	<SceneFrame captions={c} label="開廷" title="閉園後の法廷">
+	<SceneFrame captions={c} voice="JudgeEntrance" mouth={mouth} expressions={{0: 'stern', 3: 'doubt'}} hideAvatar={[[0, 2]]} label="開廷" title="閉園後の法廷">
 		<Beat name="ハビ判事" captions={c} from={0} to={2}>
-			<div style={{position: 'absolute', left: 240, top: 150}}>
-				<Habi size={520} gavel />
-			</div>
-			<div style={{position: 'absolute', left: 900, top: 330}}>
-				<div style={{fontFamily: gothicFamily, fontWeight: 900, fontSize: 44, color: colors.gold}}>裁判長</div>
+			<CourtWithText shot="court-listen">
+				<div style={{fontFamily: gothicFamily, fontWeight: 900, fontSize: 44, color: colors.gold}}>閉園後の法廷・裁判長</div>
 				<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 150, color: colors.text}}>ハビ判事</div>
-				<div style={{fontFamily: gothicFamily, fontWeight: 700, fontSize: 44, color: colors.muted}}>信じるのは、証拠だけ。</div>
-			</div>
+				<div style={{fontFamily: gothicFamily, fontWeight: 700, fontSize: 48, color: colors.goldSoft}}>信じるのは、証拠だけ。</div>
+			</CourtWithText>
 		</Beat>
 		<Beat name="今夜の問い" captions={c} from={3} to={3}>
 			<Visual label="日本人は、謎の民族の子孫なのか？">

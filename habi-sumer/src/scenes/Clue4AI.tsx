@@ -3,15 +3,16 @@ import {Beat, captionFrame} from '../components/Beat';
 import {Center, PuzzleFragments, ScoreMeter, TwoLands} from '../components/Illustrations';
 import {BloodDrop, ClueIcons, FragmentGrid, Hourglass, PhoneNews, Roadmap, SpringBabylon, StrengthWeak, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
-import {VerdictStamp} from '../components/VerdictStamp';
+import {GavelVerdict} from '../components/GavelVerdict';
 import {clue4AICaptions as c} from '../data/captions';
+import {clue4AIMouth as mouth} from '../data/mouth';
 import {colors} from '../theme';
 
 // 12:23 第4の手がかり 最新AI
 export const Clue4AI = () => {
 	const {fps} = useVideoConfig();
 	return (
-		<SceneFrame captions={c} label="第4の手がかり" title="AIが暴いた日本との関係？" tint="#1b2a4a">
+		<SceneFrame captions={c} voice="Clue4AI" mouth={mouth} expressions={{0: 'doubt', 2: 'think', 12: 'stern', 27: 'closed'}} hideAvatar={[[23, 26]]} label="第4の手がかり" title="AIが暴いた日本との関係？" tint="#1b2a4a">
 			<Beat name="AIが暴いた" captions={c} from={0} to={1}>
 				<Center>
 					<PhoneNews headlines={['AIが粘土板を解読!?', 'シュメールと日本の関係が判明!?', 'AIが暴いた古代の真実']} />
@@ -59,7 +60,7 @@ export const Clue4AI = () => {
 				</Visual>
 			</Beat>
 			<Beat name="判決" captions={c} from={23} to={26}>
-				<VerdictStamp verdict="wrong" from={captionFrame(c, 23, 24, fps)} premountFor={fps} />
+				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 23, 24, fps)} />
 			</Beat>
 			<Beat name="空白は埋まらない" captions={c} from={27} to={29}>
 				<ClueIcons count={4} />

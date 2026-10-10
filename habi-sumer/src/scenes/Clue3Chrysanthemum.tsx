@@ -3,14 +3,15 @@ import {Beat, captionFrame} from '../components/Beat';
 import {Center, Chrysanthemum, CompareCards, GapTimeline, Label, Rosette} from '../components/Illustrations';
 import {AiLink, Magnifier, PersonSilhouette, SumerianStatue, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
-import {VerdictStamp} from '../components/VerdictStamp';
+import {GavelVerdict} from '../components/GavelVerdict';
 import {clue3ChrysanthemumCaptions as c} from '../data/captions';
+import {clue3ChrysanthemumMouth as mouth} from '../data/mouth';
 
 // 9:22 第3の手がかり 菊の紋
 export const Clue3Chrysanthemum = () => {
 	const {fps} = useVideoConfig();
 	return (
-		<SceneFrame captions={c} label="第3の手がかり" title="皇室の紋がシュメールに？">
+		<SceneFrame captions={c} voice="Clue3Chrysanthemum" mouth={mouth} expressions={{0: 'doubt', 11: 'stern', 19: 'doubt'}} hideAvatar={[[8, 10]]} label="第3の手がかり" title="皇室の紋がシュメールに？">
 			<Beat name="菊の紋" captions={c} from={0} to={0}>
 				<Center>
 					<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
@@ -54,7 +55,7 @@ export const Clue3Chrysanthemum = () => {
 				/>
 			</Beat>
 			<Beat name="判決" captions={c} from={8} to={10}>
-				<VerdictStamp verdict="correct" from={captionFrame(c, 8, 9, fps)} premountFor={fps} />
+				<GavelVerdict verdict="correct" strikeAt={captionFrame(c, 8, 9, fps)} />
 			</Beat>
 			<Beat name="模様と祖先" captions={c} from={11} to={12}>
 				<CompareCards

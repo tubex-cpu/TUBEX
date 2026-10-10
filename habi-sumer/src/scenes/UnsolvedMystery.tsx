@@ -3,11 +3,12 @@ import {Center, Label, UnreadTablet} from '../components/Illustrations';
 import {PhoneNotifications, ScaleBalance, TabletBuried, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {unsolvedMysteryCaptions as c} from '../data/captions';
+import {unsolvedMysteryMouth as mouth} from '../data/mouth';
 import {colors, minchoFamily} from '../theme';
 
 // 23:03 まだ解けていない謎
 export const UnsolvedMystery = () => (
-	<SceneFrame captions={c} label="未決" title="自ら文字を捨てた人々？" tint="#1d2a33">
+	<SceneFrame captions={c} voice="UnsolvedMystery" mouth={mouth} expressions={{0: 'think', 5: 'doubt'}} hideAvatar={[]} label="未決" title="自ら文字を捨てた人々？" tint="#1d2a33">
 		<Beat name="判決を出せない謎" captions={c} from={0} to={0}>
 			<Visual label="ボクにも、まだ判決が出せない">
 				<ScaleBalance undecided />

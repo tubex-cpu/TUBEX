@@ -1,9 +1,10 @@
 import {interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Beat, captionFrame} from '../components/Beat';
-import {Habi} from '../components/Habi';
 import {SumerianStatue} from '../components/Scenery';
+import {CourtWithText} from '../components/CourtImage';
 import {SceneFrame} from '../components/SceneFrame';
 import {summaryCaptions as c} from '../data/captions';
+import {summaryMouth as mouth} from '../data/mouth';
 import {colors, gothicFamily, minchoFamily} from '../theme';
 
 const rows = [
@@ -88,7 +89,7 @@ const StatueWithStories = () => {
 
 // 24:20 まとめ
 export const Summary = () => (
-	<SceneFrame captions={c} label="閉廷" title="今夜の判決">
+	<SceneFrame captions={c} voice="Summary" mouth={mouth} expressions={{0: 'stern', 6: 'closed'}} hideAvatar={[[9]]} label="閉廷" title="今夜の判決">
 		<Beat name="判決ボード" captions={c} from={0} to={5}>
 			<VerdictBoard />
 		</Beat>
@@ -96,16 +97,17 @@ export const Summary = () => (
 			<StatueWithStories />
 		</Beat>
 		<Beat name="結論" captions={c} from={9}>
-			<div style={{position: 'absolute', left: 200, top: 170}}>
-				<Habi size={480} gavel />
-			</div>
-			<div style={{position: 'absolute', left: 820, right: 120, top: 280, fontFamily: minchoFamily, fontWeight: 800, fontSize: 80, lineHeight: 1.4, color: colors.gold}}>
-				本当の話は、
-				<br />
-				作り話に負けないくらい、
-				<br />
-				面白い。
-			</div>
+			<CourtWithText shot="court-verdict">
+				<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 80, lineHeight: 1.45, color: colors.gold}}>
+					本当の話は、
+					<br />
+					作り話に
+					<br />
+					負けないくらい、
+					<br />
+					面白い。
+				</div>
+			</CourtWithText>
 		</Beat>
 	</SceneFrame>
 );

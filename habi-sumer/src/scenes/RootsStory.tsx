@@ -3,10 +3,11 @@ import {JapanGunma, TwoStreams} from '../components/Illustrations';
 import {ClueIcons, Footprints, PersonSilhouette, RockShelter, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {rootsStoryCaptions as c} from '../data/captions';
+import {rootsStoryMouth as mouth} from '../data/mouth';
 
 // 20:51 足元にあった物語
 export const RootsStory = () => (
-	<SceneFrame captions={c} label="調査の先に" title="本当の驚きは、ここから" tint="#2d2a1a">
+	<SceneFrame captions={c} voice="RootsStory" mouth={mouth} expressions={{0: 'closed', 3: 'think', 13: 'closed'}} hideAvatar={[]} label="調査の先に" title="本当の驚きは、ここから" tint="#2d2a1a">
 		<Beat name="手がかりは途切れた" captions={c} from={0} to={2}>
 			<ClueIcons />
 		</Beat>

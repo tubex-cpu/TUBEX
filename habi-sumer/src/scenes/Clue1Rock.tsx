@@ -3,15 +3,16 @@ import {Beat, captionFrame} from '../components/Beat';
 import {Center, ClayTablet, CompareCards, Label, PetroglyphRock, ReedPress} from '../components/Illustrations';
 import {EyeShapes, KanmonMap, OldBook, OldPhoto, PeckingRock, SeaRoutes, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
-import {VerdictStamp} from '../components/VerdictStamp';
+import {GavelVerdict} from '../components/GavelVerdict';
 import {clue1RockCaptions as c} from '../data/captions';
+import {clue1RockMouth as mouth} from '../data/mouth';
 import {colors} from '../theme';
 
 // 1:49 第1の手がかり 海峡の岩
 export const Clue1Rock = () => {
 	const {fps} = useVideoConfig();
 	return (
-	<SceneFrame captions={c} label="第1の手がかり" title="シュメール文字が刻まれた岩？">
+	<SceneFrame captions={c} voice="Clue1Rock" mouth={mouth} expressions={{0: 'doubt', 10: 'think', 15: 'stern', 22: 'think'}} hideAvatar={[[19, 21]]} label="第1の手がかり" title="シュメール文字が刻まれた岩？">
 		<Beat name="場所" captions={c} from={0} to={1}>
 			<Visual label="日本の島に、5000年前の文字が？">
 				<KanmonMap />
@@ -60,7 +61,7 @@ export const Clue1Rock = () => {
 			</Visual>
 		</Beat>
 		<Beat name="判決" captions={c} from={19} to={21}>
-			<VerdictStamp verdict="half" from={captionFrame(c, 19, 20, fps)} premountFor={fps} />
+			<GavelVerdict verdict="half" strikeAt={captionFrame(c, 19, 20, fps)} />
 		</Beat>
 		<Beat name="本当の物語" captions={c} from={22} to={22}>
 			<Visual label="この岩が、本当に語っていること">

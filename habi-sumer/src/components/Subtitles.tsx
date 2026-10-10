@@ -24,8 +24,8 @@ export const Subtitles: React.FC<Props> = ({captions}) => {
 		<div
 			style={{
 				position: 'absolute',
-				left: 160,
-				right: 160,
+				left: 320,
+				right: 120,
 				bottom: 50,
 				display: 'flex',
 				justifyContent: 'center',

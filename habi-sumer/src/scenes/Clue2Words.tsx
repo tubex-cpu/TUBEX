@@ -1,19 +1,19 @@
 import {useVideoConfig} from 'remotion';
 import {Beat, captionFrame} from '../components/Beat';
-import {BigText} from '../components/BigText';
 import {CompareCards, GrammarBlocks, SovPie} from '../components/Illustrations';
-import {Habi} from '../components/Habi';
 import {Converge, Dice, LoneLanguage, OldBook, PersonSilhouette, SumerianStatue, Visual} from '../components/Scenery';
+import {CourtWithText} from '../components/CourtImage';
 import {SceneFrame} from '../components/SceneFrame';
-import {VerdictStamp} from '../components/VerdictStamp';
+import {GavelVerdict} from '../components/GavelVerdict';
 import {clue2WordsCaptions as c} from '../data/captions';
-import {colors} from '../theme';
+import {clue2WordsMouth as mouth} from '../data/mouth';
+import {colors, minchoFamily} from '../theme';
 
 // 5:22 第2の手がかり 100年前の言葉
 export const Clue2Words = () => {
 	const {fps} = useVideoConfig();
 	return (
-		<SceneFrame captions={c} label="第2の手がかり" title="天皇の呼び名に“シュメール”？">
+		<SceneFrame captions={c} voice="Clue2Words" mouth={mouth} expressions={{0: 'think', 11: 'stern', 17: 'doubt', 26: 'think'}} hideAvatar={[[9, 10], [23, 25]]} label="第2の手がかり" title="天皇の呼び名に“シュメール”？">
 			<Beat name="スメラミコト" captions={c} from={0} to={1}>
 				<Visual label="天皇の呼び名に、シュメールが隠れている？">
 					<OldBook title="スメラミコト" />
@@ -32,12 +32,13 @@ export const Clue2Words = () => {
 				<GrammarBlocks />
 			</Beat>
 			<Beat name="ハビの迷い" captions={c} from={9} to={10}>
-				<div style={{position: 'absolute', left: 300, top: 170}}>
-					<Habi size={420} />
-				</div>
-				<BigText size={120} top="42%" color={colors.goldSoft}>
-					<span style={{marginLeft: 500}}>もしかしたら……？</span>
-				</BigText>
+				<CourtWithText shot="court-think">
+					<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 110, color: colors.goldSoft, lineHeight: 1.3}}>
+						もしかしたら、
+						<br />
+						本当に……？
+					</div>
+				</CourtWithText>
 			</Beat>
 			<Beat name="よくある似かた" captions={c} from={11} to={13}>
 				<SovPie />
@@ -64,7 +65,7 @@ export const Clue2Words = () => {
 				</Visual>
 			</Beat>
 			<Beat name="判決" captions={c} from={23} to={25}>
-				<VerdictStamp verdict="half" from={captionFrame(c, 23, 24, fps)} premountFor={fps} />
+				<GavelVerdict verdict="half" strikeAt={captionFrame(c, 23, 24, fps)} />
 			</Beat>
 			<Beat name="偶然の一致" captions={c} from={26}>
 				<Visual label="でも、言葉より確かな証拠がある">

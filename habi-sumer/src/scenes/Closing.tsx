@@ -1,8 +1,9 @@
 import {interpolate, useCurrentFrame} from 'remotion';
 import {Beat} from '../components/Beat';
-import {Habi} from '../components/Habi';
+import {CourtWithText} from '../components/CourtImage';
 import {SceneFrame} from '../components/SceneFrame';
 import {closingCaptions as c} from '../data/captions';
+import {closingMouth as mouth} from '../data/mouth';
 import {colors, gothicFamily, minchoFamily} from '../theme';
 
 const SubscribeButton = () => {
@@ -10,6 +11,7 @@ const SubscribeButton = () => {
 	return (
 		<div
 			style={{
+				display: 'inline-block',
 				fontFamily: gothicFamily,
 				fontWeight: 900,
 				fontSize: 64,
@@ -25,36 +27,46 @@ const SubscribeButton = () => {
 	);
 };
 
-// 25:51 締め
+const big = {fontFamily: minchoFamily, fontWeight: 800, fontSize: 76, color: colors.text, lineHeight: 1.4} as const;
+
+// 締め
 export const Closing = () => (
-	<SceneFrame captions={c}>
-		<div style={{position: 'absolute', left: 200, top: 170}}>
-			<Habi size={480} gavel />
-		</div>
+	<SceneFrame captions={c} voice="Closing" mouth={mouth} hideAvatar={[[0]]}>
 		<Beat name="感想を待っています" captions={c} from={0} to={1}>
-			<div style={{position: 'absolute', left: 820, right: 100, top: 300, fontFamily: minchoFamily, fontWeight: 800, fontSize: 76, color: colors.text, lineHeight: 1.4}}>
-				ご感想・次に裁いてほしい説を
-				<br />
-				<span style={{color: colors.gold}}>コメントで</span>
-			</div>
+			<CourtWithText shot="court-listen">
+				<div style={big}>
+					次に裁いてほしい説を
+					<br />
+					<span style={{color: colors.gold}}>コメントで</span>
+				</div>
+			</CourtWithText>
 		</Beat>
 		<Beat name="次の法廷" captions={c} from={2} to={2}>
-			<div style={{position: 'absolute', left: 820, right: 100, top: 260}}>
+			<CourtWithText shot="court-think">
 				<div style={{fontFamily: gothicFamily, fontWeight: 900, fontSize: 44, color: colors.gold}}>次の法廷</div>
-				<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 68, color: colors.text, lineHeight: 1.35, marginTop: 10}}>
+				<div style={{...big, marginTop: 10}}>
 					誰にも読めない文字
 					<br />
 					人々は自分から
 					<br />
 					文字を捨てたのか
 				</div>
-			</div>
+			</CourtWithText>
 		</Beat>
-		<Beat name="チャンネル登録" captions={c} from={3}>
-			<div style={{position: 'absolute', left: 860, top: 300, display: 'flex', flexDirection: 'column', gap: 50, alignItems: 'flex-start'}}>
+		<Beat name="チャンネル登録" captions={c} from={3} to={3}>
+			<CourtWithText shot="court-verdict">
+				<div style={{...big, marginBottom: 50}}>次の判決を見逃すな</div>
 				<SubscribeButton />
-				<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 70, color: colors.text}}>また閉園後の法廷で会おう。</div>
-			</div>
+			</CourtWithText>
+		</Beat>
+		<Beat name="お辞儀" captions={c} from={4}>
+			<CourtWithText shot="court-bow">
+				<div style={big}>
+					また、
+					<br />
+					閉園後の法廷で。
+				</div>
+			</CourtWithText>
 		</Beat>
 	</SceneFrame>
 );

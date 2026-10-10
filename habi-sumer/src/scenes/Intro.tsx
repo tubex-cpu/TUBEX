@@ -3,11 +3,12 @@ import {Center, ClayTablet, CompareCards, Label, PetroglyphRock, TwoLands} from 
 import {PersonSilhouette, SumerCity, SumerianStatue, VanishingPeople, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {introCaptions as c} from '../data/captions';
+import {introMouth as mouth} from '../data/mouth';
 import {colors} from '../theme';
 
 // 0:00 謎の先出し
 export const Intro = () => (
-	<SceneFrame captions={c}>
+	<SceneFrame captions={c} voice="Intro" mouth={mouth} expressions={{0: 'closed', 5: 'doubt', 9: 'stern'}} hideAvatar={[]}>
 		<Beat name="5000年前の町" captions={c} from={0} to={0}>
 			<Visual label="5000年前、突然現れた謎の民族" labelColor={colors.gold}>
 				<SumerCity />

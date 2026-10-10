@@ -1,6 +1,8 @@
+import {Audio} from '@remotion/media';
 import {linearTiming, TransitionSeries} from '@remotion/transitions';
 import {fade} from '@remotion/transitions/fade';
-import {useVideoConfig} from 'remotion';
+import {interpolate, staticFile, useVideoConfig} from 'remotion';
+import {sceneDurations as d, TRANSITION_FRAMES as T} from './data/timeline';
 import {Clue1Rock} from './scenes/Clue1Rock';
 import {Clue2Words} from './scenes/Clue2Words';
 import {Clue3Chrysanthemum} from './scenes/Clue3Chrysanthemum';
@@ -13,55 +15,96 @@ import {RootsStory} from './scenes/RootsStory';
 import {Summary} from './scenes/Summary';
 import {UnsolvedMystery} from './scenes/UnsolvedMystery';
 
+const BGM_VOLUME = 0.11;
+
+// BGMの区間：前半（冒頭〜第2の手がかり）、中盤（第3〜第5の手がかり）、後半（足元にあった物語〜締め）
+const midStart = d.Intro + d.JudgeEntrance + d.Clue1Rock + d.Clue2Words - 4 * T;
+const lateStart = midStart + d.Clue3Chrysanthemum + d.Clue4AI + d.Clue5DNA - 3 * T;
+
+// 区間の頭と終わりを2秒でフェード
+const fadeVolume = (length: number, fps: number) => (f: number) =>
+	BGM_VOLUME * interpolate(f, [0, 2 * fps, length - 2 * fps, length], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+
 // ハビ判事：日本人とシュメール判決（本編）
-// 各シーンの長さは scripts/build-captions.py の出力（300字/分換算）に合わせている
+// シーンの長さは scripts/build-voice.py がナレーション音声から計算する
 export const HabiSumerVideo = () => {
-	const {fps} = useVideoConfig();
+	const {fps, durationInFrames} = useVideoConfig();
 	return (
-		<TransitionSeries>
-			<TransitionSeries.Sequence name="0:00 謎の先出し" durationInFrames={1944} premountFor={fps}>
-				<Intro />
-			</TransitionSeries.Sequence>
-			<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: 20})} />
-			<TransitionSeries.Sequence name="1:07 ハビ判事登場" durationInFrames={891} premountFor={fps}>
-				<JudgeEntrance />
-			</TransitionSeries.Sequence>
-			<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: 20})} />
-			<TransitionSeries.Sequence name="1:49 第1の手がかり 海峡の岩" durationInFrames={5946} premountFor={fps}>
-				<Clue1Rock />
-			</TransitionSeries.Sequence>
-			<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: 20})} />
-			<TransitionSeries.Sequence name="5:22 第2の手がかり 100年前の言葉" durationInFrames={6672} premountFor={fps}>
-				<Clue2Words />
-			</TransitionSeries.Sequence>
-			<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: 20})} />
-			<TransitionSeries.Sequence name="9:22 第3の手がかり 菊の紋" durationInFrames={5103} premountFor={fps}>
-				<Clue3Chrysanthemum />
-			</TransitionSeries.Sequence>
-			<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: 20})} />
-			<TransitionSeries.Sequence name="12:23 第4の手がかり 最新AI" durationInFrames={7266} premountFor={fps}>
-				<Clue4AI />
-			</TransitionSeries.Sequence>
-			<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: 20})} />
-			<TransitionSeries.Sequence name="16:38 第5の手がかり 神の遺伝子" durationInFrames={7185} premountFor={fps}>
-				<Clue5DNA />
-			</TransitionSeries.Sequence>
-			<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: 20})} />
-			<TransitionSeries.Sequence name="20:51 足元にあった物語" durationInFrames={3816} premountFor={fps}>
-				<RootsStory />
-			</TransitionSeries.Sequence>
-			<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: 20})} />
-			<TransitionSeries.Sequence name="23:03 まだ解けていない謎" durationInFrames={2250} premountFor={fps}>
-				<UnsolvedMystery />
-			</TransitionSeries.Sequence>
-			<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: 20})} />
-			<TransitionSeries.Sequence name="24:20 まとめ" durationInFrames={2640} premountFor={fps}>
-				<Summary />
-			</TransitionSeries.Sequence>
-			<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: 20})} />
-			<TransitionSeries.Sequence name="25:51 締め" durationInFrames={1341} premountFor={fps}>
-				<Closing />
-			</TransitionSeries.Sequence>
-		</TransitionSeries>
+		<>
+			<TransitionSeries>
+				<TransitionSeries.Sequence name="0:00 謎の先出し" durationInFrames={d.Intro} premountFor={fps}>
+					<Intro />
+				</TransitionSeries.Sequence>
+				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
+				<TransitionSeries.Sequence name="ハビ判事登場" durationInFrames={d.JudgeEntrance} premountFor={fps}>
+					<JudgeEntrance />
+				</TransitionSeries.Sequence>
+				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
+				<TransitionSeries.Sequence name="第1の手がかり 海峡の岩" durationInFrames={d.Clue1Rock} premountFor={fps}>
+					<Clue1Rock />
+				</TransitionSeries.Sequence>
+				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
+				<TransitionSeries.Sequence name="第2の手がかり 100年前の言葉" durationInFrames={d.Clue2Words} premountFor={fps}>
+					<Clue2Words />
+				</TransitionSeries.Sequence>
+				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
+				<TransitionSeries.Sequence name="第3の手がかり 菊の紋" durationInFrames={d.Clue3Chrysanthemum} premountFor={fps}>
+					<Clue3Chrysanthemum />
+				</TransitionSeries.Sequence>
+				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
+				<TransitionSeries.Sequence name="第4の手がかり 最新AI" durationInFrames={d.Clue4AI} premountFor={fps}>
+					<Clue4AI />
+				</TransitionSeries.Sequence>
+				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
+				<TransitionSeries.Sequence name="第5の手がかり 神の遺伝子" durationInFrames={d.Clue5DNA} premountFor={fps}>
+					<Clue5DNA />
+				</TransitionSeries.Sequence>
+				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
+				<TransitionSeries.Sequence name="足元にあった物語" durationInFrames={d.RootsStory} premountFor={fps}>
+					<RootsStory />
+				</TransitionSeries.Sequence>
+				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
+				<TransitionSeries.Sequence name="まだ解けていない謎" durationInFrames={d.UnsolvedMystery} premountFor={fps}>
+					<UnsolvedMystery />
+				</TransitionSeries.Sequence>
+				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
+				<TransitionSeries.Sequence name="まとめ" durationInFrames={d.Summary} premountFor={fps}>
+					<Summary />
+				</TransitionSeries.Sequence>
+				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
+				<TransitionSeries.Sequence name="締め" durationInFrames={d.Closing} premountFor={fps}>
+					<Closing />
+				</TransitionSeries.Sequence>
+			</TransitionSeries>
+			<Audio
+				name="BGM 前半「閉園後の法廷」"
+				src={staticFile('bgm/bgm1-night-court.mp3')}
+				loop
+				loopVolumeCurveBehavior="extend"
+				durationInFrames={midStart + fps}
+				volume={fadeVolume(midStart + fps, fps)}
+				premountFor={fps}
+			/>
+			<Audio
+				name="BGM 中盤「調査」"
+				src={staticFile('bgm/bgm2-investigation.mp3')}
+				loop
+				loopVolumeCurveBehavior="extend"
+				from={midStart - fps}
+				durationInFrames={lateStart - midStart + 2 * fps}
+				volume={fadeVolume(lateStart - midStart + 2 * fps, fps)}
+				premountFor={fps}
+			/>
+			<Audio
+				name="BGM 後半「足元にあった物語」"
+				src={staticFile('bgm/bgm3-roots.mp3')}
+				loop
+				loopVolumeCurveBehavior="extend"
+				from={lateStart - fps}
+				durationInFrames={durationInFrames - lateStart + fps}
+				volume={fadeVolume(durationInFrames - lateStart + fps, fps)}
+				premountFor={fps}
+			/>
+		</>
 	);
 };
