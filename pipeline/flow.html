@@ -1,0 +1,176 @@
+<title>TUBEX 制作フロー</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+<style>
+/* Layout: swimlane board (rows = 担当, columns = 工程 in order), then the daily automation loop. Channel palette: night navy + sleep yellow. */
+:root {
+  --bg: #f4f5fb;
+  --surface: #ffffff;
+  --fg: #141a3a;
+  --muted: #5b6386;
+  --line: #d9dcec;
+  --navy: #1d2a6b;
+  --claude: #e08a1e;
+  --claude-soft: #fdf0dc;
+  --codex: #128a7a;
+  --codex-soft: #dcf3ef;
+  --boss: #d2386c;
+  --boss-soft: #fde3ec;
+  --gate: #ffd23f;
+  --font-display: "Dela Gothic One", "Noto Sans JP", sans-serif;
+  --font-body: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1030; --surface: #141c48; --fg: #eef0ff; --muted: #a7aed6; --line: #2a3570; --navy: #c9d1ff;
+    --claude: #ffb054; --claude-soft: #3a2a12; --codex: #4fd1bd; --codex-soft: #0f3532;
+    --boss: #ff7aa6; --boss-soft: #3d1426; --gate: #ffd23f; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b1030; --surface: #141c48; --fg: #eef0ff; --muted: #a7aed6; --line: #2a3570; --navy: #c9d1ff;
+  --claude: #ffb054; --claude-soft: #3a2a12; --codex: #4fd1bd; --codex-soft: #0f3532;
+  --boss: #ff7aa6; --boss-soft: #3d1426; --gate: #ffd23f; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); line-height: 1.6; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 32px 56px; display: grid; gap: 40px; }
+h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(28px, 5vw, 44px); line-height: 1.2; margin: 0; color: var(--navy); text-wrap: balance; }
+h2 { font-family: var(--font-display); font-weight: 400; font-size: 22px; margin: 0 0 14px; color: var(--navy); }
+.lead { margin: 8px 0 0; color: var(--muted); max-width: 62ch; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 16px; font-size: 13px; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.chip { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
+.chip.do-claude { background: var(--claude); color: #1b1200; }
+.chip.do-codex { background: var(--codex); color: #00201b; }
+.chip.audit-claude { border: 2px solid var(--claude); color: var(--claude); }
+.chip.audit-codex { border: 2px solid var(--codex); color: var(--codex); }
+.chip.gate { background: var(--gate); color: #1d2a6b; }
+
+/* Swimlane board */
+.board-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.board { display: grid; grid-template-columns: 120px repeat(7, minmax(128px, 1fr)); min-width: 1010px; }
+.board > div { padding: 12px 10px; border-bottom: 1px solid var(--line); border-left: 1px solid var(--line); }
+.board > .lane { border-left: none; font-weight: 900; display: flex; flex-direction: column; justify-content: center; gap: 2px; }
+.lane small { font-weight: 500; font-size: 11px; color: var(--muted); }
+.lane.claude { color: var(--claude); }
+.lane.codex { color: var(--codex); }
+.lane.boss { color: var(--boss); }
+.board > .last { border-bottom: none; }
+.stage { background: var(--bg); text-align: center; }
+.stage b { display: block; font-size: 15px; }
+.stage .num { font-family: var(--font-display); font-size: 20px; color: var(--navy); font-variant-numeric: tabular-nums; }
+.stage.thumb { background: var(--codex-soft); }
+.cell { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-align: center; font-size: 12px; color: var(--muted); min-height: 76px; }
+.cell .file { font-family: ui-monospace, Menlo, monospace; font-size: 11px; }
+.cell.empty::after { content: "—"; color: var(--line); font-size: 18px; }
+
+/* Rule cards */
+.rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.rule { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; min-width: 0; }
+.rule h3 { margin: 0 0 6px; font-size: 15px; }
+.rule p { margin: 0; font-size: 14px; color: var(--muted); }
+
+/* Daily loop */
+.loop { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; counter-reset: step; }
+.step { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 16px 16px 52px; min-width: 0; }
+.step::before { counter-increment: step; content: counter(step); position: absolute; left: 14px; top: 14px; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-family: var(--font-display); font-size: 14px; background: var(--navy); color: var(--bg); }
+.step h3 { margin: 0 0 4px; font-size: 15px; }
+.step p { margin: 0; font-size: 13px; color: var(--muted); }
+.step.who-claude { border-top: 4px solid var(--claude); }
+.step.who-codex { border-top: 4px solid var(--codex); }
+.step.who-boss { border-top: 4px solid var(--boss); }
+.note { font-size: 13px; color: var(--muted); margin-top: 12px; }
+.yen { display: flex; flex-wrap: wrap; gap: 8px; }
+.yen span { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; font-size: 13px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>TUBEX 制作フロー</h1>
+    <p class="lead">雑学チャンネル1本ができるまで。社長が手を動かすのは「企画OK」と「公開OK」の2回だけで、それ以外は Claude Code と ChatGPT Codex が作る・監査するを繰り返して進めます。</p>
+    <div class="legend">
+      <span><i class="chip do-claude">実施</i> Claude Code が作る</span>
+      <span><i class="chip audit-codex">監査</i> Codex が厳しくチェック</span>
+      <span><i class="chip do-codex">実施</i> Codex が作る（サムネのみ）</span>
+      <span><i class="chip audit-claude">監査</i> Claude がチェック（サムネのみ）</span>
+      <span><i class="chip gate">承認</i> 社長の確認</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>工程と担当</h2>
+    <div class="board-scroll">
+      <div class="board">
+        <div class="lane"><small>担当 ＼ 工程</small></div>
+        <div class="stage"><span class="num">1</span><b>リサーチ</b></div>
+        <div class="stage"><span class="num">2</span><b>競合調査</b></div>
+        <div class="stage"><span class="num">3</span><b>企画立案</b></div>
+        <div class="stage"><span class="num">4</span><b>タイトル</b></div>
+        <div class="stage"><span class="num">5</span><b>台本</b></div>
+        <div class="stage thumb"><span class="num">6</span><b>サムネ</b></div>
+        <div class="stage"><span class="num">7</span><b>動画制作</b></div>
+
+        <div class="lane claude">Claude Code<small>サブスク枠内</small></div>
+        <div class="cell"><i class="chip do-claude">実施</i><span class="file">01_research.md</span>出典付きの事実だけ</div>
+        <div class="cell"><i class="chip do-claude">実施</i><span class="file">02_competitors.md</span></div>
+        <div class="cell"><i class="chip do-claude">実施</i><span class="file">03_plan.md</span></div>
+        <div class="cell"><i class="chip do-claude">実施</i><span class="file">04_titles.md</span>3案＋推奨</div>
+        <div class="cell"><i class="chip do-claude">実施</i><span class="file">script.json</span>映像の元データ</div>
+        <div class="cell"><i class="chip audit-claude">監査</i>スマホ視認性・約束の回収・権利</div>
+        <div class="cell"><i class="chip do-claude">実施</i>Remotion で mp4</div>
+
+        <div class="lane codex">ChatGPT Codex<small>プラン枠内</small></div>
+        <div class="cell"><i class="chip audit-codex">監査</i>一次情報か</div>
+        <div class="cell"><i class="chip audit-codex">監査</i>伸びる理由の仮説</div>
+        <div class="cell"><i class="chip audit-codex">監査</i>既存動画との違い</div>
+        <div class="cell"><i class="chip audit-codex">監査</i>煽りと中身の乖離</div>
+        <div class="cell"><i class="chip audit-codex">監査</i>事実・誇張・尺</div>
+        <div class="cell"><i class="chip do-codex">実施</i><span class="file">thumbnail.png</span>指示書 06 に従う</div>
+        <div class="cell"><i class="chip audit-codex">監査</i>誤字・はみ出し</div>
+
+        <div class="lane boss last">社長<small>最終確認だけ</small></div>
+        <div class="cell last empty"></div>
+        <div class="cell last empty"></div>
+        <div class="cell last"><i class="chip gate">ゲートA</i>企画OK？</div>
+        <div class="cell last empty"></div>
+        <div class="cell last empty"></div>
+        <div class="cell last empty"></div>
+        <div class="cell last"><i class="chip gate">ゲートB</i>公開OK？</div>
+      </div>
+    </div>
+    <p class="note">台本（5）をサムネ（6）より先にするのは、サムネで約束した内容が本編で回収されているかを監査で確かめるためです。</p>
+  </section>
+
+  <section>
+    <h2>監査のルール</h2>
+    <div class="rules">
+      <div class="rule"><h3>判定は2択</h3><p>「合格」か「差し戻し」だけ。合格するまで次の工程に進みません。</p></div>
+      <div class="rule"><h3>監査役は直さない</h3><p>指摘するだけ。直すのは必ず作った側です。</p></div>
+      <div class="rule"><h3>3回で社長へ</h3><p>同じ成果物で差し戻しが3回続いたら、AI 同士の堂々巡りを止めて社長に判断を仰ぎます。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>毎朝の自動サイクル</h2>
+    <div class="loop">
+      <div class="step who-claude"><h3>8:52 自動起動</h3><p>Claude Code が進捗表（STATUS.md）を読み、次にやる工程を決める。</p></div>
+      <div class="step who-claude"><h3>作る・直す</h3><p>工程を実施し、Codex の差し戻しがあれば全部直す。GitHub の PR に上げる。</p></div>
+      <div class="step who-codex"><h3>Codex に依頼</h3><p>PR に「@codex review」で監査を、サムネ工程では作成を依頼する。</p></div>
+      <div class="step who-codex"><h3>Codex が判定</h3><p>合格か差し戻しかを PR に書く。サムネは Codex が作り、Claude が監査する。</p></div>
+      <div class="step who-boss"><h3>ゲートで社長へ</h3><p>企画と完成品のときだけ、PR で確認依頼が届く。承認すると翌朝から次へ。</p></div>
+    </div>
+    <p class="note">利用上限に達した日は何もせず止まり、翌朝に再開します。</p>
+  </section>
+
+  <section>
+    <h2>追加費用ゼロの約束</h2>
+    <div class="yen">
+      <span>Claude はサブスク枠内のみ（追加使用量 OFF）</span>
+      <span>Codex はプラン枠内のみ（クレジット購入なし）</span>
+      <span>API キーを使わない</span>
+      <span>GitHub Actions を使わない</span>
+      <span>有料素材・有料音声を使わない</span>
+    </div>
+  </section>
+</div>

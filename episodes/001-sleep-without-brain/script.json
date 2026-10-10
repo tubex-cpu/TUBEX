@@ -1,0 +1,100 @@
+{
+  "episodeId": "001-sleep-without-brain",
+  "fps": 30,
+  "title": "睡眠は脳より先に生まれた？クラゲとヒドラの眠りの謎",
+  "thumbnail": {
+    "line1": "脳がないのに",
+    "line2": "寝不足になる",
+    "sub": "",
+    "icon": "jellyfish"
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "seconds": 6.5,
+      "icon": "hydra",
+      "kicker": "結論から言います",
+      "headline": "脳がない生き物も、\n眠ります。",
+      "narration": "結論から言います。脳を持たない生き物も、眠ります。",
+      "audio": "episodes/001-sleep-without-brain/hook.mp3"
+    },
+    {
+      "id": "question",
+      "seconds": 12.5,
+      "icon": "brain",
+      "kicker": "よくある常識",
+      "headline": "睡眠＝\n「脳を休めるため」？",
+      "body": "もし本当にそうなら、脳がない生き物は眠る必要がないはず。",
+      "narration": "睡眠は脳を休めるためのもの。そう習った人も多いはずです。でも、もし本当にそうなら、脳がない生き物は眠る必要がないですよね。",
+      "audio": "episodes/001-sleep-without-brain/question.mp3"
+    },
+    {
+      "id": "hydra",
+      "seconds": 23.5,
+      "icon": "hydra",
+      "kicker": "事実①  ヒドラ",
+      "headline": "脳のないヒドラにも\n「眠りに似た状態」",
+      "body": "脳を持たない淡水の小さな動物。約4時間ごとに活動と休止をくり返し、眠りに関わる遺伝子も見つかった。",
+      "source": "Kanaya et al., Science Advances (2020) 九州大学ほか",
+      "narration": "一つ目はヒドラ。脳を持たない、淡水にすむ小さな動物です。2020年、九州大学などの研究チームは、ヒドラにも眠りに似た状態があり、約4時間ごとに活動と休止をくり返すことを報告しました。眠りに関わる遺伝子も見つかっています。",
+      "audio": "episodes/001-sleep-without-brain/hydra.mp3"
+    },
+    {
+      "id": "jellyfish",
+      "seconds": 18.5,
+      "icon": "jellyfish",
+      "kicker": "事実②  サカサクラゲ",
+      "headline": "夜更かしさせると\n翌日ぐったり",
+      "body": "夜は拍動が約3分の1減り、刺激への反応も鈍る。夜に休ませないと、翌日の活動が落ちた。",
+      "source": "Nath et al., Current Biology (2017) カリフォルニア工科大学",
+      "narration": "二つ目はサカサクラゲ。夜になると体の拍動がおよそ3分の1減り、エサなどの刺激への反応も鈍くなります。さらに夜に休ませないと、翌日の動きが落ちました。まるで寝不足の人間のようです。",
+      "audio": "episodes/001-sleep-without-brain/jellyfish.mp3"
+    },
+    {
+      "id": "frigatebird",
+      "seconds": 17.5,
+      "icon": "bird",
+      "kicker": "事実③  グンカンドリ",
+      "bigNumber": "1日42分",
+      "headline": "飛びながら眠る鳥",
+      "body": "最長約10日の連続飛行中、脳を片側ずつ休ませて眠る。陸では1日12時間以上、飛行中は平均42分。",
+      "source": "Rattenborg et al., Nature Communications (2016) マックス・プランク研究所",
+      "narration": "三つ目はグンカンドリ。何日も海の上を飛び続けるこの鳥は、脳を片側ずつ休ませながら、飛んだまま眠ります。陸では1日12時間以上眠るのに、飛行中の睡眠は平均でたった42分でした。",
+      "audio": "episodes/001-sleep-without-brain/frigatebird.mp3"
+    },
+    {
+      "id": "why",
+      "seconds": 21.0,
+      "icon": "dna",
+      "kicker": "ここから言えること",
+      "headline": "睡眠は脳より\n先に生まれた？",
+      "body": "脳がない動物にも眠りに似た状態がある。眠りの起源は脳の誕生より古い可能性がある。",
+      "narration": "脳を持たない動物にも、眠りに似た状態がある。そこから研究者たちは、眠りの仕組みが脳の誕生より前からあった可能性を指摘しています。ただし、これはまだ仮説の段階です。",
+      "audio": "episodes/001-sleep-without-brain/why.mp3"
+    },
+    {
+      "id": "glymphatic",
+      "seconds": 35.5,
+      "icon": "brain",
+      "kicker": "では脳がある動物は？",
+      "bigNumber": "約60%",
+      "headline": "寝ている間、\nマウスの脳は“掃除中”？",
+      "body": "2013年のマウス実験では睡眠中に細胞のすき間が約60%広がった。2024年には注入した色素の排出が睡眠中に遅い結果も。",
+      "source": "Xie et al., Science (2013) / Miao et al., Nature Neuroscience (2024)",
+      "narration": "では、脳を持つ動物ではどうでしょう。2013年のマウスの実験では、眠っている間に脳の細胞のすき間が約60パーセント広がり、老廃物が流れ出しやすくなると報告されました。ただし2024年の別のマウスの実験では、脳に注入した蛍光色素の排出が、睡眠中のほうが遅いという結果も出ていて、まだ決着はついていません。",
+      "audio": "episodes/001-sleep-without-brain/glymphatic.mp3"
+    },
+    {
+      "id": "outro",
+      "seconds": 15.5,
+      "icon": "moon",
+      "kicker": "まとめ",
+      "headline": "脳がなくても眠る。\n今夜は少し早く寝よう。",
+      "body": "面白かったらチャンネル登録で、次の雑学もどうぞ。",
+      "narration": "脳がない生き物でさえ眠る。眠りはそれだけ、生き物にとって根本的なものなのかもしれません。今夜は少し早く寝てみてください。面白かったら、チャンネル登録をお願いします。",
+      "credit": "音声：Open JTalk（HTS voice nitech-jp-atr503-m001 / 名古屋工業大学 / CC BY 3.0 creativecommons.org/licenses/by/3.0/）　BGM：自作",
+      "audio": "episodes/001-sleep-without-brain/outro.mp3"
+    }
+  ],
+  "bgm": "episodes/001-sleep-without-brain/bgm.mp3"
+}
