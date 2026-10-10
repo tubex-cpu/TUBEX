@@ -33,7 +33,7 @@
 | 3 | 企画立案 | Claude | Codex | `03_plan.md` | **ゲートA：企画OK？** |
 | 4 | タイトル | Claude | Codex | `04_titles.md`（3案＋推奨） | – |
 | 5 | 台本 | Claude | Codex | `script.json`（映像の唯一の元データ）＋ `05_script.md` | – |
-| 6 | サムネ | **Codex** | **Claude** | `06_thumbnail.md`（狙い）＋ `video/src/Thumbnail.tsx` ＋ `script.json` の `thumbnail` ＋ `thumbnail.png` | – |
+| 6 | サムネ | **Codex** | **Claude** | `06_thumbnail.md`（狙い・競合の探し方）→ `06b_thumbnail_benchmark.md`（競合サムネ5本以上の分析・採用パターン・差別化）→ `video/src/Thumbnail.tsx` ＋ `script.json` の `thumbnail` ＋ `thumbnail.png` | – |
 | 7 | 動画制作 | Claude（Remotion） | Codex | `video/out/<id>.mp4` | **ゲートB：公開OK？** |
 
 社長が止めるのは **ゲートA（企画）とゲートB（完成品）の2回だけ**。それ以外は AI 同士の監査で進む。
@@ -57,6 +57,7 @@
 - 状態は各エピソードの `STATUS.md` のチェックボックスで管理する（どこまで進んだか一目で分かる）。
 - 利用上限に当たった場合は何もせず終了し、次回の Routine で再開する（課金して続行はしない）。
 - 同じ成果物で差し戻しが3回続いたら、AI 同士で堂々巡りしないよう停止して社長に判断を仰ぐ（例外的な停止）。
+- サムネは必ず競合サムネ5本以上を分析してから作る。勝ちパターンは取り入れ、差別化を2点以上入れる。丸パクリ（同じ構図＋配色＋文言、他者画像の使用・トレース）は禁止。
 - Codex のサムネは「コード（Remotion）で描く」方式。ChatGPT アプリの画像生成は GitHub から自動で呼べないため、使う場合は手動工程になる。
 
 ## コマンド
