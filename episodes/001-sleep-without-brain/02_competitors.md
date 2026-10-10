@@ -7,8 +7,8 @@
 ## 参考チャンネル
 | チャンネル | 規模の目安 | 特徴 | 盗めるポイント |
 |---|---|---|---|
-| 山田の雑学ch | 登録者 約23万・約690本（[Social Blade](https://socialblade.com/youtube/handle/yamada-zatsugaku/videos)） | 大量投稿型。身近な疑問を短く解説 | 投稿本数が資産。テンプレ化して量産 |
-| 雑学ミステリー通信 | 登録者 約23万（2024年11月時点, [vidIQ](https://vidiq.com/youtube-stats/channel/UC8RM5W-eUIQhgkb4NSJ0baA)） | 都市伝説・オカルト寄りで好奇心を煽る | 「謎」「正体」系のワード |
+| 山田の雑学ch | 登録者 約23万・約690本（[Social Blade](https://socialblade.com/youtube/handle/yamada-zatsugaku/videos) 掲載値。取得日 2026-10-10・Web検索経由、Social Blade側のデータ時点は不明） | 大量投稿型。身近な疑問を短く解説 | 投稿本数が資産。テンプレ化して量産 |
+| 雑学ミステリー通信 | 登録者 約23万（[vidIQ](https://vidiq.com/youtube-stats/channel/UC8RM5W-eUIQhgkb4NSJ0baA) のデータ時点 2024-11-14。取得日 2026-10-10・Web検索経由） | 都市伝説・オカルト寄りで好奇心を煽る | 「謎」「正体」系のワード |
 | ゆっくり解説系の人間雑学 | 多数 | 「意外と知らない人間の雑学」を定期配信 | 人体・睡眠ネタは鉄板ジャンル |
 
 ## 市場の傾向（[参考1](https://kamuitracker.com/blog/archives/13781), [参考2](https://media.brain-market.com/youtube-research-brain/)）

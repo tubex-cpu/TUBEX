@@ -62,13 +62,13 @@
 ## コマンド
 
 ```bash
-# 初回のみ（無料・Ubuntu 公式パッケージ）：ナレーション音声エンジン
-sudo apt-get install -y open-jtalk open-jtalk-mecab-naist-jdic hts-voice-nitech-jp-atr503-m001
+# 初回のみ（無料・Ubuntu 公式パッケージ）：音声エンジン・音声変換・BGM合成に必要なもの
+sudo apt-get install -y open-jtalk open-jtalk-mecab-naist-jdic hts-voice-nitech-jp-atr503-m001 ffmpeg python3-numpy
 
 python3 video/scripts/make_audio.py 001-sleep-without-brain  # ナレーション＋BGM生成、尺を script.json に反映
 cd video
 npm install
-npm run render -- 001-sleep-without-brain             # サムネ + 動画
+npm run render -- 001-sleep-without-brain             # サムネ + 動画（監査用の軽量版 episodes/<id>/preview.mp4 も出力）
 npm run render -- 001-sleep-without-brain --thumb-only # サムネだけ
 npm run studio                                         # ブラウザでプレビュー・微調整
 ```

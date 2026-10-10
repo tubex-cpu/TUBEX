@@ -1,7 +1,7 @@
 {
   "episodeId": "001-sleep-without-brain",
   "fps": 30,
-  "title": "脳がない生き物も眠る。じゃあ人間は何のために寝ているのか",
+  "title": "脳がない生き物も眠る。睡眠は脳より先に生まれた？",
   "thumbnail": {
     "line1": "脳ナシでも",
     "line2": "寝る。",
@@ -47,7 +47,7 @@
       "headline": "夜更かしさせると\n翌日ぐったり",
       "body": "夜は拍動が約3分の1減り、刺激への反応も鈍る。夜に休ませないと、翌日の活動が落ちた。",
       "source": "Nath et al., Current Biology (2017) カリフォルニア工科大学",
-      "narration": "二つ目はサカサクラゲ。夜になると体の拍動がおよそ3分の1に減り、エサなどの刺激への反応も鈍くなります。さらに夜に休ませないと、翌日の動きが落ちました。まるで寝不足の人間のようです。",
+      "narration": "二つ目はサカサクラゲ。夜になると体の拍動がおよそ3分の1減り、エサなどの刺激への反応も鈍くなります。さらに夜に休ませないと、翌日の動きが落ちました。まるで寝不足の人間のようです。",
       "audio": "episodes/001-sleep-without-brain/jellyfish.mp3"
     },
     {
@@ -92,7 +92,7 @@
       "headline": "脳がなくても眠る。\n今夜は少し早く寝よう。",
       "body": "面白かったらチャンネル登録で、次の雑学もどうぞ。",
       "narration": "脳がない生き物でさえ眠る。眠りはそれだけ、生き物にとって根本的なものなのかもしれません。今夜は少し早く寝てみてください。面白かったら、チャンネル登録をお願いします。",
-      "credit": "音声：Open JTalk（HTS voice nitech-jp-atr503-m001 / CC BY 3.0 名古屋工業大学）　BGM：自作",
+      "credit": "音声：Open JTalk（HTS voice nitech-jp-atr503-m001 / 名古屋工業大学 / CC BY 3.0 creativecommons.org/licenses/by/3.0/）　BGM：自作",
       "audio": "episodes/001-sleep-without-brain/outro.mp3"
     }
   ],

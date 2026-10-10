@@ -2,6 +2,7 @@
 // Renders episodes/<name>/script.json to video/out/<name>.mp4 and thumbnail.png. Fully local, no paid APIs.
 import {bundle} from '@remotion/bundler';
 import {renderMedia, renderStill, selectComposition} from '@remotion/renderer';
+import {execFileSync} from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -47,4 +48,8 @@ if (!thumbOnly) {
     },
   });
   console.log('video:', out);
+  // Lightweight copy committed next to the episode so auditors and the owner can watch it from the PR.
+  const preview = path.join(episodeDir, 'preview.mp4');
+  execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', out, '-vf', 'scale=1280:-2', '-c:v', 'libx264', '-crf', '28', '-preset', 'slow', '-c:a', 'aac', '-b:a', '96k', '-movflags', '+faststart', preview]);
+  console.log('preview:', preview);
 }
