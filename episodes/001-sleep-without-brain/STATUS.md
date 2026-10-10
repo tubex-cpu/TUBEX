@@ -10,9 +10,9 @@
 | – | ゲートA：社長が企画を承認 | | | ✅ 承認（2026-10-10、チャットで「OK」） |
 | 4 | タイトル | ✅ Claude | ✅ Codex | 合格（c056e12） |
 | 5 | 台本 | ✅ Claude | ✅ Codex | 合格（c056e12） |
-| 6 | サムネ | ⬜ Codex（指示書 `06_thumbnail.md` 作成済み） | ⬜ Claude | Codex に作成依頼済み（2026-10-10 ゲートA承認後に再依頼。現行 `thumbnail.png` は Claude の仮版） |
+| 6 | サムネ | ✅ Codex（3b2da6d） | ✅ Claude | 合格（2026-10-10、差し戻し0回） |
 | 7 | 動画制作 | ✅ Claude | ✅ Codex | 合格（c056e12） |
-| – | ゲートB：社長が完成品を承認 → 投稿 | | | 未 |
+| – | ゲートB：社長が完成品を承認 → 投稿 | | | **承認待ち**（`preview.mp4` / `thumbnail.png` / `07_description.md`） |
 
 PR：https://github.com/tubex-cpu/TUBEX/pull/1（2026-10-10 Codex に監査・サムネ作成を依頼済み）
 
