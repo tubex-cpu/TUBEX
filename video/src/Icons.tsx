@@ -138,3 +138,43 @@ export const SleepyCassiopea: React.FC = () => (
     <path d="M359 255 Q390 288 376 299 Q354 304 359 255Z" fill="#96def2" />
   </svg>
 );
+
+// Thumbnail-only conceptual jellyfish pictogram, not a species/anatomy diagram.
+// Generic bell-downward-tentacles silhouette is permitted by 06_thumbnail.md.
+// Closed eyes and nightcap are metaphors for sleep, not measured animal features.
+export const SleepingJellyfishThumbnail: React.FC = () => (
+  <svg width="520" height="610" viewBox="0 0 520 610" aria-label="閉じた目とナイトキャップで睡眠を表すクラゲの模式イラスト">
+    <defs>
+      <linearGradient id="sleep-jelly-bell" x1="0" y1="0" x2="0" y2="1">
+        <stop stopColor="#fffaff" />
+        <stop offset="1" stopColor="#efb2ec" />
+      </linearGradient>
+    </defs>
+    {/* Thick silhouette and broad tentacles stay recognizable at 320 px. */}
+    <g fill="none" strokeLinecap="round">
+      <g stroke="#42265f" strokeWidth="35">
+        <path d="M109 326 C73 393 143 420 99 480 C75 514 104 536 131 530" />
+        <path d="M185 330 C148 409 230 425 192 493 C175 532 187 564 217 574" />
+        <path d="M264 332 C302 401 233 443 278 487 C309 519 298 554 282 577" />
+        <path d="M351 327 C397 391 328 429 377 469 C404 491 395 520 373 541" />
+      </g>
+      <g stroke="#f2c4f4" strokeWidth="19">
+        <path d="M109 326 C73 393 143 420 99 480 C75 514 104 536 131 530" />
+        <path d="M185 330 C148 409 230 425 192 493 C175 532 187 564 217 574" />
+        <path d="M264 332 C302 401 233 443 278 487 C309 519 298 554 282 577" />
+        <path d="M351 327 C397 391 328 429 377 469 C404 491 395 520 373 541" />
+      </g>
+    </g>
+    <path d="M43 323 C46 181 116 129 229 129 C342 129 416 191 430 321 Q408 354 381 334 Q354 369 320 342 Q288 375 258 349 Q222 377 190 346 Q158 372 127 340 Q98 363 77 336 Q55 346 43 323Z" fill="url(#sleep-jelly-bell)" stroke="#42265f" strokeWidth="10" strokeLinejoin="round" />
+    <path d="M84 254 Q101 198 142 185" fill="none" stroke="#fff" strokeWidth="18" strokeLinecap="round" />
+    {/* Calm closed eyes, rather than fatigue or illness. */}
+    <g fill="none" stroke="#42265f" strokeWidth="13" strokeLinecap="round">
+      <path d="M130 265 Q156 289 182 265 M275 265 Q301 289 327 265" />
+    </g>
+    <ellipse cx="231" cy="307" rx="12" ry="15" fill="#42265f" />
+    {/* The hat is an explicit sleep metaphor, integrated into the character. */}
+    <path d="M166 159 Q199 18 312 35 Q394 43 426 136 Q383 104 345 116 Q304 126 294 180Z" fill="#6853b9" stroke="#42265f" strokeWidth="10" strokeLinejoin="round" />
+    <path d="M170 155 Q229 140 300 175 L290 205 Q222 174 162 187Z" fill="#fff" stroke="#42265f" strokeWidth="9" strokeLinejoin="round" />
+    <circle cx="433" cy="143" r="25" fill="#fff" stroke="#42265f" strokeWidth="8" />
+  </svg>
+);
