@@ -8,7 +8,8 @@
 ・Nath RD et al. (2017) Current Biology 27(19): 2984–2990 https://doi.org/10.1016/j.cub.2017.08.014
 ・Rattenborg NC et al. (2016) Nature Communications 7: 12468 https://doi.org/10.1038/ncomms12468
 ・Xie L et al. (2013) Science 342(6156): 373–377 https://doi.org/10.1126/science.1241224
-※マウスの研究結果は、人間で同じ数値が示されたものではありません。
+・Miao A et al. (2024) Nature Neuroscience 27(6): 1046–1050 https://doi.org/10.1038/s41593-024-01638-y
+※マウスの研究結果は、人間で同じ数値が示されたものではありません。睡眠中の脳の老廃物除去については、2013年と2024年で逆の結果が報告されており、議論が続いています。
 
 ■ クレジット
 ・ナレーション音声：Open JTalk / HTS voice「nitech-jp-atr503-m001」
