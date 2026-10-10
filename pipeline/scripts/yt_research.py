@@ -1,7 +1,11 @@
 """Competitor research via YouTube Data API v3 (free quota only, no billing).
 
 Usage:
-  YOUTUBE_API_KEY=... python3 pipeline/scripts/yt_research.py "クラゲ 眠る" "動物 睡眠 雑学" [--max 10] [--days 730]
+  YOUTUBE_API_KEY=... python3 pipeline/scripts/yt_research.py "クラゲ 眠る" "動物 睡眠 雑学" [--max 10] [--days 730] [--thumbs-dir DIR]
+
+--thumbs-dir saves each competitor thumbnail as DIR/<views>_<videoId>.jpg so the auditor can look at the real
+images. DIR must be OUTSIDE the repository (competitor images are never committed). Needs i.ytimg.com allowed
+in the environment's network settings.
 
 Prints a Markdown table (title / channel / views / published / thumbnail URL / video URL) sorted by views,
 with the retrieval date, for 02_competitors.md and 06b_thumbnail_benchmark.md.
@@ -38,6 +42,7 @@ def main() -> None:
     ap.add_argument("keywords", nargs="+")
     ap.add_argument("--max", type=int, default=10, help="videos per keyword (<=50)")
     ap.add_argument("--days", type=int, default=730, help="only videos published within N days")
+    ap.add_argument("--thumbs-dir", help="download thumbnails here (must be outside the repo)")
     args = ap.parse_args()
     if "YOUTUBE_API_KEY" not in os.environ:
         sys.exit("YOUTUBE_API_KEY が未設定です（環境設定に登録してください。キーをチャットやリポジトリに書かないこと）")
@@ -62,6 +67,19 @@ def main() -> None:
             rows.append((int(st.get("viewCount", 0)), sn["title"], sn["channelTitle"], sn["publishedAt"][:10], thumb, v["id"]))
 
     rows.sort(reverse=True)
+    if args.thumbs_dir:
+        repo = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        out = os.path.abspath(args.thumbs_dir)
+        if out == repo or out.startswith(repo + os.sep):
+            sys.exit("--thumbs-dir はリポジトリの外を指定してください（競合画像はコミットしない）")
+        os.makedirs(out, exist_ok=True)
+        for views, _t, _c, _p, thumb, vid in rows:
+            if not thumb:
+                continue
+            try:
+                urllib.request.urlretrieve(thumb, os.path.join(out, f"{views:012d}_{vid}.jpg"))
+            except Exception as e:  # noqa: BLE001 - report and continue; never fabricate images
+                print(f"<!-- サムネ取得失敗 {vid}: {e} -->", file=sys.stderr)
     today = dt.date.today().isoformat()
     print(f"取得日：{today}（YouTube Data API v3）／検索語：{' / '.join(args.keywords)}\n")
     print("| 再生数 | タイトル | チャンネル | 公開日 | サムネURL | 動画URL |")
