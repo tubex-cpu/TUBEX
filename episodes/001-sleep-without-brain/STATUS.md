@@ -10,9 +10,9 @@
 | – | ゲートA：社長が企画を承認 | | | ✅ 承認（2026-10-10、チャットで「OK」） |
 | 4 | タイトル | ✅ Claude | ✅ Codex | 合格（c056e12） |
 | 5 | 台本 | ✅ Claude | ✅ Codex | 合格（c056e12） |
-| 6 | サムネ | ✅ Codex（3b2da6d） | ✅ Claude | 合格（2026-10-10、差し戻し0回） |
+| 6 | サムネ | 🔁 Codex | 🔁 Claude | 社長が差し戻し（2026-10-10：切り抜き感・背景・フォント・図版・余計な飾り）→ Codex に再作成依頼 |
 | 7 | 動画制作 | ✅ Claude | ✅ Codex | 合格（c056e12） |
-| – | ゲートB：社長が完成品を承認 → 投稿 | | | **承認待ち**（`preview.mp4` / `thumbnail.png` / `07_description.md`） |
+| – | ゲートB：社長が完成品を承認 → 投稿 | | | サムネ再作成後に承認依頼 |
 
 PR：https://github.com/tubex-cpu/TUBEX/pull/1（2026-10-10 Codex に監査・サムネ作成を依頼済み）
 
@@ -28,3 +28,4 @@ PR：https://github.com/tubex-cpu/TUBEX/pull/1（2026-10-10 Codex に監査・�
 - 公開時、概要欄に音声クレジット（CC BY 3.0）を記載すること。
 
 - 2026-10-10 10:19 Codex 再監査（c056e12）：「Didn't find any major issues 👍」→ サムネ以外の全工程が監査合格
+- サムネ差し戻し回数：1（社長）。Claude の監査基準に社長の CTR 基準を追加

@@ -39,8 +39,10 @@ PR に次の形式で判定を書く。1 つでも重大指摘があれば **差
 
 ## サムネ実施ルール
 - 編集してよいのは `video/src/Thumbnail.tsx`、`video/src/Icons.tsx`（図版追加のみ）、`episodes/<id>/script.json` の `thumbnail` ブロックだけ。台本や他工程のファイルは触らない。
+  例外：OFL フォントを追加する場合に限り `video/package.json` / `video/package-lock.json` に `@fontsource/*` を追加してよい（本編のフォントは変えない）。
 - 1280×720。主文言は最大2行・合計12字以内、スマホ（幅320px）でも一瞬で読めること。
-- 図版は SVG で自作。フォントは Noto Sans JP / Dela Gothic One（OFL）のみ。外部画像・人物写真・ロゴ禁止。
+- 図版は SVG で自作。フォントは OFL のみ（サムネは Dela Gothic One 不可。YouTube で見慣れた極太ゴシック＋太フチを使う）。外部画像・人物写真・ロゴ禁止。
+- **動画の1コマに見えないこと**（本編の背景・構図・装飾を流用しない）、背景は高コントラストで明快に、生き物と睡眠が一瞬で分かる図版、意味のない飾りは入れない（社長基準）。
 - 右下（YouTube の再生時間表示の位置）に重要要素を置かない。
 - `06_thumbnail.md` の「約束」「NG」に必ず従う。サムネの数字・断定は `01_research.md` の出典にあるものだけ。
 - 完了時は `cd video && npx tsc --noEmit && npm run render -- <id> --thumb-only` を実行し、`thumbnail.png` も commit する。
