@@ -10,12 +10,12 @@ import {clue3ChrysanthemumCaptions as c} from '../data/captions';
 export const Clue3Chrysanthemum = () => {
 	const {fps} = useVideoConfig();
 	return (
-		<SceneFrame captions={c} label="第3の手がかり" title="菊の紋">
+		<SceneFrame captions={c} label="第3の手がかり" title="皇室の紋がシュメールに？">
 			<Beat name="菊の紋" captions={c} from={0} to={0}>
 				<Center>
 					<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
 						<Chrysanthemum size={520} />
-						<Label>16枚の花びらの菊</Label>
+						<Label>皇室の、菊の紋</Label>
 					</div>
 				</Center>
 			</Beat>
@@ -30,7 +30,7 @@ export const Clue3Chrysanthemum = () => {
 				<Center>
 					<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
 						<Rosette size={520} />
-						<Label>ロゼット文様</Label>
+						<Label>5000年前の遺跡から出てきた“花”</Label>
 					</div>
 				</Center>
 			</Beat>
@@ -41,7 +41,7 @@ export const Clue3Chrysanthemum = () => {
 					<Rosette size={300} petals={16} color="#e9d38a" />
 				</Center>
 				<div style={{position: 'absolute', left: 0, right: 0, top: 690, textAlign: 'center'}}>
-					<Label>ウル王墓の金の花飾り／女神イナンナのしるし</Label>
+					<Label>王の墓に眠る女性の頭上に、咲いていた金の花</Label>
 				</div>
 			</Beat>
 			<Beat name="並べてみる" captions={c} from={6} to={7}>
@@ -60,8 +60,8 @@ export const Clue3Chrysanthemum = () => {
 				<CompareCards
 					left={<PersonSilhouette size={380} />}
 					right={<SumerianStatue size={380} />}
-					leftLabel="模様が同じでも"
-					rightLabel="祖先が同じとは限らない"
+					leftLabel="模様は同じ"
+					rightLabel="なら、祖先も同じ……？"
 					vs="≠"
 				/>
 			</Beat>
@@ -79,7 +79,7 @@ export const Clue3Chrysanthemum = () => {
 				<GapTimeline />
 			</Beat>
 			<Beat name="AIの噂" captions={c} from={19}>
-				<Visual label="「最新のAIが、つながりを見つけた」？">
+				<Visual label="そして今、AIが“つながり”を見つけた……？">
 					<AiLink />
 				</Visual>
 			</Beat>

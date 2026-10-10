@@ -11,9 +11,9 @@ import {colors} from '../theme';
 export const Clue1Rock = () => {
 	const {fps} = useVideoConfig();
 	return (
-	<SceneFrame captions={c} label="第1の手がかり" title="海峡の岩">
+	<SceneFrame captions={c} label="第1の手がかり" title="シュメール文字が刻まれた岩？">
 		<Beat name="場所" captions={c} from={0} to={1}>
-			<Visual label="山口県下関市・彦島 杉田">
+			<Visual label="日本の島に、5000年前の文字が？">
 				<KanmonMap />
 			</Visual>
 		</Beat>
@@ -21,7 +21,7 @@ export const Clue1Rock = () => {
 			<Center>
 				<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
 					<PetroglyphRock />
-					<Label>丸・三角・四角・人の形</Label>
+					<Label>これが、シュメール文字……なのか？</Label>
 				</div>
 			</Center>
 		</Beat>
@@ -33,7 +33,7 @@ export const Clue1Rock = () => {
 			</Center>
 		</Beat>
 		<Beat name="市の説明" captions={c} from={7} to={9}>
-			<Visual label="とがった石で、何度もたたいて刻む">
+			<Visual label="市の説明に、ある名前が出てこない">
 				<PeckingRock />
 			</Visual>
 		</Beat>
@@ -41,7 +41,7 @@ export const Clue1Rock = () => {
 			<Center>
 				<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
 					<ReedPress />
-					<Label>葦のペンで粘土に「押す」＝くさび形文字</Label>
+					<Label>シュメール人は、文字を「書かなかった」</Label>
 				</div>
 			</Center>
 		</Beat>
@@ -49,13 +49,13 @@ export const Clue1Rock = () => {
 			<CompareCards
 				left={<div style={{scale: '0.6', margin: -120}}><PetroglyphRock /></div>}
 				right={<ClayTablet width={340} />}
-				leftLabel="石を石でたたいて刻む"
-				rightLabel="葦で粘土に押しつける"
+				leftLabel="彦島の岩：たたいて刻む"
+				rightLabel="シュメール：粘土に押す"
 				leftColor={colors.text}
 			/>
 		</Beat>
 		<Beat name="見たいものを見る" captions={c} from={15} to={18}>
-			<Visual label="丸や三角は、世界中どこにでもある">
+			<Visual label="なぜ「シュメール文字」に見えたのか">
 				<EyeShapes />
 			</Visual>
 		</Beat>
@@ -63,12 +63,12 @@ export const Clue1Rock = () => {
 			<VerdictStamp verdict="half" from={captionFrame(c, 19, 20, fps)} premountFor={fps} />
 		</Beat>
 		<Beat name="本当の物語" captions={c} from={22} to={22}>
-			<Visual label="海でつながっていた古代の日本">
+			<Visual label="この岩が、本当に語っていること">
 				<SeaRoutes />
 			</Visual>
 		</Beat>
 		<Beat name="次の疑問" captions={c} from={23}>
-			<Visual label="始まりは約100年前の「言葉」">
+			<Visual label="すべての始まりは、100年前の“ある言葉”">
 				<OldBook title="日本人のルーツは？" year="大正〜昭和" />
 			</Visual>
 		</Beat>

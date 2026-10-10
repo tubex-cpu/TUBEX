@@ -7,9 +7,9 @@ import {colors, minchoFamily} from '../theme';
 
 // 23:03 まだ解けていない謎
 export const UnsolvedMystery = () => (
-	<SceneFrame captions={c} label="未決" title="まだ解けていない謎" tint="#1d2a33">
+	<SceneFrame captions={c} label="未決" title="自ら文字を捨てた人々？" tint="#1d2a33">
 		<Beat name="判決を出せない謎" captions={c} from={0} to={0}>
-			<Visual label="まだ判決を出せない謎">
+			<Visual label="ボクにも、まだ判決が出せない">
 				<ScaleBalance undecided />
 			</Visual>
 		</Beat>
@@ -17,7 +17,7 @@ export const UnsolvedMystery = () => (
 			<Center>
 				<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
 					<UnreadTablet />
-					<Label>シュメールの東どなり（今のイラン）の文字――今も誰にも読めない</Label>
+					<Label>100年以上、誰ひとり読めていない文字</Label>
 				</div>
 			</Center>
 		</Beat>
@@ -37,7 +37,7 @@ export const UnsolvedMystery = () => (
 			</Visual>
 		</Beat>
 		<Beat name="なぜ" captions={c} from={10}>
-			<Visual label="なぜ彼らは、文字を捨てたのか" labelColor={colors.goldSoft}>
+			<Visual label="人類は一度、文字を“捨てた”のか？" labelColor={colors.goldSoft}>
 				<TabletBuried />
 			</Visual>
 		</Beat>

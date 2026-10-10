@@ -51,7 +51,7 @@ export const JudgeEntrance = () => (
 			</div>
 		</Beat>
 		<Beat name="今夜の問い" captions={c} from={3} to={3}>
-			<Visual label="今夜の審理：日本人は、シュメール人の子孫か">
+			<Visual label="日本人は、謎の民族の子孫なのか？">
 				<ScaleBalance />
 			</Visual>
 		</Beat>

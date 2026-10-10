@@ -15,7 +15,7 @@ export const Visual: React.FC<{
 	<Center>
 		<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
 			<div style={{zoom: 0.86}}>{children}</div>
-			{label ? <Label color={labelColor}>{label}</Label> : null}
+			{label ? <Label color={labelColor} size={54}>{label}</Label> : null}
 		</div>
 	</Center>
 );

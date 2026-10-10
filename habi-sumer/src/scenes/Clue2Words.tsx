@@ -13,9 +13,9 @@ import {colors} from '../theme';
 export const Clue2Words = () => {
 	const {fps} = useVideoConfig();
 	return (
-		<SceneFrame captions={c} label="第2の手がかり" title="100年前の言葉">
+		<SceneFrame captions={c} label="第2の手がかり" title="天皇の呼び名に“シュメール”？">
 			<Beat name="スメラミコト" captions={c} from={0} to={1}>
-				<Visual label="天皇を指す、古い日本語">
+				<Visual label="天皇の呼び名に、シュメールが隠れている？">
 					<OldBook title="スメラミコト" />
 				</Visual>
 			</Beat>
@@ -43,7 +43,7 @@ export const Clue2Words = () => {
 				<SovPie />
 			</Beat>
 			<Beat name="孤立した言語" captions={c} from={14} to={16}>
-				<Visual label="親戚の言葉が見つからない「ひとりぼっち」">
+				<Visual label="世界中と比べても、親戚が見つからない言葉">
 					<LoneLanguage />
 				</Visual>
 			</Beat>
@@ -51,15 +51,15 @@ export const Clue2Words = () => {
 				<CompareCards
 					left={<PersonSilhouette size={380} color={colors.half} />}
 					right={<SumerianStatue size={380} />}
-					leftLabel="アッカド人の呼び名「シュメール」"
-					rightLabel="自分たちの呼び名「ケンギル」"
+					leftLabel="「シュメール」は、他人がつけたあだ名"
+					rightLabel="本当の名は「ケンギル」"
 					leftColor={colors.half}
 					rightColor={colors.correct}
 					vs="≠"
 				/>
 			</Beat>
 			<Beat name="統べる" captions={c} from={21} to={22}>
-				<Visual label="スメラ＝「統べる」（国を治める）">
+				<Visual label="では「スメラ」の本当の意味は？">
 					<Converge />
 				</Visual>
 			</Beat>
@@ -67,7 +67,7 @@ export const Clue2Words = () => {
 				<VerdictStamp verdict="half" from={captionFrame(c, 23, 24, fps)} premountFor={fps} />
 			</Beat>
 			<Beat name="偶然の一致" captions={c} from={26}>
-				<Visual label="言葉は、偶然似ることがある">
+				<Visual label="でも、言葉より確かな証拠がある">
 					<Dice />
 				</Visual>
 			</Beat>

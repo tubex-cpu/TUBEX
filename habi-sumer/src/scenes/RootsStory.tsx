@@ -6,12 +6,12 @@ import {rootsStoryCaptions as c} from '../data/captions';
 
 // 20:51 足元にあった物語
 export const RootsStory = () => (
-	<SceneFrame captions={c} label="調査の先に" title="足元にあった物語" tint="#2d2a1a">
+	<SceneFrame captions={c} label="調査の先に" title="本当の驚きは、ここから" tint="#2d2a1a">
 		<Beat name="手がかりは途切れた" captions={c} from={0} to={2}>
 			<ClueIcons />
 		</Beat>
 		<Beat name="群馬の山あい" captions={c} from={3} to={5}>
-			<Visual label="舞台は、日本の群馬の山あい">
+			<Visual label="答えは、日本の山奥に眠っていた">
 				<RockShelter />
 			</Visual>
 		</Beat>
@@ -22,12 +22,12 @@ export const RootsStory = () => (
 			<TwoStreams />
 		</Beat>
 		<Beat name="自分は何者か" captions={c} from={13} to={14}>
-			<Visual label="自分は何者なのか">
+			<Visual label="なぜ人は「特別な祖先」を求めるのか">
 				<PersonSilhouette question color="#8e9ba7" />
 			</Visual>
 		</Beat>
 		<Beat name="生き延びた証" captions={c} from={15}>
-			<Visual label="海を越え、困難を生き延びてきた証">
+			<Visual label="あなたのDNAに刻まれた、本当の旅">
 				<Footprints sea />
 			</Visual>
 		</Beat>

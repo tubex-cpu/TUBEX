@@ -11,7 +11,7 @@ import {colors} from '../theme';
 export const Clue4AI = () => {
 	const {fps} = useVideoConfig();
 	return (
-		<SceneFrame captions={c} label="第4の手がかり" title="最新AI" tint="#1b2a4a">
+		<SceneFrame captions={c} label="第4の手がかり" title="AIが暴いた日本との関係？" tint="#1b2a4a">
 			<Beat name="AIが暴いた" captions={c} from={0} to={1}>
 				<Center>
 					<PhoneNews headlines={['AIが粘土板を解読!?', 'シュメールと日本の関係が判明!?', 'AIが暴いた古代の真実']} />
@@ -23,22 +23,22 @@ export const Clue4AI = () => {
 				</Center>
 			</Beat>
 			<Beat name="2万点" captions={c} from={5} to={5}>
-				<Visual label="粘土板のかけらをデータベース化">
+				<Visual label="2万点のかけら。完成図は、どこにもない">
 					<FragmentGrid count />
 				</Visual>
 			</Beat>
 			<Beat name="ギルガメシュ" captions={c} from={6} to={6}>
-				<Visual label="AIが見つけた、ギルガメシュ叙事詩のかけら" labelColor={colors.gold}>
+				<Visual label="AIが見つけ出したのは、人類最古の物語" labelColor={colors.gold}>
 					<FragmentGrid found />
 				</Visual>
 			</Beat>
 			<Beat name="よみがえった歌" captions={c} from={7} to={9}>
-				<Visual label="1000年ぶりによみがえった、春のバビロンの歌" labelColor="#f6c9a0">
+				<Visual label="1000年間消えていた歌が、よみがえった" labelColor="#f6c9a0">
 					<SpringBabylon />
 				</Visual>
 			</Beat>
 			<Beat name="30〜40年" captions={c} from={10} to={11}>
-				<Visual label="AIなしなら30〜40年かかる作業">
+				<Visual label="人間だけなら、30年以上かかっていた">
 					<Hourglass />
 				</Visual>
 			</Beat>
@@ -54,7 +54,7 @@ export const Clue4AI = () => {
 				</Center>
 			</Beat>
 			<Beat name="現在地" captions={c} from={22} to={22}>
-				<Visual label="AIの本当の現在地">
+				<Visual label="AIは、まだ「読めて」いない">
 					<Roadmap />
 				</Visual>
 			</Beat>

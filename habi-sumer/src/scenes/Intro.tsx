@@ -9,7 +9,7 @@ import {colors} from '../theme';
 export const Intro = () => (
 	<SceneFrame captions={c}>
 		<Beat name="5000年前の町" captions={c} from={0} to={0}>
-			<Visual label="5000年前" labelColor={colors.gold}>
+			<Visual label="5000年前、突然現れた謎の民族" labelColor={colors.gold}>
 				<SumerCity />
 			</Visual>
 		</Beat>
@@ -17,17 +17,17 @@ export const Intro = () => (
 			<Center>
 				<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
 					<ClayTablet width={500} />
-					<Label>人類最古の文字のひとつ</Label>
+					<Label>人類最古の文字を生んだのは……</Label>
 				</div>
 			</Center>
 		</Beat>
 		<Beat name="消えた民族" captions={c} from={3} to={4}>
-			<Visual label="どこから来て、どこへ行ったのか">
+			<Visual label="そしてある日、歴史から消えた">
 				<VanishingPeople />
 			</Visual>
 		</Beat>
 		<Beat name="シュメール人" captions={c} from={5} to={5}>
-			<Visual label="シュメール人" labelColor={colors.gold}>
+			<Visual label="シュメール人――その正体は、今も不明" labelColor={colors.gold}>
 				<SumerianStatue size={560} />
 			</Visual>
 		</Beat>
@@ -49,7 +49,7 @@ export const Intro = () => (
 			</Center>
 		</Beat>
 		<Beat name="体の中の血" captions={c} from={11}>
-			<Visual label="あなたの中にも？">
+			<Visual label="あなたの血にも、5000年前の謎が？">
 				<PersonSilhouette dna size={560} />
 			</Visual>
 		</Beat>
