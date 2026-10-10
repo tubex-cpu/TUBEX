@@ -7,18 +7,18 @@ type Props = {
 	readonly captions: Caption[];
 };
 
-// ナレーション字幕（画面下部のテロップ）
+// ナレーション字幕（画面下部・常に1行。長い文は scripts/build-voice.py で分割済み）
 export const Subtitles: React.FC<Props> = ({captions}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const ms = (frame / fps) * 1000;
-	const current = captions.find((c) => ms >= c.startMs && ms < c.endMs + 300);
+	const current = captions.filter((c) => ms >= c.startMs && ms < c.endMs + 300).pop();
 	if (!current) {
 		return null;
 	}
 
 	const local = frame - (current.startMs / 1000) * fps;
-	const size = current.text.length > 70 ? 40 : current.text.length > 34 ? 46 : 52;
+	const size = Math.min(54, Math.floor(1380 / current.text.length));
 
 	return (
 		<div
@@ -45,7 +45,8 @@ export const Subtitles: React.FC<Props> = ({captions}) => {
 					fontFamily: gothicFamily,
 					fontWeight: 700,
 					fontSize: size,
-					lineHeight: 1.45,
+					lineHeight: 1.3,
+					whiteSpace: 'nowrap',
 					color: colors.text,
 					textAlign: 'center',
 					padding: '18px 40px',
@@ -53,8 +54,6 @@ export const Subtitles: React.FC<Props> = ({captions}) => {
 					background: 'rgba(5, 9, 18, 0.72)',
 					borderTop: `3px solid ${colors.gold}`,
 					textShadow: '0 2px 6px rgba(0,0,0,0.6)',
-					maxWidth: 1600,
-					wordBreak: 'auto-phrase',
 				}}
 			>
 				{current.text}

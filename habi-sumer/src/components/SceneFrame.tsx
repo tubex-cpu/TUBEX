@@ -2,6 +2,7 @@ import type {Caption} from '@remotion/captions';
 import {Audio} from '@remotion/media';
 import type React from 'react';
 import {AbsoluteFill, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {subtitles} from '../data/subtitles';
 import {CourtBackground} from './CourtBackground';
 import {type Expression, HabiAvatar} from './HabiAvatar';
 import {SceneHeader} from './SceneHeader';
@@ -44,7 +45,7 @@ export const SceneFrame: React.FC<Props> = ({captions, voice, mouth, expressions
 			{children}
 			{label && title ? <SceneHeader label={label} title={title} /> : null}
 			{hidden ? null : <HabiAvatar expression={expression} mouthOpen={mouth[frame] === '1'} />}
-			<Subtitles captions={captions} />
+			<Subtitles captions={subtitles[voice]} />
 			<Audio name="ナレーション" src={staticFile(`voice/${voice}.mp3`)} premountFor={fps} />
 		</AbsoluteFill>
 	);

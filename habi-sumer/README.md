@@ -20,7 +20,7 @@ YouTubeの概要欄には「VOICEVOX:玄野武宏」のクレジットを記載�
 | ファイル | 内容 |
 | --- | --- |
 | `scripts/script.txt` | 台本本文（Googleドキュメントから取り込み） |
-| `scripts/build-voice.py` | 台本 → ナレーション音声・字幕（`src/data/captions.ts`）・尺（`src/data/timeline.ts`）・口パク（`src/data/mouth.ts`）・`public/narration.srt` |
+| `scripts/build-voice.py` | 台本 → ナレーション音声・1行ずつに分けた字幕（`src/data/subtitles.ts`）・文ごとの字幕（`src/data/captions.ts`）・尺（`src/data/timeline.ts`）・口パク（`src/data/mouth.ts`）・`public/narration.srt` |
 | `scripts/subset-fonts.py` | 使用文字だけに絞ったフォント（`public/fonts/*.woff2`）を生成 |
 | `src/HabiSumerVideo.tsx` | 本編。11シーンを `TransitionSeries`（フェード）でつなぐ |
 | `src/scenes/*.tsx` | 各シーン（Studioで単体プレビューできるよう `Scenes` フォルダにも登録） |
