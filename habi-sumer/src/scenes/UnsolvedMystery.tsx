@@ -1,6 +1,6 @@
 import {Beat} from '../components/Beat';
-import {BigText} from '../components/BigText';
 import {Center, Label, UnreadTablet} from '../components/Illustrations';
+import {PhoneNotifications, ScaleBalance, TabletBuried, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {unsolvedMysteryCaptions as c} from '../data/captions';
 import {colors, minchoFamily} from '../theme';
@@ -9,7 +9,9 @@ import {colors, minchoFamily} from '../theme';
 export const UnsolvedMystery = () => (
 	<SceneFrame captions={c} label="未決" title="まだ解けていない謎" tint="#1d2a33">
 		<Beat name="判決を出せない謎" captions={c} from={0} to={0}>
-			<BigText size={130} color={colors.goldSoft}>まだ判決を出せない謎</BigText>
+			<Visual label="まだ判決を出せない謎">
+				<ScaleBalance undecided />
+			</Visual>
 		</Beat>
 		<Beat name="読めない文字" captions={c} from={1} to={4}>
 			<Center>
@@ -30,10 +32,14 @@ export const UnsolvedMystery = () => (
 			</Center>
 		</Beat>
 		<Beat name="SNS疲れ" captions={c} from={8} to={9}>
-			<BigText size={110} sub="もちろん、これは仮説">通知に疲れて、SNSをやめるように</BigText>
+			<Visual label="通知に疲れて、SNSをやめるように？">
+				<PhoneNotifications />
+			</Visual>
 		</Beat>
 		<Beat name="なぜ" captions={c} from={10}>
-			<BigText size={130} color={colors.goldSoft}>なぜ彼らは、文字を捨てたのか</BigText>
+			<Visual label="なぜ彼らは、文字を捨てたのか" labelColor={colors.goldSoft}>
+				<TabletBuried />
+			</Visual>
 		</Beat>
 	</SceneFrame>
 );

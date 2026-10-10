@@ -1,6 +1,7 @@
 import {interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Beat, captionFrame} from '../components/Beat';
-import {BigText} from '../components/BigText';
+import {Habi} from '../components/Habi';
+import {SumerianStatue} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {summaryCaptions as c} from '../data/captions';
 import {colors, gothicFamily, minchoFamily} from '../theme';
@@ -45,6 +46,46 @@ const VerdictBoard = () => {
 	);
 };
 
+// 空白に、後の人々の物語が書き込まれていく
+const StatueWithStories = () => {
+	const frame = useCurrentFrame();
+	const tags = [
+		{t: '「シュメール」＝あだ名', x: 330, y: 230, c: colors.half},
+		{t: '日本人の祖先？', x: 1420, y: 250, c: colors.japan},
+		{t: '失われた文明？', x: 380, y: 560, c: colors.muted},
+		{t: '宇宙から来た？', x: 1400, y: 560, c: colors.muted},
+	];
+	return (
+		<>
+			<div style={{position: 'absolute', left: 0, right: 0, top: 140, display: 'flex', justifyContent: 'center'}}>
+				<SumerianStatue size={620} />
+			</div>
+			{tags.map((tg, i) => (
+				<div
+					key={tg.t}
+					style={{
+						position: 'absolute',
+						left: tg.x,
+						top: tg.y,
+						translate: '-50% 0px',
+						fontFamily: gothicFamily,
+						fontWeight: 900,
+						fontSize: 48,
+						color: colors.night,
+						background: tg.c,
+						padding: '14px 30px',
+						borderRadius: 40,
+						opacity: interpolate(frame, [i * 25, i * 25 + 12], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
+						scale: interpolate(frame, [i * 25, i * 25 + 12], [0.6, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
+					}}
+				>
+					{tg.t}
+				</div>
+			))}
+		</>
+	);
+};
+
 // 24:20 まとめ
 export const Summary = () => (
 	<SceneFrame captions={c} label="閉廷" title="今夜の判決">
@@ -52,10 +93,19 @@ export const Summary = () => (
 			<VerdictBoard />
 		</Beat>
 		<Beat name="あだ名の民族" captions={c} from={6} to={8}>
-			<BigText size={100} sub="その空白に、後の人々が物語を書き込んできた">本当の姿がわからない民族</BigText>
+			<StatueWithStories />
 		</Beat>
 		<Beat name="結論" captions={c} from={9}>
-			<BigText size={120} color={colors.gold}>本当の話は、作り話に負けないくらい、面白い。</BigText>
+			<div style={{position: 'absolute', left: 200, top: 170}}>
+				<Habi size={480} gavel />
+			</div>
+			<div style={{position: 'absolute', left: 820, right: 120, top: 280, fontFamily: minchoFamily, fontWeight: 800, fontSize: 80, lineHeight: 1.4, color: colors.gold}}>
+				本当の話は、
+				<br />
+				作り話に負けないくらい、
+				<br />
+				面白い。
+			</div>
 		</Beat>
 	</SceneFrame>
 );

@@ -1,11 +1,10 @@
 import {useVideoConfig} from 'remotion';
 import {Beat, captionFrame} from '../components/Beat';
-import {BigText} from '../components/BigText';
 import {Center, Chrysanthemum, CompareCards, GapTimeline, Label, Rosette} from '../components/Illustrations';
+import {AiLink, Magnifier, PersonSilhouette, SumerianStatue, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {VerdictStamp} from '../components/VerdictStamp';
 import {clue3ChrysanthemumCaptions as c} from '../data/captions';
-import {colors} from '../theme';
 
 // 9:22 第3の手がかり 菊の紋
 export const Clue3Chrysanthemum = () => {
@@ -21,7 +20,11 @@ export const Clue3Chrysanthemum = () => {
 				</Center>
 			</Beat>
 			<Beat name="同じ模様？" captions={c} from={1} to={2}>
-				<BigText size={120} color={colors.goldSoft}>シュメールにも、同じ模様が？</BigText>
+				<Visual label="シュメールにも、同じ模様が？">
+					<Magnifier>
+						<Chrysanthemum size={460} />
+					</Magnifier>
+				</Visual>
 			</Beat>
 			<Beat name="ロゼット" captions={c} from={3} to={3}>
 				<Center>
@@ -37,7 +40,7 @@ export const Clue3Chrysanthemum = () => {
 					<Rosette size={360} petals={12} />
 					<Rosette size={300} petals={16} color="#e9d38a" />
 				</Center>
-				<div style={{position: 'absolute', left: 0, right: 0, top: 770, textAlign: 'center'}}>
+				<div style={{position: 'absolute', left: 0, right: 0, top: 690, textAlign: 'center'}}>
 					<Label>ウル王墓の金の花飾り／女神イナンナのしるし</Label>
 				</div>
 			</Beat>
@@ -54,7 +57,13 @@ export const Clue3Chrysanthemum = () => {
 				<VerdictStamp verdict="correct" from={captionFrame(c, 8, 9, fps)} premountFor={fps} />
 			</Beat>
 			<Beat name="模様と祖先" captions={c} from={11} to={12}>
-				<BigText size={120} color={colors.goldSoft}>「模様が同じ」≠「祖先が同じ」</BigText>
+				<CompareCards
+					left={<PersonSilhouette size={380} />}
+					right={<SumerianStatue size={380} />}
+					leftLabel="模様が同じでも"
+					rightLabel="祖先が同じとは限らない"
+					vs="≠"
+				/>
 			</Beat>
 			<Beat name="世界中の花" captions={c} from={13} to={14}>
 				<Center>
@@ -70,7 +79,9 @@ export const Clue3Chrysanthemum = () => {
 				<GapTimeline />
 			</Beat>
 			<Beat name="AIの噂" captions={c} from={19}>
-				<BigText size={110} sub="――その空白を埋めた、という話">「最新のAIが、つながりを見つけた」</BigText>
+				<Visual label="「最新のAIが、つながりを見つけた」？">
+					<AiLink />
+				</Visual>
 			</Beat>
 		</SceneFrame>
 	);

@@ -1,17 +1,18 @@
 import {interpolate, useCurrentFrame} from 'remotion';
 import {Beat} from '../components/Beat';
-import {BigText} from '../components/BigText';
 import {Habi} from '../components/Habi';
+import {ClueIcon, type ClueKind, ScaleBalance, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {judgeEntranceCaptions as c} from '../data/captions';
 import {colors, gothicFamily, minchoFamily} from '../theme';
 
 const clues = ['海峡の岩', '100年前の言葉', '菊の紋', '最新AI', '神の遺伝子'];
+const kinds: ClueKind[] = ['rock', 'words', 'flower', 'ai', 'dna'];
 
 const ClueRow = () => {
 	const frame = useCurrentFrame();
 	return (
-		<div style={{position: 'absolute', left: 120, right: 120, top: 360, display: 'flex', gap: 24, justifyContent: 'center'}}>
+		<div style={{position: 'absolute', left: 120, right: 120, top: 250, display: 'flex', gap: 24, justifyContent: 'center'}}>
 			{clues.map((t, i) => (
 				<div
 					key={t}
@@ -26,6 +27,9 @@ const ClueRow = () => {
 					}}
 				>
 					<div style={{fontFamily: gothicFamily, fontWeight: 900, fontSize: 34, color: colors.clayDark}}>手がかり {i + 1}</div>
+					<div style={{display: 'flex', justifyContent: 'center', margin: '10px 0', background: colors.night, borderRadius: 14, marginInline: 20}}>
+						<ClueIcon kind={kinds[i]} size={200} />
+					</div>
 					<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 42, color: colors.ink, marginTop: 8}}>{t}</div>
 				</div>
 			))}
@@ -47,7 +51,9 @@ export const JudgeEntrance = () => (
 			</div>
 		</Beat>
 		<Beat name="今夜の問い" captions={c} from={3} to={3}>
-			<BigText size={110} color={colors.goldSoft} sub="今夜の審理">日本人は、本当にシュメール人の子孫なのか</BigText>
+			<Visual label="今夜の審理：日本人は、シュメール人の子孫か">
+				<ScaleBalance />
+			</Visual>
 		</Beat>
 		<Beat name="5つの手がかり" captions={c} from={4}>
 			<ClueRow />

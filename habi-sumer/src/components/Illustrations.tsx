@@ -67,7 +67,7 @@ export const ClayTablet: React.FC<{readonly width?: number}> = ({width = 560}) =
 };
 
 // ふたつの土地：メソポタミアと日本列島を結ぶ点線
-export const TwoLands: React.FC<{readonly showLine?: boolean}> = ({showLine = true}) => {
+export const TwoLands: React.FC<{readonly showLine?: boolean; readonly broken?: boolean}> = ({showLine = true, broken = false}) => {
 	const frame = useCurrentFrame();
 	const progress = interpolate(frame, [20, 110], [0, 1], {...clamp, easing: Easing.bezier(0.45, 0, 0.2, 1)});
 	return (
@@ -97,10 +97,13 @@ export const TwoLands: React.FC<{readonly showLine?: boolean}> = ({showLine = tr
 						strokeWidth={5}
 						strokeDasharray="18 14"
 						pathLength={1}
-						style={{strokeDasharray: `${progress} 1`}}
+						style={{strokeDasharray: `${broken ? progress * 0.45 : progress} 1`}}
 					/>
 				) : null}
-				<text x={900} y={150} fill={colors.muted} fontFamily={gothicFamily} fontWeight={700} fontSize={34} textAnchor="middle" opacity={progress}>約7,000 km</text>
+				{broken ? (
+					<text x={900} y={170} textAnchor="middle" fill={colors.correct} fontFamily={gothicFamily} fontWeight={900} fontSize={120} opacity={interpolate(frame, [90, 105], [0, 1], clamp)}>×</text>
+				) : null}
+				<text x={900} y={150} fill={colors.muted} fontFamily={gothicFamily} fontWeight={700} fontSize={34} textAnchor="middle" opacity={broken ? 0 : progress}>約7,000 km</text>
 			</svg>
 		</Center>
 	);

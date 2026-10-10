@@ -1,16 +1,13 @@
 import {useVideoConfig} from 'remotion';
 import {Beat, captionFrame} from '../components/Beat';
 import {BigText} from '../components/BigText';
-import {CompareCards, GrammarBlocks, NameTags, SovPie} from '../components/Illustrations';
+import {CompareCards, GrammarBlocks, SovPie} from '../components/Illustrations';
 import {Habi} from '../components/Habi';
+import {Converge, Dice, LoneLanguage, OldBook, PersonSilhouette, SumerianStatue, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {VerdictStamp} from '../components/VerdictStamp';
 import {clue2WordsCaptions as c} from '../data/captions';
-import {colors, minchoFamily} from '../theme';
-
-const Word = ({children, color}: {readonly children: string; readonly color: string}) => (
-	<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 140, color}}>{children}</div>
-);
+import {colors} from '../theme';
 
 // 5:22 第2の手がかり 100年前の言葉
 export const Clue2Words = () => {
@@ -18,14 +15,16 @@ export const Clue2Words = () => {
 	return (
 		<SceneFrame captions={c} label="第2の手がかり" title="100年前の言葉">
 			<Beat name="スメラミコト" captions={c} from={0} to={1}>
-				<BigText size={190} color={colors.gold} sub="天皇を指す、古い日本語">スメラミコト</BigText>
+				<Visual label="天皇を指す、古い日本語">
+					<OldBook title="スメラミコト" />
+				</Visual>
 			</Beat>
 			<Beat name="スメラとシュメール" captions={c} from={2} to={4}>
 				<CompareCards
-					left={<Word color={colors.japan}>スメラ</Word>}
-					right={<Word color={colors.sumer}>シュメール</Word>}
-					leftLabel="日本語"
-					rightLabel="古代メソポタミア"
+					left={<div style={{zoom: 0.6}}><OldBook title="スメラミコト" /></div>}
+					right={<SumerianStatue size={380} />}
+					leftLabel="スメラ（日本語）"
+					rightLabel="シュメール"
 					vs="≒？"
 				/>
 			</Beat>
@@ -44,19 +43,33 @@ export const Clue2Words = () => {
 				<SovPie />
 			</Beat>
 			<Beat name="孤立した言語" captions={c} from={14} to={16}>
-				<BigText size={110} sub="親戚にあたる言葉が、ひとつも見つかっていない">世界でひとりぼっちの言葉</BigText>
+				<Visual label="親戚の言葉が見つからない「ひとりぼっち」">
+					<LoneLanguage />
+				</Visual>
 			</Beat>
 			<Beat name="シュメールとケンギル" captions={c} from={17} to={20}>
-				<NameTags />
+				<CompareCards
+					left={<PersonSilhouette size={380} color={colors.half} />}
+					right={<SumerianStatue size={380} />}
+					leftLabel="アッカド人の呼び名「シュメール」"
+					rightLabel="自分たちの呼び名「ケンギル」"
+					leftColor={colors.half}
+					rightColor={colors.correct}
+					vs="≠"
+				/>
 			</Beat>
 			<Beat name="統べる" captions={c} from={21} to={22}>
-				<BigText size={150} color={colors.goldSoft} sub="国を治める＝「統べる」が由来とするのが一般的">スメラ ＝ 統べる</BigText>
+				<Visual label="スメラ＝「統べる」（国を治める）">
+					<Converge />
+				</Visual>
 			</Beat>
 			<Beat name="判決" captions={c} from={23} to={25}>
 				<VerdictStamp verdict="half" from={captionFrame(c, 23, 24, fps)} premountFor={fps} />
 			</Beat>
 			<Beat name="偶然の一致" captions={c} from={26}>
-				<BigText size={120}>言葉は、偶然似ることがある</BigText>
+				<Visual label="言葉は、偶然似ることがある">
+					<Dice />
+				</Visual>
 			</Beat>
 		</SceneFrame>
 	);
