@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Easing, Sequence, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Audio, Easing, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Icon} from './Icons';
 import {EpisodeScript, Scene, fontBody, fontDisplay, theme} from './types';
 
@@ -85,6 +85,7 @@ const SceneView: React.FC<{scene: Scene; durationInFrames: number}> = ({scene, d
       </div>
 
       {scene.source ? <div style={{fontSize: 26, color: theme.sub, opacity: 0.8}}>出典：{scene.source}</div> : null}
+      {scene.credit ? <div style={{fontSize: 22, color: theme.sub, opacity: 0.7}}>{scene.credit}</div> : null}
     </AbsoluteFill>
   );
 };
@@ -95,6 +96,8 @@ const ProgressBar: React.FC<{total: number}> = ({total}) => {
     <div style={{position: 'absolute', left: 0, bottom: 0, height: 10, width: `${(frame / total) * 100}%`, background: theme.accent}} />
   );
 };
+
+const NARRATION_LEAD_IN = 0.4; // keep in sync with LEAD_IN in scripts/make_audio.py
 
 export const Episode: React.FC<EpisodeScript> = (props) => {
   const {fps} = useVideoConfig();
@@ -108,11 +111,18 @@ export const Episode: React.FC<EpisodeScript> = (props) => {
         const seq = (
           <Sequence key={scene.id} from={from} durationInFrames={d} name={scene.id}>
             <SceneView scene={scene} durationInFrames={d} />
+            {scene.audio ? (
+              // Narration starts after a short lead-in; make_audio.py sizes the scene to fit it.
+              <Sequence from={Math.round(NARRATION_LEAD_IN * fps)} name={`${scene.id}-voice`}>
+                <Audio src={staticFile(scene.audio)} />
+              </Sequence>
+            ) : null}
           </Sequence>
         );
         from += d;
         return seq;
       })}
+      {props.bgm ? <Audio src={staticFile(props.bgm)} volume={0.18} /> : null}
       <ProgressBar total={total} />
     </AbsoluteFill>
   );

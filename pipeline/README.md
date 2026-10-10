@@ -10,7 +10,7 @@
 | ChatGPT Codex | Plus/Pro **プラン枠内のみ**。Codex のクレジット購入・自動チャージは **しない**。上限に達したら止まって待つ |
 | API キー | **使わない・置かない**（Anthropic / OpenAI API は従量課金のため）。リポジトリにも環境変数にも入れない |
 | GitHub Actions | **使わない**（無料枠超過のリスクを避ける）。自動実行は Claude Code の Routine（サブスク枠内）で行う |
-| 素材 | 有料素材・有料 TTS・画像生成 API は使わない。図版は SVG で自作、フォントは OFL（Noto Sans JP / Dela Gothic One） |
+| 素材 | 有料素材・有料 TTS・画像生成 API は使わない。図版は SVG で自作、フォントは OFL（Noto Sans JP / Dela Gothic One）。ナレーションは Open JTalk（音声 CC BY 3.0：概要欄と動画末尾にクレジット必須）、BGM は numpy で自作合成 |
 | Remotion | 個人・3名以下の会社は無料ライセンス。人数が増えたら要確認 |
 
 ## 役割分担
@@ -62,6 +62,10 @@
 ## コマンド
 
 ```bash
+# 初回のみ（無料・Ubuntu 公式パッケージ）：ナレーション音声エンジン
+sudo apt-get install -y open-jtalk open-jtalk-mecab-naist-jdic hts-voice-nitech-jp-atr503-m001
+
+python3 video/scripts/make_audio.py 001-sleep-without-brain  # ナレーション＋BGM生成、尺を script.json に反映
 cd video
 npm install
 npm run render -- 001-sleep-without-brain             # サムネ + 動画

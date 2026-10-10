@@ -22,7 +22,7 @@
 4. サムネ工程：`06_thumbnail.md`（台本から抽出したサムネの狙い・約束・NG）を書き、PR に
    `@codex episodes/<id>/06_thumbnail.md の指示に従ってサムネを作成して（AGENTS.md のサムネ実施ルール厳守）` とコメント。
    Codex の成果物が上がっていたら下の基準で監査し、PR に判定を書く。
-5. 動画は `cd video && npm run render -- <id>`。mp4 は git に入れず、PR 本文で確認方法を案内する。
+5. 動画は `python3 video/scripts/make_audio.py <id>`（ナレーション・BGM・尺の同期）→ `cd video && npm run render -- <id>`。mp4 は git に入れず、PR 本文で確認方法を案内する。
 
 ## サムネ監査基準（Codex の成果物に対して）
 1 つでも不合格なら **差し戻し**。判定は次の形式で PR にコメントする。

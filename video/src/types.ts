@@ -10,6 +10,8 @@ export type Scene = {
   bigNumber?: string;
   source?: string;
   narration: string;
+  audio?: string;
+  credit?: string;
 };
 
 export type EpisodeScript = {
@@ -22,6 +24,7 @@ export type EpisodeScript = {
     sub: string;
     icon: IconName;
   };
+  bgm?: string;
   scenes: Scene[];
 };
 
