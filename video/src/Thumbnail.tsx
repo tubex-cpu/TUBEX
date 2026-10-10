@@ -55,15 +55,16 @@ export const Thumbnail: React.FC<EpisodeScript> = ({thumbnail}) => {
   const lettering: React.CSSProperties = {
     position:'absolute', left:638, margin:0, fontFamily:fontBody,
     fontWeight:900, lineHeight:1.22, letterSpacing:-5, whiteSpace:'nowrap',
-    WebkitTextStroke:'12px #061310', paintOrder:'stroke fill',
-    textShadow:'0 5px 18px #000',
+    WebkitTextStroke:'12px #020606', paintOrder:'stroke fill',
+    textShadow:'0 7px 0 #020606, 0 13px 14px #000',
   };
   return (
     <AbsoluteFill style={{background:'radial-gradient(ellipse at 26% 33%, #254c45 0%, #0b201e 36%, #020b0b 72%)', overflow:'hidden'}}>
       <div style={{position:'absolute', left:-6, top:5}}><Jellyfish /></div>
-      <div style={{...lettering, top:204, fontSize:119, color:'#fffdf2'}}>{thumbnail.line1}</div>
-      <div style={{...lettering, top:357, fontSize:116, color:'#edd293'}}>{thumbnail.line2}</div>
-      <div style={{position:'absolute', left:36, bottom:26, fontFamily:fontBody, fontSize:22, color:'#92aaa1', letterSpacing:2}}>概念図</div>
+      <div aria-hidden style={{...lettering, top:219, fontSize:103, color:'#fffdf2', WebkitTextStroke:'20px #708c85', textShadow:'0 0 15px #83a99a66, 0 12px 10px #000'}}>{thumbnail.line1}</div>
+      <div style={{...lettering, top:219, fontSize:103, color:'#fffdf2'}}>{thumbnail.line1}</div>
+      <div aria-hidden style={{...lettering, top:365, fontSize:103, color:'#f1d49a', WebkitTextStroke:'21px #ac8b4a', textShadow:'0 0 23px #e6bc686e, 0 12px 12px #000'}}>{thumbnail.line2}</div>
+      <div style={{...lettering, top:365, fontSize:103, color:'#f1d49a', textShadow:'0 7px 0 #090b08, 0 11px 10px #000'}}>{thumbnail.line2}</div>
     </AbsoluteFill>
   );
 };
