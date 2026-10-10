@@ -7,10 +7,10 @@
 | 1 | リサーチ | ✅ Claude | ✅ Codex | 合格（c056e12） |
 | 2 | 競合調査 | ✅ Claude | ✅ Codex | 合格（c056e12） |
 | 3 | 企画立案 | ✅ Claude | ✅ Codex | 合格（c056e12） |
-| – | ゲートA：社長が企画を承認 | | | **承認待ち**（`03_plan.md` / `04_titles.md`） |
+| – | ゲートA：社長が企画を承認 | | | ✅ 承認（2026-10-10、チャットで「OK」） |
 | 4 | タイトル | ✅ Claude | ✅ Codex | 合格（c056e12） |
 | 5 | 台本 | ✅ Claude | ✅ Codex | 合格（c056e12） |
-| 6 | サムネ | ⬜ Codex（指示書 `06_thumbnail.md` 作成済み） | ⬜ Claude | Codex の作成待ち（現行 `thumbnail.png` は Claude の仮版） |
+| 6 | サムネ | ⬜ Codex（指示書 `06_thumbnail.md` 作成済み） | ⬜ Claude | Codex に作成依頼済み（2026-10-10 ゲートA承認後に再依頼。現行 `thumbnail.png` は Claude の仮版） |
 | 7 | 動画制作 | ✅ Claude | ✅ Codex | 合格（c056e12） |
 | – | ゲートB：社長が完成品を承認 → 投稿 | | | 未 |
 
