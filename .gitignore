@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+
+# OS のゴミファイル
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 動画本体は git に入れない（監査用の軽量版 preview.mp4 だけ入れる）
+*.mp4
+!episodes/*/preview.mp4
+*.mov
+
+# 競合サムネ・権利未確認の素材はリポジトリ外（デスクトップの TUBEX_素材/）に置く。
+# 誤ってリポジトリ内に作ったときの保険
+_素材/
+_competitor_thumbs/
