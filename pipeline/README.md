@@ -1,4 +1,11 @@
-# TUBEX 制作パイプライン（雑学チャンネル）
+# TUBEX 制作パイプライン（3チャンネル）
+
+| チャンネル | 設定 | 本数・尺 |
+|---|---|---|
+| ① ハビ判事の都市伝説ジャッジ | `channels/habi-judge/CHANNEL.md` | 週2〜3本・20〜30分 |
+| ②③ 新規2チャンネル（未設計・社長の目標の対象） | `channels/new-channels/CHANNEL.md` | ジャンル選定中（工程0） |
+
+構成・口調・判決ルールなどチャンネル固有の決まりは `CHANNEL.md` が正。この README は全チャンネル共通の工程と費用ルール。
 
 社長（オーナー）は **「承認」だけ** をする。それ以外の工程は Claude Code と ChatGPT Codex が自動で進める。
 
@@ -28,6 +35,7 @@
 
 | # | 工程 | 実施 | 監査 | 成果物（`episodes/<id>/`） | 社長の確認 |
 |---|---|---|---|---|---|
+| 0 | チャンネル設計（新チャンネルのみ） | Claude | Codex | `channels/new-channels/00_genre_research.md`（ジャンル5案・実数値つき） | **ゲート0：ジャンルを2つ選ぶ** |
 | 1 | リサーチ | Claude | Codex | `01_research.md`（出典付きの事実のみ） | – |
 | 2 | 競合調査 | Claude | Codex | `02_competitors.md` | – |
 | 3 | 企画立案 | Claude | Codex | `03_plan.md` | **ゲートA：企画OK？** |
@@ -36,7 +44,7 @@
 | 6 | サムネ | **Codex** | **Claude** | `06_thumbnail.md`（狙い・競合の探し方）→ `06b_thumbnail_benchmark.md`（競合サムネ5本以上の分析・採用パターン・差別化）→ `video/src/Thumbnail.tsx` ＋ `script.json` の `thumbnail` ＋ `thumbnail.png` | – |
 | 7 | 動画制作 | Claude（Remotion） | Codex | `video/out/<id>.mp4` | **ゲートB：公開OK？** |
 
-社長が止めるのは **ゲートA（企画）とゲートB（完成品）の2回だけ**。それ以外は AI 同士の監査で進む。
+社長が止めるのは **ゲートA（企画）とゲートB（完成品）の2回だけ**（新チャンネルの立ち上げ時のみゲート0も）。それ以外は AI 同士の監査で進む。
 
 台本（5）をサムネ（6）より先にするのは、サムネで約束する内容が台本で回収されているかを監査で確認できるようにするため。
 
