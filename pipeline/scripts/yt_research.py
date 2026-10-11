@@ -4,13 +4,16 @@ Usage:
   YOUTUBE_API_KEY=... python3 pipeline/scripts/yt_research.py "クラゲ 眠る" "動物 睡眠 雑学" [--max 10] [--days 730] [--thumbs-dir DIR]
 
 --thumbs-dir saves each competitor thumbnail as DIR/<views>_<videoId>.jpg so the auditor can look at the real
-images. DIR must be OUTSIDE the repository (competitor images are never committed). Needs i.ytimg.com allowed
+images. DIR must be OUTSIDE the repository (competitor images are never committed). Needs www.googleapis.com (API)
+and i.ytimg.com (thumbnails) allowed
 in the environment's network settings.
 
-Prints a Markdown table (title / channel / views / published / thumbnail URL / video URL) sorted by views,
-with the retrieval date, for 02_competitors.md and 06b_thumbnail_benchmark.md.
+Prints a Markdown table (views / title / channel / subscribers / channel created / views per subscriber /
+published / thumbnail URL / video URL) sorted by views, with the retrieval date, for 02_competitors.md,
+06b_thumbnail_benchmark.md and channels/<name>/00_genre_research.md. Hidden subscriber counts print as 非公開.
 
-Quota: search.list = 100 units per keyword, videos.list = 1 unit per call (daily free quota: 10,000 units).
+Quota: search.list = 100 units per keyword, videos.list / channels.list = 1 unit per call of up to 50 IDs
+(daily free quota: 10,000 units).
 The script refuses to run more than 20 keywords at once. If the daily quota is used up the API returns 403
 and the script stops; it never retries or switches to a paid option.
 """
@@ -64,7 +67,17 @@ def main() -> None:
             sn, st = v["snippet"], v.get("statistics", {})
             thumbs = sn.get("thumbnails", {})
             thumb = (thumbs.get("maxres") or thumbs.get("high") or thumbs.get("default") or {}).get("url", "")
-            rows.append((int(st.get("viewCount", 0)), sn["title"], sn["channelTitle"], sn["publishedAt"][:10], thumb, v["id"]))
+            rows.append((int(st.get("viewCount", 0)), sn["title"], sn["channelTitle"], sn["publishedAt"][:10], thumb, v["id"],
+                         sn["channelId"]))
+
+    channels: dict[str, tuple[int | None, str]] = {}
+    ch_ids = list(dict.fromkeys(r[6] for r in rows))
+    for i in range(0, len(ch_ids), 50):
+        res = call("channels", part="snippet,statistics", id=",".join(ch_ids[i:i + 50]))
+        for c in res.get("items", []):
+            st = c.get("statistics", {})
+            subs = None if st.get("hiddenSubscriberCount") else int(st.get("subscriberCount", 0))
+            channels[c["id"]] = (subs, c["snippet"]["publishedAt"][:10])
 
     rows.sort(reverse=True)
     if args.thumbs_dir:
@@ -73,7 +86,7 @@ def main() -> None:
         if out == repo or out.startswith(repo + os.sep):
             sys.exit("--thumbs-dir はリポジトリの外を指定してください（競合画像はコミットしない）")
         os.makedirs(out, exist_ok=True)
-        for views, _t, _c, _p, thumb, vid in rows:
+        for views, _t, _c, _p, thumb, vid, _ch in rows:
             if not thumb:
                 continue
             try:
@@ -82,11 +95,14 @@ def main() -> None:
                 print(f"<!-- サムネ取得失敗 {vid}: {e} -->", file=sys.stderr)
     today = dt.date.today().isoformat()
     print(f"取得日：{today}（YouTube Data API v3）／検索語：{' / '.join(args.keywords)}\n")
-    print("| 再生数 | タイトル | チャンネル | 公開日 | サムネURL | 動画URL |")
-    print("|---|---|---|---|---|---|")
-    for views, title, ch, pub, thumb, vid in rows:
+    print("| 再生数 | タイトル | チャンネル | 登録者数 | チャンネル開設日 | 再生数/登録者 | 公開日 | サムネURL | 動画URL |")
+    print("|---|---|---|---|---|---|---|---|---|")
+    for views, title, ch, pub, thumb, vid, ch_id in rows:
         title = title.replace("|", "｜")
-        print(f"| {views:,} | {title} | {ch} | {pub} | {thumb} | https://www.youtube.com/watch?v={vid} |")
+        subs, created = channels.get(ch_id, (None, "不明"))
+        subs_s = "非公開" if subs is None else f"{subs:,}"
+        ratio = f"{views / subs:.1f}" if subs else "–"
+        print(f"| {views:,} | {title} | {ch} | {subs_s} | {created} | {ratio} | {pub} | {thumb} | https://www.youtube.com/watch?v={vid} |")
 
 
 if __name__ == "__main__":
