@@ -54,6 +54,18 @@
 ▼クレジット
 ナレーション：VOICEVOX:玄野武宏
 BGM・効果音：オリジナル
-（写真を使った場合は、ここに各写真の出典・作者・ライセンスを追記）
+写真（Wikimedia Commons）
+・アララト山：Vyacheslav Argenberg（CC BY 4.0）
+・ドゥルピナル：Wikkiwooki（CC BY-SA 4.0）
+・ギュスターヴ・ドレ「大洪水」（パブリックドメイン）
+・エドワード・ヒックス「ノアの方舟」1846年、フィラデルフィア美術館（CC0）
+・ジョージ・スミスの肖像（パブリックドメイン）
+・大英博物館「洪水書版」：Mike Peel（CC BY-SA 4.0）
+・チグリス川の丸い小舟（1932年）：American Colony, Jerusalem（パブリックドメイン）
+・ウルのジッグラト：Alli Khalil（CC BY-SA 4.0）
+・黒海の衛星写真：NASA（パブリックドメイン）
+・アーク・エンカウンター：1990'sguy（CC BY-SA 4.0）
+・グリーンランドの氷床：Hannes Grobe（CC BY-SA 2.5）
+・加曽利貝塚：Xser21（CC BY-SA 4.0）
 
 #ハビ判事 #ノアの方舟 #大洪水

@@ -43,16 +43,16 @@ export const RootsStory = () => (
 			</Visual>
 		</Beat>
 		<Beat name="貝塚" captions={c} from={15} to={17}>
-			<Photo id="kaizuka" label="海のない県から出てくる、海の貝がら">
-				<Visual label="海のない県から出てくる、海の貝がら">
-					<JomonSeaMap />
-				</Visual>
-			</Photo>
+			<Visual label="海のない県から出てくる、海の貝がら">
+				<JomonSeaMap />
+			</Visual>
 		</Beat>
 		<Beat name="生き延びた" captions={c} from={18} to={18}>
-			<Visual label="のぼってくる海と生きた、縄文の人々">
-				<Footprints sea />
-			</Visual>
+			<Photo id="kaizuka" label="のぼってくる海と生きた、縄文の人々">
+				<Visual label="のぼってくる海と生きた、縄文の人々">
+					<Footprints sea />
+				</Visual>
+			</Photo>
 		</Beat>
 		<Beat name="世界の洪水神話" captions={c} from={19} to={21}>
 			<Visual label="なぜ世界中に、洪水の物語があるのか">
