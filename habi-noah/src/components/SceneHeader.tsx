@@ -1,6 +1,6 @@
 import type React from 'react';
 import {Easing, interpolate, useCurrentFrame} from 'remotion';
-import {colors, gothicFamily, minchoFamily} from '../theme';
+import {colors, gothicFamily} from '../theme';
 
 type Props = {
 	readonly label: string;
@@ -40,7 +40,7 @@ export const SceneHeader: React.FC<Props> = ({label, title}) => {
 			>
 				{label}
 			</div>
-			<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 40, color: colors.text}}>{title}</div>
+			<div style={{fontFamily: gothicFamily, fontWeight: 900, fontSize: 40, color: colors.text, background: 'rgba(5, 9, 18, 0.88)', padding: '6px 20px', borderRadius: 8}}>{title}</div>
 		</div>
 	);
 };

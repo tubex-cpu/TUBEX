@@ -1,20 +1,18 @@
 import {useVideoConfig} from 'remotion';
 import {Beat, captionFrame} from '../components/Beat';
-import {CourtWithText} from '../components/CourtImage';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {BlackSeaFill, CityFloodDates, FloodLayerDig, FloodRain} from '../components/NoahArt';
 import {Photo} from '../components/Photo';
 import {MesopotamiaMap, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {clue3LayersCaptions as c} from '../data/captions';
-import {clue3LayersMouth as mouth} from '../data/mouth';
-import {colors, minchoFamily} from '../theme';
+import {colors} from '../theme';
 
 // 第3の手がかり 洪水の地層
 export const Clue3Layers = () => {
 	const {fps} = useVideoConfig();
 	return (
-		<SceneFrame captions={c} voice="Clue3Layers" mouth={mouth} expressions={{0: 'doubt', 10: 'stern', 20: 'closed', 26: 'think'}} hideAvatar={[[9, 9], [23, 25]]} label="第3の手がかり" title="大洪水の跡が見つかった？">
+		<SceneFrame captions={c} voice="Clue3Layers" label="第3の手がかり" title="大洪水の跡が見つかった？">
 			<Beat name="ウル" captions={c} from={0} to={2}>
 				<Photo id="ur-ziggurat" label="前回の舞台、シュメールの町ウル">
 					<Visual label="前回の舞台、シュメールの町ウル">
@@ -35,13 +33,11 @@ export const Clue3Layers = () => {
 				</Visual>
 			</Beat>
 			<Beat name="ハビの驚き" captions={c} from={9} to={9}>
-				<CourtWithText shot="court-think">
-					<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 100, color: colors.goldSoft, lineHeight: 1.3}}>
-						ついに、
-						<br />
-						証拠が……？
-					</div>
-				</CourtWithText>
+				<Photo id="ur-ziggurat" move="out" label="ついに、洪水の証拠が……？">
+					<Visual label="ついに、洪水の証拠が……？">
+						<FloodLayerDig />
+					</Visual>
+				</Photo>
 			</Beat>
 			<Beat name="町ごとの層" captions={c} from={10} to={15}>
 				<Visual label="ほかの町の“洪水”は、いつ起きた？">

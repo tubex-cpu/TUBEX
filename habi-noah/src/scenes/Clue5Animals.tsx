@@ -7,13 +7,12 @@ import {Photo} from '../components/Photo';
 import {Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {clue5AnimalsCaptions as c} from '../data/captions';
-import {clue5AnimalsMouth as mouth} from '../data/mouth';
 
 // 第5の手がかり 全ての動物を乗せた船
 export const Clue5Animals = () => {
 	const {fps} = useVideoConfig();
 	return (
-		<SceneFrame captions={c} voice="Clue5Animals" mouth={mouth} expressions={{0: 'doubt', 5: 'think', 12: 'stern', 18: 'closed'}} hideAvatar={[[15, 17]]} label="第5の手がかり" title="全ての動物は、船に乗れた？">
+		<SceneFrame captions={c} voice="Clue5Animals" label="第5の手がかり" title="全ての動物は、船に乗れた？">
 			<Beat name="ケンタッキーの方舟" captions={c} from={0} to={2}>
 				<Photo id="ark-encounter" label="アメリカに建つ、実物大の方舟">
 					<Visual label="アメリカに建つ、実物大の方舟">

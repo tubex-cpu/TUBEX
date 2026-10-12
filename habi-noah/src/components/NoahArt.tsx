@@ -584,11 +584,11 @@ export const LabWaiting: React.FC = () => {
 export const VerdictTiles: React.FC = () => {
 	const frame = useCurrentFrame();
 	const tiles: {t: string; mark: string; color: string; el: React.ReactNode}[] = [
-		{t: '船の形', mark: '×', color: colors.wrong, el: <AraratMountain />},
-		{t: '古い洪水物語', mark: '○', color: colors.correct, el: <RoundArk />},
-		{t: '洪水の地層', mark: '△', color: colors.half, el: <FloodLayerDig />},
-		{t: '黒海大洪水', mark: '△', color: colors.half, el: <BlackSeaFill />},
-		{t: '全ての動物', mark: '×', color: colors.wrong, el: <ArkBuilding />},
+		{t: '船の形', mark: 'まちがい', color: colors.wrong, el: <AraratMountain />},
+		{t: '古い洪水物語', mark: '正しい', color: colors.correct, el: <RoundArk />},
+		{t: '洪水の地層', mark: '半分正しい', color: '#d98a12', el: <FloodLayerDig />},
+		{t: '黒海大洪水', mark: '半分正しい', color: '#d98a12', el: <BlackSeaFill />},
+		{t: '全ての動物', mark: 'まちがい', color: colors.wrong, el: <ArkBuilding />},
 	];
 	return (
 		<div style={{position: 'absolute', left: 60, right: 60, top: 260, display: 'flex', gap: 24, justifyContent: 'center'}}>
@@ -603,16 +603,20 @@ export const VerdictTiles: React.FC = () => {
 						<div
 							style={{
 								position: 'absolute',
-								left: 0,
-								right: 0,
-								top: 10,
+								left: 20,
+								right: 20,
+								top: 110,
 								textAlign: 'center',
-								fontFamily: minchoFamily,
-								fontWeight: 800,
-								fontSize: 240,
-								lineHeight: 1.2,
-								color: tl.color,
-								textShadow: '0 0 20px rgba(0,0,0,0.8)',
+								fontFamily: gothicFamily,
+								fontWeight: 900,
+								fontSize: 44,
+								padding: '10px 0',
+								borderRadius: 12,
+								rotate: '-6deg',
+								color: '#fff',
+								background: tl.color,
+								border: '4px solid #fff',
+								whiteSpace: 'nowrap',
 								opacity: interpolate(frame, [at, at + 4], [0, 1], clamp),
 								scale: String(interpolate(frame, [at, at + 8], [1.8, 1], ease)),
 							}}

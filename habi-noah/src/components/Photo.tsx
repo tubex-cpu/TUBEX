@@ -46,16 +46,25 @@ export const Photo: React.FC<Props> = ({id, children, move = 'in', label}) => {
 						position: 'absolute',
 						left: 0,
 						right: 0,
-						top: 150,
-						textAlign: 'center',
-						fontFamily: gothicFamily,
-						fontWeight: 900,
-						fontSize: 58,
-						color: colors.text,
-						textShadow: '0 4px 18px rgba(0,0,0,0.9)',
+						top: 140,
+						display: 'flex',
+						justifyContent: 'center',
 					}}
 				>
-					{label}
+					<div
+						style={{
+							fontFamily: gothicFamily,
+							fontWeight: 900,
+							fontSize: 60,
+							color: colors.text,
+							padding: '12px 40px',
+							borderRadius: 14,
+							background: 'rgba(5, 9, 18, 0.88)',
+							border: `3px solid ${colors.gold}`,
+						}}
+					>
+						{label}
+					</div>
 				</div>
 			) : null}
 			<div style={{position: 'absolute', right: 24, top: 120, fontFamily: gothicFamily, fontWeight: 700, fontSize: 20, color: 'rgba(255,255,255,0.8)', textShadow: '0 1px 4px #000'}}>

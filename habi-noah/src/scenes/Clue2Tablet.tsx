@@ -7,14 +7,13 @@ import {Photo} from '../components/Photo';
 import {OldBook, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {clue2TabletCaptions as c} from '../data/captions';
-import {clue2TabletMouth as mouth} from '../data/mouth';
 import {colors} from '../theme';
 
 // 第2の手がかり 聖書より古い洪水物語
 export const Clue2Tablet = () => {
 	const {fps} = useVideoConfig();
 	return (
-		<SceneFrame captions={c} voice="Clue2Tablet" mouth={mouth} expressions={{0: 'think', 4: 'doubt', 19: 'stern', 32: 'think'}} hideAvatar={[[29, 31]]} label="第2の手がかり" title="聖書より古い“方舟”の物語？">
+		<SceneFrame captions={c} voice="Clue2Tablet" label="第2の手がかり" title="聖書より古い“方舟”の物語？">
 			<Beat name="大英博物館" captions={c} from={0} to={1}>
 				<Visual label="1872年、ロンドンの博物館で">
 					<MuseumShelves />

@@ -320,7 +320,7 @@ export const clue1AraratCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "まちがい×。",
+    "text": "まちがい。",
     "startMs": 125011,
     "endMs": 125619,
     "timestampMs": null,
@@ -597,7 +597,7 @@ export const clue2TabletCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "正しい○。",
+    "text": "正しい。",
     "startMs": 133393,
     "endMs": 133980,
     "timestampMs": null,
@@ -797,7 +797,7 @@ export const clue3LayersCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "半分正しい△。",
+    "text": "半分正しい。",
     "startMs": 105001,
     "endMs": 105961,
     "timestampMs": null,
@@ -941,7 +941,7 @@ export const clue4BlackSeaCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "半分正しい△。",
+    "text": "半分正しい。",
     "startMs": 78580,
     "endMs": 79540,
     "timestampMs": null,
@@ -1085,7 +1085,7 @@ export const clue5AnimalsCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "まちがい×。",
+    "text": "まちがい。",
     "startMs": 79028,
     "endMs": 79636,
     "timestampMs": null,
@@ -1335,35 +1335,35 @@ export const summaryCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "アララト山のふもとの船の形は、今のところ、自然の地形だった。まちがい×。",
+    "text": "アララト山のふもとの船の形は、今のところ、自然の地形だった。まちがい。",
     "startMs": 3205,
     "endMs": 8293,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "聖書より古い洪水の物語は、粘土板に本当にあった。しかも、方舟は丸かった。正しい○。",
+    "text": "聖書より古い洪水の物語は、粘土板に本当にあった。しかも、方舟は丸かった。正しい。",
     "startMs": 8673,
     "endMs": 15383,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "洪水の地層は、本当にあった。でも、それは地域の洪水だった。半分正しい△。",
+    "text": "洪水の地層は、本当にあった。でも、それは地域の洪水だった。半分正しい。",
     "startMs": 15763,
     "endMs": 21587,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "黒海の大洪水は、水の変化は本当だった。でも、ノアにつながるかは、わからない。半分正しい△。",
+    "text": "黒海の大洪水は、水の変化は本当だった。でも、ノアにつながるかは、わからない。半分正しい。",
     "startMs": 21967,
     "endMs": 29071,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "全ての動物を乗せた、世界の大洪水の証拠は、なかった。まちがい×。",
+    "text": "全ての動物を乗せた、世界の大洪水の証拠は、なかった。まちがい。",
     "startMs": 29451,
     "endMs": 34208,
     "timestampMs": null,

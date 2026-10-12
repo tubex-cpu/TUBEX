@@ -10,10 +10,10 @@ type Props = {
 	readonly style?: React.CSSProperties;
 };
 
-const verdictInfo: Record<Verdict, {mark: string; label: string; color: string}> = {
-	correct: {mark: '○', label: '正しい', color: colors.correct},
-	half: {mark: '△', label: '半分正しい', color: colors.half},
-	wrong: {mark: '×', label: 'まちがい', color: colors.wrong},
+const verdictInfo: Record<Verdict, {label: string; color: string}> = {
+	correct: {label: '正しい', color: colors.correct},
+	half: {label: '半分正しい', color: '#d98a12'},
+	wrong: {label: 'まちがい', color: colors.wrong},
 };
 
 // 判決のハンコ：上から叩きつけるように押される
@@ -28,29 +28,19 @@ const VerdictStampInner: React.FC<Props> = ({verdict, size = 380, style}) => {
 				left: '50%',
 				top: '46%',
 				translate: '-50% -50%',
-				display: 'flex',
-				flexDirection: 'column',
-				alignItems: 'center',
 				...style,
 			}}
 		>
 			<div
 				style={{
-					width: size,
-					height: size,
-					borderRadius: '50%',
-					border: `14px solid ${info.color}`,
-					display: 'flex',
-					alignItems: 'center',
-					justifyContent: 'center',
-					fontFamily: minchoFamily,
-					fontWeight: 800,
-					fontSize: size * 0.72,
-					lineHeight: 1,
-					color: info.color,
-					background: 'rgba(244, 236, 220, 0.94)',
-					rotate: '-8deg',
-					boxShadow: '0 20px 60px rgba(0,0,0,0.45)',
+					padding: `${size * 0.08}px ${size * 0.18}px`,
+					border: `${size * 0.035}px solid ${info.color}`,
+					borderRadius: size * 0.05,
+					background: 'rgba(244, 236, 220, 0.96)',
+					rotate: '-6deg',
+					boxShadow: '0 20px 60px rgba(0,0,0,0.5)',
+					textAlign: 'center',
+					whiteSpace: 'nowrap',
 					scale: interpolate(frame, [0, 10, 16], [2.4, 0.92, 1], {
 						extrapolateLeft: 'clamp',
 						extrapolateRight: 'clamp',
@@ -59,20 +49,8 @@ const VerdictStampInner: React.FC<Props> = ({verdict, size = 380, style}) => {
 					opacity: interpolate(frame, [0, 6], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
 				}}
 			>
-				{info.mark}
-			</div>
-			<div
-				style={{
-					marginTop: 30,
-					fontFamily: gothicFamily,
-					fontWeight: 900,
-					fontSize: 72,
-					color: info.color,
-					textShadow: '0 4px 16px rgba(0,0,0,0.6)',
-					opacity: interpolate(frame, [14, 24], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
-				}}
-			>
-				判決：{info.label}
+				<div style={{fontFamily: gothicFamily, fontWeight: 900, fontSize: size * 0.14, color: colors.ink, letterSpacing: 8}}>判決</div>
+				<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: size * 0.3, lineHeight: 1.15, color: info.color}}>{info.label}</div>
 			</div>
 		</Interactive.Div>
 	);

@@ -6,14 +6,13 @@ import {Photo} from '../components/Photo';
 import {Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {clue1AraratCaptions as c} from '../data/captions';
-import {clue1AraratMouth as mouth} from '../data/mouth';
 import {colors} from '../theme';
 
 // 第1の手がかり アララト山の船の形
 export const Clue1Ararat = () => {
 	const {fps} = useVideoConfig();
 	return (
-		<SceneFrame captions={c} voice="Clue1Ararat" mouth={mouth} expressions={{0: 'think', 12: 'stern', 19: 'doubt', 30: 'think'}} hideAvatar={[[26, 28]]} label="第1の手がかり" title="アララト山に“船の形”？">
+		<SceneFrame captions={c} voice="Clue1Ararat" label="第1の手がかり" title="アララト山に“船の形”？">
 			<Beat name="聖書の物語" captions={c} from={0} to={2}>
 				<Photo id="noah-art" label="神はノアに、船をつくれと命じた">
 					<Visual label="神はノアに、船をつくれと命じた">

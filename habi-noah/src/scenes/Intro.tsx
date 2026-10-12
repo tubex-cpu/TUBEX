@@ -4,12 +4,11 @@ import {Photo} from '../components/Photo';
 import {Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {introCaptions as c} from '../data/captions';
-import {introMouth as mouth} from '../data/mouth';
 import {colors} from '../theme';
 
 // 謎の先出し
 export const Intro = () => (
-	<SceneFrame captions={c} voice="Intro" mouth={mouth} expressions={{0: 'stern', 7: 'doubt'}}>
+	<SceneFrame captions={c} voice="Intro">
 		<Beat name="ドリル" captions={c} from={0} to={0}>
 			<Visual label="先月、トルコで何かが起きた" labelColor={colors.gold}>
 				<DrillRig />

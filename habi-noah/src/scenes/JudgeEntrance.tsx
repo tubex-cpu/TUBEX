@@ -1,12 +1,11 @@
 import {interpolate, useCurrentFrame} from 'remotion';
 import {Beat} from '../components/Beat';
-import {CourtWithText} from '../components/CourtImage';
+import {Photo} from '../components/Photo';
 import {ClayTablet} from '../components/Illustrations';
 import {AraratMountain, BlackSeaFill, FloodLayerDig, ArkBuilding} from '../components/NoahArt';
 import {ScaleBalance, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {judgeEntranceCaptions as c} from '../data/captions';
-import {judgeEntranceMouth as mouth} from '../data/mouth';
 import {colors, gothicFamily, minchoFamily} from '../theme';
 
 const clues = [
@@ -46,24 +45,22 @@ const ClueRow = () => {
 
 // ハビ判事登場
 export const JudgeEntrance = () => (
-	<SceneFrame captions={c} voice="JudgeEntrance" mouth={mouth} expressions={{0: 'stern', 3: 'think', 5: 'doubt'}} hideAvatar={[[0, 3]]} label="開廷" title="閉園後の法廷">
+	<SceneFrame captions={c} voice="JudgeEntrance" label="開廷" title="閉園後の法廷">
 		<Beat name="ハビ判事" captions={c} from={0} to={1}>
-			<CourtWithText shot="court-listen">
-				<div style={{fontFamily: gothicFamily, fontWeight: 900, fontSize: 44, color: colors.gold}}>閉園後の法廷・裁判長</div>
-				<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 150, color: colors.text}}>ハビ判事</div>
-				<div style={{fontFamily: gothicFamily, fontWeight: 700, fontSize: 48, color: colors.goldSoft}}>信じるのは、証拠だけ。</div>
-			</CourtWithText>
+			<div style={{position: 'absolute', left: 0, right: 0, top: 250, textAlign: 'center'}}>
+				<div style={{fontFamily: gothicFamily, fontWeight: 900, fontSize: 52, color: colors.gold}}>閉園後の法廷</div>
+				<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 170, color: colors.text, textShadow: '0 6px 30px rgba(0,0,0,0.6)'}}>ハビ判事</div>
+				<div style={{display: 'inline-block', marginTop: 10, fontFamily: gothicFamily, fontWeight: 900, fontSize: 56, color: colors.text, padding: '10px 40px', borderRadius: 14, background: 'rgba(5, 9, 18, 0.88)', border: `3px solid ${colors.gold}`}}>
+					信じるのは、証拠だけ。
+				</div>
+			</div>
 		</Beat>
 		<Beat name="前回から" captions={c} from={2} to={3}>
-			<CourtWithText shot="court-think">
-				<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 76, color: colors.text, lineHeight: 1.4}}>
-					シュメールの調査で
-					<br />
-					<span style={{color: colors.gold}}>ずっと気になっていた</span>
-					<br />
-					ある物語
-				</div>
-			</CourtWithText>
+			<Photo id="ur-ziggurat" label="シュメールの調査で、ずっと気になっていた物語">
+				<Visual label="シュメールの調査で、ずっと気になっていた物語">
+					<ClayTablet width={480} />
+				</Visual>
+			</Photo>
 		</Beat>
 		<Beat name="今夜の問い" captions={c} from={4} to={5}>
 			<Visual label="ノアの方舟は、本当にあったのか？">

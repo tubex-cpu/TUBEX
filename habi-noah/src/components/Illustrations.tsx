@@ -27,7 +27,21 @@ const Label: React.FC<{readonly children: React.ReactNode; readonly color?: stri
 	color = colors.text,
 	size = 44,
 }) => (
-	<div style={{fontFamily: gothicFamily, fontWeight: 900, fontSize: size, color, textAlign: 'center', marginTop: 16}}>
+	<div
+		style={{
+			fontFamily: gothicFamily,
+			fontWeight: 900,
+			fontSize: Math.max(size, 54),
+			color,
+			textAlign: 'center',
+			marginTop: 18,
+			padding: '10px 34px',
+			borderRadius: 14,
+			background: 'rgba(5, 9, 18, 0.88)',
+			border: `3px solid ${colors.gold}`,
+			textShadow: '0 2px 4px rgba(0,0,0,0.8)',
+		}}
+	>
 		{children}
 	</div>
 );

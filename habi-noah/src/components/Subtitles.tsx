@@ -24,7 +24,7 @@ export const Subtitles: React.FC<Props> = ({captions}) => {
 		<div
 			style={{
 				position: 'absolute',
-				left: 320,
+				left: 120,
 				right: 120,
 				bottom: 50,
 				display: 'flex',
@@ -51,7 +51,7 @@ export const Subtitles: React.FC<Props> = ({captions}) => {
 					textAlign: 'center',
 					padding: '18px 40px',
 					borderRadius: 14,
-					background: 'rgba(5, 9, 18, 0.72)',
+					background: 'rgba(5, 9, 18, 0.86)',
 					borderTop: `3px solid ${colors.gold}`,
 					textShadow: '0 2px 6px rgba(0,0,0,0.6)',
 				}}
