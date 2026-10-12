@@ -5,6 +5,8 @@ type PhotoEntry = {
 	readonly file: string;
 	readonly credit: string;
 	readonly position?: string;
+	// 縦長の絵画などは contain（全体を見せ、余白はぼかした同じ画像で埋める）
+	readonly fit?: 'cover' | 'contain';
 };
 
 export const photos: Record<string, PhotoEntry> = {};
