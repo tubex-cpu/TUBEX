@@ -5,7 +5,7 @@
 
 | ID | チャンネル | テーマ | 状態 |
 |---|---|---|---|
-| tsucho-001-first-90-days | ② 届いた書類と通帳（退職・年金のお金）（`channels/tsucho/`） | 退職翌月、給料はないのに請求が来る。通帳で追う90日。**最優先**（社長の目標の対象）。並行して `channels/tsucho/calendar.md`（年間の書類カレンダー）を作る | 工程1 リサーチから |
+| tsucho-001-first-90-days | ② 届いた書類と通帳（退職・年金のお金）（`channels/tsucho/`） | 退職翌月、給料はないのに請求が来る。通帳で追う90日。**最優先**（社長の目標の対象）。並行して `channels/tsucho/calendar.md`（年間の書類カレンダー）を作る | **差別化の再検討中・社長の判断待ち**（2026-10-13。`01_two_channel_design.md` §2-1）。工程1に進めない |
 | ikimono-001-no-wheels | ③ その体、設計できる？（`channels/ikimono/`） | なぜ車輪で動く生き物はいないのか？ **最優先** | 工程1 リサーチから |
 | edo-001-send-a-letter | 【保留】江戸の暮らし（`channels/edo-otsukai/`） | 江戸で手紙を1通送る | **保留**（2026-10-13。`channels/new-channels/01_two_channel_design.md`）。進めない |
 | habi-001-sumer | ① ハビ判事（`channels/habi-judge/`） | 日本人とシュメール判決（社長作の台本あり） | 公開済みかどうか社長の回答待ち。未公開なら台本の出典検証→動画化 |
