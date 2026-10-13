@@ -1,6 +1,6 @@
 # 工程0：ジャンル調査（新規2チャンネル）
 
-作成：2026-10-13（Claude）／状態：**Codex 監査待ち → ゲート0（社長が2つ選ぶ）**
+作成：2026-10-13（Claude）／状態：**ゲート0 決定済み（2026-10-13）：社長が案1〜3の3チャンネルを選択**（Codex 監査の結果を待たずに決定。監査の指摘は引き続き直す）
 
 - 手順：`channels/new-channels/CHANNEL.md`「工程0」。前段のたたき台は `00_entry_strategy.md`、社長提供の比較台帳（xlsx、候補 C000〜C030・証拠 E001〜E268）を土台にした
 - 実数値：`pipeline/scripts/yt_research.py "検索語" --max 30 --duration medium,long`（YouTube Data API v3、**取得日 2026-10-13**）。4分以上の通常動画・直近2年公開・再生数順。全行は `00_genre_research_raw.md`
@@ -83,6 +83,7 @@
 | 生物 | 知識の墓場【ゆっくり雑学】 https://www.youtube.com/channel/UC7zo8cRB1eOOXEQPSp47XTg | 2026-01-24 | 約8.5か月 | 17 | 2,330 | 525,525 | 「なぜ炎を吐く生物は存在しないのか」455,121回・13分 |
 | 企業 | あの頃デジタル研究所【ゆっくり解説】 https://www.youtube.com/channel/UCrSi7IoRj7GUUSM2N27jrlg | 2026-08-25 | **約1.5か月** | 18 | 1,880 | 648,085 | 「激安PCの闇…ソーテックとGateway」210,051回・21分 |
 | 企業 | 御社と競合の違い https://www.youtube.com/channel/UCx12srqCTxTOPTfSUELbnlg | 2025-07-18 | 約15か月 | 53 | 54,100 | 4,779,657 | 「三大財閥を完全解説」533,796回・15分 |
+| 企業 | あっと驚く経済学 https://www.youtube.com/channel/UCRNSwqwJnBWjUvzcQw3YU_g | 2025-12-20 | 約10か月 | 147 | 19,400 | 4,339,008 | 台帳 E054〜E059 の比較相手。開設日は 2026-10-13 の API 取得で判明（上位30の検索には出ていない） |
 | 企業 | 企業しくじり・やらかし物語 https://www.youtube.com/channel/UCzqg565KdjuxPXTBuzDdMAw | 2024-11-20 | 約23か月 | 283 | 8,060 | 5,145,365 | 「崩壊秒読みのヤマダ電機」464,451回・15分（再生は多いが登録者が増えにくい例） |
 | スマホ | さゆりのスマホ相談所 https://www.youtube.com/channel/UC0Ce-khS0wtdU1BkfHJVdXw | 2026-05-15 | 約5か月 | 15 | 33,900 | 3,502,038 | 「PayPayある人は全員チェック」505,481回・9分 |
 | スマホ | スマホ博士 https://www.youtube.com/channel/UC7nKJWglHMy-dO8dqEabRIQ | 2026-01-20 | 約9か月 | 65 | 155,000 | 21,095,662 | 「そのLINEの設定今すぐ直さないと」1,931,457回・14分 |
