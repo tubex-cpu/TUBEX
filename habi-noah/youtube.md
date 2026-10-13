@@ -20,16 +20,16 @@
 
 ▼チャプター
 0:00 謎の先出し
-0:43 ハビ判事登場
-1:11 第1の手がかり アララト山の船の形
-5:11 第2の手がかり 聖書より古い洪水物語
-8:45 第3の手がかり 洪水の地層
-11:07 第4の手がかり 黒海大洪水
-13:25 第5の手がかり 全ての動物を乗せた船
-16:06 本当の大洪水は日本にも
-18:37 まだ解けていない謎
-19:04 まとめ
-19:58 締め
+0:53 ハビ判事登場
+1:21 第1の手がかり アララト山の船の形
+5:21 第2の手がかり 聖書より古い洪水物語
+8:55 第3の手がかり 洪水の地層
+11:17 第4の手がかり 黒海大洪水
+13:35 第5の手がかり 全ての動物を乗せた船
+16:16 本当の大洪水は日本にも
+18:47 まだ解けていない謎
+19:14 まとめ
+20:08 締め
 
 ▼前回の法廷：日本人とシュメール判決
 （前回の動画のURLを貼ってください）
@@ -65,18 +65,84 @@
 ▼クレジット
 ナレーション：VOICEVOX:玄野武宏
 BGM・効果音：オリジナル
-写真（Wikimedia Commons）
-・アララト山：Vyacheslav Argenberg（CC BY 4.0）
-・ドゥルピナル：Wikkiwooki（CC BY-SA 4.0）
-・ギュスターヴ・ドレ「大洪水」（パブリックドメイン）
-・エドワード・ヒックス「ノアの方舟」1846年、フィラデルフィア美術館（CC0）
-・ジョージ・スミスの肖像（パブリックドメイン）
-・大英博物館「洪水書版」：Mike Peel（CC BY-SA 4.0）
-・チグリス川の丸い小舟（1932年）：American Colony, Jerusalem（パブリックドメイン）
-・ウルのジッグラト：Alli Khalil（CC BY-SA 4.0）
-・黒海の衛星写真：NASA（パブリックドメイン）
-・アーク・エンカウンター：1990'sguy（CC BY-SA 4.0）
-・グリーンランドの氷床：Hannes Grobe（CC BY-SA 2.5）
-・加曽利貝塚：Xser21（CC BY-SA 4.0）
+写真（Wikimedia Commons。登場順）
+・写真はイメージ（アラスカ・デナリ国立公園の掘削, 2018）Mary Lewandowski / NPS / パブリックドメイン
+・珪化木（石になった木）Bryan Barnes / CC BY-SA 4.0
+・Wikkiwooki / CC BY-SA 4.0 / Wikimedia Commons
+・エドワード・ヒックス「ノアの方舟」（1846, フィラデルフィア美術館）/ CC0
+・ギルガメシュ叙事詩 第5の粘土板（スレイマニヤ博物館）Osama Shukir Muhammed Amin / CC BY-SA 4.0
+・バグダッドのチグリス川岸の丸い小舟（1920年代）/ パブリックドメイン
+・縄文土器の破片 雪野滾滾 / CC0
+・ミケランジェロ「大洪水」（システィーナ礼拝堂）/ パブリックドメイン
+・Alli Khalil / CC BY-SA 4.0 / Wikimedia Commons
+・アララト山とホル・ヴィラップ修道院 Vyacheslav Argenberg / CC BY 4.0
+・『アウクスブルク奇跡の書』（1550年ごろ）創世記7章 / パブリックドメイン
+・ルーラント・サーフェリー「ノアの方舟」（ワルシャワ国立美術館）/ パブリックドメイン
+・ギュスターヴ・ドレ「大洪水」（1866）/ パブリックドメイン
+・シモン・デ・ミル「アララト山のノアの方舟」/ パブリックドメイン
+・ドゥルピナル遺跡 Zorka Sojka / CC BY-SA 4.0
+・アララト山の二つの峰 Vyacheslav Argenberg / CC BY 4.0
+・Vyacheslav Argenberg / CC BY 4.0 / Wikimedia Commons
+・宇宙から見たアララト山 NASA/JSC / パブリックドメイン
+・アララト山近くの“方舟”とされる地形 Mfikretyilmaz / CC BY 3.0
+・バビロンの遺跡 Osama Shukir Muhammed Amin / CC BY-SA 4.0
+・ジューディー山（トルコ）Timo Roller / CC BY 3.0
+・大英博物館グレート・コート Andy Li / CC0
+・ジョージ・スミス（1840–1876）/ パブリックドメイン
+・大英博物館「洪水書版」撮影：Mike Peel / CC BY-SA 4.0
+・ニネヴェのクユンジクの丘 Fredarch / CC BY-SA 3.0
+・ジョージ・スミス『カルデアの創世記』（アムステルダム国立美術館）/ CC0
+・ギルガメシュ叙事詩 第11の粘土板（大英博物館）Osama Shukir Muhammed Amin / CC BY-SA 4.0
+・イヴァン・アイヴァゾフスキー「大洪水」（1864）/ パブリックドメイン
+・カワラバト Mikhail Nevsky / CC BY 4.0
+・ツバメ Hari K Patibanda / CC BY 2.0
+・ワタリガラス Diliff / CC BY-SA 3.0
+・ギュスターヴ・ドレ「方舟から放たれる鳩」/ パブリックドメイン
+・シュメール王名表（前1800年ごろ）Gts-tg / CC BY-SA 4.0
+・大英博物館 Alvesgaspar / CC BY-SA 4.0
+・American Colony (Jerusalem) 1932 / パブリックドメイン
+・アブドゥル・カーディル・アル＝ラッサーム「チグリス河畔」/ パブリックドメイン
+・ウルのジッグラト Hardnfast / CC BY 3.0
+・プアビ王妃の金の髪飾り（ウル王墓）Mary Harrsch / CC BY 2.0
+・レナード・ウーリーとT・E・ロレンス（1913年ごろ）/ パブリックドメイン
+・ヨーゼフ・アントン・コッホ「ノアの感謝の捧げもの」/ パブリックドメイン
+・キシュのジッグラトの遺跡 Osama Shukir Muhammed Amin / CC BY-SA 4.0
+・ユーフラテス川を渡る Zhengan / CC BY-SA 4.0
+・イラク南部の湿地帯 / CC0
+・黒海沿岸の町アバナ Dosseman / CC BY-SA 4.0
+・NASA / パブリックドメイン
+・宇宙から見たボスポラス海峡 NASA（ISS008-E-21752）/ パブリックドメイン
+・ナイアガラの滝 Helen Filatova / CC BY 2.0
+・黒海沿岸の町シノップ / CC BY-SA 3.0
+・宇宙から見た黒海沿岸・シノップ（1975）NASA / パブリックドメイン
+・ロバート・バラード博士 アメリカ海軍 / パブリックドメイン
+・キレニア船（前4世紀のギリシャ商船）Mgiganteus1 / CC BY-SA 3.0
+・サーフェリー「創造物を救われたことを神に感謝するノア」/ パブリックドメイン
+・1990'sguy / CC BY-SA 4.0 / Wikimedia Commons
+・アーク・エンカウンター 1990'sguy / CC BY-SA 4.0
+・アーク・エンカウンター Cimerondagert / CC BY-SA 4.0
+・ワイオミング号の記念碑（メイン海洋博物館）Paul VanDerWerf / CC BY 2.0
+・『ウィーン創世記』の大洪水（6世紀）/ パブリックドメイン
+・エベレスト北壁 Luca Galuzzi / CC BY-SA 2.5
+・アイヴァゾフスキー「アララト山から下りるノア」（1889）/ パブリックドメイン
+・Hannes Grobe / CC BY-SA 2.5 / Wikimedia Commons
+・氷河期の地球（想像図）Ittiz / CC BY-SA 3.0
+・南極の氷床 NASA/Christy Hansen / パブリックドメイン
+・ドッガーランドの地図 Francis Lima / CC BY-SA 4.0
+・写真はイメージ（北海のトロール漁船の模型, 1910）/ パブリックドメイン
+・火焔型土器 Netherzone / CC BY-SA 4.0
+・安楽寺貝塚 Fred Cherrygarden / CC BY-SA 4.0
+・水子貝塚公園（埼玉県富士見市）京浜にけ / CC BY-SA 3.0
+・宇宙から見た東京湾 NASA / パブリックドメイン
+・加曽利貝塚（千葉市）Xser21 / CC BY-SA 4.0 / Wikimedia Commons
+・ラヴィ・ヴァルマ「マツヤ」/ パブリックドメイン
+・ルーベンス「デウカリオンとピュラ」（1636）/ パブリックドメイン
+・「ノアの方舟」の道しるべ Aaboelela / CC BY-SA 3.0
+・放射性炭素年代測定の装置（展示）Kestrel / CC BY-SA 4.0
+・アララト山とエレバンの街 Serouj Ourishian / CC BY-SA 3.0
+・洪水書版（大英博物館）/ CC0
+・縄文土器（井戸尻遺跡）Takuma-sa / CC BY-SA 3.0
+・アララト山とアララト平野 Serouj Ourishian / CC BY-SA 4.0
+・カワラバト Alexis Lours / CC BY 4.0
 
 #ハビ判事 #ノアの方舟 #大洪水

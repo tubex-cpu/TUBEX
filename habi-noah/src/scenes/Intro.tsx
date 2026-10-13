@@ -7,7 +7,7 @@ import {introCaptions as c} from '../data/captions';
 export const Intro = () => (
 	<SceneFrame captions={c} voice="Intro">
 		<Beat name="ドリルが砕けた" captions={c} from={0} to={1}>
-			<Photo id="core-drill" label="方舟が眠る場所で、ドリルが砕けた" />
+			<Photo id="core-drill" label="ドリルが砕けた。地下に何が？" />
 		</Beat>
 		<Beat name="石になった木" captions={c} from={2} to={2}>
 			<Photo id="petrified-wood" move="out" label="石灰岩より硬い「何か」の正体は？" />

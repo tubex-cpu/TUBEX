@@ -2,7 +2,7 @@ import {useVideoConfig} from 'remotion';
 import {Beat, captionFrame} from '../components/Beat';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {Center} from '../components/Illustrations';
-import {AnimalCount, ArkBuilding, EverestWater, TwoAccounts, VerdictTiles, WoodenShipLimit} from '../components/NoahArt';
+import {AnimalCount, ArkBuilding, EverestWater, KindGroups, TwoAccounts, VerdictTiles, WoodenShipLimit, WorldStrata} from '../components/NoahArt';
 import {Photo} from '../components/Photo';
 import {Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
@@ -20,7 +20,7 @@ export const Clue5Animals = () => {
 				<Photo id="ark-encounter-2" move="out" label="長さ155m。まるで木のビル" />
 			</Beat>
 			<Beat name="中の様子" captions={c} from={3} to={3}>
-				<Photo id="ark-encounter-005" move="right" label="中には、動物たちの小屋まで" />
+				<Photo id="ark-encounter-005" move="right" label="人と比べると、この大きさ" />
 			</Beat>
 			<Beat name="木の船の限界" captions={c} from={4} to={5}>
 				<Visual label="木だけで、この大きさの船は浮かぶ？">
@@ -49,7 +49,9 @@ export const Clue5Animals = () => {
 				</Visual>
 			</Beat>
 			<Beat name="グループ" captions={c} from={22} to={23}>
-				<Photo id="savery-ark-2" move="right" label="「種類」ではなく「グループ」なら乗れる？" />
+				<Visual label="「種類」ではなく「グループ」なら乗れる？">
+					<KindGroups />
+				</Visual>
 			</Beat>
 			<Beat name="水" captions={c} from={24} to={24}>
 				<Visual label="本当の問題は、水だった">
@@ -60,7 +62,9 @@ export const Clue5Animals = () => {
 				<Photo id="everest" move="out" label="この山まで沈める水は、どこに？" />
 			</Beat>
 			<Beat name="地層" captions={c} from={26} to={26}>
-				<Photo id="grand-canyon" move="left" label="世界中の地層は、何を語る？" />
+				<Visual label="世界中の地層は、何を語る？">
+					<WorldStrata />
+				</Visual>
 			</Beat>
 			<Beat name="判決" captions={c} from={27} to={29}>
 				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 27, 28, fps)} />

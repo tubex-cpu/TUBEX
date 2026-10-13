@@ -923,3 +923,56 @@ export const NovelCover: React.FC = () => {
 		</svg>
 	);
 };
+
+// 「種類」ではなく「グループ」：イヌのなかま、ネコのなかま……
+export const KindGroups: React.FC = () => {
+	const frame = useCurrentFrame();
+	const groups = [
+		{n: 'イヌのなかま', k: ['オオカミ', 'キツネ', 'イヌ', 'コヨーテ'], c: '#b7865a'},
+		{n: 'ネコのなかま', k: ['ライオン', 'トラ', 'ヒョウ', 'ネコ'], c: '#d9a441'},
+		{n: 'ウマのなかま', k: ['ウマ', 'シマウマ', 'ロバ'], c: '#8a6a4a'},
+	];
+	return (
+		<svg width={1400} height={600} viewBox="0 0 1400 600">
+			{groups.map((g, i) => {
+				const t = interpolate(frame, [i * 20, i * 20 + 30], [0, 1], ease);
+				return (
+					<g key={g.n} transform={`translate(${240 + i * 460} 300)`} opacity={t}>
+						<rect x={-200} y={-250} width={400} height={500} rx={30} fill="rgba(244,236,220,0.1)" stroke={g.c} strokeWidth={5} />
+						<text y={-190} textAnchor="middle" {...txt(44, g.c)}>{g.n}</text>
+						{g.k.map((k, j) => (
+							<g key={k} transform={`translate(0 ${-100 + j * 85})`}>
+								<circle cx={-110} r={26} fill={g.c} />
+								<text x={-60} y={12} {...txt(38)}>{k}</text>
+							</g>
+						))}
+					</g>
+				);
+			})}
+		</svg>
+	);
+};
+
+// 世界各地の地層：全ての大陸に共通する「洪水の層」は見つからない
+export const WorldStrata: React.FC = () => {
+	const frame = useCurrentFrame();
+	const places = ['北アメリカ', 'ヨーロッパ', 'アフリカ', 'アジア', 'オーストラリア'];
+	const palette = ['#8c7d63', '#a8946f', '#6b5a44', '#c9b48a', '#7a6a5c', '#9c8a6a'];
+	return (
+		<svg width={1400} height={600} viewBox="0 0 1400 600">
+			{places.map((p, i) => {
+				const t = interpolate(frame, [i * 12, i * 12 + 24], [0, 1], ease);
+				return (
+					<g key={p} transform={`translate(${170 + i * 265} 80)`} opacity={t}>
+						{[...Array(7)].map((_, j) => (
+							<rect key={j} x={-90} y={j * 62} width={180} height={(j * 7 + i * 3) % 20 + 46} fill={palette[(i * 2 + j) % palette.length]} stroke="#3a2a1a" strokeWidth={2} />
+						))}
+						<text y={490} textAnchor="middle" {...txt(32)}>{p}</text>
+					</g>
+				);
+			})}
+			<line x1={60} x2={1340} y1={250} y2={250} stroke={colors.goldSoft} strokeWidth={5} strokeDasharray="18 14" opacity={interpolate(frame, [70, 90], [0, 1], clamp)} />
+			<text x={700} y={40} textAnchor="middle" {...txt(40, colors.goldSoft)} opacity={interpolate(frame, [70, 90], [0, 1], clamp)}>全ての大陸に共通する「洪水の層」は？</text>
+		</svg>
+	);
+};
