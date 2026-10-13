@@ -1,11 +1,11 @@
-# TUBEX 制作パイプライン（4チャンネル）
+# TUBEX 制作パイプライン（3チャンネル）
 
 | チャンネル | 設定 | 本数・尺 |
 |---|---|---|
 | ① ハビ判事の都市伝説ジャッジ | `channels/habi-judge/CHANNEL.md` | 週2〜3本・20〜30分 |
-| ② 退職後のお金を通帳で追う（新規・社長の目標の対象） | `channels/tsucho/CHANNEL.md` | 週3〜4本・15〜20分 |
-| ③ 江戸の暮らしを1つの用事でたどる（新規・社長の目標の対象） | `channels/edo-otsukai/CHANNEL.md` | 週3本・20分前後＋月1本の総集編 |
-| ④ 生き物の体の設計図（新規・社長の目標の対象） | `channels/ikimono/CHANNEL.md` | 週3本・15〜18分 |
+| ② 届いた書類と通帳（退職・年金のお金。新規・社長の目標の対象） | `channels/tsucho/CHANNEL.md` | 週3本＋臨時・25〜35分 |
+| ③ その体、設計できる？（生き物。新規・社長の目標の対象） | `channels/ikimono/CHANNEL.md` | 週3本・15〜20分＋月1本の総集編 |
+| （保留）江戸の暮らし | `channels/edo-otsukai/CHANNEL.md` | 2026-10-13 保留 |
 
 構成・口調・判決ルールなどチャンネル固有の決まりは `CHANNEL.md` が正。この README は全チャンネル共通の工程と費用ルール。
 
@@ -37,7 +37,7 @@
 
 | # | 工程 | 実施 | 監査 | 成果物（`episodes/<id>/`） | 社長の確認 |
 |---|---|---|---|---|---|
-| 0 | チャンネル設計（新チャンネルのみ） | Claude | Codex | `channels/new-channels/00_genre_research.md`（ジャンル5案・実数値つき） | **ゲート0：ジャンルを選ぶ**（2026-10-13 済：②③④の3つ） |
+| 0 | チャンネル設計（新チャンネルのみ） | Claude | Codex | `channels/new-channels/00_genre_research.md`（ジャンル5案・実数値つき） | **ゲート0：ジャンルを選ぶ**（2026-10-13 済：案1〜3を選択 → 同日、②③の2つに絞り込み） |
 | 1 | リサーチ | Claude | Codex | `01_research.md`（出典付きの事実のみ） | – |
 | 2 | 競合調査 | Claude | Codex | `02_competitors.md` | – |
 | 3 | 企画立案 | Claude | Codex | `03_plan.md` | **ゲートA：企画OK？** |
