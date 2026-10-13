@@ -2,6 +2,7 @@
 
 Usage:
   YOUTUBE_API_KEY=... python3 pipeline/scripts/yt_research.py "クラゲ 眠る" "動物 睡眠 雑学" [--max 10] [--days 730] [--thumbs-dir DIR]
+      [--duration medium,long]   # Shorts を除いて長尺だけ（4分以上）
 
 --thumbs-dir saves each competitor thumbnail as DIR/<views>_<videoId>.jpg so the auditor can look at the real
 images. DIR must be OUTSIDE the repository (competitor images are never committed). Needs www.googleapis.com (API)
@@ -9,10 +10,10 @@ and i.ytimg.com (thumbnails) allowed
 in the environment's network settings.
 
 Prints a Markdown table (views / title / channel / subscribers / channel created / views per subscriber /
-published / thumbnail URL / video URL) sorted by views, with the retrieval date, for 02_competitors.md,
+published / length / thumbnail URL / video URL) sorted by views, with the retrieval date, for 02_competitors.md,
 06b_thumbnail_benchmark.md and channels/<name>/00_genre_research.md. Hidden subscriber counts print as 非公開.
 
-Quota: search.list = 100 units per keyword, videos.list / channels.list = 1 unit per call of up to 50 IDs
+Quota: search.list = 100 units per keyword per --duration value, videos.list / channels.list = 1 unit per call of up to 50 IDs
 (daily free quota: 10,000 units).
 The script refuses to run more than 20 keywords at once. If the daily quota is used up the API returns 403
 and the script stops; it never retries or switches to a paid option.
@@ -21,6 +22,7 @@ import argparse
 import datetime as dt
 import json
 import os
+import re
 import sys
 import urllib.error
 import urllib.parse
@@ -40,12 +42,24 @@ def call(endpoint: str, **params) -> dict:
         sys.exit(f"YouTube API error {e.code}（上限超過やキー設定を確認。課金はしない）: {body}")
 
 
+def length(iso: str) -> str:
+    """ISO 8601 duration (PT1H2M3S) -> 62:03."""
+    m = re.fullmatch(r"P(?:(\d+)D)?T?(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", iso or "")
+    if not m:
+        return "不明"
+    d, h, mi, se = (int(x or 0) for x in m.groups())
+    return f"{(d * 24 + h) * 60 + mi}:{se:02d}"
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("keywords", nargs="+")
     ap.add_argument("--max", type=int, default=10, help="videos per keyword (<=50)")
     ap.add_argument("--days", type=int, default=730, help="only videos published within N days")
     ap.add_argument("--thumbs-dir", help="download thumbnails here (must be outside the repo)")
+    ap.add_argument("--duration", default="any",
+                    help="search videoDuration: any / short / medium / long, comma-separated "
+                         "(e.g. medium,long excludes Shorts; each value costs one more search = 100 units per keyword)")
     args = ap.parse_args()
     if "YOUTUBE_API_KEY" not in os.environ:
         sys.exit("YOUTUBE_API_KEY が未設定です（環境設定に登録してください。キーをチャットやリポジトリに書かないこと）")
@@ -54,21 +68,23 @@ def main() -> None:
 
     after = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=args.days)).strftime("%Y-%m-%dT%H:%M:%SZ")
     ids: list[str] = []
+    durations = [d.strip() for d in args.duration.split(",") if d.strip()]
     for kw in args.keywords:
-        res = call("search", part="id", q=kw, type="video", order="viewCount", regionCode="JP",
-                   relevanceLanguage="ja", publishedAfter=after, maxResults=min(args.max, 50))
-        ids += [it["id"]["videoId"] for it in res.get("items", []) if it["id"].get("videoId")]
+        for dur in durations:
+            res = call("search", part="id", q=kw, type="video", order="viewCount", regionCode="JP",
+                       relevanceLanguage="ja", publishedAfter=after, maxResults=min(args.max, 50), videoDuration=dur)
+            ids += [it["id"]["videoId"] for it in res.get("items", []) if it["id"].get("videoId")]
     ids = list(dict.fromkeys(ids))
 
     rows = []
     for i in range(0, len(ids), 50):
-        res = call("videos", part="snippet,statistics", id=",".join(ids[i:i + 50]))
+        res = call("videos", part="snippet,statistics,contentDetails", id=",".join(ids[i:i + 50]))
         for v in res.get("items", []):
             sn, st = v["snippet"], v.get("statistics", {})
             thumbs = sn.get("thumbnails", {})
             thumb = (thumbs.get("maxres") or thumbs.get("high") or thumbs.get("default") or {}).get("url", "")
             rows.append((int(st.get("viewCount", 0)), sn["title"], sn["channelTitle"], sn["publishedAt"][:10], thumb, v["id"],
-                         sn["channelId"]))
+                         sn["channelId"], length(v.get("contentDetails", {}).get("duration", ""))))
 
     channels: dict[str, tuple[int | None, str]] = {}
     ch_ids = list(dict.fromkeys(r[6] for r in rows))
@@ -86,7 +102,7 @@ def main() -> None:
         if out == repo or out.startswith(repo + os.sep):
             sys.exit("--thumbs-dir はリポジトリの外を指定してください（競合画像はコミットしない）")
         os.makedirs(out, exist_ok=True)
-        for views, _t, _c, _p, thumb, vid, _ch in rows:
+        for views, _t, _c, _p, thumb, vid, _ch, _len in rows:
             if not thumb:
                 continue
             try:
@@ -94,15 +110,15 @@ def main() -> None:
             except Exception as e:  # noqa: BLE001 - report and continue; never fabricate images
                 print(f"<!-- サムネ取得失敗 {vid}: {e} -->", file=sys.stderr)
     today = dt.date.today().isoformat()
-    print(f"取得日：{today}（YouTube Data API v3）／検索語：{' / '.join(args.keywords)}\n")
-    print("| 再生数 | タイトル | チャンネル | 登録者数 | チャンネル開設日 | 再生数/登録者 | 公開日 | サムネURL | 動画URL |")
-    print("|---|---|---|---|---|---|---|---|---|")
-    for views, title, ch, pub, thumb, vid, ch_id in rows:
+    print(f"取得日：{today}（YouTube Data API v3）／検索語：{' / '.join(args.keywords)}／尺の絞り込み：{args.duration}\n")
+    print("| 再生数 | タイトル | チャンネル | 登録者数 | チャンネル開設日 | 再生数/登録者 | 公開日 | 尺 | サムネURL | 動画URL |")
+    print("|---|---|---|---|---|---|---|---|---|---|")
+    for views, title, ch, pub, thumb, vid, ch_id, dur in rows:
         title = title.replace("|", "｜")
         subs, created = channels.get(ch_id, (None, "不明"))
         subs_s = "非公開" if subs is None else f"{subs:,}"
         ratio = f"{views / subs:.1f}" if subs else "–"
-        print(f"| {views:,} | {title} | {ch} | {subs_s} | {created} | {ratio} | {pub} | {thumb} | https://www.youtube.com/watch?v={vid} |")
+        print(f"| {views:,} | {title} | {ch} | {subs_s} | {created} | {ratio} | {pub} | {dur} | {thumb} | https://www.youtube.com/watch?v={vid} |")
 
 
 if __name__ == "__main__":
