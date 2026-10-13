@@ -4,15 +4,15 @@ export const TRANSITION_FRAMES = 20;
 export const sceneDurations = {
 	Intro: 1323,
 	JudgeEntrance: 862,
-	Clue1Ararat: 4884,
-	Clue2Tablet: 4572,
-	Clue3Layers: 3686,
-	Clue4BlackSea: 2974,
-	Clue5Animals: 2713,
-	RootsStory: 3275,
+	Clue1Ararat: 7229,
+	Clue2Tablet: 6431,
+	Clue3Layers: 4292,
+	Clue4BlackSea: 4142,
+	Clue5Animals: 4858,
+	RootsStory: 4557,
 	UnsolvedMystery: 827,
 	Summary: 1636,
 	Closing: 960,
 } as const;
 
-export const TOTAL_FRAMES = 27512;
+export const TOTAL_FRAMES = 36917;

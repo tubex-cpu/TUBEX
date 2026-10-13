@@ -1,7 +1,7 @@
 import {useVideoConfig} from 'remotion';
 import {Beat, captionFrame} from '../components/Beat';
 import {GavelVerdict} from '../components/GavelVerdict';
-import {AraratMountain, ArkDimensions, BoatFormation, DigResult, DrillRig, FloodRain, FoldedStrata, MuseumShelves, SoilVsShip, UrartuMap} from '../components/NoahArt';
+import {AncientRecords, AraratMountain, ArkDimensions, BoatFormation, DigResult, DrillRig, FloodRain, FoldedStrata, MuseumShelves, SoilVsShip, UrartuMap, WoodDating} from '../components/NoahArt';
 import {Photo} from '../components/Photo';
 import {Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
@@ -56,32 +56,54 @@ export const Clue1Ararat = () => {
 					<FoldedStrata />
 				</Visual>
 			</Beat>
-			<Beat name="最近のニュース" captions={c} from={19} to={20}>
+			<Beat name="ナヴァラの木材" captions={c} from={19} to={21}>
+				<Visual label="1955年、氷河から持ち帰られた木材">
+					<WoodDating />
+				</Visual>
+			</Beat>
+			<Beat name="年代測定" captions={c} from={22} to={23}>
+				<Visual label="その木は、いつのもの？">
+					<WoodDating result />
+				</Visual>
+			</Beat>
+			<Beat name="アララト・アノマリー" captions={c} from={24} to={26}>
+				<Photo id="ararat" move="out" label="1949年、雪の中に写った黒い影">
+					<Visual label="1949年、雪の中に写った黒い影">
+						<AraratMountain showBoat={false} />
+					</Visual>
+				</Photo>
+			</Beat>
+			<Beat name="最近のニュース" captions={c} from={27} to={28}>
 				<Photo id="durupinar" move="out" label="2023年「土は約5000年前のもの」">
 					<Visual label="2023年「土は約5000年前のもの」">
 						<BoatFormation natural />
 					</Visual>
 				</Photo>
 			</Beat>
-			<Beat name="土と船" captions={c} from={21} to={24}>
+			<Beat name="土と船" captions={c} from={29} to={32}>
 				<Visual label="そのニュース、何を測った？">
 					<SoilVsShip />
 				</Visual>
 			</Beat>
-			<Beat name="先月の掘削" captions={c} from={25} to={25}>
+			<Beat name="先月の掘削" captions={c} from={33} to={33}>
 				<Visual label="ドリルを折った層の正体は、まだ不明">
 					<DrillRig />
 				</Visual>
 			</Beat>
-			<Beat name="判決" captions={c} from={26} to={29}>
-				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 26, 27, fps)} />
+			<Beat name="判決" captions={c} from={34} to={37}>
+				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 34, 35, fps)} />
 			</Beat>
-			<Beat name="アララトの山々" captions={c} from={30} to={33}>
+			<Beat name="アララトの山々" captions={c} from={38} to={40}>
 				<Visual label="聖書は「アララト山」とは書いていない？" labelColor={colors.goldSoft}>
 					<UrartuMap />
 				</Visual>
 			</Beat>
-			<Beat name="博物館" captions={c} from={34}>
+			<Beat name="古い記録" captions={c} from={41} to={46}>
+				<Visual label="方舟がとどまった山は、どこだった？">
+					<AncientRecords />
+				</Visual>
+			</Beat>
+			<Beat name="博物館" captions={c} from={47}>
 				<Visual label="答えは、山ではなく博物館の中に">
 					<MuseumShelves />
 				</Visual>

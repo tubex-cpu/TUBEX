@@ -22,14 +22,14 @@
 0:00 謎の先出し
 0:43 ハビ判事登場
 1:11 第1の手がかり アララト山の船の形
-3:53 第2の手がかり 聖書より古い洪水物語
-6:25 第3の手がかり 洪水の地層
-8:27 第4の手がかり 黒海大洪水
-10:06 第5の手がかり 全ての動物を乗せた船
-11:35 本当の大洪水は日本にも
-13:24 まだ解けていない謎
-13:51 まとめ
-14:45 締め
+5:11 第2の手がかり 聖書より古い洪水物語
+8:45 第3の手がかり 洪水の地層
+11:07 第4の手がかり 黒海大洪水
+13:25 第5の手がかり 全ての動物を乗せた船
+16:06 本当の大洪水は日本にも
+18:37 まだ解けていない謎
+19:04 まとめ
+19:58 締め
 
 ▼前回の法廷：日本人とシュメール判決
 （前回の動画のURLを貼ってください）
@@ -45,6 +45,17 @@
 ・Black Sea deluge hypothesis（Wikipedia）https://en.wikipedia.org/wiki/Black_Sea_deluge_hypothesis
 ・IPCC 第3次評価報告書 第1作業部会（海面変化）https://archive.ipcc.ch/ipccreports/tar/wg1/409.htm
 ・縄文海進（コトバンク）https://kotobank.jp/word/%E7%B8%84%E6%96%87%E6%B5%B7%E9%80%B2
+・Fernand Navarra（Wikipedia）https://en.wikipedia.org/wiki/Fernand_Navarra
+・Ararat anomaly（Wikipedia）https://en.wikipedia.org/wiki/Ararat_anomaly
+・Berossus（Wikipedia）https://en.wikipedia.org/wiki/Berossus
+・Atra-Hasis（Wikipedia）https://en.wikipedia.org/wiki/Atra-Hasis
+・Sumerian King List（Wikipedia）https://en.wikipedia.org/wiki/Sumerian_King_List
+・Murder in Mesopotamia（Wikipedia）https://en.wikipedia.org/wiki/Murder_in_Mesopotamia
+・Ancient Black Sea shipwrecks（Wikipedia）https://en.wikipedia.org/wiki/Ancient_Black_Sea_shipwrecks
+・Wyoming (schooner)（Wikipedia）https://en.wikipedia.org/wiki/Wyoming_(schooner)
+・Genesis flood narrative（Wikipedia）https://en.wikipedia.org/wiki/Genesis_flood_narrative
+・Doggerland（Wikipedia）https://en.wikipedia.org/wiki/Doggerland
+・水子貝塚（富士見市）https://ja.wikipedia.org/wiki/%E6%B0%B4%E5%AD%90%E8%B2%9D%E5%A1%9A
 
 ▼ハビ判事とは
 信じるのは、話の面白さではなく証拠だけ。

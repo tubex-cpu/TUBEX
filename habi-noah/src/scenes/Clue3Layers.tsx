@@ -3,7 +3,7 @@ import {Beat, captionFrame} from '../components/Beat';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {BlackSeaFill, CityFloodDates, FloodLayerDig, FloodRain} from '../components/NoahArt';
 import {Photo} from '../components/Photo';
-import {MesopotamiaMap, Visual} from '../components/Scenery';
+import {MesopotamiaMap, OldBook, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {clue3LayersCaptions as c} from '../data/captions';
 import {colors} from '../theme';
@@ -32,32 +32,37 @@ export const Clue3Layers = () => {
 					<FloodLayerDig />
 				</Visual>
 			</Beat>
-			<Beat name="ハビの驚き" captions={c} from={9} to={9}>
+			<Beat name="クリスティー" captions={c} from={9} to={12}>
+				<Visual label="この発掘現場を訪れた、意外な人物">
+					<OldBook title="メソポタミヤの殺人" />
+				</Visual>
+			</Beat>
+			<Beat name="ハビの驚き" captions={c} from={13} to={13}>
 				<Photo id="ur-ziggurat" move="out" label="ついに、洪水の証拠が……？">
 					<Visual label="ついに、洪水の証拠が……？">
 						<FloodLayerDig />
 					</Visual>
 				</Photo>
 			</Beat>
-			<Beat name="町ごとの層" captions={c} from={10} to={15}>
+			<Beat name="町ごとの層" captions={c} from={14} to={19}>
 				<Visual label="ほかの町の“洪水”は、いつ起きた？">
 					<CityFloodDates />
 				</Visual>
 			</Beat>
-			<Beat name="ふたつの川" captions={c} from={16} to={19}>
+			<Beat name="ふたつの川" captions={c} from={20} to={23}>
 				<Visual label="ふたつの川にはさまれた土地">
 					<MesopotamiaMap />
 				</Visual>
 			</Beat>
-			<Beat name="世界の終わり" captions={c} from={20} to={22}>
+			<Beat name="世界の終わり" captions={c} from={24} to={26}>
 				<Visual label="ある町にとっては、世界の終わりだった">
 					<FloodRain />
 				</Visual>
 			</Beat>
-			<Beat name="判決" captions={c} from={23} to={25}>
-				<GavelVerdict verdict="half" strikeAt={captionFrame(c, 23, 24, fps)} />
+			<Beat name="判決" captions={c} from={27} to={29}>
+				<GavelVerdict verdict="half" strikeAt={captionFrame(c, 27, 28, fps)} />
 			</Beat>
-			<Beat name="もっと大きな洪水" captions={c} from={26}>
+			<Beat name="もっと大きな洪水" captions={c} from={30}>
 				<Visual label="海がまるごと、あふれた？">
 					<BlackSeaFill />
 				</Visual>

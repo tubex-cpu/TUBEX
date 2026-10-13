@@ -2,7 +2,7 @@ import {useVideoConfig} from 'remotion';
 import {Beat, captionFrame} from '../components/Beat';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {Center, ClayTablet, CompareCards, Label} from '../components/Illustrations';
-import {BirdsRelease, FloodRain, MuseumShelves, RoundArk, SmithExcited} from '../components/NoahArt';
+import {BirdsRelease, FloodRain, KingList, MuseumShelves, RoundArk, SmithExcited} from '../components/NoahArt';
 import {Photo} from '../components/Photo';
 import {OldBook, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
@@ -44,7 +44,14 @@ export const Clue2Tablet = () => {
 					<SmithExcited />
 				</Visual>
 			</Beat>
-			<Beat name="第11の粘土板" captions={c} from={7} to={9}>
+			<Beat name="スミスの旅" captions={c} from={7} to={9}>
+				<Photo id="george-smith" move="out" label="36歳で世を去った男が、読んだもの">
+					<Visual label="36歳で世を去った男が、読んだもの">
+						<SmithExcited />
+					</Visual>
+				</Photo>
+			</Beat>
+			<Beat name="第11の粘土板" captions={c} from={10} to={12}>
 				<Photo id="flood-tablet" move="out" label="ギルガメシュ叙事詩・第11の粘土板">
 					<Center>
 						<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
@@ -54,24 +61,24 @@ export const Clue2Tablet = () => {
 					</Center>
 				</Photo>
 			</Beat>
-			<Beat name="神々の洪水" captions={c} from={10} to={14}>
+			<Beat name="神々の洪水" captions={c} from={13} to={17}>
 				<Photo id="deluge-art" label="神々が決めた、人間の終わり">
 					<Visual label="神々が決めた、人間の終わり">
 						<FloodRain />
 					</Visual>
 				</Photo>
 			</Beat>
-			<Beat name="鳥（ギルガメシュ）" captions={c} from={15} to={17}>
+			<Beat name="鳥（ギルガメシュ）" captions={c} from={18} to={20}>
 				<Visual label="3羽の鳥のうち、1羽だけ戻らなかった">
 					<BirdsRelease />
 				</Visual>
 			</Beat>
-			<Beat name="鳥（聖書）" captions={c} from={18} to={19}>
+			<Beat name="鳥（聖書）" captions={c} from={21} to={22}>
 				<Visual label="聖書のノアも、鳥を放っていた">
 					<BirdsRelease bible />
 				</Visual>
 			</Beat>
-			<Beat name="どちらが古い" captions={c} from={20} to={20}>
+			<Beat name="どちらが古い" captions={c} from={23} to={23}>
 				<CompareCards
 					left={<ClayTablet width={380} />}
 					right={<div style={{zoom: 0.6}}><OldBook title="創世記" /></div>}
@@ -82,29 +89,44 @@ export const Clue2Tablet = () => {
 					vs="→"
 				/>
 			</Beat>
-			<Beat name="方舟の粘土板" captions={c} from={21} to={24}>
+			<Beat name="アトラ・ハシース" captions={c} from={24} to={27}>
+				<Photo id="flood-tablet" label="神々が洪水を起こした、意外な理由">
+					<Center>
+						<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+							<ClayTablet width={480} />
+							<Label size={54}>神々が洪水を起こした、意外な理由</Label>
+						</div>
+					</Center>
+				</Photo>
+			</Beat>
+			<Beat name="王名表" captions={c} from={28} to={31}>
+				<Visual label="王の名簿に刻まれた、ある一文">
+					<KingList />
+				</Visual>
+			</Beat>
+			<Beat name="方舟の粘土板" captions={c} from={32} to={35}>
 				<Photo id="ark-tablet" label="方舟のつくり方を書いた粘土板">
 					<Visual label="方舟のつくり方を書いた粘土板">
 						<RoundArk withSize={false} />
 					</Visual>
 				</Photo>
 			</Beat>
-			<Beat name="丸い方舟" captions={c} from={25} to={26}>
+			<Beat name="丸い方舟" captions={c} from={36} to={37}>
 				<Visual label="方舟は、丸かった？" labelColor={colors.goldSoft}>
 					<RoundArk />
 				</Visual>
 			</Beat>
-			<Beat name="丸い小舟" captions={c} from={27} to={28}>
+			<Beat name="丸い小舟" captions={c} from={38} to={39}>
 				<Photo id="quffa" label="メソポタミアの川の、丸い小舟">
 					<Visual label="メソポタミアの川の、丸い小舟">
 						<RoundArk withSize={false} />
 					</Visual>
 				</Photo>
 			</Beat>
-			<Beat name="判決" captions={c} from={29} to={31}>
-				<GavelVerdict verdict="correct" strikeAt={captionFrame(c, 29, 30, fps)} />
+			<Beat name="判決" captions={c} from={40} to={42}>
+				<GavelVerdict verdict="correct" strikeAt={captionFrame(c, 40, 41, fps)} />
 			</Beat>
-			<Beat name="本物の洪水は？" captions={c} from={32}>
+			<Beat name="本物の洪水は？" captions={c} from={43}>
 				<Visual label="では、本物の大洪水はあったのか？">
 					<FloodRain />
 				</Visual>

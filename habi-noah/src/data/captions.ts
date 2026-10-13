@@ -128,7 +128,7 @@ export const judgeEntranceCaptions: Caption[] = [
   }
 ];
 
-// 1:40 第1の手がかり アララト山の船の形（4884フレーム）
+// 1:40 第1の手がかり アララト山の船の形（7229フレーム）
 export const clue1AraratCaptions: Caption[] = [
   {
     "text": "まず、聖書の物語を確かめておこう。",
@@ -264,127 +264,218 @@ export const clue1AraratCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "では、最近のニュースはどうか。",
+    "text": "実は、方舟を探したのは、この場所だけではない。",
     "startMs": 91357,
-    "endMs": 93416,
+    "endMs": 94739,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "1955年、フランスの探検家フェルナン・ナヴァラは、アララト山の氷河の中から、黒く古びた木材を持ち帰った。",
+    "startMs": 95119,
+    "endMs": 103215,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "「ついに方舟のかけらを見つけた」。このニュースは、世界中をかけめぐった。",
+    "startMs": 103595,
+    "endMs": 107947,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ところが、いくつもの研究所で、炭素を使って年代を測ってみると、結果はおよそ西暦700年ごろ。",
+    "startMs": 108327,
+    "endMs": 115100,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ノアの時代どころか、今から1300年ほど前の木だったのだ。",
+    "startMs": 115480,
+    "endMs": 119128,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "さらに1949年。アメリカ空軍の飛行機が、アララト山の雪の中に、ふしぎな黒い影を写していた。",
+    "startMs": 119508,
+    "endMs": 126921,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "長いあいだ秘密にされていたこの写真は、1995年に公開され、「アララト・アノマリー」と呼ばれて話題になった。",
+    "startMs": 127301,
+    "endMs": 135088,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "でも、その後の人工衛星の写真でも、それが船だと確かめられたことは、一度もない。",
+    "startMs": 135468,
+    "endMs": 141217,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、最近のニュースはどうか。",
+    "startMs": 141597,
+    "endMs": 143656,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "2023年には、ここの土を調べると、およそ3500年から5000年前のものだった、と報じられた。",
-    "startMs": 93796,
-    "endMs": 100804,
+    "startMs": 144036,
+    "endMs": 151044,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "でも、気をつけてほしい。",
-    "startMs": 101184,
-    "endMs": 102805,
+    "startMs": 151424,
+    "endMs": 153045,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "調べたのは、土の年代だ。船の年代ではない。",
-    "startMs": 103185,
-    "endMs": 106567,
+    "startMs": 153425,
+    "endMs": 156807,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "土が古いことと、そこに船があったことは、まったく別の話だ。",
-    "startMs": 106947,
-    "endMs": 111107,
+    "startMs": 157187,
+    "endMs": 161347,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "調査に関わった研究者自身も、これだけでは船があったとは言えない、と話している。",
-    "startMs": 111487,
-    "endMs": 116767,
+    "startMs": 161727,
+    "endMs": 167007,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そして先月の掘削。ドリルを折った硬い層が何なのか、分析の結果は、まだ出ていない。",
-    "startMs": 117147,
-    "endMs": 122949,
+    "startMs": 167387,
+    "endMs": 173189,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 123329,
-    "endMs": 124631,
+    "startMs": 173569,
+    "endMs": 174871,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 125011,
-    "endMs": 125619,
+    "startMs": 175251,
+    "endMs": 175859,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "今のところ、この地形が船だという証拠はない。",
-    "startMs": 125999,
-    "endMs": 128911,
+    "startMs": 176239,
+    "endMs": 179151,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ただし、分析の結果が出たら、ボクはもう一度、ここで判決を出す。",
-    "startMs": 129291,
-    "endMs": 134123,
+    "startMs": 179531,
+    "endMs": 184363,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そしてもうひとつ、大事なことがある。",
-    "startMs": 134503,
-    "endMs": 136721,
+    "startMs": 184743,
+    "endMs": 186961,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "聖書に書かれているのは、「アララト山」ではなく、「アララトの山々」だ。",
-    "startMs": 137101,
-    "endMs": 142061,
+    "startMs": 187341,
+    "endMs": 192301,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "これは、ひとつの山ではなく、昔ウラルトゥと呼ばれた、広い地方の名前だと考えられている。",
-    "startMs": 142441,
-    "endMs": 148265,
+    "startMs": 192681,
+    "endMs": 198505,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "方舟探しの歴史は、じつは、とても古い。",
+    "startMs": 198885,
+    "endMs": 202011,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "今から2300年ほど前、バビロンの神官ベロッソスは、洪水の船の残りが、今もアルメニアの山にある、と書き残した。",
+    "startMs": 202391,
+    "endMs": 210636,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "人々は、その船に塗られたアスファルトをけずり取って、お守りにしていたという。",
+    "startMs": 211016,
+    "endMs": 215528,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "さらに、イスラム教の聖典コーランでは、方舟がとどまったのは、ジューディーという山だとされている。",
+    "startMs": 215908,
+    "endMs": 221988,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "方舟がとどまった山は、昔から、ひとつに決まっていなかったのだ。",
+    "startMs": 222368,
+    "endMs": 226432,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "船を探す人たちは、最初から、ひとつの山にしぼりすぎていたのかもしれない。",
-    "startMs": 148645,
-    "endMs": 153339,
+    "startMs": 226812,
+    "endMs": 231505,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "では、方舟の物語そのものは、どこから来たのか。",
-    "startMs": 153719,
-    "endMs": 157207,
+    "startMs": 231885,
+    "endMs": 235373,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "その答えは、山ではなく、博物館の箱の中に眠っていた。",
-    "startMs": 157587,
-    "endMs": 161576,
+    "startMs": 235753,
+    "endMs": 239743,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 5:30 第2の手がかり 聖書より古い洪水物語（4572フレーム）
+// 5:30 第2の手がかり 聖書より古い洪水物語（6431フレーム）
 export const clue2TabletCaptions: Caption[] = [
   {
     "text": "1872年。ロンドンの大英博物館。",
@@ -436,197 +527,274 @@ export const clue2TabletCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "それは、ギルガメシュ叙事詩の、第11の粘土板だった。",
+    "text": "スミスはその後、新聞社のお金で現地へ向かい、本当に、洪水の物語の新しいかけらを見つけ出す。",
     "startMs": 34701,
-    "endMs": 38467,
+    "endMs": 41421,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "けれど、何度目かの調査の旅の途中で病に倒れ、36歳の若さでこの世を去った。",
+    "startMs": 41801,
+    "endMs": 47476,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、彼が読んだ粘土板には、何が書かれていたのか。",
+    "startMs": 47856,
+    "endMs": 51440,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "それは、ギルガメシュ叙事詩の、第11の粘土板だった。",
+    "startMs": 51820,
+    "endMs": 55585,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "前回、AIが新しいかけらを見つけた、あの人類最古の物語のひとつだ。",
-    "startMs": 38847,
-    "endMs": 43988,
+    "startMs": 55965,
+    "endMs": 61107,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そこには、こんな話が書かれていた。",
-    "startMs": 44368,
-    "endMs": 46640,
+    "startMs": 61487,
+    "endMs": 63759,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "神々は、大洪水で人間をほろぼそうと決める。",
-    "startMs": 47020,
-    "endMs": 50231,
+    "startMs": 64139,
+    "endMs": 67349,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ところが一人の神が、ウトナピシュティムという男に、こっそり教える。家をこわして、船をつくれ。",
-    "startMs": 50611,
-    "endMs": 57000,
+    "startMs": 67729,
+    "endMs": 74119,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "男は船をつくり、家族と、職人と、生き物たちを乗せる。",
-    "startMs": 57380,
-    "endMs": 61956,
+    "startMs": 74499,
+    "endMs": 79075,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "嵐は六日六晩続き、人々は泥にかえった。",
-    "startMs": 62336,
-    "endMs": 65461,
+    "startMs": 79455,
+    "endMs": 82580,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "船は、ニムシュという山にとどまる。",
-    "startMs": 65841,
-    "endMs": 67964,
+    "startMs": 82960,
+    "endMs": 85083,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "七日目、男は鳩を放つ。鳩は、休む場所がなくて戻ってくる。",
-    "startMs": 68344,
-    "endMs": 72963,
+    "startMs": 85463,
+    "endMs": 90081,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "次に、ツバメを放つ。ツバメも戻ってくる。",
-    "startMs": 73343,
-    "endMs": 76361,
+    "startMs": 90461,
+    "endMs": 93480,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "最後に、カラスを放つ。カラスは、戻ってこなかった。水が引いたのだ。",
-    "startMs": 76741,
-    "endMs": 81680,
+    "startMs": 93860,
+    "endMs": 98799,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "聖書では、ノアがカラスと鳩を放つ。そして鳩は、オリーブの葉をくわえて戻ってくる。",
-    "startMs": 82060,
-    "endMs": 87479,
+    "startMs": 99179,
+    "endMs": 104597,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そっくりだ。",
-    "startMs": 87859,
-    "endMs": 88563,
+    "startMs": 104977,
+    "endMs": 105681,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "しかも、こちらの粘土板の物語は、聖書よりもずっと古い。",
-    "startMs": 88943,
-    "endMs": 92996,
+    "startMs": 106061,
+    "endMs": 110115,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "しかも、洪水の物語は、これひとつではなかった。",
+    "startMs": 110495,
+    "endMs": 113940,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "さらに古い「アトラ・ハシース物語」という粘土板には、神々が洪水を起こした理由まで書かれている。",
+    "startMs": 114320,
+    "endMs": 121253,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "人間が増えすぎて、地上がうるさくなり、神々は眠れなくなったのだ。",
+    "startMs": 121633,
+    "endMs": 126113,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "シュメール語で書かれた洪水の物語もある。こちらの主人公は、ジウスドラという王だ。",
+    "startMs": 126493,
+    "endMs": 131752,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、シュメールの王たちを並べた「シュメール王名表」には、こんな一文が刻まれている。",
+    "startMs": 132132,
+    "endMs": 138351,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "「そして、洪水が全てを押し流した」。",
+    "startMs": 138731,
+    "endMs": 141056,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "王名表は、洪水の前の王たちと、洪水のあとの王たちを、はっきり分けて書いている。",
+    "startMs": 141436,
+    "endMs": 147175,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "メソポタミアの人々にとって、大洪水は、歴史を「前」と「後」に分ける出来事だったのだ。",
+    "startMs": 147555,
+    "endMs": 154957,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "さらに、2014年。大英博物館の研究者が、もう一枚の驚くべき粘土板を発表した。",
-    "startMs": 93376,
-    "endMs": 100021,
+    "startMs": 155337,
+    "endMs": 161983,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "およそ3700年前の、手のひらほどの大きさの粘土板だ。",
-    "startMs": 100401,
-    "endMs": 104284,
+    "startMs": 162363,
+    "endMs": 166245,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そこには、方舟のつくり方が、くわしく書かれていた。",
-    "startMs": 104664,
-    "endMs": 108237,
+    "startMs": 166625,
+    "endMs": 170199,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "材料は、縄。編んだ縄で船体をつくり、まわりを天然のアスファルトで固める。",
-    "startMs": 108617,
-    "endMs": 113801,
+    "startMs": 170579,
+    "endMs": 175763,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そして、その形は、丸かった。",
-    "startMs": 114181,
-    "endMs": 116603,
+    "startMs": 176143,
+    "endMs": 178564,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "直径およそ70メートル。巨大な、丸いかごのような船だ。",
-    "startMs": 116983,
-    "endMs": 121015,
+    "startMs": 178944,
+    "endMs": 182976,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "メソポタミアの川では、昔から、こういう丸い小舟が使われていた。",
-    "startMs": 121395,
-    "endMs": 125715,
+    "startMs": 183356,
+    "endMs": 187676,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この粘土板の書き手は、自分たちが知っている船を、そのまま大きくして思い描いたのだ。",
-    "startMs": 126095,
-    "endMs": 131332,
+    "startMs": 188056,
+    "endMs": 193293,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 131712,
-    "endMs": 133013,
+    "startMs": 193673,
+    "endMs": 194975,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "正しい。",
-    "startMs": 133393,
-    "endMs": 133980,
+    "startMs": 195355,
+    "endMs": 195941,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "今夜初めての「正しい」だ。方舟の物語は、聖書よりも古く、メソポタミアの粘土板に、本当に書かれていた。",
-    "startMs": 134360,
-    "endMs": 142829,
+    "startMs": 196321,
+    "endMs": 204791,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "でも、これで、ひとつの問いが生まれる。",
-    "startMs": 143209,
-    "endMs": 145833,
+    "startMs": 205171,
+    "endMs": 207795,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "物語があったということは、そのもとになった、本物の大洪水があったのだろうか。",
-    "startMs": 146213,
-    "endMs": 151173,
+    "startMs": 208175,
+    "endMs": 213135,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 9:40 第3の手がかり 洪水の地層（3686フレーム）
+// 9:40 第3の手がかり 洪水の地層（4292フレーム）
 export const clue3LayersCaptions: Caption[] = [
   {
     "text": "1929年。イラク南部、シュメールの町ウル。",
@@ -692,141 +860,169 @@ export const clue3LayersCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "ボクも、ここで少し驚いた。",
+    "text": "この発掘現場には、ある有名な作家も訪れている。",
     "startMs": 39365,
-    "endMs": 41360,
+    "endMs": 42693,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "推理小説の女王、アガサ・クリスティーだ。",
+    "startMs": 43073,
+    "endMs": 46231,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "彼女はウルの発掘を見学し、そこで出会ったウーリーの助手の考古学者と、のちに結婚した。",
+    "startMs": 46611,
+    "endMs": 52339,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ウルの発掘隊の暮らしは、彼女の小説『メソポタミヤの殺人』の舞台のモデルになったと言われている。",
+    "startMs": 52719,
+    "endMs": 59183,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ボクも、ここで少し驚いた。",
+    "startMs": 59563,
+    "endMs": 61557,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "でも、証拠の反対側も見なければいけない。",
-    "startMs": 41740,
-    "endMs": 44503,
+    "startMs": 61937,
+    "endMs": 64700,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ほかの町でも、同じような洪水の層は見つかっている。",
-    "startMs": 44883,
-    "endMs": 48328,
+    "startMs": 65080,
+    "endMs": 68525,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ギルガメシュ叙事詩で、洪水の主人公が住んでいた町、シュルッパク。",
-    "startMs": 48708,
-    "endMs": 53092,
+    "startMs": 68905,
+    "endMs": 73289,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そして、キシュという町。",
-    "startMs": 53472,
-    "endMs": 55115,
+    "startMs": 73669,
+    "endMs": 75312,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ところが、これらの層は、町ごとに、時代がばらばらだった。数百年以上、ずれている。",
-    "startMs": 55495,
-    "endMs": 61927,
+    "startMs": 75692,
+    "endMs": 82124,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "しかも、ウルのすぐ近くの町、エリドゥには、同じような層が見つからなかった。",
-    "startMs": 62307,
-    "endMs": 67427,
+    "startMs": 82504,
+    "endMs": 87624,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "今では、ウーリーが見つけた層は、大洪水ではなく、川があふれてできたものだと考えられている。",
-    "startMs": 67807,
-    "endMs": 74100,
+    "startMs": 88004,
+    "endMs": 94297,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "メソポタミアは、ふたつの大きな川にはさまれた土地だ。",
-    "startMs": 74480,
-    "endMs": 77680,
+    "startMs": 94677,
+    "endMs": 97877,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "雪どけの水が流れこむ春には、川があふれ、町がまるごと泥にのまれることがあった。",
-    "startMs": 78060,
-    "endMs": 83372,
+    "startMs": 98257,
+    "endMs": 103569,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "それが、何百年かおきに、あちこちの町でくりかえされた。",
-    "startMs": 83752,
-    "endMs": 87517,
+    "startMs": 103949,
+    "endMs": 107715,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ひとつの町にとっては、それは、世界の終わりだっただろう。",
-    "startMs": 87897,
-    "endMs": 91460,
+    "startMs": 108095,
+    "endMs": 111657,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "見わたすかぎりの水。家も、畑も、知っている人も、全てがのまれる。",
-    "startMs": 91840,
-    "endMs": 96949,
+    "startMs": 112037,
+    "endMs": 117147,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "その記憶が、語りつがれるうちに、世界全体をのみこむ物語になっていったのかもしれない。",
-    "startMs": 97329,
-    "endMs": 102940,
+    "startMs": 117527,
+    "endMs": 123137,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 103320,
-    "endMs": 104621,
+    "startMs": 123517,
+    "endMs": 124819,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "半分正しい。",
-    "startMs": 105001,
-    "endMs": 105961,
+    "startMs": 125199,
+    "endMs": 126159,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "大洪水は、本当にあった。でも、それは世界をのみこむ洪水ではなく、川があふれた、地域の洪水だった。",
-    "startMs": 106341,
-    "endMs": 113893,
+    "startMs": 126539,
+    "endMs": 134091,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "では、もっと大きな洪水は、なかったのだろうか。",
-    "startMs": 114273,
-    "endMs": 117441,
+    "startMs": 134471,
+    "endMs": 137639,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "実は、たったひとつの海が、まるごとあふれたという説がある。",
-    "startMs": 117821,
-    "endMs": 121661,
+    "startMs": 138019,
+    "endMs": 141859,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 12:30 第4の手がかり 黒海大洪水（2974フレーム）
+// 12:30 第4の手がかり 黒海大洪水（4142フレーム）
 export const clue4BlackSeaCaptions: Caption[] = [
   {
     "text": "トルコの北に広がる、黒海。",
@@ -892,85 +1088,127 @@ export const clue4BlackSeaCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "黒海が、かつて湖だったことは、多くの研究者が認めている。",
+    "text": "この調査には、あのタイタニック号を見つけた海洋探検家、ロバート・バラードも加わった。",
     "startMs": 46949,
-    "endMs": 51323,
+    "endMs": 52837,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "彼のチームは、水深150メートルを超える海の底に、昔の岸辺の跡を見つけている。",
+    "startMs": 53217,
+    "endMs": 58711,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "黒海が、かつて湖だったことは、多くの研究者が認めている。",
+    "startMs": 59091,
+    "endMs": 63464,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ただし、問題は、そのスピードだ。",
-    "startMs": 51703,
-    "endMs": 54135,
+    "startMs": 63844,
+    "endMs": 66276,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "その後の研究では、水はそれほど一気に流れこんだのではなく、もっとゆっくりと水位が上がったのではないか、という意見も多く出ている。",
-    "startMs": 54515,
-    "endMs": 62397,
+    "startMs": 66656,
+    "endMs": 74539,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "研究者のあいだでも、今もまだ、決着がついていない。",
-    "startMs": 62777,
-    "endMs": 66447,
+    "startMs": 74919,
+    "endMs": 78588,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ちなみに、黒海の深い海の底は、酸素がほとんどない、ふしぎな世界だ。",
+    "startMs": 78968,
+    "endMs": 83971,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そこでは木を食べる生き物もすめず、沈んだ船が、何千年も形をとどめる。",
+    "startMs": 84351,
+    "endMs": 89300,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2018年には、水深2000メートルを超える海の底で、およそ2400年前の古代ギリシャの商船が、マストまで残った姿で見つかった。",
+    "startMs": 89680,
+    "endMs": 98459,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "方舟は見つかっていない。でも、黒海の底では、本物の古代の船が、今も眠っているのだ。",
+    "startMs": 98839,
+    "endMs": 105377,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "しかも、黒海とメソポタミアは、1000キロ以上はなれている。",
-    "startMs": 66827,
-    "endMs": 70560,
+    "startMs": 105757,
+    "endMs": 109491,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この記憶が、どうやってメソポタミアの物語になったのか。それを示す証拠も、まだない。",
-    "startMs": 70940,
-    "endMs": 76519,
+    "startMs": 109871,
+    "endMs": 115449,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 76899,
-    "endMs": 78200,
+    "startMs": 115829,
+    "endMs": 117131,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "半分正しい。",
-    "startMs": 78580,
-    "endMs": 79540,
+    "startMs": 117511,
+    "endMs": 118471,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "黒海で、大きな水の変化が起きたのは本当だ。でも、それが一夜の大洪水だったのか、ノアの物語につながるのかは、わかっていない。",
-    "startMs": 79920,
-    "endMs": 88848,
+    "startMs": 118851,
+    "endMs": 127779,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "さて、ここまで来て、ボクにはどうしても確かめたいことが残っている。",
-    "startMs": 89228,
-    "endMs": 93377,
+    "startMs": 128159,
+    "endMs": 132308,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "聖書の物語を、そのまま本当だと考えたら、どうなるのか。",
-    "startMs": 93757,
-    "endMs": 97917,
+    "startMs": 132688,
+    "endMs": 136848,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 14:50 第5の手がかり 全ての動物を乗せた船（2713フレーム）
+// 14:50 第5の手がかり 全ての動物を乗せた船（4858フレーム）
 export const clue5AnimalsCaptions: Caption[] = [
   {
     "text": "アメリカのケンタッキー州に、巨大な木の船が建っている。",
@@ -1001,113 +1239,197 @@ export const clue5AnimalsCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "つくった人たちは、ノアの物語は、そのまま本当にあったことだと信じている。",
+    "text": "でも、ここでひとつ疑問がわく。木だけで、こんなに大きな船を、本当に海に浮かべられるのか。",
     "startMs": 19129,
-    "endMs": 23897,
+    "endMs": 25348,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "歴史上、最も大きな木の船のひとつが、1909年にアメリカでつくられた帆船、ワイオミング号だ。",
+    "startMs": 25728,
+    "endMs": 32619,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "船体の長さは、およそ100メートル。それでも、荒れた海では船体がしなり、すきまから水がもれ続けた。",
+    "startMs": 32999,
+    "endMs": 39964,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "船員たちは、ポンプで水をくみ出しながら航海したという。",
+    "startMs": 40344,
+    "endMs": 43853,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして1924年、ワイオミング号は嵐の中で沈み、乗っていた全員が帰らなかった。",
+    "startMs": 44233,
+    "endMs": 50281,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ケンタッキーの方舟も、海に浮かべるためではなく、陸の上の建物として建てられている。",
+    "startMs": 50661,
+    "endMs": 56016,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "つくった人たちは、ノアの物語は、そのまま本当にあったことだと信じている。",
+    "startMs": 56396,
+    "endMs": 61164,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "では、計算してみよう。",
-    "startMs": 24277,
-    "endMs": 25995,
+    "startMs": 61544,
+    "endMs": 63261,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "地球の陸に住む、背骨のある動物だけで、種類は3万を超える。",
-    "startMs": 26375,
-    "endMs": 30663,
+    "startMs": 63641,
+    "endMs": 67929,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ひとつがいずつ乗せれば、6万匹以上。鳥も、ヘビも、ゾウもいる。",
-    "startMs": 31043,
-    "endMs": 35981,
+    "startMs": 68309,
+    "endMs": 73248,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "さらに、1年近い船の旅のあいだの、エサと水。肉しか食べない動物のための、エサにする動物。",
-    "startMs": 36361,
-    "endMs": 43295,
+    "startMs": 73628,
+    "endMs": 80561,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "それを、8人の家族だけで世話をする。",
-    "startMs": 43675,
-    "endMs": 46149,
+    "startMs": 80941,
+    "endMs": 83416,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "実は、聖書そのものを読むと、ふしぎなことに気づく。",
+    "startMs": 83796,
+    "endMs": 87380,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ある箇所では、ノアは全ての動物を、ひとつがいずつ乗せた、と書かれている。",
+    "startMs": 87760,
+    "endMs": 92549,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ところが、別の箇所では、きよい動物は、七つがいずつ乗せた、と書かれている。",
+    "startMs": 92929,
+    "endMs": 98241,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "洪水の長さも、40日とする箇所と、水が150日のあいだみなぎった、とする箇所がある。",
+    "startMs": 98621,
+    "endMs": 104691,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "多くの研究者は、もともと別々に語られていたふたつの洪水物語が、ひとつに編みあわされたからだと考えている。",
+    "startMs": 105071,
+    "endMs": 111993,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "聖書の方舟の物語そのものが、いくつもの語りの、重なりあいだったのかもしれない。",
+    "startMs": 112373,
+    "endMs": 117675,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "船をつくった人たちは、乗せたのは「種類」ではなく、もっと大きな「動物のグループ」だった、と説明している。",
-    "startMs": 46529,
-    "endMs": 54679,
+    "startMs": 118055,
+    "endMs": 126204,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "でも、そうだとすると、今度は、洪水のあと、わずか数千年で、全ての種類に分かれたことになる。",
-    "startMs": 55059,
-    "endMs": 62013,
+    "startMs": 126584,
+    "endMs": 133539,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そして、もっと大きな問題がある。水だ。",
-    "startMs": 62393,
-    "endMs": 65252,
+    "startMs": 133919,
+    "endMs": 136777,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "エベレストのような高い山まで、全てを沈める水は、地球のどこにもない。",
-    "startMs": 65632,
-    "endMs": 70283,
+    "startMs": 137157,
+    "endMs": 141808,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "しかも、世界中の地層を調べても、全ての陸地を同時におおった洪水の跡は、見つかっていない。",
-    "startMs": 70663,
-    "endMs": 76967,
+    "startMs": 142188,
+    "endMs": 148492,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 77347,
-    "endMs": 78648,
+    "startMs": 148872,
+    "endMs": 150173,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 79028,
-    "endMs": 79636,
+    "startMs": 150553,
+    "endMs": 151161,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "世界中を一度に沈め、全ての動物を一隻の船で救った大洪水の証拠は、ない。",
-    "startMs": 80016,
-    "endMs": 85765,
+    "startMs": 151541,
+    "endMs": 157291,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "これで、5つの手がかりは、全てたどり終えた。",
-    "startMs": 86145,
-    "endMs": 89207,
+    "startMs": 157671,
+    "endMs": 160732,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 17:00 足元にあった物語（3275フレーム）
+// 17:00 足元にあった物語（4557フレーム）
 export const rootsStoryCaptions: Caption[] = [
   {
     "text": "船は、見つからなかった。",
@@ -1180,93 +1502,135 @@ export const rootsStoryCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "そして、その大洪水は、この日本にも来ていた。",
+    "text": "たとえば、今のイギリスとヨーロッパ大陸のあいだ。北海の底には、かつて広い陸地があった。",
     "startMs": 43820,
-    "endMs": 47073,
+    "endMs": 49729,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "「ドッガーランド」と呼ばれるこの土地で、人々は狩りをし、魚をとって暮らしていた。",
+    "startMs": 50109,
+    "endMs": 55389,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "1931年、北海で漁をしていた船の網に、泥炭のかたまりがかかった。その中から出てきたのは、骨でできた、もりの先だった。",
+    "startMs": 55769,
+    "endMs": 64772,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、およそ8000年前。のぼってくる海に、ドッガーランドは、ついにのみこまれた。",
+    "startMs": 65152,
+    "endMs": 70923,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ある日突然ではない。何世代もかけて、ふるさとが少しずつ、海に消えていったのだ。",
+    "startMs": 71303,
+    "endMs": 76668,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、その大洪水は、この日本にも来ていた。",
+    "startMs": 77048,
+    "endMs": 80301,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "今から6000年ほど前。縄文時代。",
-    "startMs": 47453,
-    "endMs": 50077,
+    "startMs": 80681,
+    "endMs": 83305,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "海は、今よりも2、3メートル高いところまでのぼってきた。",
-    "startMs": 50457,
-    "endMs": 53817,
+    "startMs": 83685,
+    "endMs": 87045,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "今の東京湾は、ずっと奥まで入りこみ、海は、栃木県のあたりまで届いていた。",
-    "startMs": 54197,
-    "endMs": 59755,
+    "startMs": 87425,
+    "endMs": 92983,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "縄文海進、と呼ばれる出来事だ。",
-    "startMs": 60135,
-    "endMs": 62481,
+    "startMs": 93363,
+    "endMs": 95709,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "その証拠は、今も、ボクたちの足元に残っている。",
-    "startMs": 62861,
-    "endMs": 66339,
+    "startMs": 96089,
+    "endMs": 99567,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "海のない埼玉県や栃木県から、たくさんの海の貝がらが見つかる。縄文の人々が、貝を食べて捨てた、貝塚だ。",
-    "startMs": 66719,
-    "endMs": 74431,
+    "startMs": 99947,
+    "endMs": 107659,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "たとえば、埼玉県富士見市の水子貝塚。今は海から遠く離れた台地の上に、縄文の人々が食べた貝がらが、輪のように積み重なっている。",
+    "startMs": 108039,
+    "endMs": 117159,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "貝塚をつないでいくと、6000年前の海岸線が、地図の上に浮かび上がる。",
-    "startMs": 74811,
-    "endMs": 79824,
+    "startMs": 117539,
+    "endMs": 122552,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "縄文の人々は、のぼってくる海を見ながら、住む場所を変え、新しい岸辺で、また暮らしをつくった。",
-    "startMs": 80204,
-    "endMs": 86785,
+    "startMs": 122932,
+    "endMs": 129513,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "世界中に、洪水の物語がある。メソポタミアにも、ギリシャにも、インドにも、中国にも。",
-    "startMs": 87165,
-    "endMs": 93821,
+    "startMs": 129893,
+    "endMs": 136549,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "それは、どこかでたった一度起きた洪水の記憶ではないのかもしれない。",
-    "startMs": 94201,
-    "endMs": 98148,
+    "startMs": 136929,
+    "endMs": 140876,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "人類がみんな、海がのぼってくる時代を、生き延びてきた。その記憶なのかもしれない。",
-    "startMs": 98528,
-    "endMs": 103904,
+    "startMs": 141256,
+    "endMs": 146632,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ボクは、こっちの物語のほうが、ずっと胸が熱くなる。",
-    "startMs": 104284,
-    "endMs": 107964,
+    "startMs": 147012,
+    "endMs": 150692,
     "timestampMs": null,
     "confidence": null
   }

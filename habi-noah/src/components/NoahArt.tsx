@@ -629,3 +629,172 @@ export const VerdictTiles: React.FC = () => {
 		</div>
 	);
 };
+
+// 1955年の木材と、炭素による年代測定
+export const WoodDating: React.FC<{readonly result?: boolean}> = ({result = false}) => {
+	const frame = useCurrentFrame();
+	const scan = interpolate(frame, [10, 70], [0, 1], ease);
+	return (
+		<svg width={1400} height={600} viewBox="0 0 1400 600">
+			<rect width={1400} height={600} rx={30} fill="#1d2a3c" />
+			<path d="M0 470 L280 250 L420 330 L640 160 L900 400 L1400 470 L1400 600 L0 600 Z" fill="#d9e4ee" opacity={0.25} />
+			<g transform="translate(380 330)">
+				<rect x={-230} y={-55} width={460} height={110} rx={18} fill="#3b2a1c" stroke="#6b4a2a" strokeWidth={6} />
+				{[...Array(7)].map((_, i) => (
+					<path key={i} d={`M-210 ${-40 + i * 13} Q 0 ${-50 + i * 13} 210 ${-38 + i * 13}`} stroke="#5a4028" strokeWidth={4} fill="none" />
+				))}
+				<text y={-100} textAnchor="middle" {...txt(44, colors.goldSoft)}>1955年 氷河の中の木材</text>
+			</g>
+			<g transform="translate(1030 330)">
+				<rect x={-250} y={-170} width={500} height={340} rx={24} fill="#0f1726" stroke={colors.gold} strokeWidth={5} />
+				<text y={-110} textAnchor="middle" {...txt(40, colors.goldSoft)}>炭素で年代を測る</text>
+				<rect x={-200} y={-70} width={400} height={30} rx={15} fill="#2a3a52" />
+				<rect x={-200} y={-70} width={400 * scan} height={30} rx={15} fill={colors.gold} />
+				{result ? (
+					<g opacity={interpolate(frame, [20, 40], [0, 1], clamp)}>
+						<text y={50} textAnchor="middle" {...txt(64, '#fff6d8')}>西暦700年ごろ</text>
+						<text y={120} textAnchor="middle" {...txt(38, colors.muted)}>（今から約1300年前）</text>
+					</g>
+				) : (
+					<text y={70} textAnchor="middle" style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 120, fill: colors.goldSoft}} opacity={interpolate(Math.sin(frame / 10), [-1, 1], [0.4, 1])}>？</text>
+				)}
+			</g>
+		</svg>
+	);
+};
+
+// 方舟がとどまった山をめぐる、古い記録
+export const AncientRecords: React.FC = () => {
+	const frame = useCurrentFrame();
+	const cards = [
+		{y: '約2300年前', who: 'バビロンの神官ベロッソス', m: '「アルメニアの山」'},
+		{y: '聖書', who: '創世記', m: '「アララトの山々」'},
+		{y: 'コーラン', who: 'イスラム教の聖典', m: '「ジューディーの山」'},
+	];
+	return (
+		<svg width={1440} height={600} viewBox="0 0 1440 600">
+			{cards.map((c, i) => {
+				const t = interpolate(frame, [i * 25, i * 25 + 25], [0, 1], ease);
+				return (
+					<g key={c.y} transform={`translate(${250 + i * 470} ${300 + (1 - t) * 40})`} opacity={t}>
+						<rect x={-210} y={-230} width={420} height={460} rx={24} fill="#e9dcc0" stroke="#8a7350" strokeWidth={6} />
+						<path d="M-150 140 L0 30 L150 140 Z" fill="#8a7a6a" />
+						<path d="M-40 60 L0 30 L40 60 L0 52 Z" fill="#fff" />
+						<text y={-160} textAnchor="middle" {...txt(44, colors.clayDark)}>{c.y}</text>
+						<text y={-100} textAnchor="middle" {...txt(30, colors.ink, 700)}>{c.who}</text>
+						<text y={-20} textAnchor="middle" {...txt(40, colors.ink)}>{c.m}</text>
+						<text y={200} textAnchor="middle" {...txt(30, colors.ink, 700)}>方舟がとどまった山</text>
+					</g>
+				);
+			})}
+		</svg>
+	);
+};
+
+// シュメール王名表：洪水の前と後
+export const KingList: React.FC = () => {
+	const frame = useCurrentFrame();
+	const line = interpolate(frame, [30, 60], [0, 1], ease);
+	return (
+		<svg width={1500} height={640} viewBox="0 0 1500 640">
+			<rect x={420} y={20} width={560} height={600} rx={40} fill={colors.clay} stroke={colors.clayDark} strokeWidth={8} />
+			<text x={700} y={85} textAnchor="middle" {...txt(40, colors.ink)}>シュメール王名表</text>
+			{[...Array(9)].map((_, i) => {
+				const y = i < 4 ? 140 + i * 50 : 220 + i * 50;
+				return <rect key={i} x={480} y={y} width={440 - (i % 3) * 60} height={18} rx={9} fill={colors.clayDark} opacity={0.7} />;
+			})}
+			<text x={400} y={230} textAnchor="end" {...txt(36, colors.goldSoft)}>洪水の前の王たち</text>
+			<text x={400} y={500} textAnchor="end" {...txt(36, colors.goldSoft)}>洪水のあとの王たち</text>
+			<line x1={440} x2={440 + 520 * line} y1={355} y2={355} stroke="#2a5a9a" strokeWidth={14} strokeLinecap="round" />
+			<text x={1000} y={368} {...txt(38, '#fff6d8')} opacity={line}>「そして、洪水が……」</text>
+		</svg>
+	);
+};
+
+// 黒海の深い海の底に眠る古代の船
+export const DeepShipwreck: React.FC = () => {
+	const frame = useCurrentFrame();
+	const light = interpolate(frame, [0, 50], [0, 1], ease);
+	return (
+		<svg width={1400} height={620} viewBox="0 0 1400 620">
+			<defs>{sky('deepSea', '#123a5a', '#02060c')}</defs>
+			<rect width={1400} height={620} rx={30} fill="url(#deepSea)" />
+			<rect y={540} width={1400} height={80} fill="#1b1a16" />
+			<path d={`M700 60 L${520 - 120 * light} 560 L${880 + 120 * light} 560 Z`} fill="#bfe0ff" opacity={0.12 * light} />
+			<g transform="translate(700 520)" opacity={light}>
+				<path d="M-230 0 Q 0 40 230 0 L190 -60 L-200 -60 Z" fill="#4a3826" stroke="#2a1e12" strokeWidth={5} />
+				<line x1={-20} y1={-60} x2={-30} y2={-300} stroke="#4a3826" strokeWidth={12} />
+				<line x1={-130} y1={-230} x2={70} y2={-245} stroke="#4a3826" strokeWidth={8} />
+			</g>
+			<text x={60} y={80} {...txt(40, colors.muted)}>水深2000メートル以上</text>
+			<text x={60} y={140} {...txt(36, colors.muted, 700)}>酸素がほとんどない海の底</text>
+			<text x={1340} y={110} textAnchor="end" {...txt(44, colors.goldSoft)} opacity={interpolate(frame, [40, 60], [0, 1], clamp)}>約2400年前の船</text>
+		</svg>
+	);
+};
+
+// 聖書の中の、ふたつの語り
+export const TwoAccounts: React.FC = () => {
+	const frame = useCurrentFrame();
+	const rows = [
+		['乗せた動物', '全て、ひとつがいずつ', 'きよい動物は七つがいずつ'],
+		['洪水の長さ', '40日', '150日のあいだ'],
+	];
+	return (
+		<svg width={1400} height={560} viewBox="0 0 1400 560">
+			<rect x={0} y={0} width={1400} height={560} rx={30} fill="#efe4cc" />
+			<text x={560} y={80} textAnchor="middle" {...txt(44, colors.clayDark)}>ある箇所では</text>
+			<text x={1080} y={80} textAnchor="middle" {...txt(44, colors.clayDark)}>別の箇所では</text>
+			<line x1={820} x2={820} y1={40} y2={520} stroke="#b9a37c" strokeWidth={4} />
+			{rows.map((r, i) => (
+				<g key={r[0]} transform={`translate(0 ${200 + i * 190})`} opacity={interpolate(frame, [i * 40, i * 40 + 20], [0, 1], clamp)}>
+					<text x={60} y={10} {...txt(38, colors.ink, 700)}>{r[0]}</text>
+					<text x={560} y={10} textAnchor="middle" {...txt(42, colors.ink)}>{r[1]}</text>
+					<text x={1080} y={10} textAnchor="middle" {...txt(42, '#a3341f')}>{r[2]}</text>
+				</g>
+			))}
+		</svg>
+	);
+};
+
+// 北海に沈んだ陸地、ドッガーランド
+export const DoggerlandMap: React.FC = () => {
+	const frame = useCurrentFrame();
+	const sea = interpolate(frame, [20, 110], [0, 1], ease);
+	return (
+		<svg width={1300} height={640} viewBox="0 0 1300 640">
+			<rect width={1300} height={640} rx={30} fill="#3f78a8" />
+			<path d="M120 40 L360 60 L420 220 L380 420 L300 600 L120 620 Z" fill="#7d9a5a" />
+			<path d="M900 640 L860 420 L940 200 L1050 40 L1300 40 L1300 640 Z" fill="#7d9a5a" />
+			<path d="M380 260 C 520 200 760 220 900 300 L880 470 C 700 520 480 500 360 440 Z" fill="#9db36c" opacity={1 - sea * 0.85} />
+			<text x={250} y={330} textAnchor="middle" {...txt(36)}>今のイギリス</text>
+			<text x={1080} y={360} textAnchor="middle" {...txt(36)}>ヨーロッパ大陸</text>
+			<text x={630} y={370} textAnchor="middle" {...txt(48, '#fff6d8')}>ドッガーランド</text>
+			<text x={650} y={590} textAnchor="middle" {...txt(36, colors.goldSoft)} opacity={sea}>約8000年前までに、海の底へ</text>
+		</svg>
+	);
+};
+
+// 木の船の大きさの限界：ワイオミング号
+export const WoodenShipLimit: React.FC = () => {
+	const frame = useCurrentFrame();
+	const sway = Math.sin(frame / 14) * 6;
+	return (
+		<svg width={1400} height={600} viewBox="0 0 1400 600">
+			<defs>{sky('stormSky', '#2a3444', '#596a7c')}</defs>
+			<rect width={1400} height={600} rx={30} fill="url(#stormSky)" />
+			<path d={`M0 ${430 + sway} Q 350 ${390 - sway} 700 ${430 + sway} T 1400 ${430 + sway} L1400 600 L0 600 Z`} fill="#24486a" />
+			<g transform={`translate(700 ${410 + sway / 2})`}>
+				<path d={`M-420 0 Q 0 ${30 + sway} 420 0 L380 60 L-380 60 Z`} fill="#5a3a24" stroke="#2a1a10" strokeWidth={5} />
+				{[-300, -180, -60, 60, 180, 300].map((x) => (
+					<line key={x} x1={x} y1={0} x2={x} y2={-260} stroke="#3a2a1a" strokeWidth={8} />
+				))}
+				{[...Array(5)].map((_, i) => (
+					<circle key={i} cx={-250 + i * 120} cy={70 + (i % 2) * 10} r={8} fill="#cfe6ff" opacity={interpolate(Math.sin(frame / 6 + i), [-1, 1], [0, 0.9])} />
+				))}
+			</g>
+			<text x={60} y={80} {...txt(44, colors.goldSoft)}>ワイオミング号（1909年）</text>
+			<text x={60} y={140} {...txt(36, colors.text, 700)}>船体の長さ 約100メートル</text>
+		</svg>
+	);
+};

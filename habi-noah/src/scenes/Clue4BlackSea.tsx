@@ -1,7 +1,7 @@
 import {useVideoConfig} from 'remotion';
 import {Beat, captionFrame} from '../components/Beat';
 import {GavelVerdict} from '../components/GavelVerdict';
-import {ArkBuilding, BlackSeaFill, FloodRain, UrartuMap} from '../components/NoahArt';
+import {ArkBuilding, BlackSeaFill, DeepShipwreck, FloodRain, UrartuMap} from '../components/NoahArt';
 import {Photo} from '../components/Photo';
 import {Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
@@ -30,22 +30,32 @@ export const Clue4BlackSea = () => {
 					<BlackSeaFill />
 				</Visual>
 			</Beat>
-			<Beat name="海底の証拠" captions={c} from={8} to={9}>
+			<Beat name="海底の証拠" captions={c} from={8} to={11}>
 				<Photo id="black-sea" move="out" label="海の底に、昔の岸辺の跡">
 					<Visual label="海の底に、昔の岸辺の跡">
 						<BlackSeaFill />
 					</Visual>
 				</Photo>
 			</Beat>
-			<Beat name="スピード" captions={c} from={10} to={14}>
+			<Beat name="スピード" captions={c} from={12} to={14}>
 				<Visual label="一気に？　それとも、ゆっくり？">
 					<FloodRain />
 				</Visual>
 			</Beat>
-			<Beat name="判決" captions={c} from={15} to={17}>
-				<GavelVerdict verdict="half" strikeAt={captionFrame(c, 15, 16, fps)} />
+			<Beat name="深い海の底" captions={c} from={15} to={18}>
+				<Visual label="酸素のない海の底に、眠っていたもの">
+					<DeepShipwreck />
+				</Visual>
 			</Beat>
-			<Beat name="そのまま信じたら" captions={c} from={18}>
+			<Beat name="1000キロ" captions={c} from={19} to={20}>
+				<Visual label="黒海とメソポタミアは、つながるのか？">
+					<UrartuMap />
+				</Visual>
+			</Beat>
+			<Beat name="判決" captions={c} from={21} to={23}>
+				<GavelVerdict verdict="half" strikeAt={captionFrame(c, 21, 22, fps)} />
+			</Beat>
+			<Beat name="そのまま信じたら" captions={c} from={24}>
 				<Photo id="ark-encounter" label="聖書をそのまま信じたら、どうなる？">
 					<Visual label="聖書をそのまま信じたら、どうなる？">
 						<ArkBuilding />

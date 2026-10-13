@@ -1,5 +1,5 @@
 import {Beat} from '../components/Beat';
-import {FloodMythWorld, JomonSeaMap, SeaLevelChart, VerdictTiles} from '../components/NoahArt';
+import {DoggerlandMap, FloodMythWorld, JomonSeaMap, SeaLevelChart, VerdictTiles} from '../components/NoahArt';
 import {Photo} from '../components/Photo';
 import {Footprints, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
@@ -31,29 +31,39 @@ export const RootsStory = () => (
 				<SeaLevelChart />
 			</Visual>
 		</Beat>
-		<Beat name="日本にも" captions={c} from={10} to={14}>
+		<Beat name="ドッガーランド" captions={c} from={10} to={14}>
+			<Visual label="北海の底に、かつて人が暮らす陸地があった？">
+				<DoggerlandMap />
+			</Visual>
+		</Beat>
+		<Beat name="日本にも" captions={c} from={15} to={19}>
 			<Visual label="6000年前、海は栃木県まで来ていた？" labelColor={colors.goldSoft}>
 				<JomonSeaMap />
 			</Visual>
 		</Beat>
-		<Beat name="貝塚" captions={c} from={15} to={17}>
+		<Beat name="貝塚" captions={c} from={20} to={21}>
 			<Visual label="海のない県から出てくる、海の貝がら">
 				<JomonSeaMap />
 			</Visual>
 		</Beat>
-		<Beat name="生き延びた" captions={c} from={18} to={18}>
+		<Beat name="水子貝塚" captions={c} from={22} to={23}>
+			<Visual label="海から遠い台地に、積み重なった貝がら">
+				<JomonSeaMap />
+			</Visual>
+		</Beat>
+		<Beat name="生き延びた" captions={c} from={24} to={24}>
 			<Photo id="kaizuka" label="のぼってくる海と生きた、縄文の人々">
 				<Visual label="のぼってくる海と生きた、縄文の人々">
 					<Footprints sea />
 				</Visual>
 			</Photo>
 		</Beat>
-		<Beat name="世界の洪水神話" captions={c} from={19} to={21}>
+		<Beat name="世界の洪水神話" captions={c} from={25} to={27}>
 			<Visual label="なぜ世界中に、洪水の物語があるのか">
 				<FloodMythWorld />
 			</Visual>
 		</Beat>
-		<Beat name="胸が熱くなる" captions={c} from={22}>
+		<Beat name="胸が熱くなる" captions={c} from={28}>
 			<Photo id="kaizuka" move="out" label="海がのぼる時代を、生き延びた記憶">
 				<Visual label="海がのぼる時代を、生き延びた記憶">
 					<FloodMythWorld />
