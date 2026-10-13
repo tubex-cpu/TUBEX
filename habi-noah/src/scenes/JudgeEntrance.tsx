@@ -1,20 +1,11 @@
 import {interpolate, useCurrentFrame} from 'remotion';
 import {Beat} from '../components/Beat';
 import {Photo} from '../components/Photo';
-import {ClayTablet} from '../components/Illustrations';
-import {AraratMountain, BlackSeaFill, FloodLayerDig, ArkBuilding} from '../components/NoahArt';
-import {ScaleBalance, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {judgeEntranceCaptions as c} from '../data/captions';
 import {colors, gothicFamily, minchoFamily} from '../theme';
 
-const clues = [
-	{t: 'アララト山の船の形', el: <AraratMountain />},
-	{t: '聖書より古い物語', el: <ClayTablet width={500} />},
-	{t: '洪水の地層', el: <FloodLayerDig />},
-	{t: '黒海大洪水', el: <BlackSeaFill />},
-	{t: '全ての動物を乗せた船', el: <ArkBuilding />},
-];
+const clues = ['アララト山の船の形', '聖書より古い物語', '洪水の地層', '黒海大洪水', '全ての動物を乗せた船'];
 
 const ClueRow = () => {
 	const frame = useCurrentFrame();
@@ -22,7 +13,7 @@ const ClueRow = () => {
 		<div style={{position: 'absolute', left: 100, right: 100, top: 230, display: 'flex', gap: 22, justifyContent: 'center'}}>
 			{clues.map((cl, i) => (
 				<div
-					key={cl.t}
+					key={cl}
 					style={{
 						width: 320,
 						padding: '22px 0',
@@ -33,10 +24,8 @@ const ClueRow = () => {
 					}}
 				>
 					<div style={{fontFamily: gothicFamily, fontWeight: 900, fontSize: 32, color: colors.clayDark}}>手がかり {i + 1}</div>
-					<div style={{height: 170, margin: '10px 16px', background: colors.night, borderRadius: 14, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-						<div style={{zoom: 0.2}}>{cl.el}</div>
-					</div>
-					<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 34, color: colors.ink}}>{cl.t}</div>
+					<div style={{margin: '18px 16px 6px', fontFamily: minchoFamily, fontWeight: 800, fontSize: 120, lineHeight: 1, color: colors.clay}}>？</div>
+					<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 34, color: colors.ink}}>{cl}</div>
 				</div>
 			))}
 		</div>
@@ -56,16 +45,10 @@ export const JudgeEntrance = () => (
 			</div>
 		</Beat>
 		<Beat name="前回から" captions={c} from={2} to={3}>
-			<Photo id="ur-ziggurat" label="シュメールの調査で、ずっと気になっていた物語">
-				<Visual label="シュメールの調査で、ずっと気になっていた物語">
-					<ClayTablet width={480} />
-				</Visual>
-			</Photo>
+			<Photo id="ur-ziggurat" label="シュメールの調査で、ずっと気になっていた物語" />
 		</Beat>
 		<Beat name="今夜の問い" captions={c} from={4} to={5}>
-			<Visual label="ノアの方舟は、本当にあったのか？">
-				<ScaleBalance undecided />
-			</Visual>
+			<Photo id="khor-virap" move="out" label="ノアの方舟は、本当にあったのか？" />
 		</Beat>
 		<Beat name="5つの手がかり" captions={c} from={6}>
 			<ClueRow />

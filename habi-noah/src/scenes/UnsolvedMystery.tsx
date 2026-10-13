@@ -1,5 +1,5 @@
 import {Beat} from '../components/Beat';
-import {BoatFormation, DrillRig, LabWaiting} from '../components/NoahArt';
+import {LabWaiting} from '../components/NoahArt';
 import {Photo} from '../components/Photo';
 import {ScaleBalance, Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
@@ -9,21 +9,15 @@ import {colors} from '../theme';
 // まだ解けていない謎
 export const UnsolvedMystery = () => (
 	<SceneFrame captions={c} voice="UnsolvedMystery" label="未決" title="ドリルを折った層の正体は？">
-		<Beat name="判決を出せない謎" captions={c} from={0} to={0}>
-			<Visual label="ボクにも、まだ判決が出せない">
-				<ScaleBalance undecided />
-			</Visual>
+		<Beat name="あの地形" captions={c} from={0} to={1}>
+			<Photo id="durupinar-4" move="out" label="ボクにも、まだ判決が出せない謎" />
 		</Beat>
-		<Beat name="あの地形" captions={c} from={1} to={2}>
-			<Photo id="durupinar" label="この冬、答えが出る">
-				<Visual label="この冬、答えが出る">
-					<BoatFormation />
-				</Visual>
-			</Photo>
+		<Beat name="研究室" captions={c} from={2} to={2}>
+			<Photo id="c14-lab" label="この冬、研究室で答えが出る" />
 		</Beat>
 		<Beat name="硬い層" captions={c} from={3} to={4}>
 			<Visual label="石になった木？　ただの岩？" labelColor={colors.goldSoft}>
-				<DrillRig />
+				<ScaleBalance undecided />
 			</Visual>
 		</Beat>
 		<Beat name="結果待ち" captions={c} from={5}>

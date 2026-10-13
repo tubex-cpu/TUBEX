@@ -1,4 +1,5 @@
-"""オリジナルBGM 3曲をシンセで生成する（著作権フリー・ループ可能）。
+"""オリジナルBGM 3曲をシンセで生成する（著作権フリー）。
+動画の各パートより長い通し曲として作り、ループさせない（同じ小節をくり返さない）。
   python3 scripts/make-bgm.py
 出力: public/bgm/bgm1-night-court.mp3（前半）, bgm2-investigation.mp3（中盤）, bgm3-roots.mp3（後半）
 """
@@ -109,9 +110,10 @@ def reverb(x, wet=0.3):
 
 
 class Track:
-    def __init__(self, bpm, bars):
+    def __init__(self, bpm, seconds):
         self.beat = 60 / bpm
-        self.len = int(bars * 4 * self.beat * SR)
+        self.bars = int(np.ceil(seconds / (4 * self.beat)))
+        self.len = int(self.bars * 4 * self.beat * SR)
         self.buf = np.zeros((self.len + SR * 8, 2))
 
     def add(self, beat_pos, sig):
@@ -119,81 +121,104 @@ class Track:
         self.buf[i:i + len(sig)] += sig[: len(self.buf) - i]
 
     def render(self, path, wet=0.3):
-        y = reverb(self.buf, wet)
-        loop = y[: self.len].copy()
-        tail = y[self.len:]
-        loop[: len(tail)] += tail[: len(loop)]  # 余韻を頭に回してループの継ぎ目をなくす
-        loop = lfilter([1, -1], [1, -0.995], loop, axis=0)  # DC除去
-        loop *= 0.85 / np.max(np.abs(loop))
+        y = reverb(self.buf, wet)[: self.len + SR * 4]
+        y = lfilter([1, -1], [1, -0.995], y, axis=0)  # DC除去
+        y *= env(len(y), 3.0, 6.0)[:, None]  # 頭と終わりはフェード
+        y *= 0.85 / np.max(np.abs(y))
         wav = path.with_suffix('.wav')
         with wave.open(str(wav), 'wb') as w:
             w.setnchannels(2)
             w.setsampwidth(2)
             w.setframerate(SR)
-            w.writeframes((loop * 32767).astype(np.int16).tobytes())
+            w.writeframes((y * 32767).astype(np.int16).tobytes())
         subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', str(wav), '-b:a', '160k', str(path)], check=True)
         wav.unlink()
-        print(path.name, f'{self.len / SR:.1f}s')
+        print(path.name, f'{len(y) / SR:.1f}s')
+
+
+def shift(n: str, semi: int) -> float:
+    return hz(n) * 2 ** (semi / 12)
+
+
+def sections(bars, size):
+    """size小節ごとの区切り。区切りごとにコード進行・音色・転調を変えて、同じ流れをくり返さない"""
+    return [(b, min(size, bars - b)) for b in range(0, bars, size)]
 
 
 out = ROOT / 'public/bgm'
 out.mkdir(parents=True, exist_ok=True)
 
-# 1. 前半「閉園後の法廷」：Dマイナー、ゆっくり、オルゴールのようなベルと時計の音
-tr = Track(70, 32)
-prog = [['D3', 'F3', 'A3'], ['Bb2', 'D3', 'F3'], ['G2', 'Bb2', 'D3'], ['A2', 'C#3', 'E3']]
-for bar in range(32):
-    ch = prog[(bar // 2) % 4]
-    if bar % 2 == 0:
-        for n in ch:
-            tr.add(bar * 4, pad(hz(n), 8 * tr.beat, 0.07))
-        tr.add(bar * 4, bass(hz(ch[0][:-1] + '2'), 7.5 * tr.beat, 0.12))
-    for b in range(4):
-        tr.add(bar * 4 + b, tick(0.025 if b else 0.04))
-    if bar >= 4:
-        arp = [ch[0], ch[1], ch[2], ch[1]]
-        for k in range(8):
-            if rng.random() < 0.55:
-                n = arp[k % 4]
-                f = hz(n) * (4 if k % 3 else 2)
-                tr.add(bar * 4 + k * 0.5, bell(f, 2.5, 0.06, rng.uniform(-0.6, 0.6)))
+# 1. 前半「閉園後の法廷」：Dマイナー中心。オルゴールのようなベルと時計の音（約10分）
+tr = Track(70, 600)
+pool = [['D3', 'F3', 'A3'], ['Bb2', 'D3', 'F3'], ['G2', 'Bb2', 'D3'], ['A2', 'C#3', 'E3'], ['F2', 'A2', 'C3'], ['C3', 'E3', 'G3'], ['E2', 'G2', 'Bb2'], ['G2', 'B2', 'D3']]
+keys = [0, 0, -2, 3, 0, 5, -2, 0, 2, -3, 0, 3]
+for si, (b0, n) in enumerate(sections(tr.bars, 8)):
+    key = keys[si % len(keys)] + (12 if si >= len(keys) else 0) * 0
+    prog = [pool[0]] + [pool[i] for i in rng.choice(np.arange(1, len(pool)), 3, replace=False)]
+    bell_on = si % 4 != 0
+    density = rng.uniform(0.35, 0.7)
+    for bar in range(b0, b0 + n):
+        ch = prog[((bar - b0) // 2) % 4]
+        if (bar - b0) % 2 == 0:
+            for nn in ch:
+                tr.add(bar * 4, pad(shift(nn, key), 8 * tr.beat, 0.07))
+            tr.add(bar * 4, bass(shift(ch[0][:-1] + '2', key), 7.5 * tr.beat, 0.12))
+        for b in range(4):
+            tr.add(bar * 4 + b, tick(0.025 if b else 0.04))
+        if bell_on:
+            for k in range(8):
+                if rng.random() < density:
+                    nn = ch[rng.integers(0, 3)]
+                    tr.add(bar * 4 + k * 0.5, bell(shift(nn, key) * rng.choice([2, 4, 4]), 2.5, 0.06, rng.uniform(-0.6, 0.6)))
 tr.render(out / 'bgm1-night-court.mp3', 0.4)
 
-# 2. 中盤「調査」：Aマイナー、刻むベースとピチカート、緊張感
-tr = Track(92, 32)
-prog = [['A2', 'C3', 'E3'], ['A2', 'C3', 'E3'], ['F2', 'A2', 'C3'], ['E2', 'G#2', 'B2']]
-for bar in range(32):
-    ch = prog[bar % 4]
-    for n in ch:
-        tr.add(bar * 4, pad(hz(n) * 2, 4 * tr.beat, 0.05))
-    for k in range(8):
-        tr.add(bar * 4 + k * 0.5, bass(hz(ch[0]), 0.45 * tr.beat, 0.16 if k % 2 == 0 else 0.1))
-    if bar >= 2:
-        tr.add(bar * 4, kick(0.28))
-        tr.add(bar * 4 + 2.5, kick(0.18))
+# 2. 中盤「調査」：Aマイナー中心。刻むベースとピチカート、緊張感（約8分半）
+tr = Track(92, 510)
+pool = [['A2', 'C3', 'E3'], ['F2', 'A2', 'C3'], ['E2', 'G#2', 'B2'], ['D2', 'F2', 'A2'], ['G2', 'B2', 'D3'], ['C3', 'E3', 'G3'], ['Bb2', 'D3', 'F3'], ['B2', 'D3', 'F3']]
+keys = [0, 0, 3, -2, 0, 5, 2, -3, 0, 1]
+for si, (b0, n) in enumerate(sections(tr.bars, 8)):
+    key = keys[si % len(keys)]
+    prog = [pool[0]] + [pool[i] for i in rng.choice(np.arange(1, len(pool)), 3, replace=False)]
+    drums = si % 5 != 0
+    pl = si % 3 != 1
+    for bar in range(b0, b0 + n):
+        ch = prog[(bar - b0) % 4]
+        for nn in ch:
+            tr.add(bar * 4, pad(shift(nn, key) * 2, 4 * tr.beat, 0.05))
         for k in range(8):
-            tr.add(bar * 4 + k * 0.5 + 0.25, hat(0.018 if k % 2 else 0.028))
-    if bar >= 8:
-        pat = [ch[0], ch[2], ch[1], ch[2], ch[0], ch[2], ch[1], ch[2]]
-        for k, n in enumerate(pat):
-            tr.add(bar * 4 + k * 0.5, pluck(hz(n) * 4, 0.6, 0.05, 0.4 if k % 2 else -0.4))
+            tr.add(bar * 4 + k * 0.5, bass(shift(ch[0], key), 0.45 * tr.beat, 0.16 if k % 2 == 0 else 0.1))
+        if drums:
+            tr.add(bar * 4, kick(0.28))
+            tr.add(bar * 4 + rng.choice([2.5, 2.0, 3.0]), kick(0.18))
+            for k in range(8):
+                tr.add(bar * 4 + k * 0.5 + 0.25, hat(0.018 if k % 2 else 0.028))
+        if pl:
+            for k in range(8):
+                if rng.random() < 0.8:
+                    nn = ch[rng.integers(0, 3)]
+                    tr.add(bar * 4 + k * 0.5, pluck(shift(nn, key) * rng.choice([2, 4]), 0.6, 0.05, 0.4 if k % 2 else -0.4))
 tr.render(out / 'bgm2-investigation.mp3', 0.25)
 
-# 3. 後半「足元にあった物語」：Cメジャー、温かいピアノとストリングス
-tr = Track(76, 32)
-prog = [['C3', 'E3', 'G3'], ['B2', 'D3', 'G3'], ['A2', 'C3', 'E3'], ['F2', 'A2', 'C3'],
-        ['F2', 'A2', 'C3'], ['C3', 'E3', 'G3'], ['D3', 'F3', 'A3'], ['G2', 'B2', 'D3']]
-melody = ['E5', 'D5', 'C5', 'G4', 'A4', 'G4', 'E4', 'G4', 'F4', 'A4', 'C5', 'A4', 'G4', 'E4', 'D4', 'G4']
-for bar in range(32):
-    ch = prog[bar % 8]
-    for n in ch:
-        tr.add(bar * 4, pad(hz(n) * 2, 4 * tr.beat, 0.06))
-    tr.add(bar * 4, bass(hz(ch[0]), 3.8 * tr.beat, 0.14))
-    for k in range(4):
-        n = [ch[0], ch[1], ch[2], ch[1]][k]
-        tr.add(bar * 4 + k, piano(hz(n) * 2, 2.5, 0.06, -0.3))
-    if bar >= 4:
-        m1, m2 = melody[(bar * 2) % 16], melody[(bar * 2 + 1) % 16]
-        tr.add(bar * 4, piano(hz(m1), 3.0, 0.09, 0.3))
-        tr.add(bar * 4 + 2, piano(hz(m2), 3.0, 0.08, 0.3))
+# 3. 後半「足元にあった物語」：Cメジャー中心。温かいピアノとストリングス（約5分半）
+tr = Track(76, 330)
+pool = [['C3', 'E3', 'G3'], ['B2', 'D3', 'G3'], ['A2', 'C3', 'E3'], ['F2', 'A2', 'C3'], ['D3', 'F3', 'A3'], ['G2', 'B2', 'D3'], ['E2', 'G2', 'B2'], ['F2', 'A2', 'D3']]
+scale = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5', 'D5', 'E5']
+keys = [0, 0, 2, -3, 5, 0, -2, 3]
+for si, (b0, n) in enumerate(sections(tr.bars, 8)):
+    key = keys[si % len(keys)]
+    prog = [pool[0]] + [pool[i] for i in rng.choice(np.arange(1, len(pool)), 7, replace=False)]
+    mel = si % 4 != 0
+    pos = 5
+    for bar in range(b0, b0 + n):
+        ch = prog[(bar - b0) % 8]
+        for nn in ch:
+            tr.add(bar * 4, pad(shift(nn, key) * 2, 4 * tr.beat, 0.06))
+        tr.add(bar * 4, bass(shift(ch[0], key), 3.8 * tr.beat, 0.14))
+        for k in range(4):
+            nn = [ch[0], ch[1], ch[2], ch[1]][k]
+            tr.add(bar * 4 + k, piano(shift(nn, key) * 2, 2.5, 0.06, -0.3))
+        if mel:
+            for half in (0, 2):
+                pos = int(np.clip(pos + rng.choice([-2, -1, -1, 1, 1, 2, 0]), 0, len(scale) - 1))
+                tr.add(bar * 4 + half, piano(shift(scale[pos], key), 3.0, 0.09 if half == 0 else 0.08, 0.3))
 tr.render(out / 'bgm3-roots.mp3', 0.35)

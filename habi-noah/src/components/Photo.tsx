@@ -7,7 +7,7 @@ type Props = {
 	// src/data/photos.ts に登録した写真のID
 	readonly id: string;
 	// 写真がまだ無いときに代わりに出す図解
-	readonly children: React.ReactNode;
+	readonly children?: React.ReactNode;
 	// ズームの向き（in: 寄る / out: 引く）とパンの方向
 	readonly move?: 'in' | 'out' | 'left' | 'right';
 	readonly label?: string;
@@ -18,7 +18,7 @@ export const Photo: React.FC<Props> = ({id, children, move = 'in', label}) => {
 	const frame = useCurrentFrame();
 	const photo = photos[id];
 	if (!photo) {
-		return <>{children}</>;
+		return <>{children ?? null}</>;
 	}
 	const t = interpolate(frame, [0, 900], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
 	const scale = move === 'out' ? 1.14 - 0.1 * t : 1.04 + 0.1 * t;

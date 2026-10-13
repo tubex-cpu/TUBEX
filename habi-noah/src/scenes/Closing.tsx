@@ -32,11 +32,7 @@ const SubscribeButton = () => {
 export const Closing = () => (
 	<SceneFrame captions={c} voice="Closing">
 		<Beat name="感想を待っています" captions={c} from={0} to={1}>
-			<Photo id="noah-art" move="out" label="次に裁いてほしい説を、コメントで">
-				<Visual label="次に裁いてほしい説を、コメントで">
-					<UnreadTablet />
-				</Visual>
-			</Photo>
+			<Photo id="dove-2" label="次に裁いてほしい説を、コメントで" />
 		</Beat>
 		<Beat name="次の法廷" captions={c} from={2} to={2}>
 			<Visual label="次の法廷：人々は、自分から文字を捨てたのか？" labelColor={colors.goldSoft}>

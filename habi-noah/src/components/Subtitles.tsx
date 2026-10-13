@@ -50,10 +50,10 @@ export const Subtitles: React.FC<Props> = ({captions}) => {
 					color: colors.text,
 					textAlign: 'center',
 					padding: '18px 40px',
-					borderRadius: 14,
-					background: 'rgba(5, 9, 18, 0.86)',
-					borderTop: `3px solid ${colors.gold}`,
-					textShadow: '0 2px 6px rgba(0,0,0,0.6)',
+					// 枠は付けず、黒いフチ取りで写真の上でも読めるようにする
+					WebkitTextStroke: '12px rgba(5, 9, 18, 0.96)',
+					paintOrder: 'stroke fill',
+					textShadow: '0 4px 14px rgba(0,0,0,0.85)',
 				}}
 			>
 				{current.text}

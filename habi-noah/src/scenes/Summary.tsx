@@ -1,8 +1,6 @@
 import {interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Beat, captionFrame} from '../components/Beat';
-import {RoundArk, SmithExcited} from '../components/NoahArt';
 import {Photo} from '../components/Photo';
-import {Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {summaryCaptions as c} from '../data/captions';
 import {colors, gothicFamily, minchoFamily} from '../theme';
@@ -40,22 +38,17 @@ export const Summary = () => (
 		<Beat name="判決ボード" captions={c} from={0} to={5}>
 			<VerdictBoard />
 		</Beat>
-		<Beat name="見つからなかった" captions={c} from={6} to={7}>
-			<Visual label="船は見つからなかった。でも――">
-				<SmithExcited />
-			</Visual>
+		<Beat name="見つからなかった" captions={c} from={6} to={6}>
+			<Photo id="ararat-yerevan" move="out" label="船は見つからなかった。でも――" />
+		</Beat>
+		<Beat name="興奮した発見" captions={c} from={7} to={7}>
+			<Photo id="bm-flood-tablet" label="服を脱ぐほど興奮した、粘土板の発見" />
 		</Beat>
 		<Beat name="祖先の物語" captions={c} from={8} to={8}>
-			<Visual label="海がのぼる時代を生き延びた、祖先の物語" labelColor={colors.goldSoft}>
-				<RoundArk />
-			</Visual>
+			<Photo id="jomon-idojiri" move="right" label="海がのぼる時代を生き延びた、祖先の物語" />
 		</Beat>
 		<Beat name="結論" captions={c} from={9}>
-			<Photo id="noah-art" label="本当の話は、作り話に負けないくらい、面白い。">
-				<Visual label="本当の話は、作り話に負けないくらい、面白い。">
-					<RoundArk />
-				</Visual>
-			</Photo>
+			<Photo id="ararat-plain" move="out" label="本当の話は、作り話に負けないくらい、面白い。" />
 		</Beat>
 	</SceneFrame>
 );

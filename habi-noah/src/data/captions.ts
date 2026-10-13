@@ -1,74 +1,88 @@
 // scripts/build-voice.py で自動生成。手で編集しないこと。
 import type {Caption} from '@remotion/captions';
 
-// 0:00 謎の先出し（1323フレーム）
+// 0:00 謎の先出し（1614フレーム）
 export const introCaptions: Caption[] = [
   {
-    "text": "先月、トルコの山の中で、ドリルが折れた。",
+    "text": "先月、ノアの方舟が眠ると言われる場所で、ドリルが砕けた。",
     "startMs": 500,
-    "endMs": 3625,
+    "endMs": 4564,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "場所は、トルコの東のはずれ。標高5000メートルを超える雪の山、アララト山のふもとだ。",
-    "startMs": 4005,
-    "endMs": 9861,
+    "text": "地下わずか4、5メートル。石灰岩よりも硬い「何か」に、ぶつかったのだ。",
+    "startMs": 4944,
+    "endMs": 10256,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "その近くの斜面に、長さおよそ160メートルの、船のような形をした地形がある。",
-    "startMs": 10241,
-    "endMs": 15713,
+    "text": "研究チームは言う。「木が石になったものかもしれない」。",
+    "startMs": 10636,
+    "endMs": 13740,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "研究チームは、この地面の下を掘るために、ドリルを打ちこんだ。",
-    "startMs": 16093,
-    "endMs": 20040,
+    "text": "場所は、トルコのアララト山のふもと。長さおよそ160メートルの、船の形をした地形の、真下だ。",
+    "startMs": 14120,
+    "endMs": 21032,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、地下4、5メートルのところで、石灰岩よりも硬い何かにぶつかり、ドリルの先が砕けた。",
-    "startMs": 20420,
-    "endMs": 26543,
+    "text": "もしこれが方舟なら、聖書の物語は、本当にあったことになる。",
+    "startMs": 21412,
+    "endMs": 25615,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "彼らは言う。「木が石になったものかもしれない」。",
-    "startMs": 26923,
-    "endMs": 29653,
+    "text": "ところが、調べはじめると、おかしな証拠が次々に出てきた。",
+    "startMs": 25995,
+    "endMs": 30048,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、ここに眠っているのは、あの船かもしれない、と。",
-    "startMs": 30033,
-    "endMs": 33937,
+    "text": "方舟の物語には、聖書より1000年以上も古い、そっくりな物語があった。",
+    "startMs": 30428,
+    "endMs": 35612,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "大洪水から、人と動物を守ったという、ノアの方舟。",
-    "startMs": 34317,
-    "endMs": 38189,
+    "text": "しかも、そこに描かれた方舟は、丸かった。",
+    "startMs": 35992,
+    "endMs": 39085,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "もし本当なら、聖書の物語は、作り話ではなかったことになる。",
-    "startMs": 38569,
-    "endMs": 42868,
+    "text": "そして証拠をたどった先で、ボクは、もっと大きな洪水に行き当たる。",
+    "startMs": 39465,
+    "endMs": 43764,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その洪水は、この日本にも、来ていた。",
+    "startMs": 44144,
+    "endMs": 47056,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ノアの方舟は、本当にあったのか。今夜、証拠だけで、判決を下す。",
+    "startMs": 47436,
+    "endMs": 52588,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 1:00 ハビ判事登場（862フレーム）
+// 0:43 ハビ判事登場（862フレーム）
 export const judgeEntranceCaptions: Caption[] = [
   {
     "text": "こんばんは。閉園後の法廷にようこそ。ハビ判事です。",
@@ -128,7 +142,7 @@ export const judgeEntranceCaptions: Caption[] = [
   }
 ];
 
-// 1:40 第1の手がかり アララト山の船の形（7229フレーム）
+// 1:11 第1の手がかり アララト山の船の形（7229フレーム）
 export const clue1AraratCaptions: Caption[] = [
   {
     "text": "まず、聖書の物語を確かめておこう。",
@@ -475,7 +489,7 @@ export const clue1AraratCaptions: Caption[] = [
   }
 ];
 
-// 5:30 第2の手がかり 聖書より古い洪水物語（6431フレーム）
+// 5:11 第2の手がかり 聖書より古い洪水物語（6431フレーム）
 export const clue2TabletCaptions: Caption[] = [
   {
     "text": "1872年。ロンドンの大英博物館。",
@@ -794,7 +808,7 @@ export const clue2TabletCaptions: Caption[] = [
   }
 ];
 
-// 9:40 第3の手がかり 洪水の地層（4292フレーム）
+// 8:45 第3の手がかり 洪水の地層（4292フレーム）
 export const clue3LayersCaptions: Caption[] = [
   {
     "text": "1929年。イラク南部、シュメールの町ウル。",
@@ -1022,7 +1036,7 @@ export const clue3LayersCaptions: Caption[] = [
   }
 ];
 
-// 12:30 第4の手がかり 黒海大洪水（4142フレーム）
+// 11:07 第4の手がかり 黒海大洪水（4142フレーム）
 export const clue4BlackSeaCaptions: Caption[] = [
   {
     "text": "トルコの北に広がる、黒海。",
@@ -1208,7 +1222,7 @@ export const clue4BlackSeaCaptions: Caption[] = [
   }
 ];
 
-// 14:50 第5の手がかり 全ての動物を乗せた船（4858フレーム）
+// 13:25 第5の手がかり 全ての動物を乗せた船（4858フレーム）
 export const clue5AnimalsCaptions: Caption[] = [
   {
     "text": "アメリカのケンタッキー州に、巨大な木の船が建っている。",
@@ -1429,7 +1443,7 @@ export const clue5AnimalsCaptions: Caption[] = [
   }
 ];
 
-// 17:00 足元にあった物語（4557フレーム）
+// 16:06 足元にあった物語（4557フレーム）
 export const rootsStoryCaptions: Caption[] = [
   {
     "text": "船は、見つからなかった。",
@@ -1636,7 +1650,7 @@ export const rootsStoryCaptions: Caption[] = [
   }
 ];
 
-// 19:20 まだ解けていない謎（827フレーム）
+// 18:37 まだ解けていない謎（827フレーム）
 export const unsolvedMysteryCaptions: Caption[] = [
   {
     "text": "最後に、今夜の調査で残った、まだ判決を出せない謎を、ひとつだけ。",
@@ -1689,7 +1703,7 @@ export const unsolvedMysteryCaptions: Caption[] = [
   }
 ];
 
-// 20:00 まとめ（1636フレーム）
+// 19:04 まとめ（1636フレーム）
 export const summaryCaptions: Caption[] = [
   {
     "text": "では、今夜の判決を振り返ろう。",
@@ -1763,7 +1777,7 @@ export const summaryCaptions: Caption[] = [
   }
 ];
 
-// 21:10 締め（960フレーム）
+// 19:58 締め（960フレーム）
 export const closingCaptions: Caption[] = [
   {
     "text": "最後まで見てくれて、ありがとう。",

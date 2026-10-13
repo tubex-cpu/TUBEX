@@ -79,8 +79,6 @@ export const HabiNoahVideo = () => {
 			<Audio
 				name="BGM 前半「閉園後の法廷」"
 				src={staticFile('bgm/bgm1-night-court.mp3')}
-				loop
-				loopVolumeCurveBehavior="extend"
 				durationInFrames={midStart + fps}
 				volume={fadeVolume(midStart + fps, fps)}
 				premountFor={fps}
@@ -88,8 +86,6 @@ export const HabiNoahVideo = () => {
 			<Audio
 				name="BGM 中盤「調査」"
 				src={staticFile('bgm/bgm2-investigation.mp3')}
-				loop
-				loopVolumeCurveBehavior="extend"
 				from={midStart - fps}
 				durationInFrames={lateStart - midStart + 2 * fps}
 				volume={fadeVolume(lateStart - midStart + 2 * fps, fps)}
@@ -98,8 +94,6 @@ export const HabiNoahVideo = () => {
 			<Audio
 				name="BGM 後半「足元にあった物語」"
 				src={staticFile('bgm/bgm3-roots.mp3')}
-				loop
-				loopVolumeCurveBehavior="extend"
 				from={lateStart - fps}
 				durationInFrames={durationInFrames - lateStart + fps}
 				volume={fadeVolume(durationInFrames - lateStart + fps, fps)}

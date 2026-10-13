@@ -798,3 +798,128 @@ export const WoodenShipLimit: React.FC = () => {
 		</svg>
 	);
 };
+
+// 黒海の水位は、一気に上がったのか、ゆっくり上がったのか
+export const LakeRiseDebate: React.FC = () => {
+	const frame = useCurrentFrame();
+	const p = interpolate(frame, [10, 90], [0, 1], ease);
+	const fast = (x: number) => (x < 0.5 ? 0 : 1);
+	const pts = (f: (x: number) => number) =>
+		[...Array(41)].map((_, i) => {
+			const x = (i / 40) * p;
+			return `${120 + x * 1100},${470 - f(x) * 340}`;
+		});
+	return (
+		<svg width={1400} height={600} viewBox="0 0 1400 600">
+			<rect width={1400} height={600} rx={30} fill="#0f1a2c" />
+			<line x1={120} y1={480} x2={1240} y2={480} stroke="#55607a" strokeWidth={4} />
+			<line x1={120} y1={480} x2={120} y2={100} stroke="#55607a" strokeWidth={4} />
+			<text x={130} y={80} {...txt(34, colors.muted)}>黒海の水位</text>
+			<text x={1240} y={530} textAnchor="end" {...txt(34, colors.muted)}>時間</text>
+			<polyline points={pts(fast).join(' ')} fill="none" stroke={colors.correct} strokeWidth={10} strokeLinejoin="round" />
+			<polyline points={pts((x) => x).join(' ')} fill="none" stroke={colors.wrong} strokeWidth={10} strokeLinejoin="round" strokeDasharray="22 14" />
+			<g opacity={interpolate(frame, [60, 80], [0, 1], clamp)}>
+				<text x={760} y={160} {...txt(40, '#ff9a8c')}>一気に？（数年で）</text>
+				<text x={760} y={380} {...txt(40, '#9cc8ff')}>ゆっくり？（数千年で）</text>
+			</g>
+		</svg>
+	);
+};
+
+// 黒海とメソポタミアの距離
+export const DistanceMap: React.FC = () => {
+	const frame = useCurrentFrame();
+	const p = interpolate(frame, [20, 70], [0, 1], ease);
+	return (
+		<svg width={1300} height={640} viewBox="0 0 1300 640">
+			<rect width={1300} height={640} rx={30} fill="#c9b48a" />
+			<path d="M140 60 C 360 20 620 40 760 90 C 700 180 420 200 180 170 Z" fill="#3f78a8" />
+			<path d="M1050 120 C 1120 200 1110 330 1060 420 C 1020 330 1010 220 1050 120 Z" fill="#3f78a8" />
+			<path d="M900 600 C 980 520 1080 500 1200 520 L1200 640 L880 640 Z" fill="#3f78a8" />
+			<path d="M640 260 C 720 360 820 460 940 560" stroke="#3f78a8" strokeWidth={8} fill="none" />
+			<path d="M760 240 C 820 340 880 440 950 560" stroke="#3f78a8" strokeWidth={8} fill="none" />
+			<text x={450} y={120} textAnchor="middle" {...txt(40)}>黒海</text>
+			<text x={880} y={470} textAnchor="middle" {...txt(40, colors.ink)}>メソポタミア</text>
+			<circle cx={450} cy={180} r={12} fill={colors.ink} />
+			<circle cx={900} cy={520} r={12} fill={colors.ink} />
+			<line x1={450} y1={180} x2={450 + 450 * p} y2={180 + 340 * p} stroke="#8a1f12" strokeWidth={8} strokeDasharray="20 12" />
+			<g transform="translate(700 330)" opacity={p}>
+				<rect x={-150} y={-40} width={300} height={70} rx={14} fill="rgba(5,9,18,0.85)" />
+				<text y={10} textAnchor="middle" {...txt(40, colors.goldSoft)}>1000km以上</text>
+			</g>
+		</svg>
+	);
+};
+
+// アトラ・ハシース物語：増えすぎた人間のさわがしさに、神々は眠れない
+export const NoisyHumans: React.FC = () => {
+	const frame = useCurrentFrame();
+	return (
+		<svg width={1400} height={600} viewBox="0 0 1400 600">
+			<rect width={1400} height={600} rx={30} fill="#2a2018" />
+			<path d="M0 210 Q 700 150 1400 210 L1400 0 L0 0 Z" fill="#1b2944" />
+			{[0, 1, 2].map((i) => (
+				<g key={i} transform={`translate(${470 + i * 230} 110)`}>
+					<circle r={40} fill={colors.gold} opacity={0.85} />
+					<path d="M-18 -4 Q -10 4 -2 -4 M2 -4 Q 10 4 18 -4" stroke={colors.ink} strokeWidth={4} fill="none" />
+					<text x={50} y={-40} {...txt(34, '#fff')} opacity={interpolate(Math.sin(frame / 9 + i), [-1, 1], [0.2, 1])}>！？</text>
+				</g>
+			))}
+			<text x={700} y={52} textAnchor="middle" {...txt(36, colors.goldSoft)}>眠れない神々</text>
+			{[...Array(26)].map((_, i) => {
+				const x = 80 + (i % 13) * 100;
+				const y = 380 + Math.floor(i / 13) * 120;
+				const jump = Math.abs(Math.sin(frame / 5 + i)) * 14;
+				return (
+					<g key={i} transform={`translate(${x} ${y - jump})`}>
+						<circle r={16} fill="#d8b894" />
+						<rect x={-14} y={18} width={28} height={50} rx={10} fill={['#8a5a32', '#4a6a8a', '#6a8a4a'][i % 3]} />
+					</g>
+				);
+			})}
+			{[...Array(7)].map((_, i) => (
+				<text key={i} x={140 + i * 180} y={300 + (i % 2) * 30} {...txt(40, '#f3dc9c')} opacity={interpolate(Math.sin(frame / 6 + i * 2), [-1, 1], [0, 1])}>ガヤガヤ</text>
+			))}
+		</svg>
+	);
+};
+
+// 川があふれ、泥にのまれる町
+export const TownFlood: React.FC = () => {
+	const frame = useCurrentFrame();
+	const water = interpolate(frame, [0, 120], [520, 300], ease);
+	return (
+		<svg width={1400} height={600} viewBox="0 0 1400 600">
+			<defs>{sky('townSky', '#5a6878', '#a8b4bc')}</defs>
+			<rect width={1400} height={600} rx={30} fill="url(#townSky)" />
+			{[...Array(9)].map((_, i) => (
+				<g key={i} transform={`translate(${110 + i * 145} ${380 - (i % 3) * 30})`}>
+					<rect x={-55} y={-70} width={110} height={170} fill={i % 2 ? '#b08a5a' : '#c49a66'} />
+					<rect x={-20} y={-30} width={22} height={30} fill="#3a2a1a" />
+				</g>
+			))}
+			<path d={`M0 ${water} Q 350 ${water - 18} 700 ${water} T 1400 ${water} L1400 600 L0 600 Z`} fill="#7a5e3a" opacity={0.92} />
+			<path d={`M0 ${water + 6} Q 350 ${water - 10} 700 ${water + 6} T 1400 ${water + 6}`} stroke="#c9a46a" strokeWidth={4} fill="none" />
+		</svg>
+	);
+};
+
+// 推理小説の表紙（イメージ）：砂漠の発掘現場と、なぞの影
+export const NovelCover: React.FC = () => {
+	const frame = useCurrentFrame();
+	const t = interpolate(frame, [0, 40], [0, 1], ease);
+	return (
+		<svg width={1300} height={620} viewBox="0 0 1300 620">
+			<g transform={`translate(650 310) rotate(${-4 + 4 * t}) scale(${0.9 + 0.1 * t})`}>
+				<rect x={-230} y={-290} width={460} height={580} rx={10} fill="#1c1410" stroke={colors.gold} strokeWidth={6} />
+				<rect x={-200} y={-90} width={400} height={240} fill="#c98b5a" />
+				<path d="M-200 150 L-120 40 L-60 100 L20 0 L120 120 L200 60 L200 150 Z" fill="#8d5a36" />
+				<circle cx={120} cy={-40} r={34} fill="#f3dc9c" />
+				<path d="M-40 150 L-40 70 Q -20 40 0 70 L0 150 Z" fill="#000" opacity={0.85} />
+				<text y={-200} textAnchor="middle" style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 52, fill: colors.goldSoft}}>メソポタミヤ</text>
+				<text y={-130} textAnchor="middle" style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 52, fill: colors.goldSoft}}>の殺人</text>
+				<text y={230} textAnchor="middle" {...txt(30, colors.muted, 700)}>推理小説（イメージ）</text>
+			</g>
+		</svg>
+	);
+};
