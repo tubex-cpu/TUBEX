@@ -39,3 +39,14 @@ f = 60 + 90 * np.exp(-t * 25)
 thump = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 10)
 noise = lfilter([0.2], [1, -0.8], rng.standard_normal(len(t))) * np.exp(-t * 60)
 save('stamp', thump + noise)
+
+# 扉：重い木の扉がきしみながら開く音＋低い響き
+t = np.arange(int(2.2 * SR)) / SR
+pitch = 210 + 60 * np.sin(2 * np.pi * 0.7 * t) + 30 * rng.standard_normal(len(t)).cumsum() / SR
+saw = 2 * ((np.cumsum(pitch) / SR) % 1) - 1
+creak = lfilter([1], [1, -0.92], saw * (0.5 + 0.5 * np.abs(np.sin(2 * np.pi * 11 * t)))) * 0.05
+creak *= np.clip(t / 0.15, 0, 1) * np.clip((1.8 - t) / 0.5, 0, 1)
+boom_t = np.clip(t - 1.6, 0, None)
+boom = np.sin(2 * np.pi * 55 * boom_t) * np.exp(-boom_t * 6) * (t > 1.6) * 0.8
+air = lfilter([1], [1, -0.97], rng.standard_normal(len(t))) * 0.004 * np.exp(-t * 0.8)
+save('door', creak + boom + air)
