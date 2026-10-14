@@ -66,7 +66,7 @@
 ナレーション：VOICEVOX:玄野武宏
 BGM・効果音：オリジナル
 写真（Wikimedia Commons。登場順）
-・写真はイメージ（アラスカ・デナリ国立公園の掘削, 2018）Mary Lewandowski / NPS / パブリックドメイン
+・アラスカ・デナリ国立公園の掘削（2018）Mary Lewandowski / NPS / パブリックドメイン
 ・珪化木（石になった木）Bryan Barnes / CC BY-SA 4.0
 ・Wikkiwooki / CC BY-SA 4.0 / Wikimedia Commons
 ・エドワード・ヒックス「ノアの方舟」（1846, フィラデルフィア美術館）/ CC0
@@ -129,7 +129,7 @@ BGM・効果音：オリジナル
 ・氷河期の地球（想像図）Ittiz / CC BY-SA 3.0
 ・南極の氷床 NASA/Christy Hansen / パブリックドメイン
 ・ドッガーランドの地図 Francis Lima / CC BY-SA 4.0
-・写真はイメージ（北海のトロール漁船の模型, 1910）/ パブリックドメイン
+・北海のトロール漁船の模型（1910）/ パブリックドメイン
 ・火焔型土器 Netherzone / CC BY-SA 4.0
 ・安楽寺貝塚 Fred Cherrygarden / CC BY-SA 4.0
 ・水子貝塚公園（埼玉県富士見市）京浜にけ / CC BY-SA 3.0
