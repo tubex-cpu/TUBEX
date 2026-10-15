@@ -9,6 +9,7 @@ Claude が企画工程（工程3）でここから候補を拾い、`01_research
 
 ## 未使用
 
+- 2026-10-15｜新規ch候補（YouTube運用・顔出しなし副業）｜https://www.youtube.com/watch?v=fqfI69_-r8Y｜「今伸びてる79ch」のリメイク。10か月後の答え合わせ＋実数値で差別化。詳細 `channels/new-channels/ref_remake_79ch.md`。ゲート0待ち
 - 2026-10-11｜①ハビ判事｜（例）〇〇は本当か？｜友人が信じていた
 
 ## 採用・見送り済み
