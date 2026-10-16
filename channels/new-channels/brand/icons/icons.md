@@ -1,3 +1,5 @@
+> 更新：旧生物A/B/Cはユーザー指示で不採用。新候補は life-v2-luminous.png。生成履歴・全プロンプト・自己評価は [revision-v2.md](revision-v2.md) を参照。縮小一覧は contact_sheet_v2.png。宇宙2案は従来どおり。
+
 # 新規2チャンネル アイコン・モック
 
 **モック／社長未選択／最終版ではありません。Claude監査待ち。**
