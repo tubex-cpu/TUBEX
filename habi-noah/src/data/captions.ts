@@ -82,7 +82,7 @@ export const introCaptions: Caption[] = [
   }
 ];
 
-// 0:43 ハビ判事登場（862フレーム）
+// 0:53 ハビ判事登場（862フレーム）
 export const judgeEntranceCaptions: Caption[] = [
   {
     "text": "こんばんは。閉園後の法廷にようこそ。ハビ判事です。",
@@ -142,7 +142,7 @@ export const judgeEntranceCaptions: Caption[] = [
   }
 ];
 
-// 1:11 第1の手がかり アララト山の船の形（7229フレーム）
+// 1:21 第1の手がかり アララト山の船の形（7229フレーム）
 export const clue1AraratCaptions: Caption[] = [
   {
     "text": "まず、聖書の物語を確かめておこう。",
@@ -489,7 +489,7 @@ export const clue1AraratCaptions: Caption[] = [
   }
 ];
 
-// 5:11 第2の手がかり 聖書より古い洪水物語（6431フレーム）
+// 5:21 第2の手がかり 聖書より古い洪水物語（6431フレーム）
 export const clue2TabletCaptions: Caption[] = [
   {
     "text": "1872年。ロンドンの大英博物館。",
@@ -808,7 +808,7 @@ export const clue2TabletCaptions: Caption[] = [
   }
 ];
 
-// 8:45 第3の手がかり 洪水の地層（4292フレーム）
+// 8:55 第3の手がかり 洪水の地層（4292フレーム）
 export const clue3LayersCaptions: Caption[] = [
   {
     "text": "1929年。イラク南部、シュメールの町ウル。",
@@ -1036,7 +1036,7 @@ export const clue3LayersCaptions: Caption[] = [
   }
 ];
 
-// 11:07 第4の手がかり 黒海大洪水（4142フレーム）
+// 11:17 第4の手がかり 黒海大洪水（4142フレーム）
 export const clue4BlackSeaCaptions: Caption[] = [
   {
     "text": "トルコの北に広がる、黒海。",
@@ -1222,7 +1222,7 @@ export const clue4BlackSeaCaptions: Caption[] = [
   }
 ];
 
-// 13:25 第5の手がかり 全ての動物を乗せた船（4858フレーム）
+// 13:35 第5の手がかり 全ての動物を乗せた船（4858フレーム）
 export const clue5AnimalsCaptions: Caption[] = [
   {
     "text": "アメリカのケンタッキー州に、巨大な木の船が建っている。",
@@ -1443,7 +1443,7 @@ export const clue5AnimalsCaptions: Caption[] = [
   }
 ];
 
-// 16:06 足元にあった物語（4557フレーム）
+// 16:16 足元にあった物語（4557フレーム）
 export const rootsStoryCaptions: Caption[] = [
   {
     "text": "船は、見つからなかった。",
@@ -1650,7 +1650,7 @@ export const rootsStoryCaptions: Caption[] = [
   }
 ];
 
-// 18:37 まだ解けていない謎（827フレーム）
+// 18:47 まだ解けていない謎（827フレーム）
 export const unsolvedMysteryCaptions: Caption[] = [
   {
     "text": "最後に、今夜の調査で残った、まだ判決を出せない謎を、ひとつだけ。",
@@ -1703,7 +1703,7 @@ export const unsolvedMysteryCaptions: Caption[] = [
   }
 ];
 
-// 19:04 まとめ（1636フレーム）
+// 19:14 まとめ（1636フレーム）
 export const summaryCaptions: Caption[] = [
   {
     "text": "では、今夜の判決を振り返ろう。",
@@ -1777,7 +1777,7 @@ export const summaryCaptions: Caption[] = [
   }
 ];
 
-// 19:58 締め（960フレーム）
+// 20:08 締め（528フレーム）
 export const closingCaptions: Caption[] = [
   {
     "text": "最後まで見てくれて、ありがとう。",
@@ -1794,23 +1794,16 @@ export const closingCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "次の法廷では、前回予告した、あの文字を取り上げる。シュメールの東どなりで生まれ、誰にも読めないまま、突然使われなくなった文字。人々は本当に、自分から文字を捨てたのか。",
+    "text": "次の判決を見逃さないように、チャンネル登録をしておいてほしい。",
     "startMs": 9665,
-    "endMs": 21697,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この動画が面白いと思ったら、次の判決を見逃さないように、チャンネル登録をしておいてほしい。",
-    "startMs": 22077,
-    "endMs": 27955,
+    "endMs": 13559,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "では、また閉園後の法廷で会おう。",
-    "startMs": 28335,
-    "endMs": 30788,
+    "startMs": 13939,
+    "endMs": 16392,
     "timestampMs": null,
     "confidence": null
   }
