@@ -23,7 +23,7 @@ export const Clue5Hashihaka = () => {
 				</Visual>
 			</Beat>
 			<Beat name="纒向遺跡" captions={c} from={4} to={4}>
-				<Photo id="makimuku-tsuji" move="left" label="奈良県桜井市、纒向遺跡" />
+				<Photo id="makimuku-tsuji2" move="left" label="奈良県桜井市、纒向遺跡" />
 			</Beat>
 			<Beat name="箸墓古墳" captions={c} from={5} to={5}>
 				<Photo id="hashihaka-zenkei2" label="全長およそ280メートルの古墳" />
@@ -47,7 +47,7 @@ export const Clue5Hashihaka = () => {
 				</Visual>
 			</Beat>
 			<Beat name="都市" captions={c} from={13} to={13}>
-				<Photo id="makimuku-tsuji2" move="right" label="全国から人が集まる、都市？" />
+				<Photo id="yayoi-pottery" move="right" label="各地の土器が、なぜここに？" />
 			</Beat>
 			<Beat name="2月19日" captions={c} from={14} to={14}>
 				<Photo id="hashihaka-entrance" label="2026年2月19日、新しい発見" />

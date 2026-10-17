@@ -39,7 +39,7 @@ export const Clue1Himiko = () => {
 				</Visual>
 			</Beat>
 			<Beat name="争い" captions={c} from={10} to={11}>
-				<Photo id="toro2" move="out" label="国々は、何年も争いあった" />
+				<Photo id="toro3" move="out" label="国々は、何年も争いあった" />
 			</Beat>
 			<Beat name="女王が立つ" captions={c} from={12} to={14}>
 				<Visual label="選ばれたのは、ひとりの女性">
@@ -47,7 +47,7 @@ export const Clue1Himiko = () => {
 				</Visual>
 			</Beat>
 			<Beat name="宮殿" captions={c} from={15} to={15}>
-				<Photo id="toro3" move="right" label="見張りの高い建物と、柵" />
+				<Photo id="yoshinogari-iseki" label="見張りの高い建物と、柵" />
 			</Beat>
 			<Beat name="千人の女性" captions={c} from={16} to={16}>
 				<Visual label="女王の姿を見た者は、ほとんどいない">

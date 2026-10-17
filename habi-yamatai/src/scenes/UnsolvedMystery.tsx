@@ -26,7 +26,7 @@ export const UnsolvedMystery = () => (
 			</Visual>
 		</Beat>
 		<Beat name="また判決を" captions={c} from={6}>
-			<Photo id="yoshinogari-park" move="right" label="新しい発見があったら、もう一度判決を" />
+			<Photo id="toro2" move="right" label="新しい発見があったら、もう一度判決を" />
 		</Beat>
 	</SceneFrame>
 );

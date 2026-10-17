@@ -68,7 +68,7 @@ export const Clue4Yoshinogari = () => {
 				</Visual>
 			</Beat>
 			<Beat name="まだ空っぽ" captions={c} from={20} to={21}>
-				<Photo id="yoshinogari-iseki" move="left" label="誰が葬られたのか？" />
+				<Photo id="yoshinogari-park" move="left" label="誰が葬られたのか？" />
 			</Beat>
 			<Beat name="判決" captions={c} from={22} to={24}>
 				<GavelVerdict verdict="half" strikeAt={captionFrame(c, 22, 23, fps)} />
