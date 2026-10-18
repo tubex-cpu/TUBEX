@@ -1,0 +1,46 @@
+# 写真リスト（habi-*/scripts/photo-picks.json）がプッシュされたら、
+# Wikimedia Commons から写真を取得して同じブランチにコミットする。
+name: 写真を取得
+
+on:
+  push:
+    paths:
+      - 'habi-*/scripts/photo-picks.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-photos-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pillow
+      - name: 写真を取得
+        run: |
+          for picks in habi-*/scripts/photo-picks.json; do
+            dir="$(dirname "$(dirname "$picks")")"
+            echo "== $dir"
+            python3 "$dir/scripts/fetch-photos.py" || echo "::warning::$dir で取得できなかった写真があります（credits.json と実行ログを確認）"
+          done
+      - name: コミットしてプッシュ
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add habi-*/public/photos
+          if git diff --cached --quiet; then echo "新しい写真はありません"; exit 0; fi
+          git commit -m "写真を取得（GitHub Actions）"
+          for i in 1 2 3 4; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((i * 10))
+          done
+          exit 1
