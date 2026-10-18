@@ -46,7 +46,8 @@ export const Photo: React.FC<Props> = ({id, children, move = 'in', label}) => {
 						position: 'absolute',
 						left: 0,
 						right: 0,
-						top: 140,
+						// 人物の写真は顔にテロップが重ならないよう、字幕のすぐ上に置く
+						...(photo.labelBottom ? {bottom: 190} : {top: 140}),
 						display: 'flex',
 						justifyContent: 'center',
 					}}

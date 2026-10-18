@@ -1,7 +1,7 @@
 // scripts/build-voice.py で自動生成。手で編集しないこと。
 import type {Caption} from '@remotion/captions';
 
-// 0:00 謎の先出し（1954フレーム）
+// 0:00 謎の先出し（1957フレーム）
 export const introCaptions: Caption[] = [
   {
     "text": "2026年2月19日。奈良県桜井市。",
@@ -27,56 +27,56 @@ export const introCaptions: Caption[] = [
   {
     "text": "2023年に「謎のエリア」で見つかった石の棺が、有力者たちの墓の一部だったと発表された。",
     "startMs": 15112,
-    "endMs": 21779,
+    "endMs": 21875,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "奈良と、九州。邪馬台国の二大候補地で、2日続けて、新しい発表があったのだ。",
-    "startMs": 22159,
-    "endMs": 28324,
+    "startMs": 22255,
+    "endMs": 28420,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "邪馬台国は、どこにあったのか。この論争は、300年以上も続いている。",
-    "startMs": 28704,
-    "endMs": 33664,
+    "startMs": 28800,
+    "endMs": 33760,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "「ここにあった」と名乗りを上げている場所は、少なくとも50か所。",
-    "startMs": 34044,
-    "endMs": 37916,
+    "startMs": 34140,
+    "endMs": 38012,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "しかも、邪馬台国の場所を記した、ほとんど唯一の記録をそのとおりにたどると、九州のはるか南の、海の上に出てしまう。",
-    "startMs": 38296,
-    "endMs": 46253,
+    "startMs": 38392,
+    "endMs": 46349,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "中国の皇帝が女王に贈った金の印は、今も、見つかっていない。",
-    "startMs": 46633,
-    "endMs": 51124,
+    "startMs": 46729,
+    "endMs": 51220,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そして調べていくと、1300年前の日本の歴史家たちも、すでに、この謎に頭を悩ませていたことがわかった。",
-    "startMs": 51504,
-    "endMs": 58619,
+    "startMs": 51600,
+    "endMs": 58715,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "邪馬台国は、どこにあったのか。今夜、証拠だけで、判決を下す。",
-    "startMs": 58999,
-    "endMs": 63927,
+    "startMs": 59095,
+    "endMs": 64023,
     "timestampMs": null,
     "confidence": null
   }
@@ -128,7 +128,7 @@ export const judgeEntranceCaptions: Caption[] = [
   }
 ];
 
-// 0:00 第1の手がかり 卑弥呼は本当にいたのか（5604フレーム）
+// 0:00 第1の手がかり 卑弥呼は本当にいたのか（5598フレーム）
 export const clue1HimikoCaptions: Caption[] = [
   {
     "text": "中国の三国時代。魏、呉、蜀の3つの国が争っていた時代だ。",
@@ -238,146 +238,146 @@ export const clue1HimikoCaptions: Caption[] = [
   {
     "text": "宮殿には、見張りのための高い建物と、柵がめぐらされ、兵士がいつも守っていた。",
     "startMs": 78147,
-    "endMs": 83875,
+    "endMs": 83704,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "女王の姿を見た者は、ほとんどいない。千人の女性が仕え、ただひとりの男が、食事を運び、言葉を伝えた。",
-    "startMs": 84255,
-    "endMs": 92169,
+    "startMs": 84084,
+    "endMs": 91999,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "では、この記録は、どこまで信じられるのか。",
-    "startMs": 92549,
-    "endMs": 95568,
+    "startMs": 92379,
+    "endMs": 95397,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この記録には、使いの名前、贈り物の中身、そして年号まで、細かく書かれている。",
-    "startMs": 95948,
-    "endMs": 101975,
+    "startMs": 95777,
+    "endMs": 101804,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "西暦239年ごろ。卑弥呼は、難升米という使いを、魏の都へ送った。",
-    "startMs": 102355,
-    "endMs": 107571,
+    "startMs": 102184,
+    "endMs": 107400,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "卑弥呼からの贈り物は、男女10人の人々と、布だった。",
-    "startMs": 107951,
-    "endMs": 111876,
+    "startMs": 107780,
+    "endMs": 111705,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "魏の皇帝は、とても喜んだ。そして、卑弥呼に「親魏倭王」の称号と、金の印、そして、銅の鏡100枚を贈った。",
-    "startMs": 112256,
-    "endMs": 121557,
+    "startMs": 112085,
+    "endMs": 121387,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "皇帝からの贈り物は、それよりはるかに豪華だった。",
-    "startMs": 121937,
-    "endMs": 125073,
+    "startMs": 121767,
+    "endMs": 124903,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "色とりどりの絹の織物。金。長さ5尺の刀が2本。真珠と、赤い顔料。",
-    "startMs": 125453,
-    "endMs": 131587,
+    "startMs": 125283,
+    "endMs": 131416,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そして、皇帝は、こう書き添えている。これらを、おまえの国の人々に見せ、魏がおまえを大切にしていることを知らせなさい。",
-    "startMs": 131967,
-    "endMs": 140063,
+    "startMs": 131796,
+    "endMs": 139892,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "その後も、卑弥呼は、何度も使いを送っている。",
-    "startMs": 140443,
-    "endMs": 143579,
+    "startMs": 140272,
+    "endMs": 143408,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そして晩年、卑弥呼の国は、南にあった狗奴国という国と、争いになった。",
-    "startMs": 143959,
-    "endMs": 149057,
+    "startMs": 143788,
+    "endMs": 148887,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "卑弥呼は、魏に助けを求めた。魏は、張政という役人を送り、争いをおさめるよう伝えた。",
-    "startMs": 149437,
-    "endMs": 155677,
+    "startMs": 149267,
+    "endMs": 155507,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "卑弥呼が亡くなったのは、その争いのさなかのことだったと考えられている。",
-    "startMs": 156057,
-    "endMs": 160111,
+    "startMs": 155887,
+    "endMs": 159940,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "一方、日本の国内には、この時代の文字の記録は、ひとつも残っていない。",
-    "startMs": 160491,
-    "endMs": 165579,
+    "startMs": 160320,
+    "endMs": 165408,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "だからこそ、この2000字が、卑弥呼を知るための、ほとんど唯一の手がかりなのだ。",
-    "startMs": 165959,
-    "endMs": 170993,
+    "startMs": 165788,
+    "endMs": 170823,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 171373,
-    "endMs": 172675,
+    "startMs": 171203,
+    "endMs": 172504,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "正しい。",
-    "startMs": 173055,
-    "endMs": 173641,
+    "startMs": 172884,
+    "endMs": 173471,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "卑弥呼は、作り話ではない。中国の皇帝が称号を贈った、実在の女王だ。",
-    "startMs": 174021,
-    "endMs": 179579,
+    "startMs": 173851,
+    "endMs": 179408,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "でも、問題はここからだ。この記録には、邪馬台国への道のりも、書かれている。",
-    "startMs": 179959,
-    "endMs": 185569,
+    "startMs": 179788,
+    "endMs": 185399,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第2の手がかり 記録どおりに進めば、たどり着ける？（6176フレーム）
+// 0:00 第2の手がかり 記録どおりに進めば、たどり着ける？（6169フレーム）
 export const clue2RouteCaptions: Caption[] = [
   {
     "text": "出発点は、朝鮮半島にあった、帯方郡という魏の拠点だ。",
@@ -403,251 +403,251 @@ export const clue2RouteCaptions: Caption[] = [
   {
     "text": "末盧国は、今の佐賀県の唐津のあたり。伊都国は、福岡県の糸島のあたり。奴国は、福岡市のあたりと考えられている。",
     "startMs": 14963,
-    "endMs": 23784,
+    "endMs": 23795,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "問題は、その先だ。",
-    "startMs": 24164,
-    "endMs": 25689,
+    "startMs": 24175,
+    "endMs": 25700,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "記録によれば、帯方郡から女王の国までは、1万2000里あまり。",
-    "startMs": 26069,
-    "endMs": 30549,
+    "startMs": 26080,
+    "endMs": 30464,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "しかも、この記録の「里」という長さは、ふつうの物差しでは合わない。",
-    "startMs": 30929,
-    "endMs": 36167,
+    "startMs": 30844,
+    "endMs": 36049,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "朝鮮半島から対馬までが「1000里あまり」。実際の距離から逆算すると、1里は、わずか数十メートルほどになってしまう。",
-    "startMs": 36547,
-    "endMs": 44664,
+    "startMs": 36429,
+    "endMs": 44419,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "記録には、こう書かれている。南へ、船で20日行くと、投馬国。",
-    "startMs": 45044,
-    "endMs": 50121,
+    "startMs": 44799,
+    "endMs": 49876,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "さらに南へ、船で10日、陸を歩いて1か月行くと、邪馬台国に着く。",
-    "startMs": 50501,
-    "endMs": 55707,
+    "startMs": 50256,
+    "endMs": 55461,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "九州の北の岸から、南へ、船で1か月と、歩いて1か月。",
-    "startMs": 56087,
-    "endMs": 60780,
+    "startMs": 55841,
+    "endMs": 60535,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "書かれたとおりに進むと、九州を通りぬけて、はるか南の、太平洋の上に出てしまう。",
-    "startMs": 61160,
-    "endMs": 66973,
+    "startMs": 60915,
+    "endMs": 66728,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "つまり、記録のどこかが、まちがっているのだ。",
-    "startMs": 67353,
-    "endMs": 70415,
+    "startMs": 67108,
+    "endMs": 70169,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "それでも人々は、なんとか読み解こうとしてきた。",
-    "startMs": 70795,
-    "endMs": 73643,
+    "startMs": 70549,
+    "endMs": 73397,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この謎に、本格的に挑んだのは、江戸時代の学者たちだった。",
-    "startMs": 74023,
-    "endMs": 78055,
+    "startMs": 73777,
+    "endMs": 77809,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "新井白石は、はじめは奈良の大和、のちに九州の筑後にあったと考えた。",
-    "startMs": 78435,
-    "endMs": 83160,
+    "startMs": 78189,
+    "endMs": 82915,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "本居宣長は、九州の勢力が、女王を名乗って魏に使いを送ったのではないかと考えた。",
-    "startMs": 83540,
-    "endMs": 89364,
+    "startMs": 83295,
+    "endMs": 89119,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ここから、研究者たちの道は、大きくふたつに分かれていく。",
-    "startMs": 89744,
-    "endMs": 93680,
+    "startMs": 89499,
+    "endMs": 93435,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ひとつめは、「方角」がまちがっている、という考え方だ。",
-    "startMs": 94060,
-    "endMs": 98135,
+    "startMs": 93815,
+    "endMs": 97889,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "「南」を「東」と読みかえれば、瀬戸内海を船で進み、近畿地方の奈良にたどり着く。これが、畿内説だ。",
-    "startMs": 98515,
-    "endMs": 106867,
+    "startMs": 98269,
+    "endMs": 106621,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ふたつめは、「距離」の読み方がちがう、という考え方だ。",
-    "startMs": 107247,
-    "endMs": 111535,
+    "startMs": 107001,
+    "endMs": 111289,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "伊都国から先の国々は、一本道に並んでいるのではなく、伊都国を中心に、放射状に書かれているのではないか。",
-    "startMs": 111915,
-    "endMs": 119040,
+    "startMs": 111669,
+    "endMs": 118795,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そう読めば、邪馬台国は、九州の中に収まる。これが、九州説だ。",
-    "startMs": 119420,
-    "endMs": 124775,
+    "startMs": 119175,
+    "endMs": 124529,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "どちらの読み方にも、それなりの理由がある。そして、どちらも、記録の一部を読みかえないと成り立たない。",
-    "startMs": 125155,
-    "endMs": 131789,
+    "startMs": 124909,
+    "endMs": 131544,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "さらに、ややこしい問題がある。",
-    "startMs": 132169,
-    "endMs": 134249,
+    "startMs": 131924,
+    "endMs": 134004,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "今残っている「魏志倭人伝」の写本では、国の名前は「邪馬台国」ではなく、「邪馬壹国」と書かれているのだ。",
-    "startMs": 134629,
-    "endMs": 143120,
+    "startMs": 134384,
+    "endMs": 142875,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "「台」と「壹」。たった一字のちがいで、読み方まで変わってしまう。",
-    "startMs": 143500,
-    "endMs": 148609,
+    "startMs": 143255,
+    "endMs": 148364,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そして、「邪馬台」という名前そのものも、論争の種になってきた。",
-    "startMs": 148989,
-    "endMs": 153576,
+    "startMs": 148744,
+    "endMs": 153331,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "「やまたい」は、もともと「やまと」と読んだのではないか。そうなら、奈良の大和と同じ名前になる。",
-    "startMs": 153956,
-    "endMs": 160772,
+    "startMs": 153711,
+    "endMs": 160527,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ところが九州にも、福岡県の筑後地方に、「山門」と書いて「やまと」と読む土地がある。名前だけでは、決められないのだ。",
-    "startMs": 161152,
-    "endMs": 170379,
+    "startMs": 160907,
+    "endMs": 170133,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "このあいまいさが、候補地を、どんどん増やしてきた。",
-    "startMs": 170759,
-    "endMs": 173969,
+    "startMs": 170513,
+    "endMs": 173724,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "2026年2月の、関西テレビの取材によれば、「邪馬台国があった」と主張する地域は、少なくとも50か所。",
-    "startMs": 174349,
-    "endMs": 181997,
+    "startMs": 174104,
+    "endMs": 181752,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "九州、近畿だけではない。四国、出雲、そして海の向こうの国まで。",
-    "startMs": 182377,
-    "endMs": 187615,
+    "startMs": 182132,
+    "endMs": 187369,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 187995,
-    "endMs": 189296,
+    "startMs": 187749,
+    "endMs": 189051,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 189676,
-    "endMs": 190284,
+    "startMs": 189431,
+    "endMs": 190039,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "記録の道のりを、書かれたとおりにたどっても、邪馬台国にはたどり着けない。",
-    "startMs": 190664,
-    "endMs": 195240,
+    "startMs": 190419,
+    "endMs": 194995,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "では、道のりではなく、モノで場所を決めることはできないだろうか。",
-    "startMs": 195620,
-    "endMs": 199492,
+    "startMs": 195375,
+    "endMs": 199247,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "卑弥呼は、皇帝から、決定的なモノを受け取っている。金の印だ。",
-    "startMs": 199872,
-    "endMs": 204651,
+    "startMs": 199627,
+    "endMs": 204405,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第3の手がかり 卑弥呼の金印は見つかっている？（3738フレーム）
+// 0:00 第3の手がかり 卑弥呼の金印は見つかっている？（3734フレーム）
 export const clue3GoldSealCaptions: Caption[] = [
   {
     "text": "1784年。福岡県の志賀島。",
@@ -701,125 +701,125 @@ export const clue3GoldSealCaptions: Caption[] = [
   {
     "text": "でも、よく見てほしい。刻まれているのは、「魏」ではなく、「漢」だ。",
     "startMs": 30051,
-    "endMs": 35843,
+    "endMs": 35693,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "実は、この金印には、江戸時代の偽物ではないか、という疑いがかけられたこともある。",
-    "startMs": 36223,
-    "endMs": 41940,
+    "startMs": 36073,
+    "endMs": 41791,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ところが1956年、中国の雲南省で、「滇王之印」という金の印が見つかった。",
-    "startMs": 42320,
-    "endMs": 48795,
+    "startMs": 42171,
+    "endMs": 48645,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "漢の皇帝が、南の国の王に贈った印だ。その持ち手も、同じ、ヘビの形をしていた。",
-    "startMs": 49175,
-    "endMs": 55564,
+    "startMs": 49025,
+    "endMs": 55415,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "漢の皇帝は、周りの国の王たちに、ヘビの持ち手の金印を贈っていたのだ。",
-    "startMs": 55944,
-    "endMs": 60776,
+    "startMs": 55795,
+    "endMs": 60627,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "一辺の長さは、2.347センチ。これは、漢の時代の長さの単位、1寸と、ほぼぴったり同じだ。",
-    "startMs": 61156,
-    "endMs": 68729,
+    "startMs": 61007,
+    "endMs": 68580,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そしてこの印は、中国の歴史書『後漢書』に書かれた、西暦57年の出来事と、ぴたりと一致する。",
-    "startMs": 69109,
-    "endMs": 76747,
+    "startMs": 68960,
+    "endMs": 76597,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "後漢の光武帝が、倭の奴国の使いに、印を授けた、という記録だ。",
-    "startMs": 77127,
-    "endMs": 81991,
+    "startMs": 76977,
+    "endMs": 81841,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "卑弥呼が使いを送るより、180年以上も前のことだ。",
-    "startMs": 82371,
-    "endMs": 86051,
+    "startMs": 82221,
+    "endMs": 85901,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "さっき、道のりの記録に出てきた奴国。その場所が、今の福岡市のあたりだと考えられているのは、この金印のおかげでもある。",
-    "startMs": 86431,
-    "endMs": 94527,
+    "startMs": 86281,
+    "endMs": 94377,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "では、卑弥呼が受け取った、「親魏倭王」の金の印はどうか。",
-    "startMs": 94907,
-    "endMs": 99088,
+    "startMs": 94757,
+    "endMs": 98939,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "こちらは、今も、見つかっていない。",
-    "startMs": 99468,
-    "endMs": 101943,
+    "startMs": 99319,
+    "endMs": 101793,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "もし、どこかの土の中から出てきたら、その場所こそが、邪馬台国の大きな手がかりになるかもしれない。",
-    "startMs": 102323,
-    "endMs": 108563,
+    "startMs": 102173,
+    "endMs": 108413,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 108943,
-    "endMs": 110244,
+    "startMs": 108793,
+    "endMs": 110095,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 110624,
-    "endMs": 111232,
+    "startMs": 110475,
+    "endMs": 111083,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "志賀島の金印は、卑弥呼のものではない。卑弥呼の金印は、まだ、誰も見つけていない。",
-    "startMs": 111612,
-    "endMs": 117479,
+    "startMs": 111463,
+    "endMs": 117329,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "では、2026年に動いた、ふたつの候補地はどうか。まずは、九州だ。",
-    "startMs": 117859,
-    "endMs": 123395,
+    "startMs": 117709,
+    "endMs": 123245,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第4の手がかり 吉野ヶ里に、王たちの墓が眠る？（4366フレーム）
+// 0:00 第4の手がかり 吉野ヶ里に、王たちの墓が眠る？（4370フレーム）
 export const clue4YoshinogariCaptions: Caption[] = [
   {
     "text": "佐賀県の吉野ヶ里遺跡。",
@@ -838,168 +838,168 @@ export const clue4YoshinogariCaptions: Caption[] = [
   {
     "text": "物見やぐらの跡もあり、魏志倭人伝の「高い建物」や「柵」を思わせる、と話題になったのだ。",
     "startMs": 9185,
-    "endMs": 16716,
+    "endMs": 16577,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "日本最大級の、堀に囲まれたムラの跡だ。",
-    "startMs": 17096,
-    "endMs": 20040,
+    "startMs": 16957,
+    "endMs": 19901,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ムラの北には、大きな盛り土の墓があり、中からは、銅の剣を納めたかめ棺が見つかっている。この国の王たちの墓だと考えられている。",
-    "startMs": 20420,
-    "endMs": 28996,
+    "startMs": 20281,
+    "endMs": 28857,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "九州には、ほかにも強い証拠がある。伊都国があった福岡県糸島市の平原遺跡からは、直径46.5センチ、日本で最も大きな銅の鏡が見つかっている。",
-    "startMs": 29376,
-    "endMs": 39936,
+    "startMs": 29237,
+    "endMs": 39797,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "鏡を大切にした王が、九州の北にいたことは、まちがいない。",
-    "startMs": 40316,
-    "endMs": 44476,
+    "startMs": 40177,
+    "endMs": 44337,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "でも、この遺跡には、長いあいだ、調べられないままの場所があった。",
-    "startMs": 44856,
-    "endMs": 49304,
+    "startMs": 44717,
+    "endMs": 49165,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "古い神社が建っていたために、発掘できなかった一角。人々は、そこを「謎のエリア」と呼んだ。",
-    "startMs": 49684,
-    "endMs": 56457,
+    "startMs": 49545,
+    "endMs": 56319,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "2023年、ついに、その「謎のエリア」の発掘が始まった。",
-    "startMs": 56837,
-    "endMs": 61893,
+    "startMs": 56699,
+    "endMs": 61755,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そして4月、盗掘されていない、ふたが閉じられたままの、石の棺が見つかった。",
-    "startMs": 62273,
-    "endMs": 67511,
+    "startMs": 62135,
+    "endMs": 67457,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ふたには、ばつ印のような線が刻まれていた。6月、全国のニュースが、棺が開けられる瞬間を伝えた。",
-    "startMs": 67891,
-    "endMs": 74909,
+    "startMs": 67837,
+    "endMs": 74920,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "中には、赤い顔料が塗られていた。身分の高い人が葬られたしるしだ。",
-    "startMs": 75289,
-    "endMs": 79897,
+    "startMs": 75300,
+    "endMs": 79908,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "でも、鏡や剣のような副葬品は、見つからなかった。",
-    "startMs": 80277,
-    "endMs": 83979,
+    "startMs": 80288,
+    "endMs": 83989,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そして、2026年2月20日。佐賀県が、新しい調査の結果を発表した。",
-    "startMs": 84359,
-    "endMs": 89959,
+    "startMs": 84369,
+    "endMs": 89969,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "あの石の棺は、四角い溝で囲まれた、「方形周溝墓」と呼ばれる墓だったのだ。",
-    "startMs": 90339,
-    "endMs": 95715,
+    "startMs": 90349,
+    "endMs": 95800,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "さらに、すぐ近くから、同じような四角い溝が、もうひとつ見つかった。",
-    "startMs": 96095,
-    "endMs": 100628,
+    "startMs": 96180,
+    "endMs": 100713,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "弥生時代の終わりから、古墳時代の初めにかけて、有力者たちの墓が、いくつも並んでいた可能性が高まった。",
-    "startMs": 101008,
-    "endMs": 108037,
+    "startMs": 101093,
+    "endMs": 108123,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ちょうど、卑弥呼が生きた時代と重なる。",
-    "startMs": 108417,
-    "endMs": 110753,
+    "startMs": 108503,
+    "endMs": 110839,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "2月の特別公開には、3日間で1600人以上が訪れた。",
-    "startMs": 111133,
-    "endMs": 115229,
+    "startMs": 111219,
+    "endMs": 115315,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ただし、新しい溝の中からは、まだ、棺も、埋葬の跡も見つかっていない。",
-    "startMs": 115609,
-    "endMs": 121188,
+    "startMs": 115695,
+    "endMs": 121337,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "誰が葬られたのかも、卑弥呼とつながるのかも、わかっていない。",
-    "startMs": 121568,
-    "endMs": 125493,
+    "startMs": 121717,
+    "endMs": 125643,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 125873,
-    "endMs": 127175,
+    "startMs": 126023,
+    "endMs": 127324,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "半分正しい。",
-    "startMs": 127555,
-    "endMs": 128515,
+    "startMs": 127704,
+    "endMs": 128664,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "吉野ヶ里の「謎のエリア」は、有力者たちの墓だった可能性が高まった。でも、そこに王や、卑弥呼につながる人が眠っているという証拠は、まだない。",
-    "startMs": 128895,
-    "endMs": 139220,
+    "startMs": 129044,
+    "endMs": 139369,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "では、2026年に動いた、もうひとつの候補地。奈良はどうか。",
-    "startMs": 139600,
-    "endMs": 144315,
+    "startMs": 139749,
+    "endMs": 144464,
     "timestampMs": null,
     "confidence": null
   }
@@ -1461,7 +1461,7 @@ export const rootsStoryCaptions: Caption[] = [
   }
 ];
 
-// 0:00 まだ解けていない謎（1201フレーム）
+// 0:00 まだ解けていない謎（1204フレーム）
 export const unsolvedMysteryCaptions: Caption[] = [
   {
     "text": "最後に、今夜の調査で残った、まだ判決を出せない謎を、ひとつだけ。",
@@ -1480,35 +1480,35 @@ export const unsolvedMysteryCaptions: Caption[] = [
   {
     "text": "新しく見つかった四角い溝の中に、棺や、副葬品は眠っているのか。佐賀県は、それを確かめる計画だ。",
     "startMs": 10519,
-    "endMs": 17740,
+    "endMs": 17836,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そしてもうひとつ。卑弥呼が受け取った、「親魏倭王」の金の印。",
-    "startMs": 18120,
-    "endMs": 22429,
+    "startMs": 18216,
+    "endMs": 22525,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "志賀島の金印は、農民が、田んぼの水路を直していて、偶然見つけたものだった。",
-    "startMs": 22809,
-    "endMs": 28292,
+    "startMs": 22905,
+    "endMs": 28388,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "親魏倭王の金印も、今この瞬間、日本のどこかの土の中に、眠っているかもしれない。",
-    "startMs": 28672,
-    "endMs": 34677,
+    "startMs": 28768,
+    "endMs": 34773,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "新しい発見があったら、ボクはまた、ここで判決を出す。",
-    "startMs": 35057,
-    "endMs": 38812,
+    "startMs": 35153,
+    "endMs": 38908,
     "timestampMs": null,
     "confidence": null
   }

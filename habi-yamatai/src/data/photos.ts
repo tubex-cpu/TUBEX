@@ -7,6 +7,8 @@ type PhotoEntry = {
 	readonly position?: string;
 	// 縦長の資料などは contain（全体を見せ、余白はぼかした同じ画像で埋める）
 	readonly fit?: 'cover' | 'contain';
+	// 人物・像の顔が上半分にある写真は、テロップを下に置く
+	readonly labelBottom?: boolean;
 };
 
 const p = (file: string, credit: string, extra: Partial<PhotoEntry> = {}): PhotoEntry => ({file: `${file}.jpg`, credit, ...extra});
@@ -28,12 +30,12 @@ export const photos: Record<string, PhotoEntry> = {
 	shikanoshima: p('shikanoshima', '志賀島 Saigen Jiro / CC0 / Wikimedia Commons'),
 	'shikanoshima-aerial': p('shikanoshima-aerial', '志賀島 ブルーノ・プラス / CC BY 4.0 / Wikimedia Commons'),
 	'dian-seal': p('dian-seal', '滇王之印 Gary Todd / CC0 / Wikimedia Commons', {fit: 'contain'}),
-	guangwu: p('guangwu', '光武帝 / パブリックドメイン / Wikimedia Commons', {fit: 'contain'}),
-	arai: p('arai', '新井白石 / パブリックドメイン / Wikimedia Commons', {fit: 'contain'}),
-	motoori: p('motoori', '本居宣長 Hannah / パブリックドメイン / Wikimedia Commons', {fit: 'contain'}),
+	guangwu: p('guangwu', '光武帝 / パブリックドメイン / Wikimedia Commons', {fit: 'contain', labelBottom: true}),
+	arai: p('arai', '新井白石 / パブリックドメイン / Wikimedia Commons', {fit: 'contain', labelBottom: true}),
+	motoori: p('motoori', '本居宣長 Hannah / パブリックドメイン / Wikimedia Commons', {fit: 'contain', labelBottom: true}),
 	weizhi: p('weizhi', '『三国志』魏志 / パブリックドメイン / Wikimedia Commons', {fit: 'contain'}),
 	'nihonshoki-683': p('nihonshoki-683', '『日本書紀』 PHGCOM / CC BY-SA 3.0 / Wikimedia Commons', {fit: 'contain'}),
-	'jingu-kunisada': p('jingu-kunisada', '歌川国貞「神功皇后と武内宿禰」 Utagawa Kunisada / パブリックドメイン / Wikimedia Commons', {fit: 'contain'}),
+	'jingu-kunisada': p('jingu-kunisada', '歌川国貞「神功皇后と武内宿禰」 Utagawa Kunisada / パブリックドメイン / Wikimedia Commons', {fit: 'contain', labelBottom: true}),
 	'jingu-yen': p('jingu-yen', '神功皇后の1円札（1881年） Government of the Empire of Japan / パブリックドメイン / Wikimedia Commons', {fit: 'contain'}),
 	'toro1': p('toro1', '登呂遺跡（復元） / パブリックドメイン / Wikimedia Commons', {fit: 'contain'}),
 	'toro2': p('toro2', '登呂遺跡（復元） / パブリックドメイン / Wikimedia Commons'),
