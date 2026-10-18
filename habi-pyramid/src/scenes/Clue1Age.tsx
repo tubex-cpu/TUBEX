@@ -48,7 +48,7 @@ export const Clue1Age = () => {
 				<Photo id="casing-bm" label="ピラミッドをおおっていた、白い石" />
 			</Beat>
 			<Beat name="持ち去られた石" captions={c} from={14} to={14}>
-				<Photo id="sultan-hassan" label="はがされた石は、どこへ？" />
+				<Photo id="cairo-skyline" move="left" label="はがされた石は、どこへ？" />
 			</Beat>
 			<Beat name="守られた部分" captions={c} from={15} to={15}>
 				<Photo id="khafre-top" move="out" label="守られた面と、さらされた面" />

@@ -15,11 +15,8 @@ export const Clue3Quake = () => {
 			<Beat name="論文" captions={c} from={0} to={1}>
 				<Photo id="cheops-laskar1" label="2026年5月、イギリスの科学誌に" />
 			</Beat>
-			<Beat name="エジプトの地震" captions={c} from={2} to={2}>
-				<Photo id="cairo-skyline" move="left" label="エジプトでも、地震は起きる？" />
-			</Beat>
-			<Beat name="1992年" captions={c} from={3} to={4}>
-				<Photo id="cairo-1992-map" label="1992年、カイロの近くで" />
+			<Beat name="1992年" captions={c} from={2} to={4}>
+				<Photo id="cairo-1992-map" label="エジプトでも、地震は起きる？" />
 			</Beat>
 			<Beat name="立ち続けた" captions={c} from={5} to={5}>
 				<Photo id="cheops-laskar2" move="out" label="それでも、4500年立ち続けた" />
