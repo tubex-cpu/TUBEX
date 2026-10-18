@@ -1,42 +1,41 @@
 import {Beat} from '../components/Beat';
 import {Photo} from '../components/Photo';
+import {AgeCounter, Countdown2026, RetractionStamp, UndergroundTeaser} from '../components/PyramidArt1';
 import {Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
-import {DebateCounter, SailOffSouth, TwoCandidatesMap} from '../components/YamataiMaps';
 import {introCaptions as c} from '../data/captions';
 
 // 謎の先出し（素材はすべてこの場面だけで使う）
 export const Intro = () => (
 	<SceneFrame captions={c} voice="Intro">
-		<Beat name="箸墓古墳" captions={c} from={0} to={1}>
-			<Photo id="hashihaka-zenkei" label="卑弥呼の墓かもしれない古墳で、何が？" />
+		<Beat name="ギザ" captions={c} from={0} to={0}>
+			<Photo id="giza-air" label="4500年前の石の山に、何が起きた？" />
 		</Beat>
-		<Beat name="吉野ヶ里" captions={c} from={2} to={3}>
-			<Photo id="yoshinogari-kitanaikaku" move="left" label="「謎のエリア」の石の棺の正体は？" />
-		</Beat>
-		<Beat name="2日続けて" captions={c} from={4} to={4}>
-			<Visual label="二大候補地で、2日続けて何が？">
-				<TwoCandidatesMap />
+		<Beat name="2万年前" captions={c} from={1} to={1}>
+			<Visual label="造られたのは、もっと昔？">
+				<AgeCounter />
 			</Visual>
 		</Beat>
-		<Beat name="300年と50か所" captions={c} from={5} to={6}>
-			<Visual label="終わらない論争">
-				<DebateCounter />
+		<Beat name="地下2キロ" captions={c} from={2} to={2}>
+			<Visual label="地下2キロに、何が眠る？">
+				<UndergroundTeaser />
 			</Visual>
 		</Beat>
-		<Beat name="海の上" captions={c} from={7} to={7}>
-			<Visual label="記録どおりに進むと、海の上？">
-				<SailOffSouth />
+		<Beat name="撤回" captions={c} from={3} to={3}>
+			<Visual label="その論文に、何が起きた？">
+				<RetractionStamp />
 			</Visual>
 		</Beat>
-		<Beat name="金の印" captions={c} from={8} to={8}>
-			<Photo id="shikanoshima-aerial" move="out" label="女王の金の印は、どこへ消えた？" />
+		<Beat name="地震" captions={c} from={4} to={4}>
+			<Photo id="great-pyramid-se" move="left" label="4500年、なぜ崩れなかった？" />
 		</Beat>
-		<Beat name="1300年前の歴史家" captions={c} from={9} to={9}>
-			<Photo id="nihonshoki-1286" label="1300年前の歴史家も、頭を悩ませていた？" />
+		<Beat name="予告" captions={c} from={5} to={6}>
+			<Visual label="「歴史を書きかえる発見」は、いつ？">
+				<Countdown2026 />
+			</Visual>
 		</Beat>
-		<Beat name="今夜の問い" captions={c} from={10}>
-			<Photo id="hashihaka-distance" move="right" label="邪馬台国は、どこにあったのか" />
+		<Beat name="今夜の問い" captions={c} from={7}>
+			<Photo id="sphinx-pyramid" move="right" label="ピラミッドは、誰が、どうやって？" />
 		</Beat>
 	</SceneFrame>
 );

@@ -6,11 +6,11 @@ import {summaryCaptions as c} from '../data/captions';
 import {colors, gothicFamily, minchoFamily} from '../theme';
 
 const rows = [
-	{clue: '卑弥呼は実在したか', note: '皇帝が称号を贈った、実在の女王', mark: '正しい', color: colors.correct},
-	{clue: '魏志倭人伝の道のり', note: '書かれたとおりでは、たどり着けない', mark: 'まちがい', color: colors.wrong},
-	{clue: '志賀島の金印', note: '漢の時代の、奴国の王の印', mark: 'まちがい', color: colors.wrong},
-	{clue: '吉野ヶ里の謎のエリア', note: '有力者の墓。卑弥呼とのつながりは不明', mark: '半分正しい', color: '#d98a12'},
-	{clue: '箸墓古墳', note: '時代も大きさも合う。でも証拠はない', mark: '半分正しい', color: '#d98a12'},
+	{clue: '2万年以上前に造られた', note: '審査前の、ばらつきの大きい推定', mark: 'まちがい', color: colors.wrong},
+	{clue: '地下2キロの巨大構造物', note: '証拠はなく、論文の撤回まで', mark: 'まちがい', color: colors.wrong},
+	{clue: '地震に強いつくり', note: '本当に揺れに強かった', mark: '正しい', color: colors.correct},
+	{clue: '重りと滑車', note: '物理では成り立つ。証拠はまだない', mark: '半分正しい', color: '#d98a12'},
+	{clue: '奴隷が造った', note: '墓と手当てを受けた人々だった', mark: 'まちがい', color: colors.wrong},
 ];
 
 const VerdictBoard = () => {
@@ -39,13 +39,13 @@ export const Summary = () => (
 			<VerdictBoard />
 		</Beat>
 		<Beat name="決まらなかった" captions={c} from={6} to={6}>
-			<Photo id="hashihaka-1" move="out" label="場所は、決まらなかった。でも――" />
+			<Photo id="great-sphinx" move="out" label="2万年前の文明は、なかった。でも――" />
 		</Beat>
-		<Beat name="同じ謎に挑んだ人々" captions={c} from={7} to={7}>
-			<Photo id="hashihaka-houses" move="right" label="1300年前から、同じ謎に挑んできた人々" />
+		<Beat name="名前の残った人々" captions={c} from={7} to={7}>
+			<Photo id="bread-mould-2" label="パンとビールを供えられた人々" />
 		</Beat>
 		<Beat name="結論" captions={c} from={8}>
-			<Photo id="hashihaka-2" label="本当の話は、作り話に負けないくらい、面白い。" />
+			<Photo id="sphinx-panorama" label="本当の話は、作り話に負けないくらい、面白い。" />
 		</Beat>
 	</SceneFrame>
 );
