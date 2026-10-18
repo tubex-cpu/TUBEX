@@ -2,6 +2,7 @@ import {Composition, Folder} from 'remotion';
 import {HabiYamataiVideo} from './HabiYamataiVideo';
 import {sceneDurations as d, TOTAL_FRAMES} from './data/timeline';
 import {VerdictStamp} from './components/VerdictStamp';
+import {Thumb1Sea, Thumb2Seal, Thumb3Shoki} from './thumbnails/Thumbnails';
 import {Clue1Himiko} from './scenes/Clue1Himiko';
 import {Clue2Route} from './scenes/Clue2Route';
 import {Clue3GoldSeal} from './scenes/Clue3GoldSeal';
@@ -37,6 +38,11 @@ export const RemotionRoot: React.FC = () => {
 				<Composition id="UnsolvedMystery" component={UnsolvedMystery} durationInFrames={d.UnsolvedMystery} fps={30} width={1920} height={1080} />
 				<Composition id="Summary" component={Summary} durationInFrames={d.Summary} fps={30} width={1920} height={1080} />
 				<Composition id="Closing" component={Closing} durationInFrames={d.Closing} fps={30} width={1920} height={1080} />
+			</Folder>
+			<Folder name="Thumbnails">
+				<Composition id="Thumb1Sea" component={Thumb1Sea} durationInFrames={1} fps={30} width={1280} height={720} />
+				<Composition id="Thumb2Seal" component={Thumb2Seal} durationInFrames={1} fps={30} width={1280} height={720} />
+				<Composition id="Thumb3Shoki" component={Thumb3Shoki} durationInFrames={1} fps={30} width={1280} height={720} />
 			</Folder>
 			<Folder name="Elements">
 				<Composition
