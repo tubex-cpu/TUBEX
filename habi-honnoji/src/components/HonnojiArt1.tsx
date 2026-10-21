@@ -92,7 +92,7 @@ export const MarchTurn: React.FC = () => {
 			<text x={610} y={120} {...txt(32, '#cfe0f0')}>
 				桂川
 			</text>
-			<Pin at={[260, 330]} label="亀山城" color={colors.gold} />
+			<Pin at={[260, 330]} label="亀山城" color={colors.gold} dy={70} />
 			<Pin at={[1050, 300]} label="京都・本能寺" color={colors.correct} pulse show={fadeIn(frame, 60)} />
 			<RouteLine d="M260 330 L60 330" p={west} color="#ffffff88" width={10} />
 			<text x={70} y={290} {...txt(34, '#fff')} opacity={west}>

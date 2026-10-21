@@ -30,16 +30,24 @@ export const ReturnMarch: React.FC = () => {
 	const p = interpolate(frame, [10, 140], [0, 1], {...clamp, easing: Easing.inOut(Easing.quad)});
 	const day = Math.min(10, Math.floor(p * 10) + 1);
 	return (
-		<BaseMap>
-			<RouteLine d="M905 470 L990 480 L1068 482" p={p} color={colors.gold} width={10} />
-			<Pin at={places.takamatsu} label="備中高松" color={colors.gold} dy={60} />
-			<Pin at={places.himeji} label="姫路" color="#fff" show={fadeIn(frame, 50)} dy={60} size={36} />
-			<Pin at={places.yamazaki} label="山崎" color={colors.correct} show={fadeIn(frame, 130)} dx={40} dy={70} />
-			<rect x={980} y={640} width={360} height={110} rx={18} fill="rgba(5,9,18,0.85)" />
-			<text x={1160} y={715} textAnchor="middle" {...txt(56, colors.goldSoft)}>
+		<svg width={1300} height={620} viewBox="0 0 1300 620">
+			<rect width={1300} height={620} rx={30} fill="#2d3b26" />
+			<path d="M0 520 C 300 500 700 540 1300 480 L1300 620 L0 620 Z" fill="#12304d" />
+			<text x={650} y={590} textAnchor="middle" {...txt(32, '#9cc3e0')}>
+				瀬戸内海
+			</text>
+			<RouteLine d="M180 360 C 400 330 520 340 650 330 S 950 290 1120 260" p={p} color={colors.gold} width={12} />
+			<Pin at={[180, 360]} label="備中高松" color={colors.gold} dy={70} />
+			<Pin at={[650, 330]} label="姫路" color="#fff" show={fadeIn(frame, 60)} dy={70} />
+			<Pin at={[1120, 260]} label="山崎" color={colors.correct} show={fadeIn(frame, 130)} dy={-36} />
+			<rect x={940} y={40} width={320} height={100} rx={18} fill="rgba(5,9,18,0.85)" />
+			<text x={1100} y={110} textAnchor="middle" {...txt(56, colors.goldSoft)}>
 				{day}日目
 			</text>
-		</BaseMap>
+			<text x={60} y={90} {...txt(40, '#fff')}>
+				およそ200キロ
+			</text>
+		</svg>
 	);
 };
 
@@ -418,8 +426,8 @@ export const LegendMap: React.FC = () => {
 	const frame = useCurrentFrame();
 	return (
 		<BaseMap>
-			<Pin at={places.kyoto} label="京都・阿弥陀寺" color={colors.gold} show={fadeIn(frame, 0)} dx={-60} dy={-40} />
-			<Pin at={[1330, 420]} label="静岡・西山本門寺" color={colors.correct} show={fadeIn(frame, 25)} dx={-120} dy={-40} />
+			<Pin at={places.kyoto} label="京都・阿弥陀寺" color={colors.gold} show={fadeIn(frame, 0)} dx={-60} dy={70} />
+			<Pin at={[1330, 400]} label="静岡・西山本門寺" color={colors.correct} show={fadeIn(frame, 25)} dx={-170} dy={-50} />
 		</BaseMap>
 	);
 };
