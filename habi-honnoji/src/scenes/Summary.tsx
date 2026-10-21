@@ -6,11 +6,11 @@ import {summaryCaptions as c} from '../data/captions';
 import {colors, gothicFamily, minchoFamily} from '../theme';
 
 const rows = [
-	{clue: '2万年以上前に造られた', note: '審査前の、ばらつきの大きい推定', mark: 'まちがい', color: colors.wrong},
-	{clue: '地下2キロの巨大構造物', note: '証拠はなく、論文の撤回まで', mark: 'まちがい', color: colors.wrong},
-	{clue: '地震に強いつくり', note: '本当に揺れに強かった', mark: '正しい', color: colors.correct},
-	{clue: '重りと滑車', note: '物理では成り立つ。証拠はまだない', mark: '半分正しい', color: '#d98a12'},
-	{clue: '奴隷が造った', note: '墓と手当てを受けた人々だった', mark: 'まちがい', color: colors.wrong},
+	{clue: '「敵は本能寺にあり」', note: '同じ時代の記録になく、兵士も知らなかった', mark: 'まちがい', color: colors.wrong},
+	{clue: '信長への恨み', note: '多くは作り話。でも衝突の記録はある', mark: '半分正しい', color: '#d98a12'},
+	{clue: '黒幕は秀吉', note: '証拠はなく、毛利との密約もなかった可能性', mark: 'まちがい', color: colors.wrong},
+	{clue: '四国の問題', note: '追い詰められていたことは、手紙が証明', mark: '正しい', color: colors.correct},
+	{clue: '光秀は天海になった', note: '証拠はない', mark: 'まちがい', color: colors.wrong},
 ];
 
 const VerdictBoard = () => {
@@ -39,13 +39,13 @@ export const Summary = () => (
 			<VerdictBoard />
 		</Beat>
 		<Beat name="決まらなかった" captions={c} from={6} to={6}>
-			<Photo id="great-sphinx" move="out" label="2万年前の文明は、なかった。でも――" />
+			<Photo id="fukuchiyama-2" move="out" label="本当の理由は、まだわからない。でも――" />
 		</Beat>
-		<Beat name="名前の残った人々" captions={c} from={7} to={7}>
-			<Photo id="bread-mould-2" label="パンとビールを供えられた人々" />
+		<Beat name="感謝と幻の城" captions={c} from={7} to={7}>
+			<Photo id="biwa-omi3" label="感謝を書き残した男と、幻の城" />
 		</Beat>
 		<Beat name="結論" captions={c} from={8}>
-			<Photo id="sphinx-panorama" label="本当の話は、作り話に負けないくらい、面白い。" />
+			<Photo id="hiei-sakura" label="本当の話は、作り話に負けないくらい、面白い。" />
 		</Beat>
 	</SceneFrame>
 );

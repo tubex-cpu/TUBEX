@@ -8,7 +8,7 @@ import {SceneFrame} from '../components/SceneFrame';
 import {judgeEntranceCaptions as c} from '../data/captions';
 import {colors, gothicFamily, minchoFamily} from '../theme';
 
-const clues = ['2万年以上前？', '地下2キロの構造物', '地震に強い？', '重りと滑車？', '奴隷が造った？'];
+const clues = ['敵は本能寺にあり？', '信長への恨み？', '黒幕は秀吉？', '四国の問題？', '光秀は天海？'];
 
 const ClueRow = () => {
 	const frame = useCurrentFrame();
@@ -122,10 +122,10 @@ export const JudgeEntrance = () => (
 			<CourtImage shot="court-think" />
 			<NamePlate />
 		</Beat>
-		<Beat name="今夜の問い" captions={c} from={2} to={2}>
-			<Photo id="lepsius" label="ピラミッドは、本当に人間が造ったのか？" />
+		<Beat name="今夜の問い" captions={c} from={2} to={3}>
+			<Photo id="honnoji-daihoden" label="光秀は、なぜ信長を討ったのか？" />
 		</Beat>
-		<Beat name="5つの手がかり" captions={c} from={3}>
+		<Beat name="5つの手がかり" captions={c} from={4}>
 			<ClueRow />
 		</Beat>
 	</SceneFrame>
