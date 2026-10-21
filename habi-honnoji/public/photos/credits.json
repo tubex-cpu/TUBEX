@@ -471,5 +471,60 @@
    2400,
    1594
   ]
+ },
+ "honnoji-daihoden": {
+  "file": "honnoji-daihoden.jpg",
+  "title": "Daihoden Hall of Honnoji Temple.JPG",
+  "artist": "そらみみ",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Daihoden_Hall_of_Honnoji_Temple.JPG",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "biwa-ukimido": {
+  "file": "biwa-ukimido.jpg",
+  "title": "Otsu Mangetsu-ji Ukimido View to Lake Biwa 2.jpg",
+  "artist": "Zairon",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Otsu_Mangetsu-ji_Ukimido_View_to_Lake_Biwa_2.jpg",
+  "size": [
+   2400,
+   1778
+  ]
+ },
+ "fukuchiyama-2": {
+  "file": "fukuchiyama-2.jpg",
+  "title": "Fukuchiyama Castle Keep Tower 20190503.jpg",
+  "artist": "先従隗始",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Fukuchiyama_Castle_Keep_Tower_20190503.jpg",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "biwa-omi3": {
+  "file": "biwa-omi3.jpg",
+  "title": "Otsu Omi-jingu View to Lake Biwa 3.jpg",
+  "artist": "Zairon",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Otsu_Omi-jingu_View_to_Lake_Biwa_3.jpg",
+  "size": [
+   2400,
+   1711
+  ]
+ },
+ "hiei-sakura": {
+  "file": "hiei-sakura.jpg",
+  "title": "Mt Hiei with Cherry Blossom.JPG",
+  "artist": "Hahifuheho",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mt_Hiei_with_Cherry_Blossom.JPG",
+  "size": [
+   2400,
+   1800
+  ]
  }
 }
