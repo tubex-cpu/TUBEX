@@ -18,7 +18,7 @@ export const Clue5Tenkai = () => {
 				</Visual>
 			</Beat>
 			<Beat name="坂本城をめざして" captions={c} from={3} to={4}>
-				<Photo id="sakamoto-05" move="left" label="坂本城をめざして" />
+				<Photo id="sakamoto-01" move="left" label="坂本城をめざして" />
 			</Beat>
 			<Beat name="光秀は、生き延びた？" captions={c} from={5} to={7}>
 				<Photo id="tenkai" label="光秀は、生き延びた？" />

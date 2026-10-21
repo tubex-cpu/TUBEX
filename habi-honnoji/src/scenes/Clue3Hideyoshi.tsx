@@ -13,7 +13,7 @@ export const Clue3Hideyoshi = () => {
 	return (
 		<SceneFrame captions={c} voice="Clue3Hideyoshi" label="第3の手がかり" title="黒幕は秀吉だった？">
 			<Beat name="いちばん得をしたのは、誰" captions={c} from={0} to={2}>
-				<Photo id="hideyoshi-2" label="いちばん得をしたのは、誰？" />
+				<Photo id="hideyoshi" label="いちばん得をしたのは、誰？" />
 			</Beat>
 			<Beat name="備中高松城" captions={c} from={3} to={3}>
 				<Photo id="takamatsu-ruins" move="out" label="備中高松城" />
@@ -40,7 +40,7 @@ export const Clue3Hideyoshi = () => {
 				</Visual>
 			</Beat>
 			<Beat name="2026年6月、公開され" captions={c} from={16} to={17}>
-				<Photo id="biwa-omi" label="2026年6月、公開された手紙" />
+				<Photo id="iwakuni" move="left" label="2026年6月、岩国で公開された手紙" />
 			</Beat>
 			<Beat name="毛利を支えた武将、吉川元" captions={c} from={18} to={18}>
 				<Photo id="kikkawa" label="毛利を支えた武将、吉川元春" />

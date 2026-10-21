@@ -59,7 +59,7 @@ export const Clue2Grudge = () => {
 				<GavelVerdict verdict="half" strikeAt={captionFrame(c, 30, 31, fps)} />
 			</Beat>
 			<Beat name="本当の黒幕は、別にいた？" captions={c} from={33}>
-				<Photo id="hideyoshi" label="本当の黒幕は、別にいた？" />
+				<Photo id="atago-torii" move="out" label="本当の黒幕は、別にいた？" />
 			</Beat>
 		</SceneFrame>
 	);

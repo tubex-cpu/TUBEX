@@ -25,13 +25,13 @@ export const RootsStory = () => (
 			</Visual>
 		</Beat>
 		<Beat name="本当に驚いたのは、ここか" captions={c} from={8} to={9}>
-			<Photo id="biwa-sa" move="out" label="本当に驚いたのは、ここから" />
+			<Photo id="sakamoto-04" move="out" label="本当に驚いたのは、ここから" />
 		</Beat>
 		<Beat name="琵琶湖のほとりの、坂本城" captions={c} from={10} to={11}>
-			<Photo id="sakamoto-01" label="琵琶湖のほとりの、坂本城" />
+			<Photo id="sakamoto-09" label="琵琶湖のほとりの、坂本城" />
 		</Beat>
 		<Beat name="安土城に次ぐ、華麗な城" captions={c} from={12} to={12}>
-			<Photo id="sakamoto-04" move="left" label="安土城に次ぐ、華麗な城" />
+			<Photo id="biwa-sa" move="left" label="安土城に次ぐ、華麗な城" />
 		</Beat>
 		<Beat name="坂本城の最期" captions={c} from={13} to={14}>
 			<Photo id="hidemitsu-ukiyoe" label="坂本城の最期" />
@@ -40,7 +40,7 @@ export const RootsStory = () => (
 			<Photo id="hidemitsu-lake" label="天下の宝を、燃やすわけには" />
 		</Beat>
 		<Beat name="人々は、幻の城と呼んだ" captions={c} from={18} to={19}>
-			<Photo id="honnoji-site" move="right" label="人々は、幻の城と呼んだ" />
+			<Photo id="sakamoto-05" move="right" label="人々は、幻の城と呼んだ" />
 		</Beat>
 		<Beat name="DroughtWall" captions={c} from={20} to={22}>
 			<Visual label="手がかりは、湖の中に">

@@ -22,10 +22,10 @@ export const Intro = () => (
 			</Visual>
 		</Beat>
 		<Beat name="2026年、光秀の「幻の" captions={c} from={5} to={6}>
-			<Photo id="sakamoto-09" move="out" label="2026年、光秀の「幻の城」で何が？" />
+			<Photo id="biwa-ukimido" move="out" label="2026年、光秀の「幻の城」で何が？" />
 		</Beat>
 		<Beat name="当日に書かれた手紙が、黒" captions={c} from={7} to={7}>
-			<Photo id="iwakuni" move="left" label="当日に書かれた手紙が、黒幕説を揺るがす？" />
+			<Photo id="hideyoshi-2" label="当日に書かれた手紙が、黒幕説を揺るがす？" />
 		</Beat>
 		<Beat name="光秀は、なぜ信長を討った" captions={c} from={8}>
 			<Photo id="honnoji-yoshitoshi" label="光秀は、なぜ信長を討ったのか" />

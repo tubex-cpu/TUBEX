@@ -37,7 +37,7 @@ export const Clue4Shikoku = () => {
 				<GavelVerdict verdict="correct" strikeAt={captionFrame(c, 18, 19, fps)} />
 			</Beat>
 			<Beat name="光秀の物語には、続きがあ" captions={c} from={21}>
-				<Photo id="atago-torii" move="out" label="光秀の物語には、続きがある" />
+				<Photo id="biwa-omi" move="out" label="光秀の物語には、続きがある" />
 			</Beat>
 		</SceneFrame>
 	);

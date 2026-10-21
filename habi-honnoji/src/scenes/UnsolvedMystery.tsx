@@ -25,7 +25,7 @@ export const UnsolvedMystery = () => (
 			<Photo id="nishiyama-kubizuka" label="静岡に伝わる「首塚」" />
 		</Beat>
 		<Beat name="新しい発見があったら、も" captions={c} from={8}>
-			<Photo id="biwa-ukimido" label="新しい発見があったら、もう一度判決を" />
+			<Photo id="honnoji-site" label="新しい発見があったら、もう一度判決を" />
 		</Beat>
 	</SceneFrame>
 );
