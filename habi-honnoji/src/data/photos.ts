@@ -1,0 +1,64 @@
+// 動画で使う実写真の一覧（public/photos/credits.json をもとに作る）
+type PhotoEntry = {
+	readonly file: string;
+	readonly credit: string;
+	readonly position?: string;
+	readonly fit?: 'cover' | 'contain';
+	// 人物・像の顔が上半分にある写真は、テロップを下に置く
+	readonly labelBottom?: boolean;
+};
+
+export const photos: Record<string, PhotoEntry> = {
+	'giza-air': {file: 'giza-air.jpg', credit: '上空から見たギザ Raimond Spekking / CC BY-SA 4.0 / Wikimedia Commons'},
+	'great-pyramid-se': {file: 'great-pyramid-se.jpg', credit: '大ピラミッド MusikAnimal / CC BY-SA 4.0 / Wikimedia Commons'},
+	'sphinx-pyramid': {file: 'sphinx-pyramid.jpg', credit: 'スフィンクスと大ピラミッド kallerna / CC BY-SA 4.0 / Wikimedia Commons', labelBottom: true},
+	lepsius: {file: 'lepsius.jpg', credit: 'レプシウス探検隊（1842年）J.J.フライ画 Johann Jakob Frey / パブリックドメイン / Wikimedia Commons', fit: 'contain', labelBottom: true},
+	'great-pyramid': {file: 'great-pyramid.jpg', credit: '大ピラミッド kallerna / CC BY-SA 3.0 / Wikimedia Commons'},
+	'usaaf-1943': {file: 'usaaf-1943.jpg', credit: 'ギザ上空を飛ぶC-47（1943年） U.S. Signal Corps / パブリックドメイン / Wikimedia Commons'},
+	'khufu-statuette': {file: 'khufu-statuette.jpg', credit: 'クフ王の象牙像（エジプト博物館） Olaf Tausch / CC BY 3.0 / Wikimedia Commons', fit: 'contain', labelBottom: true},
+	bologna: {file: 'bologna.jpg', credit: 'ボローニャ大学 アルキジンナージオ宮 Anita.malina / CC BY-SA 4.0 / Wikimedia Commons'},
+	'casing-bm': {file: 'casing-bm.jpg', credit: '大ピラミッドの化粧石（大英博物館） CaptMondo / CC BY 2.5 / Wikimedia Commons', fit: 'contain'},
+	'sultan-hassan': {file: 'sultan-hassan.jpg', credit: 'スルタン・ハサン・モスクのランプ Mohammed Moussa / CC BY-SA 3.0 / Wikimedia Commons'},
+	'khafre-top': {file: 'khafre-top.jpg', credit: 'カフラー王のピラミッド Jerome Bon / CC BY 2.0 / Wikimedia Commons'},
+	'cheops-side': {file: 'cheops-side.jpg', credit: '大ピラミッド kallerna / CC BY-SA 3.0 / Wikimedia Commons'},
+	'khafre-sphinx': {file: 'khafre-sphinx.jpg', credit: 'カフラー王のピラミッドとスフィンクス AmiraAdel93 / CC BY-SA 4.0 / Wikimedia Commons'},
+	'khafre-jb': {file: 'khafre-jb.jpg', credit: 'カフラー王のピラミッド Jerome Bon / CC BY 2.0 / Wikimedia Commons'},
+	herodotus: {file: 'herodotus.jpg', credit: 'ヘロドトスの胸像 Livioandronico2013 / CC BY-SA 4.0 / Wikimedia Commons', fit: 'contain', labelBottom: true},
+	'khafre-jb2': {file: 'khafre-jb2.jpg', credit: 'カフラー王のピラミッド Jerome Bon / CC BY 2.0 / Wikimedia Commons', fit: 'contain'},
+	'giza-lumo': {file: 'giza-lumo.jpg', credit: '上空から見たギザとカイロ lumoplank / CC0 / Wikimedia Commons'},
+	'cheops-laskar1': {file: 'cheops-laskar1.jpg', credit: '大ピラミッド Jorge Láscar / CC BY 2.0 / Wikimedia Commons'},
+	'cairo-skyline': {file: 'cairo-skyline.jpg', credit: 'カイロの町並み Vyacheslav Argenberg / CC BY 4.0 / Wikimedia Commons'},
+	'cairo-1992-map': {file: 'cairo-1992-map.jpg', credit: '1992年カイロ地震の震度分布図 USGS / パブリックドメイン / Wikimedia Commons', fit: 'contain'},
+	'cheops-laskar2': {file: 'cheops-laskar2.jpg', credit: '大ピラミッド Jorge Láscar / CC BY 2.0 / Wikimedia Commons'},
+	'kings-chamber': {file: 'kings-chamber.jpg', credit: '王の間 Andrew Currie / CC BY 2.0 / Wikimedia Commons'},
+	'cheops-meskens': {file: 'cheops-meskens.jpg', credit: '大ピラミッド Ad Meskens / CC BY-SA 3.0 / Wikimedia Commons'},
+	'giza-robster': {file: 'giza-robster.jpg', credit: '上空から見たギザの三大ピラミッド Robster1983 / CC0 / Wikimedia Commons'},
+	'tura-lepsius': {file: 'tura-lepsius.jpg', credit: 'トゥラの石切り場（レプシウス） Karl Richard Lepsius / パブリックドメイン / Wikimedia Commons'},
+	'aswan-quarry': {file: 'aswan-quarry.jpg', credit: 'アスワンの花崗岩の石切り場 Glenn Ashton / CC BY-SA 3.0 / Wikimedia Commons'},
+	hatnub: {file: 'hatnub.jpg', credit: 'ハトヌブの石切り場 Hannah Pethen / CC BY-SA 2.0 / Wikimedia Commons'},
+	djehutihotep: {file: 'djehutihotep.jpg', credit: 'ジェフティヘテプの墓の壁画（巨像の運搬） sir john gardner wilkinson / パブリックドメイン / Wikimedia Commons', fit: 'contain'},
+	'cheops-laskar3': {file: 'cheops-laskar3.jpg', credit: '大ピラミッドの石積み Jorge Láscar / CC BY 2.0 / Wikimedia Commons'},
+	'grand-gallery': {file: 'grand-gallery.jpg', credit: '大回廊 Keith Adler / CC BY-SA 4.0 / Wikimedia Commons'},
+	'pyramid-interior': {file: 'pyramid-interior.jpg', credit: '大ピラミッド内部の通路 Ovedc / CC BY-SA 4.0 / Wikimedia Commons'},
+	'haghe-geezeh': {file: 'haghe-geezeh.jpg', credit: 'ルイス・ヘイグ「ナイルから見たギザのピラミッド」 Louis Haghe / CC0 / Wikimedia Commons', fit: 'contain'},
+	'giza-mastabas-1903': {file: 'giza-mastabas-1903.jpg', credit: 'ギザの発掘（1903年、トリノ・エジプト博物館） / CC0 / Wikimedia Commons'},
+	'herodotus-2': {file: 'herodotus-2.jpg', credit: 'ヘロドトスの胸像 Andrey Korzun / CC BY-SA 4.0 / Wikimedia Commons', fit: 'contain', labelBottom: true},
+	'sphinx-khafre-plateau': {file: 'sphinx-khafre-plateau.jpg', credit: 'ギザ台地のスフィンクスとカフラー王のピラミッド Daniel Mayer / CC BY-SA 4.0 / Wikimedia Commons'},
+	'bread-mould': {file: 'bread-mould.jpg', credit: '古代エジプトのパン型（トリノ・エジプト博物館） / CC0 / Wikimedia Commons'},
+	menkaure: {file: 'menkaure.jpg', credit: 'メンカウラー王のピラミッド kallerna / CC BY-SA 3.0 / Wikimedia Commons'},
+	spelterini: {file: 'spelterini.jpg', credit: '気球から見たギザ（1904年）E.スペルテリーニ Eduard Spelterini / パブリックドメイン / Wikimedia Commons'},
+	'cheops-laskar4': {file: 'cheops-laskar4.jpg', credit: '大ピラミッド Jorge Láscar / CC BY 2.0 / Wikimedia Commons'},
+	ankhhaf: {file: 'ankhhaf.jpg', credit: 'アンクハフの胸像（ボストン美術館） Implacable18 / CC0 / Wikimedia Commons', fit: 'contain', labelBottom: true},
+	'roberts-sphinx': {file: 'roberts-sphinx.jpg', credit: 'デヴィッド・ロバーツ「スフィンクスとギザのピラミッド」（1839） David Roberts / パブリックドメイン / Wikimedia Commons'},
+	'boat-pit': {file: 'boat-pit.jpg', credit: 'ギザのピラミッドとクフ王の船の穴 kallerna / CC BY-SA 4.0 / Wikimedia Commons'},
+	'khufu-ship-1': {file: 'khufu-ship-1.jpg', credit: 'クフ王の船 Ovedc / CC BY-SA 4.0 / Wikimedia Commons'},
+	gem: {file: 'gem.jpg', credit: '大エジプト博物館 Amr F.Nagy / パブリックドメイン / Wikimedia Commons'},
+	'khufu-ship-2': {file: 'khufu-ship-2.jpg', credit: 'クフ王の船 Ovedc / CC BY-SA 4.0 / Wikimedia Commons'},
+	'haghe-nile': {file: 'haghe-nile.jpg', credit: 'ルイス・ヘイグ「ナイルからピラミッドを望む」 Louis Haghe / CC0 / Wikimedia Commons', fit: 'contain'},
+	'khufu-pyramid-gary': {file: 'khufu-pyramid-gary.jpg', credit: '大ピラミッドの内部 Gary Todd / CC0 / Wikimedia Commons', fit: 'contain'},
+	'menkaure-musik': {file: 'menkaure-musik.jpg', credit: 'メンカウラー王のピラミッド MusikAnimal / CC BY-SA 4.0 / Wikimedia Commons'},
+	'flood-time-1890s': {file: 'flood-time-1890s.jpg', credit: '増水期の村とピラミッド（1890年代） Frank and Frances Carpenter Collection / パブリックドメイン / Wikimedia Commons'},
+	'great-sphinx': {file: 'great-sphinx.jpg', credit: 'ギザの大スフィンクス Petar Milošević / CC BY-SA 4.0 / Wikimedia Commons', labelBottom: true},
+	'bread-mould-2': {file: 'bread-mould-2.jpg', credit: '古代エジプトのパン型（模型） / CC0 / Wikimedia Commons'},
+	'sphinx-panorama': {file: 'sphinx-panorama.jpg', credit: 'スフィンクスと大ピラミッド kallerna / CC BY-SA 3.0 / Wikimedia Commons', fit: 'contain'},
+};

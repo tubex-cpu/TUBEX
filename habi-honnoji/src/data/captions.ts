@@ -1,0 +1,1559 @@
+// scripts/build-voice.py で自動生成。手で編集しないこと。
+import type {Caption} from '@remotion/captions';
+
+// 0:00 謎の先出し（1682フレーム）
+export const introCaptions: Caption[] = [
+  {
+    "text": "1582年6月2日の夜明け前。京都の本能寺を、1万を超える軍勢が取り囲んだ。",
+    "startMs": 500,
+    "endMs": 7049,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "率いていたのは、明智光秀。主君の織田信長を討つためだった。",
+    "startMs": 7529,
+    "endMs": 11828,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ところが、その軍勢にいた、ひとりの兵士が、のちにこう書き残している。",
+    "startMs": 12308,
+    "endMs": 17076,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "自分たちは、徳川家康を討ちに行くのだと思っていた。",
+    "startMs": 17556,
+    "endMs": 21108,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "主君を討つ大事件。それなのに、兵士たちは、相手が誰かも知らされていなかったのだ。",
+    "startMs": 21588,
+    "endMs": 27295,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして2026年。この事件が、また動いた。",
+    "startMs": 27775,
+    "endMs": 31476,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "5月。光秀が琵琶湖のほとりに築いた「幻の城」から、本丸の南側の石垣とみられる石が見つかった。",
+    "startMs": 31956,
+    "endMs": 39529,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "6月。本能寺の変の当日に、ある武将が書いた手紙が見つかり、有名な「黒幕説」に、大きな疑問が突きつけられた。",
+    "startMs": 40009,
+    "endMs": 49055,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀は、なぜ信長を討ったのか。今夜、証拠だけで、判決を下す。",
+    "startMs": 49535,
+    "endMs": 54857,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 ハビ判事登場（719フレーム）
+export const judgeEntranceCaptions: Caption[] = [
+  {
+    "text": "こんばんは。閉園後の法廷にようこそ。ハビ判事です。",
+    "startMs": 500,
+    "endMs": 4319,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "今夜は、日本の歴史で、いちばん有名な事件のひとつに挑む。",
+    "startMs": 4799,
+    "endMs": 8916,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "今夜の問いは、これだ。",
+    "startMs": 9396,
+    "endMs": 10996,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "明智光秀は、なぜ、織田信長を討ったのか。",
+    "startMs": 11476,
+    "endMs": 14825,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "最新の研究をもとに手がかりを、ひとつずつたどっていく。",
+    "startMs": 15305,
+    "endMs": 18793,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "最初の手がかりは、誰もが知っている、あの言葉だ。",
+    "startMs": 19273,
+    "endMs": 22751,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第1の手がかり 「敵は本能寺にあり」と叫んだ？（5077フレーム）
+export const clue1CryCaptions: Caption[] = [
+  {
+    "text": "1582年、天正10年。織田信長は、天下統一まで、あと一歩のところにいた。",
+    "startMs": 500,
+    "endMs": 7423,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "西では、羽柴秀吉が、中国地方の毛利氏と戦っていた。",
+    "startMs": 7903,
+    "endMs": 12148,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "信長は、自ら援軍に向かうため、わずかな供だけを連れて、京都の本能寺に泊まっていた。",
+    "startMs": 12628,
+    "endMs": 18815,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "一方、光秀は、中国地方へ向かうよう命じられ、丹波の亀山城で、出陣の準備を整えていた。",
+    "startMs": 19295,
+    "endMs": 26708,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "6月1日の夜。光秀の軍勢は、亀山城を出発した。",
+    "startMs": 27188,
+    "endMs": 31636,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "西の中国地方へ向かうなら、道は西へ続く。ところが軍勢は、途中で向きを変え、東の京都へ向かった。",
+    "startMs": 32116,
+    "endMs": 39849,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、川を渡ったところで、光秀は全軍に向かって叫んだ。「敵は本能寺にあり」。",
+    "startMs": 40329,
+    "endMs": 46228,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ドラマや小説で、何度も描かれてきた名場面だ。",
+    "startMs": 46708,
+    "endMs": 49897,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "でも、この言葉は、本当に叫ばれたのだろうか。",
+    "startMs": 50377,
+    "endMs": 53791,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "実は、この言葉が出てくるのは、事件から100年以上もたってから書かれた、軍記物語だ。",
+    "startMs": 54271,
+    "endMs": 60276,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "事件と同じ時代の記録には、この言葉は、見つかっていない。",
+    "startMs": 60756,
+    "endMs": 64703,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "それどころか、その場にいた兵士自身の証言が残っている。",
+    "startMs": 65183,
+    "endMs": 68745,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀の軍勢にいた、本城惣右衛門という兵士だ。",
+    "startMs": 69225,
+    "endMs": 72607,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "彼は年老いてから、若いころの戦いの思い出を書き残した。",
+    "startMs": 73087,
+    "endMs": 76873,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その中に、本能寺の変の夜のことも書かれている。",
+    "startMs": 77353,
+    "endMs": 80500,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "自分たちは、上洛していた徳川家康を討つのだと思っていた。",
+    "startMs": 80980,
+    "endMs": 84959,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "しかも、本能寺に攻め込んだときも、自分たちが誰と戦っているのか、はっきりとはわかっていなかったようだ。",
+    "startMs": 85439,
+    "endMs": 92137,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "本能寺の門は開いていて、中に入っても、人の姿はほとんど見えなかった、とも書いている。",
+    "startMs": 92617,
+    "endMs": 98740,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "兵士たちに、本当の目的は知らされていなかった。秘密は、最後まで守られていたのだ。",
+    "startMs": 99220,
+    "endMs": 104831,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、本能寺の中では、何が起きていたのか。",
+    "startMs": 105311,
+    "endMs": 108500,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "信長に仕えた太田牛一という家臣が、のちに『信長公記』という記録をまとめている。",
+    "startMs": 108980,
+    "endMs": 115071,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "寺から逃げのびた女性たちの話をもとに、その朝のことが書かれている。",
+    "startMs": 115551,
+    "endMs": 119775,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "騒ぎに気づいた信長は、はじめ、家来どうしのけんかだと思った。",
+    "startMs": 120255,
+    "endMs": 124585,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ところが、物見に出た森乱丸が、明智の軍勢だと告げる。",
+    "startMs": 125065,
+    "endMs": 129033,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "信長は、ひとこと、こう言ったという。「是非に及ばず」。",
+    "startMs": 129513,
+    "endMs": 133460,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "信長は弓を取り、弦が切れると槍で戦った。そして、ひじに傷を負うと、奥へ下がり、女性たちを逃がした。",
+    "startMs": 133940,
+    "endMs": 141791,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "やがて、寺に火が放たれた。信長は、炎の中で、自ら命を絶ったと伝えられている。",
+    "startMs": 142271,
+    "endMs": 148585,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 149065,
+    "endMs": 150399,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "まちがい。",
+    "startMs": 150879,
+    "endMs": 151487,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "「敵は本能寺にあり」は、のちの時代に作られた言葉だ。実際の兵士たちは、相手が信長だとは知らずに、京都へ向かっていた。",
+    "startMs": 151967,
+    "endMs": 160745,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、光秀は、なぜ、そこまでして信長を討ったのか。いちばん有名な答えから、確かめよう。",
+    "startMs": 161225,
+    "endMs": 168031,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第2の手がかり 信長への恨みだった？（6213フレーム）
+export const clue2GrudgeCaptions: Caption[] = [
+  {
+    "text": "いちばん有名なのは、怨恨説。光秀は、信長に恨みを積み重ねていた、という説だ。",
+    "startMs": 500,
+    "endMs": 6932,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "よく語られる話がある。",
+    "startMs": 7412,
+    "endMs": 8852,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "本能寺の変の少し前、光秀は、安土城にやってきた徳川家康を、もてなす役を任された。",
+    "startMs": 9332,
+    "endMs": 16041,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ところが、用意した魚が腐っていると、信長に怒られ、その役を外されてしまった。",
+    "startMs": 16521,
+    "endMs": 22249,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀は、大勢の前で恥をかかされた。それが、謀反のきっかけになった、というのだ。",
+    "startMs": 22729,
+    "endMs": 28681,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "でも、この話が出てくるのは、江戸時代の初めに書かれた、秀吉の伝記だ。",
+    "startMs": 29161,
+    "endMs": 34452,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "信長に仕えた家臣が書いた、もっと信頼できる記録『信長公記』には、腐った魚の話は出てこない。",
+    "startMs": 34932,
+    "endMs": 42303,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "それどころか、光秀は、京都や堺から、めずらしい品を取り寄せて、心のこもったもてなしをした、と書かれている。",
+    "startMs": 42783,
+    "endMs": 50559,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "役を外されたのは事実だ。でもそれは、秀吉から援軍を求められ、光秀を中国地方へ向かわせるためだった、とも考えられる。",
+    "startMs": 51039,
+    "endMs": 59572,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "母親を人質に取られて見殺しにされた、という話もある。でも、これも、のちの時代の物語に出てくる話だ。",
+    "startMs": 60052,
+    "endMs": 67700,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、光秀は、信長をどう思っていたのか。",
+    "startMs": 68180,
+    "endMs": 71380,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そもそも、光秀という人物は、謎が多い。",
+    "startMs": 71860,
+    "endMs": 75049,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "生まれた年も、はっきりしない。美濃の土岐氏の流れをくむ家に生まれたと言われるが、若いころの記録は、ほとんど残っていない。",
+    "startMs": 75529,
+    "endMs": 83519,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "歴史の表舞台に現れるのは、40歳を過ぎてからと考えられている。足利義昭に仕え、やがて信長の家臣となった。",
+    "startMs": 83999,
+    "endMs": 92159,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そこから光秀は、異例の速さで出世した。信長の家臣の中で、最初に自分の城を任されたのは、光秀だったと言われている。",
+    "startMs": 92639,
+    "endMs": 100948,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "恨みとは別に、もうひとつ、よく語られる説がある。光秀は、自ら天下を取ろうとした、という野望説だ。",
+    "startMs": 101428,
+    "endMs": 108788,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "証拠とされるのが、本能寺の変の数日前、光秀が京都の愛宕山で開いた、連歌の会だ。",
+    "startMs": 109268,
+    "endMs": 115753,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀は、最初の句を、こう詠んだ。「ときは今　あめが下しる　五月かな」。",
+    "startMs": 116233,
+    "endMs": 121897,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "「とき」は、光秀の一族が名乗った、土岐氏のこと。「あめが下しる」は、天下を治めること。",
+    "startMs": 122377,
+    "endMs": 129460,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "つまり、土岐氏の光秀が、今こそ天下を取る、という決意を込めた句だ、というのだ。",
+    "startMs": 129940,
+    "endMs": 135839,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "でも、この読み方は、事件のあとから当てはめた解釈だ。句そのものは、季節の雨を詠んだ歌としても読める。",
+    "startMs": 136319,
+    "endMs": 143572,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "決意の句だったという証拠は、ない。",
+    "startMs": 144052,
+    "endMs": 146420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀自身が書いた文書が、残っている。",
+    "startMs": 146900,
+    "endMs": 149567,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "本能寺の変の、ちょうど1年前。天正9年6月2日の日付が入った、光秀の軍の決まりごとだ。",
+    "startMs": 150047,
+    "endMs": 157087,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その最後に、光秀は、こう書いている。",
+    "startMs": 157567,
+    "endMs": 160415,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "石ころのように落ちぶれていた自分を、信長さまは拾い上げてくださった。",
+    "startMs": 160895,
+    "endMs": 165044,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀は、信長への深い感謝を、自分の手で書き残していたのだ。",
+    "startMs": 165524,
+    "endMs": 169929,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ただし、別の記録もある。",
+    "startMs": 170409,
+    "endMs": 172329,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "当時、日本に来ていた宣教師、ルイス・フロイスは、信長が、自分の意見に逆らった光秀を、足でけったことがあった、と書いている。",
+    "startMs": 172809,
+    "endMs": 182623,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "信長と光秀のあいだに、なにかの衝突があったことまでは、否定できない。",
+    "startMs": 183103,
+    "endMs": 187881,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 188361,
+    "endMs": 189695,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "半分正しい。",
+    "startMs": 190175,
+    "endMs": 191156,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "有名な恨みの話の多くは、のちの時代の作り話だ。でも、二人のあいだに衝突があったことを示す記録も、ある。",
+    "startMs": 191636,
+    "endMs": 199561,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、もうひとつの有名な説はどうか。本当の黒幕は、別にいた、という説だ。",
+    "startMs": 200041,
+    "endMs": 205876,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第3の手がかり 黒幕は秀吉だった？（5224フレーム）
+export const clue3HideyoshiCaptions: Caption[] = [
+  {
+    "text": "本能寺の変で、いちばん得をしたのは誰か。",
+    "startMs": 500,
+    "endMs": 3380,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "それは、羽柴秀吉だ。",
+    "startMs": 3860,
+    "endMs": 5609,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "秀吉は、事件のあと、驚くほどの速さで京都へ戻り、光秀を倒して、天下人への道を駆け上がった。",
+    "startMs": 6089,
+    "endMs": 13663,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "本能寺の変が起きたとき、秀吉は、備中高松城で、毛利の軍と向き合っていた。",
+    "startMs": 14143,
+    "endMs": 19945,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "城のまわりに堤を築き、川の水を引きこんで、城を水の中に孤立させる。水攻めだ。",
+    "startMs": 20425,
+    "endMs": 26559,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "信長が討たれたという知らせを受けると、秀吉は、すぐに毛利と和睦を結んだ。",
+    "startMs": 27039,
+    "endMs": 32201,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "知らせが届いたのは、事件の翌日の夜だったとされる。",
+    "startMs": 32681,
+    "endMs": 36116,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "秀吉は、毛利に信長の死を知られる前に、交渉をまとめた。城を守っていた清水宗治が、城兵の命と引きかえに、自ら命を絶った。",
+    "startMs": 36596,
+    "endMs": 46175,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、およそ200キロの道のりを、わずか10日ほどで引き返し、山崎の戦いで光秀を破った。",
+    "startMs": 46655,
+    "endMs": 53279,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "世に言う、中国大返しだ。",
+    "startMs": 53759,
+    "endMs": 55796,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "あまりにも、手際がよすぎる。秀吉は、事件が起きることを、前もって知っていたのではないか。",
+    "startMs": 56276,
+    "endMs": 62857,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、毛利との間にも、ひそかに話がついていたのではないか。これが、秀吉黒幕説だ。",
+    "startMs": 63337,
+    "endMs": 69801,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "黒幕として名前が挙がってきたのは、秀吉だけではない。",
+    "startMs": 70281,
+    "endMs": 73673,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "朝廷、信長に追放された前の将軍・足利義昭、さらには、日本に来ていた宣教師たちまで。",
+    "startMs": 74153,
+    "endMs": 81375,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀の背後に誰かがいたはずだ、という説は、数えきれないほど生まれてきた。",
+    "startMs": 81855,
+    "endMs": 86783,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その中でも、秀吉黒幕説は、とくに人気が高い。",
+    "startMs": 87263,
+    "endMs": 90985,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ところが、2026年6月。この説に、大きな疑問を突きつける手紙が、公開された。",
+    "startMs": 91465,
+    "endMs": 98036,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "山口県岩国市の岩国徴古館が発表した、吉川元春の書状だ。",
+    "startMs": 98516,
+    "endMs": 103220,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "吉川元春は、毛利元就の息子で、毛利の軍を支えた武将だ。",
+    "startMs": 103700,
+    "endMs": 108191,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "日付は、6月2日。本能寺の変が起きた、まさにその日だ。",
+    "startMs": 108671,
+    "endMs": 113108,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "元春は、家臣にあてて、秀吉の水攻めで追い詰められた城を案じ、こう書いている。",
+    "startMs": 113588,
+    "endMs": 119284,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "もはや、運命をかけた決戦をするしかない。",
+    "startMs": 119764,
+    "endMs": 122569,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "もし秀吉と毛利のあいだに、事前の約束があったなら、こんな手紙は書かないはずだ。",
+    "startMs": 123049,
+    "endMs": 128308,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "事件の当日、毛利は、秀吉と戦う覚悟を決めていた。ひそかな約束があったとは考えにくい。",
+    "startMs": 128788,
+    "endMs": 135295,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、中国大返しの速さは、どう説明するのか。",
+    "startMs": 135775,
+    "endMs": 139540,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "近年の研究では、秀吉は、もともと信長を迎えるために、道の途中に拠点を整え、食料を蓄えていたと考えられている。",
+    "startMs": 140020,
+    "endMs": 148959,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "信長のための準備が、そのまま、秀吉の帰り道を支えたのかもしれない。",
+    "startMs": 149439,
+    "endMs": 154324,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 154804,
+    "endMs": 156137,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "まちがい。",
+    "startMs": 156617,
+    "endMs": 157225,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "秀吉が事件を仕組んだという証拠はない。2026年に見つかった手紙は、毛利とのひそかな約束も、なかった可能性を示している。",
+    "startMs": 157705,
+    "endMs": 166271,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、光秀は、本当は何に追い詰められていたのか。答えは、意外な場所に眠っていた。",
+    "startMs": 166751,
+    "endMs": 172916,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第4の手がかり 四国の問題で追い詰められていた？（3859フレーム）
+export const clue4ShikokuCaptions: Caption[] = [
+  {
+    "text": "2014年。岡山市の林原美術館で、古い文書の調査が行われた。",
+    "startMs": 500,
+    "endMs": 5951,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その中から、本能寺の変の謎に関わる手紙が見つかった。石谷家文書と呼ばれる、47通の手紙だ。",
+    "startMs": 6431,
+    "endMs": 13460,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その1通が、四国の大名、長宗我部元親が書いた手紙だった。",
+    "startMs": 13940,
+    "endMs": 18463,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "日付は、天正10年5月21日。本能寺の変の、わずか12日前だ。",
+    "startMs": 18943,
+    "endMs": 24809,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "あて先は、斎藤利三。光秀のいちばんの重臣だ。",
+    "startMs": 25289,
+    "endMs": 29161,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "実は、光秀は、長年、信長と長宗我部のあいだを取りもつ役目を務めていた。",
+    "startMs": 29641,
+    "endMs": 35209,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "利三の身内が、元親の妻になっていたこともあり、光秀の家中と長宗我部家は、深く結びついていたのだ。",
+    "startMs": 35689,
+    "endMs": 42815,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ところが、信長は、方針を変えた。",
+    "startMs": 43295,
+    "endMs": 46004,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "もともと信長は、長宗我部元親に、四国は、切り取ったぶんだけ自分のものにしてよい、と認めていたと伝えられている。",
+    "startMs": 46484,
+    "endMs": 54559,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "元親は、その言葉を信じて、四国のほとんどを手に入れようとしていた。",
+    "startMs": 55039,
+    "endMs": 59572,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "四国を、長宗我部の好きにはさせない。信長は、四国に攻め込む軍を準備した。",
+    "startMs": 60052,
+    "endMs": 65588,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "長宗我部に残すのは、土佐と、阿波の南半分だけ。それに従わなければ、攻め滅ぼす。",
+    "startMs": 66068,
+    "endMs": 72233,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀が積み上げてきた交渉は、ひっくり返されてしまったのだ。",
+    "startMs": 72713,
+    "endMs": 76479,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "元親の手紙には、信長の要求の一部に従う、という苦しい答えが書かれていた。",
+    "startMs": 76959,
+    "endMs": 82559,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "戦いを避けようと、ぎりぎりまで交渉が続けられていたことがわかる。",
+    "startMs": 83039,
+    "endMs": 87209,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、信長の四国攻めの軍が、海を渡ろうとしていた、まさにその直前。本能寺の変が起きた。",
+    "startMs": 87689,
+    "endMs": 94612,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "これが、四国説と呼ばれる考え方だ。",
+    "startMs": 95092,
+    "endMs": 97716,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "今では、本能寺の変の原因として、最も有力な説のひとつと考えられている。",
+    "startMs": 98196,
+    "endMs": 103487,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 103967,
+    "endMs": 105300,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "正しい。",
+    "startMs": 105780,
+    "endMs": 106388,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "本能寺の変の直前、光秀が、信長と長宗我部のあいだで、追い詰められていたことは、手紙が証明している。",
+    "startMs": 106868,
+    "endMs": 114537,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ただし、それが謀反の決め手になったのかどうかは、光秀自身の言葉が残っていない以上、まだ断定できない。",
+    "startMs": 115017,
+    "endMs": 122004,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、光秀の物語には、もうひとつ、信じられないような続きがある。",
+    "startMs": 122484,
+    "endMs": 127412,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第5の手がかり 光秀は生き延びて天海になった？（3595フレーム）
+export const clue5TenkaiCaptions: Caption[] = [
+  {
+    "text": "本能寺の変から、11日後。山崎の戦いで、光秀は秀吉に敗れた。",
+    "startMs": 500,
+    "endMs": 6121,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "戦場になったのは、京都と大阪のあいだ、天王山のふもとだ。",
+    "startMs": 6601,
+    "endMs": 10857,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "勝負の分かれ目を「天王山」と呼ぶのは、この戦いから来ている。",
+    "startMs": 11337,
+    "endMs": 16105,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀は、近江の坂本城をめざして落ちのびる途中、命を落としたと伝えられている。",
+    "startMs": 16585,
+    "endMs": 22175,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "世に言う、三日天下だ。実際には、10日あまりだった。",
+    "startMs": 22655,
+    "endMs": 26676,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ところが、光秀は死んでいなかった、という説がある。",
+    "startMs": 27156,
+    "endMs": 30612,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀はひそかに生き延び、僧となって、天海と名乗った。そして、徳川家康の側近として、江戸幕府を支えた。",
+    "startMs": 31092,
+    "endMs": 39177,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "これが、光秀天海説だ。",
+    "startMs": 39657,
+    "endMs": 41716,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "証拠として、よく挙げられるものがある。",
+    "startMs": 42196,
+    "endMs": 44532,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "比叡山には、光秀の名が刻まれた石灯籠があり、そこには、光秀の死から30年以上もあとの年号が刻まれている。",
+    "startMs": 45012,
+    "endMs": 52841,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "日光には、明智平という場所がある。天海が名づけたという言い伝えも残っている。",
+    "startMs": 53321,
+    "endMs": 58495,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "天海の前半生は、ほとんどわかっていない。それが、想像をかき立ててきた。",
+    "startMs": 58975,
+    "endMs": 64095,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "でも、証拠の反対側も見なければいけない。",
+    "startMs": 64575,
+    "endMs": 67444,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "天海が亡くなったのは、1643年。光秀と同一人物なら、100歳をはるかに超えていたことになる。",
+    "startMs": 67924,
+    "endMs": 75113,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "天海自身も、長生きの僧として知られている。でも、その年齢でさえ、光秀の生まれた年と合わせるには、無理がある。",
+    "startMs": 75593,
+    "endMs": 83828,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "石灯籠の名前も、光秀の供養のために、別の人が寄進したものかもしれない。名前だけでは、本人だという証拠にはならない。",
+    "startMs": 84308,
+    "endMs": 92671,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、天海と光秀を結びつける、同じ時代の記録は、ひとつも見つかっていない。",
+    "startMs": 93151,
+    "endMs": 98633,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "歴史の研究者の多くは、この説を、根拠のない伝説だと考えている。",
+    "startMs": 99113,
+    "endMs": 103999,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 104479,
+    "endMs": 105812,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "まちがい。",
+    "startMs": 106292,
+    "endMs": 106900,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀が天海になったという証拠はない。三日天下の光秀は、山崎の戦いのあと、この世を去ったと考えられている。",
+    "startMs": 107380,
+    "endMs": 114975,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "これで、5つの手がかりは、全てたどり終えた。",
+    "startMs": 115455,
+    "endMs": 118612,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 光秀の幻の城（6250フレーム）
+export const rootsStoryCaptions: Caption[] = [
+  {
+    "text": "光秀が、なぜ信長を討ったのか。決定的な答えは、見つからなかった。",
+    "startMs": 500,
+    "endMs": 5503,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀自身が、理由を書き残していないからだ。",
+    "startMs": 5983,
+    "endMs": 9023,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ただし、光秀が、事件のあとに書いた手紙は残っている。",
+    "startMs": 9503,
+    "endMs": 13481,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "本能寺の変から1週間後。光秀は、親しい友であり、娘の嫁ぎ先でもあった細川藤孝に、手紙を送った。",
+    "startMs": 13961,
+    "endMs": 22185,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "自分は、思いがけないことを思い立った。それは、あなたの息子の忠興たちを取り立てるためだった。",
+    "startMs": 22665,
+    "endMs": 28735,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "50日か100日のうちに、近くの国々をしっかりと固めたら、あとは自分の息子と忠興に任せて、身を引くつもりだ。",
+    "startMs": 29215,
+    "endMs": 36735,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀は、必死に、味方になってくれるよう頼んでいた。",
+    "startMs": 37215,
+    "endMs": 40831,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "でも、細川家は動かなかった。光秀は、孤立していったのだ。",
+    "startMs": 41311,
+    "endMs": 45791,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "がっかりしただろうか。",
+    "startMs": 46271,
+    "endMs": 47423,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "でも、ボクが今回の調査で本当に驚いたのは、ここからだった。",
+    "startMs": 47903,
+    "endMs": 52319,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀が、敗れたあと、最後にめざした城がある。琵琶湖のほとりの、坂本城だ。",
+    "startMs": 52799,
+    "endMs": 58740,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "信長に仕えはじめて間もないころ、光秀が築いた、自分の城だ。",
+    "startMs": 59220,
+    "endMs": 63817,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "宣教師ルイス・フロイスは、この城を、信長の安土城に次ぐほど、豪壮で華麗な城だった、と書いている。",
+    "startMs": 64297,
+    "endMs": 71988,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ところが、光秀の死のあと、坂本城は焼け落ち、やがて、取り壊された。",
+    "startMs": 72468,
+    "endMs": 78089,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀が山崎で敗れたあと、坂本城を守っていたのは、光秀の重臣、明智秀満だった。",
+    "startMs": 78569,
+    "endMs": 85119,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "敵に囲まれた秀満は、城にあった名物の茶道具や刀を、ことごとく敵に引き渡したと伝えられている。",
+    "startMs": 85599,
+    "endMs": 92201,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "これらは天下の宝。自分とともに燃やしてしまうわけにはいかない、と。",
+    "startMs": 92681,
+    "endMs": 97215,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして秀満は、城に火を放った。",
+    "startMs": 97695,
+    "endMs": 99988,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "城がどこに、どんな形で建っていたのか。長いあいだ、ほとんど何もわからなかった。",
+    "startMs": 100468,
+    "endMs": 105844,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "人々は、坂本城を、幻の城と呼んだ。",
+    "startMs": 106324,
+    "endMs": 109716,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "手がかりは、琵琶湖の中にあった。",
+    "startMs": 110196,
+    "endMs": 112383,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "1994年、ひどい日照りで、琵琶湖の水位が大きく下がった。",
+    "startMs": 112863,
+    "endMs": 117609,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "すると、湖の中から、石垣の跡が姿を現した。城は、湖に張り出すように築かれていたのだ。",
+    "startMs": 118089,
+    "endMs": 125161,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして2023年。宅地の工事の前の発掘で、長さ30メートルにもおよぶ石垣と堀が見つかった。",
+    "startMs": 125641,
+    "endMs": 132543,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "石を組んだ井戸や、建物の柱の跡も出てきた。光秀の時代の瓦も、一緒に見つかっている。",
+    "startMs": 133023,
+    "endMs": 139337,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2025年、坂本城跡は、ついに国の史跡になった。城として指定されるのは、大津市で初めてだ。",
+    "startMs": 139817,
+    "endMs": 147092,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、2026年5月。本丸の南側の石垣とみられる石が、新たに見つかった。",
+    "startMs": 147572,
+    "endMs": 153695,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "6月には、その場所も、国の史跡に加えるよう、国の審議会が答申した。",
+    "startMs": 154175,
+    "endMs": 159668,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "幻の城は、今まさに、少しずつ姿を現しはじめているのだ。",
+    "startMs": 160148,
+    "endMs": 164607,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀は、「主君を討った裏切り者」として、400年以上語られてきた。",
+    "startMs": 165087,
+    "endMs": 170185,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "でも、光秀が治めた土地では、少し違う姿が語り継がれている。",
+    "startMs": 170665,
+    "endMs": 175092,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "京都府の福知山では、光秀が、人々の暮らしを守る町づくりをしたと伝えられ、光秀をまつる神社がある。",
+    "startMs": 175572,
+    "endMs": 182665,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀の、あの感謝の言葉が書かれた軍の決まりごとも、この神社に伝わっている。",
+    "startMs": 183145,
+    "endMs": 188393,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "信長に拾われたことを感謝し、城を築き、町をつくった男。",
+    "startMs": 188873,
+    "endMs": 193396,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その男が、なぜ、たった一夜で、全てを賭けたのか。",
+    "startMs": 193876,
+    "endMs": 197887,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その答えは、まだ、坂本城の土の中に眠っているのかもしれない。",
+    "startMs": 198367,
+    "endMs": 202857,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ボクは、こっちの物語のほうが、ずっと胸が熱くなる。",
+    "startMs": 203337,
+    "endMs": 207124,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 まだ解けていない謎（1788フレーム）
+export const unsolvedMysteryCaptions: Caption[] = [
+  {
+    "text": "最後に、今夜の調査で残った、まだ判決を出せない謎を、ひとつだけ。",
+    "startMs": 500,
+    "endMs": 5599,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "信長の遺体は、どこへ消えたのか。",
+    "startMs": 6079,
+    "endMs": 8372,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "本能寺は、炎に包まれた。光秀の軍勢は、焼け跡を探したが、信長の遺体は、見つからなかったと伝えられている。",
+    "startMs": 8852,
+    "endMs": 17033,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2007年、本能寺の跡地で発掘が行われ、焼けた瓦などが見つかった。でも、信長の手がかりは、出てこなかった。",
+    "startMs": 17513,
+    "endMs": 25929,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "信長の遺骨や首を、ひそかに運び出したという言い伝えを持つ寺は、今も、各地に残っている。",
+    "startMs": 26409,
+    "endMs": 32767,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "京都の阿弥陀寺には、住職が、焼け跡から信長の遺骨を持ち出して葬った、という言い伝えがある。",
+    "startMs": 33247,
+    "endMs": 39775,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "静岡県の西山本門寺には、信長の首を運んで埋めたという、首塚が伝わっている。",
+    "startMs": 40255,
+    "endMs": 46153,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "でも、どれも、確かめられた記録ではない。",
+    "startMs": 46633,
+    "endMs": 49631,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "天下人の最期の場所は、まだ、誰にも確かめられていない。",
+    "startMs": 50111,
+    "endMs": 54025,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "新しい発見があったら、ボクはまた、ここで判決を出す。",
+    "startMs": 54505,
+    "endMs": 58377,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 まとめ（1703フレーム）
+export const summaryCaptions: Caption[] = [
+  {
+    "text": "では、今夜の判決を振り返ろう。",
+    "startMs": 500,
+    "endMs": 2889,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀が「敵は本能寺にあり」と叫んだという記録は、同じ時代にはない。兵士たちは、相手も知らされていなかった。まちがい。",
+    "startMs": 3369,
+    "endMs": 12479,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "恨みの話の多くは、のちの作り話。でも、二人の衝突を示す記録はある。半分正しい。",
+    "startMs": 12959,
+    "endMs": 19903,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "秀吉が事件を仕組んだという証拠はない。毛利とのひそかな約束も、なかった可能性が高い。まちがい。",
+    "startMs": 20383,
+    "endMs": 27273,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀が、四国の問題で追い詰められていたことは、手紙が証明している。正しい。",
+    "startMs": 27753,
+    "endMs": 33481,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀が生き延びて天海になったという証拠はない。まちがい。",
+    "startMs": 33961,
+    "endMs": 37588,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "光秀が謀反を起こした本当の理由は、まだわからない。",
+    "startMs": 38068,
+    "endMs": 41545,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "でも、証拠を追いかけた先には、信長への感謝を書き残した光秀がいて、400年の時を越えて姿を現しはじめた、幻の城があった。",
+    "startMs": 42025,
+    "endMs": 51273,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "本当の話は、作り話に負けないくらい、面白い。",
+    "startMs": 51753,
+    "endMs": 55551,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 締め（547フレーム）
+export const closingCaptions: Caption[] = [
+  {
+    "text": "最後まで見てくれて、ありがとう。",
+    "startMs": 500,
+    "endMs": 2548,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "感想は、ぜひコメントで聞かせてほしい。次に判決を出してほしい説があれば、それもコメントで待っている。",
+    "startMs": 3028,
+    "endMs": 9588,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "次の判決を見逃さないように、チャンネル登録をしておいてほしい。",
+    "startMs": 10068,
+    "endMs": 14057,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、また閉園後の法廷で会おう。",
+    "startMs": 14537,
+    "endMs": 17033,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
