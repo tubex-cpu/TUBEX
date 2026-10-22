@@ -12,7 +12,7 @@ export const sceneDurations = {
 	RootsStory: 6250,
 	UnsolvedMystery: 1788,
 	Summary: 1703,
-	Closing: 547,
+	Closing: 421,
 } as const;
 
-export const TOTAL_FRAMES = 36457;
+export const TOTAL_FRAMES = 36331;

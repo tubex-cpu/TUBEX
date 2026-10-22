@@ -1525,7 +1525,7 @@ export const summaryCaptions: Caption[] = [
   }
 ];
 
-// 0:00 締め（547フレーム）
+// 0:00 締め（421フレーム）
 export const closingCaptions: Caption[] = [
   {
     "text": "最後まで見てくれて、ありがとう。",
@@ -1535,23 +1535,23 @@ export const closingCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "感想は、ぜひコメントで聞かせてほしい。次に判決を出してほしい説があれば、それもコメントで待っている。",
+    "text": "感想は、ぜひコメントで聞かせてほしい。",
     "startMs": 3028,
-    "endMs": 9588,
+    "endMs": 5492,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "次の判決を見逃さないように、チャンネル登録をしておいてほしい。",
-    "startMs": 10068,
-    "endMs": 14057,
+    "text": "この法廷を応援してくれるなら、チャンネル登録をしておいてほしい。",
+    "startMs": 5972,
+    "endMs": 9855,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "では、また閉園後の法廷で会おう。",
-    "startMs": 14537,
-    "endMs": 17033,
+    "startMs": 10335,
+    "endMs": 12831,
     "timestampMs": null,
     "confidence": null
   }
