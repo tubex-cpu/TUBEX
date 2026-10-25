@@ -19,7 +19,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parent.parent
 ENGINE = 'http://localhost:50021'
 SPEAKER = 11  # 玄野武宏（ノーマル）
-SPEED = 1.0
+SPEED = 0.97
 RATE = 48000
 FPS = 30
 TRANSITION = 20
@@ -28,7 +28,7 @@ GAP_MS = 480
 TAIL_MS = 1200
 
 IDS = ['Intro', 'JudgeEntrance', 'Clue1Size', 'Clue2Build', 'Clue3Craft', 'Clue4Haniwa', 'Clue5Baicho', 'Clue6Nintoku', 'Clue7Juryo', 'Clue8Kings', 'Clue9Name',
-       'Clue10Inside', 'Clue11Boston', 'Clue12Treasure', 'Clue13Entry', 'Clue14Lost', 'Clue15Now', 'RootsStory', 'UnsolvedMystery', 'Summary', 'Closing']
+       'Clue10Inside', 'Clue11Boston', 'Clue12Treasure', 'Clue13Entry', 'Clue14Lost', 'Clue15Heritage', 'Clue16Now', 'RootsStory', 'UnsolvedMystery', 'Summary', 'Closing']
 
 # 読み上げ用の置き換え（字幕はそのまま）
 READING = [('○', ''), ('△', ''), ('×', ''), ('日本', 'ニホン'),

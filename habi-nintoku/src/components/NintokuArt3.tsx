@@ -899,3 +899,33 @@ export const WhichTomb: React.FC = () => {
 		</Panel>
 	);
 };
+
+// ---- 世界遺産 ----
+
+// 緩衝地帯の高さの決まり（15m）と大屋根リング（約20m）
+export const BufferZone: React.FC = () => {
+	const frame = useCurrentFrame();
+	const ring = interpolate(frame, [30, 80], [0, 1], ease);
+	const ground = 500;
+	const k = 14;
+	return (
+		<Panel fill="#1d2a3a">
+			<line x1={80} y1={ground} x2={1320} y2={ground} stroke="#fff" strokeWidth={4} />
+			<line x1={80} y1={ground - 15 * k} x2={1320} y2={ground - 15 * k} stroke={colors.goldSoft} strokeWidth={4} strokeDasharray="16 10" />
+			<text x={100} y={ground - 15 * k - 16} {...txt(34, colors.goldSoft)}>
+				建物は原則15メートル以内
+			</text>
+			<rect x={760} y={ground - 20 * k * ring} width={420} height={20 * k * ring} fill="#a0784a" stroke="#6b4b2a" strokeWidth={6} />
+			{[0, 1, 2, 3, 4, 5].map((i) => (
+				<line key={i} x1={760 + i * 84} y1={ground} x2={760 + i * 84} y2={ground - 20 * k * ring} stroke="#6b4b2a" strokeWidth={6} />
+			))}
+			<text x={970} y={ground - 20 * k * ring - 20} textAnchor="middle" {...txt(36)} opacity={ring}>
+				大屋根リング 最大およそ20メートル
+			</text>
+			<path d="M120 500 Q 330 330 540 500 Z" fill="#3f6b2e" />
+			<text x={330} y={560} textAnchor="middle" {...txt(32, colors.muted)}>
+				古墳
+			</text>
+		</Panel>
+	);
+};

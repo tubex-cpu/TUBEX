@@ -8,27 +8,28 @@ import {SceneFrame} from '../components/SceneFrame';
 import {judgeEntranceCaptions as c} from '../data/captions';
 import {colors, gothicFamily, minchoFamily} from '../theme';
 
-const clues = ['世界最大の墓？', '15年以上かかった？', '眠るのは仁徳天皇？', '中を見た人はいない？', '宝はアメリカへ？'];
+const clues = ['世界最大？', '15年以上？', '最先端の堺？', '埴輪は身代わり？', '家来の墓？', '仁徳天皇？', '生前に造った？', '皇帝の家来？', '名前の由来？', '中を見た人？', 'ボストンの宝？', '明治の宝？', '入れない？', '消えた古墳？', '世界遺産？', '今の姿？'];
 
+// 今夜の16の手がかり（2段に並べる）
 const ClueRow = () => {
 	const frame = useCurrentFrame();
 	return (
-		<div style={{position: 'absolute', left: 100, right: 100, top: 230, display: 'flex', gap: 22, justifyContent: 'center'}}>
+		<div style={{position: 'absolute', left: 80, right: 80, top: 170, display: 'flex', flexWrap: 'wrap', gap: 18, justifyContent: 'center'}}>
 			{clues.map((cl, i) => (
 				<div
 					key={cl}
 					style={{
-						width: 320,
-						padding: '22px 0',
-						borderRadius: 18,
+						width: 200,
+						padding: '14px 0',
+						borderRadius: 16,
 						background: colors.paper,
 						textAlign: 'center',
-						opacity: interpolate(frame, [i * 8, i * 8 + 12], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
+						opacity: interpolate(frame, [i * 4, i * 4 + 10], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
 					}}
 				>
-					<div style={{fontFamily: gothicFamily, fontWeight: 900, fontSize: 32, color: colors.clayDark}}>手がかり {i + 1}</div>
-					<div style={{margin: '18px 16px 6px', fontFamily: minchoFamily, fontWeight: 800, fontSize: 120, lineHeight: 1, color: colors.clay}}>？</div>
-					<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 29, whiteSpace: 'nowrap', color: colors.ink}}>{cl}</div>
+					<div style={{fontFamily: gothicFamily, fontWeight: 900, fontSize: 24, color: colors.clayDark}}>手がかり {i + 1}</div>
+					<div style={{margin: '8px 10px 4px', fontFamily: minchoFamily, fontWeight: 800, fontSize: 72, lineHeight: 1, color: colors.clay}}>？</div>
+					<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 22, whiteSpace: 'nowrap', color: colors.ink}}>{cl}</div>
 				</div>
 			))}
 		</div>

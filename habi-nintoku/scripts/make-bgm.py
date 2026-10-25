@@ -149,7 +149,7 @@ out = ROOT / 'public/bgm'
 out.mkdir(parents=True, exist_ok=True)
 
 # 1. 前半「閉園後の法廷」：Dマイナー中心。オルゴールのようなベルと時計の音（約7分20秒）
-tr = Track(58, 470)
+tr = Track(58, 1320)
 pool = [['D3', 'F3', 'A3'], ['Bb2', 'D3', 'F3'], ['G2', 'Bb2', 'D3'], ['A2', 'C#3', 'E3'], ['F2', 'A2', 'C3'], ['C3', 'E3', 'G3'], ['E2', 'G2', 'Bb2'], ['G2', 'B2', 'D3']]
 keys = [-2, -2, -5, 0, -2, 2, -5, -2, -4, -7, -2, 0]
 for si, (b0, n) in enumerate(sections(tr.bars, 8)):
@@ -173,7 +173,7 @@ for si, (b0, n) in enumerate(sections(tr.bars, 8)):
 tr.render(out / 'bgm1-mozu.mp3', 0.4)
 
 # 2. 中盤「調査」：Aマイナー中心。刻むベースとピチカート、緊張感（約8分半）
-tr = Track(84, 470)
+tr = Track(84, 1320)
 pool = [['A2', 'C3', 'E3'], ['F2', 'A2', 'C3'], ['E2', 'G#2', 'B2'], ['D2', 'F2', 'A2'], ['G2', 'B2', 'D3'], ['C3', 'E3', 'G3'], ['Bb2', 'D3', 'F3'], ['B2', 'D3', 'F3']]
 keys = [-1, -1, 2, -3, -1, 4, 1, -4, -1, 0]
 for si, (b0, n) in enumerate(sections(tr.bars, 8)):
@@ -200,7 +200,7 @@ for si, (b0, n) in enumerate(sections(tr.bars, 8)):
 tr.render(out / 'bgm2-survey.mp3', 0.25)
 
 # 3. 後半「足元にあった物語」：Cメジャー中心。温かいピアノとストリングス（約6分30秒）
-tr = Track(72, 385)
+tr = Track(72, 1320)
 pool = [['C3', 'E3', 'G3'], ['B2', 'D3', 'G3'], ['A2', 'C3', 'E3'], ['F2', 'A2', 'C3'], ['D3', 'F3', 'A3'], ['G2', 'B2', 'D3'], ['E2', 'G2', 'B2'], ['F2', 'A2', 'D3']]
 scale = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5', 'D5', 'E5']
 keys = [0, 0, 2, -3, 5, 0, -2, 3]
