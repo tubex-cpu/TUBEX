@@ -16,6 +16,7 @@ import uuid
 
 POLICY_REF = "refs/heads/codex/weekly-operations-20261025"
 RESERVED = {"note-n0", "pr-11", "habi"}
+RESERVED_PREFIXES = ("note", "habi", "new-channels")
 
 
 def git(*args, data=None):
@@ -37,7 +38,7 @@ def remote_sha(ref):
 
 
 def eligibility(config, job, stage, input_sha):
-    if job in RESERVED or job in config.get("reserved", []):
+    if job.startswith(RESERVED_PREFIXES) or job in RESERVED or job in config.get("reserved", []):
         return False
     matches = [a for a in config.get("assignments", [])
                if (a.get("job"), a.get("stage"), a.get("input_commit"))
@@ -47,6 +48,9 @@ def eligibility(config, job, stage, input_sha):
 
 
 def claim(job, stage, input_sha, run_id, test=False):
+    workflows = git("ls-tree", "-r", "--name-only", input_sha, "--", ".github/workflows")
+    if workflows.returncode or workflows.stdout.strip():
+        raise RuntimeError("workflow-bearing-or-unreadable-input-forbidden")
     key = hashlib.sha256(json.dumps([job, stage, input_sha],
                                    separators=(",", ":")).encode()).hexdigest()
     namespace = "tubex-routine-test-v1" if test else "tubex-routine-claims-v1"
@@ -96,11 +100,13 @@ def main():
     args = parser.parse_args()
     config = json.loads((Path(__file__).resolve().parents[1]
                          / "routine_assignments.json").read_text())
+    if not isinstance(config, dict) or not isinstance(config.get("assignments"), list):
+        raise ValueError("invalid-assignment-config")
     if not args.job and not args.test:
         print(json.dumps({"status": "NO_WORK" if not config["assignments"]
                           else "ASSIGNMENTS_REQUIRE_GATE_CHECK",
                           "count": len(config["assignments"])}))
-        return 0
+        return 0 if not config["assignments"] else 3
     if not all([args.job, args.stage, args.input, args.run_id]):
         parser.error("job, stage, input and run-id are required")
     if not re.fullmatch(r"[0-9a-f]{40}", args.input):
