@@ -126,6 +126,8 @@
    - **最小の照合対象（親 Codex の再監査 2回目で指定、5本）**：A＝[D9BI69GFWvs](https://www.youtube.com/watch?v=D9BI69GFWvs)（申請が必要な理由）、[ljCim2jy5vc](https://www.youtube.com/watch?v=ljCim2jy5vc)（年金に課税される理由）、[VfMDh6pRyQM](https://www.youtube.com/watch?v=VfMDh6pRyQM)（対象者を先に示す構成）／E＝[jDyfiiKh11k](https://www.youtube.com/watch?v=jDyfiiKh11k)（特に住友の章 13:18〜15:23）、[jI6zrC-6Xxs](https://www.youtube.com/watch?v=jI6zrC-6Xxs)（タイヤ各社の事業展開）
    - 記録する項目：本編で答えている範囲（時刻つき）→ 残る問い → 一次資料から答えられる差。説明文・章名にないことを理由に「未回答」とはしない
    - 順位：A＋E は暫定。E に差が残らなかった場合に限り、第2枠を C に戻して同じ照合をする
+   - **試行記録（2026-10-25 14:49:28 UTC）**：1本目 `https://www.youtube.com/watch?v=D9BI69GFWvs&hl=ja` を、既存の許可済みツール（Bash の curl、環境の既定プロキシ経由）で取得しようとしたところ、**プロキシが `www.youtube.com:443` への CONNECT を 403 で拒否**した（`curl: (56) CONNECT tunnel failed, response 403`。プロキシの状態表示：`connect_rejected`・`policy denial or upstream failure`）。これは明示的な拒否なので、**同じホストの残り4本（ljCim2jy5vc・VfMDh6pRyQM・jDyfiiKh11k・jI6zrC-6Xxs）と字幕の取得は試さず停止**した。WebFetch・別ドメイン・ミラーなど別の経路は使っていない。取得・視聴できた本編の範囲は**0本・0秒**
+   - 再開の条件：環境のネットワーク設定で `www.youtube.com` が許可されること（本人の判断）、または本人・親 Codex による視聴記録
 2. 同じ疑問に答えている別の競合動画がないか（題名以外の検索も含む）
 3. 本編で答えられていた場合、その企画は外し、在庫の次の題材に替える。初回3企画のうち2つ以上が既に答えられていたら、その案の差別化1は成立しないとして、推奨を見直してから本人に提出する
 
