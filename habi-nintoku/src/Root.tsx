@@ -1,4 +1,4 @@
-import {Composition, Folder} from 'remotion';
+import {AbsoluteFill, Composition, Folder} from 'remotion';
 import {HabiNintokuVideo} from './HabiNintokuVideo';
 import {sceneDurations as d, TOTAL_FRAMES} from './data/timeline';
 import {VerdictStamp} from './components/VerdictStamp';
@@ -25,10 +25,18 @@ import {RootsStory} from './scenes/RootsStory';
 import {Summary} from './scenes/Summary';
 import {UnsolvedMystery} from './scenes/UnsolvedMystery';
 
+// 720p書き出し用：1920×1080の本編を2/3に縮めて描く
+const HabiNintoku720 = () => (
+	<AbsoluteFill style={{width: 1920, height: 1080, transform: 'scale(0.6666667)', transformOrigin: 'top left'}}>
+		<HabiNintokuVideo />
+	</AbsoluteFill>
+);
+
 export const RemotionRoot: React.FC = () => {
 	return (
 		<>
 			<Composition id="HabiNintoku" component={HabiNintokuVideo} durationInFrames={TOTAL_FRAMES} fps={30} width={1920} height={1080} />
+			<Composition id="HabiNintoku720" component={HabiNintoku720} durationInFrames={TOTAL_FRAMES} fps={30} width={1280} height={720} />
 			<Folder name="Scenes">
 				<Composition id="Intro" component={Intro} durationInFrames={d.Intro} fps={30} width={1920} height={1080} />
 				<Composition id="JudgeEntrance" component={JudgeEntrance} durationInFrames={d.JudgeEntrance} fps={30} width={1920} height={1080} />
