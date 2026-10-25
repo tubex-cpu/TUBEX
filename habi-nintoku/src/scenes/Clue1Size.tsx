@@ -13,7 +13,7 @@ export const Clue1Size = () => {
 	return (
 		<SceneFrame captions={c} voice="Clue1Size" label="第1の手がかり" title="世界最大の墓だった？">
 			<Beat name="住宅街の真ん中の森" captions={c} from={0} to={0}>
-				<Photo id="daisen-b2" move="out" label="住宅街の真ん中の森" />
+				<Photo id="park-4" move="out" label="住宅街の真ん中の森" />
 			</Beat>
 			<Beat name="KeyholeParts" captions={c} from={1} to={2}>
 				<Visual label="空から見ると？">
@@ -51,7 +51,7 @@ export const Clue1Size = () => {
 				</Visual>
 			</Beat>
 			<Beat name="「世界最大の墓」？" captions={c} from={13} to={14}>
-				<Photo id="daisen-b3" move="left" label="「世界最大の墓」？" />
+				<Photo id="moat-8" move="left" label="「世界最大の墓」？" />
 			</Beat>
 			<Beat name="世界三大墳墓" captions={c} from={15} to={15}>
 				<Photo id="qin" label="世界三大墳墓" />
@@ -88,7 +88,7 @@ export const Clue1Size = () => {
 				<GavelVerdict verdict="half" strikeAt={captionFrame(c, 27, 28, fps)} />
 			</Beat>
 			<Beat name="人の手だけで、どれだけ？" captions={c} from={30}>
-				<Photo id="daisen-b4" label="人の手だけで、どれだけ？" />
+				<Photo id="kisaragi-4" label="人の手だけで、どれだけ？" />
 			</Beat>
 		</SceneFrame>
 	);

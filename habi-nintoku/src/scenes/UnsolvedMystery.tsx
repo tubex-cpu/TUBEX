@@ -31,7 +31,7 @@ export const UnsolvedMystery = () => (
 			<Photo id="moat-7" move="left" label="長い年月をかけて造った墓" />
 		</Beat>
 		<Beat name="新しい発見があったら、も" captions={c} from={11}>
-			<Photo id="nintoku-02" label="新しい発見があったら、もう一度判決を" />
+			<Photo id="daisen-h5" label="新しい発見があったら、もう一度判決を" />
 		</Beat>
 	</SceneFrame>
 );

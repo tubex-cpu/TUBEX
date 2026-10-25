@@ -569,7 +569,7 @@ export const ShipView: React.FC = () => {
 // 民のかまど：煙の上がらない家々 → 3年後
 export const KamadoSmoke: React.FC = () => {
 	const frame = useCurrentFrame();
-	const smoke = fadeIn(frame, 70, 30);
+	const smoke = fadeIn(frame, 330, 30);
 	return (
 		<Panel fill="#1f2a3d">
 			{[...Array(7)].map((_, i) => {

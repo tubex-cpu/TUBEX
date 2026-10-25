@@ -91,7 +91,7 @@ export const ChamberFinds: React.FC = () => {
 // ふたは開けられないまま、埋め戻された
 export const LidReburied: React.FC = () => {
 	const frame = useCurrentFrame();
-	const soil = interpolate(frame, [30, 110], [0, 1], ease);
+	const soil = interpolate(frame, [30, 110], [0, 0.62], ease);
 	return (
 		<Panel fill="#1b140f">
 			<rect x={330} y={240} width={740} height={220} rx={24} fill="#b3a083" stroke="#6e5c43" strokeWidth={8} />
@@ -102,7 +102,7 @@ export const LidReburied: React.FC = () => {
 				</text>
 			</g>
 			<rect x={0} y={620 - 620 * soil} width={1400} height={620 * soil} fill="#4a3522" />
-			<text x={700} y={560} textAnchor="middle" {...txt(44, colors.goldSoft)} opacity={soil}>
+			<text x={700} y={560} textAnchor="middle" {...txt(44, colors.goldSoft)} opacity={soil / 0.62}>
 				ふたは開けられないまま
 			</text>
 		</Panel>
@@ -398,7 +398,7 @@ export const HeritageAreas: React.FC = () => {
 	const frame = useCurrentFrame();
 	const dots = (cx: number, cy: number, n: number, at: number) =>
 		[...Array(n)].map((_, i) => (
-			<circle key={i} cx={cx + ((i * 53) % 220) - 110} cy={cy + ((i * 37) % 160) - 80} r={9} fill={colors.goldSoft} opacity={fadeIn(frame, at + i * 2)} />
+			<circle key={i} cx={cx + Math.sin(i * 12.9898) * 110} cy={cy + Math.cos(i * 78.233) * 80} r={9} fill={colors.goldSoft} opacity={fadeIn(frame, at + i * 2)} />
 		));
 	return (
 		<Panel fill="#203320">

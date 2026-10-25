@@ -22,7 +22,7 @@ export const Intro = () => (
 			</Visual>
 		</Beat>
 		<Beat name="誰もが知る、あの古墳" captions={c} from={4} to={4}>
-			<Photo id="daisen-b1" move="out" label="誰もが知る、あの古墳" />
+			<Photo id="kisaragi-3" move="out" label="誰もが知る、あの古墳" />
 		</Beat>
 		<Beat name="眠っているのは、誰？" captions={c} from={5} to={5}>
 			<Photo id="daisen-h1" label="眠っているのは、誰？" />

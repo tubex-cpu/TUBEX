@@ -63,7 +63,7 @@ export const Clue2Build = () => {
 				<Photo id="goshiki-3" label="石と埴輪の山" />
 			</Beat>
 			<Beat name="今は、森に見えるけれど" captions={c} from={19} to={19}>
-				<Photo id="daisen-b5" label="今は、森に見えるけれど" />
+				<Photo id="moat-10" label="今は、森に見えるけれど" />
 			</Beat>
 			<Beat name="ShipView" captions={c} from={20} to={20}>
 				<Visual label="海からも見えた？">

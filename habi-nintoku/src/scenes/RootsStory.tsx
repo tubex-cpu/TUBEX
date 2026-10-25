@@ -9,7 +9,7 @@ import {rootsStoryCaptions as c} from '../data/captions';
 export const RootsStory = () => (
 	<SceneFrame captions={c} voice="RootsStory" label="調査の先に" title="動き出した巨大古墳">
 		<Beat name="答えは、見つからなかった" captions={c} from={0} to={0}>
-			<Photo id="daisen-b6" label="答えは、見つからなかった" />
+			<Photo id="haniwa-horse" label="答えは、見つからなかった" />
 		</Beat>
 		<Beat name="閉ざされた古墳が、動き出" captions={c} from={1} to={2}>
 			<Photo id="daisen-2024" move="out" label="閉ざされた古墳が、動き出す" />
@@ -41,10 +41,10 @@ export const RootsStory = () => (
 			<Photo id="haniwa-warrior" label="1500年以上前の埴輪" />
 		</Beat>
 		<Beat name="2回目の調査でも" captions={c} from={13} to={13}>
-			<Photo id="moat-6" label="2回目の調査でも" />
+			<Photo id="haniwa-early" label="2回目の調査でも" />
 		</Beat>
 		<Beat name="2019年、世界文化遺産" captions={c} from={14} to={15}>
-			<Photo id="daisen-h5" move="left" label="2019年、世界文化遺産へ" />
+			<Photo id="nintoku-02" move="left" label="2019年、世界文化遺産へ" />
 		</Beat>
 		<Beat name="HeritageAreas" captions={c} from={16} to={16}>
 			<Visual label="百舌鳥と古市">
