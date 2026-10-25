@@ -33,7 +33,7 @@ export const Clue16Now = () => {
 				</Visual>
 			</Beat>
 			<Beat name="今も続く、守る仕事" captions={c} from={11} to={12}>
-				<Photo id="park-3" label="今も続く、守る仕事" />
+				<Photo id="kusunoki" label="今も続く、守る仕事" />
 			</Beat>
 			<Beat name="判決" captions={c} from={13} to={15}>
 				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 13, 14, fps)} />

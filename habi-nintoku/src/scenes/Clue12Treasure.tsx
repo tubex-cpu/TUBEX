@@ -1,6 +1,6 @@
 import {Beat, captionFrame} from '../components/Beat';
 import {GavelVerdict} from '../components/GavelVerdict';
-import {KnifeDiagram, TreasurePath, WrapperNote} from '../components/NintokuArt3';
+import {KnifeDiagram, News2025, TreasurePath, WrapperNote} from '../components/NintokuArt3';
 import {Photo} from '../components/Photo';
 import {SceneFrame} from '../components/SceneFrame';
 import {Visual} from '../components/Scenery';
@@ -12,14 +12,16 @@ export const Clue12Treasure = () => {
 	const {fps} = useVideoConfig();
 	return (
 		<SceneFrame captions={c} voice="Clue12Treasure" label="第12の手がかり" title="明治5年の宝は、すべて失われた？">
-			<Beat name="埋め戻された宝" captions={c} from={0} to={1}>
-				<Photo id="otsukayama-armor" label="埋め戻された宝" />
+			<Beat name="古墳時代の甲" captions={c} from={0} to={1}>
+				<Photo id="otsukayama-armor" label="古墳時代の甲" />
 			</Beat>
 			<Beat name="残されたのは、絵だけ？" captions={c} from={2} to={3}>
-				<Photo id="sakai-museum" label="残されたのは、絵だけ？" />
+				<Photo id="osamezuka-3" label="残されたのは、絵だけ？" />
 			</Beat>
-			<Beat name="2025年6月、思いがけ" captions={c} from={4} to={5}>
-				<Photo id="daisen-park" label="2025年6月、思いがけない発表" />
+			<Beat name="News2025" captions={c} from={4} to={5}>
+				<Visual label="2025年6月、思いがけない発表">
+					<News2025 />
+				</Visual>
 			</Beat>
 			<Beat name="目利きの遺品" captions={c} from={6} to={7}>
 				<Photo id="kokugakuin" label="目利きの遺品" />
@@ -42,8 +44,8 @@ export const Clue12Treasure = () => {
 					<TreasurePath />
 				</Visual>
 			</Beat>
-			<Beat name="150年ぶりの公開" captions={c} from={15} to={17}>
-				<Photo id="otsukayama-beads" label="150年ぶりの公開" />
+			<Beat name="堺市博物館で、初めての公" captions={c} from={15} to={17}>
+				<Photo id="sakai-museum" label="堺市博物館で、初めての公開" />
 			</Beat>
 			<Beat name="判決" captions={c} from={18} to={20}>
 				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 18, 19, fps)} />

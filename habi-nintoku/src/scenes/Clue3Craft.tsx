@@ -47,8 +47,8 @@ export const Clue3Craft = () => {
 			<Beat name="海を越えてきた技術" captions={c} from={11} to={11}>
 				<Photo id="suemura-pot" label="海を越えてきた技術" />
 			</Beat>
-			<Beat name="「大王の甕」" captions={c} from={12} to={13}>
-				<Photo id="sue-jar-2" label="「大王の甕」" />
+			<Beat name="須恵器の大きなかめ" captions={c} from={12} to={13}>
+				<Photo id="sue-jar-2" label="須恵器の大きなかめ" />
 			</Beat>
 			<Beat name="Hirakata2025" captions={c} from={14} to={15}>
 				<Visual label="2025年10月、枚方で">

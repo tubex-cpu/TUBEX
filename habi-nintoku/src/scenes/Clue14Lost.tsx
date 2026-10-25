@@ -25,8 +25,8 @@ export const Clue14Lost = () => {
 					<LostTimeline />
 				</Visual>
 			</Beat>
-			<Beat name="削られていった古墳" captions={c} from={6} to={7}>
-				<Photo id="osamezuka-3" label="削られていった古墳" />
+			<Beat name="消えた大塚山古墳" captions={c} from={6} to={7}>
+				<Photo id="otsukayama-beads" label="消えた大塚山古墳" />
 			</Beat>
 			<Beat name="最後に消えた古墳" captions={c} from={8} to={9}>
 				<Photo id="moat-13" label="最後に消えた古墳" />

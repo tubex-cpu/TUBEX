@@ -46,7 +46,7 @@ export const Clue10Inside = () => {
 				<Photo id="cuirass" label="鋲で留めた甲" />
 			</Beat>
 			<Beat name="2026年、沖ノ島で" captions={c} from={13} to={13}>
-				<Photo id="bell-mirror" label="2026年、沖ノ島で" />
+				<Photo id="okinoshima-view" label="2026年、沖ノ島で" />
 			</Beat>
 			<Beat name="明治5年、もうひとつの巡" captions={c} from={14} to={15}>
 				<Photo id="mint" label="明治5年、もうひとつの巡り合わせ" />

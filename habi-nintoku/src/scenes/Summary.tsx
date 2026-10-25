@@ -50,7 +50,7 @@ export const Summary = () => (
 			<VerdictBoard />
 		</Beat>
 		<Beat name="決まらなかった" captions={c} from={17} to={17}>
-			<Photo id="osamezuka-5" move="out" label="誰が眠るのかは、まだわからない。でも――" />
+			<Photo id="bell-mirror" move="out" label="誰が眠るのかは、まだわからない。でも――" />
 		</Beat>
 		<Beat name="埴輪と宝と土壇" captions={c} from={18} to={18}>
 			<Photo id="magodayu-4" label="埴輪の列と、150年ぶりの宝と、浮かび上がった土壇" />

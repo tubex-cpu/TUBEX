@@ -951,3 +951,25 @@ export const TechRoute: React.FC = () => {
 		</Panel>
 	);
 };
+
+// 2025年6月の発表
+export const News2025: React.FC = () => {
+	const frame = useCurrentFrame();
+	return (
+		<Panel fill="#1b140f">
+			<g opacity={fadeIn(frame, 0)}>
+				<rect x={260} y={60} width={880} height={420} rx={10} fill="#efe6d2" />
+				<rect x={260} y={60} width={880} height={90} rx={10} fill={colors.correct} />
+				<text x={700} y={122} textAnchor="middle" {...txt(48, '#fff')}>
+					2025年6月 発表
+				</text>
+				<text x={700} y={270} textAnchor="middle" {...mincho(60, colors.ink)} opacity={fadeIn(frame, 20)}>
+					仁徳天皇陵の副葬品
+				</text>
+				<text x={700} y={380} textAnchor="middle" {...mincho(60, colors.correct)} opacity={fadeIn(frame, 40)}>
+					実物を確認
+				</text>
+			</g>
+		</Panel>
+	);
+};

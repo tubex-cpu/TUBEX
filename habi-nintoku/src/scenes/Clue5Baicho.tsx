@@ -18,7 +18,7 @@ export const Clue5Baicho = () => {
 				</Visual>
 			</Beat>
 			<Beat name="家来の墓？" captions={c} from={3} to={4}>
-				<Photo id="gosashi-mound" label="家来の墓？" />
+				<Photo id="osamezuka-5" label="家来の墓？" />
 			</Beat>
 			<Beat name="塚廻古墳" captions={c} from={5} to={7}>
 				<Photo id="tsukamawari" label="塚廻古墳" />
