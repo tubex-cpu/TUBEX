@@ -1,7 +1,7 @@
 """オリジナルBGM 3曲をシンセで生成する（著作権フリー）。
 動画の各パートより長い通し曲として作り、ループさせない（同じ小節をくり返さない）。
   python3 scripts/make-bgm.py
-出力: public/bgm/bgm1-dawn.mp3（前半）, bgm2-plot.mp3（中盤）, bgm3-castle.mp3（後半）
+出力: public/bgm/bgm1-mozu.mp3（前半）, bgm2-survey.mp3（中盤）, bgm3-relief.mp3（後半）
 """
 import subprocess, wave
 from pathlib import Path
@@ -11,7 +11,7 @@ from scipy.signal import lfilter
 
 ROOT = Path(__file__).resolve().parent.parent
 SR = 44100
-rng = np.random.default_rng(1582)
+rng = np.random.default_rng(486)
 
 NOTE = {'C': 0, 'C#': 1, 'Db': 1, 'D': 2, 'D#': 3, 'Eb': 3, 'E': 4, 'F': 5, 'F#': 6, 'Gb': 6, 'G': 7, 'G#': 8, 'Ab': 8, 'A': 9, 'A#': 10, 'Bb': 10, 'B': 11}
 
@@ -149,9 +149,9 @@ out = ROOT / 'public/bgm'
 out.mkdir(parents=True, exist_ok=True)
 
 # 1. 前半「閉園後の法廷」：Dマイナー中心。オルゴールのようなベルと時計の音（約7分20秒）
-tr = Track(62, 493)
+tr = Track(58, 470)
 pool = [['D3', 'F3', 'A3'], ['Bb2', 'D3', 'F3'], ['G2', 'Bb2', 'D3'], ['A2', 'C#3', 'E3'], ['F2', 'A2', 'C3'], ['C3', 'E3', 'G3'], ['E2', 'G2', 'Bb2'], ['G2', 'B2', 'D3']]
-keys = [-4, -4, -6, -1, -4, 1, -6, -4, -2, -7, -4, -1]
+keys = [-2, -2, -5, 0, -2, 2, -5, -2, -4, -7, -2, 0]
 for si, (b0, n) in enumerate(sections(tr.bars, 8)):
     key = keys[si % len(keys)] + (12 if si >= len(keys) else 0) * 0
     prog = [pool[0]] + [pool[i] for i in rng.choice(np.arange(1, len(pool)), 3, replace=False)]
@@ -170,12 +170,12 @@ for si, (b0, n) in enumerate(sections(tr.bars, 8)):
                 if rng.random() < density:
                     nn = ch[rng.integers(0, 3)]
                     tr.add(bar * 4 + k * 0.5, bell(shift(nn, key) * rng.choice([2, 4, 4]), 2.5, 0.06, rng.uniform(-0.6, 0.6)))
-tr.render(out / 'bgm1-dawn.mp3', 0.4)
+tr.render(out / 'bgm1-mozu.mp3', 0.4)
 
 # 2. 中盤「調査」：Aマイナー中心。刻むベースとピチカート、緊張感（約8分半）
-tr = Track(90, 460)
+tr = Track(84, 470)
 pool = [['A2', 'C3', 'E3'], ['F2', 'A2', 'C3'], ['E2', 'G#2', 'B2'], ['D2', 'F2', 'A2'], ['G2', 'B2', 'D3'], ['C3', 'E3', 'G3'], ['Bb2', 'D3', 'F3'], ['B2', 'D3', 'F3']]
-keys = [1, 1, 4, -1, 1, 6, 3, -2, 1, 2]
+keys = [-1, -1, 2, -3, -1, 4, 1, -4, -1, 0]
 for si, (b0, n) in enumerate(sections(tr.bars, 8)):
     key = keys[si % len(keys)]
     prog = [pool[0]] + [pool[i] for i in rng.choice(np.arange(1, len(pool)), 3, replace=False)]
@@ -197,13 +197,13 @@ for si, (b0, n) in enumerate(sections(tr.bars, 8)):
                 if rng.random() < 0.8:
                     nn = ch[rng.integers(0, 3)]
                     tr.add(bar * 4 + k * 0.5, pluck(shift(nn, key) * rng.choice([2, 4]), 0.6, 0.05, 0.4 if k % 2 else -0.4))
-tr.render(out / 'bgm2-plot.mp3', 0.25)
+tr.render(out / 'bgm2-survey.mp3', 0.25)
 
 # 3. 後半「足元にあった物語」：Cメジャー中心。温かいピアノとストリングス（約6分30秒）
-tr = Track(68, 382)
+tr = Track(72, 385)
 pool = [['C3', 'E3', 'G3'], ['B2', 'D3', 'G3'], ['A2', 'C3', 'E3'], ['F2', 'A2', 'C3'], ['D3', 'F3', 'A3'], ['G2', 'B2', 'D3'], ['E2', 'G2', 'B2'], ['F2', 'A2', 'D3']]
 scale = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5', 'D5', 'E5']
-keys = [-2, -2, 0, -5, 3, -2, -4, 1]
+keys = [0, 0, 2, -3, 5, 0, -2, 3]
 for si, (b0, n) in enumerate(sections(tr.bars, 8)):
     key = keys[si % len(keys)]
     prog = [pool[0]] + [pool[i] for i in rng.choice(np.arange(1, len(pool)), 7, replace=False)]
@@ -221,4 +221,4 @@ for si, (b0, n) in enumerate(sections(tr.bars, 8)):
             for half in (0, 2):
                 pos = int(np.clip(pos + rng.choice([-2, -1, -1, 1, 1, 2, 0]), 0, len(scale) - 1))
                 tr.add(bar * 4 + half, piano(shift(scale[pos], key), 3.0, 0.09 if half == 0 else 0.08, 0.3))
-tr.render(out / 'bgm3-castle.mp3', 0.35)
+tr.render(out / 'bgm3-relief.mp3', 0.35)

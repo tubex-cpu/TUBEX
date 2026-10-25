@@ -19,7 +19,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parent.parent
 ENGINE = 'http://localhost:50021'
 SPEAKER = 11  # 玄野武宏（ノーマル）
-SPEED = 1.05
+SPEED = 1.02
 RATE = 48000
 FPS = 30
 TRANSITION = 20
