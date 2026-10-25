@@ -1,5 +1,7 @@
 # TUBEX – Claude Code 向け指示
 
+現在の定期Routineは `routine_assignments.json` の明示割当だけを扱い、キューから案件を自分で選ばない。キューの直列処理順は設定担当が割当を決める際の判断基準である。指示の優先順位は保存済みRoutine指示 → 採用ref → 起動時main。STOPでは着手せず報告。ASSIGNMENTS_REQUIRE_GATE_CHECKは制作許可ではなく、割当と承認根拠の照合を要する。実行権取得スクリプトは採用refのhead・差分なしの独立worktree内で実行する。
+
 @docs/社長の前提.md
 
 YouTube 3チャンネル（① ハビ判事の都市伝説ジャッジ ②③ 新規チャンネル（未設計））の制作を自動で進めるリポジトリ。工程・担当・費用ルールは `pipeline/README.md`、チャンネル固有の構成・口調・ルールは `channels/<name>/CHANNEL.md` が正。社長の考え・前提は上で読み込んだ `docs/社長の前提.md` を常に判断の基準にする（「（未記入）」の項目は推測で埋めない）。

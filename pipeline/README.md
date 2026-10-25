@@ -1,5 +1,7 @@
 # TUBEX 制作パイプライン（3チャンネル＋note）
 
+現在の定期Routineは `routine_assignments.json` の明示割当だけを扱い、キューから案件を自分で選ばない。キューの直列処理順は設定担当が割当を決める際の判断基準である。指示の優先順位は保存済みRoutine指示 → 採用ref → 起動時main。STOPでは着手せず報告。ASSIGNMENTS_REQUIRE_GATE_CHECKは制作許可ではなく、割当と承認根拠の照合を要する。実行権取得スクリプトは採用refのhead・差分なしの独立worktree内で実行する。
+
 | チャンネル | 設定 | 本数・尺 |
 |---|---|---|
 | ① ハビ判事の都市伝説ジャッジ | `channels/habi-judge/CHANNEL.md` | 週3本・20〜30分（目標） |
