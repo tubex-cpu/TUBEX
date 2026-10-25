@@ -929,3 +929,25 @@ export const BufferZone: React.FC = () => {
 		</Panel>
 	);
 };
+
+// 須恵器の技術は、朝鮮半島から海を渡ってきた
+export const TechRoute: React.FC = () => {
+	const frame = useCurrentFrame();
+	const p = interpolate(frame, [10, 80], [0, 1], ease);
+	return (
+		<Panel fill="#173a5c">
+			<path d="M120 0 L460 0 L470 260 L380 420 L250 440 L180 300 Z" fill="#a89a74" />
+			<path d="M640 600 L800 470 L1000 380 L1220 280 L1380 220 L1400 620 Z" fill="#a89a74" />
+			<path d="M330 400 C 500 520 700 520 900 450" stroke={colors.gold} strokeWidth={12} fill="none" pathLength={1} strokeDasharray={`${p} 1`} />
+			<text x={300} y={200} textAnchor="middle" {...txt(40, '#fff')} stroke="#000" strokeWidth={6} paintOrder="stroke">
+				朝鮮半島
+			</text>
+			<text x={980} y={530} textAnchor="middle" {...txt(40, '#fff')} stroke="#000" strokeWidth={6} paintOrder="stroke">
+				堺
+			</text>
+			<Note y={120} at={60}>
+				5世紀のはじめごろ、海を越えて
+			</Note>
+		</Panel>
+	);
+};

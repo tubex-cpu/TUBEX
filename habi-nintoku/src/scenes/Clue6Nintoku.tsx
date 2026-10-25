@@ -4,14 +4,14 @@ import {BuildOrder, FiveKings, KamadoSmoke, NoNameTag, TwoChronicles} from '../c
 import {Photo} from '../components/Photo';
 import {SceneFrame} from '../components/SceneFrame';
 import {Visual} from '../components/Scenery';
-import {clue3NintokuCaptions as c} from '../data/captions';
+import {clue6NintokuCaptions as c} from '../data/captions';
 import {useVideoConfig} from 'remotion';
 
 // 眠っているのは仁徳天皇？（素材はすべてこの場面だけで使う）
-export const Clue3Nintoku = () => {
+export const Clue6Nintoku = () => {
 	const {fps} = useVideoConfig();
 	return (
-		<SceneFrame captions={c} voice="Clue3Nintoku" label="第3の手がかり" title="眠っているのは仁徳天皇？">
+		<SceneFrame captions={c} voice="Clue6Nintoku" label="第6の手がかり" title="眠っているのは仁徳天皇？">
 			<Beat name="16代目の天皇" captions={c} from={0} to={0}>
 				<Photo id="nintoku-chikanobu" label="16代目の天皇" />
 			</Beat>
@@ -26,58 +26,58 @@ export const Clue3Nintoku = () => {
 			<Beat name="「聖帝」とたたえられた" captions={c} from={6} to={6}>
 				<Photo id="kozu-1910" label="「聖帝」とたたえられた" />
 			</Beat>
-			<Beat name="難波の高津宮" captions={c} from={7} to={7}>
+			<Beat name="鳥の名前を持つ天皇" captions={c} from={7} to={10}>
+				<Photo id="nintoku-matsuoka" label="鳥の名前を持つ天皇" />
+			</Beat>
+			<Beat name="難波の高津宮" captions={c} from={11} to={11}>
 				<Photo id="kozu" move="left" label="難波の高津宮" />
 			</Beat>
-			<Beat name="日本書紀に書かれた、不思" captions={c} from={8} to={8}>
-				<Photo id="nihonshoki" label="日本書紀に書かれた、不思議な話" />
-			</Beat>
-			<Beat name="工事の日、鹿が" captions={c} from={9} to={9}>
+			<Beat name="工事の日、鹿が" captions={c} from={12} to={13}>
 				<Photo id="deer" label="工事の日、鹿が" />
 			</Beat>
-			<Beat name="鹿の耳から、モズ？" captions={c} from={10} to={11}>
+			<Beat name="鹿の耳から、モズ？" captions={c} from={14} to={16}>
 				<Photo id="shrike" move="out" label="鹿の耳から、モズ？" />
 			</Beat>
-			<Beat name="百舌鳥古墳群" captions={c} from={12} to={13}>
-				<Photo id="moat-3" label="百舌鳥古墳群" />
-			</Beat>
-			<Beat name="宮内庁が管理する墓" captions={c} from={14} to={14}>
+			<Beat name="宮内庁が管理する墓" captions={c} from={17} to={18}>
 				<Photo id="iha" label="宮内庁が管理する墓" />
 			</Beat>
-			<Beat name="すぐ南の、もうひとつの巨" captions={c} from={15} to={16}>
+			<Beat name="すぐ南の、もうひとつの巨" captions={c} from={19} to={20}>
 				<Photo id="kamiishizu-h" move="right" label="すぐ南の、もうひとつの巨大古墳" />
 			</Beat>
-			<Beat name="BuildOrder" captions={c} from={17} to={18}>
+			<Beat name="BuildOrder" captions={c} from={21} to={22}>
 				<Visual label="順番が、合わない？">
 					<BuildOrder />
 				</Visual>
 			</Beat>
-			<Beat name="NoNameTag" captions={c} from={19} to={20}>
-				<Visual label="名前は、見つかっていない">
+			<Beat name="年代を知る手がかり" captions={c} from={23} to={24}>
+				<Photo id="mozu-hachiman" label="年代を知る手がかり" />
+			</Beat>
+			<Beat name="NoNameTag" captions={c} from={25} to={27}>
+				<Visual label="誰の墓？">
 					<NoNameTag />
 				</Visual>
 			</Beat>
-			<Beat name="年代を示す、埴輪" captions={c} from={21} to={21}>
-				<Photo id="haniwa-takara" label="年代を示す、埴輪" />
+			<Beat name="名前は、見つかっていない" captions={c} from={28} to={29}>
+				<Photo id="haniwa-young" label="名前は、見つかっていない" />
 			</Beat>
-			<Beat name="中国の歴史書『宋書』" captions={c} from={22} to={22}>
+			<Beat name="中国の歴史書『宋書』" captions={c} from={30} to={31}>
 				<Photo id="songshu" label="中国の歴史書『宋書』" />
 			</Beat>
-			<Beat name="FiveKings" captions={c} from={23} to={25}>
+			<Beat name="FiveKings" captions={c} from={32} to={34}>
 				<Visual label="5人の倭の王">
 					<FiveKings />
 				</Visual>
 			</Beat>
-			<Beat name="TwoChronicles" captions={c} from={26} to={26}>
+			<Beat name="TwoChronicles" captions={c} from={35} to={35}>
 				<Visual label="2つの国の記録">
 					<TwoChronicles />
 				</Visual>
 			</Beat>
-			<Beat name="判決" captions={c} from={27} to={29}>
-				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 27, 28, fps)} />
+			<Beat name="判決" captions={c} from={36} to={38}>
+				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 36, 37, fps)} />
 			</Beat>
-			<Beat name="中を見た人は、いない？" captions={c} from={30}>
-				<Photo id="daisen-h3" label="中を見た人は、いない？" />
+			<Beat name="いつから、造られた？" captions={c} from={39}>
+				<Photo id="daisen-h4" move="out" label="いつから、造られた？" />
 			</Beat>
 		</SceneFrame>
 	);
