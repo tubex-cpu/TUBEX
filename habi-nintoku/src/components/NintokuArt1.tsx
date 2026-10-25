@@ -146,8 +146,8 @@ export const KofunEra: React.FC = () => {
 					</text>
 				</g>
 			))}
-			<rect x={x(3.5)} y={200} width={(x(6.9) - x(3.5)) * p} height={70} rx={14} fill={colors.gold} />
-			<text x={(x(3.5) + x(6.9)) / 2} y={175} textAnchor="middle" {...txt(44)} opacity={fadeIn(frame, 40)}>
+			<rect x={x(3.5)} y={200} width={(x(6.6) - x(3.5)) * p} height={70} rx={14} fill={colors.gold} />
+			<text x={(x(3.5) + x(6.6)) / 2} y={175} textAnchor="middle" {...txt(44)} opacity={fadeIn(frame, 40)}>
 				前方後円墳が造られた時代
 			</text>
 			<g opacity={fadeIn(frame, 70)}>

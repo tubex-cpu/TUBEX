@@ -39,13 +39,13 @@ export const Summary = () => (
 			<VerdictBoard />
 		</Beat>
 		<Beat name="決まらなかった" captions={c} from={6} to={6}>
-			<Photo id="fukuchiyama-2" move="out" label="本当の理由は、まだわからない。でも――" />
+			<Photo id="kisaragi-2" move="out" label="誰が眠るのかは、まだわからない。でも――" />
 		</Beat>
 		<Beat name="感謝と幻の城" captions={c} from={7} to={7}>
-			<Photo id="biwa-omi3" label="感謝を書き残した男と、幻の城" />
+			<Photo id="haniwa-inari" label="1500年前のまま並ぶ埴輪と、浮かび上がった土壇" />
 		</Beat>
 		<Beat name="結論" captions={c} from={8}>
-			<Photo id="hiei-sakura" label="本当の話は、作り話に負けないくらい、面白い。" />
+			<Photo id="daisen-park-2" label="本当の話は、作り話に負けないくらい、面白い。" />
 		</Beat>
 	</SceneFrame>
 );
