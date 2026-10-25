@@ -41,7 +41,7 @@
 ▼参考資料
 ・【独自】仁徳陵に未知の土盛りか 「土壇」地形、宮内庁（共同通信／秋田魁新報、2026年5月17日）https://www.sakigake.jp/news/article/20260517CO0096/
 ・仁徳陵で発掘調査始まる 宮内庁と堺市、共同で初（日本経済新聞、2018年10月）https://www.nikkei.com/article/DGXMZO36813430T21C18A0CR8000/
-・「仁徳陵」は520メートル超 宮内庁測量、古代の威容判明（日本経済新聞、2018年）https://www.nikkei.com/article/DGXMZO29292020S8A410C1CR8000/
+・「仁徳陵」は520メートル超 宮内庁測量、古代の威容判明（日本経済新聞、2018年）https://www.nikkei.com/article/DGXMZO29292020S8A410C1CR0000/
 ・「明治の盗掘説」真相は 仁徳陵の謎を探る(3)（日本経済新聞）https://www.nikkei.com/article/DGXLASIH16H03_W6A610C1AA2P00/
 ・ピラミッドに比肩する？ 大山古墳（仁徳天皇陵）のプロフィール（nippon.com）https://www.nippon.com/ja/features/h00316/
 ・現代技術と古代技術による仁徳天皇陵の建設（大林組「季刊大林」）https://www.obayashi.co.jp/kikan_obayashi/detail/kikan_20_idea.html
