@@ -1,109 +1,158 @@
 // scripts/build-voice.py で自動生成。手で編集しないこと。
 import type {Caption} from '@remotion/captions';
 
-// 0:00 謎の先出し（2964フレーム）
+// 0:00 謎の先出し（4271フレーム）
 export const introCaptions: Caption[] = [
   {
-    "text": "2026年5月。大阪の堺市にある、日本最大の古墳について、思いがけない事実が明らかになった。",
+    "text": "大阪、堺。住宅街のまんなかに、三重の濠に囲まれた、巨大な森がある。",
     "startMs": 500,
-    "endMs": 8383,
+    "endMs": 7039,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "仁徳天皇陵。その前方部に、人の手で土を盛って造った「土壇」とみられる地形が、確認されたのだ。",
-    "startMs": 8863,
-    "endMs": 17215,
+    "text": "森の入り口には、柵と鳥居。その先へ、私たちが足を踏み入れることは、許されていない。",
+    "startMs": 7519,
+    "endMs": 14580,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "同じような土壇がある古墳では、そこから別の埋葬施設が見つかった例がある。",
-    "startMs": 17695,
-    "endMs": 22751,
+    "text": "仁徳天皇陵。教科書で、誰もが一度は見た、日本最大の古墳だ。",
+    "startMs": 15060,
+    "endMs": 20521,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "この巨大な墓には、まだ誰も知らない、もうひとつの埋葬が残っているのかもしれない。",
-    "startMs": 23231,
-    "endMs": 28852,
+    "text": "ここには、仁徳天皇が眠っている。私たちは、そう教わってきた。",
+    "startMs": 21001,
+    "endMs": 26164,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "しかも、この古墳が動いたのは、これだけではない。",
-    "startMs": 29332,
-    "endMs": 32948,
+    "text": "でも、それを確かめた人は、実は、一人もいない。",
+    "startMs": 26644,
+    "endMs": 30761,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2025年の春。研究者たちが、ボートで濠を渡り、初めて、この古墳の墳丘に足を踏み入れた。",
-    "startMs": 33428,
-    "endMs": 41321,
+    "text": "墓の中から、仁徳天皇の名前が見つかったわけではない。古墳の主が眠る場所は、一度も調べられたことがないのだ。",
+    "startMs": 31241,
+    "endMs": 39465,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして同じ年の夏。150年以上、絵でしか知られていなかった、この墓の宝の実物が、東京の大学で見つかった。",
-    "startMs": 41801,
-    "endMs": 50676,
+    "text": "なぜ、1500年以上たった今も、この墓の謎は解けないのか。",
+    "startMs": 39945,
+    "endMs": 44692,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "教科書で、誰もが一度は見た、あの鍵穴の形の古墳。",
-    "startMs": 51156,
-    "endMs": 55476,
+    "text": "それは、ここが、天皇の墓として、国が守り続けてきた場所だからだ。研究者でさえ、自由に掘ることは許されていない。",
+    "startMs": 45172,
+    "endMs": 54335,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "でも、その中に誰が眠っているのか。実は、今も確かめられていない。",
-    "startMs": 55956,
-    "endMs": 61204,
+    "text": "しかも、調べれば調べるほど、話が合わなくなっていく。",
+    "startMs": 54815,
+    "endMs": 58836,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "明治時代、この墓が、たった一度だけ口を開けたことがある。そのとき見つかった棺は、ふたを開けられないまま、ふたたび埋められた。",
-    "startMs": 61684,
-    "endMs": 71007,
+    "text": "すぐ南にある、仁徳天皇の息子の墓とされる古墳。そちらのほうが、先に造られたとみられているのだ。",
+    "startMs": 59316,
+    "endMs": 66708,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、この墓の宝だと伝わる品が、なぜか、海の向こうのアメリカにある。",
-    "startMs": 71487,
-    "endMs": 77225,
+    "text": "父の墓より、息子の墓が先に造られた？",
+    "startMs": 67188,
+    "endMs": 70505,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "世界最大の墓に、何が隠されているのか。",
-    "startMs": 77705,
-    "endMs": 80980,
+    "text": "もし、ここに眠るのが、仁徳天皇でないとしたら。この巨大な墓の主は、いったい誰なのか。",
+    "startMs": 70985,
+    "endMs": 78036,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "眠っているのは、本当に仁徳天皇なのか。埴輪は、いけにえの身代わりだったのか。そして、明治に消えた宝は、どこへ行ったのか。",
-    "startMs": 81460,
-    "endMs": 91060,
+    "text": "そして、本当の仁徳天皇は、どこに眠っているのか。",
+    "startMs": 78516,
+    "endMs": 82559,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "今夜は、いつもより長い法廷になる。証拠だけで、ひとつずつ判決を下していこう。",
-    "startMs": 91540,
-    "endMs": 97588,
+    "text": "明治時代、この墓が、たった一度だけ口を開けたことがある。現れた石の棺は、ふたを開けられないまま、ふたたび土の中に埋められた。",
+    "startMs": 83039,
+    "endMs": 92820,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そのとき墓から出た宝の実物は、150年以上、行方がわからなくなっていた。",
+    "startMs": 93300,
+    "endMs": 99081,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして2026年5月。閉ざされた墓をめぐって、ついに、国の調査が動いた。",
+    "startMs": 99561,
+    "endMs": 105855,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "宮内庁が作った、古墳の地形の立体図。そこに、人の手で土を盛ったとみられる、四角い「土壇」が浮かび上がったのだ。",
+    "startMs": 106335,
+    "endMs": 115924,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "同じような土壇がある古墳では、その下から、別の埋葬施設が見つかった例がある。",
+    "startMs": 116404,
+    "endMs": 122079,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この墓には、まだ誰も知らない、もうひとりの誰かが眠っているのかもしれない。",
+    "startMs": 122559,
+    "endMs": 127593,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "1500年、閉ざされてきた巨大な墓。そこに眠るのは、誰なのか。",
+    "startMs": 128073,
+    "endMs": 133247,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "今夜は、いつもより長い法廷になる。証拠だけで、この墓の謎に、ひとつずつ判決を下していこう。",
+    "startMs": 133727,
+    "endMs": 141140,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 ハビ判事登場（761フレーム）
+// 0:00 ハビ判事登場（809フレーム）
 export const judgeEntranceCaptions: Caption[] = [
   {
     "text": "こんばんは。閉園後の法廷にようこそ。ハビ判事です。",
@@ -127,23 +176,23 @@ export const judgeEntranceCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "仁徳天皇陵には、何が眠っているのか。",
+    "text": "仁徳天皇陵に眠っているのは、本当に、仁徳天皇なのか。",
     "startMs": 11881,
-    "endMs": 14985,
+    "endMs": 16564,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "最新の研究をもとに手がかりを、ひとつずつたどっていく。",
-    "startMs": 15465,
-    "endMs": 19316,
+    "startMs": 17044,
+    "endMs": 20895,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "最初の手がかりは、誰もが聞いたことのある、あのうたい文句だ。",
-    "startMs": 19796,
-    "endMs": 24159,
+    "startMs": 21375,
+    "endMs": 25737,
     "timestampMs": null,
     "confidence": null
   }
@@ -1205,7 +1254,7 @@ export const clue5BaichoCaptions: Caption[] = [
   }
 ];
 
-// 0:00 第6の手がかり 眠っているのは仁徳天皇？（8103フレーム）
+// 0:00 第6の手がかり 眠っているのは仁徳天皇？（8344フレーム）
 export const clue6NintokuCaptions: Caption[] = [
   {
     "text": "仁徳天皇は、『古事記』や『日本書紀』に登場する、16代目の天皇だ。",
@@ -1362,128 +1411,128 @@ export const clue6NintokuCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "父より先に、息子の墓が造られた？ これでは、順番が合わない。",
+    "text": "父より先に、息子の墓が造られた？ これでは、順番が合わない。 そのため、息子の墓とされるこの古墳こそ、本当の仁徳天皇の墓ではないか、と考える研究者もいる。",
     "startMs": 146527,
-    "endMs": 151753,
+    "endMs": 159785,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "古墳が造られた年代は、まわりに並べられた埴輪の形などから、5世紀の中ごろと推定されている。",
-    "startMs": 152233,
-    "endMs": 159039,
+    "startMs": 160265,
+    "endMs": 167071,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そして、造り出しから見つかった、あの須恵器の大きなかめも、年代を知る手がかりとして注目されている。",
-    "startMs": 159519,
-    "endMs": 166441,
+    "startMs": 167551,
+    "endMs": 174473,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この年代から、仁徳天皇ではなく、その息子の世代の天皇ではないかと考える研究者もいる。",
-    "startMs": 166921,
-    "endMs": 173545,
+    "startMs": 174953,
+    "endMs": 181577,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "一方で、昔の記録に残る墓の場所から考えて、やはり仁徳天皇の墓だと考える研究者もいる。",
-    "startMs": 174025,
-    "endMs": 181129,
+    "startMs": 182057,
+    "endMs": 189161,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "さらに、仁徳天皇と、その父とされる応神天皇は、もともと同じ一人の王の話が、2人に分かれたものではないか、という説まである。",
-    "startMs": 181609,
-    "endMs": 191647,
+    "startMs": 189641,
+    "endMs": 199679,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そもそも、この古墳の中から、仁徳天皇の名前が書かれたものが見つかったわけではない。",
-    "startMs": 192127,
-    "endMs": 197940,
+    "startMs": 200159,
+    "endMs": 205972,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そのため、今の教科書では、「大仙古墳」のように、地名で呼ぶことが多くなっている。",
-    "startMs": 198420,
-    "endMs": 205076,
+    "startMs": 206452,
+    "endMs": 213108,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "中国の歴史書『宋書』には、5世紀に中国へ使いを送った、5人の倭の王の名前が記されている。",
-    "startMs": 205556,
-    "endMs": 213268,
+    "startMs": 213588,
+    "endMs": 221300,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "讃、珍、済、興、武。",
-    "startMs": 213748,
-    "endMs": 217599,
+    "startMs": 221780,
+    "endMs": 225631,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "このうち讃は、応神天皇、仁徳天皇、履中天皇の、いずれかではないかと考えられてきた。",
-    "startMs": 218079,
-    "endMs": 225759,
+    "startMs": 226111,
+    "endMs": 233791,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "仁徳天皇の名前、オオサザキの「サザキ」と、「讃」の音が通じる、という説もある。",
-    "startMs": 226239,
-    "endMs": 234025,
+    "startMs": 234271,
+    "endMs": 242057,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この古墳の主は、5人の王のうちの誰かだと考える研究者もいる。でも、それが誰なのかは、まだ決まっていない。",
-    "startMs": 234505,
-    "endMs": 242783,
+    "startMs": 242537,
+    "endMs": 250815,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "中国の記録と、日本の記録。2つの国の歴史書を重ね合わせても、この墓の主には、たどり着けないのだ。",
-    "startMs": 243263,
-    "endMs": 251508,
+    "startMs": 251295,
+    "endMs": 259540,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 251988,
-    "endMs": 253417,
+    "startMs": 260020,
+    "endMs": 261449,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 253897,
-    "endMs": 254559,
+    "startMs": 261929,
+    "endMs": 262591,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この古墳が、仁徳天皇の墓だと確かめられたわけではない。ここに眠る王の名前は、まだ、わかっていないのだ。",
-    "startMs": 255039,
-    "endMs": 263092,
+    "startMs": 263071,
+    "endMs": 271124,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "では、この巨大な墓は、王が亡くなってから造られたのだろうか。それとも――。",
-    "startMs": 263572,
-    "endMs": 268895,
+    "startMs": 271604,
+    "endMs": 276927,
     "timestampMs": null,
     "confidence": null
   }

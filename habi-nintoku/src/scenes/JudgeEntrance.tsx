@@ -124,7 +124,7 @@ export const JudgeEntrance = () => (
 			<NamePlate />
 		</Beat>
 		<Beat name="今夜の問い" captions={c} from={2} to={3}>
-			<Photo id="daisen-z1" label="仁徳天皇陵には、何が眠っている？" />
+			<Photo id="daisen-z1" label="眠るのは、本当に仁徳天皇？" />
 		</Beat>
 		<Beat name="5つの手がかり" captions={c} from={4}>
 			<ClueRow />

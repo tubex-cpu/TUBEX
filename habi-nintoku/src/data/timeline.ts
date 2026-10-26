@@ -2,14 +2,14 @@
 export const TRANSITION_FRAMES = 20;
 
 export const sceneDurations = {
-	Intro: 2964,
-	JudgeEntrance: 761,
+	Intro: 4271,
+	JudgeEntrance: 809,
 	Clue1Size: 9035,
 	Clue2Build: 5158,
 	Clue3Craft: 5376,
 	Clue4Haniwa: 6179,
 	Clue5Baicho: 4270,
-	Clue6Nintoku: 8103,
+	Clue6Nintoku: 8344,
 	Clue7Juryo: 3642,
 	Clue8Kings: 5078,
 	Clue9Name: 6088,
@@ -26,4 +26,4 @@ export const sceneDurations = {
 	Closing: 449,
 } as const;
 
-export const TOTAL_FRAMES = 105471;
+export const TOTAL_FRAMES = 107067;

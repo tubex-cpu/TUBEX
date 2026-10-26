@@ -25,7 +25,7 @@ import {RootsStory} from './scenes/RootsStory';
 import {Summary} from './scenes/Summary';
 import {UnsolvedMystery} from './scenes/UnsolvedMystery';
 
-// 720p書き出し用：1920×1080の本編を2/3に縮めて描く
+// 投稿用の720p版（1920×1080の画面をそのまま縮小）
 const HabiNintoku720 = () => (
 	<AbsoluteFill style={{width: 1920, height: 1080, transform: 'scale(0.6666667)', transformOrigin: 'top left'}}>
 		<HabiNintokuVideo />
