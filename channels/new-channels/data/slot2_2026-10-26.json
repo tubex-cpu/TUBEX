@@ -1,0 +1,5616 @@
+{
+ "retrieved": "2026-10-26",
+ "source": "YouTube Data API v3 (free quota). Key not recorded.",
+ "genre": {
+  "retrieved": "2026-10-26",
+  "genres": [
+   {
+    "keyword": "失業保険 もらい方",
+    "n": 30,
+    "top1": 3532132,
+    "top10": 844477,
+    "top30": 295521,
+    "channels": 18,
+    "over3x": 12,
+    "under100k": 12,
+    "new_channels": {
+     "元ハロワ職員まゆみのお金の安心相談室": {
+      "created": "2025-11-09",
+      "months": 11.5,
+      "subs": 193000,
+      "videos": 64
+     },
+     "元ハローワーク職員ケンの退職サポート": {
+      "created": "2025-11-15",
+      "months": 11.3,
+      "subs": 20700,
+      "videos": 43
+     }
+    },
+    "median_min": 19.1,
+    "videos": [
+     {
+      "id": "fmWE_Uss-uM",
+      "title": "【最新】簡単なのに半数以上がもらい漏れ…月6.7万円得するこの制度は今すぐ申請してください。",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2025-07-31",
+      "views": 3532132,
+      "min": 16.8,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "mp-F3HzRss0",
+      "title": "元ハロワ職員が断言｜退職後にやってはいけないこと / 手続き3選【2026年 / 失業保険 / 傷病手当/退職給付金】",
+      "channel": "元ハローワーク職員とげまる【失業保険 / 退職給付金】",
+      "channelId": "UCu6rYTOd5IW0Rp98kAB0BUA",
+      "published": "2026-05-05",
+      "views": 2829429,
+      "min": 14.8,
+      "ch_subs": 23900,
+      "ch_videos": 42,
+      "ch_created": "2025-10-18"
+     },
+     {
+      "id": "9a2_Bc3b06o",
+      "title": "【2026年新ルール】50・60代は絶対見て！申請忘れると老後資金1000万円が消滅【年金・失業保険・給付金】",
+      "channel": "元ハロワ職員まゆみのお金の安心相談室",
+      "channelId": "UCSVqU8FWv3U8trsE9MzMp2A",
+      "published": "2025-12-19",
+      "views": 2611347,
+      "min": 19.1,
+      "ch_subs": 193000,
+      "ch_videos": 64,
+      "ch_created": "2025-11-09"
+     },
+     {
+      "id": "HEM3b4cEcHk",
+      "title": "65歳まで働いて損をしている人多数います！一番得できる退職のタイミング教えます！",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2025-11-26",
+      "views": 2508354,
+      "min": 17.0,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "RsW46T_cKGM",
+      "title": "【50歳以上必見】年金は65歳で受給するな！ベストな年金受給年齢を解説！（繰り上げ・繰り下げ受給）",
+      "channel": "年金・給付金チャンネル",
+      "channelId": "UC1d4XwtAcv2x43D8R_2Zp1A",
+      "published": "2025-07-18",
+      "views": 2508056,
+      "min": 26.4,
+      "ch_subs": 39000,
+      "ch_videos": 13,
+      "ch_created": "2025-03-19"
+     },
+     {
+      "id": "iD7R_mUxz9Q",
+      "title": "【知らないと大損！】年金の繰り上げ受給をしない方がいい人6選！早く受け取って後悔しないために知っておくべきポイントを徹底解説！",
+      "channel": "節約看護師りょう",
+      "channelId": "UCx2HEX7jkwrRsKXNgmIUMeA",
+      "published": "2024-12-06",
+      "views": 1761968,
+      "min": 23.4,
+      "ch_subs": 745000,
+      "ch_videos": 162,
+      "ch_created": "2023-01-16"
+     },
+     {
+      "id": "x1pX91CVcME",
+      "title": "【重要】60歳になったら必ずすべき8つの申請！知らないと大損です。。",
+      "channel": "証券アナリストハーリー『50,60代のお金』",
+      "channelId": "UCfCV9rFg6MxvaXxY1Oy_EgQ",
+      "published": "2025-11-30",
+      "views": 1702231,
+      "min": 29.1,
+      "ch_subs": 164000,
+      "ch_videos": 208,
+      "ch_created": "2024-08-04"
+     },
+     {
+      "id": "okScDVHMLCA",
+      "title": "雇用保険のルール変更で65歳以降の働き方が激変？変更内容をわかりやすく解説します！",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-07-01",
+      "views": 1407992,
+      "min": 19.2,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "g0Nv_2GE130",
+      "title": "約460万もらえる!?退職する人が知らないと損する制度を解説します",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-08-19",
+      "views": 1393536,
+      "min": 25.7,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "pVjVeZnquBo",
+      "title": "これ知らないで損する人が本当に多い…退職理由を変えるだけで失業手当を増やす方法を解説します！",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2025-12-24",
+      "views": 844477,
+      "min": 21.3,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "z7NVkmRhb2g",
+      "title": "【ハローワークの現実】60歳で定年退職して無職になり、失業手当を150日分もらいました【セカンドライフシリーズ#6】",
+      "channel": "風まかせ",
+      "channelId": "UCGzyP0-0DlVH5Oi7DbSi8RQ",
+      "published": "2025-04-04",
+      "views": 745325,
+      "min": 19.3,
+      "ch_subs": 30000,
+      "ch_videos": 245,
+      "ch_created": "2018-03-24"
+     },
+     {
+      "id": "8w6LjgF-V_U",
+      "title": "失敗しない失業保険のもらい方｜申請～受給の流れやハローワークで聞かれることも解説",
+      "channel": "元ハロワ職員まゆみのお金の安心相談室",
+      "channelId": "UCSVqU8FWv3U8trsE9MzMp2A",
+      "published": "2025-11-30",
+      "views": 736165,
+      "min": 24.6,
+      "ch_subs": 193000,
+      "ch_videos": 64,
+      "ch_created": "2025-11-09"
+     },
+     {
+      "id": "4TZ05Q6p3Yg",
+      "title": "【神改正】65歳からは週10時間働けばコーヒー代が20万円に化ける！？いつから？誰が対象？週20時間を超えてはいけない理由も含めて解説！",
+      "channel": "FP1級パパこみやまのこみやまFP総合オフィス",
+      "channelId": "UCRfvvN--iV8kXJYqhVTn10g",
+      "published": "2026-06-05",
+      "views": 719053,
+      "min": 24.0,
+      "ch_subs": 185000,
+      "ch_videos": 156,
+      "ch_created": "2025-04-08"
+     },
+     {
+      "id": "NcvRJwxRBDo",
+      "title": "ハローワークはここまで追っかけてくる…失業保険を受給している時の注意点について解説します。",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-06-10",
+      "views": 592037,
+      "min": 28.6,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "dTdFj2UOH50",
+      "title": "【知らないと損】2026年のルール変更で65歳以降に社会保険に加入すると大損です！【介護保険料/雇用保険/年金】",
+      "channel": "サラダのお金相談所",
+      "channelId": "UCeicl_qqEQyLBdqhhrw20Rw",
+      "published": "2026-01-21",
+      "views": 586685,
+      "min": 45.5,
+      "ch_subs": 689000,
+      "ch_videos": 311,
+      "ch_created": "2023-09-02"
+     },
+     {
+      "id": "BrzNVcU65LI",
+      "title": "退職後すぐにやらないと後悔する6つの手続きとは？",
+      "channel": "ひろと【退職とお金】",
+      "channelId": "UCmx8QsMDGg0zhz-k3fBmzJg",
+      "published": "2025-09-22",
+      "views": 519865,
+      "min": 10.6,
+      "ch_subs": 44500,
+      "ch_videos": 108,
+      "ch_created": "2025-07-31"
+     },
+     {
+      "id": "t-67aJdbslI",
+      "title": "定年後も頑張るあなたへ…！65歳以上で働くなら知っておきたい神制度3選【失業保険・高年齢求職者給付金】",
+      "channel": "おかまもch | おかんのお金守るチャンネル",
+      "channelId": "UCY_Xgod2xaEYWtsUZoKHA3w",
+      "published": "2025-07-28",
+      "views": 508730,
+      "min": 17.1,
+      "ch_subs": 201000,
+      "ch_videos": 552,
+      "ch_created": "2023-10-29"
+     },
+     {
+      "id": "UfZ1RJ6nP4o",
+      "title": "【速報!】年金は65歳からだと遅い！政府は絶対に知られたくない！本当に得する年金の受け取り方について元役所員が完全解説",
+      "channel": "みんなの給付金・補助金ちゃんねる",
+      "channelId": "UCt8oGxc3GJUqFvBTygzTr4A",
+      "published": "2026-07-10",
+      "views": 496771,
+      "min": 32.1,
+      "ch_subs": 578000,
+      "ch_videos": 521,
+      "ch_created": "2022-10-03"
+     },
+     {
+      "id": "A_LK7nIFYZY",
+      "title": "退職後の14日間は超重要！これで退職後の生活が決まります【失業保険】",
+      "channel": "ひろと【退職とお金】",
+      "channelId": "UCmx8QsMDGg0zhz-k3fBmzJg",
+      "published": "2026-03-16",
+      "views": 441063,
+      "min": 8.2,
+      "ch_subs": 44500,
+      "ch_videos": 108,
+      "ch_created": "2025-07-31"
+     },
+     {
+      "id": "LgVJB4cu5jI",
+      "title": "【64歳11ヶ月退職で損する人続出！】7つの落とし穴と回避策とは？失業給付の額は高いがデメリットも知っておこう。",
+      "channel": "定年前後のお金の新常識【社労士みなみ】",
+      "channelId": "UCxzI8X4wZF2Osa5Jd_RqgxQ",
+      "published": "2025-09-23",
+      "views": 431981,
+      "min": 19.5,
+      "ch_subs": 298000,
+      "ch_videos": 212,
+      "ch_created": "2023-04-03"
+     },
+     {
+      "id": "7ClwnWi0Ywk",
+      "title": "退職後の14日間でやるべき4つの手続きとは？",
+      "channel": "ひろと【退職とお金】",
+      "channelId": "UCmx8QsMDGg0zhz-k3fBmzJg",
+      "published": "2025-11-28",
+      "views": 415151,
+      "min": 8.1,
+      "ch_subs": 44500,
+      "ch_videos": 108,
+      "ch_created": "2025-07-31"
+     },
+     {
+      "id": "steC56VmMHw",
+      "title": "失業手当を最長2年・毎月20万円もらって退職後のお金の不安を解消する方法を元ハロワ職員が解説",
+      "channel": "元ハロワ職員まゆみのお金の安心相談室",
+      "channelId": "UCSVqU8FWv3U8trsE9MzMp2A",
+      "published": "2025-11-24",
+      "views": 397456,
+      "min": 17.9,
+      "ch_subs": 193000,
+      "ch_videos": 64,
+      "ch_created": "2025-11-09"
+     },
+     {
+      "id": "Ojg7jiYSyCg",
+      "title": "【2026年最新】一番楽な「求職活動実績」の作り方｜真面目にやる人ほど損してます",
+      "channel": "元ハロワ職員まゆみのお金の安心相談室",
+      "channelId": "UCSVqU8FWv3U8trsE9MzMp2A",
+      "published": "2026-02-28",
+      "views": 379870,
+      "min": 19.6,
+      "ch_subs": 193000,
+      "ch_videos": 64,
+      "ch_created": "2025-11-09"
+     },
+     {
+      "id": "DCuht1Krk3Q",
+      "title": "【元ハローワーク職員が教える】求職活動のフリはバレる？ラクな実績の作り方と調査方法をコッソリ解説",
+      "channel": "元ハローワーク職員ケンの退職サポート",
+      "channelId": "UCQTo4xeZR9QbcNBKM1L3_yA",
+      "published": "2025-11-24",
+      "views": 361657,
+      "min": 13.0,
+      "ch_subs": 20700,
+      "ch_videos": 43,
+      "ch_created": "2025-11-15"
+     },
+     {
+      "id": "szkNXxdSifU",
+      "title": "【合法】働きながら失業手当を満額もらう裏ワザ3選【元ハロワ職員が暴露】",
+      "channel": "元ハローワーク職員ケンの退職サポート",
+      "channelId": "UCQTo4xeZR9QbcNBKM1L3_yA",
+      "published": "2025-12-01",
+      "views": 352020,
+      "min": 13.9,
+      "ch_subs": 20700,
+      "ch_videos": 43,
+      "ch_created": "2025-11-15"
+     },
+     {
+      "id": "znJS_-EJIL8",
+      "title": "退職後の住民税は○○申請で1年間無料になります！",
+      "channel": "【公式】退職コンシェルジュ",
+      "channelId": "UCjEob9ukPiKk2F-SyIQJdRg",
+      "published": "2025-09-01",
+      "views": 338966,
+      "min": 10.9,
+      "ch_subs": 15100,
+      "ch_videos": 262,
+      "ch_created": "2025-02-18"
+     },
+     {
+      "id": "OKAcp__N3rs",
+      "title": "【特定理由離職者】給付制限なし・保険料と税金の減免で200万円以上得する方法を元ハロワ職員が解説【裏ワザ有】",
+      "channel": "元ハローワーク職員ケンの退職サポート",
+      "channelId": "UCQTo4xeZR9QbcNBKM1L3_yA",
+      "published": "2025-12-20",
+      "views": 327331,
+      "min": 17.9,
+      "ch_subs": 20700,
+      "ch_videos": 43,
+      "ch_created": "2025-11-15"
+     },
+     {
+      "id": "VR2Fd6S954o",
+      "title": "【離職票だけじゃダメ】ハローワークに持っていく書類5選！退職後、ハローワークを最大限に活用する準備。【失業保険】【基本手当】",
+      "channel": "退職情報チャンネル",
+      "channelId": "UCWEY1K_qU7A3Jhfs4zzRuBg",
+      "published": "2025-10-18",
+      "views": 304828,
+      "min": 21.1,
+      "ch_subs": 18500,
+      "ch_videos": 185,
+      "ch_created": "2024-12-25"
+     },
+     {
+      "id": "KhcCbbSaIIw",
+      "title": "65歳、64歳11ヶ月退職は絶対ダメ！〇〇歳退職が最強です【失業保険】",
+      "channel": "退職パートナー【退職の不安解消CH】",
+      "channelId": "UCGDWuHpb1Fd6b4O462Brw6w",
+      "published": "2025-07-20",
+      "views": 298718,
+      "min": 11.8,
+      "ch_subs": 46900,
+      "ch_videos": 247,
+      "ch_created": "2024-06-21"
+     },
+     {
+      "id": "VPP6mj9gibM",
+      "title": "診断書を偽造し失業保険の不正受給に？「数百人分」被害の医師が告発　裏ビジネス横行【もっと知りたい！】【グッド！モーニング】(2026年10月21日)",
+      "channel": "ANNnewsCH",
+      "channelId": "UCGCZAYq5Xxojl_tSXcVJhiQ",
+      "published": "2026-10-21",
+      "views": 295521,
+      "min": 8.8,
+      "ch_subs": 5090000,
+      "ch_videos": 140124,
+      "ch_created": "2009-09-10"
+     }
+    ]
+   },
+   {
+    "keyword": "育休 給付金",
+    "n": 30,
+    "top1": 883948,
+    "top10": 168515,
+    "top30": 29937,
+    "channels": 20,
+    "over3x": 8,
+    "under100k": 10,
+    "new_channels": {
+     "元ハロワ職員まゆみのお金の安心相談室": {
+      "created": "2025-11-09",
+      "months": 11.5,
+      "subs": 193000,
+      "videos": 64
+     },
+     "PIVOT CAREER": {
+      "created": "2026-06-02",
+      "months": 4.8,
+      "subs": 942000,
+      "videos": 347
+     }
+    },
+    "median_min": 12.3,
+    "videos": [
+     {
+      "id": "StJqynjveos",
+      "title": "知らないとヤバい！共働き家庭こそ絶対知っておきたい制度まとめ（子育て雑学）",
+      "channel": "ちーぱぱω雑学ほいくえん【子育て雑学】",
+      "channelId": "UCb92MVQbhj5x5d24f7XneUg",
+      "published": "2025-10-15",
+      "views": 883948,
+      "min": 17.4,
+      "ch_subs": 6120,
+      "ch_videos": 205,
+      "ch_created": "2025-07-16"
+     },
+     {
+      "id": "BrzNVcU65LI",
+      "title": "退職後すぐにやらないと後悔する6つの手続きとは？",
+      "channel": "ひろと【退職とお金】",
+      "channelId": "UCmx8QsMDGg0zhz-k3fBmzJg",
+      "published": "2025-09-22",
+      "views": 519869,
+      "min": 10.6,
+      "ch_subs": 44500,
+      "ch_videos": 108,
+      "ch_created": "2025-07-31"
+     },
+     {
+      "id": "steC56VmMHw",
+      "title": "失業手当を最長2年・毎月20万円もらって退職後のお金の不安を解消する方法を元ハロワ職員が解説",
+      "channel": "元ハロワ職員まゆみのお金の安心相談室",
+      "channelId": "UCSVqU8FWv3U8trsE9MzMp2A",
+      "published": "2025-11-24",
+      "views": 397456,
+      "min": 17.9,
+      "ch_subs": 193000,
+      "ch_videos": 64,
+      "ch_created": "2025-11-09"
+     },
+     {
+      "id": "qNAEfz7dfvI",
+      "title": "【産めよ増やせよ】日本の手厚い子育て支援で1636万円貰える予定な話",
+      "channel": "トーマスガジェマガ",
+      "channelId": "UCzmxo1Zj4KkM32FlObFWdeA",
+      "published": "2026-06-29",
+      "views": 300717,
+      "min": 19.1,
+      "ch_subs": 514000,
+      "ch_videos": 475,
+      "ch_created": "2019-01-08"
+     },
+     {
+      "id": "YP1ORx83oXI",
+      "title": "ついに育休が振り込まれた。年収1300万の手当金額は？",
+      "channel": "毒女ちゃんの毒妻国家",
+      "channelId": "UCXpstZKev8QNeaB5fa-mVPQ",
+      "published": "2026-05-25",
+      "views": 270598,
+      "min": 16.4,
+      "ch_subs": 78700,
+      "ch_videos": 99,
+      "ch_created": "2025-07-01"
+     },
+     {
+      "id": "43KvZQJH7vE",
+      "title": "【これから仕事を辞める人へ】元ハローワーク職員直伝！失業保険で損しないもらい方・手続き完全ガイド",
+      "channel": "元ハロワ職員まゆみのお金の安心相談室",
+      "channelId": "UCSVqU8FWv3U8trsE9MzMp2A",
+      "published": "2026-03-21",
+      "views": 199694,
+      "min": 18.4,
+      "ch_subs": 193000,
+      "ch_videos": 64,
+      "ch_created": "2025-11-09"
+     },
+     {
+      "id": "BJKj0mZc7D8",
+      "title": "【新情報】2025年の育休＆育児改正まとめ",
+      "channel": "おかねの森",
+      "channelId": "UC_wkUnMAZ4kNqFmyrk7ObtA",
+      "published": "2025-04-18",
+      "views": 198276,
+      "min": 14.1,
+      "ch_subs": 39600,
+      "ch_videos": 37,
+      "ch_created": "2013-08-19"
+     },
+     {
+      "id": "xoJuV90gcIU",
+      "title": "あすから「育休」新制度　“両親ともに取得”で育休中も手取り10割相当に　男性の取得率はあがる？【Nスタ解説】｜TBS NEWS DIG",
+      "channel": "TBS NEWS DIG Powered by JNN",
+      "channelId": "UC6AG81pAkf6Lbi_1VC5NmPA",
+      "published": "2025-03-31",
+      "views": 193378,
+      "min": 9.8,
+      "ch_subs": 3420000,
+      "ch_videos": 91049,
+      "ch_created": "2009-09-15"
+     },
+     {
+      "id": "VD9egqpcir4",
+      "title": "【社会保障クイズ】育休中の社会保険料免除ルールと、注意すべき落とし穴を解説【リベ大公式切り抜き】",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2025-11-15",
+      "views": 176257,
+      "min": 6.5,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "s7SvN6HSmrc",
+      "title": "【手取り減ります】新制度「子ども・子育て支援金」について確認すべきポイントを解説【リベ大公式切り抜き】",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2026-04-24",
+      "views": 168515,
+      "min": 7.6,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "wdT5smV5N6s",
+      "title": "【社会保障クイズ】育休給付が「給料の80%」に！複雑すぎる新制度『出生後休業支援給付金』が貰える条件を解説【リベ大公式切り抜き】",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2025-04-04",
+      "views": 147481,
+      "min": 5.8,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "CGC8oH_1pKo",
+      "title": "【社会保障クイズ】失業給付の改正で何が変わる？会社辞めたい人は必見の内容を解説【リベ大公式切り抜き】",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2025-03-29",
+      "views": 137343,
+      "min": 6.0,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "cDgTPYB0Bcw",
+      "title": "【お金の授業 12限目】出産費用リスクを見直そう【改訂版 お金の大学 P72〜P73】",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2025-04-21",
+      "views": 137110,
+      "min": 7.5,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "7lMnjGlqbQU",
+      "title": "【子育て世帯がもらえるお金】厳選20制度を紹介／知らないと100万円以上の差／第3子の大学無償化の落とし穴／23区で支援が手厚い穴場／支援制度のチェック方法【PIVOT TALK LIFE】",
+      "channel": "PIVOT 公式チャンネル",
+      "channelId": "UC8yHePe_RgUBE-waRWy6olw",
+      "published": "2025-11-23",
+      "views": 116582,
+      "min": 56.8,
+      "ch_subs": 4100000,
+      "ch_videos": 5668,
+      "ch_created": "2022-02-17"
+     },
+     {
+      "id": "-S7iP0U4To4",
+      "title": "【もらい逃げ】育休後に「復職せず退職したい」投稿に賛否…中にはやむを得ない事情も？｜わたしとニュース",
+      "channel": "ABEMAニュース【公式】",
+      "channelId": "UCk5a240pQsTVT9CWPnTyIJw",
+      "published": "2026-01-08",
+      "views": 110670,
+      "min": 17.2,
+      "ch_subs": 1160000,
+      "ch_videos": 2034,
+      "ch_created": "2020-07-07"
+     },
+     {
+      "id": "tx7F_MtosOw",
+      "title": "【社会保障クイズ】時短勤務中の給料はどうなるの？産休・育休中は特に必見の内容を解説【リベ大公式切り抜き】",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2024-11-04",
+      "views": 103030,
+      "min": 6.1,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "CGBdhNFjzv0",
+      "title": "【気をつけないと損】育休中にオススメの働き方・NGな働き方について解説【リベ大公式切り抜き】",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2025-07-24",
+      "views": 99998,
+      "min": 8.4,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "z_WZr_G1PCY",
+      "title": "【育児とキャリアの両立】当事者・人事担当者 必見／3人に1人が退職検討／夫婦のギャップ／育休の不安／子連れ転職／データで見る両立の実態／マイナビ転職編集長が解説",
+      "channel": "PIVOT CAREER",
+      "channelId": "UCnuJEgRFwy8BNZiJEr8ewyQ",
+      "published": "2025-07-04",
+      "views": 72461,
+      "min": 25.7,
+      "ch_subs": 942000,
+      "ch_videos": 347,
+      "ch_created": "2026-06-02"
+     },
+     {
+      "id": "BbSTn4j9DTY",
+      "title": "【保育園落選狙い】「育児休業給付金」ルールが厳格化　なぜ「入りにくい園」あえて希望？背景に「仕事と子育ての両立」巡る多様な価値観「落選しなければ育休延長できないルールが問題」の声も〈カンテレNEWS〉",
+      "channel": "カンテレNEWS",
+      "channelId": "UCQhaZjODkIjuv38d-i5TVRw",
+      "published": "2025-04-28",
+      "views": 69911,
+      "min": 8.8,
+      "ch_subs": 865000,
+      "ch_videos": 8236,
+      "ch_created": "2019-12-25"
+     },
+     {
+      "id": "s_sN1_PgiKo",
+      "title": "手取り100%受け取れる！？育休制度をフル活用する方法について解説します！",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2025-12-28",
+      "views": 68243,
+      "min": 17.4,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "tVa8GT737a8",
+      "title": "2026年までに知らないと100万円損！最新育児制度まとめ",
+      "channel": "雑学子育て研究所",
+      "channelId": "UCXBAfH8W8kbC9EEXFU3X_Pg",
+      "published": "2025-12-30",
+      "views": 68060,
+      "min": 17.5,
+      "ch_subs": 3510,
+      "ch_videos": 66,
+      "ch_created": "2025-09-21"
+     },
+     {
+      "id": "0p_vyWjjRWM",
+      "title": "【社会保障クイズ】産休・育休中でも「免除されない税金」とは？【リベ大公式切り抜き】",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2025-05-23",
+      "views": 61506,
+      "min": 6.0,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "KLd6vaX6vlw",
+      "title": "【男性向け】上手に育休を取る方法【2025年4月法改正】",
+      "channel": "【社労士】コッシーチャンネル",
+      "channelId": "UCmyWsfKmHGYUxAAaApc7Jbw",
+      "published": "2025-02-21",
+      "views": 60794,
+      "min": 16.1,
+      "ch_subs": 2970,
+      "ch_videos": 91,
+      "ch_created": "2022-08-08"
+     },
+     {
+      "id": "N5Q08ppWcnw",
+      "title": "【知らなきゃ大損】時短勤務で給料UPする育児時短就業給付金を説明します！",
+      "channel": "【12人産んだ】助産師HISAKOの子育てチャンネル",
+      "channelId": "UCgLt6RS5cHmL6i15sbu2kGw",
+      "published": "2025-06-21",
+      "views": 57856,
+      "min": 10.4,
+      "ch_subs": 617000,
+      "ch_videos": 3519,
+      "ch_created": "2020-01-12"
+     },
+     {
+      "id": "QnNrxW3xids",
+      "title": "【育児休業等給付①】全体像、育児休業給付金と出生時育児休業給付金",
+      "channel": "図解でわかる 社労士講座",
+      "channelId": "UCoyz6VPWVnCj5pk9ENVs2Fg",
+      "published": "2024-11-07",
+      "views": 49326,
+      "min": 20.4,
+      "ch_subs": 23800,
+      "ch_videos": 239,
+      "ch_created": "2022-10-22"
+     },
+     {
+      "id": "MnWtKKC0BvQ",
+      "title": "出生後休業支援給付金（概要編）",
+      "channel": "厚生労働省 / Ministry of Health, Labour and Welfare",
+      "channelId": "UCVgZUHlkoN51FOwoNMBGjfw",
+      "published": "2025-11-28",
+      "views": 45276,
+      "min": 5.5,
+      "ch_subs": 240000,
+      "ch_videos": 5571,
+      "ch_created": "2008-12-19"
+     },
+     {
+      "id": "RN-zI2JmBzc",
+      "title": "【育児休業等給付②】出生後休業支援給付金と育児時短就業給付金",
+      "channel": "図解でわかる 社労士講座",
+      "channelId": "UCoyz6VPWVnCj5pk9ENVs2Fg",
+      "published": "2024-11-12",
+      "views": 39332,
+      "min": 18.7,
+      "ch_subs": 23800,
+      "ch_videos": 239,
+      "ch_created": "2022-10-22"
+     },
+     {
+      "id": "bvywVFGdPwI",
+      "title": "出生後休業支援給付金（手続き編）",
+      "channel": "厚生労働省 / Ministry of Health, Labour and Welfare",
+      "channelId": "UCVgZUHlkoN51FOwoNMBGjfw",
+      "published": "2025-11-28",
+      "views": 32669,
+      "min": 6.5,
+      "ch_subs": 240000,
+      "ch_videos": 5571,
+      "ch_created": "2008-12-19"
+     },
+     {
+      "id": "xce1LDt01c8",
+      "title": "【男性の育休】◯ヶ月がちょうど良かった！｜１年育休を取ったリアルな感想",
+      "channel": "ふせゆきファミリー",
+      "channelId": "UC_v8QLHbreKtZSXmxUL3dxw",
+      "published": "2025-03-11",
+      "views": 29987,
+      "min": 18.9,
+      "ch_subs": 3740,
+      "ch_videos": 861,
+      "ch_created": "2021-12-14"
+     },
+     {
+      "id": "OlLdc63hmU8",
+      "title": "【最大限もらう方法！】育児休業給付金＆出生後休業支援給付金で実質手取り10割！？2025年4月～",
+      "channel": "イマドキ社労士ふかゆかChannel",
+      "channelId": "UC6DQdUQ3kiShJEkydaTY4KA",
+      "published": "2024-11-22",
+      "views": 29937,
+      "min": 5.5,
+      "ch_subs": 6570,
+      "ch_videos": 78,
+      "ch_created": "2022-09-17"
+     }
+    ]
+   },
+   {
+    "keyword": "高額療養費 制度",
+    "n": 30,
+    "top1": 1594192,
+    "top10": 420311,
+    "top30": 155146,
+    "channels": 20,
+    "over3x": 4,
+    "under100k": 4,
+    "new_channels": {},
+    "median_min": 24.5,
+    "videos": [
+     {
+      "id": "W_60n2I8onk",
+      "title": "【超速報！】2028年1月利益から保険料へ強制上乗せ｡特定口座のメリット喪失｡老後に注意【NISA･株式売却･配当金･金融所得/健康保険法改正/投資家/後期高齢者医療制度･75歳以上/わかりやすく】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2026-10-18",
+      "views": 1594192,
+      "min": 12.4,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "1KVXMFMhdbE",
+      "title": "【超速報！】健康保険法改正！金融所得に税金･保険料ダブルで強制課税｡高齢者も現役世代も影響｡出産､高額療養費､OTC類似薬/2026年8月改正も【投資/健康･後期高齢者医療制度/見直しわかりやすく】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2026-02-23",
+      "views": 839409,
+      "min": 13.7,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "nT7Ii2jH6Oo",
+      "title": "医療費控除の確定申告のやり方　スマホ＆e-Taxでの手順を解説",
+      "channel": "サンデーマネーチャンネル",
+      "channelId": "UCy3hoi3qmjq0qGQZJ4TnvPQ",
+      "published": "2025-02-02",
+      "views": 776963,
+      "min": 24.8,
+      "ch_subs": 580000,
+      "ch_videos": 346,
+      "ch_created": "2020-03-11"
+     },
+     {
+      "id": "Ina__yXYWOs",
+      "title": "「国家的な殺人未遂」島根県知事会見 高額療養費の見直し巡り政府批判【ノーカット】(2025年2月18日)",
+      "channel": "ANNnewsCH",
+      "channelId": "UCGCZAYq5Xxojl_tSXcVJhiQ",
+      "published": "2025-02-19",
+      "views": 657858,
+      "min": 70.0,
+      "ch_subs": 5090000,
+      "ch_videos": 140124,
+      "ch_created": "2009-09-10"
+     },
+     {
+      "id": "kmOzNx2sg2Y",
+      "title": "【医療保険・がん保険は要らない？】無駄な保険の見極め方／保険営業の不都合な真実／公的保険は最強だが、落とし穴も／がん治療にかかるお金の中身／医療保険が必要なケースも【ビジネス虎の巻】",
+      "channel": "PIVOT 公式チャンネル",
+      "channelId": "UC8yHePe_RgUBE-waRWy6olw",
+      "published": "2025-09-26",
+      "views": 657502,
+      "min": 39.1,
+      "ch_subs": 4100000,
+      "ch_videos": 5668,
+      "ch_created": "2022-02-17"
+     },
+     {
+      "id": "eJo4yaTtmZE",
+      "title": "【改正】8月より高額療養費の限度額が激変！自己負担､大幅増へ【会社員､個人事業主/社会･国民健康保険/保険証･医療費控除/制度見直しわかりやすく/70歳/具体例/2025】※2026年に延期されました",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2024-12-28",
+      "views": 654575,
+      "min": 15.4,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "poPRHGbokBU",
+      "title": "静かに始まっている医療費激増の波。来年から薬が3倍になるステルス改正を解説します。",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-05-10",
+      "views": 600817,
+      "min": 22.6,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "WVo6ohU5Xzc",
+      "title": "なぜ高額療養費の上限額が大幅に上がってしまうのか？そして今後どんな影響が出るのか、お話しします。",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2025-02-13",
+      "views": 444906,
+      "min": 20.7,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "_5wAXLo_APk",
+      "title": "【親の介護】母の入院費が高すぎた…高額療養費制度を使っても1ヶ月でこんなに？リハビリ病院の費用",
+      "channel": "ぼっち主婦のひとりごと",
+      "channelId": "UCcfDego1XYp8o4_5Q0MbQ4A",
+      "published": "2026-08-29",
+      "views": 425835,
+      "min": 11.2,
+      "ch_subs": 2240,
+      "ch_videos": 54,
+      "ch_created": "2025-09-13"
+     },
+     {
+      "id": "QXvzaew5QtI",
+      "title": "【なぜ報道されない?】50･60代は必見‼︎ 知らないと生涯500万円損します…【年金/高額療養費/給付金/失業保険】2026年の新ルールとは？医師解説",
+      "channel": "YouTube医療大学 【1日10分で聞いて学べる】",
+      "channelId": "UCorkEIBwAysd3j3MJcJqS_A",
+      "published": "2026-10-14",
+      "views": 420311,
+      "min": 20.9,
+      "ch_subs": 999000,
+      "ch_videos": 550,
+      "ch_created": "2020-05-25"
+     },
+     {
+      "id": "T0yWJenHuFE",
+      "title": "【意外と知らない】老後にかかる「保険料」「医療費」について解説【貯める編】：（アニメ動画）第533回",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2026-09-16",
+      "views": 418650,
+      "min": 24.9,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "C1iluqy0DcQ",
+      "title": "【激論・高額療養費制度】長妻昭×玉木雄一郎　日本の医療保険制度をどう維持していく？【ウェークアップ】",
+      "channel": "読売テレビニュース",
+      "channelId": "UCv7_krlrre3GQi79d4guxHQ",
+      "published": "2025-02-15",
+      "views": 321540,
+      "min": 27.5,
+      "ch_subs": 1000000,
+      "ch_videos": 6714,
+      "ch_created": "2017-02-09"
+     },
+     {
+      "id": "Nus1_4hty-g",
+      "title": "入院しても守ってもらえなくなる?医療費負担増加で残酷な未来が来ます。",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-08-09",
+      "views": 293854,
+      "min": 23.9,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "UgcyYTdD1IU",
+      "title": "【75歳で強制加入！】後期高齢者医療制度の保険料や自己負担割合の計算方法に安くなるための具体的な方法までフローチャートでわかりやすく解説",
+      "channel": "FP1級パパこみやまのこみやまFP総合オフィス",
+      "channelId": "UCRfvvN--iV8kXJYqhVTn10g",
+      "published": "2025-11-03",
+      "views": 291901,
+      "min": 33.1,
+      "ch_subs": 185000,
+      "ch_videos": 156,
+      "ch_created": "2025-04-08"
+     },
+     {
+      "id": "tkNZBUnqyM4",
+      "title": "【漫画】年金の増額改定で手取り激減！？非課税世帯から外れた男が選択した年金支給停止の裏技とは【漫画動画】",
+      "channel": "News65 (老後)",
+      "channelId": "UCgNr-yxfjcW0ao2dhvBZVWA",
+      "published": "2026-06-05",
+      "views": 267630,
+      "min": 27.0,
+      "ch_subs": 174000,
+      "ch_videos": 139,
+      "ch_created": "2022-07-08"
+     },
+     {
+      "id": "5NwC4YTgtF4",
+      "title": "【100万円以上損する！】高齢者が絶対に超えてはいけない年収の壁は〇〇万円の壁！具体的な負担増のシミュレーションと対策を解説",
+      "channel": "FP1級パパこみやまのこみやまFP総合オフィス",
+      "channelId": "UCRfvvN--iV8kXJYqhVTn10g",
+      "published": "2025-12-15",
+      "views": 251469,
+      "min": 38.2,
+      "ch_subs": 185000,
+      "ch_videos": 156,
+      "ch_created": "2025-04-08"
+     },
+     {
+      "id": "N0xxNRBYdc8",
+      "title": "「がん治療の断念も…」がんになったらお金どうする？知られざる高額療養費制度の仕組みとは？（「信州のがん最前線　がんとお金のホンネ」2025年11月3日放送）",
+      "channel": "長野朝日放送",
+      "channelId": "UCXS-XXaDHDyjYcFqy7UFp4g",
+      "published": "2025-11-15",
+      "views": 236750,
+      "min": 46.5,
+      "ch_subs": 75200,
+      "ch_videos": 8272,
+      "ch_created": "2009-03-03"
+     },
+     {
+      "id": "oeK-pZKnk0s",
+      "title": "【お金の授業 26限目】ふるさと納税をしよう&医療費控除を申請しよう【改訂版 お金の大学 P138～P141】",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2025-07-07",
+      "views": 233439,
+      "min": 14.9,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "uExXLkDhv5k",
+      "title": "【超大改正】高額療養費2026年8月から激変！自己負担､大幅増へ｡年間上限導入｡現役世代は2.1万円の壁にも注意【会社員､個人事業主/社会･国民健康保険/保険証･医療費/わかりやすく/70歳/具体例】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2026-04-11",
+      "views": 233352,
+      "min": 9.6,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "UryXg_T543Y",
+      "title": "【2026最新】払いすぎた医療費が戻る！医療費控除のやり方｜過去5年分OK",
+      "channel": "個人事業主チャンネル  by 弥生",
+      "channelId": "UCbdFu5VuhOvvhu2_e5JNFBg",
+      "published": "2026-01-29",
+      "views": 209300,
+      "min": 7.0,
+      "ch_subs": 60600,
+      "ch_videos": 183,
+      "ch_created": "2022-03-28"
+     },
+     {
+      "id": "UI2Ij7rMx9s",
+      "title": "【白内障手術費用まとめ】高額療養費制度や医療費控除で負担を減らすコツ、単焦点レンズ・多焦点レンズの選び方、70歳以上や70歳未満の保険負担で損しない秘訣を徹底解説",
+      "channel": "眼科医 上月直之",
+      "channelId": "UCbmx7RJbwkqXcIDh4qeoqyw",
+      "published": "2025-02-14",
+      "views": 206343,
+      "min": 20.3,
+      "ch_subs": 154000,
+      "ch_videos": 178,
+      "ch_created": "2024-01-23"
+     },
+     {
+      "id": "ts5YOhlJ0VA",
+      "title": "明らかにおかしい法改正。なぜか報じられない高額療養費制度改悪の本当の理由【 都市伝説 ニュース 】",
+      "channel": "コヤッキースタジオ",
+      "channelId": "UCmjOmXcwVXN3SOnW7tCO3vQ",
+      "published": "2026-01-26",
+      "views": 201984,
+      "min": 30.7,
+      "ch_subs": 1670000,
+      "ch_videos": 2673,
+      "ch_created": "2017-11-13"
+     },
+     {
+      "id": "js0X4VJpW3c",
+      "title": "【知らないと損】医療費控除を使って税金を安くする方法【不妊治療・インプラント・レーシックもOK】【お金の勉強　初級編】：（アニメ動画）第480回",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2024-10-30",
+      "views": 193584,
+      "min": 15.1,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "gaJFjrQn_2k",
+      "title": "医療費が大幅に安くなる！知らなきゃ損する高額療養費制度を徹底解説",
+      "channel": "サンデーマネーチャンネル",
+      "channelId": "UCy3hoi3qmjq0qGQZJ4TnvPQ",
+      "published": "2024-11-03",
+      "views": 193443,
+      "min": 15.2,
+      "ch_subs": 580000,
+      "ch_videos": 346,
+      "ch_created": "2020-03-11"
+     },
+     {
+      "id": "1i9wiLDsEaw",
+      "title": "東京新宿で高額療養費自己負担額引き上げに反対デモ「東京新宿命を締めないデモ2026年５月１７日録画ハイライト部分」ライブ配信",
+      "channel": "900新闻法国",
+      "channelId": "UCWO9wFxN-4UvnCkV8BloULw",
+      "published": "2026-05-17",
+      "views": 175523,
+      "min": 515.9,
+      "ch_subs": 16700,
+      "ch_videos": 2234,
+      "ch_created": "2020-02-28"
+     },
+     {
+      "id": "rRHxo_6amIQ",
+      "title": "【石丸伸二×岸谷蘭丸×黒田尚子】どうなる社会保障改革／高騰する医療費、誰が払う？／「高額療養費制度」見直しの行方／思わぬ落とし穴も【前編】",
+      "channel": "楽待 RAKUMACHI",
+      "channelId": "UCPMJKbrxtpARoTd1b49iUvA",
+      "published": "2025-11-13",
+      "views": 173691,
+      "min": 34.4,
+      "ch_subs": 1750000,
+      "ch_videos": 5025,
+      "ch_created": "2009-04-30"
+     },
+     {
+      "id": "DlnZdpNiG3A",
+      "title": "【「不安感」が最大の毒】子どもの教育費か自分の治療か／がん治療の\"経済毒性\"／「投資」で備えるのは不可能？／医療費以外の“隠れ出費”も【石丸伸二×岸谷蘭丸×黒田尚子】",
+      "channel": "楽待 RAKUMACHI",
+      "channelId": "UCPMJKbrxtpARoTd1b49iUvA",
+      "published": "2025-11-18",
+      "views": 172428,
+      "min": 42.8,
+      "ch_subs": 1750000,
+      "ch_videos": 5025,
+      "ch_created": "2009-04-30"
+     },
+     {
+      "id": "WdWUPMKVjag",
+      "title": "高額療養費制度の見直しについて私の意見を話します。",
+      "channel": "高須幹弥（高須クリニック）",
+      "channelId": "UCwywumWHI4_hQtZpJwsC8cw",
+      "published": "2025-02-15",
+      "views": 171373,
+      "min": 24.1,
+      "ch_subs": 1090000,
+      "ch_videos": 3886,
+      "ch_created": "2012-05-08"
+     },
+     {
+      "id": "7ie55ejOaTM",
+      "title": "大軍拡で暮らしも財政も破綻　高額療養費「立ち止まれ」介護報酬「元に戻せ」　2025.3.6",
+      "channel": "日本共産党",
+      "channelId": "UC_7GbtufUtR9l3pwvvn7Zlg",
+      "published": "2025-03-06",
+      "views": 157095,
+      "min": 60.3,
+      "ch_subs": 193000,
+      "ch_videos": 16078,
+      "ch_created": "2007-12-26"
+     },
+     {
+      "id": "kgeNLmiNpec",
+      "title": "【病気になったら人生終了?】絶対に知っておくべき2025年8月からの高額療養費制度の変化。どのくらい自己負担が増える？廃止されたらどうなる？生命保険加入は必要？我々がしておくべき対策について完全解説。",
+      "channel": "予防医学ch /医師監修 ウチカラクリニック",
+      "channelId": "UCN1w0Esm19bl7kMh5O23y-w",
+      "published": "2025-01-15",
+      "views": 155146,
+      "min": 31.5,
+      "ch_subs": 1120000,
+      "ch_videos": 287,
+      "ch_created": "2020-02-12"
+     }
+    ]
+   },
+   {
+    "keyword": "傷病手当金",
+    "n": 30,
+    "top1": 2829429,
+    "top10": 267501,
+    "top30": 47491,
+    "channels": 19,
+    "over3x": 10,
+    "under100k": 15,
+    "new_channels": {
+     "元ハロワ職員まゆみのお金の安心相談室": {
+      "created": "2025-11-09",
+      "months": 11.5,
+      "subs": 193000,
+      "videos": 64
+     },
+     "元ハローワーク職員ゆかの仕事とお金相談室 ": {
+      "created": "2026-08-26",
+      "months": 2.0,
+      "subs": 2580,
+      "videos": 4
+     },
+     "杏と猫の小さな暮らし": {
+      "created": "2025-12-08",
+      "months": 10.6,
+      "subs": 18400,
+      "videos": 41
+     }
+    },
+    "median_min": 20.4,
+    "videos": [
+     {
+      "id": "mp-F3HzRss0",
+      "title": "元ハロワ職員が断言｜退職後にやってはいけないこと / 手続き3選【2026年 / 失業保険 / 傷病手当/退職給付金】",
+      "channel": "元ハローワーク職員とげまる【失業保険 / 退職給付金】",
+      "channelId": "UCu6rYTOd5IW0Rp98kAB0BUA",
+      "published": "2026-05-05",
+      "views": 2829429,
+      "min": 14.8,
+      "ch_subs": 23900,
+      "ch_videos": 42,
+      "ch_created": "2025-10-18"
+     },
+     {
+      "id": "g0Nv_2GE130",
+      "title": "約460万もらえる!?退職する人が知らないと損する制度を解説します",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-08-19",
+      "views": 1393536,
+      "min": 25.7,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "xzuA3Ecwtbs",
+      "title": "【50代以上は確認必須】これ知らないだけで生涯1000万円以上の差！政府からのボーナス40万円支給！申請しないと貰えない給付金・助成金のカラクリ【ゆっくり解説】",
+      "channel": "ゆっくりお金アカデミー",
+      "channelId": "UCACUd-GAlz4brbapgRSbNbA",
+      "published": "2025-10-25",
+      "views": 924482,
+      "min": 31.9,
+      "ch_subs": 165000,
+      "ch_videos": 760,
+      "ch_created": "2022-06-17"
+     },
+     {
+      "id": "ph5Ogigjl-I",
+      "title": "【65歳定年は大損】63歳6ヶ月までに退職すると500万円も給付金を受け取れます!定年退職の正解【失業保険】",
+      "channel": "シニア退職支援チャンネル",
+      "channelId": "UCoV4VMMkpkoVhGpiqWdQ7Bg",
+      "published": "2025-04-07",
+      "views": 516607,
+      "min": 33.9,
+      "ch_subs": 34200,
+      "ch_videos": 175,
+      "ch_created": "2024-12-25"
+     },
+     {
+      "id": "steC56VmMHw",
+      "title": "失業手当を最長2年・毎月20万円もらって退職後のお金の不安を解消する方法を元ハロワ職員が解説",
+      "channel": "元ハロワ職員まゆみのお金の安心相談室",
+      "channelId": "UCSVqU8FWv3U8trsE9MzMp2A",
+      "published": "2025-11-24",
+      "views": 397456,
+      "min": 17.9,
+      "ch_subs": 193000,
+      "ch_videos": 64,
+      "ch_created": "2025-11-09"
+     },
+     {
+      "id": "dRIfPUIT1M8",
+      "title": "知らないと9ヶ月分の家賃を丸ごと失う！退職後に絶対申請すべき支援制度を解説します",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-05-05",
+      "views": 391149,
+      "min": 20.5,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "znJS_-EJIL8",
+      "title": "退職後の住民税は○○申請で1年間無料になります！",
+      "channel": "【公式】退職コンシェルジュ",
+      "channelId": "UCjEob9ukPiKk2F-SyIQJdRg",
+      "published": "2025-09-01",
+      "views": 338990,
+      "min": 10.9,
+      "ch_subs": 15100,
+      "ch_videos": 262,
+      "ch_created": "2025-02-18"
+     },
+     {
+      "id": "KhcCbbSaIIw",
+      "title": "65歳、64歳11ヶ月退職は絶対ダメ！〇〇歳退職が最強です【失業保険】",
+      "channel": "退職パートナー【退職の不安解消CH】",
+      "channelId": "UCGDWuHpb1Fd6b4O462Brw6w",
+      "published": "2025-07-20",
+      "views": 298725,
+      "min": 11.8,
+      "ch_subs": 46900,
+      "ch_videos": 247,
+      "ch_created": "2024-06-21"
+     },
+     {
+      "id": "FOFw_2Uz2xQ",
+      "title": "【テレビでは報道しない】63歳の退職で政府からのお小遣い76万円も支給！最もお得な退職の年齢【失業保険/基本手当/傷病手当】",
+      "channel": "チャコラのお金研究所",
+      "channelId": "UCEdcHrftcFX_m1ntPoJ7jgg",
+      "published": "2025-05-03",
+      "views": 298620,
+      "min": 35.4,
+      "ch_subs": 296000,
+      "ch_videos": 348,
+      "ch_created": "2022-03-12"
+     },
+     {
+      "id": "z0iHKxz4RbU",
+      "title": "悪用する人も続出!?申請しないと後悔する…受給条件を徹底解説します",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-04-03",
+      "views": 267501,
+      "min": 22.4,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "DOCduzf4meo",
+      "title": "退職後にやらないと50万円以上損する手続きを解説【健康保険・年金・失業保険・税金】",
+      "channel": "元ハロワ職員まゆみのお金の安心相談室",
+      "channelId": "UCSVqU8FWv3U8trsE9MzMp2A",
+      "published": "2025-11-28",
+      "views": 203141,
+      "min": 25.1,
+      "ch_subs": 193000,
+      "ch_videos": 64,
+      "ch_created": "2025-11-09"
+     },
+     {
+      "id": "yoj9g31PVpQ",
+      "title": "【2026年版】傷病手当金→失業保険の切り替え方法｜他に使える制度4つも紹介",
+      "channel": "元ハロワ職員まゆみのお金の安心相談室",
+      "channelId": "UCSVqU8FWv3U8trsE9MzMp2A",
+      "published": "2026-01-28",
+      "views": 170987,
+      "min": 15.3,
+      "ch_subs": 193000,
+      "ch_videos": 64,
+      "ch_created": "2025-11-09"
+     },
+     {
+      "id": "WPRNU6Ewl4U",
+      "title": "【漫画】傷病手当を不正受給した女の末路。嘘の病気で休職し、遊びまくった結果…【レイナの部屋ブラックわーるど】",
+      "channel": "レイナの部屋【ブラックわーるど】",
+      "channelId": "UC_epV3oR2ePKKr4gaY72lag",
+      "published": "2026-02-23",
+      "views": 147192,
+      "min": 25.8,
+      "ch_subs": 156000,
+      "ch_videos": 2971,
+      "ch_created": "2021-06-17"
+     },
+     {
+      "id": "t5VQyCxt0NE",
+      "title": "【これから仕事を辞める人へ】知らないと50万円以上損する｜退職後に絶対やってはいけない3つのこと",
+      "channel": "元ハロワ職員まゆみのお金の安心相談室",
+      "channelId": "UCSVqU8FWv3U8trsE9MzMp2A",
+      "published": "2026-04-05",
+      "views": 145488,
+      "min": 21.7,
+      "ch_subs": 193000,
+      "ch_videos": 64,
+      "ch_created": "2025-11-09"
+     },
+     {
+      "id": "l7S0moDHX6k",
+      "title": "【仕事を辞める人へ】退職後に絶対やってはいけないこと3選｜健康保険・傷病手当金・失業保険",
+      "channel": "元ハローワーク職員ゆかの仕事とお金相談室 ",
+      "channelId": "UCWkvFTfOamt0IbpeG7fWeJQ",
+      "published": "2026-09-23",
+      "views": 123820,
+      "min": 26.5,
+      "ch_subs": 2580,
+      "ch_videos": 4,
+      "ch_created": "2026-08-26"
+     },
+     {
+      "id": "vklDE-_zDT8",
+      "title": "【退職後も受給】傷病手当金の裏技！辞める前に知るべき条件と1年半の生活保障を解説",
+      "channel": "助成金と労務ナビ",
+      "channelId": "UC2XUV6e8myV3AAQvvXRN4jQ",
+      "published": "2026-01-07",
+      "views": 123062,
+      "min": 22.1,
+      "ch_subs": 4420,
+      "ch_videos": 131,
+      "ch_created": "2025-04-03"
+     },
+     {
+      "id": "BPDGHqmgxk0",
+      "title": "【100％ウソです！】退職後の傷病手当金は退職前に傷病手当金申請を1回はしておかないと申請できない、支給されないと他のyoutube動画で解説されていた、会社や健康保険組合から言われた、、、",
+      "channel": "社労士なかむらch【中村彰利】知って得する助成金・退職後のお金・年金etc",
+      "channelId": "UCTf50EJwtgn6sxblxqIJdZA",
+      "published": "2025-04-29",
+      "views": 105699,
+      "min": 11.9,
+      "ch_subs": 40500,
+      "ch_videos": 733,
+      "ch_created": "2022-03-07"
+     },
+     {
+      "id": "Ccj-f4qJs_Y",
+      "title": "弟、足の痺れでエスカレーター転落、救急搬送。傷病手当、障害者手帳申請の手続きで男泣きした理由とは。音声ナレーション入り。",
+      "channel": "介護の花子さん。第2の人生",
+      "channelId": "UC7h26kiLuMSFoHdVSU4_iLA",
+      "published": "2025-11-30",
+      "views": 100647,
+      "min": 27.6,
+      "ch_subs": 26000,
+      "ch_videos": 73,
+      "ch_created": "2023-05-07"
+     },
+     {
+      "id": "iQ8DB2WpNvg",
+      "title": "【再放送】失業保険を2年6ヶ月もらう方法【お金を”貯める”】：（アニメ動画）第477回",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2026-06-09",
+      "views": 99195,
+      "min": 26.6,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "9p-PkXlcbx8",
+      "title": "【今すぐ確認】年金制度変更で申請すれば毎年＋7万円の制度を解説",
+      "channel": "元ハロワ職員まゆみのお金の安心相談室",
+      "channelId": "UCSVqU8FWv3U8trsE9MzMp2A",
+      "published": "2026-05-12",
+      "views": 92869,
+      "min": 23.0,
+      "ch_subs": 193000,
+      "ch_videos": 64,
+      "ch_created": "2025-11-09"
+     },
+     {
+      "id": "ACEy8H69I5Y",
+      "title": "【退職日に注意】年金と失業手当・退職金を損せずにもらう方法",
+      "channel": "元ハロワ職員まゆみのお金の安心相談室",
+      "channelId": "UCSVqU8FWv3U8trsE9MzMp2A",
+      "published": "2026-05-29",
+      "views": 85066,
+      "min": 20.3,
+      "ch_subs": 193000,
+      "ch_videos": 64,
+      "ch_created": "2025-11-09"
+     },
+     {
+      "id": "aou0N_gNgbg",
+      "title": "【業者に頼まず自分でできる！退職給付金セルフチェック！】退職後に支給される健康保険傷病手当金や失業保険、自分は貰えるのか？いくら支給されるのか？セルフチェックの仕方を社労士なかむらが解説します。",
+      "channel": "社労士なかむらch【中村彰利】知って得する助成金・退職後のお金・年金etc",
+      "channelId": "UCTf50EJwtgn6sxblxqIJdZA",
+      "published": "2025-06-22",
+      "views": 74844,
+      "min": 24.1,
+      "ch_subs": 40500,
+      "ch_videos": 733,
+      "ch_created": "2022-03-07"
+     },
+     {
+      "id": "6ON0VDI23WA",
+      "title": "失業保険を300日もらう方法：うつ病だと対象になる「就職困難者」とは",
+      "channel": "サンデーマネーチャンネル",
+      "channelId": "UCy3hoi3qmjq0qGQZJ4TnvPQ",
+      "published": "2025-05-31",
+      "views": 67432,
+      "min": 15.8,
+      "ch_subs": 580000,
+      "ch_videos": 346,
+      "ch_created": "2020-03-11"
+     },
+     {
+      "id": "_9uRFMaNolk",
+      "title": "【実体験】失業保険（失業手当）のもらい方。退職～受給までの流れ。自己都合退職で特定理由離職者になった手続き",
+      "channel": "手続きGメン怜田　日常の様々な手続きについて",
+      "channelId": "UCDHtYGMyYI-N-SjPLlrInIg",
+      "published": "2025-04-15",
+      "views": 65276,
+      "min": 8.8,
+      "ch_subs": 7790,
+      "ch_videos": 95,
+      "ch_created": "2023-07-29"
+     },
+     {
+      "id": "XE3g0-rsNvc",
+      "title": "【2026年最新！】会社を通さず自分でできる！傷病手当金のスマホ電子申請のやり方とメリットを社労士が解説",
+      "channel": "助成金と労務ナビ",
+      "channelId": "UC2XUV6e8myV3AAQvvXRN4jQ",
+      "published": "2026-04-01",
+      "views": 63043,
+      "min": 11.2,
+      "ch_subs": 4420,
+      "ch_videos": 131,
+      "ch_created": "2025-04-03"
+     },
+     {
+      "id": "NON_RX3Bx68",
+      "title": "【会社は伝えない】傷病手当金の「継続給付」と「失業手当」の貰い方",
+      "channel": "みやびっくま【退職後の申請チャンネル】",
+      "channelId": "UCL3G4bQc4kuCHFfrl7YUoxw",
+      "published": "2025-07-22",
+      "views": 60757,
+      "min": 15.4,
+      "ch_subs": 57700,
+      "ch_videos": 81,
+      "ch_created": "2020-07-31"
+     },
+     {
+      "id": "zLBNf1TnA7o",
+      "title": "退職後も傷病手当金をもらうための条件とは？【協会けんぽ】",
+      "channel": "社労士の志賀チャンネル",
+      "channelId": "UC40IrtiECEwvXjD0u0vHeqA",
+      "published": "2025-07-29",
+      "views": 59558,
+      "min": 15.8,
+      "ch_subs": 5330,
+      "ch_videos": 213,
+      "ch_created": "2022-08-17"
+     },
+     {
+      "id": "qQo10e4ltQw",
+      "title": "【主治医とのコミュニケーションは絶対必要！】退職後の傷病手当金申請にて一番大事なことは主治医の先生に病状を理解してもらう事です。社労士なかむらが解説します。",
+      "channel": "社労士なかむらch【中村彰利】知って得する助成金・退職後のお金・年金etc",
+      "channelId": "UCTf50EJwtgn6sxblxqIJdZA",
+      "published": "2025-01-09",
+      "views": 59132,
+      "min": 9.1,
+      "ch_subs": 40500,
+      "ch_videos": 733,
+      "ch_created": "2022-03-07"
+     },
+     {
+      "id": "_1X5SddpOkA",
+      "title": "6月に届く住民税、払う前に絶対見て！安くする方法をわかりやすく解説【住民税決定通知書・退職後の住民税】",
+      "channel": "元ハロワ職員まゆみのお金の安心相談室",
+      "channelId": "UCSVqU8FWv3U8trsE9MzMp2A",
+      "published": "2026-05-18",
+      "views": 54647,
+      "min": 15.5,
+      "ch_subs": 193000,
+      "ch_videos": 64,
+      "ch_created": "2025-11-09"
+     },
+     {
+      "id": "tPRi9E5fbYk",
+      "title": "【54歳おひとりさま】夫と死別・無職の家計簿｜傷病手当金21万円のリアルな生活費",
+      "channel": "杏と猫の小さな暮らし",
+      "channelId": "UCcwCNjRA6IZZwsHqQ46cpkQ",
+      "published": "2026-02-15",
+      "views": 47491,
+      "min": 13.7,
+      "ch_subs": 18400,
+      "ch_videos": 41,
+      "ch_created": "2025-12-08"
+     }
+    ]
+   },
+   {
+    "keyword": "退職後 手続き 健康保険 年金",
+    "n": 30,
+    "top1": 2829429,
+    "top10": 660143,
+    "top30": 286152,
+    "channels": 18,
+    "over3x": 13,
+    "under100k": 13,
+    "new_channels": {
+     "元ハロワ職員まゆみのお金の安心相談室": {
+      "created": "2025-11-09",
+      "months": 11.5,
+      "subs": 193000,
+      "videos": 64
+     },
+     "年金・給付金完全攻略チャンネル": {
+      "created": "2026-03-21",
+      "months": 7.2,
+      "subs": 169000,
+      "videos": 17
+     },
+     "元ハローワーク職員ケンの退職サポート": {
+      "created": "2025-11-15",
+      "months": 11.3,
+      "subs": 20700,
+      "videos": 43
+     },
+     "元社労士事務所勤務ゆきのお金と心の相談室": {
+      "created": "2026-02-23",
+      "months": 8.1,
+      "subs": 20000,
+      "videos": 20
+     }
+    },
+    "median_min": 18.8,
+    "videos": [
+     {
+      "id": "mp-F3HzRss0",
+      "title": "元ハロワ職員が断言｜退職後にやってはいけないこと / 手続き3選【2026年 / 失業保険 / 傷病手当/退職給付金】",
+      "channel": "元ハローワーク職員とげまる【失業保険 / 退職給付金】",
+      "channelId": "UCu6rYTOd5IW0Rp98kAB0BUA",
+      "published": "2026-05-05",
+      "views": 2829429,
+      "min": 14.8,
+      "ch_subs": 23900,
+      "ch_videos": 42,
+      "ch_created": "2025-10-18"
+     },
+     {
+      "id": "9a2_Bc3b06o",
+      "title": "【2026年新ルール】50・60代は絶対見て！申請忘れると老後資金1000万円が消滅【年金・失業保険・給付金】",
+      "channel": "元ハロワ職員まゆみのお金の安心相談室",
+      "channelId": "UCSVqU8FWv3U8trsE9MzMp2A",
+      "published": "2025-12-19",
+      "views": 2611349,
+      "min": 19.1,
+      "ch_subs": 193000,
+      "ch_videos": 64,
+      "ch_created": "2025-11-09"
+     },
+     {
+      "id": "hUv_Jk7eyDU",
+      "title": "【2026年新ルール】50・60代必見！知らないと生涯500万円以上損をします！【年金・給付金・失業保険】",
+      "channel": "節約看護師りょう",
+      "channelId": "UCx2HEX7jkwrRsKXNgmIUMeA",
+      "published": "2026-02-06",
+      "views": 2364976,
+      "min": 21.1,
+      "ch_subs": 745000,
+      "ch_videos": 162,
+      "ch_created": "2023-01-16"
+     },
+     {
+      "id": "GpTq49kkMZM",
+      "title": "仕事を辞めたあとの健康保険で大損する人が多すぎ…退職を考えている人は絶対に見てください！",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-01-24",
+      "views": 2173060,
+      "min": 17.1,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "x1pX91CVcME",
+      "title": "【重要】60歳になったら必ずすべき8つの申請！知らないと大損です。。",
+      "channel": "証券アナリストハーリー『50,60代のお金』",
+      "channelId": "UCfCV9rFg6MxvaXxY1Oy_EgQ",
+      "published": "2025-11-30",
+      "views": 1702231,
+      "min": 29.1,
+      "ch_subs": 164000,
+      "ch_videos": 208,
+      "ch_created": "2024-08-04"
+     },
+     {
+      "id": "g0Nv_2GE130",
+      "title": "約460万もらえる!?退職する人が知らないと損する制度を解説します",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-08-19",
+      "views": 1393536,
+      "min": 25.7,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "ENZkL0vH8fE",
+      "title": "【知らないと大損】60歳で即退職は危険！たった2年の再雇用でこんなに得する理由とは？",
+      "channel": "節約看護師りょう",
+      "channelId": "UCx2HEX7jkwrRsKXNgmIUMeA",
+      "published": "2025-07-25",
+      "views": 1353339,
+      "min": 20.6,
+      "ch_subs": 745000,
+      "ch_videos": 162,
+      "ch_created": "2023-01-16"
+     },
+     {
+      "id": "eSaAEiTj2uw",
+      "title": "退職後の国保は〇〇申請で大幅に安くなります！",
+      "channel": "ひろと【退職とお金】",
+      "channelId": "UCmx8QsMDGg0zhz-k3fBmzJg",
+      "published": "2025-07-31",
+      "views": 1022659,
+      "min": 13.3,
+      "ch_subs": 44500,
+      "ch_videos": 108,
+      "ch_created": "2025-07-31"
+     },
+     {
+      "id": "e74N2LiJpSc",
+      "title": "【漫画】62歳で年金受給するとどうなる？60歳定年退職 vs 2年だけ再雇用。税金・保険料を徹底比較した結果…【老後年金・繰上げ受給】",
+      "channel": "News65 (老後)",
+      "channelId": "UCgNr-yxfjcW0ao2dhvBZVWA",
+      "published": "2025-12-19",
+      "views": 799890,
+      "min": 25.9,
+      "ch_subs": 174000,
+      "ch_videos": 139,
+      "ch_created": "2022-07-08"
+     },
+     {
+      "id": "NKGqh59sFq8",
+      "title": "【知らないと大損】定年後の健康保険で“損する人”が続出！正しい選び方をわかりやすく解説！【国民健康保険/任意継続】",
+      "channel": "節約看護師りょう",
+      "channelId": "UCx2HEX7jkwrRsKXNgmIUMeA",
+      "published": "2025-10-17",
+      "views": 660143,
+      "min": 28.0,
+      "ch_subs": 745000,
+      "ch_videos": 162,
+      "ch_created": "2023-01-16"
+     },
+     {
+      "id": "p5WPWOIGMYk",
+      "title": "【保存版】定年1年前からやるべき手続き5つのチェックリスト／知らないと年金が減る!?",
+      "channel": "おかまもch | おかんのお金守るチャンネル",
+      "channelId": "UCY_Xgod2xaEYWtsUZoKHA3w",
+      "published": "2025-10-24",
+      "views": 647023,
+      "min": 19.6,
+      "ch_subs": 201000,
+      "ch_videos": 552,
+      "ch_created": "2023-10-29"
+     },
+     {
+      "id": "4Ua3QKtqQn0",
+      "title": "【知らないと大損！】定年後の賢い健康保険の選び方！2年目の切替で20万円以上得する人も続出【任意継続】【国民健康保険】",
+      "channel": "節約看護師りょう",
+      "channelId": "UCx2HEX7jkwrRsKXNgmIUMeA",
+      "published": "2024-11-08",
+      "views": 618450,
+      "min": 28.4,
+      "ch_subs": 745000,
+      "ch_videos": 162,
+      "ch_created": "2023-01-16"
+     },
+     {
+      "id": "Z_xXD6Ji_s0",
+      "title": "【2026年新常識】定年退職前に絶対やること5選｜知らないと100万円以上変わることも",
+      "channel": "元ハロワ職員まゆみのお金の安心相談室",
+      "channelId": "UCSVqU8FWv3U8trsE9MzMp2A",
+      "published": "2026-08-16",
+      "views": 529735,
+      "min": 26.7,
+      "ch_subs": 193000,
+      "ch_videos": 64,
+      "ch_created": "2025-11-09"
+     },
+     {
+      "id": "BrzNVcU65LI",
+      "title": "退職後すぐにやらないと後悔する6つの手続きとは？",
+      "channel": "ひろと【退職とお金】",
+      "channelId": "UCmx8QsMDGg0zhz-k3fBmzJg",
+      "published": "2025-09-22",
+      "views": 519890,
+      "min": 10.6,
+      "ch_subs": 44500,
+      "ch_videos": 108,
+      "ch_created": "2025-07-31"
+     },
+     {
+      "id": "hc73Kna2P9w",
+      "title": "【50歳以上必見】 60歳になったら必ず申請すべき年金・お金制度8選！」",
+      "channel": "年金・給付金完全攻略チャンネル",
+      "channelId": "UCCNaJxkydTSNf1oWCtuqMVg",
+      "published": "2026-05-15",
+      "views": 507406,
+      "min": 45.9,
+      "ch_subs": 169000,
+      "ch_videos": 17,
+      "ch_created": "2026-03-21"
+     },
+     {
+      "id": "S3NpX4BZR9A",
+      "title": "退職後の高額住民税を超安くする方法とは？",
+      "channel": "ひろと【退職とお金】",
+      "channelId": "UCmx8QsMDGg0zhz-k3fBmzJg",
+      "published": "2025-11-26",
+      "views": 505228,
+      "min": 9.3,
+      "ch_subs": 44500,
+      "ch_videos": 108,
+      "ch_created": "2025-07-31"
+     },
+     {
+      "id": "LgVJB4cu5jI",
+      "title": "【64歳11ヶ月退職で損する人続出！】7つの落とし穴と回避策とは？失業給付の額は高いがデメリットも知っておこう。",
+      "channel": "定年前後のお金の新常識【社労士みなみ】",
+      "channelId": "UCxzI8X4wZF2Osa5Jd_RqgxQ",
+      "published": "2025-09-23",
+      "views": 431966,
+      "min": 19.5,
+      "ch_subs": 298000,
+      "ch_videos": 212,
+      "ch_created": "2023-04-03"
+     },
+     {
+      "id": "7ClwnWi0Ywk",
+      "title": "退職後の14日間でやるべき4つの手続きとは？",
+      "channel": "ひろと【退職とお金】",
+      "channelId": "UCmx8QsMDGg0zhz-k3fBmzJg",
+      "published": "2025-11-28",
+      "views": 415160,
+      "min": 8.1,
+      "ch_subs": 44500,
+      "ch_videos": 108,
+      "ch_created": "2025-07-31"
+     },
+     {
+      "id": "DNMTGwTr9qs",
+      "title": "退職後の現実８選！社会保険料実額《〇百万円》公開❗️辞めたらバラ色の人生では？58歳で早期退職し無職になって２年の60歳、この2年で起きた想定外のこと",
+      "channel": "旅犬リリィ Travel Dog LILY",
+      "channelId": "UCFZYJCfNWv6ODTTETateSbg",
+      "published": "2025-06-13",
+      "views": 392675,
+      "min": 18.4,
+      "ch_subs": 30700,
+      "ch_videos": 82,
+      "ch_created": "2006-10-29"
+     },
+     {
+      "id": "qAYYWMmoO9s",
+      "title": "「明日辞めます」は絶対ダメ！一番得する・損する退職日を解説【社会保険料・住民税】",
+      "channel": "元ハロワ職員まゆみのお金の安心相談室",
+      "channelId": "UCSVqU8FWv3U8trsE9MzMp2A",
+      "published": "2025-12-14",
+      "views": 385562,
+      "min": 23.1,
+      "ch_subs": 193000,
+      "ch_videos": 64,
+      "ch_created": "2025-11-09"
+     },
+     {
+      "id": "SQp68SyR8MQ",
+      "title": "【2025年４月以降を知らないと大損！】退職後の健康保険の賢い選び方。任意継続と国民健康保険の選択でどっちが安いか？",
+      "channel": "定年前後のお金の新常識【社労士みなみ】",
+      "channelId": "UCxzI8X4wZF2Osa5Jd_RqgxQ",
+      "published": "2025-02-28",
+      "views": 347738,
+      "min": 17.9,
+      "ch_subs": 298000,
+      "ch_videos": 212,
+      "ch_created": "2023-04-03"
+     },
+     {
+      "id": "znJS_-EJIL8",
+      "title": "退職後の住民税は○○申請で1年間無料になります！",
+      "channel": "【公式】退職コンシェルジュ",
+      "channelId": "UCjEob9ukPiKk2F-SyIQJdRg",
+      "published": "2025-09-01",
+      "views": 338990,
+      "min": 10.9,
+      "ch_subs": 15100,
+      "ch_videos": 262,
+      "ch_created": "2025-02-18"
+     },
+     {
+      "id": "OKAcp__N3rs",
+      "title": "【特定理由離職者】給付制限なし・保険料と税金の減免で200万円以上得する方法を元ハロワ職員が解説【裏ワザ有】",
+      "channel": "元ハローワーク職員ケンの退職サポート",
+      "channelId": "UCQTo4xeZR9QbcNBKM1L3_yA",
+      "published": "2025-12-20",
+      "views": 327331,
+      "min": 17.9,
+      "ch_subs": 20700,
+      "ch_videos": 43,
+      "ch_created": "2025-11-15"
+     },
+     {
+      "id": "q7J93fNmlCs",
+      "title": "（日本年金機構）【スマホでカンタン手続き！】国民年金に関する電子申請",
+      "channel": "厚生労働省 / Ministry of Health, Labour and Welfare",
+      "channelId": "UCVgZUHlkoN51FOwoNMBGjfw",
+      "published": "2025-01-29",
+      "views": 305513,
+      "min": 6.2,
+      "ch_subs": 240000,
+      "ch_videos": 5571,
+      "ch_created": "2008-12-19"
+     },
+     {
+      "id": "VR2Fd6S954o",
+      "title": "【離職票だけじゃダメ】ハローワークに持っていく書類5選！退職後、ハローワークを最大限に活用する準備。【失業保険】【基本手当】",
+      "channel": "退職情報チャンネル",
+      "channelId": "UCWEY1K_qU7A3Jhfs4zzRuBg",
+      "published": "2025-10-18",
+      "views": 304853,
+      "min": 21.1,
+      "ch_subs": 18500,
+      "ch_videos": 185,
+      "ch_created": "2024-12-25"
+     },
+     {
+      "id": "KhcCbbSaIIw",
+      "title": "65歳、64歳11ヶ月退職は絶対ダメ！〇〇歳退職が最強です【失業保険】",
+      "channel": "退職パートナー【退職の不安解消CH】",
+      "channelId": "UCGDWuHpb1Fd6b4O462Brw6w",
+      "published": "2025-07-20",
+      "views": 298725,
+      "min": 11.8,
+      "ch_subs": 46900,
+      "ch_videos": 247,
+      "ch_created": "2024-06-21"
+     },
+     {
+      "id": "rEP8hoN3rMg",
+      "title": "【退職後まず何する？】会社から届く書類・ハローワーク・市役所の手続きをすべて解説",
+      "channel": "元ハロワ職員まゆみのお金の安心相談室",
+      "channelId": "UCSVqU8FWv3U8trsE9MzMp2A",
+      "published": "2026-07-26",
+      "views": 294305,
+      "min": 28.6,
+      "ch_subs": 193000,
+      "ch_videos": 64,
+      "ch_created": "2025-11-09"
+     },
+     {
+      "id": "hcgPhT1A0h4",
+      "title": "国民健康保険に加入する人、大損します！",
+      "channel": "退職パートナー【退職の不安解消CH】",
+      "channelId": "UCGDWuHpb1Fd6b4O462Brw6w",
+      "published": "2026-02-09",
+      "views": 291591,
+      "min": 13.5,
+      "ch_subs": 46900,
+      "ch_videos": 247,
+      "ch_created": "2024-06-21"
+     },
+     {
+      "id": "mG-JAs_sH0c",
+      "title": "【退職予定の方は必ず見てください】退職後の健康保険、任意継続と国民健康保険どちらに加入した方が得なのか？任意継続した方が良い方とは？保険料の計算方法、任意継続のメリットについて社労士なかむらが解説",
+      "channel": "社労士なかむらch【中村彰利】知って得する助成金・退職後のお金・年金etc",
+      "channelId": "UCTf50EJwtgn6sxblxqIJdZA",
+      "published": "2025-01-11",
+      "views": 290873,
+      "min": 12.1,
+      "ch_subs": 40500,
+      "ch_videos": 733,
+      "ch_created": "2022-03-07"
+     },
+     {
+      "id": "bV4X_OBCAK8",
+      "title": "【最大8割安くなる】国は教えたくない 保険料を一番賢く払う裏技｜国民健康保険・退職・任意継続",
+      "channel": "元社労士事務所勤務ゆきのお金と心の相談室",
+      "channelId": "UC1UyRyWUg2xmn1oW43lC0dQ",
+      "published": "2026-03-10",
+      "views": 286152,
+      "min": 16.8,
+      "ch_subs": 20000,
+      "ch_videos": 20,
+      "ch_created": "2026-02-23"
+     }
+    ]
+   },
+   {
+    "keyword": "児童手当 制度改正",
+    "n": 18,
+    "top1": 1372,
+    "top10": 46,
+    "top30": null,
+    "channels": 15,
+    "over3x": 5,
+    "under100k": 18,
+    "new_channels": {
+     "子育てとお金の研究室": {
+      "created": "2026-07-13",
+      "months": 3.5,
+      "subs": 7,
+      "videos": 15
+     },
+     "公共系システム開発ずんだもん": {
+      "created": "2026-01-13",
+      "months": 9.4,
+      "subs": 930,
+      "videos": 321
+     },
+     "知るほどおもしろい・労働と社会保険【AIで挑む社労士試験】": {
+      "created": "2025-10-29",
+      "months": 11.9,
+      "subs": 725,
+      "videos": 839
+     },
+     "節約パパの家計と育児 - まつぼーやチャンネル": {
+      "created": "2026-03-01",
+      "months": 7.9,
+      "subs": 18,
+      "videos": 52
+     },
+     "ニューカマーNISA": {
+      "created": "2026-04-02",
+      "months": 6.8,
+      "subs": 44,
+      "videos": 13
+     },
+     "今井そうたの政策研究室": {
+      "created": "2026-10-10",
+      "months": 0.5,
+      "subs": 4,
+      "videos": 1
+     },
+     "川崎市議会議員 なすのあやか": {
+      "created": "2026-01-03",
+      "months": 9.7,
+      "subs": 23,
+      "videos": 43
+     },
+     "お金アカデミー": {
+      "created": "2026-08-02",
+      "months": 2.8,
+      "subs": 7,
+      "videos": 69
+     },
+     "ミミ先生&ぽん太の「共働き家庭のお金の教科書」": {
+      "created": "2026-07-05",
+      "months": 3.7,
+      "subs": 14,
+      "videos": 42
+     }
+    },
+    "median_min": 8.1,
+    "videos": [
+     {
+      "id": "QzqkqrXdOog",
+      "title": "「児童手当」制度が改正　対象外だった高校生も支給対象に追加　所得制限の撤廃",
+      "channel": "福岡テレQニュース",
+      "channelId": "UC0O1BPRKdBRt86b9JcvxjuQ",
+      "published": "2024-11-28",
+      "views": 1372,
+      "min": 4.8,
+      "ch_subs": 52900,
+      "ch_videos": 6900,
+      "ch_created": "2022-05-18"
+     },
+     {
+      "id": "GOTEjtAXgtk",
+      "title": "【2027年開始】こどもNISA完全ガイド — 児童手当をそのまま入れたら18歳でいくら?",
+      "channel": "子育てとお金の研究室",
+      "channelId": "UCoXdhi6gN0kW_FzcKonqfjw",
+      "published": "2026-08-08",
+      "views": 1033,
+      "min": 9.6,
+      "ch_subs": 7,
+      "ch_videos": 15,
+      "ch_created": "2026-07-13"
+     },
+     {
+      "id": "EyGY_O0uyb8",
+      "title": "奈良市児童手当のご案内",
+      "channel": "奈良市動画チャンネル",
+      "channelId": "UCfnrKQ36OUr8WP-10Vvx3vw",
+      "published": "2025-03-18",
+      "views": 341,
+      "min": 7.6,
+      "ch_subs": 13100,
+      "ch_videos": 1058,
+      "ch_created": "2012-07-30"
+     },
+     {
+      "id": "179wFlnMZws",
+      "title": "なぜ公共システム開発は地獄なのか？サイクロマティック複雑度で読み解くテストとバグの正体",
+      "channel": "公共系システム開発ずんだもん",
+      "channelId": "UCl1N5LuazHm-j5bW5Bd2JBg",
+      "published": "2026-08-04",
+      "views": 209,
+      "min": 9.5,
+      "ch_subs": 930,
+      "ch_videos": 321,
+      "ch_created": "2026-01-13"
+     },
+     {
+      "id": "e_ofW5yTEUw",
+      "title": "【＜2026年版＞社一①-5】社会保険法令（児童手当法）",
+      "channel": "知るほどおもしろい・労働と社会保険【AIで挑む社労士試験】",
+      "channelId": "UCaPLEPKrGUWMbY4qKL0YczQ",
+      "published": "2026-04-14",
+      "views": 184,
+      "min": 5.0,
+      "ch_subs": 725,
+      "ch_videos": 839,
+      "ch_created": "2025-10-29"
+     },
+     {
+      "id": "I4xZaXf4lAw",
+      "title": "児童手当、どう使うのが正解？｜今更聞けない？18年後に差がつくお金の話",
+      "channel": "節約パパの家計と育児 - まつぼーやチャンネル",
+      "channelId": "UCZbnjhBqj5pwEZuTy1tr_Rg",
+      "published": "2026-03-08",
+      "views": 144,
+      "min": 7.8,
+      "ch_subs": 18,
+      "ch_videos": 52,
+      "ch_created": "2026-03-01"
+     },
+     {
+      "id": "0xe9QvMMduY",
+      "title": "【知らないと234万損】児童手当を貯金してる親へ｜こどもNISA",
+      "channel": "ニューカマーNISA",
+      "channelId": "UCFnqZSPM8YKpep4GFGH9owQ",
+      "published": "2026-04-11",
+      "views": 91,
+      "min": 11.0,
+      "ch_subs": 44,
+      "ch_videos": 13,
+      "ch_created": "2026-04-02"
+     },
+     {
+      "id": "zsAWbtRdLuE",
+      "title": "【政策MAP】児童手当の50年史｜制度の変遷と自治体の取り組みを学ぶ｜今井そうた",
+      "channel": "今井そうたの政策研究室",
+      "channelId": "UCQqgnpnItoxUSGrwZwsexzg",
+      "published": "2026-10-14",
+      "views": 56,
+      "min": 4.7,
+      "ch_subs": 4,
+      "ch_videos": 1,
+      "ch_created": "2026-10-10"
+     },
+     {
+      "id": "aXZAyBDh8LU",
+      "title": "【2027年こどもNISA】児童手当を全額つみたてたら大学費用は賄える?",
+      "channel": "子育てとお金の研究室",
+      "channelId": "UCoXdhi6gN0kW_FzcKonqfjw",
+      "published": "2026-07-18",
+      "views": 47,
+      "min": 9.7,
+      "ch_subs": 7,
+      "ch_videos": 15,
+      "ch_created": "2026-07-13"
+     },
+     {
+      "id": "2wGJcznIC6s",
+      "title": "【児童手当改正】第1・2子は「最大244.5万円」、第3子は「最大681万円」へ… 誕生から高校卒業までにもらえる“リアルな金額”",
+      "channel": "かんたん労務チャンネル",
+      "channelId": "UCPOls6lAFH6dUsaPU5dvxRA",
+      "published": "2026-09-25",
+      "views": 46,
+      "min": 14.5,
+      "ch_subs": 2470,
+      "ch_videos": 1367,
+      "ch_created": "2019-08-16"
+     },
+     {
+      "id": "gEk33eq88VU",
+      "title": "児童手当(２０２４年１０改正版)",
+      "channel": "お金と暮らしのチャンネル",
+      "channelId": "UCIXNyMQDj4WpXyj1mxnBwzA",
+      "published": "2025-06-09",
+      "views": 32,
+      "min": 9.1,
+      "ch_subs": 2,
+      "ch_videos": 1,
+      "ch_created": "2025-06-02"
+     },
+     {
+      "id": "ff0Kgas3dKo",
+      "title": "児童手当制度改正に伴う申請勧奨と事務執行について｜川崎市議会で一般質問",
+      "channel": "川崎市議会議員 なすのあやか",
+      "channelId": "UCYrRtYsBXnHpkMIs11eQYPw",
+      "published": "2026-02-02",
+      "views": 14,
+      "min": 4.3,
+      "ch_subs": 23,
+      "ch_videos": 43,
+      "ch_created": "2026-01-03"
+     },
+     {
+      "id": "9l2gXXhmSRg",
+      "title": "児童手当、第3子の数え方に落とし穴があります",
+      "channel": "明日が変わる生活術",
+      "channelId": "UC9IGrPgnTFhMA0atIDkncTA",
+      "published": "2026-09-20",
+      "views": 12,
+      "min": 4.6,
+      "ch_subs": 1690,
+      "ch_videos": 424,
+      "ch_created": "2025-03-03"
+     },
+     {
+      "id": "VH3gq3PNHJM",
+      "title": "児童手当改正：得か？損か？",
+      "channel": "ミニ学",
+      "channelId": "UCO7vxyhsgyf88FNxNbEKRSg",
+      "published": "2026-04-19",
+      "views": 11,
+      "min": 6.9,
+      "ch_subs": 198,
+      "ch_videos": 722,
+      "ch_created": "2025-09-23"
+     },
+     {
+      "id": "fG-jvpLmhPs",
+      "title": "【児童手当】第3子の月3万円、「3人目」はどう数える？ 2024年10月の拡充を整理",
+      "channel": "お金アカデミー",
+      "channelId": "UCQ-3zO9C7yP37WGE7aCNfeA",
+      "published": "2026-10-05",
+      "views": 8,
+      "min": 9.6,
+      "ch_subs": 7,
+      "ch_videos": 69,
+      "ch_created": "2026-08-02"
+     },
+     {
+      "id": "j85ASISEayQ",
+      "title": "【児童手当】0歳から積むか、10歳からか？差はいくら?",
+      "channel": "子育てとお金の研究室",
+      "channelId": "UCoXdhi6gN0kW_FzcKonqfjw",
+      "published": "2026-07-25",
+      "views": 7,
+      "min": 9.4,
+      "ch_subs": 7,
+      "ch_videos": 15,
+      "ch_created": "2026-07-13"
+     },
+     {
+      "id": "1ldNCtebWyg",
+      "title": "【検証】共働き家庭の児童手当“約230万円”、正しい置き場所は？貯金・積立・半分ずつ",
+      "channel": "ミミ先生&ぽん太の「共働き家庭のお金の教科書」",
+      "channelId": "UCXVVG1RuYf65cRAf-2I0slQ",
+      "published": "2026-07-23",
+      "views": 5,
+      "min": 6.0,
+      "ch_subs": 14,
+      "ch_videos": 42,
+      "ch_created": "2026-07-05"
+     },
+     {
+      "id": "Kaqqk-K8Q5Y",
+      "title": "児童手当：2024年改正のすべて",
+      "channel": "ミニ学",
+      "channelId": "UCO7vxyhsgyf88FNxNbEKRSg",
+      "published": "2026-06-12",
+      "views": 1,
+      "min": 8.3,
+      "ch_subs": 198,
+      "ch_videos": 722,
+      "ch_created": "2025-09-23"
+     }
+    ]
+   },
+   {
+    "keyword": "住宅ローン控除",
+    "n": 30,
+    "top1": 1494213,
+    "top10": 638636,
+    "top30": 180484,
+    "channels": 22,
+    "over3x": 10,
+    "under100k": 10,
+    "new_channels": {},
+    "median_min": 21.6,
+    "videos": [
+     {
+      "id": "xtTv6V7siQo",
+      "title": "【激論】50年住宅ローンってアリ？月々の金額を抑えて投資に回す？素人に物件の価値を目利きできるの？災害や病気リスクは？｜アベプラ",
+      "channel": "ABEMA Prime #アベプラ【公式】",
+      "channelId": "UCB1dgsqLiEp57oDAyNV_vww",
+      "published": "2025-11-20",
+      "views": 1494213,
+      "min": 27.8,
+      "ch_subs": 2130000,
+      "ch_videos": 4702,
+      "ch_created": "2019-06-07"
+     },
+     {
+      "id": "xIVs_3aRY0Y",
+      "title": "【今さら聞けない税金の基礎知識】税理士が教える、会社員でもできる節税対策／給与明細の見方／税金より社会保険料が高すぎ／税負担の実例比較／不動産まわりの節税【MONEY SKILL SET EXTRA】",
+      "channel": "PIVOT 公式チャンネル",
+      "channelId": "UC8yHePe_RgUBE-waRWy6olw",
+      "published": "2025-03-25",
+      "views": 1265655,
+      "min": 35.5,
+      "ch_subs": 4100000,
+      "ch_videos": 5668,
+      "ch_created": "2022-02-17"
+     },
+     {
+      "id": "IPEMJNQY59c",
+      "title": "【リアル】離婚、転職、病気「このままでは競売に…」高騰する住宅金利で月10万のローン滞納も…　「任意売却」「リースバック」「リスケジュール」という選択肢｜旬感LIVE とれたてっ!〈カンテレNEWS〉",
+      "channel": "カンテレNEWS",
+      "channelId": "UCQhaZjODkIjuv38d-i5TVRw",
+      "published": "2026-02-26",
+      "views": 1160423,
+      "min": 10.5,
+      "ch_subs": 865000,
+      "ch_videos": 8236,
+      "ch_created": "2019-12-25"
+     },
+     {
+      "id": "9pQsZd1Od0E",
+      "title": "【2026年4月大改正】独身税？178万円の壁？今年の手取り激変ルールを一気に解説【会社員･個人事業主･年金/社会保険/子ども子育て支援金･ふるさと納税､住宅ローン控除､iDeCo/自動車､自転車】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2026-03-15",
+      "views": 1074294,
+      "min": 18.6,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "Tq_veN_ZJoo",
+      "title": "【超最速！】年収178万円の壁､ｲﾝﾎﾞｲｽ､暗号資産､NISA､住宅ローン控除､青色申告､EV自動車…令和8年度税制改正【会社員･個人事業主/生命保険/子ども/仮想通貨/富裕層/相続/高市2026】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2025-12-19",
+      "views": 960768,
+      "min": 21.6,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "xGsMKHKZzE8",
+      "title": "スマホ申告　マイナンバーカードでeｰTax",
+      "channel": "国税庁動画チャンネル",
+      "channelId": "UCEz4YHGP66QE1-0Wwe9ogtA",
+      "published": "2026-01-04",
+      "views": 756227,
+      "min": 14.5,
+      "ch_subs": 285000,
+      "ch_videos": 549,
+      "ch_created": "2009-09-30"
+     },
+     {
+      "id": "beUL93Pq-Ek",
+      "title": "【再放送】【超お得】住宅ローンに関する「よくある質問20」にすべてお答えします【貯める編】：（アニメ動画）第181回",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2024-12-15",
+      "views": 716588,
+      "min": 29.4,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "9v_FHnXKoKA",
+      "title": "日銀の利上げ加速で住宅ローン変動金利はどこまで上がる？最新予測でシミュレーションをアップデート！",
+      "channel": "コアラ先生の時事ネタ祭り",
+      "channelId": "UCQ-0MkpvJZ0co7WD79DBt9w",
+      "published": "2026-09-18",
+      "views": 702372,
+      "min": 20.4,
+      "ch_subs": 571000,
+      "ch_videos": 325,
+      "ch_created": "2019-11-12"
+     },
+     {
+      "id": "xZNuPPA7-q4",
+      "title": "【利上げ速報】政策金利１.25％に！住宅ローン変動どこまで上がる？あなたはまだ耐えられる？破綻？利上げストレステストで家計を守る！",
+      "channel": "お金と家の特別捜査官シミズ【Myアセット】",
+      "channelId": "UCatZG2Ahacaz4PCDGxttq2w",
+      "published": "2026-09-18",
+      "views": 658477,
+      "min": 21.9,
+      "ch_subs": 37800,
+      "ch_videos": 211,
+      "ch_created": "2023-02-06"
+     },
+     {
+      "id": "l50nzVwnKNI",
+      "title": "【正直銀行員】年収500万で住宅ローン4,000万。審査に通って詰んだ話",
+      "channel": "FP1級こう【元メガバンクが伝える50,60代お金の失敗学】",
+      "channelId": "UC4g10_xKNk_1DTxslmsdXqQ",
+      "published": "2026-06-16",
+      "views": 638636,
+      "min": 8.7,
+      "ch_subs": 25700,
+      "ch_videos": 143,
+      "ch_created": "2017-04-02"
+     },
+     {
+      "id": "DwGMVQMfsmw",
+      "title": "【テレビ朝日で放映】実録！進退窮まり売却決断　～住宅ローン返せず「一括返済を」～",
+      "channel": "一般社団法人 全国任意売却協会",
+      "channelId": "UCUE6AyHzhwbRVqCIqsh-2Bg",
+      "published": "2025-06-10",
+      "views": 617543,
+      "min": 5.5,
+      "ch_subs": 1200,
+      "ch_videos": 66,
+      "ch_created": "2011-02-18"
+     },
+     {
+      "id": "WqTTI75tXm0",
+      "title": "マイナポータル連携（事前準備）",
+      "channel": "国税庁動画チャンネル",
+      "channelId": "UCEz4YHGP66QE1-0Wwe9ogtA",
+      "published": "2026-01-04",
+      "views": 607433,
+      "min": 16.7,
+      "ch_subs": 285000,
+      "ch_videos": 549,
+      "ch_created": "2009-09-30"
+     },
+     {
+      "id": "cvju8Ete6q0",
+      "title": "中古住宅が断然お得に！？最新の住宅ローン控除の賢い使い方について解説します。",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-06-04",
+      "views": 554383,
+      "min": 21.5,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "oaSl1Y27UGA",
+      "title": "【住宅ローン】年収と貯蓄額の関係。今、家を買っても大丈夫か？賃貸と持家、老後を見据えるとどちらが安心なのか？",
+      "channel": "田中勲『不動産の今がわかれば、ちょっと先の未来も見えてくる』",
+      "channelId": "UCpkDEiCFZFtzHy1eEfnH-Xw",
+      "published": "2025-07-24",
+      "views": 534153,
+      "min": 22.6,
+      "ch_subs": 36700,
+      "ch_videos": 1062,
+      "ch_created": "2011-10-02"
+     },
+     {
+      "id": "IQBDPwyH6pI",
+      "title": "【再放送】【コロナで破綻急増】住宅ローンで困窮している「実例」と「やってはいけない5つのこと」【お金の勉強 初級編】：（アニメ動画）第103回",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2025-03-06",
+      "views": 531998,
+      "min": 22.6,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "Ap0p5KeEVyU",
+      "title": "早く返すよりも他にやるべきことがある？住宅ローンの繰り上げ返済の注意点についてお伝えします。",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-07-28",
+      "views": 466818,
+      "min": 26.4,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "VdVphCSE0Qg",
+      "title": "【金利引き上げ】住宅ローン50年時代到来 生活はどう変わる？｜ピタニュー特集",
+      "channel": "【公式】HOME広島ニュース",
+      "channelId": "UCRnFGOp_mjaCYEhMzsE2iHA",
+      "published": "2026-10-01",
+      "views": 388825,
+      "min": 16.3,
+      "ch_subs": 228000,
+      "ch_videos": 5366,
+      "ch_created": "2020-09-23"
+     },
+     {
+      "id": "EGfiaxC2AA8",
+      "title": "【絶対に損しない住宅ローンの借り方】年収別の最適予算／変動金利はメガバンクがお得？／繰上げ返済はNG／ペアローンのリスク／50年ローンはあり？／塩澤崇×千日太郎×三四郎 小宮【不動産SkillSet】",
+      "channel": "PIVOT 公式チャンネル",
+      "channelId": "UC8yHePe_RgUBE-waRWy6olw",
+      "published": "2025-09-11",
+      "views": 366468,
+      "min": 37.0,
+      "ch_subs": 4100000,
+      "ch_videos": 5668,
+      "ch_created": "2022-02-17"
+     },
+     {
+      "id": "FbYLuKgbnXk",
+      "title": "【月20万円赤字】世帯年収900万だったのに…子どもが生まれて家計崩壊しました【住宅ローン】【家計簿公開】",
+      "channel": "きょんのおうち",
+      "channelId": "UCbg0kt5RfCAanNN6gt2Dk8g",
+      "published": "2026-08-14",
+      "views": 312188,
+      "min": 24.1,
+      "ch_subs": 39900,
+      "ch_videos": 71,
+      "ch_created": "2024-12-15"
+     },
+     {
+      "id": "wLvy8fE_EdA",
+      "title": "令和7年度確定申告、e-TAXスマホでやる人は絶対注意！",
+      "channel": "ガーコちゃんねる",
+      "channelId": "UC4cVwSx4jdZszAcvrgJ4H-g",
+      "published": "2026-02-03",
+      "views": 287885,
+      "min": 28.7,
+      "ch_subs": 531000,
+      "ch_videos": 462,
+      "ch_created": "2022-04-26"
+     },
+     {
+      "id": "kNYt0RfH0Zk",
+      "title": "【2025年版】住宅ローン控除の仕組み解説｜制度の基礎知識と注意点",
+      "channel": "ウィズダムの失敗しない家づくりTV",
+      "channelId": "UCMnpzaL3t5PgfxL4B6v8nDA",
+      "published": "2025-05-10",
+      "views": 286208,
+      "min": 34.0,
+      "ch_subs": 183000,
+      "ch_videos": 1089,
+      "ch_created": "2020-05-09"
+     },
+     {
+      "id": "QMLT1PFfGqc",
+      "title": "【急いで買うべき？】住宅ローン「フラット35」の最低金利が2%超えに【リベ大公式切り抜き】",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2026-01-23",
+      "views": 273310,
+      "min": 6.2,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "3c_9k_1uIaw",
+      "title": "住宅ローン控除の確定申告のやり方をわかりやすく解説【スマホ・e-Tax対応】",
+      "channel": "サンデーマネーチャンネル",
+      "channelId": "UCy3hoi3qmjq0qGQZJ4TnvPQ",
+      "published": "2025-02-16",
+      "views": 255723,
+      "min": 24.3,
+      "ch_subs": 580000,
+      "ch_videos": 346,
+      "ch_created": "2020-03-11"
+     },
+     {
+      "id": "5C2A9hbjzyc",
+      "title": "住宅ローン控除の入力方法",
+      "channel": "国税庁動画チャンネル",
+      "channelId": "UCEz4YHGP66QE1-0Wwe9ogtA",
+      "published": "2026-01-04",
+      "views": 238584,
+      "min": 11.7,
+      "ch_subs": 285000,
+      "ch_videos": 549,
+      "ch_created": "2009-09-30"
+     },
+     {
+      "id": "3U_AcJzIoP8",
+      "title": "【超便利】スマホで確定申告！e-Tax完全ガイド◎定額減税に注意！準備〜入力まで実演！わかりやすく解説◎年金/退職金/医療費控除/住宅ローン/ふるさと納税/副業/必要書類/最新版/税理士監修のもと作成",
+      "channel": "定年前後の「お金の悩み」解消ラボ",
+      "channelId": "UC27e9lK-KS5EGvhx-DM0ShQ",
+      "published": "2025-02-01",
+      "views": 235262,
+      "min": 36.5,
+      "ch_subs": 249000,
+      "ch_videos": 97,
+      "ch_created": "2023-01-03"
+     },
+     {
+      "id": "L2at2r9WXAo",
+      "title": "住宅ローン破産寸前！？毎月のローン返済額を大公開【注文住宅】",
+      "channel": "らびぃのおうち",
+      "channelId": "UCCsjXLwiny68sCFMs6lYdMg",
+      "published": "2025-04-18",
+      "views": 224599,
+      "min": 16.9,
+      "ch_subs": 5700,
+      "ch_videos": 69,
+      "ch_created": "2024-10-25"
+     },
+     {
+      "id": "FXTpzJaz-k4",
+      "title": "マジで住宅ローン9割の人がもうお終いな理由ってこれなんですよね...【ひろゆき切り抜き】",
+      "channel": "ひろゆき【切り抜き】まとめチャンネル",
+      "channelId": "UCPgxTTX3kqkiVIn8bmbv0eQ",
+      "published": "2026-08-17",
+      "views": 212877,
+      "min": 12.1,
+      "ch_subs": 14900,
+      "ch_videos": 185,
+      "ch_created": "2023-07-02"
+     },
+     {
+      "id": "SwQhvbzvY_c",
+      "title": "営業が教えてくれない住宅ローン控除の落とし穴！知らないと最大91万円損をする！？",
+      "channel": "ぽりんき-注文住宅の家づくり攻略法-",
+      "channelId": "UCCMacYu5ThhRSNrs-DSQJLw",
+      "published": "2025-06-27",
+      "views": 194829,
+      "min": 15.8,
+      "ch_subs": 50300,
+      "ch_videos": 487,
+      "ch_created": "2021-02-17"
+     },
+     {
+      "id": "VlXzFPCfNS4",
+      "title": "【毎年ミス多発!!】知らないと大損│住民税通知書の見方を解説",
+      "channel": "TOMOZO CHANNEL",
+      "channelId": "UCzgE_svzmo1z9mLMC78qksQ",
+      "published": "2026-06-18",
+      "views": 186647,
+      "min": 22.8,
+      "ch_subs": 62000,
+      "ch_videos": 62,
+      "ch_created": "2021-01-08"
+     },
+     {
+      "id": "cnTn01NbaG0",
+      "title": "【住宅ローン】年収700万で5600万は無謀！銀行は教えてくれない「無理なく返せる借入額」を年収別に徹底解説【注文住宅】【マイホーム】",
+      "channel": "きょんのおうち",
+      "channelId": "UCbg0kt5RfCAanNN6gt2Dk8g",
+      "published": "2026-02-27",
+      "views": 180484,
+      "min": 19.2,
+      "ch_subs": 39900,
+      "ch_videos": 71,
+      "ch_created": "2024-12-15"
+     }
+    ]
+   },
+   {
+    "keyword": "確定申告 会社員",
+    "n": 30,
+    "top1": 4079703,
+    "top10": 1396726,
+    "top30": 548808,
+    "channels": 9,
+    "over3x": 3,
+    "under100k": 3,
+    "new_channels": {},
+    "median_min": 17.1,
+    "videos": [
+     {
+      "id": "Zp4J14T1o-A",
+      "title": "銀行口座の入出金は全部見られている？こういう口座の動きは税務署に疑われます。",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-04-29",
+      "views": 4079703,
+      "min": 27.4,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "3OoilJjxc-w",
+      "title": "【お金の授業 24限目】サラリーマンも節税しよう&サラリーマンの納税額の決まり方を知ろう【改訂版 お金の大学 P130～P135】",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2025-06-23",
+      "views": 2319541,
+      "min": 18.7,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "6tSC9d1g3qU",
+      "title": "【超改正】2026年4月､iDeCoが不要になる人続出！年12万円の節税も【会社員･自営業･公務員/企業型DC確定拠出年金･マッチング/DB確定給付･共済/手数料･出口戦略/いつから･わかりやすく】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2025-10-05",
+      "views": 2117836,
+      "min": 13.7,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "b22ELOdKyZs",
+      "title": "預金口座の動きは税務署に全て見られている？この特徴がある口座は勝手に疑われます。",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2025-09-27",
+      "views": 2028673,
+      "min": 21.2,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "z7N7CQjV-mw",
+      "title": "【税務署からの電話】この返答したら100%後悔します…",
+      "channel": "税務調査110番☆肉体派税理士・渡邊まさや",
+      "channelId": "UC5hSm_PYKawKigAg59JWUvw",
+      "published": "2025-03-09",
+      "views": 1851033,
+      "min": 12.0,
+      "ch_subs": 25900,
+      "ch_videos": 537,
+      "ch_created": "2019-05-16"
+     },
+     {
+      "id": "YyXA7evpqH4",
+      "title": "【激改正！】10月から会社員･パートの給料と働き方が変わる！106万円の壁消滅｡ｶｽﾊﾗで社名公表｡12月に手取り増加｡NISA･iDeCo改正【個人事業主/年末調整/同一労働賃金/酒/インボイス】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2026-09-20",
+      "views": 1760886,
+      "min": 17.6,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "T8MzgAJAcek",
+      "title": "【最速注意！】令和6年分確定申告の変更点！定額減税の記入漏れで全てムダに【2025年3月提出/会社員､個人事業主､年金/配偶者扶養/所得税住民税改正/マイナ/収受印/調整給付金/書き方･わかりやすく】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2025-01-05",
+      "views": 1659212,
+      "min": 9.0,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "W_60n2I8onk",
+      "title": "【超速報！】2028年1月利益から保険料へ強制上乗せ｡特定口座のメリット喪失｡老後に注意【NISA･株式売却･配当金･金融所得/健康保険法改正/投資家/後期高齢者医療制度･75歳以上/わかりやすく】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2026-10-18",
+      "views": 1594192,
+      "min": 12.4,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "ra0fCdDdC94",
+      "title": "今までの知識が通用しない？今年の確定申告で絶対に注意してほしいことを解説します！",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-02-11",
+      "views": 1448215,
+      "min": 20.6,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "OQq8Y-5WOME",
+      "title": "個人事業主は税務署に狙われたら99％負けます。確定申告で注意すべきことについて解説します。",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2025-02-22",
+      "views": 1396726,
+      "min": 17.9,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "xIVs_3aRY0Y",
+      "title": "【今さら聞けない税金の基礎知識】税理士が教える、会社員でもできる節税対策／給与明細の見方／税金より社会保険料が高すぎ／税負担の実例比較／不動産まわりの節税【MONEY SKILL SET EXTRA】",
+      "channel": "PIVOT 公式チャンネル",
+      "channelId": "UC8yHePe_RgUBE-waRWy6olw",
+      "published": "2025-03-25",
+      "views": 1265655,
+      "min": 35.5,
+      "ch_subs": 4100000,
+      "ch_videos": 5668,
+      "ch_created": "2022-02-17"
+     },
+     {
+      "id": "rxGoyncP8ic",
+      "title": "【ふるさと納税】お得どころかただ損しているだけ？住民税通知書を今すぐ確認してください。",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2025-07-10",
+      "views": 1171001,
+      "min": 23.4,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "fyAxxqtE-qk",
+      "title": "【超急報！】iDeCo最悪な増税｡受取時の5年ﾙｰﾙ改悪で今後の出口戦略は？【会社員･個人事業主･公務員/退職所得控除19年/節税/年金･小規模企業共済･DC/デメリット/2025税制改正/70歳】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2024-12-24",
+      "views": 1022481,
+      "min": 16.7,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "Tq_veN_ZJoo",
+      "title": "【超最速！】年収178万円の壁､ｲﾝﾎﾞｲｽ､暗号資産､NISA､住宅ローン控除､青色申告､EV自動車…令和8年度税制改正【会社員･個人事業主/生命保険/子ども/仮想通貨/富裕層/相続/高市2026】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2025-12-19",
+      "views": 960775,
+      "min": 21.6,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "-ZguwV96Km0",
+      "title": "【衝撃！】急増する｢税務署からのお尋ね｣…無視すべきｹｰｽと絶対答えるべきｹｰｽを税務の裏側から解説【税務調査･重加算税/会社員･個人事業主/所得･相続･法人/不動産売買･ネット取引･暗号資産】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2025-08-11",
+      "views": 948843,
+      "min": 11.7,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "FYJjrnPthoE",
+      "title": "【超激変】2026年末調整､去年のままで出すと大損！｢扶養の壁136万円｣と絶対やってはいけない書き方｡申告漏れに注意【会社員･パート専業主婦･学生･年金/税･控除･社会保険/わかりやすく/令和8年】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2026-10-12",
+      "views": 927699,
+      "min": 23.2,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "Fzul4Y9dXcQ",
+      "title": "【2025最新！】配当金･売却益など投資収益が社会保険料に強制反映！2028年か【株式･投資信託/マイナンバー･証券会社･特定口座/医療･介護･国保増税/NISA/老後･年金/確定申告･金融所得課税】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2025-07-06",
+      "views": 899165,
+      "min": 10.5,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "gk9et1xxmns",
+      "title": "確定申告をしなくても大丈夫！？メルカリでの売上はどうやって処理すればいいのかお話しします。",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2025-08-01",
+      "views": 829566,
+      "min": 17.9,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "e-KixXm7UII",
+      "title": "【緊急実況】問題噴出！e-Taxで令和6年分確定申告｡定額減税､注意点【会社員､個人事業主､専従者､年金/スマホ･PC/所得税予定納税/人数/調整給付金･不足額/やり方･わかりやすく/2025年3月】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2025-01-12",
+      "views": 828601,
+      "min": 14.4,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "nT7Ii2jH6Oo",
+      "title": "医療費控除の確定申告のやり方　スマホ＆e-Taxでの手順を解説",
+      "channel": "サンデーマネーチャンネル",
+      "channelId": "UCy3hoi3qmjq0qGQZJ4TnvPQ",
+      "published": "2025-02-02",
+      "views": 776963,
+      "min": 24.8,
+      "ch_subs": 580000,
+      "ch_videos": 346,
+      "ch_created": "2020-03-11"
+     },
+     {
+      "id": "XYjF6kaEQuo",
+      "title": "源泉徴収票の見方を知らないと申告漏れで大損する…どこを確認すべきか税理士がわかりやすく解説します。",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-01-26",
+      "views": 755803,
+      "min": 32.5,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "qmSe0Ie4FJ0",
+      "title": "これは知らないと絶対損する！株の利益や配当金が出た時に確定申告すべきかどうかわかりやすく解説します！",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-01-21",
+      "views": 666907,
+      "min": 28.4,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "miF78n4LxfE",
+      "title": "【超地雷！】令和7年の源泉徴収票が大激変！年末調整・確定申告で必須のチェック点【会社員･パート･アルバイト/配偶者･扶養親族/減税･所得控除/社会保険料･iDeCo/2025/野比のび太/ドラえもん】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2025-11-16",
+      "views": 637998,
+      "min": 13.1,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "Gc5nSBGbyvI",
+      "title": "【超最速！税制改正】iDeCoの減税効果が2.7倍へ！会社員は驚異の掛金大増額【個人事業主/節税･初心者/新NISA比較/投資信託始め方/企業型DC/62000円に引上げ/デメリット/2025】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2024-12-14",
+      "views": 616052,
+      "min": 11.9,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "YkZCzSngc3c",
+      "title": "確定申告でやらかすな！個人事業主が事前に確認すべき超重要ポイントについて解説します。",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2025-01-15",
+      "views": 615751,
+      "min": 15.8,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "AwQYphhyPZs",
+      "title": "【超速報！】NISA･特定口座でも確定申告必要に｡外貨の為替差益に最高税率55％｡最高裁初判断【個人投資家/米国株･外貨建て投信･S&P500･オルカン/所得税･雑所得課税/外国海外通貨/ドル円換算】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2026-06-21",
+      "views": 608147,
+      "min": 13.0,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "lei7G9N0KeA",
+      "title": "【確定申告】はじめてでもできる！医療費控除の簡単手順！",
+      "channel": "個人事業主チャンネル  by 弥生",
+      "channelId": "UCbdFu5VuhOvvhu2_e5JNFBg",
+      "published": "2024-11-27",
+      "views": 602604,
+      "min": 7.3,
+      "ch_subs": 60600,
+      "ch_videos": 183,
+      "ch_created": "2022-03-28"
+     },
+     {
+      "id": "60LzQ8KS-wc",
+      "title": "【超簡単！】今月からｽﾀｰﾄ！ﾊﾟｰﾄ主婦･ﾊﾞｲﾄ扶養･学生の上限が激変！本当の年収の壁【税制改正/会社員給与･個人事業主･配偶者控除/所得･住民減税/確定申告/社会保険130万円/わかりやすく】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2026-01-25",
+      "views": 599044,
+      "min": 14.4,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "oUn0RNVXUKg",
+      "title": "【最新】年金と給与！両方もらうと税金はどうなる？確定申告は必要？所得税のルール変更に要注意！わかりやすく解説◎確定申告不要でも申告しないと損する人・申告すると損する人/年金受給者の確定申告/税理士監修",
+      "channel": "定年前後の「お金の悩み」解消ラボ",
+      "channelId": "UC27e9lK-KS5EGvhx-DM0ShQ",
+      "published": "2026-02-28",
+      "views": 569727,
+      "min": 26.8,
+      "ch_subs": 249000,
+      "ch_videos": 97,
+      "ch_created": "2023-01-03"
+     },
+     {
+      "id": "hJovLcHAp3k",
+      "title": "【年金受給者】は●●を確定申告すると大損する可能性が…！",
+      "channel": "FPあおい〜シニアとお金のお話〜",
+      "channelId": "UC1-BKSrTFNbn3MWmOV6dbgA",
+      "published": "2025-12-28",
+      "views": 548808,
+      "min": 11.1,
+      "ch_subs": 12500,
+      "ch_videos": 31,
+      "ch_created": "2024-08-16"
+     }
+    ]
+   },
+   {
+    "keyword": "介護 費用 制度",
+    "n": 30,
+    "top1": 1041357,
+    "top10": 339093,
+    "top30": 44319,
+    "channels": 27,
+    "over3x": 9,
+    "under100k": 11,
+    "new_channels": {
+     "定年後の知恵": {
+      "created": "2026-05-29",
+      "months": 4.9,
+      "subs": 11200,
+      "videos": 75
+     },
+     "介護の悩みゼロ": {
+      "created": "2026-06-10",
+      "months": 4.5,
+      "subs": 214,
+      "videos": 9
+     },
+     "元ケアマネなおみの介護ほっと相談室": {
+      "created": "2026-04-23",
+      "months": 6.1,
+      "subs": 5100,
+      "videos": 40
+     }
+    },
+    "median_min": 19.4,
+    "videos": [
+     {
+      "id": "DY-y9Eyqj2A",
+      "title": "【知らないと大損】65歳から介護保険料が倍増するってホント⁉申請しないと年6万円ムダになります！",
+      "channel": "節約看護師りょう",
+      "channelId": "UCx2HEX7jkwrRsKXNgmIUMeA",
+      "published": "2026-02-13",
+      "views": 1041357,
+      "min": 22.7,
+      "ch_subs": 745000,
+      "ch_videos": 162,
+      "ch_created": "2023-01-16"
+     },
+     {
+      "id": "xzuA3Ecwtbs",
+      "title": "【50代以上は確認必須】これ知らないだけで生涯1000万円以上の差！政府からのボーナス40万円支給！申請しないと貰えない給付金・助成金のカラクリ【ゆっくり解説】",
+      "channel": "ゆっくりお金アカデミー",
+      "channelId": "UCACUd-GAlz4brbapgRSbNbA",
+      "published": "2025-10-25",
+      "views": 924482,
+      "min": 31.9,
+      "ch_subs": 165000,
+      "ch_videos": 760,
+      "ch_created": "2022-06-17"
+     },
+     {
+      "id": "wpTY9iTve-g",
+      "title": "65歳以降は働いても負担が増える？介護保険料が爆上がりする理由を解説します。",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-03-07",
+      "views": 720518,
+      "min": 20.2,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "kmOzNx2sg2Y",
+      "title": "【医療保険・がん保険は要らない？】無駄な保険の見極め方／保険営業の不都合な真実／公的保険は最強だが、落とし穴も／がん治療にかかるお金の中身／医療保険が必要なケースも【ビジネス虎の巻】",
+      "channel": "PIVOT 公式チャンネル",
+      "channelId": "UC8yHePe_RgUBE-waRWy6olw",
+      "published": "2025-09-26",
+      "views": 657502,
+      "min": 39.1,
+      "ch_subs": 4100000,
+      "ch_videos": 5668,
+      "ch_created": "2022-02-17"
+     },
+     {
+      "id": "dTdFj2UOH50",
+      "title": "【知らないと損】2026年のルール変更で65歳以降に社会保険に加入すると大損です！【介護保険料/雇用保険/年金】",
+      "channel": "サラダのお金相談所",
+      "channelId": "UCeicl_qqEQyLBdqhhrw20Rw",
+      "published": "2026-01-21",
+      "views": 586685,
+      "min": 45.5,
+      "ch_subs": 689000,
+      "ch_videos": 311,
+      "ch_created": "2023-09-02"
+     },
+     {
+      "id": "eXcVyAAyOpk",
+      "title": "【50歳以上は必見】4月からルール変更で申請しないと介護保険料が激増します！【介護保険/第一号被保険者/社会保険制度】",
+      "channel": "サラダのお金相談所",
+      "channelId": "UCeicl_qqEQyLBdqhhrw20Rw",
+      "published": "2026-04-01",
+      "views": 494013,
+      "min": 50.7,
+      "ch_subs": 689000,
+      "ch_videos": 311,
+      "ch_created": "2023-09-02"
+     },
+     {
+      "id": "_5wAXLo_APk",
+      "title": "【親の介護】母の入院費が高すぎた…高額療養費制度を使っても1ヶ月でこんなに？リハビリ病院の費用",
+      "channel": "ぼっち主婦のひとりごと",
+      "channelId": "UCcfDego1XYp8o4_5Q0MbQ4A",
+      "published": "2026-08-29",
+      "views": 426048,
+      "min": 11.2,
+      "ch_subs": 2240,
+      "ch_videos": 54,
+      "ch_created": "2025-09-13"
+     },
+     {
+      "id": "XY263PZbWtM",
+      "title": "【50歳以上は必見！】2026年4月から65歳からの介護保険料を6万円も減額する裏技！！【介護保険/第一号被保険者/社会保険制度】",
+      "channel": "チャコラのお金研究所",
+      "channelId": "UCEdcHrftcFX_m1ntPoJ7jgg",
+      "published": "2025-12-13",
+      "views": 417813,
+      "min": 43.2,
+      "ch_subs": 296000,
+      "ch_videos": 348,
+      "ch_created": "2022-03-12"
+     },
+     {
+      "id": "BJx7Ijlxm5w",
+      "title": "【申請をせずに大損！】65歳以降の介護保険料が3倍！？介護保険制度の安くなる仕組みの制度活用法！",
+      "channel": "定年前後のお金の新常識【社労士みなみ】",
+      "channelId": "UCxzI8X4wZF2Osa5Jd_RqgxQ",
+      "published": "2025-09-13",
+      "views": 389475,
+      "min": 19.2,
+      "ch_subs": 298000,
+      "ch_videos": 212,
+      "ch_created": "2023-04-03"
+     },
+     {
+      "id": "TQkyVHNeIwU",
+      "title": "【知らないと大損】65歳から介護保険料が倍増する⁉︎ 役所で「ある申請」をするだけで劇的に安くなる裏ワザを解説します",
+      "channel": "News65 (老後)",
+      "channelId": "UCgNr-yxfjcW0ao2dhvBZVWA",
+      "published": "2025-10-10",
+      "views": 339093,
+      "min": 19.8,
+      "ch_subs": 174000,
+      "ch_videos": 139,
+      "ch_created": "2022-07-08"
+     },
+     {
+      "id": "UgcyYTdD1IU",
+      "title": "【75歳で強制加入！】後期高齢者医療制度の保険料や自己負担割合の計算方法に安くなるための具体的な方法までフローチャートでわかりやすく解説",
+      "channel": "FP1級パパこみやまのこみやまFP総合オフィス",
+      "channelId": "UCRfvvN--iV8kXJYqhVTn10g",
+      "published": "2025-11-03",
+      "views": 291943,
+      "min": 33.1,
+      "ch_subs": 185000,
+      "ch_videos": 156,
+      "ch_created": "2025-04-08"
+     },
+     {
+      "id": "uExXLkDhv5k",
+      "title": "【超大改正】高額療養費2026年8月から激変！自己負担､大幅増へ｡年間上限導入｡現役世代は2.1万円の壁にも注意【会社員､個人事業主/社会･国民健康保険/保険証･医療費/わかりやすく/70歳/具体例】",
+      "channel": "オタク会計士ch【山田真哉】少しだけお金で得する",
+      "channelId": "UCMAEQdzGckZ9FMWJv8tz2zA",
+      "published": "2026-04-11",
+      "views": 233346,
+      "min": 9.6,
+      "ch_subs": 1170000,
+      "ch_videos": 819,
+      "ch_created": "2011-11-09"
+     },
+     {
+      "id": "gaJFjrQn_2k",
+      "title": "医療費が大幅に安くなる！知らなきゃ損する高額療養費制度を徹底解説",
+      "channel": "サンデーマネーチャンネル",
+      "channelId": "UCy3hoi3qmjq0qGQZJ4TnvPQ",
+      "published": "2024-11-03",
+      "views": 193443,
+      "min": 15.2,
+      "ch_subs": 580000,
+      "ch_videos": 346,
+      "ch_created": "2020-03-11"
+     },
+     {
+      "id": "oaEdPabhrcQ",
+      "title": "【衝撃】貧しい人が老人ホームで差別されない方法…知らないと一生損する！ | 老後の人生 | 老人ホーム | 老人ホームの現実 | 介護施設 | 老後の暮らし| 高齢者の生活",
+      "channel": "定年後の知恵",
+      "channelId": "UCS98zNLR_x7CzST1rEKLyLw",
+      "published": "2026-07-10",
+      "views": 180488,
+      "min": 50.6,
+      "ch_subs": 11200,
+      "ch_videos": 75,
+      "ch_created": "2026-05-29"
+     },
+     {
+      "id": "WPICypttUmQ",
+      "title": "【再放送】【超キホン】親の預金口座が凍結されて「生活費・介護費が引き出せない！」に備えてできること5選【守る編】：（アニメ動画）第368回",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2025-07-13",
+      "views": 177075,
+      "min": 30.2,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "Ob9qpElqX-I",
+      "title": "【不安解消】要介護認定1の義母の介護費用の詳細を公表します",
+      "channel": "アラカンふじこの義母と同居ライフ",
+      "channelId": "UCzxbdAhIipd5F_7SfGP2lvw",
+      "published": "2024-11-18",
+      "views": 160201,
+      "min": 17.2,
+      "ch_subs": 3840,
+      "ch_videos": 61,
+      "ch_created": "2024-05-08"
+     },
+     {
+      "id": "GyBlMwv9om0",
+      "title": "介護施設・老人ホーム8種類を分かりやすく解説！",
+      "channel": "リハウルフ",
+      "channelId": "UCYwBUSzgToeLIhSJj8lykVg",
+      "published": "2026-05-19",
+      "views": 136879,
+      "min": 14.7,
+      "ch_subs": 13200,
+      "ch_videos": 555,
+      "ch_created": "2017-05-15"
+     },
+     {
+      "id": "q4Ol54G-4YM",
+      "title": "【必ず申請してください!!】介護保険料の「軽減・減免」要件、住民税非課税となる年金収入の目安 ≪26年6月時点≫",
+      "channel": "ほらっちチャンネル",
+      "channelId": "UCWFRCZp5L_SZnjHAA52l1HA",
+      "published": "2026-06-30",
+      "views": 129804,
+      "min": 11.1,
+      "ch_subs": 220000,
+      "ch_videos": 1216,
+      "ch_created": "2018-03-22"
+     },
+     {
+      "id": "NNPEFx5VzNQ",
+      "title": "もう払えない！認知症介護の費用地獄から抜け出す3つの方法〜認知症専門医・長谷川嘉哉",
+      "channel": "長谷川嘉哉「ボケ日和　転ばぬ先の知恵」チャンネル",
+      "channelId": "UCZhW_pZpmQ7Y8VSAn3fZ5qQ",
+      "published": "2025-04-01",
+      "views": 114710,
+      "min": 10.1,
+      "ch_subs": 189000,
+      "ch_videos": 1080,
+      "ch_created": "2018-01-15"
+     },
+     {
+      "id": "oJDv63KqKRI",
+      "title": "【令和8年限定】7月に届く介護保険料決定通知書を安くする方法！65歳から保険料が2〜3倍になる理由とは？",
+      "channel": "フクロウの年金・給付金解説室",
+      "channelId": "UCBGbLgIQ27rq8g_q6Q2Ecgg",
+      "published": "2026-07-10",
+      "views": 102898,
+      "min": 19.8,
+      "ch_subs": 46400,
+      "ch_videos": 46,
+      "ch_created": "2019-11-13"
+     },
+     {
+      "id": "6atYvgtIyLM",
+      "title": "【家計ピンチ救済】今すぐ申請！介護を助ける「もらえるお金」3選／金額と対象者をわかりやすく解説",
+      "channel": "おかまもch | おかんのお金守るチャンネル",
+      "channelId": "UCY_Xgod2xaEYWtsUZoKHA3w",
+      "published": "2025-06-24",
+      "views": 101088,
+      "min": 15.7,
+      "ch_subs": 201000,
+      "ch_videos": 552,
+      "ch_created": "2023-10-29"
+     },
+     {
+      "id": "lvE__DWhvWE",
+      "title": "【現場で何度も見た】親の介護で兄弟が揉める本当の原因",
+      "channel": "介護の悩みゼロ",
+      "channelId": "UCFOV2J2uBFmIBldtYBMBO_g",
+      "published": "2026-06-25",
+      "views": 85442,
+      "min": 10.9,
+      "ch_subs": 214,
+      "ch_videos": 9,
+      "ch_created": "2026-06-10"
+     },
+     {
+      "id": "V5W5vCD4ICM",
+      "title": "【知らないと損】8月から入院費の上限が変わる｜限度額適用認定証とマイナ保険証どっちを使う？",
+      "channel": "診療報酬りゅうチャンネル",
+      "channelId": "UCQxZyqvs-1FvPq-aaX5Dqqw",
+      "published": "2026-07-21",
+      "views": 79986,
+      "min": 30.4,
+      "ch_subs": 101000,
+      "ch_videos": 2204,
+      "ch_created": "2019-07-18"
+     },
+     {
+      "id": "3Gt-Qn59bWM",
+      "title": "【保存版】その薬代、本当に払わなくていいかも？リウマチ治療を支える制度5選を専門医が徹底解説【障害年金/介護保険/制度活用】",
+      "channel": "とし先生が教える予防医学と最新治療",
+      "channelId": "UCl1OvEtIZSBiHqjGe6gTTjA",
+      "published": "2025-08-03",
+      "views": 78124,
+      "min": 8.8,
+      "ch_subs": 6390,
+      "ch_videos": 460,
+      "ch_created": "2024-03-20"
+     },
+     {
+      "id": "xXZTqMzT2Gc",
+      "title": "【お金の授業 11限目】介護リスクを見直そう【改訂版 お金の大学P68～P71】",
+      "channel": "両学長 リベラルアーツ大学",
+      "channelId": "UC67Wr_9pA4I0glIxDt_Cpyw",
+      "published": "2025-04-16",
+      "views": 74372,
+      "min": 7.3,
+      "ch_subs": 9620000,
+      "ch_videos": 3568,
+      "ch_created": "2018-10-05"
+     },
+     {
+      "id": "FNlP99bGWVM",
+      "title": "【制度の危機】介護サービス崩壊を防ぐには？　年々増加する保険料　大阪府民の負担額は全国最高規模　「2割負担拡大」めぐり議論も…貯蓄額を考慮する案に介護アドバイザーは「現実的ではない」【きょうの深掘り】",
+      "channel": "ABCテレビニュース",
+      "channelId": "UCPW-5qfYGNR8XYrvESrqJKA",
+      "published": "2025-11-29",
+      "views": 73513,
+      "min": 18.6,
+      "ch_subs": 773000,
+      "ch_videos": 5723,
+      "ch_created": "2012-03-13"
+     },
+     {
+      "id": "lAuk1Ap6h0k",
+      "title": "老人ホーム・介護施設は年金だけで入れる？親の貯金がない家庭が最初に確認すべきこと",
+      "channel": "元ケアマネなおみの介護ほっと相談室",
+      "channelId": "UCH0YPATpV4cdSm0byuDJZ-Q",
+      "published": "2026-09-10",
+      "views": 69821,
+      "min": 15.2,
+      "ch_subs": 5100,
+      "ch_videos": 40,
+      "ch_created": "2026-04-23"
+     },
+     {
+      "id": "z77-VwmDFYA",
+      "title": "【在宅生活の限界】年金9万、限界を感じていた87歳の私。どうやって“安心できる老人ホーム”を見つけたのか？その全記録。～私と孫の物語～",
+      "channel": "【知恵の輝き】学びのひととき",
+      "channelId": "UCZuHSVOwFPVUog7uL6l0pzA",
+      "published": "2025-05-31",
+      "views": 65161,
+      "min": 31.0,
+      "ch_subs": 52000,
+      "ch_videos": 188,
+      "ch_created": "2024-11-24"
+     },
+     {
+      "id": "eFGqG32_P_c",
+      "title": "【全7種】老人ホームの入居にかかる費用やオススメの選び方を施設管理者が徹底解説",
+      "channel": "しゅんたろうの介護アカデミー",
+      "channelId": "UCcf61Yj0eWFvQ97G4qrcCMA",
+      "published": "2025-11-20",
+      "views": 45728,
+      "min": 16.6,
+      "ch_subs": 1580,
+      "ch_videos": 71,
+      "ch_created": "2025-08-18"
+     },
+     {
+      "id": "0l0d-vBUsQg",
+      "title": "【介護費用で損しない】施設・在宅・医療費を安くする制度を元ケアマネージャーがまとめて紹介",
+      "channel": "元ケアマネなおみの介護ほっと相談室",
+      "channelId": "UCH0YPATpV4cdSm0byuDJZ-Q",
+      "published": "2026-07-26",
+      "views": 44319,
+      "min": 19.5,
+      "ch_subs": 5100,
+      "ch_videos": 40,
+      "ch_created": "2026-04-23"
+     }
+    ]
+   },
+   {
+    "keyword": "相続 手続き",
+    "n": 30,
+    "top1": 3405883,
+    "top10": 667660,
+    "top30": 228403,
+    "channels": 15,
+    "over3x": 16,
+    "under100k": 16,
+    "new_channels": {
+     "さゆり【年金・給付金受給チャンネル】": {
+      "created": "2026-04-28",
+      "months": 6.0,
+      "subs": 65900,
+      "videos": 28
+     },
+     "ひだか先生【司法書士】相続": {
+      "created": "2025-11-15",
+      "months": 11.3,
+      "subs": 7160,
+      "videos": 157
+     }
+    },
+    "median_min": 21.8,
+    "videos": [
+     {
+      "id": "0s68VAVxRsM",
+      "title": "父親が亡くなった時の相続は母親と子供どっちの方がお得なのか？最強税理士が徹底解説します！",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2025-06-29",
+      "views": 3405883,
+      "min": 22.5,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "J5pFXJ3cdBY",
+      "title": "【相続】親が亡くなった時のNG行動！相続手続きでやってはいけない7つの落とし穴",
+      "channel": "【円満相続ちゃんねる】税理士橘慶太",
+      "channelId": "UCHm2X8jCcW7onry-v5H_veA",
+      "published": "2026-03-30",
+      "views": 1678552,
+      "min": 13.6,
+      "ch_subs": 324000,
+      "ch_videos": 646,
+      "ch_created": "2016-03-27"
+     },
+     {
+      "id": "13M1Ll7ZpnU",
+      "title": "最初の相続手続きは誰に依頼すべき？相続のプロが正しい順番を解説します。",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-06-21",
+      "views": 1201407,
+      "min": 28.7,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "gUAjFXQvejU",
+      "title": "手順を間違えると手遅れに？親の相続手続きで絶対にやってはいけないことをお伝えします。",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2026-07-05",
+      "views": 1093781,
+      "min": 26.1,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "JhHX_w5P8jA",
+      "title": "親が亡くなった直後、絶対にやってはいけないNG行動を相続専門の税理士が解説します",
+      "channel": "税理士大田の相続ウラ話",
+      "channelId": "UClKvbBN2Ja8YbTrGzjVj2XA",
+      "published": "2026-04-27",
+      "views": 1083689,
+      "min": 21.8,
+      "ch_subs": 75000,
+      "ch_videos": 485,
+      "ch_created": "2019-11-02"
+     },
+     {
+      "id": "ZqkuQqLvm4c",
+      "title": "【兄妹なのに1円ももらえない】 独身者の遺産をめぐって兄妹が直面する衝撃の事実",
+      "channel": "【円満相続ちゃんねる】税理士橘慶太",
+      "channelId": "UCHm2X8jCcW7onry-v5H_veA",
+      "published": "2026-04-30",
+      "views": 1051841,
+      "min": 21.7,
+      "ch_subs": 324000,
+      "ch_videos": 646,
+      "ch_created": "2016-03-27"
+     },
+     {
+      "id": "uiai-N3axvA",
+      "title": "【税理士が暴露】相続で後悔...母親名義の実家が“思わぬ税金地獄”になる理由",
+      "channel": "まるごと安全相続ch-あまおう税理士",
+      "channelId": "UCSd-L3_jhdk8e2-hLFhNqJQ",
+      "published": "2025-11-11",
+      "views": 1031682,
+      "min": 30.2,
+      "ch_subs": 45500,
+      "ch_videos": 350,
+      "ch_created": "2025-10-24"
+     },
+     {
+      "id": "8m5cvlMs1pI",
+      "title": "新NISA運用中に死んだら一体どうなる？相続や課税、事前対策6選をまとめて解説",
+      "channel": "ちゃすく【40代50代60代の安心資産形成術】",
+      "channelId": "UCrc1rqbCGteLqRLaTwpGnPQ",
+      "published": "2026-03-30",
+      "views": 810880,
+      "min": 27.5,
+      "ch_subs": 56300,
+      "ch_videos": 275,
+      "ch_created": "2021-03-07"
+     },
+     {
+      "id": "ejJPhgvI1hs",
+      "title": "わたし相続税の申告いるの？いらないの？カンタンに知る裏ワザ！誰でもすぐに分かる！",
+      "channel": "そろそろ相続税　税理士山田寛英",
+      "channelId": "UCQsUbmZZlUdGxmgihvyeIxQ",
+      "published": "2025-05-14",
+      "views": 742110,
+      "min": 34.0,
+      "ch_subs": 84300,
+      "ch_videos": 106,
+      "ch_created": "2020-07-23"
+     },
+     {
+      "id": "MGgk9hlIHGI",
+      "title": "【警告】実家の相続で絶対にやってはいけない6つの行為を税理士が解説",
+      "channel": "税理士勝部の相続チャンネル",
+      "channelId": "UCim0hqnMb7hSb29ZcU7o4YA",
+      "published": "2025-09-13",
+      "views": 667660,
+      "min": 12.8,
+      "ch_subs": 20800,
+      "ch_videos": 67,
+      "ch_created": "2025-07-11"
+     },
+     {
+      "id": "g9p_vYspppE",
+      "title": "親から子へのお金は\"この渡し方\"なら贈与税ゼロです",
+      "channel": "【円満相続ちゃんねる】税理士橘慶太",
+      "channelId": "UCHm2X8jCcW7onry-v5H_veA",
+      "published": "2026-08-04",
+      "views": 659325,
+      "min": 20.4,
+      "ch_subs": 324000,
+      "ch_videos": 646,
+      "ch_created": "2016-03-27"
+     },
+     {
+      "id": "RqJfV6yXXLc",
+      "title": "【豪邸相続で貯金消える⁉︎】梅宮アンナ「維持できなかった」真鶴・700坪／父・辰夫にもし「隠し子」いたら…81年分の戸籍全調査／相続って誰に相談すべき？／橘慶太税理士が詳しく解説",
+      "channel": "楽待 RAKUMACHI",
+      "channelId": "UCPMJKbrxtpARoTd1b49iUvA",
+      "published": "2026-07-15",
+      "views": 597315,
+      "min": 40.5,
+      "ch_subs": 1750000,
+      "ch_videos": 5025,
+      "ch_created": "2009-04-30"
+     },
+     {
+      "id": "2aj3bN43Ac4",
+      "title": "タンス預金1000万円！相続税かからない方法",
+      "channel": "そろそろ相続税　税理士山田寛英",
+      "channelId": "UCQsUbmZZlUdGxmgihvyeIxQ",
+      "published": "2025-11-13",
+      "views": 575497,
+      "min": 41.0,
+      "ch_subs": 84300,
+      "ch_videos": 106,
+      "ch_created": "2020-07-23"
+     },
+     {
+      "id": "Gh267945yxU",
+      "title": "【要注意】相続税の申告後、税務署が真っ先にチェックする4つを相続のプロが分かりやすく解説",
+      "channel": "【円満相続ちゃんねる】税理士橘慶太",
+      "channelId": "UCHm2X8jCcW7onry-v5H_veA",
+      "published": "2026-03-23",
+      "views": 528440,
+      "min": 17.6,
+      "ch_subs": 324000,
+      "ch_videos": 646,
+      "ch_created": "2016-03-27"
+     },
+     {
+      "id": "yeK-aqOoexw",
+      "title": "【2026年8月から】ゆうちょ銀行のルールが大幅変更！老後資金を守るためのゆうちょ銀行の裏ワザを完全解説！★50代・60代以上",
+      "channel": "さゆり【年金・給付金受給チャンネル】",
+      "channelId": "UC1i2e8hN7pP31pu1ECU4ptQ",
+      "published": "2026-08-27",
+      "views": 487068,
+      "min": 34.0,
+      "ch_subs": 65900,
+      "ch_videos": 28,
+      "ch_created": "2026-04-28"
+     },
+     {
+      "id": "fFsjeVHc-jg",
+      "title": "親が亡くなった時のやることリスト【当日～12日目まで解説】",
+      "channel": "まるごと安全相続ch-あまおう税理士",
+      "channelId": "UCSd-L3_jhdk8e2-hLFhNqJQ",
+      "published": "2025-11-16",
+      "views": 422368,
+      "min": 19.3,
+      "ch_subs": 45500,
+      "ch_videos": 350,
+      "ch_created": "2025-10-24"
+     },
+     {
+      "id": "5ap2VuQgy4Y",
+      "title": "親が亡くなって3か月…全ての手続きを一人でやる50代の一番大変だったこと！",
+      "channel": "大学生がいる50代主婦リアルなお金事情",
+      "channelId": "UCF0_FqkLZ3g1ySk6Xtvsuhw",
+      "published": "2026-05-23",
+      "views": 402371,
+      "min": 35.9,
+      "ch_subs": 45600,
+      "ch_videos": 104,
+      "ch_created": "2024-01-28"
+     },
+     {
+      "id": "cwJ0sYfyrFU",
+      "title": "相続手続きは誰に頼むべき？一番安く済むケースをこっそり教えます",
+      "channel": "まるごと安全相続ch-あまおう税理士",
+      "channelId": "UCSd-L3_jhdk8e2-hLFhNqJQ",
+      "published": "2026-01-27",
+      "views": 375308,
+      "min": 18.5,
+      "ch_subs": 45500,
+      "ch_videos": 350,
+      "ch_created": "2025-10-24"
+     },
+     {
+      "id": "zTicEbv0XOs",
+      "title": "【相続の新常識】2026年以降に選ぶべき「最も有利な財産の渡し方」",
+      "channel": "【円満相続ちゃんねる】税理士橘慶太",
+      "channelId": "UCHm2X8jCcW7onry-v5H_veA",
+      "published": "2026-04-18",
+      "views": 367710,
+      "min": 21.3,
+      "ch_subs": 324000,
+      "ch_videos": 646,
+      "ch_created": "2016-03-27"
+     },
+     {
+      "id": "O7b94U05mWI",
+      "title": "これ知らないと損します！絶対にやっておくべき二次相続対策",
+      "channel": "まるごと安全相続ch-あまおう税理士",
+      "channelId": "UCSd-L3_jhdk8e2-hLFhNqJQ",
+      "published": "2025-11-20",
+      "views": 353969,
+      "min": 25.3,
+      "ch_subs": 45500,
+      "ch_videos": 350,
+      "ch_created": "2025-10-24"
+     },
+     {
+      "id": "ZqTPKXCozrQ",
+      "title": "贈与と相続のどちらがお得なのか？親から子へ不動産の名義変更の最適なタイミングについて解説します！",
+      "channel": "脱・税理士スガワラくん",
+      "channelId": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+      "published": "2025-08-30",
+      "views": 332724,
+      "min": 19.2,
+      "ch_subs": 1830000,
+      "ch_videos": 1856,
+      "ch_created": "2022-12-07"
+     },
+     {
+      "id": "YpUpZ1cFA5I",
+      "title": "負動産の相続放棄にご注意ください。",
+      "channel": "負動産の窓口│土地じまい専門チャンネル",
+      "channelId": "UCfDD-0Ee4JpVP55ycFs1MLQ",
+      "published": "2025-07-25",
+      "views": 291960,
+      "min": 23.8,
+      "ch_subs": 32100,
+      "ch_videos": 396,
+      "ch_created": "2021-07-24"
+     },
+     {
+      "id": "wEmBt_s8BUs",
+      "title": "【大損】一人っ子相続で”これ”をしないと相続税が数倍に跳ね上がる理由【税理士が解説】",
+      "channel": "【円満相続ちゃんねる】税理士橘慶太",
+      "channelId": "UCHm2X8jCcW7onry-v5H_veA",
+      "published": "2026-03-17",
+      "views": 287070,
+      "min": 19.6,
+      "ch_subs": 324000,
+      "ch_videos": 646,
+      "ch_created": "2016-03-27"
+     },
+     {
+      "id": "sb2MbhsdNso",
+      "title": "【銀行で戸籍の束は不要】相続で役立つ「魔法の紙」とは？手続きをスピードアップする方法",
+      "channel": "ひだか先生【司法書士】相続",
+      "channelId": "UCRKAyaUHOlthi8pUnguVgVw",
+      "published": "2026-08-30",
+      "views": 282799,
+      "min": 10.7,
+      "ch_subs": 7160,
+      "ch_videos": 157,
+      "ch_created": "2025-11-15"
+     },
+     {
+      "id": "p5w-reJurk8",
+      "title": "税理士・司法書士・行政書士　相続手続の相談　〇〇〇なら超絶ボラれます",
+      "channel": "税理士 林修平の相続税チャンネル",
+      "channelId": "UCq_KGpBCkwsjzw97ZaTNALw",
+      "published": "2026-04-07",
+      "views": 280279,
+      "min": 14.1,
+      "ch_subs": 54200,
+      "ch_videos": 84,
+      "ch_created": "2022-12-18"
+     },
+     {
+      "id": "ZBgpTvG3JJs",
+      "title": "相続と現金預金・よくある質問トップ10【税理士による解説】",
+      "channel": "【小さな相続専門TV】税理士きむら あきらこ",
+      "channelId": "UCgLQhJz6s7wmAUtu3-OgU9Q",
+      "published": "2025-03-24",
+      "views": 273895,
+      "min": 45.0,
+      "ch_subs": 28500,
+      "ch_videos": 174,
+      "ch_created": "2020-10-07"
+     },
+     {
+      "id": "5Ah2w2InM5s",
+      "title": "【カミコとマナブ】トラブル増加中！知っておきたい相続話｜ピタニュー特集",
+      "channel": "【公式】HOME広島ニュース",
+      "channelId": "UCRnFGOp_mjaCYEhMzsE2iHA",
+      "published": "2026-09-06",
+      "views": 261142,
+      "min": 17.4,
+      "ch_subs": 228000,
+      "ch_videos": 5366,
+      "ch_created": "2020-09-23"
+     },
+     {
+      "id": "e3unZhEkkLg",
+      "title": "【要注意】税務調査で否認される“やってはいけない”生前贈与5選",
+      "channel": "【円満相続ちゃんねる】税理士橘慶太",
+      "channelId": "UCHm2X8jCcW7onry-v5H_veA",
+      "published": "2026-05-15",
+      "views": 247150,
+      "min": 18.6,
+      "ch_subs": 324000,
+      "ch_videos": 646,
+      "ch_created": "2016-03-27"
+     },
+     {
+      "id": "cy5_KavkO_0",
+      "title": "相続税がかなり減る！生命保険の受取人を変えるだけで家族全体の税負担を最小化する裏技",
+      "channel": "【円満相続ちゃんねる】税理士橘慶太",
+      "channelId": "UCHm2X8jCcW7onry-v5H_veA",
+      "published": "2026-04-28",
+      "views": 243419,
+      "min": 19.4,
+      "ch_subs": 324000,
+      "ch_videos": 646,
+      "ch_created": "2016-03-27"
+     },
+     {
+      "id": "h7v5vugd7Ys",
+      "title": "あの時やっておけば…知らないまま実家を相続すると数百万が消えます",
+      "channel": "まるごと安全相続ch-あまおう税理士",
+      "channelId": "UCSd-L3_jhdk8e2-hLFhNqJQ",
+      "published": "2026-01-20",
+      "views": 228403,
+      "min": 38.2,
+      "ch_subs": 45500,
+      "ch_videos": 350,
+      "ch_created": "2025-10-24"
+     }
+    ]
+   }
+  ]
+ },
+ "comment_questions": [
+  {
+   "video": "StJqynjveos",
+   "likes": 2255,
+   "replies": 94,
+   "text": "子どもが2歳じゃなくて、小学校4、５年生くらいまで時短勤務就業給付必要だと思うんだけど、みなさん賛同できません？"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 479,
+   "replies": 17,
+   "text": "高校まで児童手当出さなくていいから 昔に控除をして欲しい。 もらうより税金減らしてくれ。"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 393,
+   "replies": 3,
+   "text": "ちゃんと保育士さんに還元しろよ？ 保育士さんには感謝しかない"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 345,
+   "replies": 5,
+   "text": "希望に沿った対応…はぁ… 何故小学校入ったら終わりやねん… まだ保育園に通ってる方が融通効くのに学童は全く…預け時間も短いのに… 良いように言ってるけど実際問題小学校から本当の修羅場が待ってることに国はまだ分かっていない。"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 339,
+   "replies": 10,
+   "text": "NGワードで受給できないなら今まで徴収された失業保険40年分を返還して欲しい。"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 216,
+   "replies": 0,
+   "text": "どんな条件にしても保険料を支払っているのだからすぐ支給してほしいと思います。掛け捨てだし。"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 117,
+   "replies": 3,
+   "text": "毎日へとへとです。小学校に上がってからこんなに大変だとは。1年生、3歳2人子供の送り迎え、習い事、仕事、家事で金曜日にはヘロヘロです！！先行きの見えない不安に、働かないとやっていけませんよ。みんな歯を食いしばって頑張って子育てして本当偉すぎません？こんなに頑張ってる人たちを大切にしないと日本滅ぶって。税金巻き上げすぎなんだって。"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 108,
+   "replies": 9,
+   "text": "健康保険任意継続の場合の、保険料が会社負担分が無くなることによる現行の2倍になる点に触れていないのはなぜ？"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 99,
+   "replies": 4,
+   "text": "「小1の壁」を早く改善してほしい。 ここでキャリアを頓挫してしまうことが多い。"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 89,
+   "replies": 1,
+   "text": "当方子育て共働き世代です。 上の子の時よりは手厚くなってるの分かるし恩恵受けてられるのでめちゃくちゃ有難いです。 最近正社員で働き始めてからまじで働いてる人達の力って偉大だなとひしひし感じてます。本当に有難いことです。 ですが、こんなこと言ったら社会知らなそうとか頭悪そうとかもっと要領よく働けよとか思う方いらっしゃるかもなんですが言わせて欲しい。 正社員でフルで働いて思った。 辛い、本当に辛い。好"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 81,
+   "replies": 1,
+   "text": "もはやフルタイムの働き方を短くするのが1番早いんじゃない？ 細かい選択肢ばかり増やして柔軟性ばかり強めて個別の事情を配慮できるように、っていうのがもう限界じゃないか？ 柔軟性を持たせられるように、マストを縮小する方向にならんもんかね？"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 77,
+   "replies": 2,
+   "text": "必要な休息なら傷病手当や失業手当は大事だと思うが、多くても６割程度しかもらえない。 結局、普通に働いた方が所得増えるからね。のんびり探してると失業期間が長過ぎて、何で働いてないの？と次の就職先がなかなか決まらない要因にもなる。 理由がちゃんとしてない人には使えない方法だと思う。"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 77,
+   "replies": 4,
+   "text": "市役所の窓口でも任意継続のことは教えてくれますよ！ 一般的には退職した次の年度は任意継続で、その次の年度からは国保加入がお得になるようです。"
+  },
+  {
+   "video": "BrzNVcU65LI",
+   "likes": 62,
+   "replies": 0,
+   "text": "社会保険給付金制度（傷病手当金）は、別の動画によれば９８パーセントの人が申請に失敗しているそう。 理由は、医師がそんな理由では認定をしないとか（就労が困難なほどの具体的な症状が確認できないから？）、本人が退職届を出すタイミングを間違えたとか。 そりゃそうでしょ、誰でも認定してもらえるなら希望する全員がもらえることになる。"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 60,
+   "replies": 0,
+   "text": "給付はいらないから、控除にして欲しい。その方が子供がいない人にとって平等感がある。 子育て支援は嬉しいけど、職場を支える人の支援も必要だよ。"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 55,
+   "replies": 1,
+   "text": "動画ありがとうございます。60歳の定年退職前に会社を辞め、派遣などで働こうと思っています。若くないので派遣もすぐ見つからないだろうと頑張って探していたら失業保険の認定日前に内定をもらってしまいました。失業保険と再就職手当を両方とも失ってしまうこともありますよね？とんとん拍子でちょっと大手企業から内定いただいてしまいましたが断ろうか今悩み中です・・長く働いていましたので失業保険か再就職手当はもらって"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 49,
+   "replies": 5,
+   "text": "🎁 失業保険の制度/条件/申請方法全て詰まった特典 🎁自分がどのくらい給付金もをもらえるかの診断 下記のリンクから⬇️ https://liff.line.me/2006449014-nmEPBEGJ/landing?follow=%40345ofilm&lp=Imdvk4&liff_id=2006449014-nmEPBEGJ 【「アプリで開く」を押してください）】 退職後300万円以上国からお"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 41,
+   "replies": 0,
+   "text": "単純に思う事、自分も去年離職してハローワークとやり取りして感じた事、給付金はあくまでも失業保険から毎月会社が払っている物なのに、何故、ハローワークの窓口職員にゴマをすってペコペコしないとアカンのかが分からん、人なので好き嫌いはあると思うが、伝えるべき内容も個人差、総合的判断と言ってるのに会社側しか見ていない、一言言うとハローワークは調査する機関ではないって、それなら平等に判断するべき所、会社側に偏"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 38,
+   "replies": 1,
+   "text": "これは調べられる人はわかるけどわからない人はわからないね‥ 知ってるか知らないかの世界だね‥ 誰も教えてくれないから‥"
+  },
+  {
+   "video": "BrzNVcU65LI",
+   "likes": 34,
+   "replies": 3,
+   "text": "傷病手当金は本当に病気の人で休職しないといけない人や退職しないといけない人が使う制度では？！ 申請が通ると思えないです。"
+  },
+  {
+   "video": "BrzNVcU65LI",
+   "likes": 34,
+   "replies": 2,
+   "text": "傷病手当金の不正受給（仮病）は詐欺では？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 31,
+   "replies": 0,
+   "text": "会社都合で退職になりましたが、自己都合とされる可能性があるような会社でしたので色々調べてやめる前に会社都合で間違いないかと確認を取り、電話やメールでも証拠も 残しておきました。 会社都合での退職になりましたが。社会保険が１か月分多くひかれてたり（これは自分でしらべて判明）ハローワークへの離職票の手続きを忙しいなのなんだので なかなかしないとかの糞みたいな会社でした。（遅くなった分もらう分がずれただ"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 30,
+   "replies": 0,
+   "text": "何故、税金もきちんと払ってる市民町民村民に、この様な制度があるのを教えないのか？ 後でトラブルになりますよね！？"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 22,
+   "replies": 1,
+   "text": "年金の免除については、最初の時、男性担当者が丁寧に教えて下さったので助かりました。２回目の時、女性担当者は、何も説明せず支払いありきで始まったので、即座に免除制度ありますよねと言ったら、免除で済みました。無職で払えは、無理でしょ。役所さん、誰のお陰で働けてるのかな。"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 21,
+   "replies": 2,
+   "text": "9社退職したけど毎回任意継続してません。 国保に入り即、免除申請 単身だからかな？ いつもかなり減額されるから任意継続より格段に安くなる 55万→15万くらいまで減額されたこともあったような…"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 21,
+   "replies": 0,
+   "text": "大学の授業料無料化、子供2人でもしてほしい……"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 21,
+   "replies": 1,
+   "text": "手の動きが気になる てを動かさないで話してくれると内容が入って来やすいです☺️"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 20,
+   "replies": 5,
+   "text": "質問させていただきます。何故、LINEなのでしょうか？LINEをやっていない場合はどうすれば良いのでしょうか？別の手段で相談は不可能なのでしょうか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 18,
+   "replies": 0,
+   "text": "なんのための保険やねん！ 法を、変えないといけない時期にきてるんちゃう？"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 18,
+   "replies": 0,
+   "text": "任意継続した最初の年の保険料区分は会社を辞めたときの月収で決まるのでは?"
+  },
+  {
+   "video": "BrzNVcU65LI",
+   "likes": 16,
+   "replies": 1,
+   "text": "マイナ保険証の場合、コピーにあたるものはどうやって保存すればよいでしょうか？"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 16,
+   "replies": 1,
+   "text": "【この年齢じゃ厳しいですね】いやいやいや、若返れと・・・？ ハロワも企業もいい加減年齢でフィルターかけて見るの辞めたら？最初はバイトで様子を見るとかいくらでも手段はあるのにね。"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 15,
+   "replies": 0,
+   "text": "退職して傷病手当金をもらっている場合、延長するには毎月診断書の提出が必要なのでしょうか？失業手当受給中は毎月何かする必要があるのでしょうか？"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 14,
+   "replies": 0,
+   "text": "両手を振るのは、集中力を欠く作戦か？？ 集中力欠いて何度も見るように"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 14,
+   "replies": 0,
+   "text": "だいたい役所で詳しく教えてくれるし資料もあるよ 時間はあるしな、ゆっくり読めばよかろう"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 13,
+   "replies": 2,
+   "text": "社会保障って難しいですよね。社労士試験範囲広すぎて、こういう画像見て、例とテキストの内容結びつけて記憶に役立つかな？って見てます。会社辞めて独立する時も役立ちそうなので助かります。"
+  },
+  {
+   "video": "BrzNVcU65LI",
+   "likes": 13,
+   "replies": 0,
+   "text": "給料って基本給がベースですか？"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 13,
+   "replies": 0,
+   "text": "二人目、三人目を産むために、一人目にお金がほしい。 二人目産むために育休中のお金をためていたら、六年たってた。 お金がないのに、無計画に二人目産みたいと思わないから、やっぱり一人目に支援して欲しいんだけどな。"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 10,
+   "replies": 0,
+   "text": "働いた分はしっかり税金引いて、貰えるはずのお金は知識がなければ払わずに済まそうとする仕組みとかおかしいやろ。教えていただきありがとうございます。"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 10,
+   "replies": 1,
+   "text": "今度、障がい者手帳持っている方、障害年金受給者、就職困難者など障がい者の失業について詳しく教えて下さい・・・"
+  },
+  {
+   "video": "BrzNVcU65LI",
+   "likes": 9,
+   "replies": 0,
+   "text": "退職して11日で新しい職場に就職したら自分で何がやる必要あるかな？"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 8,
+   "replies": 0,
+   "text": "健康保険の任意継続の際に、会社の分も自分で負担（＝雇用されている時の健康保険の金額の２倍になる）しますが、法改正で、上限が撤廃されたと聞きました。今でもまだ上限が設定されているのですか？"
+  },
+  {
+   "video": "l7S0moDHX6k",
+   "likes": 8,
+   "replies": 2,
+   "text": "今年度62歳で退職します。もう心身共に疲れているので雇用継続？継続雇用は可能てすがもう無理をです。"
+  },
+  {
+   "video": "BrzNVcU65LI",
+   "likes": 8,
+   "replies": 1,
+   "text": "健康保険の減免制度は雇用保険が基になるから失業保険を申請する人だと3割負担になるんだっけ？"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 8,
+   "replies": 0,
+   "text": "うちの会社テレワークあるけど会社として今後無くす方向らしく週1に減らされたんだが。なんなのほんとに。両立どう？って面談されてしんどいって言ったのに。"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 7,
+   "replies": 1,
+   "text": "傷病手当貰うための医師に診断書を書かせる方法を教えて下さい。"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 7,
+   "replies": 0,
+   "text": "動画を見て、とても参考になりました。ぜひ、公務員ノ場合はどのようになるのかについても機会がありましたら解説していただけると大変ありがたいです。"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 6,
+   "replies": 0,
+   "text": "しゃべる度手の動き気になるな… 内容は凄い勉強になる"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 6,
+   "replies": 0,
+   "text": "現在労災申請中、退職勧奨、圧力面談、パワハラで退職を余儀なくされた。 会社にも会社都合にして欲しいと交渉したが自己都合とされ、ハローワークに傷病手当受給中のため延長手続きに行った際に離職理由の異議申し立てを出したいと言ったが、求職手続きの時じゃないと出来ないと言われた。 お陰で毎月の国保と住民税が収入が激減したのに支払いが大変！！ 傷病手当受給中で、いつ復帰できるかも分からないのに😢"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 6,
+   "replies": 1,
+   "text": "初めまして。とても勉強になりました。質問です。 一年程心療内科で受診継続しているのですが、先日症状が悪化し退職をしました。かかりつけの先生の診断書を頂きました。これから申請をするのですが、もし認定されればこれが、特定理由離職者に該当するのでしょうか。認定されたら、国民健康保険は役所での手続きになりますよね？何を持って証明するのでしょうか？色々とすみません。よろしくお願いします。"
+  },
+  {
+   "video": "43KvZQJH7vE",
+   "likes": 6,
+   "replies": 0,
+   "text": "ずっと雇用保険かけてるのに分かりづらい制度や、かけた分は戻る制度にしてほしい。いつでも国民が税金で損してる気がする。"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 6,
+   "replies": 0,
+   "text": "制度や保険を「取りこぼす」とか「損をする」と考えるのはどうだろうか？"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 6,
+   "replies": 0,
+   "text": "ハロワの職員に適当なこと言われて、納得いかなかったので電話した。上司が出て今から出てこられますか？と言われてすぐ行った。契約を切られたので、雇い側都合のはずが1年契約の人は当てはまらないとか、おかしくないですか？雇用保険も引かれてましたよ。と。会社からの書類もよく見ると、自分から延長しない、となっていた。と説明したら、上司が異議申し立てしてくれた。最初のハロワの職員の言うこと聞いてたら、自分都合に"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 6,
+   "replies": 3,
+   "text": "それ以前に雇用保険も解除されたまま２年働きました。体調不良で辞めたが離職票も無く。元々退職日当日に、渡したい物があるので夕方来て下さいと言われ花束を渡されました。事務所からは退職日当日にＩＤカードを返して下さい。勤怠に間違えがあったらいけないので確認したいので。と退職日当日に職場にいきました。会社には騙されました。資格手当や業務手当、賞与を会社の業績が落ちて！の理由でカットされた時点で雇用保険もか"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 5,
+   "replies": 0,
+   "text": "それぞれ違いますが参考にすることはできることがあると思うし知ることができると思うのでLINEでの相談とありますがLINE友だちしましたが実際エラーで使えないと意味ありませんでした。 追記 LINE個別相談てAIなの？"
+  },
+  {
+   "video": "43KvZQJH7vE",
+   "likes": 5,
+   "replies": 1,
+   "text": "今って自己都合でも給付制限ないって聞いたけどどっちが正解なの？"
+  },
+  {
+   "video": "43KvZQJH7vE",
+   "likes": 5,
+   "replies": 0,
+   "text": "会社都合って絶対にしてくれませんでしたよ？"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 5,
+   "replies": 2,
+   "text": "とげまるさんに伝えておきたい ハローワーク職員は自己都合退職の抗弁には積極的じゃないよね？ 証拠もかなり厳しいものを指定してくるし、その場でSMS提示してもよかったけど別に求める感じでもないし 最終的には「会社側が認めなければ、失業保険の受給はどんどん後になりますよ」といってきましたよ 組織として腐ってるとしか言いようがないと思いましたね"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 5,
+   "replies": 0,
+   "text": "手が気になって話に集中できない。 何故、手をチラチラ振るのですか"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 5,
+   "replies": 1,
+   "text": "手続きなんて 言われたとおりにやるしかないのでは？ 他にやり方わからないですし・・・"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 4,
+   "replies": 1,
+   "text": "賃金支払い基礎日数には年休も含まれますか？ 退職までに余っている年休を消化しようしますが、退職月に出社日は4日、年休を18日消化しようとしています。"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 4,
+   "replies": 1,
+   "text": "前在職中に病気により人工肛門になり4級の身体障害に認定され身体障害手帳を取得しました。就職先を探すにあたってトイレ問題とか色々不利になると思いますがハローワークではありのまま話して失業給付金を受け取りる事ができるでしょうか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 4,
+   "replies": 1,
+   "text": "こんにちは。離職票の金額は、税とか引かれる前の金額で間違いないでしょうか。交通費、ボーナスは含まれますか？"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 4,
+   "replies": 1,
+   "text": "傷病手当て申請後に退職し、その後の退職してからの社会保険料は、任意継続で申請ですか？"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 4,
+   "replies": 1,
+   "text": "大変わかりやすかったです^ ^ 1つ教えてください。 会社の希望退職で3末に退職を考えてます。ずっと腰痛がひどく支障をきたしてたのですが会社から希望退職を募集した事もあり決めました。失業保険と傷病手当金は同時にはもらえないとありましたが、時期をずらせば両方もらえるのでしょうか？"
+  },
+  {
+   "video": "43KvZQJH7vE",
+   "likes": 4,
+   "replies": 1,
+   "text": "何だかなー？ このせいど…おかしくないのでは"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 4,
+   "replies": 2,
+   "text": "現役時には健保支払いは会社と個人が労使折半しているが、任意継続の場合、労使折半ではなく2倍の金額になりませんか？ 65歳以上で公的機関で会計年度職員として働いていますが70歳で定年です、この場合は自己都合退職でしょうか？ 高年齢求職者給付金の扱いですか？"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 4,
+   "replies": 0,
+   "text": "年金とかも考慮して教えて欲しい。 結局、働いていなかったら国民だけ、すぐ働いたら厚生プラスだったら直ぐ働く方が得と思う。"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 4,
+   "replies": 0,
+   "text": "3ヶ月前に出産した身として一番直近の問題なのは、「産休育休手当の最初の給付が遅いこと」産休入ってから5ヶ月くらいになるけどまだお金入ってこないから貯金を切り崩して、いつ振り込まれるか分からないお金を当てにして暮らしてます😂😂 あと、子育て世代への補助金とか免除は所得制限なくしてほしいな。特に首都圏は共働きでそこそこ収入あるけど家賃とか物価が高くて出ていくお金も大きいから全然余裕ない。"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 4,
+   "replies": 0,
+   "text": "こんなのして もとりづらいのが現状。 福祉職とかは人材少なくて厳しい。 こーいうことがきちんと出来るように職場に指導ししに来てほしい。 働いてる人、時短勤務等を利用している人共にウィンウィンになれるようにしてほしい。 また 親が時短で仕事しているとか保育職とかしたらわからない。 時短保育で最後まで預けてたりする子もいます。"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 4,
+   "replies": 2,
+   "text": "傷病手当金を18ヶ月受給後に失業保険を10ヶ月受給という説明がありましたが、正当な理由による自己都合退職で受給期間が10ヶ月になるのはなぜでしょうか？通常は20年以上社会保険に加入した方だと5ヶ月だと思いますが。"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 3,
+   "replies": 1,
+   "text": "初めまして動画さんこうになりました。 ちなみに僕はフリーランスで美容師をしているのですが、会社から現在の店舗じゃなく別の店舗に行かないかという提案があり、話し合った結果辞める運びとなりました。僕自身は現在の店舗に残りたかったのですが、残るのは会社の内情的に難しくなるかもしれないと言われ辞めざるを得ないという判断になりました。 ちなみに来年の2月いっぱいでやめるんですが、その場合失業保険の適用はされ"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 3,
+   "replies": 1,
+   "text": "認定をもらうための就職活動どうやれば良いですか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 3,
+   "replies": 2,
+   "text": "失業保険申請時、毎月１１日以上の勤務日数とありますが、有給休暇の日数は含まれますか？また、退職理由の定年退職はどう扱われますか？自己都合か、会社都合か？"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 3,
+   "replies": 1,
+   "text": "適応障害からの有休を使って辞めたんですけど傷病手当は申請できますか？"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 3,
+   "replies": 1,
+   "text": "教えてください。公務員でも傷病給付金はいただけるのでしょうか？"
+  },
+  {
+   "video": "43KvZQJH7vE",
+   "likes": 3,
+   "replies": 1,
+   "text": "身体障害者(聴覚障害)なのですが、ハローワークを利用するメリットを体系的に知りたいです。 やはりLINEで聞かないとだめかしら"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 3,
+   "replies": 0,
+   "text": "自分は転職した時に6ヶ月だけ任意継続ました！ 市役所の国保の窓口に居る職員さんに任意継続の事を教えてもらったので、どちらの方が特になるのか計算もしてもらい、任意継続の方がメリットがある事が分かりました！ 家族の分も含めて得しました！"
+  },
+  {
+   "video": "l7S0moDHX6k",
+   "likes": 3,
+   "replies": 0,
+   "text": "🎁”失業保険いくらもらえるか”の無料診断は 以下の公式LINEを追加してください！ https://utage-system.com/line/open/IQBqY7UHy5q3?mtid=aSr1mYz4zuZR"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 3,
+   "replies": 1,
+   "text": "傷病手当金は加入してた健保組合から支払われるのですか？国からでしょうか？ 退職後は健保は任意継続の予定です"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 3,
+   "replies": 1,
+   "text": "定年退職と自己都合の給付日数が同じという事が納得できないんですよね それに協会けんぽで外科手術の為に傷病手当金を受給しその後職場復帰をして定年を迎えその後想定外の痛みで安静にしてなさいと言われた場合でも受け取れるんですか？"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 3,
+   "replies": 0,
+   "text": "ラインをしてない場合はどうすればいいですか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 2,
+   "replies": 1,
+   "text": "派遣で大手企業の事務職で8年ほど働いて、65歳直前で更新せずに仕事を辞めた場合でも失業保険はもらえるのでしょうか？ 求職活動は同じ派遣会社の別の仕事に応募してもカウントされるのでしょうか？失業保険をもらった後に年金だけでは生活できないので、パートぐらいで働くつもりです。"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 2,
+   "replies": 2,
+   "text": "契約満了で退職した場合は 「自己都合」になりますか？ 20年働いてます"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 2,
+   "replies": 0,
+   "text": "傷病手当受け取ります！担当が貰えないようにしむけてきたらどうすれば宜しいでしょうか？生活保護でも条件がおかしい‼️障害年金もおかしい！全てがおかしいですが？"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 2,
+   "replies": 1,
+   "text": "就職困難者認定について教えてください。 傷病手当金から失業保険を360日にして時間かけて仕事を探したい"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 2,
+   "replies": 1,
+   "text": "仕事に行くのが精神的に苦しくて退職を考えています。 傷病手当を申請をする場合、退職前に病院へ行って診察を受けて、退職前に連続で3日間休んで退職日も休む予定です。 その場合、病院で療養担当者記入用の申請書はどの時点で書いてもらうのでしょうか？ 退職した後で病院へ行って書いてもらうのか、連続して3日休む前の病院で診察してもらった、その日に書いてもらっておくのか？ 教えていただきたいです。 宜しくお願い"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 2,
+   "replies": 1,
+   "text": "傷病手当が終わりますその後に何か良い制度ありますでしょうか？ 会社によるパワハラで鬱病で毎月通院してます。"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 2,
+   "replies": 1,
+   "text": "もうすぐ61才只今、傷病手当をもらいながら休職しています。鬱病です。貰い始めて2月で1年目です。 一様６１歳で定年退職なのですが、あと半年は傷病手当を会社の方で手続きして貰える様で1年6か月たったら定年退職しようと思います。ライン登録させて頂いたので詳しい事は後程ラインの方で相談させて頂きますのでよろしくお願いします。"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 2,
+   "replies": 0,
+   "text": "まゆみさんわたしまだまにあいますか？"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 2,
+   "replies": 1,
+   "text": "今行っている会社で暴力を振るわれたりハラスメントが酷くとても勤める気が有りません、なので来月退職する予定ですけど退職後困らないようにしたいのですがどうしたらいいですか？教えてください。"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 2,
+   "replies": 1,
+   "text": "勤務したばかりですが、大丈夫ですか？一月です。"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 2,
+   "replies": 1,
+   "text": "傷病手当貰うのに初診のタイミングが良くわからないのですよね。 有休を一か月貰おうとした場合、有給中に初診を受けると傷病手当が貰えない場合があるみたいで初診を受けて退職してから有休消化が良いみたい。 この考えって合ってますか？"
+  },
+  {
+   "video": "43KvZQJH7vE",
+   "likes": 2,
+   "replies": 0,
+   "text": "質問です 東京で退職したけど、地元へ帰って引き続き就職活動する場合 最初の申請は東京で行ったけど、認定などは地元のハロワでいいんですか？ それとも認定のたびに東京へ来ないといけませんか？"
+  },
+  {
+   "video": "43KvZQJH7vE",
+   "likes": 2,
+   "replies": 0,
+   "text": "退職後、社保から切り替わった国保と国民年金の支払い額を見たら待機期間とか言ってられない。 強制徴収なら退職時に取り崩せる積み立て制度にして欲しい。"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 2,
+   "replies": 0,
+   "text": "何かまとまりがないな、特定理由離職者なら国保のが良いとか、会社都合退職者なら任意継続のが良いとか示して欲しかった。皆一番、気になるところは保険料だろうと思う。就職は別にハローワークでなくても出来るからね、ハローワークには碌な仕事ないのが多数なのは貴方が一番良く知ってると思うのですがね。ハロワは失業保険認定してもらいに行くだけの場所だと思いますよ。"
+  },
+  {
+   "video": "BrzNVcU65LI",
+   "likes": 2,
+   "replies": 0,
+   "text": "会社の保険証は返すでしょ なんとか制度は入試する前から精神科に通ってますけどその病院で申請できるって事？"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 2,
+   "replies": 0,
+   "text": "子の看護休暇を有給にしてほしい"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 2,
+   "replies": 0,
+   "text": "学童を小6まで全員入れるように環境を拡充して欲しい。制度が良くなるからってそうそう時短で働けるところ増えないでしょ。"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 2,
+   "replies": 0,
+   "text": "一身上の都合上ということで退職願は提出済みです。現在は体調不良を理由に書いて有休を引き当て退職日前日まで休んでいて、退職日当日は1日出社の予定です。こんな状況で、今から診断書もらいこの制度を使うことは出来ますか？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 2,
+   "replies": 1,
+   "text": "がん治療で傷病手当金受給しています。12月で最長の１年６ヶ月をむかえます。 12月分の受給が済んだら ハローワークに行って 延長手続きすればいいのですね？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 2,
+   "replies": 1,
+   "text": "傷病手当金をもらってから退職しても失業手当はもらえめすか？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 2,
+   "replies": 3,
+   "text": "健康保険組合が破綻し、協会けんぽへ移行したのですが、その場合の手続きはどうやるのですか？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 2,
+   "replies": 2,
+   "text": "傷病手当金と失業保険は併給されるのですか？"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 2,
+   "replies": 0,
+   "text": "派遣→更新数回して１年半働いたけど、直接雇用が増えた為次の更新は無いと言われた場合は特定理由離職者になりますか？"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 2,
+   "replies": 1,
+   "text": "ダブルワークの場合、４時間以上だと失業給付が後回しになるとか色々言われました。ダブルワークの人の気を付けてほしいことも動画で教えてください😭"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 2,
+   "replies": 0,
+   "text": "初めまして！ ためになる動画ありがとうございます。一つだけお聞きしたいのですが雇用保険の加入期間は一度も失業手当を受給したことがなければ合算して計算できると聞いたのですがその認識であっていますでしょうか？ 例 前職8年半→現職半年で退職 →雇用保険加入期間9年 教えて頂きたいです。 よろしくお願いいたしますm(_ _)m"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 2,
+   "replies": 1,
+   "text": "こんにちはこれから仕事辞めるですが、自営業ぽくのECやりたくてどんな手続きしなればいいでしょうか？"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 2,
+   "replies": 1,
+   "text": "障害者で障害年金を受け取っていても出来ますか？"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 2,
+   "replies": 0,
+   "text": "自己都合から会社都合にしても、早く就職したら、なんにも意味ない。どこの人が失業保険まるまる貰って嬉しいんだろう？就活しないと言ってるのと同義だろ、それ。"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 1,
+   "replies": 0,
+   "text": "会社から退職推奨とされ退職予定ですが、退職前から求職活動をしてます。 待機期間中に仕事が決まり就職したときは再就職手当は申請できますでしょうか?"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 1,
+   "replies": 1,
+   "text": "動画、有難う御座いました。求職活動について質問ですが、自分はスマホのアプリ(インディード等)で求職活動をしているのですが、これらは求職活動実績にはならないのでしょうか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 1,
+   "replies": 0,
+   "text": "再雇用制度はあるけど定年退職は会社都合になる？あと定年前の年休消化は出勤日として扱われる?ぶっちゃけた話として、転職と失業を繰り返してるわけでもなく、実直に６０まで働いてる人が、少し休みたいも許されへんっておかしいやんね。"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 1,
+   "replies": 0,
+   "text": "離職票の他にハローワークの方が退職情報を知る手段はあるのですか？退職申告日とか退職届けを受領した日とかの情報です。誤解のないようにお伝えしてしておきますが、個人情報をどこまで把握しているのか、できるのかをお聞きしたいと思います。悪用するためではありません。"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 1,
+   "replies": 0,
+   "text": "確かに、パワハラで辞めやざるおえなくて雇用保険期間4カ月だったので失業保険はもらえませんでした。 あなたの態度もあったのでは？と言われたりでしたね。 録音や記録も意味ないんだなぁと思いました"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 1,
+   "replies": 1,
+   "text": "退職前給付金はどんな給付金ですか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 1,
+   "replies": 1,
+   "text": "私はまだ会社に在籍をおき、健保協会に傷病手当申請して、まだ申請結果まちですが、やっぱり退職しようかと思っています。 申請待ちの時に失業保険に変えるとなると健保協会に連絡しないとダメでしょうか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 1,
+   "replies": 1,
+   "text": "定年退職って、自己都合になるんですかー？"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 1,
+   "replies": 0,
+   "text": "はやく出会いたかった😂 パワハラで何度も労基やハロワに相談したし、精神壊されて辞める前傷病手当受け取りながら、１回も会社行くことなく辞めて、今も精神科通ってて働けそうにないのに退職後に傷病手当貰えるって知らなくて、ハロワの職員さんに言われた日付で働ける日にちを書いて失業手当に切り替えてしまった。 本当次の仕事を探す意欲が湧かず、起き上がるのも大変、不眠で不安障害も治らず時折思い出して涙やパニックに"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 1,
+   "replies": 0,
+   "text": "お疲れ様です よく定年四日前に退職して失業保険をもらうとお得と言われますが、こういったことにお得意な人は、誰に相談すればいいですけ？"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 1,
+   "replies": 0,
+   "text": "公式ライン追加したいのですが どうすればいいですか？"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 1,
+   "replies": 0,
+   "text": "傷病手当を貰ってる間は、少しだけ仕事しても大丈夫でしょうか？逆に、失業保険受給中は、少しでも仕事しても大丈夫ですか？"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 1,
+   "replies": 0,
+   "text": "只今、休職中で傷病手当を貰ってます。 今年、60歳定年退職を迎えます。 理由が定年退職でも、傷病手当を受け取りができますか？（失業保険は延長）できればしたいです。 定年退職は普通の退職とは違うと聞いてます。 正しいのは何でしょうか"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 1,
+   "replies": 0,
+   "text": "この動画とは無関係ですが一昨年 入院した時 二週間で退院したのに会社都合で自宅待機を1カ月させられたので傷病手当金を願い出たらボーナスを支給停止にする！と言われ 有給休暇使い果たし更に欠勤扱いなされた 傷病手当金を貰うと会社に負担がかかるのですかね? どなたか教えて下さい"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 1,
+   "replies": 1,
+   "text": "上司に人権削減で移動って言われ、それなら辞めるって言ったのですが、社会保険が入ってちょうど1年目の月に退職なのですが、給付金もらう為にはどーしたらいいでしょうか？"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 1,
+   "replies": 2,
+   "text": "公式Lineを登録したいのですが、QRコードはありますか？"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 1,
+   "replies": 1,
+   "text": "何時も参考にさせて頂いておりますが 退職後、継ぎ目無く就職する場合はどれが必要なのでしょうか？ 再就職で間が空く退職での手続きや必要書類と区別がつきにくいためお教え下さい"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 1,
+   "replies": 0,
+   "text": "動画はわかりましたが、 貰える期限があります 永遠に貰える物ならいいですがね？ まず無理です"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 1,
+   "replies": 1,
+   "text": "とても分かり易くて助かります！昨年末に病気で離職して離職前の休職期間中から傷病手当を受給中ですが、国保の減免を受けるのと傷病手当受給は両立するでしょうか？両立させるには健康保険を任意継続ではなく国保にしないといけない、ということになりますでしょうか。ご教示頂けますと幸甚です。"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 1,
+   "replies": 1,
+   "text": "いつも詳しい解説 ありがとうございます。 私は50代で今年の秋頃に会社の希望早期退職制度に応募して退職を考えていますが、その一方で少し前から三半規管の影響で軽いめまいが時々あり、 仕事では高所作業をしない様にしていますが、希望早期退職制度を利用しての退職時でも病院の診断書があれば傷病手当給付の対象になる可能性はありそうですか？ この症状が原因で早期退職するのではありませんし、仕事の幅が減るのが嫌で"
+  },
+  {
+   "video": "43KvZQJH7vE",
+   "likes": 1,
+   "replies": 0,
+   "text": "今週火曜日に失業保健の続きをし今月22日に職業講習会に出席します。現在69歳で今月70歳になります。2社の手続きをしました。老人ホームパートドライバー6ヶ月そのまま続けてすぐ老人ホームパートドライバー2ヶ月の2社の手続きをしました。その6ヶ月務めた方が面接の時に初めてわかったのですがうちは満70歳になると運転出来ませんので辞めるかランドリー(洗濯)の方に入ってもらうかどちらか？なんだけども言われ満"
+  },
+  {
+   "video": "43KvZQJH7vE",
+   "likes": 1,
+   "replies": 0,
+   "text": "質問です。 特定理由や仮手続きを各手続きをする時って自分から言わないと動かないのですか？やはり、言われたことに対しては動くけど、言われてないことは坦々と事務作業を、こなすだけってことなのでしょうか？"
+  },
+  {
+   "video": "43KvZQJH7vE",
+   "likes": 1,
+   "replies": 0,
+   "text": "生配信 もお願いします色々相談できますからねハローワークで働いている人それこそ 給料泥棒か"
+  },
+  {
+   "video": "43KvZQJH7vE",
+   "likes": 1,
+   "replies": 0,
+   "text": "こんばんは 鬱でハローワークに行って受給延長しました。今は傷病手当金貰ってます。で、傷病手当金が終わる前にハローワークに行けば良いのでしょうか？来年65歳に成りますが金額減りますか？よくわからんです。"
+  },
+  {
+   "video": "43KvZQJH7vE",
+   "likes": 1,
+   "replies": 0,
+   "text": "教えて下さい🙇‍♀️ 現在、期間限定1/27〜6/30まで 社会保険、雇用保険に加入で勤務しています。 保険料はトータル6ヶ月雇用保険加入していますが 最初の1月は5日間でトータル４０時間なのですが… 失業手当は貰えないんですよね⁉️😅"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 1,
+   "replies": 0,
+   "text": "雇用契約書を書いていない場合でも会社都合になりますか？ 入社してから労働条件の提示時もなければ、雇用契約書を渡されてすらいません。 ちょうど退職か転職を考えている時期なので、教えていただけると幸いです"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 1,
+   "replies": 1,
+   "text": "健康保険。 そのまま任意継続するのか。 国民健康保険へ切り替えをするのか。 退職後、20日以内に金額を比較してみます。 ちなみに、そのまま任意継続した場合、 最長で2年間しか継続できないのは、どうしてなのか？？？。"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 1,
+   "replies": 0,
+   "text": "待機期間は有給使用したらダメじゃなかった？"
+  },
+  {
+   "video": "l7S0moDHX6k",
+   "likes": 1,
+   "replies": 0,
+   "text": "あの、退職についての動画だから言わせてもらうね🙇‍♂️正直、入社して数日で辞める人達って考え甘すぎると思う。あの、そんなたった数日で「自分と描いてた理想とは違う。」って言って辞める人がすぐ次の人生で理想通りの人生を簡単に送れる程、世の中そんなに甘くないからね。あと、よくそのすぐ退職する若者達が多い件について、ニュースとか見てても確か、収入とかが理想通りじゃないとか言ってた気がするけど…本当、「バカ"
+  },
+  {
+   "video": "BrzNVcU65LI",
+   "likes": 1,
+   "replies": 0,
+   "text": "自己都合退職なら失業給付もらえるの待機期間過ぎてから給付制限期間1か月後じゃないの？ いつの時代の話をしている。アテにならないチャンネルだ😮‍💨"
+  },
+  {
+   "video": "BrzNVcU65LI",
+   "likes": 1,
+   "replies": 0,
+   "text": "本当ですか?"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 1,
+   "replies": 0,
+   "text": "結局大手企業の正社員だけ得する現状を打開してほしい。産休育休すら当たり前に取れない中小企業多すぎる"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 1,
+   "replies": 0,
+   "text": "福祉が充実する反面、人手不足になって外国人採用も増えるって流れかな？"
+  },
+  {
+   "video": "StJqynjveos",
+   "likes": 1,
+   "replies": 0,
+   "text": "子ども３人産んでからでは無く１人産んで育てるのも大変だから１人から対象にして欲しい。給与を上げてくれるか子供手当増やして欲しい。😢"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 1,
+   "replies": 0,
+   "text": "同時期に雇用保険かつ、社会保険加入してないと駄目なんですよね？ 今のところは、パートで 雇用保険のみで、主人の扶養です。"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 1,
+   "replies": 0,
+   "text": "もう辞めてしまっています、 失業保険の手続きにいまからいきます。 傷病手当手当てで一か月休んで、 その後一か月働いてみたのですが、 パワハラに会い退職になりました 傷病手当を貰う方法はありますか？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 1,
+   "replies": 1,
+   "text": "健康保険組合からもらう申請書ってなに？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 1,
+   "replies": 1,
+   "text": "退職したあと、任意継続してますが、給付金をもらえるのでしょうか？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 1,
+   "replies": 0,
+   "text": "定年退職で失業保険はもらえますか？"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 1,
+   "replies": 0,
+   "text": "調査って会社にきいたりするんですか？"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 1,
+   "replies": 0,
+   "text": "離職票待ってる期間が何故待機期間にならんでしょうか? 離職票ですでに2週間ほど待ってそこから7日と1ヶ月でほぼ2ヶ月ですね💧 離職票到着までアルバイトなどバリバリしてても失業保険の申請って受理されるんでしょうか？"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 1,
+   "replies": 2,
+   "text": "期間限定(３年)の雇用で退職退職理由はどうなりますか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 0,
+   "replies": 0,
+   "text": "こんにちは！不正受給についてお聞きしたいんですが、 業務委託で税込み現金でもらって、元請が決算の時に自分の領収書や名前を税務署に出していたらばれるんですか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 0,
+   "replies": 0,
+   "text": "個人事業主になるために離職した場合はどうすればいいのか知りたいです。"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 0,
+   "replies": 1,
+   "text": "とてもわかりやすいですね。細かく教えて頂きありがとうございます😊"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 0,
+   "replies": 0,
+   "text": "65歳以上の場合の失業手当給付のプロセスはどうなりますか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 0,
+   "replies": 0,
+   "text": "股関節人工骨頭置換術後 受けて5／１１日から看護師として働きましたが、とてもハードなところなのだ、3日前から 痛み、腫れてドクターストップになりました。症状が治れば緩やかなところに再就職したいと思ってます。治ってからハローワークに行って仕事を探せば給付金もらえますか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 0,
+   "replies": 0,
+   "text": "証拠の診断書は退職後も一定期間必要になりますでしょうか？ メンタルの病気を患い、休職期間満了で自然退職とのことですが解雇？のような流れになりました。 期間満了日は診断書有り、その後16日間の診断書は存在しています。診断書の対象期間を継続で準備必要でしょうか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 0,
+   "replies": 1,
+   "text": "来年1月上旬に初回の失業認定日を迎えるのですが、行ったついでに次回の求職活動実績のためハロワのセミナー参加の申請をお願いする予定です。 セミナーのスケジュールを聞き、申請するだけで１回分、参加して２回分のカウントになりますでしょうか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 0,
+   "replies": 0,
+   "text": "失業保険を受給中に65歳になったらどうなりますか？ 高年齢求職者給付金に変更になるんでしょうか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 0,
+   "replies": 0,
+   "text": "国民年金で傷病手当があたりません!今、抗がん剤治療中なんです。どこからか傷病手当ってもらえる方法ってないですか?"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 0,
+   "replies": 0,
+   "text": "病気で障害者になった場合は、特定理由離職者になりますか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 0,
+   "replies": 0,
+   "text": "失業保険払い続けて定年退職した場合。 就職活動しなければ貰えない？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 0,
+   "replies": 1,
+   "text": "今待機期間で来年年明けに初回認定日なので説明会は行きました なんとか失業認定申告所に今すぐ応じられるかの欄にはいいえにしたんです 何故なら親の介護の為の理由なので単純に週の半分しか働けません どうせ初回なんて貰えないと思ったんですけど働く気が無いと思われますか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 0,
+   "replies": 1,
+   "text": "派遣で、2025年1月6日〜2025年12月末で退職します。12ヶ月以上クリアですか？2025年7月9日に就労中のケガで12月まで労災休業して一日も出勤していません。派遣期間満了、延長はしませんでした。自己都合になりますか？会社都合ですか？離職票は、12月中か年明けにもらえるそうです。年明け早々にハロワークに行く予定です。前もってハロワークに相談に言ったほうが良いですか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 0,
+   "replies": 0,
+   "text": "自分がちょっと前に失業保険の手続きに行った時は、退職理由とか聞かれなかったかなwまゆみさんが働いてるハロワ厳しいな…wやっぱハロワによって当たり外れってあるんかな いつまでに働きたいですか？って聞かれたときは、あるならすぐ働きますし無いなら何ヵ月も後になりますね…こればっかりは神のみぞ知りますわって言ったら、笑いながらなるほど！って職員さん言ってました"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 0,
+   "replies": 2,
+   "text": "転職先から既に内定通知書と入社手続きを行っていて来年から北海道で働くことになったのですが、手続き中に今の職場が11月末で法人破産することになりました。 転職先での業務開始まで2～3ヶ月ほど空いてしまうのですが失業保険は受け取れるのでしょうか...？ また、年内で引っ越してしまうため離れる前に引き継ぎ等の手続きは必要になるのでしょうか...？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 0,
+   "replies": 1,
+   "text": "最初の1か月目、失業手当の説明一回でで求職活動2回分にならないのですか？ 初めの1か月目も2回の求職活動実績がいるのでしょうか？"
+  },
+  {
+   "video": "8w6LjgF-V_U",
+   "likes": 0,
+   "replies": 0,
+   "text": "7月29日失業保険手続き８月24日採用連絡9月21日入社でお金もらえるか？ドキドキしています。 友人紹介だからハラハラドキドキしています。"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 0,
+   "replies": 0,
+   "text": "只今、傷病手当の申請中ですが認可されてからハローワークで失業保険の停止をおこなった方がいいのか、それとも直ぐにハローワークに行った方がいいのですか？因みに離職して2ヶ月目です。"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 0,
+   "replies": 0,
+   "text": "失業保険延長の手続きの期限って３年じゃなかった？"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 0,
+   "replies": 0,
+   "text": "初めて動画に出会えました。 私の場合、膝と腰を痛め、今は有給消化で2週間後に退職します。 傷病手当の申請は、退職前か後か？いつすればよいのでしょうか？"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 0,
+   "replies": 1,
+   "text": "体がよくなり、働ける様になったら失業保険の申請もします。 それまで延長手続きをすればよいのですね？ ロードマップをお願いします。"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 0,
+   "replies": 0,
+   "text": "動画拝見し大変参考になりました。ありがとうございます。 一つ相談があります。２０２５年５月から商簿湯手当を受給し、２０２５６月に退職してそのまま傷病手当受給は継続になりましたが、退職時において失業保険受給延長手続きをしないままです。まもなく退職後１年経過しようとしています。今後回復時に失業保険に切り替えは可能なのでしょうか？ ご回答のほどよろしくお願いします。"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 0,
+   "replies": 1,
+   "text": "キーワードってどれですか？"
+  },
+  {
+   "video": "yoj9g31PVpQ",
+   "likes": 0,
+   "replies": 0,
+   "text": "生活保護受けて人は、うけれますか？"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 0,
+   "replies": 0,
+   "text": "離職理由を訂正したい場合は会社に頼むよりハローワークで伝えた方が良いのでしょうか？"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 0,
+   "replies": 0,
+   "text": "いつもありがとうございます。ひとつ質問させてください。 年度の途中で退職した場合、所得税の払い過ぎた分を翌年の確定申告で返してもらえるとのことですが、住民税も前年の所得を元に支払うことになっているのなら住民税についても返してもらえる方法があるのでしょうか？"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 0,
+   "replies": 0,
+   "text": "仕事辞める１週間前に膝の手術して退職後に傷病手当もらえますか？"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 0,
+   "replies": 0,
+   "text": "会社を辞めてから脳出血で入院していました😥加入期間が10カ月では貰えますか？"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 0,
+   "replies": 0,
+   "text": "うつ病で退職しましたが、65歳以上では、年金との差額で、傷病手当金は貰え無いということ！ 失業保険を貰う為には、離職票に疾病での離職と記入する事はできないのでしょうか？ 年金の年額は180万円です"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 0,
+   "replies": 0,
+   "text": "人がいなくて休みにくく月末締めまで働かなくては行けないのでがんばって締め日迄働きます本当は怖い上司理不尽な事を言うので限界が来ました AIで調べましたら三日休まなくても大丈夫と書いてましたが必ず3日休みますか？"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 0,
+   "replies": 0,
+   "text": "私も、ハローワークで90日分を貰えます！ただ10月11日に入社して、76日分は貰いましたが？残り14日分が、来年４月に貰える見たいですが、いくら貰えるか分かりません👎 教えて欲しいです"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 0,
+   "replies": 0,
+   "text": "まゆみさん、こんばんは！この動画を見て、 広告運用のスクールに参加したのですが、 連絡を取りたいのですがどうしたら良いか、 教えて頂きたいのですが、よろしくお願い申し上げます。😂"
+  },
+  {
+   "video": "DOCduzf4meo",
+   "likes": 0,
+   "replies": 1,
+   "text": "はじめまして。チャンネル登録させてもらいました。とても分かりやすい説明をありがとうございます。確定申告についてですが、源泉徴収票が必要ということはわかりました。2026年3月末に退職し、その後、無職になる場合、2027年2月頃に確定申告するときは、いつの分の源泉徴収票が必要なんですか？"
+  },
+  {
+   "video": "43KvZQJH7vE",
+   "likes": 0,
+   "replies": 0,
+   "text": "会社都合で退職に至ったのですが、退職日も決めて、 有給消化も済んでるのですが、離職票を出してもらうのは、 手続き的に大変なのでしょうか？いまだに無い。"
+  },
+  {
+   "video": "43KvZQJH7vE",
+   "likes": 0,
+   "replies": 0,
+   "text": "仕事探しが…限定？定年で辞めたのに？条件がおかしくないですか？"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 0,
+   "replies": 0,
+   "text": "こうした制度利用については、社会保険労務士に相談するのが適切ですか？"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 0,
+   "replies": 0,
+   "text": "これだと60歳から再雇用の場合、有休消化後すぐ勤務の場合がわかりませんでした。そうなれば65歳に当てはめればいいのでしょうか？"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 0,
+   "replies": 0,
+   "text": "ちなみにグループの別会社（給料減額確定）へ強制出向させられ、２年間後に元の会社に戻れるかは会社判断となった場合、戻れなくて辞めたら自己都合でしょうか？"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 0,
+   "replies": 0,
+   "text": "1人の場合は、どうしたらいいのかな?"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 0,
+   "replies": 0,
+   "text": "離職票、送付は３日以内と決めないのは何故かと思います"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 0,
+   "replies": 0,
+   "text": "よく言われるように６４歳１１か月で退職しようと思っていますが、特に理由がなければ自己都合退職ですか？"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 0,
+   "replies": 0,
+   "text": "工場からリストラされる時に、なぜか自己都合の離職の書類にサインをするよう言われて、警戒しつつもサインしてしまって、後悔しました。 まだ、窓口で相談するという手がありましたか・・・"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 0,
+   "replies": 0,
+   "text": "年金貰ってると傷病手当は受け取れないですよね？"
+  },
+  {
+   "video": "mp-F3HzRss0",
+   "likes": 0,
+   "replies": 2,
+   "text": "副業で個人事業主の場合はどうしたら良いでしょうか？もう少しで定年です。"
+  },
+  {
+   "video": "l7S0moDHX6k",
+   "likes": 0,
+   "replies": 0,
+   "text": "66歳で病気療養のため退職しましたが、65際以上は失業保険の申請はできないと言う認識です。退職後は傷病手当金を申請し、その後退職一年未満（申請期限があるため）にハローワーク一で一時給付金の一括請求手続きをするのが正しいと言う認識ですが、正しいでしょうか？"
+  },
+  {
+   "video": "l7S0moDHX6k",
+   "likes": 0,
+   "replies": 1,
+   "text": "動画ありがとうございます。 来年からテクノスクールにいくのですが、自己都合ではありますが国民健康保険などの減額は適用されますか？ 住んでるところでわかってくると思いますが。"
+  },
+  {
+   "video": "l7S0moDHX6k",
+   "likes": 0,
+   "replies": 2,
+   "text": "動画視聴しました。 知らないことばかりで勉強になりました。 1つ質問です。 離職票にサインをするとありましたが、離職票が届いたら、サインをする箇所があるのですか、それとも、ハローワークに持っていった時にその時、納得したら、サインでしょうか?"
+  },
+  {
+   "video": "l7S0moDHX6k",
+   "likes": 0,
+   "replies": 1,
+   "text": "ハローワークでは、何故この内容を教えてくれないのでしょうか?知らない人がほとんどなのに😢"
+  },
+  {
+   "video": "BrzNVcU65LI",
+   "likes": 0,
+   "replies": 0,
+   "text": "質問です。社会保険給付金制度の申請には過去2年間で社会保険に一年以上加入とのことですが、違う会社で合算でも大丈夫でしょうか？"
+  },
+  {
+   "video": "BrzNVcU65LI",
+   "likes": 0,
+   "replies": 2,
+   "text": "年末に退職した場合、源泉徴収など手続きはどうなるのでしょうか？"
+  },
+  {
+   "video": "BrzNVcU65LI",
+   "likes": 0,
+   "replies": 1,
+   "text": "現在勤めている会社を辞めてからすぐに他の会社で働く予定ですが、最初の三ヶ月は試用期間になり給料も時給で支払われるようですがその期間はどうすれば良いですか？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 0,
+   "replies": 0,
+   "text": "この間、ハローワークで失業保険の手続きをしました。今、65才てす。１か月前に退職して、腰の手術をして今リハビリ中なのてすか、まだ回復の見通しが立たないのですが、失業認定までの求職活動はとは、どこまですれば求職活動になるのでしょうか？ 本題とは違うのですが、アドバイスお願いします。"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 0,
+   "replies": 0,
+   "text": "質問あります。公務員なのですが、辞めた時に2年間公務員の保険を使えるように設定出来るんですが、それとは別の事をこの動画では、言っているんですよね？あと、診断を受けて4日間休む期間は診断を受ける時期が退職の5日前で、退職日から逆算して4日前が休み始める初日なんでしょうか？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 0,
+   "replies": 0,
+   "text": "この審査に1から2カ月かかるんなら失業保険の支給制限期間とほぼ変わらんくない？ それとも、4日間休んだら来月辞める予定で申請開始して良いってこと？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 0,
+   "replies": 0,
+   "text": "退職したあとどんだけ休みたいのよ？ってことと次までどれだけかかるのよ？ってことには触れない。"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 0,
+   "replies": 0,
+   "text": "ひと月２０日くらいで１６万と残業代で１２万くらいなのですがどのくらいになるのでしょうか？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 0,
+   "replies": 1,
+   "text": "こんばんは、質問です、前職を辞めて半年程になりますがその時に失業保険の手続きの書類は貰ったのですが辞め直ぐ今の仕事に付きました、その為失業保険の手続きして無いですが今からでも出来ますか？そと他にも手続きをしたら貰えるのはありますか？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 0,
+   "replies": 0,
+   "text": "健康保険料は会社と折半できますか？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 0,
+   "replies": 0,
+   "text": "私は、正社員で、７年間勤めたのに、自己都合 退職で、90日分の給付金なはずなのに、貰えてないです。 ２ヶ月分って、そんなことあるんですかね? 46日分しか貰えないってどういうことなのか。"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 0,
+   "replies": 0,
+   "text": "給料が60万だと毎月30万とかになりますか？それとも20万が最高額ですか？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 0,
+   "replies": 1,
+   "text": "退職届を出してから休職届けを出すとダメなんですか？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 0,
+   "replies": 1,
+   "text": "貴重なお話ありがとうございました・・・ところで・・・ QR読ませてもエラーが出てしまうのですがどうしたらよろしいでしょうか？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 0,
+   "replies": 0,
+   "text": "わかりやすい説明の動画 どうも有難うございますm(__)m どんな情報も、 知っているか？ 知らないか？ この違いは大きいと思います❗️ お陰様で 知識の幅が拡がりました^_^ 有難うございます^_^"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 0,
+   "replies": 0,
+   "text": "会社による退職済み。80歳ですが適用されますか？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 0,
+   "replies": 1,
+   "text": "現在63歳。１月末に３月末で自己都合で退職する届けを出しています。 最近、胃腸の調子が悪く病院に掛かっていて、CT検査を受けたり、今度胃カメラを受ける予定です。 有休消化で会社へは週に２，３日しか行っておらず、４日連続で休むことは可能です。 この場合でも、傷病手当の申請は可能でしょうか？ また、医師の診断書の内容はどのようなものが良いのでしょうか？"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 0,
+   "replies": 0,
+   "text": "今 まさに産業医師から休職しか選択枠は無いですと言われた 雇用保険加入は7ヶ月 会社から休職証明書は出されたと担当者から電話あったが かかりつけの医師破傷手当申請には署名してはくれない その場合はどうしたらいいのか教えてください"
+  },
+  {
+   "video": "steC56VmMHw",
+   "likes": 0,
+   "replies": 0,
+   "text": "限定的な事由での退職に限る話題だな。 ハローワーク辞めてからあーだこーだ能書たれてるな。在職中にこそ教えてやれ！"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 0,
+   "replies": 0,
+   "text": "休職していて、契約満了を理由に、会社から退職してと言われました。しばらくは、傷病手当を申請しますが、失業保険の期間を延長する手続きは、いつすればいいのでしょうか？"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 0,
+   "replies": 0,
+   "text": "雇用契約1年のパートで就職した場合、再就職手当はもらえますか？ 確か、週に20時間以上の条件だったと思うのですが 雇用保険に入る条件が、それってことですよね？"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 0,
+   "replies": 2,
+   "text": "数ヶ月前から拝見しています。 色々と参考になる話が多くて楽しみにしています。ひとつ教えてもらいたいのですが64歳11ヶ月で退職して65歳になってからハローワークに失業保険の申請したら失業保険は受給出来るのか？又年金も一緒に支給してもらう事に支障はないでしょうか？？"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 0,
+   "replies": 0,
+   "text": "そもそも、保険料も住民税もかなり高い、それでそれを軽くするための制度やコツが複雑。 自分の知識、イコール、自分のカネ。 でも、まだ保険料も税金もそこまで高くなければ、こんなピリピリすることもないのかもなあ。 市役所や職安の職員から教えてくれたり提案してくれることなんてないしなあ。"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 0,
+   "replies": 0,
+   "text": "質問させてください。 パワハラで精神的病になり休職しました、会社側もパワハラのようなものも体質的にあるけど前よりましになったような発言はしていましたがパワハラとは認めません当然ながら… 有給、傷病休暇、傷病手当を受給し今回全ての期限が切れ自然退職の流れになってしまいました。 毎月精神科医に通院しております。 この場合、私は退職後どのようにするのがベストなのでしょうか？ ハローワークに行って精神的な"
+  },
+  {
+   "video": "t5VQyCxt0NE",
+   "likes": 0,
+   "replies": 1,
+   "text": "失業保険申請に預金通帳が必要な理由は何故ですか？"
+  }
+ ],
+ "video_chapters_and_channels": {
+  "videos": [
+   {
+    "id": "8w6LjgF-V_U",
+    "ch": "元ハロワ職員まゆみのお金の安心相談室",
+    "title": "失敗しない失業保険のもらい方｜申請～受給の流れやハローワークで聞かれることも解説",
+    "dur": "PT24M39S",
+    "cap": "false",
+    "chapters": []
+   },
+   {
+    "id": "yoj9g31PVpQ",
+    "ch": "元ハロワ職員まゆみのお金の安心相談室",
+    "title": "【2026年版】傷病手当金→失業保険の切り替え方法｜他に使える制度4つも紹介",
+    "dur": "PT15M16S",
+    "cap": "false",
+    "chapters": []
+   },
+   {
+    "id": "DOCduzf4meo",
+    "ch": "元ハロワ職員まゆみのお金の安心相談室",
+    "title": "退職後にやらないと50万円以上損する手続きを解説【健康保険・年金・失業保険・税金】",
+    "dur": "PT25M9S",
+    "cap": "false",
+    "chapters": []
+   },
+   {
+    "id": "43KvZQJH7vE",
+    "ch": "元ハロワ職員まゆみのお金の安心相談室",
+    "title": "【これから仕事を辞める人へ】元ハローワーク職員直伝！失業保険で損しないもらい方・手続き完全ガイド",
+    "dur": "PT18M27S",
+    "cap": "false",
+    "chapters": []
+   },
+   {
+    "id": "mp-F3HzRss0",
+    "ch": "元ハローワーク職員とげまる【失業保険 / 退職給付金】",
+    "title": "元ハロワ職員が断言｜退職後にやってはいけないこと / 手続き3選【2026年 / 失業保険 / 傷病手当/退職給付金】",
+    "dur": "PT14M46S",
+    "cap": "false",
+    "chapters": [
+     "0:00 オープニング",
+     "0:56 【第3位】国民健康保険に何も考えず切り替える",
+     "5:09 【第2位】体調が悪いのにすぐ再就職してしまう",
+     "9:23 【第1位】離職票の「自己都合」に何も考えずにサインする",
+     "13:55 まとめ",
+     "14:16 おわりに"
+    ]
+   },
+   {
+    "id": "l7S0moDHX6k",
+    "ch": "元ハローワーク職員ゆかの仕事とお金相談室 ",
+    "title": "【仕事を辞める人へ】退職後に絶対やってはいけないこと3選｜健康保険・傷病手当金・失業保険",
+    "dur": "PT26M28S",
+    "cap": "false",
+    "chapters": [
+     "00:00 オープニング",
+     "02:43 【第3位】何も比較せず国民健康保険に切り替える",
+     "06:05 【第2位】体調が悪い状態なのにすぐに再就職する",
+     "14:45 【第1位】離職票の「自己都合」を確認せず署名する",
+     "21:36 まとめ"
+    ]
+   },
+   {
+    "id": "BrzNVcU65LI",
+    "ch": "ひろと【退職とお金】",
+    "title": "退職後すぐにやらないと後悔する6つの手続きとは？",
+    "dur": "PT10M38S",
+    "cap": "false",
+    "chapters": [
+     "0:00 はじめに",
+     "01:06 退職後にやるべき手続き①",
+     "04:28 退職後にやるべき手続き②",
+     "05:17 退職後にやるべき手続き③",
+     "05:35 退職後にやるべき手続き④",
+     "05:55 退職後にやるべき手続き⑤",
+     "06:28 退職後にやるべき手続き⑥",
+     "06:54 退職前の方必見の制度とは？"
+    ]
+   },
+   {
+    "id": "StJqynjveos",
+    "ch": "ちーぱぱω雑学ほいくえん【子育て雑学】",
+    "title": "知らないとヤバい！共働き家庭こそ絶対知っておきたい制度まとめ（子育て雑学）",
+    "dur": "PT17M24S",
+    "cap": "false",
+    "chapters": [
+     "00:00 オープニング",
+     "00:27 【1章】2025年4月から始まった制度のおさらい",
+     "00:45    ① 児童手当の拡充",
+     "01:04    ② 出生後休業支援給付金（新設）",
+     "01:41    ③ 育児時短就業給付金（新設）",
+     "02:15    ④ 子の看護休暇の対象拡大と理由追加",
+     "02:41    ⑤ 残業免除の対象拡大",
+     "03:02    ⑥ 短時間勤務制度の代替措置に「テレワーク」追加",
+     "03:28    ⑦ 育児休業取得状況の「公表義務」が拡大",
+     "03:55    ⑧多子世帯向け・高等教育の無償化",
+     "04:46 【2章】2025年10月からの改正でどう変わる？",
+     "05:26    ① 新たな働き方の選択肢が登場",
+     "06:19    ② 仕事と育児の「意向確認」が企業の義務に",
+     "07:55 【3章】こども誰でも通園制度とは？",
+     "10:18 【4章】今後の予定制度",
+     "10:40    ① 子ども・子育て支援金制度",
+     "11:33    ② 国民年金保険料の免除制度",
+     "12:16    ③ 出産費用の保険適用",
+     "13:08 【5章】注目すべき今後の展望",
+     "13:27    ① 給付から税へ？",
+     "14:08    ② 家事・育児のプロが国家資格に？",
+     "14:48    ③ 年収の壁の見直しへ",
+     "15:28 【まとめ】"
+    ]
+   },
+   {
+    "id": "steC56VmMHw",
+    "ch": "元ハロワ職員まゆみのお金の安心相談室",
+    "title": "失業手当を最長2年・毎月20万円もらって退職後のお金の不安を解消する方法を元ハロワ職員が解説",
+    "dur": "PT17M51S",
+    "cap": "false",
+    "chapters": []
+   },
+   {
+    "id": "t5VQyCxt0NE",
+    "ch": "元ハロワ職員まゆみのお金の安心相談室",
+    "title": "【これから仕事を辞める人へ】知らないと50万円以上損する｜退職後に絶対やってはいけない3つのこと",
+    "dur": "PT21M40S",
+    "cap": "false",
+    "chapters": []
+   }
+  ],
+  "channels": [
+   {
+    "id": "UCb92MVQbhj5x5d24f7XneUg",
+    "title": "ちーぱぱω雑学ほいくえん【子育て雑学】",
+    "desc": "子育て中のパパが、日々の経験と心理学をもとに「育児がちょっと楽になる雑学」を配信しています！\n同じように頑張るパパやママにとって、共感できて役立つチャンネルを目指しています🌱\n高評価・コメント・チャンネル登録、とても励みになります！\n育児の合間にコツコツ配信していますので、応援していただけると嬉しいです☺️☘️\n",
+    "subs": "6120",
+    "created": "2025-07-16"
+   },
+   {
+    "id": "UCSVqU8FWv3U8trsE9MzMp2A",
+    "title": "元ハロワ職員まゆみのお金の安心相談室",
+    "desc": "みなさんこんにちは！元ハローワーク職員のまゆみです！\nこのチャンネルでは、ハローワークで10年間働いていた経験と\n私が退職したときの経験をもとに、退職後に絶対に損しないための情報を発信しています！\n\n・「会社を辞めたいけどお金のことが不安…」\n・「失業保険の手続き、何から始めればいいの？」\n・「退職後に損しないように手続きしたい」\n\nこのような不安を抱えている方、たくさんいらっしゃると思います。\nそして、給付金制度のことをよく知らなくて、数十万円、数百万円損している人をたくさん見てきました。\nだから、そういう人を1人でも減らすために、YouTubeを始めました！\n\n公式LINEでは、5大特典と「退職後の不安が軽くなる手当×スキルガイド」をプレゼントします！\n\n①給付金受給額早見表\n②給付金で損しないための“事前チェック10項目”\n③退職前後の必勝行動チェックリスト\n④未経験でも稼げる！広告アフィリエイトの全体像ガイド\n⑤ 3分で自分の市場価値がわかる「キャリア価値診断シート」\n\n▽公式LINEでは無料相談受付中です▽\n\n\n\n",
+    "subs": "193000",
+    "created": "2025-11-09"
+   },
+   {
+    "id": "UCu6rYTOd5IW0Rp98kAB0BUA",
+    "title": "元ハローワーク職員とげまる【失業保険 / 退職給付金】",
+    "desc": "退職前アドバイザーでは、\n20〜60代の会社員を中心に「失業保険 / 退職給付金の受給」に関する情報を発信しています！\n\n失業保険の受給を考えているけど\n・手続きが複雑でよく分からない\n・もらえるタイミング / 金額がわからなくて不安\n・退職金の申請で損をしたくない\nそんな方へ、専門家監修のもと“日本一わかりやすく”制度を解説！\n\n💡これまでに4,500名以上をサポートし、97％以上が受給成功。\n心身ともに疲れが溜まっている方が、少しでも安心して次の人生を歩めるようにサポートしています。\n\n✅チャンネルで学べる内容\n・失業手当を最短でもらう方法\n・退職金・給付金を最大限受給するポイント\n・退職前に必ずやるべき手続き\n・退職後にやってはいけない注意点\n\nこれらの情報を知りたい方はぜひチャンネル登録をお願いします🙌\n\nまた公式LINEでは、\nあなたの状況に合わせた「無料診断」を実施中。\n受給額の目安 / 受給条件を満たしているか？がわかり、不安を“見える化”できます。\n\n⬇️ 無料診断はこちらから ⬇️\nhttps://liff-gateway.lineml.jp/landing?follow=@345ofilm&lp=WyemH5&liff_id=2006449014-nmEPBEGJ\n\n公式サイトでは、給付金制度やサポート実績も公開中。\nぜひ退職準備の第一歩として、ご活用ください。\n\n🌐公式サイト\nhttps://taisyoku-advisor.com/\n",
+    "subs": "23900",
+    "created": "2025-10-18"
+   },
+   {
+    "id": "UCmx8QsMDGg0zhz-k3fBmzJg",
+    "title": "ひろと【退職とお金】",
+    "desc": "初めまして！ひろとです！\nこのチャンネルでは僕自身が過去の退職で学んだ【退職前に知っておくと必ず得する情報】を発信しています！\n\n・退職後、生活費が足りるかどうか心配...\n・失業手当を貰いたいけど何をしたらいいのか分からない...\n・このまま転職できなかったらどうしよう...\n\nこのような不安を抱えている方、沢山いらっしゃると思います。\nでも、もう大丈夫！\nこのチャンネルの動画を見る事で、その不安を全て解消できます！\n\n実は国の制度を使えば退職後に平均400万円以上の給付金がもらえるって知ってましたか？\n他にも税金を安くする方法などお得な制度って沢山あるんです！\nでも、それを知らずに退職して後悔する人がほとんど...\n実際僕も後悔した内の一人です...泣\n\nそんな人を少しでも減らしたくてYouTubeを始めました！\nさらに僕の公式LINEでは...\n\n✅失業手当を3ヶ月待たずにすぐにもらう方法\n✅失業手当を最大200万円貰える方法\n✅給付金が増える仕組みとは？\n✅失業手当の基本制度\n✅退職前に必ずやっておかないといけない5つのこと\n✅退職後に絶対にやってはいけない3つのこと\nこれらの情報も発信しています！興味のある人は今のうちに友達追加をお願いします♪\n\n　　⬇︎  退職の不安解消CH公式LINE  ⬇︎\nhttps://hgorn47i.autosns.app/addfriend/s/Izy5jvxICE/@825fpbxj\n",
+    "subs": "44500",
+    "created": "2025-07-31"
+   },
+   {
+    "id": "UCWkvFTfOamt0IbpeG7fWeJQ",
+    "title": "元ハローワーク職員ゆかの仕事とお金相談室 ",
+    "desc": "元ハローワーク職員のゆかです！\n父の退職をきっかけに、真面目に働いてきた人でも「知らない」だけで損してしまう制度がたくさんあることを知りました。\n\nこのチャンネルでは、失業保険・年金・給付金・再就職など、退職前後に知っておきたい仕事とお金の制度を、できるだけ分かりやすく解説します。\n\nこれまで相談実績3,000件以上。公的制度を年間200本以上リサーチしてきた経験をもとに、\n「お金を守る」＋「これからのお金を作る」ための情報も発信していきます。\n\n知らなかったせいで損する人を、一人でも減らしたい。\nそんな思いでお届けしています。\n",
+    "subs": "2580",
+    "created": "2026-08-26"
+   }
+  ]
+ },
+ "retire_domain_channels": [
+  {
+   "id": "UC40IrtiECEwvXjD0u0vHeqA",
+   "title": "社労士の志賀チャンネル",
+   "subs": "5330",
+   "created": "2022-08-17",
+   "line": false,
+   "diag": false,
+   "cred": true
+  },
+  {
+   "id": "UC1d4XwtAcv2x43D8R_2Zp1A",
+   "title": "年金・給付金チャンネル",
+   "subs": "39000",
+   "created": "2025-03-19",
+   "line": false,
+   "diag": false,
+   "cred": false
+  },
+  {
+   "id": "UCQTo4xeZR9QbcNBKM1L3_yA",
+   "title": "元ハローワーク職員ケンの退職サポート",
+   "subs": "20700",
+   "created": "2025-11-15",
+   "line": false,
+   "diag": false,
+   "cred": true
+  },
+  {
+   "id": "UCY_Xgod2xaEYWtsUZoKHA3w",
+   "title": "おかまもch | おかんのお金守るチャンネル",
+   "subs": "201000",
+   "created": "2023-10-29",
+   "line": false,
+   "diag": false,
+   "cred": true
+  },
+  {
+   "id": "UCGDWuHpb1Fd6b4O462Brw6w",
+   "title": "退職パートナー【退職の不安解消CH】",
+   "subs": "46900",
+   "created": "2024-06-21",
+   "line": true,
+   "diag": true,
+   "cred": false
+  },
+  {
+   "id": "UC1UyRyWUg2xmn1oW43lC0dQ",
+   "title": "元社労士事務所勤務ゆきのお金と心の相談室",
+   "subs": "20000",
+   "created": "2026-02-23",
+   "line": true,
+   "diag": true,
+   "cred": true
+  },
+  {
+   "id": "UC2XUV6e8myV3AAQvvXRN4jQ",
+   "title": "助成金と労務ナビ",
+   "subs": "4420",
+   "created": "2025-04-03",
+   "line": false,
+   "diag": false,
+   "cred": true
+  },
+  {
+   "id": "UCmx8QsMDGg0zhz-k3fBmzJg",
+   "title": "ひろと【退職とお金】",
+   "subs": "44500",
+   "created": "2025-07-31",
+   "line": true,
+   "diag": false,
+   "cred": false
+  },
+  {
+   "id": "UCDHtYGMyYI-N-SjPLlrInIg",
+   "title": "手続きGメン怜田　日常の様々な手続きについて",
+   "subs": "7790",
+   "created": "2023-07-29",
+   "line": false,
+   "diag": false,
+   "cred": true
+  },
+  {
+   "id": "UCy3hoi3qmjq0qGQZJ4TnvPQ",
+   "title": "サンデーマネーチャンネル",
+   "subs": "580000",
+   "created": "2020-03-11",
+   "line": false,
+   "diag": false,
+   "cred": true
+  },
+  {
+   "id": "UCfCV9rFg6MxvaXxY1Oy_EgQ",
+   "title": "証券アナリストハーリー『50,60代のお金』",
+   "subs": "164000",
+   "created": "2024-08-04",
+   "line": false,
+   "diag": false,
+   "cred": true
+  },
+  {
+   "id": "UCwKupwJ1EpdNH8Z98SKjY2Q",
+   "title": "脱・税理士スガワラくん",
+   "subs": "1830000",
+   "created": "2022-12-07",
+   "line": true,
+   "diag": false,
+   "cred": true
+  },
+  {
+   "id": "UCCNaJxkydTSNf1oWCtuqMVg",
+   "title": "年金・給付金完全攻略チャンネル",
+   "subs": "169000",
+   "created": "2026-03-21",
+   "line": false,
+   "diag": false,
+   "cred": false
+  },
+  {
+   "id": "UCxzI8X4wZF2Osa5Jd_RqgxQ",
+   "title": "定年前後のお金の新常識【社労士みなみ】",
+   "subs": "298000",
+   "created": "2023-04-03",
+   "line": true,
+   "diag": false,
+   "cred": true
+  },
+  {
+   "id": "UC67Wr_9pA4I0glIxDt_Cpyw",
+   "title": "両学長 リベラルアーツ大学",
+   "subs": "9620000",
+   "created": "2018-10-05",
+   "line": false,
+   "diag": false,
+   "cred": false
+  },
+  {
+   "id": "UCWEY1K_qU7A3Jhfs4zzRuBg",
+   "title": "退職情報チャンネル",
+   "subs": "18500",
+   "created": "2024-12-25",
+   "line": true,
+   "diag": true,
+   "cred": false
+  },
+  {
+   "id": "UCL3G4bQc4kuCHFfrl7YUoxw",
+   "title": "みやびっくま【退職後の申請チャンネル】",
+   "subs": "57700",
+   "created": "2020-07-31",
+   "line": false,
+   "diag": false,
+   "cred": false
+  },
+  {
+   "id": "UCt8oGxc3GJUqFvBTygzTr4A",
+   "title": "みんなの給付金・補助金ちゃんねる",
+   "subs": "578000",
+   "created": "2022-10-03",
+   "line": false,
+   "diag": false,
+   "cred": false
+  },
+  {
+   "id": "UCACUd-GAlz4brbapgRSbNbA",
+   "title": "ゆっくりお金アカデミー",
+   "subs": "165000",
+   "created": "2022-06-17",
+   "line": false,
+   "diag": false,
+   "cred": false
+  },
+  {
+   "id": "UCTf50EJwtgn6sxblxqIJdZA",
+   "title": "社労士なかむらch【中村彰利】知って得する助成金・退職後のお金・年金etc",
+   "subs": "40500",
+   "created": "2022-03-07",
+   "line": true,
+   "diag": false,
+   "cred": true
+  },
+  {
+   "id": "UCoV4VMMkpkoVhGpiqWdQ7Bg",
+   "title": "シニア退職支援チャンネル",
+   "subs": "34200",
+   "created": "2024-12-25",
+   "line": true,
+   "diag": true,
+   "cred": false
+  },
+  {
+   "id": "UCEdcHrftcFX_m1ntPoJ7jgg",
+   "title": "チャコラのお金研究所",
+   "subs": "296000",
+   "created": "2022-03-12",
+   "line": false,
+   "diag": false,
+   "cred": false
+  },
+  {
+   "id": "UCgNr-yxfjcW0ao2dhvBZVWA",
+   "title": "News65 (老後)",
+   "subs": "174000",
+   "created": "2022-07-08",
+   "line": false,
+   "diag": false,
+   "cred": false
+  },
+  {
+   "id": "UCVgZUHlkoN51FOwoNMBGjfw",
+   "title": "厚生労働省 / Ministry of Health, Labour and Welfare",
+   "subs": "240000",
+   "created": "2008-12-19",
+   "line": false,
+   "diag": false,
+   "cred": false
+  },
+  {
+   "id": "UCx2HEX7jkwrRsKXNgmIUMeA",
+   "title": "節約看護師りょう",
+   "subs": "745000",
+   "created": "2023-01-16",
+   "line": true,
+   "diag": false,
+   "cred": true
+  },
+  {
+   "id": "UCGCZAYq5Xxojl_tSXcVJhiQ",
+   "title": "ANNnewsCH",
+   "subs": "5090000",
+   "created": "2009-09-10",
+   "line": false,
+   "diag": false,
+   "cred": false
+  },
+  {
+   "id": "UCSVqU8FWv3U8trsE9MzMp2A",
+   "title": "元ハロワ職員まゆみのお金の安心相談室",
+   "subs": "193000",
+   "created": "2025-11-09",
+   "line": true,
+   "diag": true,
+   "cred": true
+  },
+  {
+   "id": "UCjEob9ukPiKk2F-SyIQJdRg",
+   "title": "【公式】退職コンシェルジュ",
+   "subs": "15100",
+   "created": "2025-02-18",
+   "line": true,
+   "diag": false,
+   "cred": false
+  },
+  {
+   "id": "UCRfvvN--iV8kXJYqhVTn10g",
+   "title": "FP1級パパこみやまのこみやまFP総合オフィス",
+   "subs": "185000",
+   "created": "2025-04-08",
+   "line": false,
+   "diag": false,
+   "cred": true
+  },
+  {
+   "id": "UCcwCNjRA6IZZwsHqQ46cpkQ",
+   "title": "杏と猫の小さな暮らし",
+   "subs": "18400",
+   "created": "2025-12-08",
+   "line": false,
+   "diag": false,
+   "cred": true
+  },
+  {
+   "id": "UCWkvFTfOamt0IbpeG7fWeJQ",
+   "title": "元ハローワーク職員ゆかの仕事とお金相談室 ",
+   "subs": "2580",
+   "created": "2026-08-26",
+   "line": false,
+   "diag": false,
+   "cred": true
+  },
+  {
+   "id": "UCeicl_qqEQyLBdqhhrw20Rw",
+   "title": "サラダのお金相談所",
+   "subs": "689000",
+   "created": "2023-09-02",
+   "line": false,
+   "diag": false,
+   "cred": false
+  },
+  {
+   "id": "UC_epV3oR2ePKKr4gaY72lag",
+   "title": "レイナの部屋【ブラックわーるど】",
+   "subs": "156000",
+   "created": "2021-06-17",
+   "line": false,
+   "diag": false,
+   "cred": false
+  },
+  {
+   "id": "UCFZYJCfNWv6ODTTETateSbg",
+   "title": "旅犬リリィ Travel Dog LILY",
+   "subs": "30700",
+   "created": "2006-10-29",
+   "line": false,
+   "diag": false,
+   "cred": false
+  },
+  {
+   "id": "UC7h26kiLuMSFoHdVSU4_iLA",
+   "title": "介護の花子さん。第2の人生",
+   "subs": "26000",
+   "created": "2023-05-07",
+   "line": false,
+   "diag": false,
+   "cred": false
+  },
+  {
+   "id": "UCu6rYTOd5IW0Rp98kAB0BUA",
+   "title": "元ハローワーク職員とげまる【失業保険 / 退職給付金】",
+   "subs": "23900",
+   "created": "2025-10-18",
+   "line": true,
+   "diag": true,
+   "cred": true
+  },
+  {
+   "id": "UCGzyP0-0DlVH5Oi7DbSi8RQ",
+   "title": "風まかせ",
+   "subs": "30000",
+   "created": "2018-03-24",
+   "line": false,
+   "diag": false,
+   "cred": false
+  }
+ ]
+}
