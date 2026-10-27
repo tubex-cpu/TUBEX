@@ -1,6 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Audio, Easing, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Icon} from './Icons';
+import {HabiBackground, HabiSceneView, habiTheme} from './HabiScene';
 import {EpisodeScript, Scene, fontBody, fontDisplay, theme} from './types';
 
 const Background: React.FC = () => {
@@ -90,10 +91,10 @@ const SceneView: React.FC<{scene: Scene; durationInFrames: number}> = ({scene, d
   );
 };
 
-const ProgressBar: React.FC<{total: number}> = ({total}) => {
+const ProgressBar: React.FC<{total: number; color?: string}> = ({total, color = theme.accent}) => {
   const frame = useCurrentFrame();
   return (
-    <div style={{position: 'absolute', left: 0, bottom: 0, height: 10, width: `${(frame / total) * 100}%`, background: theme.accent}} />
+    <div style={{position: 'absolute', left: 0, bottom: 0, height: 10, width: `${(frame / total) * 100}%`, background: color}} />
   );
 };
 
@@ -105,12 +106,12 @@ export const Episode: React.FC<EpisodeScript> = (props) => {
   const total = props.scenes.reduce((s, sc) => s + Math.round(sc.seconds * fps), 0);
   return (
     <AbsoluteFill>
-      <Background />
+      {props.look === 'habi' ? <HabiBackground /> : <Background />}
       {props.scenes.map((scene) => {
         const d = Math.round(scene.seconds * fps);
         const seq = (
           <Sequence key={scene.id} from={from} durationInFrames={d} name={scene.id}>
-            <SceneView scene={scene} durationInFrames={d} />
+            {props.look === 'habi' ? <HabiSceneView scene={scene} durationInFrames={d} /> : <SceneView scene={scene} durationInFrames={d} />}
             {scene.audio ? (
               // Narration starts after a short lead-in; make_audio.py sizes the scene to fit it.
               <Sequence from={Math.round(NARRATION_LEAD_IN * fps)} name={`${scene.id}-voice`}>
@@ -123,7 +124,7 @@ export const Episode: React.FC<EpisodeScript> = (props) => {
         return seq;
       })}
       {props.bgm ? <Audio src={staticFile(props.bgm)} volume={0.18} /> : null}
-      <ProgressBar total={total} />
+      <ProgressBar total={total} color={props.look === 'habi' ? habiTheme.accent : theme.accent} />
     </AbsoluteFill>
   );
 };

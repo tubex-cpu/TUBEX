@@ -21,21 +21,21 @@
 | R14 | 海洋地殻と大陸地殻の違い（太平洋の海底は玄武岩質の海洋地殻） | 教科書・地質調査所資料で要出典 | 未 |
 | R15 | 「日本人の起源はムー大陸」説の出どころ（チャーチワード邦訳・神代文字など） | 未調査 | 未 |
 | R16 | 佐野貴司『海に沈んだ大陸の謎』（講談社ブルーバックス）：太平洋の巨大海台がムー大陸に当たるかを地質学で検討 | [講談社](https://www.kodansha.co.jp/book/products/0000369747) | 書籍本文で要確認 |
-| R17 | ランダの表は、のちに「音節（音のかたまり）」を書き取ったものと理解され、20世紀のマヤ文字解読の手がかりになった | Wikipedia: De Landa alphabet（上記 R2） | **検索要約に記述なし。Claude の既知知識。要確認（確認できなければ台本から削除）** |
+| R17 | ランダの表は、のちに「音節（音のかたまり）」を書き取ったものと理解され、20世紀のマヤ文字解読の手がかりになった | [Wikipedia: De Landa alphabet](https://en.wikipedia.org/wiki/De_Landa_alphabet) / [UNC 図書館：Knorozov](https://exhibits.lib.unc.edu/exhibits/show/maya/decipherment/sistema-pisma-drevnikh-maiia)（Knorozov 1952 が音節表として再解釈） | ✅ 2026-10-27 検索で確認 |
 | R18 | モアイの多くは内陸（村の方）を向く。祖先が子孫・村・土地を見守ると考えられている。アフ・アキビの7体は海を向く（言い伝えでは最初の航海者） | [Wikipedia: Moai](https://en.wikipedia.org/wiki/Moai) / [easterisland.travel](https://www.easterisland.travel/blog/did-you-know-the-moai-represent-living-ancestors-discover-their-story-in-rapa-nui-with-local-guides/) | 要確認 |
 | R19 | ラパ・ヌイへの移住は西暦1200年ごろより前の証拠なし（Hunt & Lipo 2006, Science） | [ハワイ大学](https://www.hawaii.edu/news/article.php?aId=1364) | 論文で要確認 |
 | R20 | 2024年の古代ゲノム研究：急激な人口崩壊はなかった | [KTVZ/CNN 2024-09](https://ktvz.com/cnn-other/2024/09/14/ancient-dna-adds-to-evidence-debunking-theory-of-easter-island-collapse/) | 論文名・誌名を要確認 |
 | R21 | ホクレア号：1976年、マウ・ピアイルグの航法で計器なしにハワイ→タヒチ（約2,500マイル超） | [Wikipedia: Polynesian Voyaging Society](https://en.wikipedia.org/wiki/Polynesian_Voyaging_Society) / [Hōkūleʻa archive（Finney）](https://archive.hokulea.com/holokai/1976/ben_finney.html) | 要確認 |
 | R22 | 最終氷期最盛期（約2万年前）の海面は今より約120m低い（推定118〜130m） | [Wikipedia: Last Glacial Maximum](https://en.wikipedia.org/wiki/Last_Glacial_Maximum) | 要確認（USGS） |
 | R23 | ドッガーランド：北海の旧陸地。約8,150〜8,200年前のストレッガ海底地すべり津波。被害の大きさは議論中（Hill et al. 2017／Walker et al. 2020 Antiquity） | [arXiv 1707.05593](https://arxiv.org/pdf/1707.05593) / [Bradford 大学 2020](https://www.bradford.ac.uk/news/archive/2020/doggerland-tsunami.php) | 要確認 |
-| R24 | 沖ノ島：島全体が宗像大社沖津宮の境内、一般の上陸禁止、出土品約8万点が国宝、2017年世界遺産。「お言わずさま」「一木一草一石も持ち出さない」の言い伝え | 検索要約（宗像大社・文化庁で要確認） | **言い伝えの部分は未確認** |
+| R24 | 沖ノ島：島全体が宗像大社沖津宮の境内、一般の上陸禁止、出土品約8万点が国宝、2017年世界遺産。「お言わずさま」「一木一草一石も持ち出さない」の言い伝え | [クロスロードふくおか（福岡県観光連盟）](https://www.crossroadfukuoka.jp/spot/10242) / [日本野鳥の会 IBA 資料](https://ftp.wbsj.org/nature/hogo/others/iba/search/sites/kyusyu/imgs/JP136.pdf) | ✅ 一木一草一石・上陸制限は確認（2026-10-27）。「口外しない」は番組紹介記事のみ |
 | R25 | ナン・マドールの玄武岩は約75万トン。石の一部は島の反対側の石切り場から（McCoy）。運搬方法は未解明 | [Skeptoid 865](https://skeptoid.com/episodes/865) / [Smarthistory](https://smarthistory.org/?p=31902) | 要確認（「陸路40km以上」は Smarthistory の「25マイル超」から換算） |
 | R26 | ニーヴンの石板：スコットランド出身の鉱物学者、1921〜32年メキシコ盆地で発掘、絵を残して埋め戻し、現在は所在不明。発掘品に偽物混入の疑い（土器・土偶について） | [Wesleyan 大学](https://www.wesleyan.edu/libr/collections/arch-anth/highlights/niven_artifacts.html) / [Library of America](https://storyoftheweek.loa.org/2010/06/charmed-life.html) | 要確認（枚数は資料により2,500〜2,600） |
 | R27 | レムリア：1864年スクレーターが提唱、1960年代のプレートテクトニクス受容で不要に。ヴェーゲナーの大陸移動説（1912年） | [Wikipedia: Lemuria](https://en.wikipedia.org/wiki/Lemuria) / [Atlas Obscura](https://atlasobscura.com/articles/lost-continent-lemuria) | 要確認 |
 | R28 | チャーチワード：ムー（人口6,400万、約1万2千年前に沈没、地下の爆発性ガスの空洞、地盤は花こう岩）。1931年版で根拠をナーカル碑文とニーヴンの石板と明記。邦訳1968年 | [Wikipedia: James Churchward](https://en.wikipedia.org/wiki/James_Churchward) / [庄子大亮（現代ビジネス）](https://gendai.media/articles/-/99285) | 原著で要確認 |
 | R29 | 戦前の軍高官らが日本人の起源をムーに求めた | 庄子大亮『アトランティス＝ムーの系譜学』（講談社 2022）紹介文 | 本文で要確認 |
-| R30 | 映画『海底軍艦』（1963年・東宝）にムー帝国が登場 | 検索要約のみ | 要確認 |
-| R31 | 北センチネル島：法律で外部との接触を禁止。理由は先住民の保護（感染症など） | [AFP](https://www.afpbb.com/articles/-/3198906) | 「感染症」の理由は要確認 |
+| R30 | 映画『海底軍艦』（1963年・東宝）にムー帝国が登場 | [Wikipedia: Atragon](https://en.wikipedia.org/wiki/Atragon)（1963年12月22日公開、東宝。作中表記は「ムウ帝国」） | ✅ 2026-10-27。台本を「ムウ帝国」に修正 |
+| R31 | 北センチネル島：法律で外部との接触を禁止。理由は先住民の保護（感染症など） | [AFP](https://www.afpbb.com/articles/-/3198906) / [Wikipedia: North Sentinel Island](https://en.wikipedia.org/wiki/North_Sentinel_Island)（1956年アンダマン先住民保護規則、感染症からの保護） | ✅ 2026-10-27 |
 | R32 | ロンゴロンゴ：現存27点ほど（30未満）。ローマの4枚のうち1枚の木は1493〜1509年に伐採。ヨーロッパ人来航は1722年 | [Ferrara et al. 2024 Sci Rep（DOAJ）](https://doaj.org/article/05029bdd384945ef8acb67bd5593e39f) / [Smithsonian](https://www.smithsonianmag.com/smart-news/research-reveals-the-natives-of-easter-island-invented-a-written-language-from-scratch-180983793/) | 要確認 |
 
 ## 台本で使わなかった・使えない話（2026-10-26 社長提案の要素を検討）
