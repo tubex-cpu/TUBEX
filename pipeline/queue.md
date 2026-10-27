@@ -8,7 +8,7 @@
 | ID | チャンネル | テーマ | 状態 |
 |---|---|---|---|
 | new-channels | ②③ 新規2チャンネル（`channels/new-channels/`） | ジャンル選定（市場が大きく穴場のジャンルを2つ）。**最優先**（社長の目標の対象） | 工程0（従来手順はYouTube APIの実数値を必要とする。キーを扱わず既存結果を照合し、取得不能はブロッカーとして記録）。既存PR #11 の調査・監査を引き継ぎ、重複調査しない。ゲート0承認前は工程1以降禁止 |
-| shoku-karakuri-week1 | 新規チャンネル「食のからくり帳」（`channels/shoku-karakuri/`） | 初週の企画。案は `channels/shoku-karakuri/week1_plan.md` | **Codex 正式監査 2回目も差し戻し（2026-10-27、重大1・軽微5）→ 修正版を提出、再監査待ち。次に差し戻しなら3回目で停止・社長に相談**。案件ごとの状態：企画2 回転寿司ラーメン＝修正版・再監査待ち／企画1 ホテル朝食＝修正版・再監査待ち／企画3 時間価格＝候補（昼夜5件比較が未達）／予備 マック＝予備（現行公式の照合未了）。ゲートA未提出。台本・サムネ・動画には進まない |
+| shoku-karakuri-week1 | 新規チャンネル「食のからくり帳」（`channels/shoku-karakuri/`） | 初週の企画。案は `channels/shoku-karakuri/week1_plan.md` | **企画2 回転寿司ラーメン・企画1 ホテル朝食は Codex 正式監査合格（2026-10-27、https://github.com/tubex-cpu/TUBEX/pull/16#issuecomment-6438046818 ）→ ゲートA承認待ち**。企画3 時間価格＝候補（昼夜5件比較が未達）／予備 マック＝予備（現行公式の照合未了）。**初週の3本目は未定**。ゲートA承認前は台本・タイトル確定・サムネ・動画に進まない |
 | habi-001-sumer | ① ハビ判事（`channels/habi-judge/`） | 日本人とシュメール判決（社長作の台本あり） | **納品済み・重複制作しない**（2026-10-25 指示）。公開実績は別途URLで確認し、未確認でも再制作しない |
 | habi-002-proto-elamite | ① ハビ判事 | 人々は本当に自分から文字を捨てたのか？（原エラム文字・シュメール回の次回予告） | 候補。既存PR #4 のテーマ選択待ち記録に従い、選択確認まで当該テーマの工程1・3から保留。候補比較・承認履歴照合は可。他の独立案件は進める |
 | note | note（有料 note・ジャンル：不倫・`pipeline/README.md`「note」） | 不倫ジャンルの切り口・価格帯の方針（ゲートN0）。主案は `channels/furin_atode/CHANNEL.md`（2026-10-25 社長方針）。運用はnoteのみ（他SNSは扱わない）。YouTube とは独立して進める | 工程N0。方針案 `notes/00_strategy.md`（2026-10-25、CHANNEL.md の読者・4テーマで作り直し。PR #14 の草案は書き換えていない）。競合原ページの確認が残件・Codex 監査前。N0承認前のN1以降は禁止 |
@@ -20,7 +20,9 @@
 
 | 対象週（JST月〜日） | 案件ID | ゲート | 成果物/PR・commit | 推奨/選択肢・監査結果 | 未決事項/待ち理由 | 承認者・日時・根拠リンク |
 |---|---|---|---|---|---|---|
-| 2026-10-26〜11-01 | shoku-karakuri-week1 | A（企画）提出前 | `channels/shoku-karakuri/week1_plan.md`（PR tubex-cpu/TUBEX#16、ブランチ claude/shoku-karakuri-week1） | 推奨の並び：①回転寿司ラーメン→②ホテル朝食→③未確定（企画3 または 予備）。Codex 正式監査：1回目差し戻し（https://github.com/tubex-cpu/TUBEX/pull/16#issuecomment-6434233735 ）、2回目差し戻し（https://github.com/tubex-cpu/TUBEX/pull/16#issuecomment-6436557643 ）→ 修正版を提出、再監査待ち | 企画3の5件比較、予備の現行公式照合、Claude 側の接続制限（サムネ比較監査はブロッカー） | 未承認 |
+| 2026-10-26〜11-01 | kara-001-sushi-ramen（企画2 回転寿司のラーメン） | A（企画） | `channels/shoku-karakuri/week1_plan.md` の「企画2：回転寿司のラーメン」（PR tubex-cpu/TUBEX#16、commit `c0143ff`） | 推奨：初週1本目として採用。Codex 正式監査：合格（https://github.com/tubex-cpu/TUBEX/pull/16#issuecomment-6438046818 ） | 冒頭・尺の実測は台本工程。サムネ比較監査は Claude 側の接続制限がブロッカー | 未承認 |
+| 2026-10-26〜11-01 | kara-002-hotel-breakfast（企画1 ホテル朝食） | A（企画） | `channels/shoku-karakuri/week1_plan.md` の「企画1：ホテル朝食」（PR tubex-cpu/TUBEX#16、commit `c0143ff`） | 推奨：初週2本目として採用。Codex 正式監査：合格（https://github.com/tubex-cpu/TUBEX/pull/16#issuecomment-6438046818 ） | 規模別の割合（2012年掲載）・喫食率（2013年）が古い点は画面で明示。冒頭・尺の実測は台本工程 | 未承認 |
+| 2026-10-26〜11-01 | 初週の3本目（未定） | – | 候補：企画3 時間価格（昼夜5件比較が未達）／予備：マック店舗価格（現行公式の照合未了） | 監査合格対象外。ゲートAに出せる候補なし | 3本目を出すには候補の条件を満たす必要がある | – |
 
 提出時に実在する案件だけ行を追加する。承認された対象だけSTATUSにも反映し、未提出の行を承認済みにしない。週次の企画候補・公開候補・サムネ方向選択はこの一覧にまとめる（詳細はREADME）。
 
