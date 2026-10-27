@@ -5,7 +5,7 @@
 | # | 工程 | 実施 | 監査 | 状態 |
 |---|---|---|---|---|
 | 1 | リサーチ | 🔄 Claude | ⬜ Codex | 出典メモ R1〜R32。**一次資料（論文本文・原著）の確認が残る**（この環境では archive.org・Wikipedia 本文などに直接アクセスできず、検索の要約で確認） |
-| 2 | 競合調査 | 🔄 Claude | ⬜ Codex | 実数値は取得済み（2026-10-26、チャット報告）。`02_competitors.md` 未作成 |
+| 2 | 競合調査 | ✅ Claude | ⬜ Codex | `02_competitors.md`（取得日 2026-10-26。テーマ比較15語＋ムー大陸の競合12本） |
 | 3 | 企画立案 | ✅ Claude | ⬜ Codex | `03_plan.md` |
 | – | ゲートA | | | ✅ 承認（2026-10-26、チャットで「その方向で目次を差し替えて、全文の台本を作って」） |
 | 4 | タイトル | ✅ Claude | ⬜ Codex | `04_titles.md`（3案＋推奨A）。`script.json` の title は推奨A |
@@ -22,3 +22,15 @@
 - 鳥アイコンは試運転回のグンカンドリで、ハシビロコウではない（仮置き）
 - 各シーンの出典表示がパート単位の大まかな対応で、内容とずれるシーンがある（例：海面の話に「琉球新報ほか」）。`script.json` の source をシーンごとに直す
 - 尺は読み上げ速度の都合で約48分（台本の字数換算では53分）
+
+## 新しいチャット（作業環境）で動画を作り直す手順
+作業環境はチャットごとにリセットされる。git に入っていないもの（ナレーション音声・フル画質 mp4・インストールしたツール）は毎回作り直す。
+```bash
+sudo apt-get update
+sudo apt-get install -y open-jtalk open-jtalk-mecab-naist-jdic hts-voice-nitech-jp-atr503-m001 ffmpeg python3-numpy
+python3 video/scripts/make_audio.py habi-002-mu   # 音声（約48分）と BGM。数分
+cd video && npm install
+npm run render -- habi-002-mu                      # 約1時間半。preview.mp4 を上書き。既存の thumbnail.png は上書きしない
+```
+- 読み上げの読み間違い対策（×→バツ、怒り→いかり、都→みやこ など）は `script.json` の narration に反映済み。作り直しても同じ音声になる
+- ブラウザは `video/scripts/render.mjs` が `/opt/pw-browsers/chromium_headless_shell-*` から自動で探す（手で指定しなくてよい）

@@ -126,13 +126,15 @@
 ## コマンド
 
 ```bash
-# 初回のみ（無料・Ubuntu 公式パッケージ）：音声エンジン・音声変換・BGM合成に必要なもの
+# 新しいチャット（作業環境）ごとに最初に1回（無料・Ubuntu 公式パッケージ）：音声エンジン・音声変換・BGM合成に必要なもの
+# 作業環境はチャットごとにリセットされるため、インストール・node_modules・生成音声・フル画質 mp4 は毎回作り直す
+sudo apt-get update   # これを先にしないと open-jtalk 関連が「見つからない」で失敗する（2026-10-26 確認）
 sudo apt-get install -y open-jtalk open-jtalk-mecab-naist-jdic hts-voice-nitech-jp-atr503-m001 ffmpeg python3-numpy
 
 python3 video/scripts/make_audio.py 001-sleep-without-brain  # ナレーション＋BGM生成、尺を script.json に反映
 cd video
 npm install
-npm run render -- 001-sleep-without-brain             # サムネ + 動画（監査用の軽量版 episodes/<id>/preview.mp4 も出力）
+npm run render -- 001-sleep-without-brain             # サムネ + 動画（監査用の軽量版 episodes/<id>/preview.mp4 も出力）。ブラウザは /opt/pw-browsers から自動検出。既存の thumbnail.png（Codex 作）は上書きしない。約50分の回で書き出し約1時間半
 npm run render -- 001-sleep-without-brain --thumb-only # サムネだけ
 npm run studio                                         # ブラウザでプレビュー・微調整
 ```
