@@ -85,7 +85,7 @@ S = {
   (13,14,'a','MuSeries','ムーの本は、続いた',None),
   (15,18,'a','MuInJapan','日本にも届いた',None),
   (19,20,'a','WhereFrom','どこから来た数字？',None),
-  (21,22,'p','churchward-2','答えは、本の中に',None),
+  (21,22,'a','AnswerInBook','答えは、本の中に',None),
   (23,24,'a','OneManReading','ひとりの読み解き',None),
   (25,27,'v','wrong',None,None),
   (28,None,'a','TwoRecords','すべての土台',None)]),

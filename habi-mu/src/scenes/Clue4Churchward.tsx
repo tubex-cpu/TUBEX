@@ -1,6 +1,6 @@
 import {Beat, captionFrame} from '../components/Beat';
 import {GavelVerdict} from '../components/GavelVerdict';
-import {GasChambers, MuBook1926, MuExtent, MuInJapan, MuSeries, OneManReading, TwoRecords, WhereFrom} from '../components/MuArt1';
+import {AnswerInBook, GasChambers, MuBook1926, MuExtent, MuInJapan, MuSeries, OneManReading, TwoRecords, WhereFrom} from '../components/MuArt1';
 import {Photo} from '../components/Photo';
 import {SceneFrame} from '../components/SceneFrame';
 import {Visual} from '../components/Scenery';
@@ -51,8 +51,10 @@ export const Clue4Churchward = () => {
 					<WhereFrom />
 				</Visual>
 			</Beat>
-			<Beat name="答えは、本の中に" captions={c} from={21} to={22}>
-				<Photo id="churchward-2" label="答えは、本の中に" />
+			<Beat name="AnswerInBook" captions={c} from={21} to={22}>
+				<Visual label="答えは、本の中に">
+					<AnswerInBook />
+				</Visual>
 			</Beat>
 			<Beat name="OneManReading" captions={c} from={23} to={24}>
 				<Visual label="ひとりの読み解き">

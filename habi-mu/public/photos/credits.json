@@ -362,17 +362,6 @@
    896
   ]
  },
- "churchward-2": {
-  "file": "churchward-2.jpg",
-  "title": "James-Churchward The-Lost-Continent-of-Mu.jpg",
-  "artist": "James Churchward in work: The Lost Continent of Mu, the Motherland of Men (1926)",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:James-Churchward_The-Lost-Continent-of-Mu.jpg",
-  "size": [
-   634,
-   353
-  ]
- },
  "churchward-map": {
   "file": "churchward-map.jpg",
   "title": "Book map1.jpg",
@@ -593,17 +582,6 @@
    1600
   ]
  },
- "raraku-volcano": {
-  "file": "raraku-volcano.jpg",
-  "title": "Chile-03110 - Rano Raraku Volcano (49073116567).jpg",
-  "artist": "Dennis G. Jarvis",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Chile-03110_-_Rano_Raraku_Volcano_(49073116567).jpg",
-  "size": [
-   2400,
-   1600
-  ]
- },
  "rapanui-land": {
   "file": "rapanui-land.jpg",
   "title": "Rapa-Nui-Landscape.jpg",
@@ -712,28 +690,6 @@
   "size": [
    2400,
    1282
-  ]
- },
- "mau": {
-  "file": "mau.jpg",
-  "title": "MauHokulea.jpg",
-  "artist": "Matsujima",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:MauHokulea.jpg",
-  "size": [
-   2400,
-   1351
-  ]
- },
- "roggeveen-map": {
-  "file": "roggeveen-map.jpg",
-  "title": "AMH-6903-KB Map of the voyage to the 'South Land' by Jacob Roggeveen.jpg",
-  "artist": "Dirk de Jong",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:AMH-6903-KB_Map_of_the_voyage_to_the_%27South_Land%27_by_Jacob_Roggeveen.jpg",
-  "size": [
-   2400,
-   1377
   ]
  }
 }
