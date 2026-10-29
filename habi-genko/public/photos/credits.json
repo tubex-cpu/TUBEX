@@ -229,5 +229,27 @@
    1920,
    1737
   ]
+ },
+ "genkai-1": {
+  "file": "genkai-1.jpg",
+  "title": "Genkai Sea from Shikanoshima Beach.jpg",
+  "artist": "そらみみ (Soramimi)",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Genkai_Sea_from_Shikanoshima_Beach.jpg",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "genkai-2": {
+  "file": "genkai-2.jpg",
+  "title": "Genkai Sea from Futamigaura Beach.JPG",
+  "artist": "そらみみ (Soramimi)",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Genkai_Sea_from_Futamigaura_Beach.JPG",
+  "size": [
+   1920,
+   1440
+  ]
  }
 }
