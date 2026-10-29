@@ -115,16 +115,16 @@ export const Route: React.FC<{readonly pts: ReadonlyArray<readonly [number, numb
 
 // 第1の手がかり：大都（北京）から高麗を経て、大宰府へ届いた一通の手紙
 export const LetterRoute: React.FC = () => {
-	const cam = {lon: 126.5, lat: 35.6, zoom: 0.62};
+	const cam = {lon: 127.5, lat: 37.2, zoom: 0.5};
 	const z = cam.zoom;
 	return (
-		<MapView from={{...cam, zoom: 0.55}} to={cam}>
+		<MapView from={{...cam, zoom: 0.44}} to={cam}>
 			<Route pts={[PLACES.daito, PLACES.kaesong, PLACES.gappo, PLACES.dazaifu]} zoom={z} at={20} len={110} />
-			<Place at={PLACES.daito} name="大都（今の北京）" zoom={z} show={10} big />
+			<Place at={PLACES.daito} name="大都（今の北京）" zoom={z} show={10} big dx={-40} dy={70} />
 			<Place at={PLACES.kaesong} name="高麗" zoom={z} show={50} />
-			<Place at={PLACES.dazaifu} name="大宰府" zoom={z} show={120} color={colors.goldSoft} big />
+			<Place at={PLACES.dazaifu} name="大宰府" zoom={z} show={120} color={colors.goldSoft} big dx={-230} dy={70} />
 			<Place at={PLACES.kamakura} name="鎌倉" zoom={z} show={140} dx={-120} />
-			<Place at={PLACES.kyoto} name="京都" zoom={z} show={150} dx={-110} dy={50} />
+			<Place at={PLACES.kyoto} name="京都" zoom={z} show={150} dx={-30} dy={60} />
 		</MapView>
 	);
 };

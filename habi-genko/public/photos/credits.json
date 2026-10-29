@@ -251,5 +251,104 @@
    1920,
    1440
   ]
+ },
+ "map-ecs": {
+  "file": "map-ecs.jpg",
+  "title": "East China Sea location map OSM eqc.svg",
+  "artist": "OpenStreetMap contributors, and Peka",
+  "license": "ODbL",
+  "page": "https://commons.wikimedia.org/wiki/File:East_China_Sea_location_map_OSM_eqc.svg",
+  "size": [
+   2400,
+   2118
+  ]
+ },
+ "ekotoba-tetsuhau-w": {
+  "file": "ekotoba-tetsuhau-w.jpg",
+  "title": "Mōko Shūrai Ekotoba.jpg",
+  "artist": "Author unknown. Illustration rolls were ordered by Takezaki Suenaga himself.",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:M%C5%8Dko_Sh%C5%ABrai_Ekotoba.jpg",
+  "size": [
+   1920,
+   642
+  ]
+ },
+ "kyosai-mouko-w": {
+  "file": "kyosai-mouko-w.jpg",
+  "title": "Terugdrijven van Mongoolse piratenschepen Moko zokusen taiji no zu (titel op object), RP-P-2002-699.jpg",
+  "artist": "Rijksmuseum",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Terugdrijven_van_Mongoolse_piratenschepen_Moko_zokusen_taiji_no_zu_(titel_op_object),_RP-P-2002-699.jpg",
+  "size": [
+   3840,
+   1974
+  ]
+ },
+ "borui-iki-3-w": {
+  "file": "borui-iki-3-w.jpg",
+  "title": "Genkō-Bōrui in Ikinomatsubara Area along Hakata Bay Ikinomatsubara-1-chōme Nishi-ku Fukuoka City 20221027.jpg",
+  "artist": "Hirho",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Genk%C5%8D-B%C5%8Drui_in_Ikinomatsubara_Area_along_Hakata_Bay_Ikinomatsubara-1-ch%C5%8Dme_Nishi-ku_Fukuoka_City_20221027.jpg",
+  "size": [
+   3840,
+   1920
+  ]
+ },
+ "map-mongol-1-w": {
+  "file": "map-mongol-1-w.jpg",
+  "title": "Mongol Empire with modern borders.png",
+  "artist": "BlueHypercane761",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mongol_Empire_with_modern_borders.png",
+  "size": [
+   3840,
+   1950
+  ]
+ },
+ "map-mongol-2-w": {
+  "file": "map-mongol-2-w.jpg",
+  "title": "Mongol Empire at its extent.png",
+  "artist": "Tiashing595",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mongol_Empire_at_its_extent.png",
+  "size": [
+   1280,
+   580
+  ]
+ },
+ "ekotoba-e21": {
+  "file": "ekotoba-e21.jpg",
+  "title": "Adachi morimune & takezaki suenaga.jpg",
+  "artist": "Author unknown. Illustration rolls were ordered by Takezaki Suenaga himself.",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Adachi_morimune_%26_takezaki_suenaga.jpg",
+  "size": [
+   1920,
+   1555
+  ]
+ },
+ "mohon-fukuda-3": {
+  "file": "mohon-fukuda-3.jpg",
+  "title": "MokoShuraiE-Kotoba III.jpg",
+  "artist": "Fukuda Taika / (of the reproduction) Tokyo National Museum",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:MokoShuraiE-Kotoba_III.jpg",
+  "size": [
+   1280,
+   996
+  ]
+ },
+ "tapestry-mouko": {
+  "file": "tapestry-mouko.jpg",
+  "title": "Kawashima Jimbei Ii - The Mongol Invasion - Google Art Project.jpg",
+  "artist": "Kawashima Jimbei II (1853 - 1910) – Workshop (Japanese) Details on Google Art Project",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Kawashima_Jimbei_Ii_-_The_Mongol_Invasion_-_Google_Art_Project.jpg",
+  "size": [
+   1906,
+   2400
+  ]
  }
 }

@@ -24,7 +24,7 @@ export const Photo: React.FC<Props> = ({id, children, move = 'in', label}) => {
 	}
 	const t = interpolate(frame, [0, Math.max(60, length)], [0, 1], easeInOut);
 	const src = staticFile(`photos/${photo.file}`);
-	const grade = 'contrast(1.08) saturate(0.88) brightness(0.94)';
+	const grade = photo.filter ?? 'contrast(1.08) saturate(0.88) brightness(0.94)';
 	let body: React.ReactNode;
 	if (move === 'scroll') {
 		// 横長の絵巻：高さいっぱいに置き、左から右へたどる
