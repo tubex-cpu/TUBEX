@@ -130,5 +130,27 @@
    1920,
    1080
   ]
+ },
+ "ryukoji-cave": {
+  "file": "ryukoji-cave.jpg",
+  "title": "Ryukoji-M8752.jpg",
+  "artist": "Fg2",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Ryukoji-M8752.jpg",
+  "size": [
+   1280,
+   853
+  ]
+ },
+ "kublai": {
+  "file": "kublai.jpg",
+  "title": "YuanEmperorAlbumKhubilaiPortrait.jpg",
+  "artist": "Araniko",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumKhubilaiPortrait.jpg",
+  "size": [
+   1920,
+   2395
+  ]
  }
 }
