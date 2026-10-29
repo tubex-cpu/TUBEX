@@ -14,12 +14,12 @@ const clues = ['古代から？', 'マヤの本？', '女王ムー？', '6400万
 const ClueRow = () => {
 	const frame = useCurrentFrame();
 	return (
-		<div style={{position: 'absolute', left: 80, right: 80, top: 170, display: 'flex', flexWrap: 'wrap', gap: 18, justifyContent: 'center'}}>
+		<div style={{position: 'absolute', left: 60, right: 60, top: 170, display: 'flex', flexWrap: 'wrap', gap: 14, justifyContent: 'center'}}>
 			{clues.map((cl, i) => (
 				<div
 					key={cl}
 					style={{
-						width: 182,
+						width: 176,
 						padding: '14px 0',
 						borderRadius: 16,
 						background: colors.paper,
