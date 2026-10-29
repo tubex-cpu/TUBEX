@@ -900,5 +900,38 @@
    1920,
    1440
   ]
+ },
+ "nokonoshima-air": {
+  "file": "nokonoshima-air.jpg",
+  "title": "Nokonoshima Island.JPG",
+  "artist": "R34SkylineGT-R V-SpecⅡNür",
+  "license": "CC BY 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Nokonoshima_Island.JPG",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "hakozaki-romon-1": {
+  "file": "hakozaki-romon-1.jpg",
+  "title": "Romon gate of Hakozaki Shrine 2.jpg",
+  "artist": "そらみみ",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Romon_gate_of_Hakozaki_Shrine_2.jpg",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "hakozaki-romon-2": {
+  "file": "hakozaki-romon-2.jpg",
+  "title": "Romon and Sacred Tree \"Hakomatsu\" of Hakozaki Shrine.JPG",
+  "artist": "そらみみ",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Romon_and_Sacred_Tree_%22Hakomatsu%22_of_Hakozaki_Shrine.JPG",
+  "size": [
+   1920,
+   1440
+  ]
  }
 }
