@@ -51,8 +51,16 @@ for pid, title in picks.items():
     if pid in credits and (OUT / f'{pid}.jpg').exists():
         continue
     try:
-        q = urllib.parse.urlencode({'action': 'query', 'format': 'json', 'titles': 'File:' + title, 'prop': 'imageinfo', 'iiprop': 'url|extmetadata', 'iiurlwidth': 2400})
+        q = urllib.parse.urlencode({'action': 'query', 'format': 'json', 'titles': 'File:' + title, 'prop': 'imageinfo', 'iiprop': 'url|extmetadata|size', 'iiurlwidth': 2400})
         d = json.loads(fetch('https://commons.wikimedia.org/w/api.php?' + q))
+        info = list(d['query']['pages'].values())[0].get('imageinfo', [{}])[0]
+        ow, oh = info.get('width', 1), info.get('height', 1)
+        # 横長の絵巻などは、幅2400に縮めると高さが足りない。高さ1400pxを保てる幅で取り直す
+        long_side = 2400
+        if ow / oh > 1.9 and oh > 1:
+            long_side = min(ow, int(1400 * ow / oh))
+            q = urllib.parse.urlencode({'action': 'query', 'format': 'json', 'titles': 'File:' + title, 'prop': 'imageinfo', 'iiprop': 'url|extmetadata', 'iiurlwidth': long_side})
+            d = json.loads(fetch('https://commons.wikimedia.org/w/api.php?' + q))
         page = list(d['query']['pages'].values())[0]
         if 'imageinfo' not in page:
             raise RuntimeError('Commonsにファイルが見つからない')
@@ -61,7 +69,7 @@ for pid, title in picks.items():
         # 縮小版（thumburl）が使えればそちらを使う。無ければ原寸
         url = ii.get('thumburl') or ii['url']
         im = Image.open(io.BytesIO(fetch(url))).convert('RGB')
-        im.thumbnail((2400, 2400), Image.LANCZOS)
+        im.thumbnail((max(2400, long_side), 2400), Image.LANCZOS)
         im.save(OUT / f'{pid}.jpg', quality=88)
         credits[pid] = {
             'file': f'{pid}.jpg',
