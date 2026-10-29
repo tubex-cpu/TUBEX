@@ -25,16 +25,16 @@ export const Clue17Seafloor = () => {
 					<CrustSection />
 				</Visual>
 			</Beat>
-			<Beat name="WoodAndStone" captions={c} from={8} to={10}>
+			<Beat name="WoodAndStone" captions={c} from={8} to={11}>
 				<Visual label="木は浮き、石は沈む">
 					<WoodAndStone />
 				</Visual>
 			</Beat>
-			<Beat name="花こう岩は浮かぶ" captions={c} from={11} to={11}>
-				<Photo id="pillow-basalt" label="花こう岩は浮かぶ" />
+			<Beat name="太平洋の海底は、玄武岩" captions={c} from={12} to={12}>
+				<Photo id="pillow-basalt" label="太平洋の海底は、玄武岩" />
 			</Beat>
-			<Beat name="NoSunkenCrust" captions={c} from={12} to={13}>
-				<Visual label="太平洋の海底は？">
+			<Beat name="NoSunkenCrust" captions={c} from={13} to={13}>
+				<Visual label="沈んだ大陸の跡は？">
 					<NoSunkenCrust />
 				</Visual>
 			</Beat>

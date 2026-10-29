@@ -692,50 +692,6 @@
    1282
   ]
  },
- "churchward-2": {
-  "file": "churchward-2.jpg",
-  "title": "James-Churchward The-Lost-Continent-of-Mu.jpg",
-  "artist": "James Churchward in work: The Lost Continent of Mu, the Motherland of Men (1926)",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:James-Churchward_The-Lost-Continent-of-Mu.jpg",
-  "size": [
-   634,
-   353
-  ]
- },
- "raraku-volcano": {
-  "file": "raraku-volcano.jpg",
-  "title": "Chile-03110 - Rano Raraku Volcano (49073116567).jpg",
-  "artist": "Dennis G. Jarvis",
-  "license": "CC BY-SA 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Chile-03110_-_Rano_Raraku_Volcano_(49073116567).jpg",
-  "size": [
-   2400,
-   1600
-  ]
- },
- "mau": {
-  "file": "mau.jpg",
-  "title": "MauHokulea.jpg",
-  "artist": "Matsujima",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:MauHokulea.jpg",
-  "size": [
-   2400,
-   1351
-  ]
- },
- "roggeveen-map": {
-  "file": "roggeveen-map.jpg",
-  "title": "AMH-6903-KB Map of the voyage to the 'South Land' by Jacob Roggeveen.jpg",
-  "artist": "Dirk de Jong",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:AMH-6903-KB_Map_of_the_voyage_to_the_%27South_Land%27_by_Jacob_Roggeveen.jpg",
-  "size": [
-   2400,
-   1377
-  ]
- },
  "churchward-mapbook": {
   "file": "churchward-mapbook.jpg",
   "title": "Clip map1.jpg",
@@ -1077,17 +1033,6 @@
    1589
   ]
  },
- "rapanui-people": {
-  "file": "rapanui-people.jpg",
-  "title": "Hanga Roa, Easter Island - aerial view (41495620045).jpg",
-  "artist": "Chris Hoare",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Hanga_Roa,_Easter_Island_-_aerial_view_(41495620045).jpg",
-  "size": [
-   2400,
-   1425
-  ]
- },
  "tongariki-dawn": {
   "file": "tongariki-dawn.jpg",
   "title": "Amanecer en tongakiri, isla de pascua (2).JPG",
@@ -1132,23 +1077,23 @@
    1644
   ]
  },
- "pacific-earth": {
-  "file": "pacific-earth.jpg",
-  "title": "Blue Marble 2000 (8244321945).jpg",
-  "artist": "NASA Goddard Space Flight Center from Greenbelt, MD, USA",
-  "license": "Public domain",
-  "page": "https://commons.wikimedia.org/wiki/File:Blue_Marble_2000_(8244321945).jpg",
-  "size": [
-   2381,
-   2400
-  ]
- },
  "pacific-sunset": {
   "file": "pacific-sunset.jpg",
   "title": "Sunset over the Pacific Ocean from Maui, Hawaii.jpg",
   "artist": "Peckphotographyart",
   "license": "CC BY-SA 4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Sunset_over_the_Pacific_Ocean_from_Maui,_Hawaii.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "raraku-volcano": {
+  "file": "raraku-volcano.jpg",
+  "title": "Chile-03032 - Moai Factory (49072869841).jpg",
+  "artist": "Dennis G. Jarvis",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Chile-03032_-_Moai_Factory_(49072869841).jpg",
   "size": [
    2400,
    1600
