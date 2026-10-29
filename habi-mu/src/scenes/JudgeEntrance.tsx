@@ -3,7 +3,8 @@ import {Audio} from '@remotion/media';
 import {AbsoluteFill, Easing, interpolate, staticFile, useCurrentFrame} from 'remotion';
 import {Beat} from '../components/Beat';
 import {CourtImage} from '../components/CourtImage';
-import {Photo} from '../components/Photo';
+import {SeaOfMystery} from '../components/MuArt4';
+import {Visual} from '../components/Scenery';
 import {SceneFrame} from '../components/SceneFrame';
 import {judgeEntranceCaptions as c} from '../data/captions';
 import {colors, gothicFamily, minchoFamily} from '../theme';
@@ -124,7 +125,9 @@ export const JudgeEntrance = () => (
 			<NamePlate />
 		</Beat>
 		<Beat name="今夜の問い" captions={c} from={2} to={3}>
-			<Photo id="pacific-earth" label="ムー大陸は、本当に沈んだ？" />
+			<Visual label="ムー大陸は、本当に沈んだ？">
+				<SeaOfMystery />
+			</Visual>
 		</Beat>
 		<Beat name="18の手がかり" captions={c} from={4}>
 			<ClueRow />
