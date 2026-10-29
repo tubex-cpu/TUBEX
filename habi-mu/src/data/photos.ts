@@ -109,4 +109,6 @@ export const photos: Record<string, PhotoEntry> = {
 	'japan-coast': {file: 'japan-coast.jpg', credit: '日本列島の地形図 / パブリックドメイン / Wikimedia Commons', fit: 'contain'},
 	'pacific-sunset': {file: 'pacific-sunset.jpg', credit: '太平洋の夕日（マウイ島） Peckphotographyart / CC BY-SA 4.0 / Wikimedia Commons'},
 	'raraku-volcano': {file: 'raraku-volcano.jpg', credit: 'ラノ・ララクの石切り場 Dennis G. Jarvis / CC BY-SA 2.0 / Wikimedia Commons'},
+	mau: {file: 'mau.jpg', credit: 'マウ・ピアイルグ Poro amara / CC BY-SA 4.0 / Wikimedia Commons', labelBottom: true},
+	'rapanui-people': {file: 'rapanui-people.jpg', credit: 'ハンガロア（イースター島） Chris Hoare / CC BY 2.0 / Wikimedia Commons'},
 };
