@@ -1,6 +1,6 @@
 import {Beat, captionFrame} from '../components/Beat';
 import {GavelVerdict} from '../components/GavelVerdict';
-import {CoralOnTop, CrustSection, EchoSounder, GraniteMu, GuyotStory, NoSunkenCrust, RingOfFire, WoodAndStone} from '../components/MuArt4';
+import {CoralOnTop, CrustSection, EchoSounder, GraniteMu, GuyotStory, NoSunkenCrust, RingOfFire, SunkenIslands, WoodAndStone} from '../components/MuArt4';
 import {Photo} from '../components/Photo';
 import {SceneFrame} from '../components/SceneFrame';
 import {Visual} from '../components/Scenery';
@@ -38,8 +38,8 @@ export const Clue17Seafloor = () => {
 					<NoSunkenCrust />
 				</Visual>
 			</Beat>
-			<Beat name="地質学者ハリー・ヘス" captions={c} from={14} to={16}>
-				<Photo id="hess" label="地質学者ハリー・ヘス" />
+			<Beat name="沈んだ島は、本当にある" captions={c} from={14} to={16}>
+				<Photo id="guyot-map" label="沈んだ島は、本当にある" />
 			</Beat>
 			<Beat name="EchoSounder" captions={c} from={17} to={20}>
 				<Visual label="音で深さを測る">
@@ -47,7 +47,7 @@ export const Clue17Seafloor = () => {
 				</Visual>
 			</Beat>
 			<Beat name="ギヨー" captions={c} from={21} to={21}>
-				<Photo id="guyot-map" label="ギヨー" />
+				<Photo id="guyot-map-2" label="ギヨー" />
 			</Beat>
 			<Beat name="GuyotStory" captions={c} from={22} to={24}>
 				<Visual label="なぜ平らなのか">
@@ -59,8 +59,10 @@ export const Clue17Seafloor = () => {
 					<CoralOnTop />
 				</Visual>
 			</Beat>
-			<Beat name="沈んだ島は、本当にある" captions={c} from={27} to={28}>
-				<Photo id="seamount" move="out" label="沈んだ島は、本当にある" />
+			<Beat name="SunkenIslands" captions={c} from={27} to={28}>
+				<Visual label="沈んだ島は、本当にある">
+					<SunkenIslands />
+				</Visual>
 			</Beat>
 			<Beat name="判決" captions={c} from={29} to={31}>
 				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 29, 30, fps)} />

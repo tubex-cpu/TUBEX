@@ -35,10 +35,13 @@ export const Clue11Settle = () => {
 					<Again800 />
 				</Visual>
 			</Beat>
-			<Beat name="VoyagingSkills" captions={c} from={9} to={11}>
+			<Beat name="VoyagingSkills" captions={c} from={9} to={10}>
 				<Visual label="星、波、風、鳥">
 					<VoyagingSkills />
 				</Visual>
+			</Beat>
+			<Beat name="星の羅針盤" captions={c} from={11} to={11}>
+				<Photo id="star-compass" label="星の羅針盤" />
 			</Beat>
 			<Beat name="ホクレア号" captions={c} from={12} to={13}>
 				<Photo id="hokulea" move="out" label="ホクレア号" />

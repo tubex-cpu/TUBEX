@@ -30,10 +30,13 @@ export const Clue18Japan = () => {
 					<NotGasCollapse />
 				</Visual>
 			</Beat>
-			<Beat name="PrepareReal" captions={c} from={11} to={14}>
+			<Beat name="PrepareReal" captions={c} from={11} to={12}>
 				<Visual label="本当に備えるべきこと">
 					<PrepareReal />
 				</Visual>
+			</Beat>
+			<Beat name="ハザードマップと避難の場" captions={c} from={13} to={14}>
+				<Photo id="tsunami-sign" label="ハザードマップと避難の場所" />
 			</Beat>
 			<Beat name="NoMuNoRoots" captions={c} from={15} to={17}>
 				<Visual label="ないものは、ルーツにならない">

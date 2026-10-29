@@ -1,5 +1,5 @@
 import {Beat} from '../components/Beat';
-import {Doggerland, GondwanaStretch, RealStories, Zealandia94, ZealandiaMap} from '../components/MuArt4';
+import {Doggerland, GondwanaStretch, RealStories, Zealandia94} from '../components/MuArt4';
 import {Photo} from '../components/Photo';
 import {SceneFrame} from '../components/SceneFrame';
 import {Visual} from '../components/Scenery';
@@ -11,10 +11,8 @@ export const RootsStory = () => (
 		<Beat name="2017年の論文" captions={c} from={0} to={2}>
 			<Photo id="nz-alps" move="out" label="2017年の論文" />
 		</Beat>
-		<Beat name="ZealandiaMap" captions={c} from={3} to={4}>
-			<Visual label="ジーランディア">
-				<ZealandiaMap />
-			</Visual>
+		<Beat name="ジーランディア" captions={c} from={3} to={4}>
+			<Photo id="zealandia-topo" label="ジーランディア" />
 		</Beat>
 		<Beat name="Zealandia94" captions={c} from={5} to={7}>
 			<Visual label="94％が、海の下">
