@@ -22,8 +22,11 @@ export const UnsolvedMystery = () => (
 				<UnderThirty />
 			</Visual>
 		</Beat>
-		<Beat name="IndusClaim" captions={c} from={8} to={10}>
-			<Visual label="インダス文字と、そっくり？">
+		<Beat name="インダス文字と、そっくり" captions={c} from={8} to={9}>
+			<Photo id="indus-seal" label="インダス文字と、そっくり？" />
+		</Beat>
+		<Beat name="IndusClaim" captions={c} from={10} to={10}>
+			<Visual label="写し方は、不正確だった">
 				<IndusClaim />
 			</Visual>
 		</Beat>

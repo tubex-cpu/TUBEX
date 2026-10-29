@@ -628,3 +628,5 @@ export const NivenSlabs: React.FC = () => {
 		</Panel>
 	);
 };
+
+export const AnswerInBook: React.FC = () => <BigLine main="答えは、本の中に書いてある" sub="チャーチワード自身が、根拠を明記している" size={90} />;
