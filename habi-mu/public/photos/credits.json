@@ -1098,5 +1098,27 @@
    2400,
    1600
   ]
+ },
+ "mau": {
+  "file": "mau.jpg",
+  "title": "Mau Piailug during Pwo Navigation Ceremony.jpg",
+  "artist": "Poro amara",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mau_Piailug_during_Pwo_Navigation_Ceremony.jpg",
+  "size": [
+   2048,
+   1458
+  ]
+ },
+ "rapanui-people": {
+  "file": "rapanui-people.jpg",
+  "title": "Hanga Roa, Easter Island - aerial view (41495620045) (rotated).jpg",
+  "artist": "Chris Hoare",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Hanga_Roa,_Easter_Island_-_aerial_view_(41495620045)_(rotated).jpg",
+  "size": [
+   2400,
+   1254
+  ]
  }
 }
