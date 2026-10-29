@@ -152,5 +152,82 @@
    1920,
    2395
   ]
+ },
+ "tokimune": {
+  "file": "tokimune.jpg",
+  "title": "Hōjō Tokimune.jpg",
+  "artist": "Unknown",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:H%C5%8Dj%C5%8D_Tokimune.jpg",
+  "size": [
+   1243,
+   2400
+  ]
+ },
+ "engakuji-shariden": {
+  "file": "engakuji-shariden.jpg",
+  "title": "円覚寺舎利殿（国宝）の外観.jpg",
+  "artist": "Tsuyoshi chiba",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%E5%86%86%E8%A6%9A%E5%AF%BA%E8%88%8E%E5%88%A9%E6%AE%BF%EF%BC%88%E5%9B%BD%E5%AE%9D%EF%BC%89%E3%81%AE%E5%A4%96%E8%A6%B3.jpg",
+  "size": [
+   1920,
+   1281
+  ]
+ },
+ "mongol-helmet-1": {
+  "file": "mongol-helmet-1.jpg",
+  "title": "Inner Mongolia Museum helmet.jpg",
+  "artist": "BabelStone",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Inner_Mongolia_Museum_helmet.jpg",
+  "size": [
+   1920,
+   2222
+  ]
+ },
+ "mongol-warrior": {
+  "file": "mongol-warrior.jpg",
+  "title": "Mongolian Empire Mongol Mounted Warrior.jpg",
+  "artist": "Gary Todd",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mongolian_Empire_Mongol_Mounted_Warrior.jpg",
+  "size": [
+   1600,
+   2400
+  ]
+ },
+ "goryeo-celadon-1": {
+  "file": "goryeo-celadon-1.jpg",
+  "title": "Goryeo celadon 12C Korean incense burner with a duck lid and lotus.jpg",
+  "artist": "Lightbearer03",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Goryeo_celadon_12C_Korean_incense_burner_with_a_duck_lid_and_lotus.jpg",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "song-celadon-1": {
+  "file": "song-celadon-1.jpg",
+  "title": "Southern Song Longquan Ware Celadon Censer.jpg",
+  "artist": "Gary Lee Todd, Ph.D.",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Southern_Song_Longquan_Ware_Celadon_Censer.jpg",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "typhoon-jebi": {
+  "file": "typhoon-jebi.jpg",
+  "title": "Typhoon Jebi over Japan (MODIS 2018-09-07).jpg",
+  "artist": "MODIS Land Rapid Response Team, NASA GSFC",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Typhoon_Jebi_over_Japan_(MODIS_2018-09-07).jpg",
+  "size": [
+   1920,
+   1737
+  ]
  }
 }
