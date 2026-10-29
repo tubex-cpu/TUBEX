@@ -933,5 +933,38 @@
    1920,
    1440
   ]
+ },
+ "hakozaki-tekikoku": {
+  "file": "hakozaki-tekikoku.jpg",
+  "title": "HakozakinomiyaFukutekimon.JPG",
+  "artist": "Histwr",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:HakozakinomiyaFukutekimon.JPG",
+  "size": [
+   960,
+   768
+  ]
+ },
+ "hakozaki-hoanden": {
+  "file": "hakozaki-hoanden.jpg",
+  "title": "Emaden of Hakozaki Shrine 2.jpg",
+  "artist": "そらみみ",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Emaden_of_Hakozaki_Shrine_2.jpg",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "kushida-1": {
+  "file": "kushida-1.jpg",
+  "title": "Kushida shrine, Fukuoka Prefecture; May 2006 (01).jpg",
+  "artist": "mdid",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Kushida_shrine,_Fukuoka_Prefecture;_May_2006_(01).jpg",
+  "size": [
+   1280,
+   960
+  ]
  }
 }
