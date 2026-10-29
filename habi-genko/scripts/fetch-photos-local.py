@@ -23,7 +23,7 @@ def get(url):
             if e.code != 429:
                 raise
             wait = int(e.headers.get('retry-after', '60')) + 5
-            print(f'  429 {wait}s', flush=True)
+            print(f'  429 {wait}s {url[:40]}', flush=True)
             time.sleep(wait)
     raise RuntimeError('429が続く')
 
@@ -33,14 +33,25 @@ def strip(s):
 
 
 # 縮小版で取れるものを先に、原寸が要る横長のものは最後に回す
-order = sorted(picks.items(), key=lambda kv: kv[0].endswith('-w'))
+FIRST = set(sys.argv[1].split(',')) if len(sys.argv) > 1 else set()  # 先に取りたい写真
+order = [kv for kv in sorted(picks.items(), key=lambda kv: (kv[0] not in FIRST, kv[0].endswith('-w'))) if not (kv[0] in credits and (OUT / f'{kv[0]}.jpg').exists())]
+# ファイルの情報は50件ずつまとめて問い合わせる（アクセス回数を減らす）
+info = {}
+for i in range(0, len(order), 50):
+    titles = '|'.join('File:' + t for _, t in order[i:i + 50])
+    q = urllib.parse.urlencode({'action': 'query', 'format': 'json', 'titles': titles, 'prop': 'imageinfo', 'iiprop': 'url|size|extmetadata'})
+    d = json.loads(get('https://commons.wikimedia.org/w/api.php?' + q))
+    norm = {n['to']: n['from'] for n in d['query'].get('normalized', [])}
+    for pg in d['query']['pages'].values():
+        if 'imageinfo' in pg:
+            info[norm.get(pg['title'], pg['title'])] = pg['imageinfo'][0]
+    time.sleep(2)
+print('info', len(info), flush=True)
 for pid, title in order:
-    if pid in credits and (OUT / f'{pid}.jpg').exists():
-        continue
     try:
-        q = urllib.parse.urlencode({'action': 'query', 'format': 'json', 'titles': 'File:' + title, 'prop': 'imageinfo', 'iiprop': 'url|size|extmetadata'})
-        page = list(json.loads(get('https://commons.wikimedia.org/w/api.php?' + q))['query']['pages'].values())[0]
-        ii = page['imageinfo'][0]
+        ii = info.get('File:' + title)
+        if not ii:
+            raise RuntimeError('情報なし')
         ow, oh, orig = ii['width'], ii['height'], ii['url'].split('?')[0]
         need = 1920 if ow / oh <= 1.9 else math.ceil(1100 * ow / oh)
         is_svg = orig.lower().endswith('.svg')
