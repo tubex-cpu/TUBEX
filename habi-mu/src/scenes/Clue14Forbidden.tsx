@@ -33,8 +33,11 @@ export const Clue14Forbidden = () => {
 					<EightyThousand />
 				</Visual>
 			</Beat>
-			<Beat name="SentinelMap" captions={c} from={13} to={16}>
-				<Visual label="インド洋の島">
+			<Beat name="インド洋の北センチネル島" captions={c} from={13} to={14}>
+				<Photo id="sentinel" move="out" label="インド洋の北センチネル島" />
+			</Beat>
+			<Beat name="SentinelMap" captions={c} from={15} to={16}>
+				<Visual label="近づくことは禁止">
 					<SentinelMap />
 				</Visual>
 			</Beat>

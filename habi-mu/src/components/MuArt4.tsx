@@ -448,3 +448,20 @@ export const SeaOfMystery: React.FC = () => {
 	const frame = useCurrentFrame();
 	return <PacificMap pins={[{at: places.easter, label: '？', at0: 0}]} sea={frame % 2 === 0 ? '#0e2b45' : '#0e2b45'} />;
 };
+
+// 海の底に並ぶ、沈んだ島々
+export const SunkenIslands: React.FC = () => {
+	const frame = useCurrentFrame();
+	return (
+		<SeaSection seaY={110}>
+			{[...Array(6)].map((_, i) => {
+				const x = 140 + i * 210;
+				const top = 300 + (i % 3) * 50;
+				return <path key={i} d={`M${x - 120} 620 L${x - 40} ${top} L${x + 40} ${top} L${x + 120} 620 Z`} fill="#3e4b55" opacity={fadeIn(frame, i * 8)} />;
+			})}
+			<text x={700} y={220} textAnchor="middle" {...txt(46, colors.goldSoft)}>
+				太平洋の海の底に、沈んだ島々
+			</text>
+		</SeaSection>
+	);
+};

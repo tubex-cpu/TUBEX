@@ -1,6 +1,6 @@
 import {Beat, captionFrame} from '../components/Beat';
 import {GavelVerdict} from '../components/GavelVerdict';
-import {FakeSuspicion, MissingEvidence, OnlyThreeReaders, ReburiedTablets, TwoPillars, WhereNow} from '../components/MuArt1';
+import {FakeSuspicion, MissingEvidence, NivenSlabs, OnlyThreeReaders, ReburiedTablets, TempleTablet, TwoPillars, WhereNow} from '../components/MuArt1';
 import {Photo} from '../components/Photo';
 import {SceneFrame} from '../components/SceneFrame';
 import {Visual} from '../components/Scenery';
@@ -12,8 +12,10 @@ export const Clue5Tablets = () => {
 	const {fps} = useVideoConfig();
 	return (
 		<SceneFrame captions={c} voice="Clue5Tablets" label="第5の手がかり" title="ムーの記録が刻まれた粘土板がある？">
-			<Beat name="インドの寺院の粘土板？" captions={c} from={0} to={2}>
-				<Photo id="india-temple" move="out" label="インドの寺院の粘土板？" />
+			<Beat name="TempleTablet" captions={c} from={0} to={2}>
+				<Visual label="インドの寺院の粘土板？">
+					<TempleTablet />
+				</Visual>
 			</Beat>
 			<Beat name="OnlyThreeReaders" captions={c} from={3} to={4}>
 				<Visual label="読めるのは、ほかに2人だけ？">
@@ -23,8 +25,10 @@ export const Clue5Tablets = () => {
 			<Beat name="鉱物の研究者ニーヴン" captions={c} from={5} to={7}>
 				<Photo id="niven" label="鉱物の研究者ニーヴン" />
 			</Beat>
-			<Beat name="メキシコの石の板" captions={c} from={8} to={8}>
-				<Photo id="mexico-valley" move="out" label="メキシコの石の板" />
+			<Beat name="NivenSlabs" captions={c} from={8} to={8}>
+				<Visual label="メキシコの石の板">
+					<NivenSlabs />
+				</Visual>
 			</Beat>
 			<Beat name="WhereNow" captions={c} from={9} to={10}>
 				<Visual label="今、どこにある？">

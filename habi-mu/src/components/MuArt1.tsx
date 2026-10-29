@@ -592,3 +592,39 @@ export const TwoPillars: React.FC = () => {
 		</Panel>
 	);
 };
+
+// インドの寺院で見せられたという粘土板（本の記述を絵にしたもの）
+export const TempleTablet: React.FC = () => {
+	const frame = useCurrentFrame();
+	const glow = 0.5 + 0.5 * Math.sin(frame / 12);
+	return (
+		<Panel fill="#120d08">
+			<path d="M400 560 L400 250 L700 110 L1000 250 L1000 560 Z" fill="#2a1f14" stroke="#5a4028" strokeWidth={6} />
+			<rect x={600} y={330} width={200} height={230} fill="#0a0704" />
+			<rect x={640} y={400} width={120} height={90} rx={8} fill="#a07a50" opacity={0.6 + glow * 0.4} />
+			<text x={700} y={80} textAnchor="middle" {...txt(44, colors.goldSoft)} opacity={fadeIn(frame, 20)}>
+				インドの寺院の奥で見せられた、と本は書く
+			</text>
+		</Panel>
+	);
+};
+
+// ニーヴンが掘り出した石の板
+export const NivenSlabs: React.FC = () => {
+	const frame = useCurrentFrame();
+	return (
+		<Panel fill="#1a1510">
+			<rect y={420} width={1400} height={200} fill="#5b4730" />
+			{[...Array(9)].map((_, i) => (
+				<g key={i} transform={`translate(${170 + i * 125} ${300 - (i % 2) * 30})`} opacity={fadeIn(frame, i * 5)}>
+					<rect width={100} height={130} rx={10} fill="#9a8a70" stroke="#5a4a30" strokeWidth={4} />
+					<circle cx={50} cy={45} r={16} fill="none" stroke="#5a4a30" strokeWidth={5} />
+					<path d="M25 95 L75 95 M50 70 L50 115" stroke="#5a4a30" strokeWidth={5} />
+				</g>
+			))}
+			<text x={700} y={120} textAnchor="middle" {...txt(46, colors.goldSoft)} opacity={fadeIn(frame, 40)}>
+				メキシコの谷で掘り出された、約2600枚の石の板
+			</text>
+		</Panel>
+	);
+};

@@ -1,6 +1,6 @@
 import {Beat, captionFrame} from '../components/Beat';
 import {GavelVerdict} from '../components/GavelVerdict';
-import {CollapseStory, FarmCapacity, ForestGone, GenomeNoCrash, RealDecline, RockGarden, ToSouthAmerica, YonaguniMap} from '../components/MuArt3';
+import {CollapseStory, FarmCapacity, ForestGone, GenomeNoCrash, RealDecline, ToSouthAmerica, YonaguniMap} from '../components/MuArt3';
 import {Photo} from '../components/Photo';
 import {SceneFrame} from '../components/SceneFrame';
 import {Visual} from '../components/Scenery';
@@ -32,10 +32,8 @@ export const Clue12Collapse = () => {
 					<FarmCapacity />
 				</Visual>
 			</Beat>
-			<Beat name="RockGarden" captions={c} from={16} to={16}>
-				<Visual label="石を並べた畑">
-					<RockGarden />
-				</Visual>
+			<Beat name="石を並べた畑" captions={c} from={16} to={16}>
+				<Photo id="manavai" label="石を並べた畑" />
 			</Beat>
 			<Beat name="ToSouthAmerica" captions={c} from={17} to={20}>
 				<Visual label="南アメリカまで">
