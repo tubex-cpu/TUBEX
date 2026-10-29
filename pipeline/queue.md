@@ -7,7 +7,7 @@
 
 | ID | チャンネル | テーマ | 状態 |
 |---|---|---|---|
-| new-channels | ②③ 新規2チャンネル（`channels/new-channels/`） | ジャンル選定（市場が大きく穴場のジャンルを2つ）。**最優先**（社長の目標の対象） | 工程0（従来手順はYouTube APIの実数値を必要とする。キーを扱わず既存結果を照合し、取得不能はブロッカーとして記録）。既存PR #11 の調査・監査を引き継ぎ、重複調査しない。ゲート0承認前は工程1以降禁止 |
+| new-channels | ②③ 新規2チャンネル（`channels/new-channels/`） | 第1枠＝食のからくり帳（2026-10-26）、第2枠＝IQ・知能の心理学（2026-10-29 社長決定、`channels/iq-chinou/CHANNEL.md`）。**最優先**（社長の目標の対象） | 第2枠は工程0の残り：差別化の調査とコンセプト案 v1 を作成（`channels/iq-chinou/00_concept.md`、2026-10-29）→ Codex 監査待ち（本編照合を依頼）→ 社長確認。既存の調査（ブランチ `claude/new-channels-genre`・`claude/eloquent-wozniak-81iras` の `00_genre_research.md`）を引き継ぎ、重複調査しない。YouTube API の新規取得はキーを扱えるセッションで行い、取得不能はブロッカーとして記録。コンセプトの社長承認前は工程1以降禁止 |
 | shoku-karakuri-week1 | 新規チャンネル「食のからくり帳」（`channels/shoku-karakuri/`） | 初週の企画。案は `channels/shoku-karakuri/week1_plan.md` | **企画2 回転寿司ラーメン・企画1 ホテル朝食は Codex 正式監査合格（2026-10-27、https://github.com/tubex-cpu/TUBEX/pull/16#issuecomment-6438046818 ）→ ゲートA承認待ち**。企画3 時間価格＝候補（昼夜5件比較が未達）／予備 マック＝予備（現行公式の照合未了）。**初週の3本目は未定**。ゲートA承認前は台本・タイトル確定・サムネ・動画に進まない |
 | habi-001-sumer | ① ハビ判事（`channels/habi-judge/`） | 日本人とシュメール判決（社長作の台本あり） | **納品済み・重複制作しない**（2026-10-25 指示）。公開実績は別途URLで確認し、未確認でも再制作しない |
 | habi-002-mu | ① ハビ判事 | ムー大陸（社長選択 2026-10-26）。約60分 | ゲートA 承認済み（2026-10-26）。台本初稿 `episodes/habi-002-mu/05_script.md`（約53分で確定）。一次資料の確認・Codex 監査・タイトル（工程4）が残る |
