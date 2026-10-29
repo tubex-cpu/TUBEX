@@ -1,7 +1,7 @@
 # ハビ判事チャンネル 動画制作ルール
 
 - やりとり・説明はすべて日本語で行う。
-- 動画は Remotion で作る（remotion-best-practices に従う）。前作の構成は `habi-sumer/` を参照。
+- 動画は Remotion で作る（remotion-best-practices に従う）。制作の手順・道具はスキル `.claude/skills/habi-video/`（`/habi-video`）にまとめてある。最新の完成例は `habi-nintoku/`。
 
 ## 企画
 - 題材は、日本人が学校で習った・誰でも知っている「日本の謎」を優先する（邪馬台国が伸びた理由：日本の話 × 最新情報）。
