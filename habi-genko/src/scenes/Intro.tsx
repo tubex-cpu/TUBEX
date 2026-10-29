@@ -1,75 +1,93 @@
 import {Beat} from '../components/Beat';
-import {HiddenBurial, RedReliefTease} from '../components/NintokuArt1';
-import {RyoboCount} from '../components/NintokuArt3';
-import {KeepOut, MissingTreasure, SealedTimeline, WhereIsNintoku, WhoSleeps} from '../components/NintokuArt4';
+import {Stage} from '../components/Cinema';
+import {Armada, ArrowNock, DiceAndCards, InkBoard, MudSection, SeabedDescent, ShipLength, StormSeason, YearRewind} from '../components/GenkoArt1';
 import {Photo} from '../components/Photo';
 import {SceneFrame} from '../components/SceneFrame';
-import {Visual} from '../components/Scenery';
 import {introCaptions as c} from '../data/captions';
 
 // 謎の先出し（素材はすべてこの場面だけで使う）
 export const Intro = () => (
 	<SceneFrame captions={c} voice="Intro">
-		<Beat name="住宅街に、巨大な森？" captions={c} from={0} to={0}>
-			<Photo id="sakai-city" move="out" label="住宅街に、巨大な森？" />
+		<Beat name="750年前" captions={c} from={0} to={0}>
+			<Stage>
+				<YearRewind />
+			</Stage>
 		</Beat>
-		<Beat name="KeepOut" captions={c} from={1} to={1}>
-			<Visual label="その先へは、入れない">
-				<KeepOut />
-			</Visual>
+		<Beat name="大帝国" captions={c} from={1} to={1}>
+			<Photo id="map-mongol-1-w" move="in" label="海の向こうの、大帝国" />
 		</Beat>
-		<Beat name="教科書の、あの古墳" captions={c} from={2} to={2}>
-			<Photo id="kisaragi-3" move="out" label="教科書の、あの古墳" />
+		<Beat name="大艦隊" captions={c} from={2} to={2}>
+			<Stage>
+				<Armada />
+			</Stage>
 		</Beat>
-		<Beat name="眠るのは、仁徳天皇？" captions={c} from={3} to={3}>
-			<Photo id="daisen-h1" label="眠るのは、仁徳天皇？" />
+		<Beat name="一夜の嵐" captions={c} from={3} to={3}>
+			<Photo id="kyosai-mouko-w" move="left" label="一夜の嵐で、消えた？" />
 		</Beat>
-		<Beat name="確かめた人は、いない？" captions={c} from={4} to={5}>
-			<Photo id="daisen-b7" move="out" label="確かめた人は、いない？" />
+		<Beat name="神の風" captions={c} from={4} to={4}>
+			<Photo id="isai-kamikaze" move="in" label="神の風に、救われた？" />
 		</Beat>
-		<Beat name="RyoboCount" captions={c} from={6} to={7}>
-			<Visual label="なぜ、1500年も解けない？">
-				<RyoboCount />
-			</Visual>
+		<Beat name="海の底" captions={c} from={5} to={5}>
+			<Stage label="その物語が、崩れ始めている？">
+				<SeabedDescent />
+			</Stage>
 		</Beat>
-		<Beat name="調べるほど、合わない？" captions={c} from={8} to={10}>
-			<Photo id="moat-4" move="left" label="調べるほど、合わない？" />
+		<Beat name="鷹島沖" captions={c} from={6} to={6}>
+			<Photo id="takashima-air" move="in" label="2026年10月28日、鷹島の沖" />
 		</Beat>
-		<Beat name="WhoSleeps" captions={c} from={11} to={11}>
-			<Visual label="この墓の主は、誰？">
-				<WhoSleeps />
-			</Visual>
+		<Beat name="サイコロと札" captions={c} from={7} to={7}>
+			<Stage label="泥の中から、何が？">
+				<DiceAndCards />
+			</Stage>
 		</Beat>
-		<Beat name="WhereIsNintoku" captions={c} from={12} to={12}>
-			<Visual label="本当の仁徳天皇は、どこに？">
-				<WhereIsNintoku />
-			</Visual>
+		<Beat name="遊んでいた" captions={c} from={8} to={8}>
+			<Photo id="kozaki-site-1" move="right" label="兵士たちは、遊んでいた？" />
 		</Beat>
-		<Beat name="一度だけ、口を開けた墓" captions={c} from={13} to={13}>
-			<Photo id="omotezuka-2" move="out" label="一度だけ、口を開けた墓" />
+		<Beat name="最大級の船" captions={c} from={9} to={9}>
+			<Stage label="これまでで、最大級？">
+				<ShipLength />
+			</Stage>
 		</Beat>
-		<Beat name="MissingTreasure" captions={c} from={14} to={14}>
-			<Visual label="消えた宝は、どこへ？">
-				<MissingTreasure />
-			</Visual>
+		<Beat name="出土品" captions={c} from={10} to={10}>
+			<Photo id="takashima-finds" move="in" label="証拠は、それだけではない" />
 		</Beat>
-		<Beat name="RedReliefTease" captions={c} from={15} to={16}>
-			<Visual label="ついに動いた、国の調査">
-				<RedReliefTease />
-			</Visual>
+		<Beat name="木の板" captions={c} from={11} to={11}>
+			<Stage label="年号が、合わない？">
+				<InkBoard />
+			</Stage>
 		</Beat>
-		<Beat name="HiddenBurial" captions={c} from={17} to={18}>
-			<Visual label="もうひとりの誰か？">
-				<HiddenBurial />
-			</Visual>
+		<Beat name="南宋の矢" captions={c} from={12} to={12}>
+			<Stage label="敵だった国の、武器？">
+				<ArrowNock />
+			</Stage>
 		</Beat>
-		<Beat name="そこに眠るのは、誰？" captions={c} from={19} to={19}>
-			<Photo id="maruhoyama-moat" label="そこに眠るのは、誰？" />
+		<Beat name="教科書の物語" captions={c} from={13} to={13}>
+			<Photo id="mohon-fukuda-1" move="left" label="教科書の物語にも、疑い？" />
 		</Beat>
-		<Beat name="SealedTimeline" captions={c} from={20}>
-			<Visual label="今夜は、長い法廷になる">
-				<SealedTimeline />
-			</Visual>
+		<Beat name="11月" captions={c} from={14} to={14}>
+			<Stage label="なぜ、一晩で消えた？">
+				<StormSeason />
+			</Stage>
+		</Beat>
+		<Beat name="一騎打ち" captions={c} from={15} to={15}>
+			<Photo id="ekotoba-shiraishi" move="right" label="一騎打ちで、負けた？" />
+		</Beat>
+		<Beat name="3人の兵士" captions={c} from={16} to={16}>
+			<Photo id="ekotoba-tetsuhau-w" move="left" label="この3人は、あとから？" />
+		</Beat>
+		<Beat name="嵐の前の2か月" captions={c} from={17} to={17}>
+			<Photo id="borui-iki-3-w" move="right" label="嵐の前の2か月に、何が？" />
+		</Beat>
+		<Beat name="習った元寇" captions={c} from={18} to={18}>
+			<Photo id="yosai-mouko" move="out" label="習った元寇は、本当の元寇？" />
+		</Beat>
+		<Beat name="泥の中" captions={c} from={19} to={19}>
+			<Stage label="答えは、泥の中に">
+				<MudSection />
+			</Stage>
+		</Beat>
+		<Beat name="今夜の法廷" captions={c} from={20}>
+			<Photo id="genkai-1" move="out" label="今夜は、長い法廷になる" />
 		</Beat>
 	</SceneFrame>
 );

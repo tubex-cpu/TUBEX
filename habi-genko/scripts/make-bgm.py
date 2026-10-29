@@ -1,7 +1,7 @@
 """オリジナルBGM 3曲をシンセで生成する（著作権フリー）。
 動画の各パートより長い通し曲として作り、ループさせない（同じ小節をくり返さない）。
   python3 scripts/make-bgm.py
-出力: public/bgm/bgm1-mozu.mp3（前半）, bgm2-survey.mp3（中盤）, bgm3-relief.mp3（後半）
+出力: public/bgm/bgm1-umi.mp3（前半）, bgm2-hakata.mp3（中盤）, bgm3-kaitei.mp3（後半）
 """
 import subprocess, wave
 from pathlib import Path
@@ -11,7 +11,7 @@ from scipy.signal import lfilter
 
 ROOT = Path(__file__).resolve().parent.parent
 SR = 44100
-rng = np.random.default_rng(486)
+rng = np.random.default_rng(1274)
 
 NOTE = {'C': 0, 'C#': 1, 'Db': 1, 'D': 2, 'D#': 3, 'Eb': 3, 'E': 4, 'F': 5, 'F#': 6, 'Gb': 6, 'G': 7, 'G#': 8, 'Ab': 8, 'A': 9, 'A#': 10, 'Bb': 10, 'B': 11}
 
@@ -89,6 +89,36 @@ def tick(amp=0.05):
     return np.stack([s, s], 1)
 
 
+def taiko(amp=0.45):
+    """大太鼓：低く沈む胴鳴りと、皮を打つ音"""
+    n = int(1.2 * SR)
+    t = np.arange(n) / SR
+    f = 42 + 55 * np.exp(-t * 18)
+    body = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 3.2)
+    skin = lfilter([0.2], [1, -0.8], rng.standard_normal(n)) * np.exp(-t * 40) * 0.6
+    s = (body + skin) * amp
+    return np.stack([s, s], 1)
+
+
+def koto(f, dur, amp=0.08, pan=0.0):
+    """琴のような撥弦：明るい倍音と、わずかに下がる音程"""
+    t = np.arange(int(dur * SR)) / SR
+    bend = 1 + 0.006 * np.exp(-t * 12)
+    s = sum(np.sin(2 * np.pi * f * k * bend * t) * np.exp(-t * (2.2 + 1.6 * k)) / k ** 0.9 for k in range(1, 7)) * amp
+    s *= env(len(t), 0.002, 0.3)
+    return np.stack([s * (1 - pan) / 1.5, s * (1 + pan) / 1.5], 1)
+
+
+def drone(f, dur, amp=0.09):
+    """低くうなる持続音（ゆっくり揺れる）"""
+    t = np.arange(int(dur * SR)) / SR
+    out = np.zeros((len(t), 2))
+    for ch, det in enumerate((-0.003, 0.003)):
+        out[:, ch] = sum(np.sin(2 * np.pi * f * k * (1 + det) * t + 0.7 * k) / k ** 1.2 for k in (1, 2, 3, 4, 6))
+    lfo = 0.75 + 0.25 * np.sin(2 * np.pi * 0.07 * t)
+    return out * (env(len(t), dur * 0.3, dur * 0.3) * lfo * amp)[:, None]
+
+
 def reverb(x, wet=0.3):
     out = np.zeros_like(x)
     for ch in range(2):
@@ -148,31 +178,31 @@ def sections(bars, size):
 out = ROOT / 'public/bgm'
 out.mkdir(parents=True, exist_ok=True)
 
-# 1. 前半「閉園後の法廷」：Dマイナー中心。オルゴールのようなベルと時計の音（約7分20秒）
-tr = Track(58, 1320)
-pool = [['D3', 'F3', 'A3'], ['Bb2', 'D3', 'F3'], ['G2', 'Bb2', 'D3'], ['A2', 'C#3', 'E3'], ['F2', 'A2', 'C3'], ['C3', 'E3', 'G3'], ['E2', 'G2', 'Bb2'], ['G2', 'B2', 'D3']]
-keys = [-2, -2, -5, 0, -2, 2, -5, -2, -4, -7, -2, 0]
+# 1. 前半「海の底の謎」：Dの都節（ミヤコブシ）音階。低い持続音、遠い大太鼓、琴の旋律（約22分）
+tr = Track(60, 1320)
+miyako = ['D3', 'D#3', 'G3', 'A3', 'A#3', 'D4', 'D#4', 'G4', 'A4', 'A#4', 'D5']
+keys = [0, 0, -2, 3, 0, -5, 0, 2, -2, 0, 5, 0]
 for si, (b0, n) in enumerate(sections(tr.bars, 8)):
-    key = keys[si % len(keys)] + (12 if si >= len(keys) else 0) * 0
-    prog = [pool[0]] + [pool[i] for i in rng.choice(np.arange(1, len(pool)), 3, replace=False)]
-    bell_on = si % 4 != 0
-    density = rng.uniform(0.35, 0.7)
+    key = keys[si % len(keys)]
+    drums = si % 3 != 0
+    melody = si % 4 != 1
+    pos = 5
+    tr.add(b0 * 4, drone(shift('D2', key), n * 4 * tr.beat + 2, 0.1))
+    tr.add(b0 * 4, drone(shift('A2', key), n * 4 * tr.beat + 2, 0.05))
     for bar in range(b0, b0 + n):
-        ch = prog[((bar - b0) // 2) % 4]
-        if (bar - b0) % 2 == 0:
-            for nn in ch:
-                tr.add(bar * 4, pad(shift(nn, key), 8 * tr.beat, 0.07))
-            tr.add(bar * 4, bass(shift(ch[0][:-1] + '2', key), 7.5 * tr.beat, 0.12))
-        for b in range(4):
-            tr.add(bar * 4 + b, tick(0.025 if b else 0.04))
-        if bell_on:
-            for k in range(8):
-                if rng.random() < density:
-                    nn = ch[rng.integers(0, 3)]
-                    tr.add(bar * 4 + k * 0.5, bell(shift(nn, key) * rng.choice([2, 4, 4]), 2.5, 0.06, rng.uniform(-0.6, 0.6)))
-tr.render(out / 'bgm1-mozu.mp3', 0.4)
+        if drums:
+            tr.add(bar * 4, taiko(0.42 if bar % 2 == 0 else 0.3))
+            if bar % 4 == 3:
+                tr.add(bar * 4 + 2.5, taiko(0.22))
+                tr.add(bar * 4 + 3, taiko(0.3))
+        if melody:
+            for k in range(4):
+                if rng.random() < 0.55:
+                    pos = int(np.clip(pos + rng.choice([-2, -1, 1, 2, 0]), 0, len(miyako) - 1))
+                    tr.add(bar * 4 + k + rng.choice([0, 0.5]), koto(shift(miyako[pos], key), 3.0, 0.07, rng.uniform(-0.5, 0.5)))
+tr.render(out / 'bgm1-umi.mp3', 0.45)
 
-# 2. 中盤「調査」：Aマイナー中心。刻むベースとピチカート、緊張感（約8分半）
+# 2. 中盤「博多湾の攻防」：Aマイナー。刻むベース、大太鼓の連打、琴のトレモロで緊張感（約22分）
 tr = Track(84, 1320)
 pool = [['A2', 'C3', 'E3'], ['F2', 'A2', 'C3'], ['E2', 'G#2', 'B2'], ['D2', 'F2', 'A2'], ['G2', 'B2', 'D3'], ['C3', 'E3', 'G3'], ['Bb2', 'D3', 'F3'], ['B2', 'D3', 'F3']]
 keys = [-1, -1, 2, -3, -1, 4, 1, -4, -1, 0]
@@ -188,18 +218,20 @@ for si, (b0, n) in enumerate(sections(tr.bars, 8)):
         for k in range(8):
             tr.add(bar * 4 + k * 0.5, bass(shift(ch[0], key), 0.45 * tr.beat, 0.16 if k % 2 == 0 else 0.1))
         if drums:
-            tr.add(bar * 4, kick(0.28))
-            tr.add(bar * 4 + rng.choice([2.5, 2.0, 3.0]), kick(0.18))
-            for k in range(8):
-                tr.add(bar * 4 + k * 0.5 + 0.25, hat(0.018 if k % 2 else 0.028))
+            tr.add(bar * 4, taiko(0.4))
+            tr.add(bar * 4 + 1.5, taiko(0.2))
+            tr.add(bar * 4 + 2, taiko(0.32))
+            if bar % 2 == 1:
+                tr.add(bar * 4 + 3, taiko(0.18))
+                tr.add(bar * 4 + 3.5, taiko(0.24))
         if pl:
             for k in range(8):
-                if rng.random() < 0.8:
+                if rng.random() < 0.75:
                     nn = ch[rng.integers(0, 3)]
-                    tr.add(bar * 4 + k * 0.5, pluck(shift(nn, key) * rng.choice([2, 4]), 0.6, 0.05, 0.4 if k % 2 else -0.4))
-tr.render(out / 'bgm2-survey.mp3', 0.25)
+                    tr.add(bar * 4 + k * 0.5, koto(shift(nn, key) * rng.choice([2, 4]), 0.9, 0.05, 0.4 if k % 2 else -0.4))
+tr.render(out / 'bgm2-hakata.mp3', 0.3)
 
-# 3. 後半「足元にあった物語」：Cメジャー中心。温かいピアノとストリングス（約6分30秒）
+# 3. 後半「海の底が語る」：Cメジャー中心。温かいピアノと持続音（約22分）
 tr = Track(72, 1320)
 pool = [['C3', 'E3', 'G3'], ['B2', 'D3', 'G3'], ['A2', 'C3', 'E3'], ['F2', 'A2', 'C3'], ['D3', 'F3', 'A3'], ['G2', 'B2', 'D3'], ['E2', 'G2', 'B2'], ['F2', 'A2', 'D3']]
 scale = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5', 'D5', 'E5']
@@ -221,4 +253,4 @@ for si, (b0, n) in enumerate(sections(tr.bars, 8)):
             for half in (0, 2):
                 pos = int(np.clip(pos + rng.choice([-2, -1, -1, 1, 1, 2, 0]), 0, len(scale) - 1))
                 tr.add(bar * 4 + half, piano(shift(scale[pos], key), 3.0, 0.09 if half == 0 else 0.08, 0.3))
-tr.render(out / 'bgm3-relief.mp3', 0.35)
+tr.render(out / 'bgm3-kaitei.mp3', 0.35)

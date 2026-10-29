@@ -8,18 +8,18 @@ import {SceneFrame} from '../components/SceneFrame';
 import {judgeEntranceCaptions as c} from '../data/captions';
 import {colors, gothicFamily, minchoFamily} from '../theme';
 
-const clues = ['世界最大？', '15年以上？', '最先端の堺？', '埴輪は身代わり？', '家来の墓？', '仁徳天皇？', '生前に造った？', '皇帝の家来？', '名前の由来？', '中を見た人？', 'ボストンの宝？', '明治の宝？', '入れない？', '消えた古墳？', '世界遺産？', '今の姿？'];
+const clues = ['いきなり？', '最初は博多？', '一騎打ち？', 'てつはう？', 'あの絵？', '1度目の嵐？', '使いを斬った？', '石の壁？', '14万人？', '嵐だけ？', '全滅？', '沈んだ船？', '探し方？', '手抜きの船？', '木の板？', '南宋の矢？', '遊び道具？', '幕府は？', '神風？'];
 
-// 今夜の16の手がかり（2段に並べる）
+// 今夜の19の手がかり（3段に並べる）
 const ClueRow = () => {
 	const frame = useCurrentFrame();
 	return (
-		<div style={{position: 'absolute', left: 80, right: 80, top: 170, display: 'flex', flexWrap: 'wrap', gap: 18, justifyContent: 'center'}}>
+		<div style={{position: 'absolute', left: 80, right: 80, top: 150, display: 'flex', flexWrap: 'wrap', gap: 18, justifyContent: 'center'}}>
 			{clues.map((cl, i) => (
 				<div
 					key={cl}
 					style={{
-						width: 200,
+						width: 170,
 						padding: '14px 0',
 						borderRadius: 16,
 						background: colors.paper,
@@ -28,7 +28,7 @@ const ClueRow = () => {
 					}}
 				>
 					<div style={{fontFamily: gothicFamily, fontWeight: 900, fontSize: 24, color: colors.clayDark}}>手がかり {i + 1}</div>
-					<div style={{margin: '8px 10px 4px', fontFamily: minchoFamily, fontWeight: 800, fontSize: 72, lineHeight: 1, color: colors.clay}}>？</div>
+					<div style={{margin: '8px 10px 4px', fontFamily: minchoFamily, fontWeight: 800, fontSize: 56, lineHeight: 1, color: colors.clay}}>？</div>
 					<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 22, whiteSpace: 'nowrap', color: colors.ink}}>{cl}</div>
 				</div>
 			))}
@@ -124,9 +124,9 @@ export const JudgeEntrance = () => (
 			<NamePlate />
 		</Beat>
 		<Beat name="今夜の問い" captions={c} from={2} to={3}>
-			<Photo id="daisen-z1" label="眠るのは、本当に仁徳天皇？" />
+			<Photo id="typhoon-jebi" move="in" label="日本を救ったのは、神風？" />
 		</Beat>
-		<Beat name="5つの手がかり" captions={c} from={4}>
+		<Beat name="19の手がかり" captions={c} from={4}>
 			<ClueRow />
 		</Beat>
 	</SceneFrame>

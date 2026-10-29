@@ -1,6 +1,7 @@
 import type {Caption} from '@remotion/captions';
 import type React from 'react';
 import {AbsoluteFill, Easing, interpolate, Sequence, useCurrentFrame, useVideoConfig} from 'remotion';
+import {BeatLength} from './Cinema';
 
 type Props = {
 	readonly name: string;
@@ -23,7 +24,7 @@ const BeatFade: React.FC<{readonly duration: number; readonly children: React.Re
 					extrapolateLeft: 'clamp',
 					extrapolateRight: 'clamp',
 				}),
-				scale: interpolate(frame, [0, FADE * 2], [0.97, 1], {
+				scale: interpolate(frame, [0, FADE * 2], [1.015, 1], {
 					extrapolateLeft: 'clamp',
 					extrapolateRight: 'clamp',
 					easing: Easing.bezier(0.16, 1, 0.3, 1),
@@ -47,7 +48,9 @@ export const Beat: React.FC<Props> = ({name, captions, from, to, children}) => {
 
 	return (
 		<Sequence name={name} from={start} durationInFrames={duration} premountFor={fps}>
-			<BeatFade duration={duration}>{children}</BeatFade>
+			<BeatLength.Provider value={duration}>
+				<BeatFade duration={duration}>{children}</BeatFade>
+			</BeatLength.Provider>
 		</Sequence>
 	);
 };
