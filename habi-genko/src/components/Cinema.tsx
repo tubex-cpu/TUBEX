@@ -45,7 +45,7 @@ export const Telop: React.FC<{readonly text: string; readonly bottom?: boolean; 
 				position: 'absolute',
 				left: 0,
 				right: 0,
-				...(bottom ? {bottom: 170} : {top: 96}),
+				...(bottom ? {bottom: 170} : {top: 128}),
 				height: size + 70,
 				display: 'flex',
 				alignItems: 'center',

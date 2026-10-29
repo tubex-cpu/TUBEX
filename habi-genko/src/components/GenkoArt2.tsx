@@ -140,7 +140,7 @@ export const YuanTimeline: React.FC = () => {
 	];
 	const x0 = 260;
 	const x1 = 1660;
-	const px = (y: number) => x0 + ((y - 1200) / 85) * (x1 - x0);
+	const px = (y: number) => x0 + (items.findIndex((it) => it.y === y) / (items.length - 1)) * (x1 - x0);
 	return (
 		<svg width={W} height={H} style={{position: 'absolute', inset: 0}}>
 			<defs>
@@ -181,20 +181,20 @@ export const LetterQuote: React.FC = () => {
 				</linearGradient>
 			</defs>
 			<rect width={W} height={H} fill="#0a0806" />
-			<rect x={560} y={90} width={800} height={900} fill="url(#lqPaper)" opacity={0.95} />
-			<rect x={560} y={90} width={800} height={900} fill="none" stroke="#5a4528" strokeWidth={6} />
+			<rect x={660} y={290} width={600} height={660} fill="url(#lqPaper)" opacity={0.95} />
+			<rect x={660} y={290} width={600} height={660} fill="none" stroke="#5a4528" strokeWidth={6} />
 			{chars.map((ch, i) => {
 				const col = i < 9 ? 0 : 1;
 				const row = col === 0 ? i : i - 9;
 				const o = interpolate(frame, [10 + i * 4, 20 + i * 4], [0, 1], clamp);
 				return (
-					<text key={i} x={1080 - col * 200} y={200 + row * 88} textAnchor="middle" {...svgMincho(80, '#1a120a')} opacity={o}>
+					<text key={i} x={1060 - col * 180} y={370 + row * 64} textAnchor="middle" {...svgMincho(58, '#1a120a')} opacity={o}>
 						{ch}
 					</text>
 				);
 			})}
 			<Reveal at={100}>
-				<text x={720} y={940} textAnchor="middle" {...svgGothic(30, '#4a3a22', 700)}>
+				<text x={760} y={930} textAnchor="middle" {...svgGothic(26, '#4a3a22', 700)}>
 					（現代語訳）
 				</text>
 			</Reveal>

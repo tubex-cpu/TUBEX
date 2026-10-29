@@ -77,40 +77,60 @@ export const YearRewind: React.FC = () => {
 export const Armada: React.FC = () => {
 	const frame = useCurrentFrame();
 	const horizon = 470;
-	const ships = [...Array(220)].map((_, i) => {
-		const depth = Math.pow(rand(i), 1.8); // 0=奥 1=手前
-		return {i, depth, x: rand(i + 100) * (W + 400) - 200, y: horizon + 6 + depth * 520};
+	const ships = [...Array(260)].map((_, i) => {
+		const depth = Math.pow(rand(i), 2.6); // 0=奥 1=手前（手前の船は少なく）
+		return {i, depth, x: rand(i + 100) * (W + 400) - 200, y: horizon + 4 + depth * 470};
 	}).sort((a, b) => a.depth - b.depth);
 	const drift = frame * 0.4;
 	return (
 		<Full>
 			<defs>
 				<linearGradient id="arSky" x1="0" y1="0" x2="0" y2="1">
-					<stop offset="0%" stopColor="#05080f" />
-					<stop offset="70%" stopColor="#1a2235" />
-					<stop offset="100%" stopColor="#3a3a44" />
+					<stop offset="0%" stopColor="#04070d" />
+					<stop offset="75%" stopColor="#18233a" />
+					<stop offset="100%" stopColor="#465063" />
 				</linearGradient>
 				<linearGradient id="arSea" x1="0" y1="0" x2="0" y2="1">
-					<stop offset="0%" stopColor="#1b2533" />
-					<stop offset="100%" stopColor="#03060b" />
+					<stop offset="0%" stopColor="#202c3d" />
+					<stop offset="100%" stopColor="#02040a" />
+				</linearGradient>
+				<linearGradient id="arMoon" x1="0" y1="0" x2="0" y2="1">
+					<stop offset="0%" stopColor="#e9e3cf" stopOpacity={0.35} />
+					<stop offset="100%" stopColor="#e9e3cf" stopOpacity={0} />
 				</linearGradient>
 			</defs>
 			<rect width={W} height={horizon} fill="url(#arSky)" />
 			<rect y={horizon} width={W} height={H - horizon} fill="url(#arSea)" />
-			<ellipse cx={1500} cy={170} rx={70} ry={70} fill="#e9e3cf" opacity={0.85} />
-			<ellipse cx={1500} cy={170} rx={180} ry={180} fill="#e9e3cf" opacity={0.06} />
-			<Waves top={horizon} color="#6f86a6" rows={10} />
+			<circle cx={1520} cy={150} r={56} fill="#efe9d6" opacity={0.9} />
+			<circle cx={1520} cy={150} r={170} fill="#efe9d6" opacity={0.05} />
+			{/* 月の光の道 */}
+			{[...Array(26)].map((_, k) => {
+				const yy = horizon + 6 + Math.pow(k / 26, 1.5) * (H - horizon);
+				const ww = 30 + k * 7;
+				return <rect key={k} x={1520 - ww / 2 + Math.sin(frame / 12 + k) * 8} y={yy} width={ww} height={2 + k * 0.25} rx={2} fill="#efe9d6" opacity={0.28 - k * 0.008} />;
+			})}
+			<Waves top={horizon} color="#7d93b3" rows={10} />
 			{ships.map(({i, depth, x, y}) => {
-				const s = 0.18 + depth * 1.3;
+				const s = 0.1 + depth * 0.62;
 				const sx = x + drift * (0.3 + depth);
 				const bob = Math.sin(frame / 18 + i) * 3 * depth;
+				const tilt = Math.sin(frame / 24 + i * 1.3) * 1.5 * depth;
+				const sail = (x0: number, h: number, w: number) => (
+					<g>
+						<path d={`M ${x0} -14 L ${x0} ${-h} L ${x0 + w} ${-h + 18} Q ${x0 + w + 10} ${-h / 2} ${x0 + w} -24 Z`} fill="#0c1018" stroke="#1e2533" strokeWidth={2} />
+						{[...Array(6)].map((__, k) => (
+							<line key={k} x1={x0} y1={-24 - (k * (h - 30)) / 6} x2={x0 + w + 4} y2={-30 - (k * (h - 40)) / 6} stroke="#2a3346" strokeWidth={2} />
+						))}
+					</g>
+				);
 				return (
-					<g key={i} transform={`translate(${sx} ${y + bob}) scale(${s})`} opacity={interpolate(frame, [i * 0.25, i * 0.25 + 15], [0, 0.55 + depth * 0.45], clamp)}>
-						<path d="M -70 0 Q -60 22 0 24 Q 60 22 78 -6 L 60 -4 L -60 -4 Z" fill="#05070b" />
-						<path d="M -18 -4 L -18 -120 M 22 -4 L 22 -90" stroke="#05070b" strokeWidth={5} />
-						<path d="M -18 -116 L 18 -108 L 20 -20 L -16 -28 Z" fill="#11151d" />
-						<path d="M 22 -86 L 50 -80 L 52 -20 L 24 -26 Z" fill="#11151d" />
-						{rand(i + 7) > 0.6 ? <circle cx={60} cy={-12} r={3} fill="#ffb35c" opacity={0.9} /> : null}
+					<g key={i} transform={`translate(${sx} ${y + bob}) rotate(${tilt}) scale(${s})`} opacity={interpolate(frame, [i * 0.2, i * 0.2 + 15], [0, 0.5 + depth * 0.5], clamp)}>
+						<path d="M -150 -18 Q -130 30 -20 34 Q 110 32 160 -30 L 120 -22 L -110 -22 Z" fill="#05070b" />
+						<rect x={-100} y={-30} width={200} height={12} fill="#05070b" />
+						{sail(-70, 190, 70)}
+						{sail(20, 240, 80)}
+						{sail(110, 150, 50)}
+						{rand(i + 7) > 0.55 ? <circle cx={140} cy={-34} r={6} fill="#ffb35c" opacity={0.95} /> : null}
 					</g>
 				);
 			})}
@@ -209,7 +229,7 @@ export const DiceAndCards: React.FC = () => {
 				<path d={`M ${-s} ${-s * 0.5} L 0 0 L 0 ${s} L ${-s} ${s * 0.5} Z`} fill="#c9b894" />
 				<path d={`M ${s} ${-s * 0.5} L 0 0 L 0 ${s} L ${s} ${s * 0.5} Z`} fill="#b29f79" />
 				{pips[n].map(([px, py], k) => (
-					<ellipse key={k} cx={px * s * 0.32 + py * s * 0.0} cy={-s * 0.5 + py * s * 0.16 + px * s * 0.0} rx={7} ry={4} fill={n === 1 ? '#a23a2a' : '#2a1f16'} />
+					<ellipse key={k} cx={(px - py) * s * 0.22} cy={-s * 0.5 + (px + py) * s * 0.11} rx={8} ry={4.5} fill={n === 1 ? '#a23a2a' : '#2a1f16'} />
 				))}
 			</g>
 		);
@@ -255,7 +275,7 @@ export const DiceAndCards: React.FC = () => {
 // 全長およそ30メートル：これまで見つかった3隻の大きさ
 export const ShipLength: React.FC = () => {
 	const frame = useCurrentFrame();
-	const scale = 44; // 1メートル＝44px
+	const scale = 38; // 1メートル＝38px
 	const ship = (len: number, y: number, at: number, label: string, main: boolean) => {
 		const w = len * scale * interpolate(frame, [at, at + 40], [0, 1], easeOut);
 		const x0 = W / 2 - (len * scale) / 2;
@@ -279,17 +299,17 @@ export const ShipLength: React.FC = () => {
 		<Full>
 			<rect width={W} height={H} fill="#060b14" />
 			{[...Array(30)].map((_, i) => (
-				<line key={i} x1={W / 2 - 15 * scale + i * scale} y1={240} x2={W / 2 - 15 * scale + i * scale} y2={900} stroke="#16243a" strokeWidth={1} />
+				<line key={i} x1={W / 2 - 15 * scale + i * scale} y1={300} x2={W / 2 - 15 * scale + i * scale} y2={820} stroke="#16243a" strokeWidth={1} />
 			))}
-			{ship(20, 300, 0, '2号船　約20m', false)}
-			{ship(27, 480, 20, '1号船　約27m', false)}
-			{ship(30, 690, 50, '3号船　約30m', true)}
+			{ship(20, 330, 0, '2号船　約20m', false)}
+			{ship(27, 500, 20, '1号船　約27m', false)}
+			{ship(30, 680, 50, '3号船　約30m', true)}
 			{/* 人の大きさ（身長1.7m） */}
 			<g transform={`translate(${W / 2 - 15 * scale - 60} 690)`} opacity={interpolate(frame, [80, 95], [0, 1], clamp)}>
 				<circle cx={0} cy={-62} r={10} fill="#e9e3cf" />
 				<rect x={-8} y={-50} width={16} height={50} rx={6} fill="#e9e3cf" />
 			</g>
-			<text x={W / 2} y={960} textAnchor="middle" {...svgGothic(30, '#8ea2bd', 700)}>
+			<text x={W / 2} y={880} textAnchor="middle" {...svgGothic(30, '#8ea2bd', 700)}>
 				いずれも推定の全長
 			</text>
 		</Full>
@@ -301,9 +321,9 @@ export const InkBoard: React.FC = () => {
 	const frame = useCurrentFrame();
 	const scan = interpolate(frame, [30, 110], [0, 1], easeInOut);
 	const bx = 460;
-	const by = 250;
+	const by = 330;
 	const bw = 1000;
-	const bh = 480;
+	const bh = 440;
 	return (
 		<Full>
 			<defs>
@@ -339,11 +359,11 @@ export const InkBoard: React.FC = () => {
 				</text>
 			</g>
 			<line x1={bx + bw * scan} y1={by - 20} x2={bx + bw * scan} y2={by + bh + 20} stroke="#ff5d5d" strokeWidth={4} opacity={scan > 0 && scan < 1 ? 0.9 : 0} />
-			<text x={W / 2} y={by - 50} textAnchor="middle" {...svgGothic(34, '#c8b89a', 700)}>
+			<text x={W / 2} y={by + bh + 44} textAnchor="middle" {...svgGothic(28, '#c8b89a', 700)}>
 				縦12cm・横25cmほどの杉の板
 			</text>
 			<Reveal at={120}>
-				<text x={W / 2} y={by + bh + 110} textAnchor="middle" {...svgMincho(60, colors.goldSoft)}>
+				<text x={W / 2} y={by + bh + 112} textAnchor="middle" {...svgMincho(60, colors.goldSoft)}>
 					赤外線で、消えた墨が浮かぶ
 				</text>
 			</Reveal>
@@ -378,11 +398,11 @@ export const ArrowNock: React.FC = () => {
 	return (
 		<Full>
 			<rect width={W} height={H} fill="#0a0b0f" />
-			{arrow(360, 'v', 0, 'ふつうの矢：矢筈に、弦をかける溝がある', '#d8cfbd')}
-			{arrow(700, 'dish', 40, '鷹島の矢：溝がなく、皿のように浅い', colors.goldSoft)}
+			{arrow(470, 'v', 0, 'ふつうの矢：矢筈に、弦をかける溝がある', '#d8cfbd')}
+			{arrow(760, 'dish', 40, '鷹島の矢：溝がなく、皿のように浅い', colors.goldSoft)}
 			<Reveal at={100}>
-				<circle cx={1365} cy={700} r={90} fill="none" stroke={colors.gold} strokeWidth={4} />
-				<text x={1365} y={860} textAnchor="middle" {...svgGothic(34, colors.gold, 900)}>
+				<circle cx={1365} cy={760} r={90} fill="none" stroke={colors.gold} strokeWidth={4} />
+				<text x={1365} y={900} textAnchor="middle" {...svgGothic(34, colors.gold, 900)}>
 					長さ3cmほどの竹のかけら
 				</text>
 			</Reveal>
@@ -399,32 +419,32 @@ export const StormSeason: React.FC = () => {
 	return (
 		<Full>
 			<rect width={W} height={H} fill="#070c16" />
-			<rect x={x0 + 6 * cw} y={300} width={3 * cw} height={420} fill="#2f5d86" opacity={interpolate(frame, [10, 40], [0, 0.55], clamp)} />
-			<text x={x0 + 7.5 * cw} y={280} textAnchor="middle" {...svgGothic(36, '#9fd0ff', 900)} opacity={interpolate(frame, [20, 40], [0, 1], clamp)}>
+			<rect x={x0 + 6 * cw} y={400} width={3 * cw} height={400} fill="#2f5d86" opacity={interpolate(frame, [10, 40], [0, 0.55], clamp)} />
+			<text x={x0 + 7.5 * cw} y={385} textAnchor="middle" {...svgGothic(36, '#9fd0ff', 900)} opacity={interpolate(frame, [20, 40], [0, 1], clamp)}>
 				台風が多い季節
 			</text>
 			{months.map((m, i) => (
 				<g key={m}>
-					<line x1={x0 + i * cw} y1={720} x2={x0 + i * cw} y2={736} stroke="#4f627e" strokeWidth={2} />
-					<text x={x0 + i * cw + cw / 2} y={780} textAnchor="middle" {...svgGothic(34, '#aebbd0', 700)}>
+					<line x1={x0 + i * cw} y1={800} x2={x0 + i * cw} y2={816} stroke="#4f627e" strokeWidth={2} />
+					<text x={x0 + i * cw + cw / 2} y={860} textAnchor="middle" {...svgGothic(34, '#aebbd0', 700)}>
 						{m}
 					</text>
 				</g>
 			))}
-			<line x1={x0} y1={720} x2={x0 + 12 * cw} y2={720} stroke="#4f627e" strokeWidth={3} />
+			<line x1={x0} y1={800} x2={x0 + 12 * cw} y2={800} stroke="#4f627e" strokeWidth={3} />
 			<Reveal at={50}>
-				<line x1={x0 + 7.7 * cw} y1={380} x2={x0 + 7.7 * cw} y2={720} stroke={colors.gold} strokeWidth={5} />
-				<text x={x0 + 7.7 * cw} y={360} textAnchor="middle" {...svgMincho(46, colors.goldSoft)}>
+				<line x1={x0 + 7.7 * cw} y1={500} x2={x0 + 7.7 * cw} y2={800} stroke={colors.gold} strokeWidth={5} />
+				<text x={x0 + 7.7 * cw} y={480} textAnchor="middle" {...svgMincho(46, colors.goldSoft)}>
 					2度目（弘安の役）
 				</text>
 			</Reveal>
 			<Reveal at={80}>
-				<line x1={x0 + 10.8 * cw} y1={460} x2={x0 + 10.8 * cw} y2={720} stroke="#ff7b6b" strokeWidth={5} />
-				<text x={x0 + 10.8 * cw} y={440} textAnchor="middle" {...svgMincho(46, '#ffb3a8')}>
+				<line x1={x0 + 10.8 * cw} y1={580} x2={x0 + 10.8 * cw} y2={800} stroke="#ff7b6b" strokeWidth={5} />
+				<text x={x0 + 10.8 * cw} y={560} textAnchor="middle" {...svgMincho(46, '#ffb3a8')}>
 					1度目（文永の役）
 				</text>
 			</Reveal>
-			<text x={W / 2} y={880} textAnchor="middle" {...svgGothic(30, '#7f8ea8', 700)}>
+			<text x={W / 2} y={915} textAnchor="middle" {...svgGothic(30, '#7f8ea8', 700)}>
 				今の暦に直したおよその時期
 			</text>
 		</Full>
