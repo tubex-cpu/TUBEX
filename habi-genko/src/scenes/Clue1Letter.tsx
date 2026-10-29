@@ -36,7 +36,7 @@ export const Clue1Letter = () => {
 				<Photo id="goryeo-celadon-1" move="in" label="30年、攻められた高麗" />
 			</Beat>
 			<Beat name="手紙の道" captions={c} from={7} to={8}>
-				<Stage label="海の向こうの、日本へ">
+				<Stage label="海の向こうの、日本へ" labelBottom>
 					<LetterRoute />
 				</Stage>
 			</Beat>

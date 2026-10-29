@@ -1,6 +1,6 @@
 import type React from 'react';
 import {Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
-import {colors, gothicFamily} from '../theme';
+import {colors} from '../theme';
 import {easeInOut, easeOut, Reveal, svgGothic, svgMincho, useBeatLength} from './Cinema';
 
 // 元寇判決：地図と第1の手がかりの図解
@@ -52,9 +52,6 @@ export const MapView: React.FC<{readonly from: Cam; readonly to?: Cam; readonly 
 				</svg>
 			</div>
 			<div style={{position: 'absolute', left: 0, right: 0, top: 0, bottom: 0, background: 'radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.6) 100%)'}} />
-			<div style={{position: 'absolute', right: 28, top: 36, fontFamily: gothicFamily, fontWeight: 700, fontSize: 18, color: 'rgba(255,255,255,0.6)'}}>
-				地図：© OpenStreetMap contributors, Peka / ODbL / Wikimedia Commons
-			</div>
 		</div>
 	);
 };
@@ -115,7 +112,7 @@ export const Route: React.FC<{readonly pts: ReadonlyArray<readonly [number, numb
 
 // 第1の手がかり：大都（北京）から高麗を経て、大宰府へ届いた一通の手紙
 export const LetterRoute: React.FC = () => {
-	const cam = {lon: 127.5, lat: 37.2, zoom: 0.5};
+	const cam = {lon: 127.5, lat: 35.4, zoom: 0.5};
 	const z = cam.zoom;
 	return (
 		<MapView from={{...cam, zoom: 0.44}} to={cam}>

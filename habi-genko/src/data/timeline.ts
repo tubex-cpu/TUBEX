@@ -2,7 +2,7 @@
 export const TRANSITION_FRAMES = 20;
 
 export const sceneDurations = {
-	Intro: 4685,
+	Intro: 5307,
 	JudgeEntrance: 840,
 	Clue1Letter: 6049,
 	Clue2Islands: 3899,
@@ -29,4 +29,4 @@ export const sceneDurations = {
 	Closing: 449,
 } as const;
 
-export const TOTAL_FRAMES = 110960;
+export const TOTAL_FRAMES = 111582;
