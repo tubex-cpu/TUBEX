@@ -495,3 +495,72 @@ export const MudSection: React.FC = () => {
 		</Full>
 	);
 };
+
+// 最新の技術が証拠を読み解く：X線CT、赤外線、音の波（3つの窓が順に光る）
+export const TechReveal: React.FC = () => {
+	const frame = useCurrentFrame();
+	const panel = (i: number, title: string, children: React.ReactNode) => {
+		const at = 10 + i * 40;
+		const o = interpolate(frame, [at, at + 16], [0, 1], clamp);
+		const x = 105 + i * 590;
+		return (
+			<g opacity={o} transform={`translate(${x} ${330 + (1 - o) * 30})`}>
+				<rect width={530} height={540} rx={18} fill="#06101c" stroke={colors.gold} strokeWidth={2} opacity={0.95} />
+				<g transform="translate(265 240) scale(1.3)">{children}</g>
+				<text x={265} y={505} textAnchor="middle" {...svgMincho(48, colors.goldSoft)}>
+					{title}
+				</text>
+			</g>
+		);
+	};
+	const sweep = (frame % 90) / 90;
+	return (
+		<Full>
+			<defs>
+				<radialGradient id="trBg" cx="50%" cy="50%" r="70%">
+					<stop offset="0%" stopColor="#0d1f33" />
+					<stop offset="100%" stopColor="#020509" />
+				</radialGradient>
+			</defs>
+			<rect width={W} height={H} fill="url(#trBg)" />
+			{panel(
+				0,
+				'X線CT',
+				<g>
+					<circle r={120} fill="none" stroke="#7fc8ff" strokeWidth={4} opacity={0.9} />
+					<circle r={96} fill="#0f2a44" />
+					{[...Array(14)].map((_, k) => (
+						<rect key={k} x={-70 + rand(k) * 120} y={-70 + rand(k + 20) * 120} width={10 + rand(k + 4) * 22} height={5} rx={2} fill="#dff3ff" transform={`rotate(${rand(k + 9) * 180})`} opacity={0.85} />
+					))}
+					<line x1={-130} y1={-130 + sweep * 260} x2={130} y2={-130 + sweep * 260} stroke="#7fc8ff" strokeWidth={3} opacity={0.7} />
+				</g>,
+			)}
+			{panel(
+				1,
+				'赤外線',
+				<g>
+					<rect x={-170} y={-90} width={340} height={180} rx={8} fill="#bdbdb8" />
+					{[...Array(5)].map((_, k) => (
+						<rect key={k} x={110 - k * 60} y={-70} width={26} height={140} rx={8} fill="#2b2b2b" opacity={0.15 + 0.12 * Math.sin(frame / 10 + k)} />
+					))}
+					<text x={-130} y={-60} {...svgMincho(30, '#111')} style={{writingMode: 'vertical-rl'}}>
+						至元
+					</text>
+				</g>,
+			)}
+			{panel(
+				2,
+				'音の波',
+				<g>
+					<rect x={-200} y={40} width={400} height={110} fill="#3b3328" />
+					<path d="M -120 100 Q 0 130 120 100" stroke="#e0a75c" strokeWidth={8} fill="none" opacity={interpolate(sweep, [0.4, 0.6], [0.2, 1], clamp)} />
+					{[0, 1, 2].map((k) => {
+						const r = ((sweep + k / 3) % 1) * 220;
+						return <path key={k} d={`M ${-r} ${-100 + r * 0.6} Q 0 ${-100 + r} ${r} ${-100 + r * 0.6}`} stroke="#7fe0c8" strokeWidth={3} fill="none" opacity={1 - ((sweep + k / 3) % 1)} />;
+					})}
+					<path d="M -30 -130 L 30 -130 L 20 -105 L -20 -105 Z" fill="#9fd2ea" />
+				</g>,
+			)}
+		</Full>
+	);
+};

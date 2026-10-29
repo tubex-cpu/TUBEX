@@ -1,6 +1,6 @@
 import {Beat} from '../components/Beat';
 import {Stage} from '../components/Cinema';
-import {Armada, ArrowNock, DiceAndCards, InkBoard, MudSection, SeabedDescent, ShipLength, StormSeason, YearRewind} from '../components/GenkoArt1';
+import {Armada, ArrowNock, DiceAndCards, InkBoard, MudSection, SeabedDescent, ShipLength, StormSeason, TechReveal, YearRewind} from '../components/GenkoArt1';
 import {Photo} from '../components/Photo';
 import {SceneFrame} from '../components/SceneFrame';
 import {introCaptions as c} from '../data/captions';
@@ -86,8 +86,13 @@ export const Intro = () => (
 				<MudSection />
 			</Stage>
 		</Beat>
-		<Beat name="今夜の法廷" captions={c} from={20}>
-			<Photo id="genkai-1" move="out" label="今夜は、長い法廷になる" />
+		<Beat name="最新の技術" captions={c} from={20} to={21}>
+			<Stage label="最新の技術が、何を暴いた？">
+				<TechReveal />
+			</Stage>
+		</Beat>
+		<Beat name="驚くべき発見" captions={c} from={22}>
+			<Photo id="genkai-1" move="out" label="教科書をくつがえす、発見とは？" />
 		</Beat>
 	</SceneFrame>
 );

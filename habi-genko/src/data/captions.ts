@@ -1,7 +1,7 @@
 // scripts/build-voice.py で自動生成。手で編集しないこと。
 import type {Caption} from '@remotion/captions';
 
-// 0:00 謎の先出し（4685フレーム）
+// 0:00 謎の先出し（5307フレーム）
 export const introCaptions: Caption[] = [
   {
     "text": "750年前。日本は、国が滅びるかもしれない、最大の危機に立たされていた。",
@@ -144,9 +144,23 @@ export const introCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "今夜は、いつもより長い法廷になる。証拠だけで、ひとつずつ判決を下していこう。",
+    "text": "そして今、その泥の中の証拠を、最新の科学の技術が、次々と読み解き始めている。",
     "startMs": 148916,
-    "endMs": 154964,
+    "endMs": 155497,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "X線のCTで、割らずに中身を見る。赤外線で、消えた墨の文字を浮かび上がらせる。音の波で、泥の下に埋もれた船を探し出す。",
+    "startMs": 155977,
+    "endMs": 166292,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "研究者たちの地道な調査と、最新の技術が導き出したのは、教科書の元寇をくつがえすかもしれない、驚くべき発見だった。",
+    "startMs": 166772,
+    "endMs": 175700,
     "timestampMs": null,
     "confidence": null
   }

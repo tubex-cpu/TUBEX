@@ -2,7 +2,6 @@ import type React from 'react';
 import {AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
 import {photos} from '../data/photos';
 import {easeInOut, Telop, useBeatLength} from './Cinema';
-import {gothicFamily} from '../theme';
 
 type Props = {
 	// src/data/photos.ts に登録した写真のID
@@ -14,7 +13,7 @@ type Props = {
 	readonly label?: string;
 };
 
-// 実写真：映画のように色を整え、ビートの長さいっぱいを使ってゆっくりカメラを動かす
+// 実写真：映画のように色を整え、ビートの長さいっぱいを使ってゆっくりカメラを動かす（出典は概要欄に載せ、画面には出さない）
 export const Photo: React.FC<Props> = ({id, children, move = 'in', label}) => {
 	const frame = useCurrentFrame();
 	const length = useBeatLength();
@@ -58,9 +57,6 @@ export const Photo: React.FC<Props> = ({id, children, move = 'in', label}) => {
 			{/* 影は青く、全体を少し沈ませて、テレビでも締まった画にする */}
 			<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(8,22,40,0.35) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 60%, rgba(4,8,16,0.7) 100%)'}} />
 			{label ? <Telop text={label} bottom={photo.labelBottom} /> : null}
-			<div style={{position: 'absolute', right: 28, top: 36, fontFamily: gothicFamily, fontWeight: 700, fontSize: 18, color: 'rgba(255,255,255,0.72)', textShadow: '0 1px 4px #000'}}>
-				{photo.credit}
-			</div>
 		</AbsoluteFill>
 	);
 };
