@@ -1,4 +1,5 @@
 import {Beat, captionFrame} from '../components/Beat';
+import {Stage} from '../components/Cinema';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {EighteenDone, JapanAncestors, NoMuNoRoots, NotGasCollapse, PrepareReal, Subduction} from '../components/MuArt4';
 import {Photo} from '../components/Photo';
@@ -16,9 +17,9 @@ export const Clue18Japan = () => {
 				<Photo id="japan-space" move="out" label="火山と地震の帯のまんなか" />
 			</Beat>
 			<Beat name="JapanAncestors" captions={c} from={3} to={4}>
-				<Visual label="日本人のルーツは？">
+				<Stage label="日本人のルーツは？" labelBottom>
 					<JapanAncestors />
-				</Visual>
+				</Stage>
 			</Beat>
 			<Beat name="Subduction" captions={c} from={5} to={7}>
 				<Visual label="地震が起きる仕組み">
@@ -31,7 +32,7 @@ export const Clue18Japan = () => {
 				</Visual>
 			</Beat>
 			<Beat name="PrepareReal" captions={c} from={11} to={12}>
-				<Visual label="本当に備えるべきこと">
+				<Visual>
 					<PrepareReal />
 				</Visual>
 			</Beat>
@@ -39,7 +40,7 @@ export const Clue18Japan = () => {
 				<Photo id="tsunami-sign" label="ハザードマップと避難の場所" />
 			</Beat>
 			<Beat name="NoMuNoRoots" captions={c} from={15} to={17}>
-				<Visual label="ないものは、ルーツにならない">
+				<Visual>
 					<NoMuNoRoots />
 				</Visual>
 			</Beat>
@@ -50,7 +51,7 @@ export const Clue18Japan = () => {
 				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 20, 21, fps)} />
 			</Beat>
 			<Beat name="EighteenDone" captions={c} from={23} to={23}>
-				<Visual label="18の手がかりの、その先">
+				<Visual>
 					<EighteenDone />
 				</Visual>
 			</Beat>

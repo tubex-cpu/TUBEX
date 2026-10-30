@@ -3,6 +3,7 @@ import {Audio} from '@remotion/media';
 import type React from 'react';
 import {AbsoluteFill, staticFile, useVideoConfig} from 'remotion';
 import {subtitles} from '../data/subtitles';
+import {ClueOpener, FilmLook} from './Cinema';
 import {CourtBackground} from './CourtBackground';
 import {SceneHeader} from './SceneHeader';
 import {Subtitles} from './Subtitles';
@@ -26,6 +27,8 @@ export const SceneFrame: React.FC<Props> = ({voice, label, title, tint, children
 			<CourtBackground tint={tint} />
 			{children}
 			{label && title ? <SceneHeader label={label} title={title} /> : null}
+			{label && title ? <ClueOpener label={label} title={title} /> : null}
+			<FilmLook />
 			<Subtitles captions={subtitles[voice]} />
 			<Audio name="ナレーション" src={staticFile(`voice/${voice}.mp3`)} premountFor={fps} />
 		</AbsoluteFill>

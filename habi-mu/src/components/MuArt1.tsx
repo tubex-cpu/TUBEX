@@ -1,15 +1,17 @@
 import type React from 'react';
 import {interpolate, useCurrentFrame} from 'remotion';
 import {colors} from '../theme';
-import {BigLine, PacificMap, Panel, Versus, Years, clamp, ease, fadeIn, ll, mincho, places, txt} from './MuKit';
+import {BigLine, Panel, Versus, Years, clamp, ease, fadeIn, mincho, places, txt} from './MuKit';
+import {GeoMap, MapNote} from './MuMap';
 
 // ---- 謎の先出し ----
 
 // 1万2000年前の太平洋に、巨大な大陸が浮かび上がる
 export const MuRises: React.FC = () => {
 	const frame = useCurrentFrame();
-	return <PacificMap mu={interpolate(frame, [10, 70], [0, 1], clamp)} />;
+	return <GeoMap view="pacific" focus={[195, 0]} zoom={1.1} mu={interpolate(frame, [10, 70], [0, 1], clamp)} />;
 };
+
 
 // 7つの大都市と6400万人
 export const MuCities: React.FC = () => {
@@ -17,36 +19,48 @@ export const MuCities: React.FC = () => {
 	const cities: [number, number][] = [[165, 10], [185, 18], [205, 8], [222, 0], [180, -5], [200, -15], [235, -18]];
 	const n = Math.round(interpolate(frame, [20, 90], [0, 6400], ease));
 	return (
-		<PacificMap mu={1}>
-			{cities.map(([lo, la], i) => {
-				const [x, y] = ll(lo, la);
-				return <circle key={i} cx={x} cy={y} r={16} fill={colors.goldSoft} stroke="#000" strokeWidth={3} opacity={fadeIn(frame, i * 8)} />;
-			})}
-			<text x={700} y={560} textAnchor="middle" {...mincho(96, colors.goldSoft)} stroke="#000" strokeWidth={8} paintOrder="stroke">
-				{n.toLocaleString('ja-JP')}
-				<tspan {...txt(60)}>万人</tspan>
-			</text>
-		</PacificMap>
+		<GeoMap view="pacific" focus={[200, 0]} zoom={1.12} mu={1}>
+			{(p) => (
+				<>
+					{cities.map(([lo, la], i) => {
+						const [x, y] = p(lo, la);
+						return (
+							<g key={i} opacity={fadeIn(frame, i * 8)}>
+								<circle cx={x} cy={y} r={30} fill={colors.goldSoft} opacity={0.25} />
+								<circle cx={x} cy={y} r={13} fill={colors.goldSoft} stroke="#000" strokeWidth={3} />
+							</g>
+						);
+					})}
+					<text x={960} y={600} textAnchor="middle" {...mincho(140, colors.goldSoft)} stroke="#000" strokeWidth={12} strokeOpacity={0.85} paintOrder="stroke">
+						{n.toLocaleString('ja-JP')}
+						<tspan {...txt(84)}>万人</tspan>
+					</text>
+				</>
+			)}
+		</GeoMap>
 	);
 };
+
 
 // ひと晩で海に呑まれる
 export const MuSinking: React.FC = () => {
 	const frame = useCurrentFrame();
 	const sink = interpolate(frame, [20, 150], [0, 1], clamp);
-	const flash = frame % 24 < 3 && frame < 120 ? 0.25 : 0;
+	const flash = frame % 24 < 3 && frame < 120 ? 0.22 : 0;
 	return (
-		<PacificMap mu={1} muSink={sink}>
-			<rect width={1400} height={620} fill="#ff7a3a" opacity={flash} />
-		</PacificMap>
+		<GeoMap view="pacific" focus={[200, -2]} zoom={1.16} mu={1} muSink={sink}>
+			{() => <rect width={1920} height={1080} fill="#ff7a3a" opacity={flash} />}
+		</GeoMap>
 	);
 };
+
 
 export const MuNameReveal: React.FC = () => <BigLine main="ムー" sub="太平洋に沈んだとされる大陸" size={220} />;
 
 // 生き残りが島々へ
 export const SurvivorsFlee: React.FC = () => (
-	<PacificMap
+	<GeoMap
+		view="pacific"
 		mu={0.25}
 		pins={[
 			{at: places.pohnpei, label: 'ポンペイ', at0: 20},
@@ -61,14 +75,19 @@ export const SurvivorsFlee: React.FC = () => (
 	/>
 );
 
+
 // 日本人のルーツは、ムー？
 export const JapanRootsClaim: React.FC = () => (
-	<PacificMap
+	<GeoMap
+		view="pacific"
+		focus={[150, 30]}
+		zoom={1.18}
 		mu={0.6}
-		pins={[{at: places.japan, label: '日本', color: colors.japan, at0: 10}]}
+		pins={[{at: places.japan, label: '日本', color: colors.japan, at0: 10, dy: 60}]}
 		routes={[{from: [175, 15], to: places.japan, at0: 20, color: colors.japan}]}
 	/>
 );
+
 
 export const LastFragment: React.FC = () => <BigLine main="沈んだ大陸の、最後のかけら？" size={84} />;
 
@@ -111,6 +130,142 @@ export const WalkingStatueTease: React.FC = () => {
 			<path d={`M700 200 Q 980 ${180 - sway * 3} 1180 240`} stroke={colors.goldSoft} strokeWidth={5} fill="none" />
 			<text x={700} y={590} textAnchor="middle" {...txt(46, colors.goldSoft)} opacity={fadeIn(frame, 20)}>
 				2025年秋の研究
+			</text>
+		</Panel>
+	);
+};
+
+// 最新の科学：3つの技術が、謎に光を当てる
+export const ScienceNow: React.FC = () => {
+	const frame = useCurrentFrame();
+	const items = [
+		{title: '人工知能', sub: '衛星写真を読む', c: '#7fd6e8'},
+		{title: '遺伝子', sub: '古い骨を調べる', c: colors.goldSoft},
+		{title: 'レーザー', sub: '空から地形を測る', c: '#a6e07f'},
+	];
+	return (
+		<Panel>
+			{items.map((it, i) => {
+				const x = 250 + i * 450;
+				const o = fadeIn(frame, 8 + i * 16);
+				const r = 120 + 8 * Math.sin(frame / 12 + i);
+				return (
+					<g key={it.title} opacity={o} transform={`translate(0 ${interpolate(frame, [8 + i * 16, 38 + i * 16], [30, 0], ease)})`}>
+						<circle cx={x} cy={260} r={r + 30} fill={it.c} opacity={0.08} />
+						<circle cx={x} cy={260} r={r} fill="rgba(4,10,22,0.9)" stroke={it.c} strokeWidth={4} />
+						{i === 0 ? (
+							<g stroke={it.c} strokeWidth={4} fill="none">
+								{[...Array(4)].map((_, k) => (
+									<rect key={k} x={x - 70 + (k % 2) * 74} y={190 + Math.floor(k / 2) * 74} width={66} height={66} opacity={((frame / 6 + k) % 4) < 2 ? 1 : 0.35} />
+								))}
+							</g>
+						) : i === 1 ? (
+							<g stroke={it.c} strokeWidth={5} fill="none">
+								{[...Array(9)].map((_, k) => {
+									const y = 180 + k * 20;
+									const a = Math.sin(frame / 10 + k * 0.7) * 55;
+									return <line key={k} x1={x - a} y1={y} x2={x + a} y2={y} opacity={0.8} />;
+								})}
+							</g>
+						) : (
+							<g stroke={it.c} strokeWidth={4} fill="none">
+								{[...Array(6)].map((_, k) => (
+									<line key={k} x1={x} y1={170} x2={x - 75 + k * 30} y2={340} opacity={0.5 + 0.5 * Math.abs(Math.sin(frame / 9 + k))} />
+								))}
+								<path d={`M${x - 90} 345 Q ${x - 45} 320 ${x} 340 T ${x + 90} 335`} strokeWidth={6} />
+							</g>
+						)}
+						<text x={x} y={480} textAnchor="middle" {...mincho(58, it.c)}>
+							{it.title}
+						</text>
+						<text x={x} y={545} textAnchor="middle" {...txt(38, colors.muted, 700)}>
+							{it.sub}
+						</text>
+					</g>
+				);
+			})}
+		</Panel>
+	);
+};
+
+// 人工知能が、衛星写真を1マスずつ読んでいく（しくみの説明図）
+export const AiSatellite: React.FC = () => {
+	const frame = useCurrentFrame();
+	const cols = 16;
+	const rows = 7;
+	const scan = interpolate(frame, [10, 150], [-1, cols + 1], clamp);
+	return (
+		<Panel fill="#05101a">
+			{[...Array(cols * rows)].map((_, i) => {
+				const c = i % cols;
+				const r = Math.floor(i / cols);
+				const shade = 40 + ((c * 37 + r * 53) % 30);
+				const done = c < scan;
+				return (
+					<g key={i}>
+						<rect x={60 + c * 80} y={40 + r * 72} width={76} height={68} fill={`rgb(${shade + 30},${shade + 26},${shade})`} />
+						<rect x={60 + c * 80} y={40 + r * 72} width={76} height={68} fill="none" stroke="#7fd6e8" strokeWidth={2} opacity={done ? 0.55 : 0} />
+					</g>
+				);
+			})}
+			<rect x={60 + scan * 80 - 6} y={30} width={12} height={524} fill="#7fd6e8" opacity={0.85} />
+			<rect x={60 + scan * 80 - 60} y={30} width={60} height={524} fill="#7fd6e8" opacity={0.12} />
+			<text x={700} y={600} textAnchor="middle" {...txt(40, '#bfeef7')} opacity={fadeIn(frame, 30)}>
+				島じゅうの衛星写真を、1マスずつ判定する
+			</text>
+		</Panel>
+	);
+};
+
+// 古い骨に残った遺伝子（二重らせん）
+export const AncientGenome: React.FC = () => {
+	const frame = useCurrentFrame();
+	const n = 26;
+	return (
+		<Panel>
+			{[...Array(n)].map((_, i) => {
+				const x = 170 + i * 42;
+				const ph = frame / 14 + i * 0.5;
+				const y1 = 300 + Math.sin(ph) * 120;
+				const y2 = 300 - Math.sin(ph) * 120;
+				const front = Math.cos(ph) > 0;
+				return (
+					<g key={i} opacity={fadeIn(frame, i * 2)}>
+						<line x1={x} y1={y1} x2={x} y2={y2} stroke={colors.muted} strokeWidth={4} opacity={0.5} />
+						<circle cx={x} cy={y1} r={front ? 13 : 9} fill={colors.goldSoft} opacity={front ? 1 : 0.55} />
+						<circle cx={x} cy={y2} r={front ? 9 : 13} fill="#7fd6e8" opacity={front ? 0.55 : 1} />
+					</g>
+				);
+			})}
+			<text x={700} y={590} textAnchor="middle" {...txt(42, colors.goldSoft)} opacity={fadeIn(frame, 40)}>
+				遺伝子には、人の数の移り変わりが残る
+			</text>
+		</Panel>
+	);
+};
+
+// 空からのレーザーが、森の下の地面を浮かび上がらせる
+export const LaserTerrain: React.FC = () => {
+	const frame = useCurrentFrame();
+	const peel = interpolate(frame, [40, 130], [0, 1], ease);
+	return (
+		<Panel fill="#06120c">
+			{[...Array(9)].map((_, k) => (
+				<path key={k} d={`M80 ${250 + k * 38} C 400 ${232 + k * 38}, 900 ${272 + k * 38}, 1320 ${246 + k * 38}`} stroke="#c8e6a0" strokeWidth={3} fill="none" opacity={0.25 + 0.6 * peel} />
+			))}
+			<g opacity={1 - peel * 0.92}>
+				{[...Array(30)].map((_, i) => (
+					<circle key={i} cx={100 + ((i * 97) % 1220)} cy={290 + ((i * 53) % 230)} r={46 + (i % 4) * 12} fill={i % 2 ? '#1f4a2a' : '#2a5c33'} />
+				))}
+			</g>
+			<g>
+				<path d="M640 60 L760 60 L720 84 L680 84 Z" fill="#d8dde3" />
+				{[...Array(7)].map((_, k) => (
+					<line key={k} x1={700} y1={84} x2={300 + k * 133} y2={560} stroke="#ff6b5a" strokeWidth={2} opacity={0.35 + 0.4 * Math.abs(Math.sin(frame / 7 + k))} />
+				))}
+			</g>
+			<text x={700} y={600} textAnchor="middle" {...txt(40, '#c8e6a0')} opacity={fadeIn(frame, 90)}>
+				木の下の地面の形だけを取り出す
 			</text>
 		</Panel>
 	);
@@ -330,26 +485,18 @@ export const MayaEgyptOlder: React.FC = () => (
 	/>
 );
 
-export const QueenRoute: React.FC = () => {
-	const frame = useCurrentFrame();
-	const p = interpolate(frame, [10, 70], [0, 1], ease);
-	return (
-		<Panel fill="#0e2b45">
-			<path d="M120 200 Q 220 160 300 230 Q 330 300 260 360 Q 200 400 150 330 Z" fill="#5f7a4e" />
-			<path d="M980 150 Q 1150 120 1260 200 Q 1300 330 1180 380 Q 1050 360 1000 280 Z" fill="#a08a5a" />
-			<text x={220} y={450} textAnchor="middle" {...txt(44)}>
-				マヤ
-			</text>
-			<text x={1140} y={450} textAnchor="middle" {...txt(44)}>
-				エジプト
-			</text>
-			<path d="M300 280 Q 640 80 1000 260" stroke={colors.goldSoft} strokeWidth={6} fill="none" strokeDasharray="16 12" pathLength={1} style={{strokeDasharray: `${p} 1`}} />
-			<text x={650} y={130} textAnchor="middle" {...mincho(56, colors.goldSoft)} opacity={fadeIn(frame, 60)}>
-				女王ムーの航海？
-			</text>
-		</Panel>
-	);
-};
+export const QueenRoute: React.FC = () => (
+	<GeoMap
+		view="atlantic"
+		focus={[-30, 25]}
+		pins={[
+			{at: [-89, 20.5], label: 'マヤ', at0: 0, dy: 60},
+			{at: [31.2, 29.9], label: 'エジプト', at0: 50, dy: 60},
+		]}
+		routes={[{from: [-89, 20.5], to: [31.2, 29.9], at0: 10, len: 70, bend: 160}]}
+	/>
+);
+
 
 export const NoContact: React.FC = () => <BigLine main="マヤとエジプトをつなぐ遺物は、ない" size={80} />;
 
@@ -397,19 +544,23 @@ export const MuBook1926: React.FC = () => {
 };
 
 export const MuExtent: React.FC = () => (
-	<PacificMap
+	<GeoMap
+		view="pacific"
 		mu={1}
 		pins={[
-			{at: places.hawaii, label: 'ハワイ', at0: 10},
+			{at: places.hawaii, label: 'ハワイ', at0: 10, dx: 100, dy: 15},
 			{at: places.easter, label: 'イースター島', at0: 25},
-			{at: places.mariana, label: 'マリアナ諸島', at0: 40, dy: 50},
+			{at: places.mariana, label: 'マリアナ諸島', at0: 40, dy: 60},
 		]}
 	>
-		<text x={700} y={590} textAnchor="middle" {...txt(44, colors.goldSoft)} stroke="#000" strokeWidth={6} paintOrder="stroke">
-			東西およそ8000キロ・南北およそ5000キロ（本に書かれた大きさ）
-		</text>
-	</PacificMap>
+		{() => (
+			<MapNote x={960} y={175} at0={50} size={44}>
+				東西およそ8000キロ・南北およそ5000キロ（本に書かれた大きさ）
+			</MapNote>
+		)}
+	</GeoMap>
 );
+
 
 export const SuperiorCiv: React.FC = () => <BigLine main="今よりすぐれた文明？" sub="世界中に植民地を築いていた、と本は書く" size={100} />;
 
@@ -420,7 +571,7 @@ export const GasChambers: React.FC = () => {
 	const drop = interpolate(frame, [70, 140], [0, 120], ease);
 	return (
 		<Panel fill="#0a1626">
-			<rect y={150} width={1400} height={470} fill="#123a56" />
+			<rect x={-1000} y={150} width={3400} height={470 + 500} fill="#123a56" />
 			<g transform={`translate(0 ${drop})`}>
 				<rect x={250} y={110} width={900} height={90} fill="#8a6e3f" />
 				<rect x={250} y={200} width={900} height={170} fill="#5b4730" />
@@ -428,7 +579,7 @@ export const GasChambers: React.FC = () => {
 					<ellipse key={x} cx={x} cy={285} rx={80} ry={45} fill="#2a1c10" stroke={boom > 0 ? '#ff8a3a' : '#7a5a3a'} strokeWidth={4 + boom * 6} opacity={fadeIn(frame, i * 8)} />
 				))}
 			</g>
-			<rect width={1400} height={620} rx={30} fill="#ff8a3a" opacity={boom * (1 - boom) * 1.2} />
+			<rect x={-1000} y={-600} width={3400} height={1820} fill="#ff8a3a" opacity={boom * (1 - boom) * 1.2} />
 			<text x={700} y={570} textAnchor="middle" {...txt(44, colors.goldSoft)} opacity={fadeIn(frame, 20)}>
 				地下の空洞のガスが爆発し、大陸が落ちた（本の説明）
 			</text>
@@ -449,7 +600,7 @@ export const MuSeries: React.FC = () => {
 			{books.map(([t, y], i) => (
 				<g key={t} transform={`translate(${130 + i * 300} 120)`} opacity={fadeIn(frame, i * 10)}>
 					<rect width={240} height={340} rx={10} fill={['#3d2a1a', '#2a3550', '#4a2a2a', '#2a4a3a'][i]} stroke={colors.gold} strokeWidth={4} />
-					<text x={120} y={150} textAnchor="middle" {...mincho(34, colors.goldSoft)}>
+					<text x={120} y={150} textAnchor="middle" {...mincho(Math.min(34, Math.floor(210 / t.length)), colors.goldSoft)}>
 						{t}
 					</text>
 					<text x={120} y={300} textAnchor="middle" {...txt(34, colors.muted)}>
@@ -489,14 +640,14 @@ export const OneManReading: React.FC = () => {
 			{items.map((t, i) => (
 				<g key={t} opacity={fadeIn(frame, i * 10)}>
 					<rect x={110 + i * 300} y={110} width={260} height={110} rx={18} fill="rgba(244,236,220,0.08)" stroke={colors.gold} strokeWidth={4} />
-					<text x={240 + i * 300} y={185} textAnchor="middle" {...txt(48)}>
+					<text x={240 + i * 300} y={185} textAnchor="middle" {...txt(Math.min(48, Math.floor(230 / t.length)))}>
 						{t}
 					</text>
 					<line x1={240 + i * 300} y1={220} x2={700} y2={380} stroke={colors.goldSoft} strokeWidth={4} opacity={fadeIn(frame, 40)} />
 				</g>
 			))}
 			<g opacity={fadeIn(frame, 50)}>
-				<rect x={420} y={380} width={560} height={140} rx={24} fill="#3d2a1a" stroke={colors.goldSoft} strokeWidth={5} />
+				<rect x={320} y={380} width={760} height={140} rx={24} fill="#3d2a1a" stroke={colors.goldSoft} strokeWidth={5} />
 				<text x={700} y={470} textAnchor="middle" {...mincho(56, colors.goldSoft)}>
 					チャーチワードの読み解き
 				</text>
@@ -558,7 +709,7 @@ export const ReburiedTablets: React.FC = () => {
 	const bury = interpolate(frame, [30, 90], [0, 1], ease);
 	return (
 		<Panel fill="#1a1510">
-			<rect y={380} width={1400} height={240} fill="#5b4730" />
+			<rect x={-1000} y={380} width={3400} height={240 + 500} fill="#5b4730" />
 			{[...Array(5)].map((_, i) => (
 				<rect key={i} x={360 + i * 150} y={260 + bury * 200} width={110} height={130} rx={10} fill="#9a8a70" stroke="#5a4a30" strokeWidth={4} opacity={1 - bury * 0.7} />
 			))}
@@ -614,7 +765,7 @@ export const NivenSlabs: React.FC = () => {
 	const frame = useCurrentFrame();
 	return (
 		<Panel fill="#1a1510">
-			<rect y={420} width={1400} height={200} fill="#5b4730" />
+			<rect x={-1000} y={420} width={3400} height={200 + 500} fill="#5b4730" />
 			{[...Array(9)].map((_, i) => (
 				<g key={i} transform={`translate(${170 + i * 125} ${300 - (i % 2) * 30})`} opacity={fadeIn(frame, i * 5)}>
 					<rect width={100} height={130} rx={10} fill="#9a8a70" stroke="#5a4a30" strokeWidth={4} />

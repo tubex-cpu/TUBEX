@@ -1,11 +1,13 @@
 import type React from 'react';
 import {interpolate, useCurrentFrame} from 'remotion';
 import {colors} from '../theme';
-import {BigLine, Bars, PacificMap, Panel, SeaSection, Versus, Years, clamp, ease, fadeIn, mincho, places, txt} from './MuKit';
+import {BigLine, Bars, Panel, SeaSection, Versus, Years, clamp, ease, fadeIn, mincho, places, txt} from './MuKit';
+import {GeoMap, MapNote} from './MuMap';
 
 // ---- 第11の手がかり 島の人々はどこから ----
 
-export const SurvivorClaim: React.FC = () => <PacificMap mu={0.5} pins={[{at: places.easter, label: 'ムーの生き残り？', at0: 10}]} />;
+export const SurvivorClaim: React.FC = () => <GeoMap view="pacific" focus={places.easter} zoom={1.2} mu={0.5} pins={[{at: places.easter, label: 'ムーの生き残り？', at0: 10}]} />;
+
 
 export const SettleDate: React.FC = () => (
 	<Bars
@@ -42,7 +44,7 @@ export const VoyagingSkills: React.FC = () => {
 			{[...Array(40)].map((_, i) => (
 				<circle key={i} cx={(i * 137) % 1400} cy={(i * 59) % 300 + 20} r={2 + (i % 3)} fill="#fff" opacity={0.3 + 0.5 * Math.abs(Math.sin(frame / 20 + i))} />
 			))}
-			<rect y={420} width={1400} height={200} fill="#123a56" />
+			<rect x={-1000} y={420} width={3400} height={200 + 500} fill="#123a56" />
 			{['星', '波', '風', '鳥'].map((t, i) => (
 				<g key={t} opacity={fadeIn(frame, i * 10)}>
 					<circle cx={250 + i * 300} cy={330} r={70} fill="rgba(226,187,99,0.15)" stroke={colors.gold} strokeWidth={4} />
@@ -56,18 +58,23 @@ export const VoyagingSkills: React.FC = () => {
 };
 
 export const HokuleaRoute: React.FC = () => (
-	<PacificMap
+	<GeoMap
+		view="hokulea"
+		focus={[-153, 2]}
 		pins={[
-			{at: places.hawaii, label: 'ハワイ', at0: 0},
-			{at: places.tahiti, label: 'タヒチ', at0: 50, dy: 50},
+			{at: places.hawaii, label: 'ハワイ', at0: 0, dx: 100, dy: 15},
+			{at: places.tahiti, label: 'タヒチ', at0: 50, dx: 100, dy: 15},
 		]}
-		routes={[{from: places.hawaii, to: places.tahiti, at0: 10, len: 60, bend: -40}]}
+		routes={[{from: places.hawaii, to: places.tahiti, at0: 10, len: 60, bend: -60}]}
 	>
-		<text x={1000} y={330} {...txt(40, colors.goldSoft)} stroke="#000" strokeWidth={6} paintOrder="stroke">
-			4000キロ以上
-		</text>
-	</PacificMap>
+		{(p) => (
+			<MapNote x={p(-140, 0)[0]} y={p(0, 2)[1]} at0={60} anchor="start">
+				4000キロ以上
+			</MapNote>
+		)}
+	</GeoMap>
 );
+
 
 export const NoInstruments: React.FC = () => {
 	const frame = useCurrentFrame();
@@ -99,7 +106,7 @@ export const ForestGone: React.FC = () => {
 	const gone = interpolate(frame, [20, 110], [0, 1], clamp);
 	return (
 		<Panel fill="#1a2430">
-			<rect y={440} width={1400} height={180} fill="#6b7a4e" />
+			<rect x={-1000} y={440} width={3400} height={180 + 500} fill="#6b7a4e" />
 			{[...Array(16)].map((_, i) => (
 				<g key={i} transform={`translate(${120 + i * 75} 440)`} opacity={1 - Math.min(1, gone * 1.6 - (i % 4) * 0.15)}>
 					<line x1={0} y1={0} x2={0} y2={-150} stroke="#5a4028" strokeWidth={8} />
@@ -123,7 +130,7 @@ export const CollapseStory: React.FC = () => {
 			{steps.map((t, i) => (
 				<g key={t} opacity={fadeIn(frame, i * 18)}>
 					<rect x={80 + i * 330} y={230} width={290} height={150} rx={20} fill="rgba(233,75,60,0.12)" stroke="#e94b3c" strokeWidth={4} />
-					<text x={225 + i * 330} y={320} textAnchor="middle" {...txt(38)}>
+					<text x={225 + i * 330} y={320} textAnchor="middle" {...txt(Math.min(38, Math.floor(260 / t.length)))}>
 						{t}
 					</text>
 					{i < 3 ? (
@@ -181,7 +188,7 @@ export const RockGarden: React.FC = () => {
 	const frame = useCurrentFrame();
 	return (
 		<Panel fill="#1a2430">
-			<rect y={300} width={1400} height={320} fill="#6b5a3f" />
+			<rect x={-1000} y={300} width={3400} height={320 + 500} fill="#6b5a3f" />
 			{[...Array(60)].map((_, i) => (
 				<ellipse key={i} cx={100 + (i % 15) * 85} cy={360 + Math.floor(i / 15) * 60} rx={30} ry={18} fill="#4a4a48" opacity={fadeIn(frame, (i % 15) * 2)} />
 			))}
@@ -196,18 +203,23 @@ export const RockGarden: React.FC = () => {
 };
 
 export const ToSouthAmerica: React.FC = () => (
-	<PacificMap
+	<GeoMap
+		view="southamerica"
+		focus={[-90, -18]}
 		pins={[
 			{at: places.easter, label: 'イースター島', at0: 0},
-			{at: [-78, -8], label: '南アメリカ', at0: 40, dy: -30},
+			{at: [-78, -8], label: '南アメリカ', at0: 40},
 		]}
-		routes={[{from: places.easter, to: [-78, -8], at0: 10, len: 50, bend: 60}]}
+		routes={[{from: places.easter, to: [-78, -8], at0: 10, len: 50, bend: 80}]}
 	>
-		<text x={1060} y={300} textAnchor="middle" {...txt(40, colors.goldSoft)} stroke="#000" strokeWidth={6} paintOrder="stroke">
-			1300年ごろ、遺伝子がまじる
-		</text>
-	</PacificMap>
+		{(p) => (
+			<MapNote x={p(-96, 0)[0]} y={p(0, -11)[1]} at0={55}>
+				1300年ごろ、遺伝子がまじる
+			</MapNote>
+		)}
+	</GeoMap>
 );
+
 
 export const RealDecline: React.FC = () => (
 	<Versus
@@ -220,13 +232,18 @@ export const RealDecline: React.FC = () => (
 // ---- 第13の手がかり 与那国 ----
 
 export const YonaguniMap: React.FC = () => (
-	<PacificMap
+	<GeoMap
+		view="ryukyu"
+		focus={[123, 24.5]}
+		zoom={1.14}
 		pins={[
-			{at: places.yonaguni, label: '与那国島', at0: 0, color: colors.japan},
-			{at: [121, 23.7], label: '台湾', at0: 20, dy: 50},
+			{at: [122.99, 24.45], label: '与那国島', at0: 0, color: colors.japan},
+			{at: [121.5, 25.0], label: '台湾', at0: 20, dx: -40},
+			{at: [127.8, 26.4], label: '沖縄島', at0: 30},
 		]}
 	/>
 );
+
 
 export const UnderwaterSteps: React.FC = () => (
 	<SeaSection seaY={70}>
@@ -268,17 +285,31 @@ export const SandstoneJoints: React.FC = () => {
 
 export const Kuroshio: React.FC = () => {
 	const frame = useCurrentFrame();
+	const lanes: [number, number][][] = [0, 1, 2, 3].map((k) => [
+		[121.7 + k * 0.25, 22.3],
+		[122.4 + k * 0.25, 24.0 - k * 0.1],
+		[124.4 + k * 0.2, 25.5 - k * 0.15],
+		[126.9 + k * 0.15, 26.9 - k * 0.2],
+		[129.6, 28.0 - k * 0.2],
+	]);
 	return (
-		<PacificMap pins={[{at: places.yonaguni, label: '与那国島', color: colors.japan}]}>
-			{[...Array(5)].map((_, i) => (
-				<path key={i} d={`M${120 + i * 6} ${330 - i * 8} Q 240 ${250 - i * 10} 340 ${160 - i * 6}`} stroke="#9fd3e8" strokeWidth={6} fill="none" strokeDasharray="20 16" strokeDashoffset={-frame * 2} opacity={0.8} />
-			))}
-			<text x={300} y={420} {...txt(44, '#9fd3e8')} stroke="#000" strokeWidth={6} paintOrder="stroke">
-				黒潮
-			</text>
-		</PacificMap>
+		<GeoMap view="ryukyu" focus={[124, 25]} pins={[{at: [122.99, 24.45], label: '与那国島', color: colors.japan, dy: 70}]}>
+			{(p) => (
+				<>
+					{lanes.map((pts, i) => {
+						const xy = pts.map(([a, b]) => p(a, b));
+						const d = `M${xy[0][0]} ${xy[0][1]} ` + xy.slice(1).map(([x, y]) => `L${x} ${y}`).join(' ');
+						return <path key={i} d={d} stroke="#9fe3f0" strokeWidth={6} fill="none" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="26 22" strokeDashoffset={-frame * 3} opacity={0.75} />;
+					})}
+					<MapNote x={p(125.6, 0)[0]} y={p(0, 24.3)[1]} color="#bff0f8" size={56} at0={10}>
+						黒潮
+					</MapNote>
+				</>
+			)}
+		</GeoMap>
 	);
 };
+
 
 export const SeaLevelRise: React.FC = () => {
 	const frame = useCurrentFrame();
@@ -286,7 +317,7 @@ export const SeaLevelRise: React.FC = () => {
 	return (
 		<Panel fill="#0a1626">
 			<path d="M0 360 L200 330 L420 350 L650 300 L900 340 L1150 310 L1400 330 L1400 620 L0 620 Z" fill="#6b7a4e" />
-			<rect y={sea} width={1400} height={620 - sea} fill="#1f5f86" opacity={0.9} />
+			<rect x={-1000} y={sea} width={3400} height={620 - sea + 500} fill="#1f5f86" opacity={0.9} />
 			<line x1={1250} x2={1250} y1={480} y2={260} stroke={colors.goldSoft} strokeWidth={5} />
 			<text x={1230} y={380} textAnchor="end" {...txt(42, colors.goldSoft)}>
 				約120m
@@ -302,7 +333,21 @@ export const SeaLevelRise: React.FC = () => {
 
 export const ForbiddenRumor: React.FC = () => <BigLine main="上陸したら、最期" sub="「ムーの証拠が眠る、立ち入り禁止の島」" size={130} fill="#0a0e14" />;
 
-export const OkinoshimaMap: React.FC = () => <PacificMap pins={[{at: places.okinoshima, label: '沖ノ島', color: colors.japan}]} />;
+export const OkinoshimaMap: React.FC = () => (
+	<GeoMap view="genkai" focus={[130.1, 34.24]} zoom={1.2} pins={[{at: [130.105, 34.244], label: '沖ノ島', color: colors.japan}]}>
+		{(p) => (
+			<>
+				<MapNote x={p(130.7, 0)[0]} y={p(0, 33.3)[1]} color={colors.muted} size={40} at0={20}>
+					九州
+				</MapNote>
+				<MapNote x={p(129.2, 0)[0]} y={p(0, 34.62)[1]} color={colors.muted} size={36} at0={25}>
+					対馬
+				</MapNote>
+			</>
+		)}
+	</GeoMap>
+);
+
 
 export const OkinoshimaRules: React.FC = () => {
 	const frame = useCurrentFrame();
@@ -336,22 +381,28 @@ export const EightyThousand: React.FC = () => (
 	</Panel>
 );
 
-export const SentinelMap: React.FC = () => (
-	<Panel fill="#0e2b45">
-		<path d="M300 100 Q 380 60 420 200 Q 440 400 380 560 L300 560 Z" fill="#5f7a4e" />
-		<circle cx={760} cy={330} r={60} fill="#5f7a4e" />
-		<circle cx={760} cy={330} r={150} fill="none" stroke="#e94b3c" strokeWidth={6} strokeDasharray="18 12" />
-		<text x={760} y={150} textAnchor="middle" {...txt(44)}>
-			北センチネル島
-		</text>
-		<text x={1060} y={340} {...txt(40, '#e94b3c')}>
-			近づくことは禁止
-		</text>
-		<text x={360} y={600} textAnchor="middle" {...txt(34, colors.muted)}>
-			インドのアンダマン諸島
-		</text>
-	</Panel>
-);
+export const SentinelMap: React.FC = () => {
+	const frame = useCurrentFrame();
+	return (
+		<GeoMap view="andaman" focus={[92.23, 11.55]} zoom={1.2} pins={[{at: [92.23, 11.55], label: '北センチネル島', at0: 0, dy: -70}]}>
+			{(p) => {
+				const [x, y] = p(92.23, 11.55);
+				return (
+					<>
+						<circle cx={x} cy={y} r={110} fill="none" stroke="#e94b3c" strokeWidth={6} strokeDasharray="20 14" strokeDashoffset={-frame} opacity={fadeIn(frame, 15)} />
+						<MapNote x={x + 140} y={y + 16} color="#ff6b5a" anchor="start" at0={25}>
+							近づくことは禁止
+						</MapNote>
+						<MapNote x={p(92.95, 0)[0]} y={p(0, 11.32)[1]} color={colors.muted} size={38} at0={35}>
+							アンダマン諸島（インド）
+						</MapNote>
+					</>
+				);
+			}}
+		</GeoMap>
+	);
+};
+
 
 export const ProtectReasons: React.FC = () => (
 	<Versus
@@ -364,13 +415,17 @@ export const ProtectReasons: React.FC = () => (
 // ---- 第15の手がかり 地図から消えた島 ----
 
 export const SandyMap: React.FC = () => (
-	<PacificMap
+	<GeoMap
+		view="coral"
+		focus={[160, -19.5]}
+		zoom={1.16}
 		pins={[
 			{at: places.sandy, label: 'サンディ島？', at0: 0},
-			{at: places.newcal, label: 'ニューカレドニア', at0: 20, dy: 50},
+			{at: places.newcal, label: 'ニューカレドニア', at0: 20},
 		]}
 	/>
 );
+
 
 export const ChartIsland: React.FC<{readonly erase?: boolean}> = ({erase = false}) => {
 	const frame = useCurrentFrame();
@@ -406,7 +461,7 @@ export const DepthSounding: React.FC = () => {
 		<SeaSection seaY={140}>
 			<path d="M600 140 L760 140 L740 112 L620 112 Z" fill="#d8dde3" />
 			<circle cx={680} cy={160} r={40 + ping * 380} fill="none" stroke="#9fd3e8" strokeWidth={4} opacity={1 - ping} />
-			<rect y={560} width={1400} height={60} fill="#2a2620" />
+			<rect x={-1000} y={560} width={3400} height={60 + 500} fill="#2a2620" />
 			<line x1={1100} x2={1100} y1={150} y2={560} stroke={colors.goldSoft} strokeWidth={5} />
 			<text x={1120} y={370} {...txt(44, colors.goldSoft)}>
 				約1400m

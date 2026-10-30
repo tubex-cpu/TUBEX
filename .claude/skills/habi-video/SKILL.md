@@ -6,7 +6,7 @@ description: ハビ判事チャンネルの動画（約1時間・Remotion・VOIC
 # ハビ判事 動画制作スキル
 
 ルールは `CLAUDE.md` がすべての基準（企画・台本・素材・音声・テロップ・納品）。このスキルは、その通りに作るための**手順と道具**をまとめたもの。迷ったら `CLAUDE.md` を優先する。
-画づくりの最新例は `habi-genko/`（元寇判決：テレビ向けの全画面図解・映画風の写真・章扉・出典は画面に出さない）。`src/components/Cinema.tsx`（FilmLook・Telop・Stage・ClueOpener）と `GenkoArt*.tsx` を下敷きにする。写真はWikimediaの標準サイズの縮小版で取る（`scripts/fetch-photos-local.py`。Actionsが混んでいるとき用）。
+画づくりの最新例は `habi-genko/`（元寇判決：テレビ向けの全画面図解・映画風の写真・章扉・出典は画面に出さない）。`src/components/Cinema.tsx`（FilmLook・Telop・Stage・ClueOpener）と `GenkoArt*.tsx` を下敷きにする。地図は `habi-mu/`（ムー大陸判決）の `scripts/gen_maps.py`（Natural Earth の陸地・海底の深さから下絵を作る）と `src/components/MuMap.tsx`（`GeoMap`：画面いっぱいの地図＋ピン・航路）を下敷きにする。図解の舞台は `habi-mu/src/components/Scenery.tsx` の `Visual`（画面いっぱい・上に問いの帯）。写真はWikimediaの標準サイズの縮小版で取る（`scripts/fetch-photos-local.py`。Actionsが混んでいるとき用）。
 
 やりとりはすべて日本語。ユーザーは往復を少なくしたいので、決められることは決めて進め、要所だけ見せる。
 

@@ -1,4 +1,5 @@
 import {Beat, captionFrame} from '../components/Beat';
+import {Stage} from '../components/Cinema';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {JapaneseDiverClaim, LidarFields, LostInWar, NanyoMap, NoEvidenceList, PlatinumCoffin} from '../components/MuArt2';
 import {Photo} from '../components/Photo';
@@ -23,9 +24,9 @@ export const Clue8Platinum = () => {
 				</Visual>
 			</Beat>
 			<Beat name="NanyoMap" captions={c} from={7} to={9}>
-				<Visual label="南洋群島">
+				<Stage label="南洋群島" labelBottom>
 					<NanyoMap />
-				</Visual>
+				</Stage>
 			</Beat>
 			<Beat name="NoEvidenceList" captions={c} from={10} to={12}>
 				<Visual label="証拠は？">
@@ -33,7 +34,7 @@ export const Clue8Platinum = () => {
 				</Visual>
 			</Beat>
 			<Beat name="LostInWar" captions={c} from={13} to={13}>
-				<Visual label="「記録は失われた」">
+				<Visual>
 					<LostInWar />
 				</Visual>
 			</Beat>

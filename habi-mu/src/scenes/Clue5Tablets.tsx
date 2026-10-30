@@ -31,7 +31,7 @@ export const Clue5Tablets = () => {
 				</Visual>
 			</Beat>
 			<Beat name="WhereNow" captions={c} from={9} to={10}>
-				<Visual label="今、どこにある？">
+				<Visual>
 					<WhereNow />
 				</Visual>
 			</Beat>
@@ -46,7 +46,7 @@ export const Clue5Tablets = () => {
 				</Visual>
 			</Beat>
 			<Beat name="FakeSuspicion" captions={c} from={18} to={20}>
-				<Visual label="本物か、偽物か">
+				<Visual>
 					<FakeSuspicion />
 				</Visual>
 			</Beat>

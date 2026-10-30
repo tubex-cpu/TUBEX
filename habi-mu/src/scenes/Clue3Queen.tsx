@@ -1,4 +1,5 @@
 import {Beat, captionFrame} from '../components/Beat';
+import {Stage} from '../components/Cinema';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {MayaEgyptGap, MayaEgyptOlder, NoContact, PhotosRemain, QueenRoute} from '../components/MuArt1';
 import {Photo} from '../components/Photo';
@@ -30,9 +31,9 @@ export const Clue3Queen = () => {
 				<Photo id="queenmoo-naga" label="女王ムーの物語" />
 			</Beat>
 			<Beat name="QueenRoute" captions={c} from={8} to={9}>
-				<Visual label="海を渡って、エジプトへ？">
+				<Stage label="海を渡って、エジプトへ？" labelBottom>
 					<QueenRoute />
-				</Visual>
+				</Stage>
 			</Beat>
 			<Beat name="スフィンクスも、マヤから" captions={c} from={10} to={10}>
 				<Photo id="sphinx" move="out" label="スフィンクスも、マヤから？" />
@@ -44,7 +45,7 @@ export const Clue3Queen = () => {
 				<Photo id="queenmoo-rain" label="壁画と彫刻の、本当の意味" />
 			</Beat>
 			<Beat name="NoContact" captions={c} from={16} to={16}>
-				<Visual label="つなぐ遺物は？">
+				<Visual>
 					<NoContact />
 				</Visual>
 			</Beat>
@@ -63,7 +64,7 @@ export const Clue3Queen = () => {
 				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 21, 22, fps)} />
 			</Beat>
 			<Beat name="PhotosRemain" captions={c} from={24}>
-				<Visual label="マヤの女王が、太平洋へ？">
+				<Visual>
 					<PhotosRemain />
 				</Visual>
 			</Beat>

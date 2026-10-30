@@ -1,4 +1,5 @@
 import {Beat, captionFrame} from '../components/Beat';
+import {Stage} from '../components/Cinema';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {BasaltCrib, BasaltTons, DangerList, HeianKamakura, HowMoved, MuCapitalClaim, NanMadolDates, Not12000, PohnpeiMap, QuarryRoute, SaudeleurRule, UThClock} from '../components/MuArt2';
 import {Photo} from '../components/Photo';
@@ -13,9 +14,9 @@ export const Clue6NanMadol = () => {
 	return (
 		<SceneFrame captions={c} voice="Clue6NanMadol" label="第6の手がかり" title="南の海の石の都は、ムーの都だった？">
 			<Beat name="PohnpeiMap" captions={c} from={0} to={0}>
-				<Visual label="ミクロネシアのポンペイ島">
+				<Stage label="ミクロネシアのポンペイ島" labelBottom>
 					<PohnpeiMap />
-				</Visual>
+				</Stage>
 			</Beat>
 			<Beat name="人の手で造られた、100" captions={c} from={1} to={2}>
 				<Photo id="nanmadol-f" move="out" label="人の手で造られた、100の島" />
@@ -29,9 +30,9 @@ export const Clue6NanMadol = () => {
 				</Visual>
 			</Beat>
 			<Beat name="MuCapitalClaim" captions={c} from={7} to={8}>
-				<Visual label="ムーの都の跡？">
+				<Stage label="ムーの都の跡？" labelBottom>
 					<MuCapitalClaim />
-				</Visual>
+				</Stage>
 			</Beat>
 			<Beat name="いつ造られた？" captions={c} from={9} to={10}>
 				<Photo id="nanmadol-h" move="left" label="いつ造られた？" />

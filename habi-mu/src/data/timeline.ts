@@ -2,7 +2,7 @@
 export const TRANSITION_FRAMES = 20;
 
 export const sceneDurations = {
-	Intro: 3287,
+	Intro: 3871,
 	JudgeEntrance: 828,
 	Clue1Name: 4027,
 	Clue2Maya: 4109,
@@ -15,7 +15,7 @@ export const sceneDurations = {
 	Clue9Moai: 4755,
 	Clue10Walk: 4539,
 	Clue11Settle: 3899,
-	Clue12Collapse: 4314,
+	Clue12Collapse: 4402,
 	Clue13Yonaguni: 5234,
 	Clue14Forbidden: 3927,
 	Clue15Sandy: 4097,
@@ -28,4 +28,4 @@ export const sceneDurations = {
 	Closing: 449,
 } as const;
 
-export const TOTAL_FRAMES = 96147;
+export const TOTAL_FRAMES = 96819;

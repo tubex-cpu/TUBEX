@@ -1,4 +1,5 @@
 import {Beat, captionFrame} from '../components/Beat';
+import {Stage} from '../components/Cinema';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {DriftApart, FixedContinents, LemurPuzzle, LemuriaBridge, PlateAccepted} from '../components/MuArt4';
 import {Photo} from '../components/Photo';
@@ -13,9 +14,9 @@ export const Clue16Lemuria = () => {
 	return (
 		<SceneFrame captions={c} voice="Clue16Lemuria" label="第16の手がかり" title="科学者も、海に沈んだ大陸を信じていた？">
 			<Beat name="LemuriaBridge" captions={c} from={0} to={2}>
-				<Visual label="もうひとつの消えた大陸">
+				<Stage label="もうひとつの消えた大陸" labelBottom>
 					<LemuriaBridge />
-				</Visual>
+				</Stage>
 			</Beat>
 			<Beat name="レムールの化石" captions={c} from={3} to={5}>
 				<Photo id="lemur" move="out" label="レムールの化石" />
@@ -26,7 +27,7 @@ export const Clue16Lemuria = () => {
 				</Visual>
 			</Beat>
 			<Beat name="FixedContinents" captions={c} from={8} to={9}>
-				<Visual label="動かない大陸">
+				<Visual>
 					<FixedContinents />
 				</Visual>
 			</Beat>
@@ -37,9 +38,9 @@ export const Clue16Lemuria = () => {
 				<Photo id="wegener" label="ヴェーゲナー" />
 			</Beat>
 			<Beat name="DriftApart" captions={c} from={13} to={14}>
-				<Visual label="大陸が、動く">
+				<Stage label="大陸が、動く" labelBottom>
 					<DriftApart />
-				</Visual>
+				</Stage>
 			</Beat>
 			<Beat name="PlateAccepted" captions={c} from={15} to={17}>
 				<Visual label="プレートテクトニクス">

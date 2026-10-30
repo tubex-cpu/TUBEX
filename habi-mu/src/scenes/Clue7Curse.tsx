@@ -47,12 +47,12 @@ export const Clue7Curse = () => {
 				</Visual>
 			</Beat>
 			<Beat name="NoChainDeaths" captions={c} from={14} to={16}>
-				<Visual label="その後に調べた人々は？">
+				<Visual>
 					<NoChainDeaths />
 				</Visual>
 			</Beat>
 			<Beat name="AncestorsPlace" captions={c} from={17} to={20}>
-				<Visual label="呪いの話が伝えるもの">
+				<Visual>
 					<AncestorsPlace />
 				</Visual>
 			</Beat>

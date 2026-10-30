@@ -1,11 +1,13 @@
 import type React from 'react';
 import {interpolate, useCurrentFrame} from 'remotion';
 import {colors} from '../theme';
-import {BigLine, Bars, PacificMap, Panel, Versus, Years, clamp, ease, fadeIn, mincho, places, txt} from './MuKit';
+import {BigLine, Bars, Panel, Versus, Years, clamp, ease, fadeIn, mincho, places, txt} from './MuKit';
+import {GeoMap, MapNote} from './MuMap';
 
 // ---- 第6の手がかり ナン・マドール ----
 
-export const PohnpeiMap: React.FC = () => <PacificMap pins={[{at: places.pohnpei, label: 'ポンペイ島', at0: 10}, {at: places.japan, label: '日本', at0: 25, color: colors.japan}]} />;
+export const PohnpeiMap: React.FC = () => <GeoMap view="pacific" focus={places.pohnpei} zoom={1.3} pins={[{at: places.pohnpei, label: 'ポンペイ島', at0: 10}, {at: places.japan, label: '日本', at0: 25, color: colors.japan, dy: 60}]} />;
+
 
 // 約100の人工島と水路（上から見た図）
 export const IsletGrid: React.FC = () => {
@@ -56,7 +58,8 @@ export const BasaltCrib: React.FC = () => {
 	);
 };
 
-export const MuCapitalClaim: React.FC = () => <PacificMap mu={0.7} pins={[{at: places.pohnpei, label: 'ムーの都の跡？', at0: 10}]} />;
+export const MuCapitalClaim: React.FC = () => <GeoMap view="pacific" focus={[165, 5]} zoom={1.14} mu={0.7} pins={[{at: places.pohnpei, label: 'ムーの都の跡？', at0: 10}]} />;
+
 
 // サンゴのウラン・トリウム年代測定
 export const UThClock: React.FC = () => {
@@ -141,7 +144,7 @@ export const SaudeleurRule: React.FC = () => {
 			{[0, 1, 2, 3, 4, 5].map((i) => (
 				<g key={i} opacity={fadeIn(frame, 20 + i * 6)}>
 					<circle cx={200 + i * 200} cy={540} r={22} fill="#cfc6b4" />
-					<path d={`M${200 + i * 200} 515 Q ${(200 + i * 200 + 700) / 2} 420 700 370`} stroke={colors.goldSoft} strokeWidth={3} fill="none" strokeDasharray="8 8" />
+					<path d={`M${200 + i * 200} 515 Q ${(200 + i * 200 + 700) / 2} 500 700 455`} stroke={colors.goldSoft} strokeWidth={3} fill="none" strokeDasharray="8 8" />
 				</g>
 			))}
 		</Panel>
@@ -240,7 +243,7 @@ export const NightOfCurse: React.FC = () => {
 	const flash = frame % 50 < 4 ? 0.5 : 0;
 	return (
 		<Panel fill="#05070b">
-			<rect width={1400} height={620} rx={30} fill="#cfe0ff" opacity={flash} />
+			<rect x={-1000} y={-600} width={3400} height={1820} fill="#cfe0ff" opacity={flash} />
 			<text x={700} y={330} textAnchor="middle" {...mincho(110, '#e94b3c')} opacity={fadeIn(frame, 10)}>
 				墓の主の怒り？
 			</text>
@@ -280,7 +283,7 @@ export const SunAndStone: React.FC = () => {
 				return <line key={i} x1={1100 + Math.cos(a) * 110} y1={140 + Math.sin(a) * 110} x2={1100 + Math.cos(a) * 160} y2={140 + Math.sin(a) * 160} stroke="#ffcf5a" strokeWidth={8} />;
 			})}
 			<rect x={250} y={380} width={420} height={90} rx={30} fill="#2f353b" />
-			<rect y={470} width={1400} height={150} fill="#5b4730" />
+			<rect x={-1000} y={470} width={3400} height={150 + 500} fill="#5b4730" />
 			<text x={460} y={300} textAnchor="middle" {...txt(48, colors.goldSoft)}>
 				赤道に近い島の強い日差し
 			</text>
@@ -299,7 +302,7 @@ export const PlatinumCoffin: React.FC = () => {
 	const shine = 0.5 + 0.5 * Math.sin(frame / 9);
 	return (
 		<Panel fill="#071826">
-			<rect y={0} width={1400} height={620} fill="#0b2a40" />
+			<rect x={-1000} y={0} width={3400} height={620 + 500} fill="#0b2a40" />
 			<rect x={480} y={330} width={440} height={140} rx={30} fill="#d8dde3" opacity={0.5 + shine * 0.4} />
 			<rect x={480} y={330} width={440} height={30} rx={14} fill="#ffffff" opacity={shine * 0.5} />
 			{[...Array(10)].map((_, i) => (
@@ -321,17 +324,19 @@ export const JapaneseDiverClaim: React.FC = () => (
 );
 
 export const NanyoMap: React.FC = () => (
-	<PacificMap
+	<GeoMap
+		view="micronesia"
+		focus={[150, 12]}
+		areas={[{pts: [[130, 22], [172, 22], [172, 0], [130, 0]], fill: 'rgba(232,84,107,0.12)', stroke: colors.japan, dash: true}]}
 		pins={[
 			{at: places.pohnpei, label: 'ポンペイ', at0: 10},
 			{at: places.mariana, label: 'マリアナ', at0: 20},
-			{at: [134.5, 7.5], label: 'パラオ', at0: 30, dy: 50},
+			{at: [134.5, 7.5], label: 'パラオ', at0: 30},
 			{at: places.japan, label: '日本', at0: 0, color: colors.japan},
 		]}
-	>
-		<rect x={420} y={150} width={420} height={170} rx={20} fill="none" stroke={colors.japan} strokeWidth={5} strokeDasharray="16 10" />
-	</PacificMap>
+	/>
 );
+
 
 export const NoEvidenceList: React.FC = () => {
 	const frame = useCurrentFrame();
@@ -364,7 +369,7 @@ export const LidarFields: React.FC = () => {
 					<rect width={scan} height={620} />
 				</clipPath>
 			</defs>
-			<rect width={1400} height={620} rx={30} fill="#1f3a22" />
+			<rect x={-1000} y={-600} width={3400} height={1820} fill="#1f3a22" />
 			<g clipPath="url(#lidarClip)">
 				{[...Array(10)].map((_, i) => (
 					<path key={i} d={`M100 ${120 + i * 45} Q 700 ${90 + i * 45 + (i % 2) * 30} 1300 ${120 + i * 45}`} stroke="#c8e6a0" strokeWidth={4} fill="none" opacity={0.8} />
@@ -381,18 +386,27 @@ export const LidarFields: React.FC = () => {
 // ---- 第9の手がかり モアイ ----
 
 export const EasterMap: React.FC = () => (
-	<PacificMap
+	<GeoMap
+		view="easter"
+		focus={[-100, -28]}
 		pins={[
 			{at: places.easter, label: 'イースター島', at0: 0},
-			{at: places.chile, label: 'チリ', at0: 15, dy: 50},
+			{at: [-71.3, -30], label: 'チリ', at0: 15, dx: -60},
 		]}
-		routes={[{from: places.easter, to: places.chile, at0: 20, bend: 30}]}
+		routes={[{from: places.easter, to: [-71.3, -30], at0: 20, bend: 40}]}
 	>
-		<text x={1150} y={430} textAnchor="middle" {...txt(40, colors.goldSoft)} stroke="#000" strokeWidth={6} paintOrder="stroke">
-			3500キロ以上
-		</text>
-	</PacificMap>
+		{(p) => {
+			const [x1] = p(places.easter[0], 0);
+			const [x2] = p(-71.3, 0);
+			return (
+				<MapNote x={(x1 + x2) / 2} y={p(0, -24)[1]} at0={50}>
+					3500キロ以上
+				</MapNote>
+			);
+		}}
+	</GeoMap>
 );
+
 
 export const MountainTop: React.FC = () => {
 	const frame = useCurrentFrame();
@@ -400,7 +414,7 @@ export const MountainTop: React.FC = () => {
 	return (
 		<Panel fill="#0a1626">
 			<path d="M150 560 L520 260 L700 150 L880 260 L1250 560 Z" fill="#6b5a3f" />
-			<rect y={sea} width={1400} height={620 - sea} fill="#1f5f86" opacity={0.92} />
+			<rect x={-1000} y={sea} width={3400} height={620 - sea + 500} fill="#1f5f86" opacity={0.92} />
 			<text x={700} y={110} textAnchor="middle" {...txt(44, colors.goldSoft)} opacity={fadeIn(frame, 60)}>
 				山の頂だけが島として残った？（チャーチワードの説）
 			</text>
@@ -484,7 +498,7 @@ export const SledgeTheory: React.FC = () => {
 	const x = interpolate(frame, [0, 150], [300, 520], clamp);
 	return (
 		<Panel>
-			<rect y={480} width={1400} height={140} fill="#5b4730" />
+			<rect x={-1000} y={480} width={3400} height={140 + 500} fill="#5b4730" />
 			{[...Array(6)].map((_, i) => (
 				<circle key={i} cx={x + i * 90} cy={470} r={16} fill="#7a5a3a" />
 			))}
@@ -543,7 +557,7 @@ export const RopeWalk: React.FC = () => {
 	const x = interpolate(frame, [0, 240], [460, 940], clamp);
 	return (
 		<Panel>
-			<rect y={500} width={1400} height={120} fill="#5b4730" />
+			<rect x={-1000} y={500} width={3400} height={120 + 500} fill="#5b4730" />
 			<g transform={`translate(${x} 500) rotate(${sway * 7}) translate(${-x} -500)`}>
 				<path d={`M${x - 70} 500 L${x - 60} 230 Q${x - 55} 160 ${x} 155 Q${x + 55} 160 ${x + 60} 230 L${x + 70} 500 Z`} fill="#7d776b" />
 			</g>

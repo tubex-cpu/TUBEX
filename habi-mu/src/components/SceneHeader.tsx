@@ -19,8 +19,8 @@ export const SceneHeader: React.FC<Props> = ({label, title}) => {
 				display: 'flex',
 				alignItems: 'center',
 				gap: 18,
-				opacity: interpolate(frame, [10, 30], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
-				translate: interpolate(frame, [10, 40], ['-40px 0px', '0px 0px'], {
+				opacity: interpolate(frame, [110, 130], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
+				translate: interpolate(frame, [110, 140], ['-40px 0px', '0px 0px'], {
 					extrapolateLeft: 'clamp',
 					extrapolateRight: 'clamp',
 					easing: Easing.bezier(0.16, 1, 0.3, 1),

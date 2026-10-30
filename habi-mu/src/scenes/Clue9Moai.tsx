@@ -1,4 +1,5 @@
 import {Beat, captionFrame} from '../components/Beat';
+import {Stage} from '../components/Cinema';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {EasterMap, FacingClaim, FacingVillage, MountainTop, WatchOrBarrier} from '../components/MuArt2';
 import {Photo} from '../components/Photo';
@@ -16,9 +17,9 @@ export const Clue9Moai = () => {
 				<Photo id="rapanui-land" move="out" label="イースター島、ラパ・ヌイ" />
 			</Beat>
 			<Beat name="EasterMap" captions={c} from={1} to={2}>
-				<Visual label="太平洋にぽつんと">
+				<Stage label="太平洋にぽつんと" labelBottom>
 					<EasterMap />
-				</Visual>
+				</Stage>
 			</Beat>
 			<Beat name="900体以上の巨大な石像" captions={c} from={3} to={3}>
 				<Photo id="tongariki-b" label="900体以上の巨大な石像" />
@@ -34,7 +35,7 @@ export const Clue9Moai = () => {
 				</Visual>
 			</Beat>
 			<Beat name="WatchOrBarrier" captions={c} from={8} to={10}>
-				<Visual label="何を見張っている？">
+				<Visual>
 					<WatchOrBarrier />
 				</Visual>
 			</Beat>
