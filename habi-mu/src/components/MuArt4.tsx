@@ -1,7 +1,8 @@
 import type React from 'react';
 import {interpolate, useCurrentFrame} from 'remotion';
 import {colors} from '../theme';
-import {BigLine, PacificMap, Panel, SeaSection, Versus, Years, clamp, ease, fadeIn, mincho, places, txt} from './MuKit';
+import {BigLine, Panel, SeaSection, Versus, Years, clamp, ease, fadeIn, mincho, places, txt} from './MuKit';
+import {GeoMap, MapNote} from './MuMap';
 
 // ---- 第16の手がかり レムリア ----
 
@@ -40,48 +41,54 @@ export const LemuriaBridge: React.FC = () => {
 	const frame = useCurrentFrame();
 	const sink = interpolate(frame, [40, 120], [0, 1], clamp);
 	return (
-		<Panel fill="#0e2b45">
-			<path d="M640 330 Q 700 300 720 380 Q 700 480 650 470 Q 620 420 640 330 Z" fill="#5f7a4e" />
-			<path d="M980 120 Q 1160 120 1180 260 Q 1120 420 1040 420 Q 960 300 980 120 Z" fill="#5f7a4e" />
-			<path d="M700 360 Q 850 280 1000 260 L1010 320 Q 860 340 720 420 Z" fill="#8a6e3f" opacity={1 - sink * 0.8} transform={`translate(0 ${sink * 30})`} />
-			<text x={860} y={200} textAnchor="middle" {...mincho(70, colors.goldSoft)}>
-				レムリア
-			</text>
-			<text x={700} y={580} textAnchor="middle" {...txt(40, colors.muted)}>
-				1864年、スクレーターの考えた「沈んだ陸の橋」
-			</text>
-		</Panel>
+		<GeoMap
+			view="indian"
+			focus={[62, 0]}
+			areas={[{pts: [[46, -15], [52, -8], [60, -2], [68, 5], [74, 11], [77, 9], [70, 1], [60, -7], [51, -14], [47, -19]], opacity: 1 - sink * 0.85, dy: sink * 30}]}
+			pins={[
+				{at: [46.9, -19], label: 'マダガスカル', at0: 0, dy: 60},
+				{at: [78.5, 18], label: 'インド', at0: 10, dx: 110, dy: 15},
+			]}
+		>
+			{(p) => (
+				<MapNote x={p(66, 0)[0] + 80} y={p(0, -1)[1]} size={64} at0={20}>
+					レムリア
+				</MapNote>
+			)}
+		</GeoMap>
 	);
 };
+
 
 export const FixedContinents: React.FC = () => <BigLine main="大陸の形は、昔から変わらない" sub="19世紀の科学者たちの前提" size={92} />;
 
 export const DriftApart: React.FC = () => {
 	const frame = useCurrentFrame();
-	const d = interpolate(frame, [10, 140], [0, 1], ease);
+	const q = interpolate(frame, [10, 120], [0, 1], ease);
 	return (
-		<Panel fill="#0e2b45">
-			<g transform={`translate(${-d * 200} ${d * 40})`}>
-				<path d="M430 240 Q 490 210 510 290 Q 490 390 440 380 Q 410 330 430 240 Z" fill="#5f7a4e" />
-				<text x={470} y={450} textAnchor="middle" {...txt(36)}>
-					マダガスカル
-				</text>
-			</g>
-			<g transform={`translate(${d * 260} ${-d * 120})`}>
-				<path d="M520 220 Q 640 200 660 300 Q 620 400 560 400 Q 510 320 520 220 Z" fill="#86a06e" />
-				<text x={590} y={460} textAnchor="middle" {...txt(36)}>
-					インド
-				</text>
-			</g>
-			<text x={700} y={90} textAnchor="middle" {...mincho(56, colors.goldSoft)}>
-				大陸そのものが、動いている
-			</text>
-			<text x={700} y={580} textAnchor="middle" {...txt(40, colors.muted)}>
-				1912年 ヴェーゲナー
-			</text>
-		</Panel>
+		<GeoMap view="indian" focus={[75, 12]} zoom={1.16}>
+			{(p) => {
+				const [x0, y0] = p(55, -30);
+				const [x1, y1] = p(77, 16);
+				const x = x0 + (x1 - x0) * q;
+				const y = y0 + (y1 - y0) * q;
+				return (
+					<>
+						<path d={`M${x0} ${y0} L${x} ${y}`} stroke={colors.goldSoft} strokeWidth={10} strokeLinecap="round" strokeDasharray="4 22" />
+						<circle cx={x} cy={y} r={20} fill={colors.goldSoft} stroke="#000" strokeWidth={4} />
+						<MapNote x={p(92, 0)[0]} y={p(0, -12)[1]} at0={40} size={44}>
+							インドは、南から何千キロも動いてきた
+						</MapNote>
+						<MapNote x={p(92, 0)[0]} y={p(0, -12)[1] + 62} at0={60} size={38} color={colors.muted}>
+							1912年 ヴェーゲナーの大陸移動説
+						</MapNote>
+					</>
+				);
+			}}
+		</GeoMap>
 	);
 };
+
 
 export const PlateAccepted: React.FC = () => (
 	<Years
@@ -109,7 +116,7 @@ export const CrustSection: React.FC = () => {
 	const frame = useCurrentFrame();
 	return (
 		<SeaSection seaY={150}>
-			<rect y={520} width={1400} height={100} fill="#6b2a1a" />
+			<rect x={-1000} y={520} width={3400} height={100 + 500} fill="#6b2a1a" />
 			<g opacity={fadeIn(frame, 0)}>
 				<path d="M0 120 L520 120 L560 170 L560 520 L0 520 Z" fill="#c9a77a" />
 				<text x={260} y={340} textAnchor="middle" {...mincho(56, '#3a2a1a')}>
@@ -195,16 +202,19 @@ export const RingOfFire: React.FC = () => {
 	const frame = useCurrentFrame();
 	const pts: [number, number][] = [[-71, -40], [-78, -5], [-90, 13], [-110, 25], [-125, 45], [-150, 58], [170, 52], [145, 40], [140, 30], [125, 10], [120, -5], [150, -8], [170, -18], [178, -38]];
 	return (
-		<PacificMap pins={[{at: places.japan, label: '日本', color: colors.japan}]}>
-			{pts.map(([lo, la], i) => {
-				const L = lo < 0 ? lo + 360 : lo;
-				const x = ((L - 100) / 200) * 1400;
-				const y = ((55 - la) / 110) * 620;
-				return <circle key={i} cx={x} cy={y} r={14} fill="#e94b3c" opacity={0.4 + 0.5 * Math.abs(Math.sin(frame / 15 + i))} />;
-			})}
-		</PacificMap>
+		<GeoMap view="pacific" focus={[150, 30]} zoom={1.12} pins={[{at: places.japan, label: '日本', color: colors.japan, dy: 60}]}>
+			{(p) => (
+				<>
+					{pts.map(([lo, la], i) => {
+						const [x, y] = p(lo, la);
+						return <circle key={i} cx={x} cy={y} r={16} fill="#e94b3c" opacity={0.4 + 0.5 * Math.abs(Math.sin(frame / 15 + i))} />;
+					})}
+				</>
+			)}
+		</GeoMap>
 	);
 };
+
 
 export const Subduction: React.FC = () => {
 	const frame = useCurrentFrame();
@@ -241,19 +251,24 @@ export const PrepareReal: React.FC = () => <BigLine main="備えるのは、本�
 export const NoMuNoRoots: React.FC = () => <BigLine main="ないものは、ルーツにならない" size={104} />;
 
 export const JapanAncestors: React.FC = () => (
-	<PacificMap
-		pins={[{at: places.japan, label: '日本列島', color: colors.japan, at0: 50}]}
+	<GeoMap
+		view="japan"
+		focus={[136, 37]}
+		pins={[{at: places.japan, label: '日本列島', color: colors.japan, at0: 50, dx: 120, dy: 20}]}
 		routes={[
-			{from: [125, 50], to: [141, 43], at0: 0, color: colors.japan},
+			{from: [135, 48], to: [142, 44], at0: 0, color: colors.japan, bend: 20},
 			{from: [120, 36], to: [131, 34], at0: 15, color: colors.japan},
-			{from: [121, 24], to: [129, 29], at0: 30, color: colors.japan, bend: 20},
+			{from: [121, 25], to: [128, 28], at0: 30, color: colors.japan, bend: 20},
 		]}
 	>
-		<text x={300} y={560} textAnchor="middle" {...txt(40, colors.goldSoft)} stroke="#000" strokeWidth={6} paintOrder="stroke">
-			いくつもの道で、何万年もかけて
-		</text>
-	</PacificMap>
+		{() => (
+			<MapNote x={960} y={175} at0={60} size={46}>
+				いくつもの道で、何万年もかけて
+			</MapNote>
+		)}
+	</GeoMap>
 );
+
 
 export const EighteenDone: React.FC = () => <BigLine main="18の手がかり、ムー大陸はどこにもなかった" size={74} />;
 
@@ -262,9 +277,18 @@ export const EighteenDone: React.FC = () => <BigLine main="18の手がかり、�
 export const ZealandiaMap: React.FC = () => {
 	const frame = useCurrentFrame();
 	return (
-		<PacificMap zealandia={interpolate(frame, [10, 60], [0, 1], clamp)} pins={[{at: places.nz, label: 'ニュージーランド', at0: 0, dy: 60}, {at: places.newcal, label: 'ニューカレドニア', at0: 20}]} />
+		<GeoMap
+			view="zealandia"
+			focus={[168, -32]}
+			zealandia={interpolate(frame, [10, 60], [0, 1], clamp)}
+			pins={[
+				{at: [175.3, -39], label: 'ニュージーランド', at0: 0, dx: 200, dy: 15},
+				{at: places.newcal, label: 'ニューカレドニア', at0: 20, dx: 210, dy: 15},
+			]}
+		/>
 	);
 };
+
 
 export const Zealandia94: React.FC = () => {
 	const frame = useCurrentFrame();
@@ -306,25 +330,28 @@ export const Doggerland: React.FC = () => {
 	const frame = useCurrentFrame();
 	const sea = interpolate(frame, [20, 160], [0, 1], clamp);
 	return (
-		<Panel fill="#0e2b45">
-			<path d="M200 100 Q 330 80 380 200 Q 400 330 330 470 Q 260 520 220 420 Q 160 300 200 100 Z" fill="#5f7a4e" />
-			<path d="M960 220 Q 1100 200 1260 260 L1260 520 L980 520 Q 920 400 960 220 Z" fill="#5f7a4e" />
-			<path d="M380 260 Q 650 200 960 260 L960 470 Q 650 520 330 470 Z" fill="#7a8a4e" opacity={1 - sea * 0.85} />
-			<text x={290} y={560} textAnchor="middle" {...txt(36)}>
-				イギリス
-			</text>
-			<text x={1110} y={570} textAnchor="middle" {...txt(36)}>
-				オランダ
-			</text>
-			<text x={660} y={380} textAnchor="middle" {...mincho(56, colors.goldSoft)}>
-				ドッガーランド
-			</text>
-			<text x={700} y={80} textAnchor="middle" {...txt(40, colors.muted)}>
-				人が暮らした陸が、海面の上昇で北海の底に
-			</text>
-		</Panel>
+		<GeoMap
+			view="northsea"
+			focus={[3.5, 54.4]}
+			areas={[{pts: [[1.2, 53.1], [4.2, 52.8], [7.4, 53.6], [8.3, 55.0], [6.6, 56.1], [3.4, 56.4], [0.9, 55.6], [0.1, 54.2]], fill: 'rgba(122,138,78,0.75)', stroke: '#c8d69a', opacity: 1 - sea * 0.85}]}
+		>
+			{(p) => (
+				<>
+					<MapNote x={p(3.8, 0)[0]} y={p(0, 54.85)[1]} size={62} at0={10}>
+						ドッガーランド
+					</MapNote>
+					<MapNote x={p(-1.6, 0)[0]} y={p(0, 53.2)[1]} size={40} color={colors.muted}>
+						イギリス
+					</MapNote>
+					<MapNote x={p(6.1, 0)[0]} y={p(0, 52.75)[1]} size={40} color={colors.muted}>
+						オランダ
+					</MapNote>
+				</>
+			)}
+		</GeoMap>
 	);
 };
+
 
 export const RealStories: React.FC = () => {
 	const frame = useCurrentFrame();
@@ -429,25 +456,28 @@ export const BeforeEuropeans: React.FC = () => (
 );
 
 export const ScriptInventions: React.FC = () => (
-	<PacificMap
+	<GeoMap
+		view="world"
+		focus={[20, 20]}
+		zoom={1.06}
 		pins={[
-			{at: places.easter, label: 'イースター島？', color: colors.goldSoft, at0: 50},
-			{at: [-90, 17], label: 'マヤ', at0: 30},
-			{at: [113, 34], label: '中国', at0: 15},
+			{at: [44.4, 33.1], label: 'メソポタミア', at0: 0, size: 40},
+			{at: [31.2, 29.9], label: 'エジプト', at0: 8, dy: 60, size: 40},
+			{at: [113, 34], label: '中国', at0: 16, size: 40},
+			{at: [-90, 17], label: 'マヤ', at0: 24, size: 40},
+			{at: places.easter, label: 'イースター島？', color: colors.goldSoft, at0: 50, size: 40},
 		]}
-	>
-		<text x={230} y={560} textAnchor="middle" {...txt(36, colors.muted)} stroke="#000" strokeWidth={6} paintOrder="stroke">
-			メソポタミア・エジプト（地図の外）
-		</text>
-	</PacificMap>
+	/>
 );
+
 
 export const WhenCarved: React.FC = () => <BigLine main="木が切られた年代は、わかった" sub="文字が刻まれたのは、いつ？" size={96} />;
 
 export const SeaOfMystery: React.FC = () => {
 	const frame = useCurrentFrame();
-	return <PacificMap pins={[{at: places.easter, label: '？', at0: 0}]} sea={frame % 2 === 0 ? '#0e2b45' : '#0e2b45'} />;
+	return <GeoMap view="pacific" focus={[200, -5]} zoom={1.08} mu={0.25 + 0.15 * Math.sin(frame / 20)} />;
 };
+
 
 // 海の底に並ぶ、沈んだ島々
 export const SunkenIslands: React.FC = () => {

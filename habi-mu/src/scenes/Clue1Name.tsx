@@ -16,12 +16,12 @@ export const Clue1Name = () => {
 				<Photo id="churchward-mapbook" move="out" label="映画、漫画、雑誌の定番" />
 			</Beat>
 			<Beat name="MuuEmpire" captions={c} from={2} to={2}>
-				<Visual label="海の底の「ムウ帝国」">
+				<Visual>
 					<MuuEmpire />
 				</Visual>
 			</Beat>
 			<Beat name="AncientLegend" captions={c} from={3} to={4}>
-				<Visual label="何千年も前から？">
+				<Visual>
 					<AncientLegend />
 				</Visual>
 			</Beat>
@@ -51,7 +51,7 @@ export const Clue1Name = () => {
 				<Photo id="landa-alphabet" label="文字とアルファベットの対応表？" />
 			</Beat>
 			<Beat name="KeyFound" captions={c} from={13} to={13}>
-				<Visual label="これで読める？">
+				<Visual>
 					<KeyFound />
 				</Visual>
 			</Beat>
@@ -64,7 +64,7 @@ export const Clue1Name = () => {
 				</Visual>
 			</Beat>
 			<Beat name="NameBirth" captions={c} from={18} to={19}>
-				<Visual label="名前の、はじまり">
+				<Visual>
 					<NameBirth />
 				</Visual>
 			</Beat>

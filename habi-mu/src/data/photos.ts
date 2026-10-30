@@ -4,6 +4,8 @@ type PhotoEntry = {
 	readonly credit: string;
 	readonly position?: string;
 	readonly fit?: 'cover' | 'contain';
+	// 色の調整（CSS の filter）
+	readonly filter?: string;
 	// 人物・像の顔が上半分にある写真は、テロップを下に置く
 	readonly labelBottom?: boolean;
 };

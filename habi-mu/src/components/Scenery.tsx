@@ -1,23 +1,25 @@
 import type React from 'react';
-import {Easing, interpolate, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, Easing, interpolate, useCurrentFrame} from 'remotion';
+import {Telop} from './Cinema';
 import {colors, gothicFamily, minchoFamily} from '../theme';
-import {Center, Label} from './Illustrations';
+import {Center} from './Illustrations';
 
 const clamp = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
 const ease = {...clamp, easing: Easing.bezier(0.16, 1, 0.3, 1)} as const;
 
-// 絵＋小さなラベルの基本レイアウト（画面中央は絵が主役、文字は添えるだけ）
+// 図解の舞台：画面いっぱいの夜の背景に図解を大きく置き、問いのテロップを上の帯に出す（テレビでも大きく見える）
 export const Visual: React.FC<{
 	readonly children: React.ReactNode;
 	readonly label?: string;
 	readonly labelColor?: string;
-}> = ({children, label, labelColor}) => (
-	<Center>
-		<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-			<div style={{zoom: 0.86}}>{children}</div>
-			{label ? <Label color={labelColor} size={54}>{label}</Label> : null}
+}> = ({children, label}) => (
+	<AbsoluteFill style={{background: 'radial-gradient(ellipse at 50% 58%, #15243b 0%, #08101e 62%, #03060d 100%)', overflow: 'hidden'}}>
+		<div style={{position: 'absolute', left: 0, right: 0, top: 250, height: 700, display: 'flex', justifyContent: 'center'}}>
+			<div style={{zoom: 1.12}}>{children}</div>
 		</div>
-	</Center>
+		<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(3,6,13,0.55) 0%, rgba(3,6,13,0) 20%, rgba(3,6,13,0) 82%, rgba(3,6,13,0.85) 100%)'}} />
+		{label ? <Telop text={label} top={96} max={76} /> : null}
+	</AbsoluteFill>
 );
 
 const svgText = (size: number, color: string = colors.text, weight = 900) => ({

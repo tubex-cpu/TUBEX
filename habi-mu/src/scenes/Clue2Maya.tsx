@@ -55,7 +55,7 @@ export const Clue2Maya = () => {
 				<Photo id="copan-stela" move="out" label="王の名前、即位の日付" />
 			</Beat>
 			<Beat name="KeyReborn" captions={c} from={18} to={19}>
-				<Visual label="解読の鍵に">
+				<Visual>
 					<KeyReborn />
 				</Visual>
 			</Beat>

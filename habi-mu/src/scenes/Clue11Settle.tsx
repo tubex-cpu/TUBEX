@@ -1,4 +1,5 @@
 import {Beat, captionFrame} from '../components/Beat';
+import {Stage} from '../components/Cinema';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {Again800, BeyondHorizon, CleanSamples, HokuleaRoute, NoInstruments, SettleDate, SurvivorClaim, VoyagingSkills} from '../components/MuArt3';
 import {Photo} from '../components/Photo';
@@ -13,9 +14,9 @@ export const Clue11Settle = () => {
 	return (
 		<SceneFrame captions={c} voice="Clue11Settle" label="第11の手がかり" title="イースター島の人々は、沈んだ大陸から逃げてきた？">
 			<Beat name="SurvivorClaim" captions={c} from={0} to={2}>
-				<Visual label="ムーの生き残り？">
+				<Stage label="ムーの生き残り？" labelBottom>
 					<SurvivorClaim />
-				</Visual>
+				</Stage>
 			</Beat>
 			<Beat name="島に人が来たのは、いつ？" captions={c} from={3} to={5}>
 				<Photo id="rapanui-hills" move="out" label="島に人が来たのは、いつ？" />
@@ -31,7 +32,7 @@ export const Clue11Settle = () => {
 				</Visual>
 			</Beat>
 			<Beat name="Again800" captions={c} from={8} to={8}>
-				<Visual label="ここでも、800年前">
+				<Visual>
 					<Again800 />
 				</Visual>
 			</Beat>
@@ -55,12 +56,12 @@ export const Clue11Settle = () => {
 				<Photo id="mau" label="航海士マウ・ピアイルグ" />
 			</Beat>
 			<Beat name="HokuleaRoute" captions={c} from={17} to={17}>
-				<Visual label="ハワイからタヒチへ">
+				<Stage label="ハワイからタヒチへ" labelBottom>
 					<HokuleaRoute />
-				</Visual>
+				</Stage>
 			</Beat>
 			<Beat name="BeyondHorizon" captions={c} from={18} to={19}>
-				<Visual label="自分たちの意思で">
+				<Visual>
 					<BeyondHorizon />
 				</Visual>
 			</Beat>

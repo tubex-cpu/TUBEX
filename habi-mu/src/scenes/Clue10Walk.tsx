@@ -23,7 +23,7 @@ export const Clue10Walk = () => {
 				</Visual>
 			</Beat>
 			<Beat name="WalkedLegend" captions={c} from={4} to={5}>
-				<Visual label="島の言い伝え">
+				<Visual>
 					<WalkedLegend />
 				</Visual>
 			</Beat>

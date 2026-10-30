@@ -52,7 +52,7 @@ md = f'''# YouTube 投稿用テキスト：ムー大陸判決
 映画や雑誌で語り継がれてきた「ムー大陸」。でも、その名前が生まれたのは、たった160年前のことでした。
 
 ムーの都とされた南の海の石の都、墓を暴いた男の死、海底に眠るというプラチナの棺、海に背を向けるモアイ、沖縄の海の底の階段、上陸禁止の島、地図から消された島。
-2025年に発表された「モアイは歩いた」という研究など、最新の調査をもとに、18の手がかりを閉園後の法廷でハビ判事がひとつずつ裁きます。
+2025年に発表された「モアイは歩いた」という実験、人工知能で衛星写真を読み解いた研究、古い骨に残った遺伝子の研究など、最新の調査をもとに、18の手がかりを閉園後の法廷でハビ判事がひとつずつ裁きます。
 
 そして、証拠を追いかけた先には、本当に海の下に眠る大陸がありました。
 
@@ -68,6 +68,8 @@ md = f'''# YouTube 投稿用テキスト：ムー大陸判決
 ・Nan Madol: Ceremonial Centre of Eastern Micronesia（UNESCO 世界遺産）https://whc.unesco.org/en/list/1503
 ・Lipo, C. P. & Hunt, T. L.（2025）The walking moai hypothesis（Journal of Archaeological Science 183）https://experts.arizona.edu/en/publications/the-walking-moai-hypothesis-archaeological-evidence-experimental-/
 ・Hunt, T. L. & Lipo, C. P.（2006）ラパ・ヌイの移住年代（Science／ハワイ大学）https://www.hawaii.edu/news/article.php?aId=1364
+・Moreno-Mayar, J. V. ほか（2024）Ancient Rapanui genomes reveal resilience and pre-European contact with the Americas（Nature 633）https://doi.org/10.1038/s41586-024-07881-4
+・Davis, D. S. ほか（2024）人工知能と衛星写真によるラパ・ヌイの畑の調査（Science Advances／アリゾナ大学）https://news.arizona.edu/news/study-challenges-popular-idea-easter-islanders-committed-ecocide
 ・Polynesian Voyaging Society（ホクレア号 1976年の航海）https://archive.hokulea.com/holokai/1976/ben_finney.html
 ・与那国島海底地形（琉球新報）https://ryukyushimpo.jp/news/entry-5207408.html
 ・「神宿る島」宗像・沖ノ島と関連遺産群 https://www.crossroadfukuoka.jp/spot/10242
@@ -86,6 +88,7 @@ md = f'''# YouTube 投稿用テキスト：ムー大陸判決
 ▼クレジット
 ナレーション：VOICEVOX:玄野武宏
 BGM・効果音：オリジナル
+地図：Natural Earth（陸地・海底の深さのデータ。パブリックドメイン）をもとに作成
 写真・資料（Wikimedia Commons。登場順）
 {credits}
 

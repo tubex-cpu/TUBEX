@@ -1,4 +1,5 @@
 import {Beat, captionFrame} from '../components/Beat';
+import {Stage} from '../components/Cinema';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {CoralOnTop, CrustSection, EchoSounder, GraniteMu, GuyotStory, NoSunkenCrust, RingOfFire, SunkenIslands, WoodAndStone} from '../components/MuArt4';
 import {Photo} from '../components/Photo';
@@ -13,7 +14,7 @@ export const Clue17Seafloor = () => {
 	return (
 		<SceneFrame captions={c} voice="Clue17Seafloor" label="第17の手がかり" title="太平洋の海の底に、大陸が沈んでいる？">
 			<Beat name="GraniteMu" captions={c} from={0} to={2}>
-				<Visual label="花こう岩の大陸？">
+				<Visual>
 					<GraniteMu />
 				</Visual>
 			</Beat>
@@ -34,7 +35,7 @@ export const Clue17Seafloor = () => {
 				<Photo id="pillow-basalt" label="太平洋の海底は、玄武岩" />
 			</Beat>
 			<Beat name="NoSunkenCrust" captions={c} from={13} to={13}>
-				<Visual label="沈んだ大陸の跡は？">
+				<Visual>
 					<NoSunkenCrust />
 				</Visual>
 			</Beat>
@@ -55,7 +56,7 @@ export const Clue17Seafloor = () => {
 				</Visual>
 			</Beat>
 			<Beat name="CoralOnTop" captions={c} from={25} to={26}>
-				<Visual label="頂上のサンゴ">
+				<Visual>
 					<CoralOnTop />
 				</Visual>
 			</Beat>
@@ -68,9 +69,9 @@ export const Clue17Seafloor = () => {
 				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 29, 30, fps)} />
 			</Beat>
 			<Beat name="RingOfFire" captions={c} from={32}>
-				<Visual label="日本は？">
+				<Stage label="日本は？" labelBottom>
 					<RingOfFire />
-				</Visual>
+				</Stage>
 			</Beat>
 		</SceneFrame>
 	);

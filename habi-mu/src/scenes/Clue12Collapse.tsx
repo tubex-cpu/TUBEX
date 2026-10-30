@@ -1,4 +1,5 @@
 import {Beat, captionFrame} from '../components/Beat';
+import {Stage} from '../components/Cinema';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {CollapseStory, FarmCapacity, ForestGone, GenomeNoCrash, RealDecline, ToSouthAmerica, YonaguniMap} from '../components/MuArt3';
 import {Photo} from '../components/Photo';
@@ -36,9 +37,9 @@ export const Clue12Collapse = () => {
 				<Photo id="manavai" label="石を並べた畑" />
 			</Beat>
 			<Beat name="ToSouthAmerica" captions={c} from={17} to={20}>
-				<Visual label="南アメリカまで">
+				<Stage label="南アメリカまで" labelBottom>
 					<ToSouthAmerica />
-				</Visual>
+				</Stage>
 			</Beat>
 			<Beat name="RealDecline" captions={c} from={21} to={21}>
 				<Visual label="人口を減らしたもの">
@@ -52,9 +53,9 @@ export const Clue12Collapse = () => {
 				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 23, 24, fps)} />
 			</Beat>
 			<Beat name="YonaguniMap" captions={c} from={26}>
-				<Visual label="日本の海へ">
+				<Stage label="日本の海へ" labelBottom>
 					<YonaguniMap />
-				</Visual>
+				</Stage>
 			</Beat>
 		</SceneFrame>
 	);

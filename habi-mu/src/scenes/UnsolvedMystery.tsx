@@ -1,4 +1,5 @@
 import {Beat} from '../components/Beat';
+import {Stage} from '../components/Cinema';
 import {BeforeEuropeans, IndusClaim, RomeTablets, ScriptInventions, UnderThirty, WhenCarved} from '../components/MuArt4';
 import {Photo} from '../components/Photo';
 import {SceneFrame} from '../components/SceneFrame';
@@ -47,12 +48,12 @@ export const UnsolvedMystery = () => (
 			<Photo id="rongo-aruku" label="自分たちの力で、文字を？" />
 		</Beat>
 		<Beat name="ScriptInventions" captions={c} from={18} to={19}>
-			<Visual label="文字をゼロから生んだ場所">
+			<Stage label="文字をゼロから生んだ場所" labelBottom>
 				<ScriptInventions />
-			</Visual>
+			</Stage>
 		</Beat>
 		<Beat name="WhenCarved" captions={c} from={20} to={20}>
-			<Visual label="刻まれたのは、いつ？">
+			<Visual>
 				<WhenCarved />
 			</Visual>
 		</Beat>

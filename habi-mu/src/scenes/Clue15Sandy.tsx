@@ -1,4 +1,5 @@
 import {Beat, captionFrame} from '../components/Beat';
+import {Stage} from '../components/Cinema';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {ChartErased, ChartWithIsland, DepthSounding, OnlyOnPaper, SandyMap, SandyTimeline} from '../components/MuArt3';
 import {Photo} from '../components/Photo';
@@ -13,9 +14,9 @@ export const Clue15Sandy = () => {
 	return (
 		<SceneFrame captions={c} voice="Clue15Sandy" label="第15の手がかり" title="太平洋には、地図から消された島がある？">
 			<Beat name="SandyMap" captions={c} from={0} to={0}>
-				<Visual label="サンゴの海">
+				<Stage label="サンゴの海" labelBottom>
 					<SandyMap />
-				</Visual>
+				</Stage>
 			</Beat>
 			<Beat name="ChartWithIsland" captions={c} from={1} to={4}>
 				<Visual label="100年以上、地図に">
@@ -41,7 +42,7 @@ export const Clue15Sandy = () => {
 				</Visual>
 			</Beat>
 			<Beat name="OnlyOnPaper" captions={c} from={19} to={20}>
-				<Visual label="地図の上だけの島">
+				<Visual>
 					<OnlyOnPaper />
 				</Visual>
 			</Beat>

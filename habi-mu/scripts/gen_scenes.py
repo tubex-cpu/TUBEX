@@ -6,7 +6,19 @@ root = sys.argv[1]
 A1 = 'MuArt1'; A2 = 'MuArt2'; A3 = 'MuArt3'; A4 = 'MuArt4'
 def arts_of(path):
     return set(re.findall(r'^export const (\w+)', open(path).read(), re.M))
+# 実際の地形データの地図（GeoMap）を使う絵は、画面いっぱいの舞台に置き、テロップを下にする
+def maps_of(path):
+    src = open(path).read()
+    parts = re.split(r'^export const ', src, flags=re.M)[1:]
+    return {p.split(':')[0].split(' ')[0] for p in parts if '<GeoMap' in p}
+# 大きな一文だけの絵（BigLine）は、それ自体がテロップなので、上の帯は出さない
+def biglines_of(path):
+    src = open(path).read()
+    parts = re.split(r'^export const ', src, flags=re.M)[1:]
+    return {p.split(':')[0].split(' ')[0] for p in parts if '<BigLine' in p and 'useCurrentFrame' not in p}
 a1set = arts_of(f'{root}/src/components/{A1}.tsx'); a2set = arts_of(f'{root}/src/components/{A2}.tsx'); a3set = arts_of(f'{root}/src/components/{A3}.tsx'); a4set = arts_of(f'{root}/src/components/{A4}.tsx')
+BIG = set().union(*[biglines_of(f"{root}/src/components/{A}.tsx") for A in (A1, A2, A3, A4)])
+MAPS = set().union(*[maps_of(f"{root}/src/components/{A}.tsx") for A in (A1, A2, A3, A4)])
 
 # (from, to or None, 'p'/'a'/'v', photoId or ArtName or verdict, label, move)
 S = {
@@ -27,7 +39,11 @@ S = {
   (16,16,'p','madrid-a','名前は、どこで生まれた？','out'),
   (17,17,'p','nanmadol-c','本当に1万2000年前？',None),
   (18,19,'a','WalkingStatueTease','石像は、歩いた？',None),
-  (20,None,'p','pacific-night','今夜は、長い法廷になる','out')]),
+  (20,20,'a','ScienceNow','最新の科学が、謎に挑む',None),
+  (21,21,'a','AiSatellite','人工知能が、衛星写真を読む',None),
+  (22,22,'a','AncientGenome','古い骨に残った遺伝子',None),
+  (23,23,'a','LaserTerrain','森の下に、隠れていたもの',None),
+  (24,None,'p','pacific-night','伝説をくつがえす発見とは？','out')]),
  'Clue1Name': ('clue1NameCaptions','第1の手がかり','ムーは、古代から語り継がれてきた？', [
   (0,1,'p','churchward-mapbook','映画、漫画、雑誌の定番','out'),
   (2,2,'a','MuuEmpire','海の底の「ムウ帝国」',None),
@@ -315,7 +331,8 @@ for sc,(var,label,title,beats) in S.items():
     a4 = [a for a in arts if a in a4set]
     if a4: imp.append("import {%s} from '../components/%s';" % (', '.join(a4), A4))
     if any(b[2]=='p' for b in beats): imp.append("import {Photo} from '../components/Photo';")
-    if arts: imp.append("import {Visual} from '../components/Scenery';")
+    if any(a not in MAPS for a in arts): imp.append("import {Visual} from '../components/Scenery';")
+    if any(a in MAPS for a in arts): imp.append("import {Stage} from '../components/Cinema';")
     imp.append("import {SceneFrame} from '../components/SceneFrame';")
     imp.append("import {%s as c} from '../data/captions';" % var)
     imp.sort(key=lambda l: l.split("from '")[1])
@@ -328,7 +345,12 @@ for sc,(var,label,title,beats) in S.items():
             el = f'<Photo id="{x}"{m} label="{lab}" />'
             name = lab[:12]
         elif k=='a':
-            el = f'<Visual label="{lab}">\n\t\t\t\t\t<{x} />\n\t\t\t\t</Visual>'
+            if x in MAPS:
+                el = f'<Stage label="{lab}" labelBottom>\n\t\t\t\t\t<{x} />\n\t\t\t\t</Stage>'
+            elif x in BIG:
+                el = f'<Visual>\n\t\t\t\t\t<{x} />\n\t\t\t\t</Visual>'
+            else:
+                el = f'<Visual label="{lab}">\n\t\t\t\t\t<{x} />\n\t\t\t\t</Visual>'
             name = x
         else:
             el = f'<GavelVerdict verdict="{x}" strikeAt={{captionFrame(c, {f}, {f+1}, fps)}} />'

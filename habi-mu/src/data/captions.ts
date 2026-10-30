@@ -1,7 +1,7 @@
 // scripts/build-voice.py で自動生成。手で編集しないこと。
 import type {Caption} from '@remotion/captions';
 
-// 0:00 謎の先出し（3287フレーム）
+// 0:00 謎の先出し（3871フレーム）
 export const introCaptions: Caption[] = [
   {
     "text": "今から、およそ1万2000年前。",
@@ -60,93 +60,121 @@ export const introCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "その墓を暴いたドイツの役人は、墓を開けた年に、命を落とした。",
+    "text": "その墓を暴いたドイツの役人は、墓を開けてまもなく、命を落とした。",
     "startMs": 36607,
-    "endMs": 41535,
+    "endMs": 41599,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "太平洋の孤島には、海に背を向けて並ぶ、巨大な石像がある。",
-    "startMs": 42015,
-    "endMs": 46825,
+    "startMs": 42079,
+    "endMs": 46889,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "沖縄の海の底には、階段のように切り立った、巨大な岩がある。",
-    "startMs": 47305,
-    "endMs": 52063,
+    "startMs": 47369,
+    "endMs": 52127,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "さらに、こんな話まである。日本人のルーツは、ムーにある。",
-    "startMs": 52543,
-    "endMs": 57023,
+    "startMs": 52607,
+    "endMs": 57087,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "もし本当なら、ボクたちが暮らすこの島々は、沈んだ大陸の、最後のかけらということになる。",
-    "startMs": 57503,
-    "endMs": 63999,
+    "startMs": 57567,
+    "endMs": 64063,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "でも、ここで、ひとつ、おかしなことがある。",
-    "startMs": 64479,
-    "endMs": 68020,
+    "startMs": 64543,
+    "endMs": 68084,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ムー大陸の話を書き残した、古い記録が、どこにも見つからないのだ。",
-    "startMs": 68500,
-    "endMs": 73577,
+    "startMs": 68564,
+    "endMs": 73641,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "では、6400万人という数は、誰が、どうやって知ったのか。",
-    "startMs": 74057,
-    "endMs": 79263,
+    "startMs": 74121,
+    "endMs": 79327,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "「ムー」という名前は、いつ、どこで生まれたのか。",
-    "startMs": 79743,
-    "endMs": 83721,
+    "startMs": 79807,
+    "endMs": 83785,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そして、ムーの都とされる遺跡は、本当に1万2000年前のものなのか。",
-    "startMs": 84201,
-    "endMs": 89535,
+    "startMs": 84265,
+    "endMs": 89599,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "2025年の秋、太平洋の孤島の石像について、ある実験の結果が発表された。",
-    "startMs": 90015,
-    "endMs": 96393,
+    "startMs": 90079,
+    "endMs": 96457,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "石像は、自分の足で、歩いた。",
-    "startMs": 96873,
-    "endMs": 99753,
+    "startMs": 96937,
+    "endMs": 99817,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "今夜は、いつもより長い法廷になる。証拠だけで、海に沈んだ大陸の謎に、ひとつずつ判決を下していこう。",
-    "startMs": 100233,
-    "endMs": 108361,
+    "text": "そして今、最新の科学が、この大陸の謎を、次々と解き明かしている。",
+    "startMs": 100297,
+    "endMs": 105993,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "人工知能が、衛星写真から、島じゅうの畑の跡を探し出す。",
+    "startMs": 106473,
+    "endMs": 111444,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "古い骨に残った遺伝子が、島の人々の歴史を語る。",
+    "startMs": 111924,
+    "endMs": 115753,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "空から当てたレーザーが、森の下に隠れた畑を浮かび上がらせる。",
+    "startMs": 116233,
+    "endMs": 120500,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "最新の研究と技術が導き出したのは、ムー大陸の伝説をくつがえす、驚くべき発見だった。",
+    "startMs": 120980,
+    "endMs": 127817,
     "timestampMs": null,
     "confidence": null
   }
@@ -2286,7 +2314,7 @@ export const clue11SettleCaptions: Caption[] = [
   }
 ];
 
-// 0:00 第12の手がかり イースター島の人々は、木を切りつくして滅んだ？（4314フレーム）
+// 0:00 第12の手がかり イースター島の人々は、木を切りつくして滅んだ？（4402フレーム）
 export const clue12CollapseCaptions: Caption[] = [
   {
     "text": "イースター島には、木がほとんどない。",
@@ -2380,100 +2408,100 @@ export const clue12CollapseCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "同じ2024年、別の研究チームは、島の畑の跡を調べた。",
+    "text": "同じ2024年、別の研究チームは、人工知能に衛星写真を読ませて、島じゅうの畑の跡を調べた。",
     "startMs": 55391,
-    "endMs": 60553,
+    "endMs": 63487,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "すると、島の畑で養える人数は、多くても4000人ほどだった。",
-    "startMs": 61033,
-    "endMs": 66111,
+    "startMs": 63967,
+    "endMs": 69044,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "人口は、もともと、大きくふくらんではいなかったのだ。",
-    "startMs": 66591,
-    "endMs": 70409,
+    "startMs": 69524,
+    "endMs": 73343,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "島の人々は、限られた土地で、石を並べて風から作物を守る畑を工夫しながら、暮らし続けていた。",
-    "startMs": 70889,
-    "endMs": 78441,
+    "startMs": 73823,
+    "endMs": 81375,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "同じ遺伝子の研究からは、もうひとつ、驚きの結果が出た。",
-    "startMs": 78921,
-    "endMs": 83359,
+    "startMs": 81855,
+    "endMs": 86292,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "島の人々の遺伝子には、南アメリカの人々の遺伝子がまじっていた。",
-    "startMs": 83839,
-    "endMs": 88543,
+    "startMs": 86772,
+    "endMs": 91476,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まじりあったのは、1300年ごろ。ヨーロッパの船が来るより、ずっと前のことだ。",
-    "startMs": 89023,
-    "endMs": 94772,
+    "startMs": 91956,
+    "endMs": 97705,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "島の人々は、さらに3500キロの海を越えて、南アメリカにまでたどり着いていた。",
-    "startMs": 95252,
-    "endMs": 101193,
+    "startMs": 98185,
+    "endMs": 104127,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "島の人口を本当に大きく減らしたのは、18世紀以降に、外からやってきた人々が持ちこんだ病気や、19世紀に島の人々を連れ去った、奴隷狩りだった。",
-    "startMs": 101673,
-    "endMs": 112841,
+    "startMs": 104607,
+    "endMs": 115775,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "ラパ・ヌイの人々は、今もこの島に暮らしている。",
-    "startMs": 113321,
-    "endMs": 116468,
+    "startMs": 116255,
+    "endMs": 119401,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 116948,
-    "endMs": 118377,
+    "startMs": 119881,
+    "endMs": 121311,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 118857,
-    "endMs": 119519,
+    "startMs": 121791,
+    "endMs": 122452,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "最新の遺伝子の研究では、島の人口が自ら崩壊した跡は見つかっていない。人々は、限られた島で工夫を重ね、南アメリカにまで海を渡っていた。",
-    "startMs": 119999,
-    "endMs": 131039,
+    "startMs": 122932,
+    "endMs": 133972,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "南の島々に、ムーの証拠は見つからなかった。では、ボクたちの足もと、日本の海はどうだろう。沖縄の海の底に、巨大な階段が眠っている。",
-    "startMs": 131519,
-    "endMs": 142591,
+    "startMs": 134452,
+    "endMs": 145524,
     "timestampMs": null,
     "confidence": null
   }

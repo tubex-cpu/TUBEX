@@ -1,4 +1,5 @@
 import {Beat, captionFrame} from '../components/Beat';
+import {Stage} from '../components/Cinema';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {EightyThousand, OkinoshimaMap, OkinoshimaRules, ProtectReasons, SentinelMap} from '../components/MuArt3';
 import {Photo} from '../components/Photo';
@@ -16,9 +17,9 @@ export const Clue14Forbidden = () => {
 				<Photo id="okinoshima-sea" move="out" label="上陸禁止の島は、ある？" />
 			</Beat>
 			<Beat name="OkinoshimaMap" captions={c} from={4} to={4}>
-				<Visual label="玄界灘の沖ノ島">
+				<Stage label="玄界灘の沖ノ島" labelBottom>
 					<OkinoshimaMap />
-				</Visual>
+				</Stage>
 			</Beat>
 			<Beat name="宗像大社の沖津宮" captions={c} from={5} to={6}>
 				<Photo id="okitsumiya" label="宗像大社の沖津宮" />
@@ -37,9 +38,9 @@ export const Clue14Forbidden = () => {
 				<Photo id="sentinel" move="out" label="インド洋の北センチネル島" />
 			</Beat>
 			<Beat name="SentinelMap" captions={c} from={15} to={16}>
-				<Visual label="近づくことは禁止">
+				<Stage label="近づくことは禁止" labelBottom>
 					<SentinelMap />
-				</Visual>
+				</Stage>
 			</Beat>
 			<Beat name="ProtectReasons" captions={c} from={17} to={20}>
 				<Visual label="何を守っている？">

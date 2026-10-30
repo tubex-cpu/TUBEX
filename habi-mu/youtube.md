@@ -12,35 +12,35 @@
 映画や雑誌で語り継がれてきた「ムー大陸」。でも、その名前が生まれたのは、たった160年前のことでした。
 
 ムーの都とされた南の海の石の都、墓を暴いた男の死、海底に眠るというプラチナの棺、海に背を向けるモアイ、沖縄の海の底の階段、上陸禁止の島、地図から消された島。
-2025年に発表された「モアイは歩いた」という研究など、最新の調査をもとに、18の手がかりを閉園後の法廷でハビ判事がひとつずつ裁きます。
+2025年に発表された「モアイは歩いた」という実験、人工知能で衛星写真を読み解いた研究、古い骨に残った遺伝子の研究など、最新の調査をもとに、18の手がかりを閉園後の法廷でハビ判事がひとつずつ裁きます。
 
 そして、証拠を追いかけた先には、本当に海の下に眠る大陸がありました。
 
 ▼チャプター
 0:00 6400万人が消えた夜
-1:48 ハビ判事、開廷
-2:15 「ムー」はいつ生まれた？
-4:29 マヤの本に書かれていたこと
-6:45 女王ムーの航海
-9:01 6400万人の大陸
-11:37 誰も見ていない粘土板
-13:57 海の上の石の都
-17:14 墓を暴いた男
-19:18 海底のプラチナの棺
-21:08 モアイが見ているもの
-23:46 モアイは歩いた
-26:16 海を渡ってきた人々
-28:26 島は自ら滅んだのか
-30:49 海底の階段
-33:42 上陸禁止の島
-35:53 地図から消された島
-38:09 科学者が信じた大陸
-40:27 海の底をのぞく
-43:37 次に沈むのは日本？
-46:00 本当に沈んでいた大陸
-48:33 誰にも読めない文字
-50:51 18の判決
-53:09 閉廷
+2:08 ハビ判事、開廷
+2:35 「ムー」はいつ生まれた？
+4:48 マヤの本に書かれていたこと
+7:05 女王ムーの航海
+9:21 6400万人の大陸
+11:56 誰も見ていない粘土板
+14:17 海の上の石の都
+17:34 墓を暴いた男
+19:38 海底のプラチナの棺
+21:27 モアイが見ているもの
+24:05 モアイは歩いた
+26:36 海を渡ってきた人々
+28:45 島は自ら滅んだのか
+31:11 海底の階段
+34:05 上陸禁止の島
+36:15 地図から消された島
+38:31 科学者が信じた大陸
+40:49 海の底をのぞく
+44:00 次に沈むのは日本？
+46:23 本当に沈んでいた大陸
+48:55 誰にも読めない文字
+51:14 18の判決
+53:32 閉廷
 
 ▼参考資料
 ・Churchward, J. "The Lost Continent of Mu, the Motherland of Man"（1926年）
@@ -51,6 +51,8 @@
 ・Nan Madol: Ceremonial Centre of Eastern Micronesia（UNESCO 世界遺産）https://whc.unesco.org/en/list/1503
 ・Lipo, C. P. & Hunt, T. L.（2025）The walking moai hypothesis（Journal of Archaeological Science 183）https://experts.arizona.edu/en/publications/the-walking-moai-hypothesis-archaeological-evidence-experimental-/
 ・Hunt, T. L. & Lipo, C. P.（2006）ラパ・ヌイの移住年代（Science／ハワイ大学）https://www.hawaii.edu/news/article.php?aId=1364
+・Moreno-Mayar, J. V. ほか（2024）Ancient Rapanui genomes reveal resilience and pre-European contact with the Americas（Nature 633）https://doi.org/10.1038/s41586-024-07881-4
+・Davis, D. S. ほか（2024）人工知能と衛星写真によるラパ・ヌイの畑の調査（Science Advances／アリゾナ大学）https://news.arizona.edu/news/study-challenges-popular-idea-easter-islanders-committed-ecocide
 ・Polynesian Voyaging Society（ホクレア号 1976年の航海）https://archive.hokulea.com/holokai/1976/ben_finney.html
 ・与那国島海底地形（琉球新報）https://ryukyushimpo.jp/news/entry-5207408.html
 ・「神宿る島」宗像・沖ノ島と関連遺産群 https://www.crossroadfukuoka.jp/spot/10242
@@ -69,6 +71,7 @@
 ▼クレジット
 ナレーション：VOICEVOX:玄野武宏
 BGM・効果音：オリジナル
+地図：Natural Earth（陸地・海底の深さのデータ。パブリックドメイン）をもとに作成
 写真・資料（Wikimedia Commons。登場順）
 ・ナン・マドール（ポンペイ島） Uhooep / CC BY-SA 4.0
 ・ナン・マドールの玄武岩の壁 Patrick Nunn / CC BY-SA 4.0

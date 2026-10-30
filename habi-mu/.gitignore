@@ -7,3 +7,4 @@ dist
 out
 fonts-src/
 scripts/.voice-cache/
+src/_gallery/

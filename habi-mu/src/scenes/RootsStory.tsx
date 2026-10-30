@@ -1,4 +1,5 @@
 import {Beat} from '../components/Beat';
+import {Stage} from '../components/Cinema';
 import {Doggerland, GondwanaStretch, RealStories, Zealandia94} from '../components/MuArt4';
 import {Photo} from '../components/Photo';
 import {SceneFrame} from '../components/SceneFrame';
@@ -34,9 +35,9 @@ export const RootsStory = () => (
 			<Photo id="northsea" move="out" label="沈んだのは、大陸だけではない" />
 		</Beat>
 		<Beat name="Doggerland" captions={c} from={16} to={20}>
-			<Visual label="ドッガーランド">
+			<Stage label="ドッガーランド" labelBottom>
 				<Doggerland />
-			</Visual>
+			</Stage>
 		</Beat>
 		<Beat name="本当の話のほうが、面白い" captions={c} from={21} to={22}>
 			<Photo id="moai-stars" label="本当の話のほうが、面白い" />

@@ -1,4 +1,5 @@
 import {Beat, captionFrame} from '../components/Beat';
+import {Stage} from '../components/Cinema';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {ForbiddenRumor, KimuraClaim, Kuroshio, SandstoneJoints, SeaLevelRise, UnderwaterSteps} from '../components/MuArt3';
 import {Photo} from '../components/Photo';
@@ -34,9 +35,9 @@ export const Clue13Yonaguni = () => {
 				</Visual>
 			</Beat>
 			<Beat name="Kuroshio" captions={c} from={18} to={18}>
-				<Visual label="黒潮">
+				<Stage label="黒潮" labelBottom>
 					<Kuroshio />
-				</Visual>
+				</Stage>
 			</Beat>
 			<Beat name="意見は、分かれている" captions={c} from={19} to={20}>
 				<Photo id="yonaguni-c" move="left" label="意見は、分かれている" />
@@ -50,7 +51,7 @@ export const Clue13Yonaguni = () => {
 				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 28, 29, fps)} />
 			</Beat>
 			<Beat name="ForbiddenRumor" captions={c} from={31}>
-				<Visual label="近づけない島">
+				<Visual>
 					<ForbiddenRumor />
 				</Visual>
 			</Beat>
