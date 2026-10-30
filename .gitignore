@@ -19,3 +19,8 @@ _competitor_thumbs/
 
 # 長尺回のナレーション音声は make_audio.py で再生成できるため git に入れない
 video/public/episodes/habi-002-mu/
+
+# 長尺動画の素材・書き出し（素材は build.py fetch-assets で承認済みパッケージから復元できる）
+video/longform/.assets/
+video/longform/.build/
+video/longform/.venv/

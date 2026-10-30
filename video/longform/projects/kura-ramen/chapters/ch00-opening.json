@@ -1,0 +1,553 @@
+{
+ "title": "冒頭60秒（承認済み第6版）",
+ "approved": "2026-10-29 社長承認（くら寿司・冒頭60秒 第6版）。変更しない",
+ "timing": "fixed",
+ "giant_max": 4,
+ "audio": {
+  "mix": "mix"
+ },
+ "narration_ref": "承認済みパッケージ project/narration-script.txt（完成ミックスに収録済み）",
+ "shots": [
+  {
+   "dur": 3,
+   "note": "丼の大群と巨大数字",
+   "bg": {
+    "type": "photo",
+    "asset": "bowls",
+    "scrim": 160
+   },
+   "layers": [
+    {
+     "type": "eyebrow",
+     "text": "寿司屋が売った、ラーメン。"
+    },
+    {
+     "type": "giant",
+     "value": "2,300",
+     "unit": "万杯",
+     "y": 190,
+     "n": 470
+    },
+    {
+     "type": "credit",
+     "text": "出典：くら寿司 2016年1月20日発表 ／ 2015年12月末時点"
+    },
+    {
+     "type": "text",
+     "text": "数量のイメージ",
+     "xy": [
+      1480,
+      930
+     ],
+     "n": 24
+    }
+   ],
+   "flash": true,
+   "hit": true
+  },
+  {
+   "dur": 3,
+   "note": "くら寿司・実際の寿司",
+   "bg": {
+    "type": "photo",
+    "asset": "real-06",
+    "scrim": 160
+   },
+   "layers": [
+    {
+     "type": "credit",
+     "text": "実写：くら寿司 西新宿店 ／ 経済特区・CC0"
+    },
+    {
+     "type": "title",
+     "text": "寿司、ではない。",
+     "y": 760,
+     "n": 108
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "note": "ラーメン接写・再現",
+   "bg": {
+    "type": "photo",
+    "asset": "ramenhero",
+    "scrim": 160
+   },
+   "layers": [
+    {
+     "type": "credit",
+     "text": "料理の再現イメージ"
+    },
+    {
+     "type": "title",
+     "text": "売れたのは、ラーメン。",
+     "y": 760,
+     "n": 102
+    },
+    {
+     "type": "steam",
+     "size": [
+      450,
+      350
+     ],
+     "strength": 65,
+     "seed": 1,
+     "at": [
+      980,
+      190
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "note": "くら寿司中百舌鳥店・外観",
+   "bg": {
+    "type": "photo",
+    "asset": "real-01",
+    "scrim": 160
+   },
+   "layers": [
+    {
+     "type": "eyebrow",
+     "text": "回転寿司チェーン"
+    },
+    {
+     "type": "title",
+     "text": "くら寿司",
+     "y": 705,
+     "n": 170
+    },
+    {
+     "type": "credit",
+     "text": "実写：中百舌鳥店 ／ Tokumeigakarinoaoshima・CC0"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "note": "年月の立体タイムライン",
+   "asset": "diagram:timeline-2012-2015",
+   "bg": {
+    "type": "dark"
+   },
+   "layers": [
+    {
+     "type": "eyebrow",
+     "text": "始まりは、2012年。"
+    },
+    {
+     "type": "timeline",
+     "start": "2012.11",
+     "end": "2015.12",
+     "start_label": "発売",
+     "end_label": "累計集計"
+    },
+    {
+     "type": "credit",
+     "text": "出典：くら寿司 2016年1月20日発表 ／ 2015年12月末時点"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "note": "時間のスケール図",
+   "asset": "diagram:ring-3years",
+   "bg": {
+    "type": "dark"
+   },
+   "layers": [
+    {
+     "type": "eyebrow",
+     "text": "わずかな時間で、積み上がった数。"
+    },
+    {
+     "type": "tick_ring",
+     "ticks": 38,
+     "r": 360,
+     "dur": 1.6
+    },
+    {
+     "type": "giant",
+     "value": "3",
+     "unit": "年あまり",
+     "y": 350,
+     "n": 330
+    },
+    {
+     "type": "credit",
+     "text": "出典：くら寿司 2016年1月20日発表 ／ 2015年12月末時点"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "note": "くら寿司・店内実写",
+   "bg": {
+    "type": "photo",
+    "asset": "real-03",
+    "scrim": 160
+   },
+   "layers": [
+    {
+     "type": "credit",
+     "text": "実写：くら寿司の店内 ／ Tamaki Sono・CC BY 2.0（2011年撮影）"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "note": "販売数の立体数量図",
+   "asset": "diagram:bowls-23",
+   "bg": {
+    "type": "dark",
+    "grid": true
+   },
+   "layers": [
+    {
+     "type": "bowl_grid",
+     "count": 23,
+     "cols": 8
+    },
+    {
+     "type": "giant",
+     "value": "2,300",
+     "unit": "万杯",
+     "y": 150,
+     "n": 340
+    },
+    {
+     "type": "text",
+     "text": "丼1個＝100万杯",
+     "xy": [
+      1230,
+      925
+     ],
+     "n": 30
+    },
+    {
+     "type": "credit",
+     "text": "出典：くら寿司 2016年1月20日発表 ／ 2015年12月末時点"
+    }
+   ],
+   "flash": true,
+   "hit": true
+  },
+  {
+   "dur": 3,
+   "note": "1日平均の巨大数字",
+   "asset": "diagram:daily-20000",
+   "bg": {
+    "type": "dark"
+   },
+   "layers": [
+    {
+     "type": "eyebrow",
+     "text": "1日あたりにすると"
+    },
+    {
+     "type": "arcs"
+    },
+    {
+     "type": "giant",
+     "value": "20,000",
+     "unit": "杯",
+     "y": 325,
+     "n": 400
+    },
+    {
+     "type": "text",
+     "text": "約",
+     "xy": [
+      960,
+      235
+     ],
+     "n": 70,
+     "fill": "#f5c76e",
+     "anchor": "mt"
+    },
+    {
+     "type": "text",
+     "text": "累計2,300万杯 ÷ 約3年2か月",
+     "xy": [
+      960,
+      870
+     ],
+     "n": 43,
+     "anchor": "mt"
+    },
+    {
+     "type": "credit",
+     "text": "累計販売数と期間からの概算"
+    }
+   ],
+   "flash": true,
+   "hit": true
+  },
+  {
+   "dur": 3,
+   "note": "西新宿店・実際の看板",
+   "bg": {
+    "type": "photo",
+    "asset": "real-08",
+    "scrim": 160
+   },
+   "layers": [
+    {
+     "type": "credit",
+     "text": "実写：くら寿司 西新宿店 ／ 経済特区・CC0"
+    },
+    {
+     "type": "title",
+     "text": "毎日、寿司屋で。",
+     "y": 760,
+     "n": 110
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "note": "2万杯の規模図",
+   "asset": "diagram:bowls-200",
+   "bg": {
+    "type": "dark",
+    "grid": true
+   },
+   "layers": [
+    {
+     "type": "eyebrow",
+     "text": "毎日、これだけの一杯が。"
+    },
+    {
+     "type": "bowl_field",
+     "count": 200,
+     "cols": 20
+    },
+    {
+     "type": "text",
+     "text": "約20,000杯／日",
+     "xy": [
+      960,
+      165
+     ],
+     "n": 100,
+     "anchor": "mt"
+    },
+    {
+     "type": "credit",
+     "text": "丼1個＝100杯 ／ 1日平均の概算を可視化"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "note": "寿司の接写・再現",
+   "bg": {
+    "type": "photo",
+    "asset": "sushimacro",
+    "scrim": 160
+   },
+   "layers": [
+    {
+     "type": "title",
+     "text": "寿司屋なのに、ラーメン。",
+     "y": 740,
+     "n": 105
+    },
+    {
+     "type": "credit",
+     "text": "料理の再現イメージ"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "note": "麺上げ・再現",
+   "bg": {
+    "type": "photo",
+    "asset": "kitchen",
+    "scrim": 160
+   },
+   "layers": [
+    {
+     "type": "credit",
+     "text": "調理の再現イメージ"
+    },
+    {
+     "type": "steam",
+     "size": [
+      480,
+      500
+     ],
+     "strength": 45,
+     "seed": 3,
+     "at": [
+      420,
+      90
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "note": "スープ接写・再現",
+   "bg": {
+    "type": "photo",
+    "asset": "broth",
+    "scrim": 160
+   },
+   "layers": [
+    {
+     "type": "title",
+     "text": "専門店を超える味へ。",
+     "y": 755,
+     "n": 108
+    },
+    {
+     "type": "credit",
+     "text": "調理の再現イメージ"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "note": "頬なしキャラクター・店内",
+   "asset": "character:counter",
+   "bg": {
+    "type": "character",
+    "scrim": 160
+   },
+   "layers": [
+    {
+     "type": "title",
+     "text": "なぜ、そこまで本気なのか。",
+     "y": 760,
+     "n": 96
+    }
+   ],
+   "hit": true
+  },
+  {
+   "dur": 3,
+   "note": "レーン・再現",
+   "bg": {
+    "type": "photo",
+    "asset": "conveyor",
+    "scrim": 160
+   },
+   "layers": [
+    {
+     "type": "credit",
+     "text": "寿司レーンの再現イメージ"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "note": "西新宿店・実際の軍艦巻き",
+   "bg": {
+    "type": "photo",
+    "asset": "real-19",
+    "scrim": 160
+   },
+   "layers": [
+    {
+     "type": "credit",
+     "text": "実写：くら寿司 西新宿店 ／ 経済特区・CC0"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "note": "西新宿店・店の細部を実写で",
+   "bg": {
+    "type": "tiles",
+    "assets": [
+     "real-13",
+     "real-15",
+     "real-16"
+    ],
+    "scrim": 170
+   },
+   "layers": [
+    {
+     "type": "credit",
+     "text": "実写：くら寿司 西新宿店の店内備品 ／ 経済特区・CC0"
+    },
+    {
+     "type": "title",
+     "text": "一杯に隠れた、理由。",
+     "y": 760,
+     "n": 106
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "note": "寿司とラーメンの関係図",
+   "asset": "diagram:relation",
+   "bg": {
+    "type": "dark",
+    "grid": true
+   },
+   "layers": [
+    {
+     "type": "eyebrow",
+     "text": "寿司屋と、ラーメン。"
+    },
+    {
+     "type": "relation",
+     "center": "なぜ",
+     "left": "寿司",
+     "right": "ラーメン",
+     "caption": "このつながりを、ひも解く。"
+    }
+   ]
+  },
+  {
+   "dur": 3,
+   "note": "ミステリータイトル",
+   "asset": "title:mystery",
+   "bg": {
+    "type": "dark"
+   },
+   "layers": [
+    {
+     "type": "radial"
+    },
+    {
+     "type": "text",
+     "text": "寿司屋のラーメン",
+     "xy": [
+      960,
+      270
+     ],
+     "n": 96,
+     "kind": "serif",
+     "anchor": "mt"
+    },
+    {
+     "type": "metal",
+     "text": "一杯の謎",
+     "n": 230,
+     "kind": "serif",
+     "y": 430
+    },
+    {
+     "type": "text",
+     "text": "その理由に、迫る。",
+     "xy": [
+      960,
+      820
+     ],
+     "n": 65,
+     "kind": "serif",
+     "anchor": "mt"
+    }
+   ],
+   "flash": true,
+   "hit": true
+  }
+ ]
+}

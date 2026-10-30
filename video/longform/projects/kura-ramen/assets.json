@@ -1,0 +1,152 @@
+{
+ "real-01": {
+  "file": "real-01.jpg",
+  "kind": "photo",
+  "title": "Kura Sushi Nakamozu shop.jpg",
+  "author": "Tokumeigakarinoaoshima",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Kura_Sushi_Nakamozu_shop.jpg",
+  "date": "2025-04-20 05:49:30"
+ },
+ "real-03": {
+  "file": "real-03.jpg",
+  "kind": "photo",
+  "title": "回転寿司 2011 (6100381276).jpg",
+  "author": "Tamaki Sono from Shiga, Japan",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:%E5%9B%9E%E8%BB%A2%E5%AF%BF%E5%8F%B8_2011_(6100381276).jpg",
+  "date": "2011-08-30 11:35"
+ },
+ "real-06": {
+  "file": "real-06.jpg",
+  "kind": "photo",
+  "title": "くら寿司西新宿店20250628 01.jpg",
+  "author": "経済特区",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:%E3%81%8F%E3%82%89%E5%AF%BF%E5%8F%B8%E8%A5%BF%E6%96%B0%E5%AE%BF%E5%BA%9720250628_01.jpg",
+  "date": "2025-06-28 10:32:27"
+ },
+ "real-08": {
+  "file": "real-08.jpg",
+  "kind": "photo",
+  "title": "くら寿司西新宿店20250628 03.jpg",
+  "author": "経済特区",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:%E3%81%8F%E3%82%89%E5%AF%BF%E5%8F%B8%E8%A5%BF%E6%96%B0%E5%AE%BF%E5%BA%9720250628_03.jpg",
+  "date": "2025-06-28 10:16:21"
+ },
+ "real-13": {
+  "file": "real-13.jpg",
+  "kind": "photo",
+  "title": "くら寿司西新宿店IMG 20230210 200618 04.jpg",
+  "author": "経済特区",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:%E3%81%8F%E3%82%89%E5%AF%BF%E5%8F%B8%E8%A5%BF%E6%96%B0%E5%AE%BF%E5%BA%97IMG_20230210_200618_04.jpg",
+  "date": "2023-02-10 19:11:11"
+ },
+ "real-15": {
+  "file": "real-15.jpg",
+  "kind": "photo",
+  "title": "くら寿司西新宿店IMG 20230210 200618 06.jpg",
+  "author": "経済特区",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:%E3%81%8F%E3%82%89%E5%AF%BF%E5%8F%B8%E8%A5%BF%E6%96%B0%E5%AE%BF%E5%BA%97IMG_20230210_200618_06.jpg",
+  "date": "2023-02-10 19:11:48"
+ },
+ "real-16": {
+  "file": "real-16.jpg",
+  "kind": "photo",
+  "title": "くら寿司西新宿店IMG 20230210 200618 07.jpg",
+  "author": "経済特区",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:%E3%81%8F%E3%82%89%E5%AF%BF%E5%8F%B8%E8%A5%BF%E6%96%B0%E5%AE%BF%E5%BA%97IMG_20230210_200618_07.jpg",
+  "date": "2023-02-10 19:11:54"
+ },
+ "real-19": {
+  "file": "real-19.jpg",
+  "kind": "photo",
+  "title": "くら寿司西新宿店IMG 20230210 200618 10.jpg",
+  "author": "経済特区",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:%E3%81%8F%E3%82%89%E5%AF%BF%E5%8F%B8%E8%A5%BF%E6%96%B0%E5%AE%BF%E5%BA%97IMG_20230210_200618_10.jpg",
+  "date": "2023-02-10 19:18:40"
+ },
+ "bowls": {
+  "file": "bowls.png",
+  "kind": "ai",
+  "note": "Codex 組み込み image_gen による再現画像。プロンプトは image-prompts.json（承認済みパッケージ）"
+ },
+ "ramenhero": {
+  "file": "ramenhero.png",
+  "kind": "ai",
+  "note": "Codex 組み込み image_gen による再現画像。プロンプトは image-prompts.json（承認済みパッケージ）"
+ },
+ "kitchen": {
+  "file": "kitchen.png",
+  "kind": "ai",
+  "note": "Codex 組み込み image_gen による再現画像。プロンプトは image-prompts.json（承認済みパッケージ）"
+ },
+ "broth": {
+  "file": "broth.png",
+  "kind": "ai",
+  "note": "Codex 組み込み image_gen による再現画像。プロンプトは image-prompts.json（承認済みパッケージ）"
+ },
+ "conveyor": {
+  "file": "conveyor.png",
+  "kind": "ai",
+  "note": "Codex 組み込み image_gen による再現画像。プロンプトは image-prompts.json（承認済みパッケージ）"
+ },
+ "sushimacro": {
+  "file": "sushimacro.png",
+  "kind": "ai",
+  "note": "Codex 組み込み image_gen による再現画像。プロンプトは image-prompts.json（承認済みパッケージ）"
+ },
+ "scene": {
+  "file": "scene.png",
+  "kind": "character",
+  "note": "頬なしの黒いキャラクターの店内（AI生成）。目は白のみ"
+ },
+ "blink": {
+  "file": "blink.png",
+  "kind": "character",
+  "note": "頬なしの黒いキャラクターの店内（AI生成）。目は白のみ"
+ },
+ "salmon": {
+  "file": "salmon.png",
+  "kind": "sprite",
+  "note": "キャラクター場面のレーンの寿司（AI生成）"
+ },
+ "tuna": {
+  "file": "tuna.png",
+  "kind": "sprite",
+  "note": "キャラクター場面のレーンの寿司（AI生成）"
+ },
+ "egg": {
+  "file": "egg.png",
+  "kind": "sprite",
+  "note": "キャラクター場面のレーンの寿司（AI生成）"
+ },
+ "ikura": {
+  "file": "ikura.png",
+  "kind": "sprite",
+  "note": "キャラクター場面のレーンの寿司（AI生成）"
+ },
+ "shrimp": {
+  "file": "shrimp.png",
+  "kind": "sprite",
+  "note": "キャラクター場面のレーンの寿司（AI生成）"
+ },
+ "mix": {
+  "file": "mix.wav",
+  "kind": "audio",
+  "note": "承認済み60秒版の完成ミックス（ナレーション＋オリジナル合成BGM）"
+ }
+}
