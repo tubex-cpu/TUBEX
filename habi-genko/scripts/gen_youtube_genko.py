@@ -48,7 +48,36 @@ for sc in order:
             ids.append(x)
 ph = (ROOT / 'src/data/photos.ts').read_text()
 cred = {m.group(1): m.group(2) for m in re.finditer(r"\t'([\w-]+)': \{file: '[^']+', credit: '([^']+)'", ph)}
-credits = '\n'.join('・' + cred[i].replace(' / Wikimedia Commons', '') for i in ids)
+credits_full = '\n'.join('・' + cred[i].replace(' / Wikimedia Commons', '') for i in ids)
+(ROOT / '写真クレジット一覧.md').write_text('# 元寇判決：写真・資料のクレジット（登場順・すべて Wikimedia Commons ほか）\n\n' + credits_full + '\n')
+
+# 概要欄は5000字までなので、写真のクレジットはライセンスごとに撮影者・作者名をまとめる
+import json, collections
+cj = json.loads((ROOT / 'public/photos/credits.json').read_text())
+NAME = {
+    'そらみみ (Soramimi)': 'そらみみ', 'Gary Todd from Xinzheng, China': 'Gary Todd', 'Gary Lee Todd, Ph.D.': 'Gary Todd',
+    'Hot cake syrup (talk)': 'Hot cake syrup', 'Original file is made by Ksiom, modified by Pekachu.': 'Ksiom, Pekachu',
+    'Korea.net / Korean Culture and Information Service (Jeon Han)': 'Korea.net（Jeon Han）',
+    'ウィキ太郎 (Wiki Taro)': 'ウィキ太郎', 'MODIS Land Rapid Response Team, NASA GSFC': 'NASA',
+}
+PD_WORKS = ('竹崎季長『蒙古襲来絵詞』と土佐長隆らの模本、福田太華・菊池容斎の模本（東京国立博物館）、河鍋暁斎、歌川貞秀（メトロポリタン美術館）、'
+            '葛飾為斎、二代川島甚兵衛、藤原為信、元朝皇帝像、クビライの国書の写し（東大寺）、NASAの衛星写真、アムステルダム国立美術館 ほか')
+by = collections.defaultdict(list)
+pd = []
+for i in ids:
+    v = cj[i]
+    lic = v['license']
+    if lic in ('Public domain', 'CC0'):
+        if lic == 'CC0' and v['artist'] not in ('Rijksmuseum', 'Utagawa Sadahide'):
+            pd.append(NAME.get(v['artist'], v['artist']))
+        continue
+    n = NAME.get(v['artist'], v['artist'])
+    if n not in by[lic]:
+        by[lic].append(n)
+ORDER = ['CC BY-SA 4.0', 'CC BY-SA 3.0', 'CC BY-SA 2.0', 'CC BY 4.0', 'CC BY 3.0', 'CC BY 2.0']
+lines = [f'{l}：' + '、'.join(by[l]) for l in ORDER if by[l]]
+lines.append('パブリックドメイン・CC0：' + PD_WORKS + ('、写真：' + '、'.join(dict.fromkeys(pd)) if pd else ''))
+credits = '\n'.join(lines)
 
 md = f'''# YouTube 投稿用テキスト：元寇判決
 
@@ -101,11 +130,15 @@ X線CT、赤外線、音波の探査。最新の技術と研究者たちの地�
 ナレーション：VOICEVOX:玄野武宏
 BGM・効果音：オリジナル
 地図：East China Sea location map（© OpenStreetMap contributors, Peka / ODbL / Wikimedia Commons）
-写真・資料（Wikimedia Commons ほか。登場順）
+写真・資料（Wikimedia Commons ほか）
 {credits}
+写真ごとの出典の一覧：https://github.com/tubex-cpu/TUBEX/blob/claude/nice-wright-du0dch/habi-genko/写真クレジット一覧.md
 
 #元寇 #蒙古襲来 #神風 #鷹島 #鎌倉時代 #ハビ判事
 '''
 (ROOT / 'youtube.md').write_text(md)
 print(chap)
 print(len(ids), dur)
+d = md[md.index('## 概要欄') + 7:]
+print('概要欄', len(d), '字')
+assert len(d) <= 5000
