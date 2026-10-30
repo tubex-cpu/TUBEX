@@ -231,8 +231,8 @@ for si, (b0, n) in enumerate(sections(tr.bars, 8)):
                     tr.add(bar * 4 + k * 0.5, koto(shift(nn, key) * rng.choice([2, 4]), 0.9, 0.05, 0.4 if k % 2 else -0.4))
 tr.render(out / 'bgm2-hakata.mp3', 0.3)
 
-# 3. 後半「海の底が語る」：Cメジャー中心。温かいピアノと持続音（約22分）
-tr = Track(72, 1320)
+# 3. 後半「海の底が語る」：Cメジャー中心。温かいピアノと持続音（約25分）
+tr = Track(72, 1500)
 pool = [['C3', 'E3', 'G3'], ['B2', 'D3', 'G3'], ['A2', 'C3', 'E3'], ['F2', 'A2', 'C3'], ['D3', 'F3', 'A3'], ['G2', 'B2', 'D3'], ['E2', 'G2', 'B2'], ['F2', 'A2', 'D3']]
 scale = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5', 'D5', 'E5']
 keys = [0, 0, 2, -3, 5, 0, -2, 3]

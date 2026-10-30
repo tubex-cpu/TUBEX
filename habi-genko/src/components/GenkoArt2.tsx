@@ -27,6 +27,11 @@ export const PLACES = {
 	hirado: [129.55, 33.37],
 	keigen: [121.55, 29.87],
 	kamakura: [139.55, 35.32],
+	imazu: [130.27, 33.6],
+	kashii: [130.45, 33.67],
+	shika: [130.29, 33.68],
+	momochi: [130.35, 33.59],
+	ikinomatsubara: [130.31, 33.58],
 	kyoto: [135.76, 35.01],
 } as const;
 

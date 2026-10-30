@@ -17,12 +17,14 @@ cd "$P"
 C=out/c1080; mkdir -p $C
 TOTAL=$(grep -o 'TOTAL_FRAMES = [0-9]*' src/data/timeline.ts | grep -o '[0-9]*$')
 CH=18000; N=$(( (TOTAL + CH - 1) / CH ))
+# CRF：書き出し途中の画質（大きいほど軽い）。VB：投稿用1080pの映像ビットレート（フィルムの粒子があるときは高めに）
+CRF=${CRF:-17}; VB=${VB:-1150}
 : > $C/list.txt; : > $C/alist.txt
 
 # 1. 映像を10分ずつ（無音で）書き出す。できている区間はとばすので、止まっても再実行で続きから
 for ((i=0; i<N; i++)); do s=$((i*CH)); e=$((s+CH-1)); [ $e -ge $TOTAL ] && e=$((TOTAL-1)); n=$(printf %02d $i)
   if [ ! -s $C/v$n.mp4 ]; then echo "chunk $i $s-$e $(date +%T)"
-    npx remotion render $COMP $C/v$n.mp4 --frames=$s-$e --muted --crf=17 --browser-executable=$BR --log=error --concurrency=4; fi
+    npx remotion render $COMP $C/v$n.mp4 --frames=$s-$e --muted --crf=$CRF --browser-executable=$BR --log=error --concurrency=4; fi
   echo "file 'v$n.mp4'" >> $C/list.txt
 done
 # 2. 音声も10分ずつ（1時間を一度に書き出すとブラウザが落ちる）
@@ -34,10 +36,10 @@ done
 echo "encode $(date +%T)"
 ffmpeg -loglevel error -y -f concat -safe 0 -i $C/alist.txt -af loudnorm=I=-14:TP=-1.5:LRA=11 -ar 48000 $C/audio.wav
 
-# 3. 1本の1080pにまとめる（映像1150kbps・音声128kbps。1時間で約580MB）
+# 3. 1本の1080pにまとめる（映像 VB kbps・音声128kbps。1150kbpsなら1時間で約580MB）
 F=out/$NAME-1080p.mp4
-ffmpeg -loglevel error -y -f concat -safe 0 -i $C/list.txt -c:v libx264 -preset slow -tune stillimage -b:v 1150k -pass 1 -passlogfile out/pass1080 -an -f mp4 /dev/null
-ffmpeg -loglevel error -y -f concat -safe 0 -i $C/list.txt -i $C/audio.wav -map 0:v -map 1:a -c:v libx264 -preset slow -tune stillimage -b:v 1150k -pass 2 -passlogfile out/pass1080 -c:a aac -b:a 128k -shortest -movflags +faststart $F
+ffmpeg -loglevel error -y -f concat -safe 0 -i $C/list.txt -c:v libx264 -preset slow -tune stillimage -b:v ${VB}k -pass 1 -passlogfile out/pass1080 -an -f mp4 /dev/null
+ffmpeg -loglevel error -y -f concat -safe 0 -i $C/list.txt -i $C/audio.wav -map 0:v -map 1:a -c:v libx264 -preset slow -tune stillimage -b:v ${VB}k -pass 2 -passlogfile out/pass1080 -c:a aac -b:a 128k -shortest -movflags +faststart $F
 echo "full $(du -m $F | cut -f1)MB $(date +%T)"
 
 # 4. GitHubの100MB制限に合わせて97MBずつに分割し、つなぎ方と確認用の値を添える

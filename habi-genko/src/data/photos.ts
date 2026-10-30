@@ -162,5 +162,5 @@ export const photos: Record<string, PhotoInfo> = {
 	'genkai-3': {file: 'genkai-3.jpg', credit: '玄界灘と立神岩・神集島（唐津市） Pekachu / CC BY-SA 4.0 / Wikimedia Commons'},
 	'genkai-4': {file: 'genkai-4.jpg', credit: '相島から望む玄界島と玄界灘 そらみみ / CC BY-SA 4.0 / Wikimedia Commons'},
 	'ainoshima-kuyoto': {file: 'ainoshima-kuyoto.jpg', credit: '相島（新宮町）の日蒙供養塔：流れ着いた遺体を敵味方なく弔ったと伝わる Chihaya Sta / CC BY 4.0 / Wikimedia Commons'},
-	'map-strait': {file: 'map-strait.jpg', credit: '朝鮮海峡の地形図 Original file is made by Ksiom, modified by Pekachu. / CC BY-SA 3.0 / Wikimedia Commons'},
+	'map-strait': {file: 'map-strait.jpg', credit: '朝鮮海峡の地形図 Original file is made by Ksiom, modified by Pekachu. / CC BY-SA 3.0 / Wikimedia Commons', filter: 'invert(1) hue-rotate(180deg) brightness(0.75) contrast(1.15)', labelBottom: true},
 };
