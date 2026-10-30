@@ -1,0 +1,57 @@
+{
+  "filename": "claude-code-sushi-reproduction.zip",
+  "bytes": 82289514,
+  "sha256": "6ff1c29a0cad7d37f2ed3ec5e87d04e7139b3915caeaacef36b152e0dfd4f6c1",
+  "parts": [
+    {
+      "path": "parts/package.zip.part01",
+      "bytes": 8388608,
+      "sha256": "bc3c99e39e70c6f9b57fdb347f5692b54976c8fad041275c4a34430318161b2a"
+    },
+    {
+      "path": "parts/package.zip.part02",
+      "bytes": 8388608,
+      "sha256": "dd47a8096e65784f9c631f2f5793655cf0732a766ad33b225ed644e80d15056c"
+    },
+    {
+      "path": "parts/package.zip.part03",
+      "bytes": 8388608,
+      "sha256": "84bb6d982699da8a7e6958edade76b5d2e10524ae08ec88e02a93f2b05d638ca"
+    },
+    {
+      "path": "parts/package.zip.part04",
+      "bytes": 8388608,
+      "sha256": "63b9e2606c8023fb0bb611e25480ef69a6e4b29f65cd15f3c3442cc152dd6564"
+    },
+    {
+      "path": "parts/package.zip.part05",
+      "bytes": 8388608,
+      "sha256": "510ffc3101cb1c0c627360fcc052c994afdae36c093e4f725b27d194344730bc"
+    },
+    {
+      "path": "parts/package.zip.part06",
+      "bytes": 8388608,
+      "sha256": "529d52a1f6e92180d04b727782faff09b0a835fd72640bb1d9eccbdf324fdd52"
+    },
+    {
+      "path": "parts/package.zip.part07",
+      "bytes": 8388608,
+      "sha256": "84e97aa7f194f14035441cf6bbf286d53992cb96bb131383289541ae98567e10"
+    },
+    {
+      "path": "parts/package.zip.part08",
+      "bytes": 8388608,
+      "sha256": "ed8410dbae39361de6b94f06bf4c76f80fa4c632d0436ee31a75c2231fb6bbc6"
+    },
+    {
+      "path": "parts/package.zip.part09",
+      "bytes": 8388608,
+      "sha256": "dbf5d7952abd1153ebf58f1da87fc190e17f481d48fd01a4e1822d656bc17db6"
+    },
+    {
+      "path": "parts/package.zip.part10",
+      "bytes": 6792042,
+      "sha256": "61b9ae49d29e99fc27b26f4d5ec2428eeee823b5f730a515100b574481ea8690"
+    }
+  ]
+}
