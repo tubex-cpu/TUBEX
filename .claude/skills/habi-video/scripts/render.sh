@@ -45,7 +45,9 @@ echo "full $(du -m $F | cut -f1)MB $(date +%T)"
 # 4. GitHubの100MB制限に合わせて97MBずつに分割し、つなぎ方と確認用の値を添える
 D=完成動画; mkdir -p $D
 find $D -maxdepth 1 -name "$NAME-1080p*" -delete
-split -b 97000000 -d -a 1 --numeric-suffixes=1 $F $D/$NAME-1080p.mp4.part
+# 10個以上になるときは part01, part02… と2桁にする（1桁だと part9 で止まる）
+NP=$(( ($(stat -c %s $F) + 96999999) / 97000000 )); SA=1; [ $NP -gt 9 ] && SA=2
+split -b 97000000 -d -a $SA --numeric-suffixes=1 $F $D/$NAME-1080p.mp4.part
 (cd out && sha256sum $NAME-1080p.mp4) > $D/$NAME-1080p.mp4.sha256
 PARTS=$(cd $D && ls $NAME-1080p.mp4.part* | sort -V | tr '\n' ' ')
 cat > $D/join.sh <<EOS
