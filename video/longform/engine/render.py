@@ -31,7 +31,7 @@ VIDEO_ARGS = ['-c:v', 'libx264', '-preset', 'fast', '-crf', '17', '-pix_fmt', 'y
 def engine_hash():
     h = hashlib.sha256()
     for p in sorted(ENGINE_DIR.glob('*.py')):
-        if p.name in ('style.py', 'shots.py', 'character.py'):
+        if p.name in ('style.py', 'shots.py', 'character.py', 'diagrams.py'):
             h.update(p.read_bytes())
     return h.hexdigest()[:16]
 

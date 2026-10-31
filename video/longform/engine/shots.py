@@ -18,10 +18,11 @@ import math
 from PIL import Image, ImageDraw
 
 from .character import steam
+from .diagrams import DiagramLayers
 from .style import GOLD, H, W, bowl, ease
 
 
-class ShotRenderer:
+class ShotRenderer(DiagramLayers):
     def __init__(self, style, character_factory):
         self.s = style
         self._character_factory = character_factory

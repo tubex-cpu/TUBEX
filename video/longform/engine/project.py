@@ -100,7 +100,7 @@ def timeline(project, ch, voice=None):
     if ch['timing'] != 'voice':
         raise ValueError('timing must be fixed or voice')
     from .audio import read_wav
-    pace = ch.get('pace', {})
+    pace = {**project.cfg.get('pace', {}), **ch.get('pace', {})}
     head = pace.get('head', .5)
     gap = pace.get('gap', .45)
     tail = pace.get('tail', .8)

@@ -3,10 +3,15 @@
   "channel": "shoku-karakuri",
   "draft": "channels/shoku-karakuri/drafts/kara-001-sushi-ramen/plan_set_draft.md",
   "fps": 24,
-  "size": [1920, 1080],
+  "size": [
+    1920,
+    1080
+  ],
   "assets_dir": "../../.assets/kura-ramen",
   "build_dir": "../../.build/kura-ramen",
-  "chapters": ["ch00-opening"],
+  "chapters": [
+    "ch00-opening"
+  ],
   "selftest_chapter": "ch00-opening",
   "giant_every_min": 2,
   "package": {
@@ -18,14 +23,69 @@
     "engine": "http://localhost:50021",
     "speaker": 11,
     "speaker_name": "VOICEVOX:玄野武宏（ノーマル）",
-    "speed": 1.0,
+    "speed": 0.94,
     "chars_per_min": 320,
-    "readings": [["くら寿司", "くらずし"], ["2,300万杯", "二千三百万杯"]]
+    "readings": [
+      [
+        "くら寿司",
+        "くらずし"
+      ],
+      [
+        "豊﨑賢一",
+        "とよさきけんいち"
+      ],
+      [
+        "松島由剛さん",
+        "まつしまさん"
+      ]
+    ],
+    "readings_note": "松島由剛さんの名の読みは出典で確認できないため、読み上げは「まつしまさん」（2026-10-30）"
   },
   "fonts": {
-    "sans": [["/System/Library/Fonts/ヒラギノ角ゴシック W8.ttc", 0], ["/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc", 0]],
-    "sans_w6": [["/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc", 0], ["/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc", 0]],
-    "serif": [["/System/Library/Fonts/ヒラギノ明朝 ProN.ttc", 2], ["/usr/share/fonts/opentype/noto/NotoSerifCJK-SemiBold.ttc", 0]],
-    "num": [["/System/Library/Fonts/Avenir Next Condensed.ttc", 0], ["/usr/share/fonts/truetype/roboto/unhinted/RobotoCondensed-Bold.ttf", 0]]
+    "sans": [
+      [
+        "/System/Library/Fonts/ヒラギノ角ゴシック W8.ttc",
+        0
+      ],
+      [
+        "/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc",
+        0
+      ]
+    ],
+    "sans_w6": [
+      [
+        "/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc",
+        0
+      ],
+      [
+        "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
+        0
+      ]
+    ],
+    "serif": [
+      [
+        "/System/Library/Fonts/ヒラギノ明朝 ProN.ttc",
+        2
+      ],
+      [
+        "/usr/share/fonts/opentype/noto/NotoSerifCJK-SemiBold.ttc",
+        0
+      ]
+    ],
+    "num": [
+      [
+        "/System/Library/Fonts/Avenir Next Condensed.ttc",
+        0
+      ],
+      [
+        "/usr/share/fonts/truetype/roboto/unhinted/RobotoCondensed-Bold.ttf",
+        0
+      ]
+    ]
+  },
+  "pace": {
+    "head": 0.6,
+    "gap": 0.55,
+    "tail": 1.2
   }
 }
