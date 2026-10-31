@@ -73,19 +73,22 @@ export const MRIRoom: React.FC<{slide: number}> = ({slide}) => {
 
 const BlanketBody: React.FC = () => {
   const geo = useMemo(() => {
-    const NX = 90, NZ = 40;
+    const NX = 120, NZ = 60;
     const g = new THREE.PlaneGeometry(1.55, 0.62, NX, NZ);
     g.rotateX(-Math.PI / 2);
     const p = g.attributes.position as THREE.BufferAttribute;
     for (let i = 0; i < p.count; i++) {
       const x = p.getX(i), z = p.getZ(i);
       const u = (x + 0.775) / 1.55; // 0 = shoulders, 1 = feet
-      const width = u < 0.45 ? 0.2 : 0.2 - (u - 0.45) * 0.18;
-      const height = u < 0.45 ? 0.17 : 0.17 - (u - 0.45) * 0.14;
-      const feet = 0.08 * Math.exp(-Math.pow((u - 0.96) / 0.03, 2)) * (Math.exp(-Math.pow((Math.abs(z) - 0.07) / 0.05, 2)));
-      const y = height * Math.exp(-Math.pow(z / width, 4)) + feet;
-      const hang = Math.max(0, Math.abs(z) - 0.25) * 1.5;
-      p.setY(i, Math.max(0.02, y + 0.04) - hang);
+      const w = u < 0.45 ? 0.2 : 0.2 - (u - 0.45) * 0.16;
+      const h = u < 0.45 ? 0.15 : 0.15 - (u - 0.45) * 0.12;
+      const feet = 0.07 * Math.exp(-Math.pow((u - 0.95) / 0.035, 2)) * Math.exp(-Math.pow((Math.abs(z) - 0.07) / 0.045, 2));
+      const body = h * Math.exp(-Math.pow(z / w, 2) * 1.6) + feet;
+      const folds = 0.004 * Math.sin(x * 26 + z * 9) * Math.sin(z * 21);
+      // cloth hangs over the table edge (|z| > 0.25)
+      const over = Math.max(0, Math.abs(z) - 0.25);
+      p.setY(i, 0.045 + body + folds - over * 1.4);
+      p.setZ(i, Math.sign(z) * Math.min(Math.abs(z), 0.25 + over * 0.45));
     }
     g.computeVertexNormals();
     g.translate(0.13, 0.04, 0);
@@ -93,7 +96,7 @@ const BlanketBody: React.FC = () => {
   }, []);
   return (
     <mesh geometry={geo} castShadow receiveShadow>
-      <meshStandardMaterial color="#e7ecf2" roughness={0.9} side={THREE.DoubleSide} />
+      <meshStandardMaterial color="#dfe7f0" roughness={0.95} side={THREE.DoubleSide} />
     </mesh>
   );
 };

@@ -2,13 +2,14 @@ import {useMemo} from 'react';
 import * as THREE from 'three';
 import {RBox, Spot, canvasTexture, rand, woodTexture} from './common';
 import {SeatedPerson} from './Human';
+import type {ArmPose} from './Human';
+
+export type PersonPose = {headYaw?: number; headPitch?: number; headRoll?: number; shoulderRaise?: number; slump?: number; armL?: ArmPose; armR?: ArmPose; breath?: number; blink?: number};
 
 // Pre-dawn desk after an all-nighter. Desk top y = 0.74. Person sits at z ≈ 0.45 facing -z.
 export const DESK_Y = 0.74;
 
-export const DeskRoom: React.FC<{t: number; buzz?: number; headYaw?: number; headPitch?: number; shoulderRaise?: number; slump?: number; typing?: number; children?: React.ReactNode}> = ({
-  t, buzz = 0, headYaw = 0, headPitch = 0, shoulderRaise = 0, slump = 0, typing = 0, children,
-}) => {
+export const DeskRoom: React.FC<{t: number; buzz?: number; person?: PersonPose; children?: React.ReactNode}> = ({t, buzz = 0, person = {}, children}) => {
   const wood = useMemo(() => { const w = woodTexture(); w.wrapS = w.wrapT = THREE.RepeatWrapping; w.repeat.set(3, 3); return w; }, []);
   const deskWood = useMemo(() => { const w = woodTexture(); w.wrapS = w.wrapT = THREE.RepeatWrapping; w.repeat.set(1, 1); return w; }, []);
   const screen = useMemo(() => canvasTexture(640, 400, (g) => {
@@ -82,7 +83,7 @@ export const DeskRoom: React.FC<{t: number; buzz?: number; headYaw?: number; hea
       <RBox size={[0.46, 0.06, 0.44]} position={[0, 0.45, 0.47]} color="#2b2e35" radius={0.02} />
       <RBox size={[0.44, 0.5, 0.05]} position={[0, 0.78, 0.72]} rotation={[-0.08, 0, 0]} color="#2b2e35" radius={0.02} />
       <mesh position={[0, 0.22, 0.47]} castShadow><cylinderGeometry args={[0.025, 0.025, 0.42, 16]} /><meshStandardMaterial color="#555b66" roughness={0.3} metalness={0.6} /></mesh>
-      <SeatedPerson position={[0, 0.48, 0.45]} rotationY={Math.PI} headYaw={headYaw} headPitch={headPitch} shoulderRaise={shoulderRaise} slump={slump} typing={typing} />
+      <SeatedPerson position={[0, 0.48, 0.45]} rotationY={Math.PI} {...person} />
       {children}
     </group>
   );

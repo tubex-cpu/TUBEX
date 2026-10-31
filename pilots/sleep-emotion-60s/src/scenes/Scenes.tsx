@@ -4,16 +4,27 @@ import {AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig} from 'remoti
 import {Bedroom} from '../three/Bedroom';
 import {CameraRig, ease, lerp, lerp3} from '../three/common';
 import {DESK_Y, DeskRoom} from '../three/Desk';
+import type {ArmPose} from '../three/Human';
+import {wobble} from '../three/noise';
 import {Mascot} from '../three/Mascot';
 import {MRIRoom} from '../three/MRI';
 import {Connectivity, Conditions, ImageStrip, Limits, Result} from '../ui/Diagrams';
 import {ObsLog, Tag, Vignette} from '../ui/Overlay';
+import {BrainPanel} from './BrainPanel';
 
 const GL = {toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 1.05, antialias: true, preserveDrawingBuffer: true};
 const clamp = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
 const seg = (f: number, a: number, b: number) => ease((f - a) / (b - a));
 export const XF = 8; // scenes become visible XF frames before their nominal start (cross-fade)
 const useF = () => useCurrentFrame() - XF;
+// damped spring 0 -> 1 with a small overshoot (anticipation / follow-through)
+const springy = (f: number, dur: number) => {
+  if (f <= 0) return 0;
+  const x = f / dur;
+  return 1 - Math.exp(-3.2 * x) * Math.cos(4.2 * x);
+};
+// subtle handheld camera drift (deterministic)
+const hand = (p: [number, number, number], t: number, a: number): [number, number, number] => [p[0] + wobble(t, 1) * a, p[1] + wobble(t, 2) * a, p[2] + wobble(t, 3) * a];
 
 const Canvas3D: React.FC<{children: React.ReactNode}> = ({children}) => {
   const {width, height} = useVideoConfig();
@@ -28,6 +39,9 @@ const PREDICT = '予測：睡眠は、体の休息。';
 const PREDICT2 = '　　　感情には関係しない。';
 
 // S1 — hook: an all-nighter at the desk, a phone buzz, a sharp reaction (re-enactment)
+const TYPE_ARM = (s: number, t: number, on: number): ArmPose => ({
+  pitch: 0.42 + on * 0.025 * Math.sin(t * 13 + s * 1.7), out: 0.16, elbow: 1.12 + on * 0.05 * Math.sin(t * 17 + s * 2.3),
+});
 export const HookScene: React.FC = () => {
   const f = useF();
   const {fps} = useVideoConfig();
@@ -35,18 +49,27 @@ export const HookScene: React.FC = () => {
   const pulse = (a: number, b: number) => Math.min(ease((t - a) / 0.12), 1 - ease((t - b + 0.25) / 0.25));
   const buzz = Math.max(0, pulse(2.3, 3.2), pulse(3.4, 4.3));
   const shotB = f >= 81;
-  // reaction: sharp head turn toward the phone, shoulders tense, then a heavy slump
-  const turn = seg(f, 86, 92) * (1 - 0.35 * seg(f, 125, 150));
-  const tense = seg(f, 86, 94) * (1 - seg(f, 120, 140));
-  const slump = seg(f, 122, 150);
-  const typing = f < 70 ? t : 0;
-  const camA = lerp3([1.35, 1.5, 1.55], [1.15, 1.42, 1.3], seg(f, 0, 81));
-  const camB = lerp3([0.8, 1.56, 1.38], [0.72, 1.52, 1.26], seg(f, 81, 159));
+  // acting: freeze on the first buzz -> sharp head snap with overshoot -> shoulders tense -> hand to the forehead, slump
+  const snap = springy(f - 86, 7);
+  const turn = snap * (1 - 0.4 * seg(f, 126, 150));
+  const tense = seg(f, 86, 92) * (1 - seg(f, 118, 136));
+  const slump = seg(f, 118, 150);
+  const typing = f < 69 ? 1 : 0;
+  const toFace = seg(f, 122, 146);
+  const armR: ArmPose = {
+    pitch: lerp(TYPE_ARM(1, t, typing).pitch, 1.5, toFace), out: lerp(0.16, 0.22, toFace), elbow: lerp(TYPE_ARM(1, t, typing).elbow, 2.15, toFace), twist: -1.3 * toFace,
+  };
+  const breath = Math.sin(t * 2 * Math.PI / 3.6) * (1 + tense);
+  const camA = hand(lerp3([1.35, 1.5, 1.55], [1.15, 1.42, 1.3], seg(f, 0, 81)), t, 0.006);
+  const camB = hand(lerp3([0.8, 1.56, 1.38], [0.72, 1.52, 1.26], seg(f, 81, 159)), t, 0.005);
   return (
     <AbsoluteFill style={{background: '#000'}}>
       <Canvas3D>
-        {shotB ? <CameraRig pos={camB} target={[0.18, 0.98, 0.12]} fov={36} /> : <CameraRig pos={camA} target={[0.0, 0.98, -0.05]} fov={38} />}
-        <DeskRoom t={t} buzz={buzz} headYaw={-0.75 * turn} headPitch={0.15 * slump + 0.05} shoulderRaise={tense} slump={slump} typing={typing} />
+        {shotB ? <CameraRig pos={camB} target={[0.16, 1.0, 0.12]} fov={36} /> : <CameraRig pos={camA} target={[0.0, 0.98, -0.05]} fov={38} />}
+        <DeskRoom t={t} buzz={buzz} person={{
+          headYaw: -0.75 * turn, headPitch: 0.06 + 0.22 * slump - 0.05 * tense, headRoll: 0.08 * slump, shoulderRaise: tense, slump, breath,
+          armL: TYPE_ARM(-1, t, typing), armR,
+        }} />
       </Canvas3D>
       <Vignette />
       <Tag text="再現映像（CG）" sub="日常の場面は、研究で直接調べたものではありません" />
@@ -59,16 +82,17 @@ export const ObserveScene: React.FC = () => {
   const f = useF();
   const {fps} = useVideoConfig();
   const t = (f + 159) / fps;
-  const tilt = 0.24 * seg(f, 34, 52);
-  const arm = 0.55 * seg(f, 48, 66);
-  const lean = 0.08 * seg(f, 48, 66);
-  const cam = lerp3([-1.2, 0.96, 0.4], [-1.12, 0.94, 0.32], seg(f, 0, 117));
+  const tilt = -0.04 * seg(f, 28, 34) * (1 - seg(f, 34, 40)) + 0.24 * springy(f - 34, 10);
+  const arm = 0.55 * springy(f - 50, 9);
+  const lean = 0.08 * springy(f - 48, 12) + 0.012 * Math.sin(t * 1.6);
+  const cam = hand(lerp3([-1.28, 1.14, 1.2], [-1.2, 1.1, 1.08], seg(f, 0, 117)), t, 0.004);
   return (
     <AbsoluteFill style={{background: '#000'}}>
       <Canvas3D>
-        <CameraRig pos={cam} target={[-0.3, 0.92, -0.05]} fov={36} />
-        <DeskRoom t={t} headYaw={-0.26} headPitch={0.2} slump={1}>
-          <Mascot position={[-0.45, DESK_Y, -0.02]} rotationY={0.75} scale={0.19} pose={{headTilt: tilt, armR: arm, lean, headNod: -0.06}} />
+        <CameraRig pos={cam} target={[-0.32, 0.92, 0.02]} fov={28} />
+        <DeskRoom t={t} person={{headYaw: -0.3, headPitch: 0.28, headRoll: 0.08, slump: 1, breath: Math.sin(t * 2 * Math.PI / 4), armL: TYPE_ARM(-1, t, 0),
+          armR: {pitch: 1.5, out: 0.22, elbow: 2.15, twist: -1.3}}}>
+          <Mascot position={[-0.5, DESK_Y, -0.08]} rotationY={0.7} scale={0.19} pose={{headTilt: tilt, armR: arm, lean, headNod: -0.06 + 0.02 * Math.sin(t * 1.1), headTurn: 0.05 * Math.sin(t * 0.7), bob: 0.004 * Math.sin(t * 2.2)}} />
         </DeskRoom>
       </Canvas3D>
       <Vignette />
@@ -81,8 +105,8 @@ export const ObserveScene: React.FC = () => {
 export const SleepScene: React.FC = () => {
   const f = useF();
   const shotB = f >= 74;
-  const camA = lerp3([1.15, 1.5, 2.55], [0.85, 1.32, 2.2], seg(f, 0, 74));
-  const camB = lerp3([-0.2, 0.92, 0.82], [-0.3, 0.88, 0.7], seg(f, 74, 160));
+  const camA = hand(lerp3([1.15, 1.5, 2.55], [0.85, 1.32, 2.2], seg(f, 0, 74)), f / 30, 0.006);
+  const camB = hand(lerp3([-0.2, 0.92, 0.82], [-0.3, 0.88, 0.7], seg(f, 74, 160)), f / 30, 0.003);
   return (
     <AbsoluteFill style={{background: '#000'}}>
       <Canvas3D>
@@ -108,7 +132,7 @@ export const ConditionsScene: React.FC = () => <Conditions f={useF()} />;
 // S5 — measurement re-enactment
 export const MRIScene: React.FC = () => {
   const f = useF();
-  const slide = seg(f, 0, 70);
+  const slide = seg(f, 60, 150);
   const cam = lerp3([4.3, 2.1, 3.9], [3.7, 1.9, 3.3], seg(f, 0, 168));
   return (
     <AbsoluteFill style={{background: '#000'}}>
@@ -131,6 +155,7 @@ export const ResultScene: React.FC = () => {
   return (
     <AbsoluteFill>
       <Result f={f} />
+      <BrainPanel f={f} x={20} y={150} w={820} h={620} rot={-0.15 + 0.3 * seg(f, 0, 258)} amyg={interpolate(f, [70, 115], [0.15, 1], clamp)} />
       {show && (
         <div style={{position: 'absolute', right: -40, bottom: 40, width: 520, height: 560, opacity: a}}>
           <ThreeCanvas width={520} height={560} shadows gl={{...GL, alpha: true}} style={{position: 'absolute', inset: 0}}>
@@ -146,7 +171,17 @@ export const ResultScene: React.FC = () => {
   );
 };
 
-export const ConnectivityScene: React.FC = () => <Connectivity f={useF()} />;
+export const ConnectivityScene: React.FC = () => {
+  const f = useF();
+  const sd = seg(f, 46, 70);
+  return (
+    <AbsoluteFill>
+      <Connectivity f={f} />
+      <BrainPanel f={f} x={0} y={160} w={780} h={620} rot={0.12 - 0.2 * seg(f, 0, 171)} amyg={0.55 + 0.3 * sd} pfc={interpolate(f, [4, 18], [0, 1], clamp)}
+        link={interpolate(f, [8, 22], [0, 1], clamp)} coupling={1 - sd} note={sd < 0.5 ? '通常睡眠' : '断眠'} noteColor={sd < 0.5 ? '#6fa8dc' : '#e8a04c'} />
+    </AbsoluteFill>
+  );
+};
 export const LimitsScene: React.FC = () => <Limits f={useF()} />;
 
 // S9 — back in the bedroom: the observer updates its judgement (distance, arm, posture)
@@ -155,15 +190,18 @@ export const UpdateScene: React.FC = () => {
   const shotB = f >= 54; // 53.4 s
   const g = f - 54;
   const back = seg(g, 46, 80); // steps back
+  const tg = (f + 1548) / 30;
   const pose = {
-    headTilt: 0.24 * (1 - seg(g, 30, 50)),
-    armR: 0.5 * (1 - seg(g, 34, 52)),
-    lean: 0.08 * (1 - seg(g, 34, 52)),
-    headNod: 0.16 * Math.sin(Math.PI * Math.min(1, Math.max(0, (g - 92) / 26))),
+    headTilt: 0.24 * (1 - springy(g - 30, 12)),
+    armR: 0.5 * (1 - springy(g - 36, 10)),
+    lean: 0.08 * (1 - seg(g, 34, 52)) - 0.05 * Math.sin(Math.PI * Math.min(1, Math.max(0, (g - 40) / 10))) + 0.01 * Math.sin(tg * 1.5),
+    headNod: 0.16 * Math.sin(Math.PI * Math.min(1, Math.max(0, (g - 96) / 24))) + 0.015 * Math.sin(tg * 1.1),
+    headTurn: 0.3 * (seg(g, 50, 90) - seg(g, 58, 100)),
     step: back > 0 && back < 1 ? back * Math.PI * 4 : 0,
+    bob: back > 0 && back < 1 ? 0.03 * Math.abs(Math.sin(back * Math.PI * 4)) : 0.004 * Math.sin(tg * 2.2),
   };
   const camA = lerp3([1.05, 1.42, 2.4], [0.95, 1.38, 2.3], seg(f, 0, 54));
-  const camB = lerp3([0.45, 1.02, 0.95], [0.38, 0.98, 0.82], seg(g, 0, 198));
+  const camB = hand(lerp3([0.45, 1.02, 0.95], [0.38, 0.98, 0.82], seg(g, 0, 198)), f / 30, 0.004);
   return (
     <AbsoluteFill style={{background: '#000'}}>
       <Canvas3D>

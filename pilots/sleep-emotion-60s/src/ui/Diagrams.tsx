@@ -47,8 +47,9 @@ export const Brain: React.FC<{x: number; y: number; scale?: number; amyg?: numbe
 // ---------- people icon ----------
 const Person: React.FC<{x: number; y: number; s?: number; color?: string; o?: number}> = ({x, y, s = 1, color = '#c9d6ee', o = 1}) => (
   <g transform={`translate(${x} ${y}) scale(${s})`} opacity={o}>
-    <circle cx={0} cy={-34} r={13} fill={color} />
-    <path d="M -20 10 C -20 -12 -12 -18 0 -18 C 12 -18 20 -12 20 10 Z" fill={color} />
+    <circle cx={0} cy={-36} r={13} fill={color} />
+    <path d="M -22 12 C -22 -10 -12 -19 0 -19 C 12 -19 22 -10 22 12 Q 0 17 -22 12 Z" fill={color} />
+    <circle cx={-4} cy={-40} r={4} fill="rgba(255,255,255,0.35)" />
   </g>
 );
 
@@ -83,9 +84,9 @@ export const Conditions: React.FC<{f: number}> = ({f}) => {
         const grow = interpolate(f, [p2 + g.d + 6, p2 + g.d + 60], [0, 1], clamp);
         const top = 420 + i * 180;
         return (
-          <div key={i} style={{position: 'absolute', left: 170, top, width: 1580, height: 150, opacity: a, transform: `translateY(${(1 - a) * 20}px)`}}>
+          <div key={i} style={{position: 'absolute', left: 120, top, width: 1300, height: 150, opacity: a, transform: `translateY(${(1 - a) * 20}px)`}}>
             <div style={{position: 'absolute', left: 0, top: 0, fontSize: 38, fontWeight: 800, color: g.color}}>{g.label}</div>
-            <div style={{position: 'absolute', left: 0, top: 70, width: 1580, height: 54, borderRadius: 27, background: 'rgba(255,255,255,0.07)', overflow: 'hidden'}}>
+            <div style={{position: 'absolute', left: 0, top: 70, width: 1300, height: 54, borderRadius: 27, background: 'rgba(255,255,255,0.07)', overflow: 'hidden'}}>
               {!g.sleep && <div style={{height: '100%', width: `${grow * 100}%`, background: `linear-gradient(90deg, ${C.wake}cc, ${C.wake})`}} />}
               {g.sleep && (
                 <>
@@ -97,52 +98,96 @@ export const Conditions: React.FC<{f: number}> = ({f}) => {
               <div style={{position: 'absolute', left: 30, top: 6, fontSize: 32, fontWeight: 700, color: '#0b1020', opacity: interpolate(grow, [0.5, 0.8], [0, 1], clamp)}}>
                 {g.sleep ? '' : g.text}
               </div>
-              {g.sleep && <div style={{position: 'absolute', left: '42%', top: 6, fontSize: 32, fontWeight: 700, color: '#fff', opacity: interpolate(grow, [0.55, 0.75], [0, 1], clamp)}}>☾ {g.text}</div>}
+              {g.sleep && (
+                <div style={{position: 'absolute', left: '41%', top: 6, fontSize: 30, fontWeight: 700, color: '#fff', display: 'flex', alignItems: 'center', gap: 10, opacity: interpolate(grow, [0.55, 0.75], [0, 1], clamp)}}>
+                  <svg width={30} height={30} viewBox="0 0 30 30"><path d="M 20 4 A 12 12 0 1 0 26 21 A 10 10 0 1 1 20 4 Z" fill="#fff6d8" /></svg>
+                  {g.text}
+                </div>
+              )}
             </div>
           </div>
         );
       })}
-      <div style={{position: 'absolute', left: 170, top: 800, fontSize: 26, color: C.sub, opacity: interpolate(f, [p2 + 70, p2 + 85], [0, 1], clamp)}}>
+      <Clock f={f - p2 - 6} />
+      <div style={{position: 'absolute', left: 120, top: 800, fontSize: 26, color: C.sub, opacity: interpolate(f, [p2 + 70, p2 + 85], [0, 1], clamp)}}>
         その後、両グループともMRI装置の中で画像を見て、脳の反応を測定
       </div>
     </Board>
   );
 };
 
+// 35-hour counter dial for the sleep-deprived condition (day/night ring)
+const Clock: React.FC<{f: number}> = ({f}) => {
+  const k = interpolate(f, [0, 54], [0, 1], clamp);
+  const hours = Math.round(35 * k);
+  const a = interpolate(f, [-8, 4], [0, 1], clamp);
+  const cx = 1610, cy = 560, r = 120;
+  const arc = (frac: number) => {
+    const ang = frac * Math.PI * 2 * (35 / 24) - Math.PI / 2;
+    return ang;
+  };
+  // ring: draws 35/24 turns; second lap drawn inside
+  const lap = (from: number, to: number, rr: number) => {
+    if (to <= from) return null;
+    const a0 = from * Math.PI * 2 - Math.PI / 2, a1 = to * Math.PI * 2 - Math.PI / 2;
+    const large = to - from > 0.5 ? 1 : 0;
+    return <path d={`M ${cx + rr * Math.cos(a0)} ${cy + rr * Math.sin(a0)} A ${rr} ${rr} 0 ${large} 1 ${cx + rr * Math.cos(a1)} ${cy + rr * Math.sin(a1)}`} fill="none" stroke={C.wake} strokeWidth={16} strokeLinecap="round" />;
+  };
+  const turns = (35 / 24) * k;
+  void arc;
+  return (
+    <svg style={{position: 'absolute', left: 0, top: 0, opacity: a}} width={1920} height={1080} fontFamily={FONT}>
+      <circle cx={cx} cy={cy} r={r} fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth={16} />
+      <circle cx={cx} cy={cy} r={r - 26} fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth={10} />
+      {lap(0, Math.min(1, turns) - 0.0001, r)}
+      {turns > 1 && <path d={(() => { const rr = r - 26; const a0 = -Math.PI / 2, a1 = (turns - 1) * Math.PI * 2 - Math.PI / 2; return `M ${cx + rr * Math.cos(a0)} ${cy + rr * Math.sin(a0)} A ${rr} ${rr} 0 ${turns - 1 > 0.5 ? 1 : 0} 1 ${cx + rr * Math.cos(a1)} ${cy + rr * Math.sin(a1)}`; })()} fill="none" stroke={C.wake} strokeOpacity={0.75} strokeWidth={10} strokeLinecap="round" />}
+      <text x={cx} y={cy + 14} textAnchor="middle" fontSize={64} fontWeight={900} fill={C.text}>{hours}</text>
+      <text x={cx} y={cy + 48} textAnchor="middle" fontSize={21} fontWeight={700} fill={C.sub}>時間 起きている</text>
+      <text x={cx} y={cy - r - 30} textAnchor="middle" fontSize={26} fontWeight={800} fill={C.wake}>断眠グループ</text>
+    </svg>
+  );
+};
+
 // ---------- result: index bars ----------
 export const Result: React.FC<{f: number}> = ({f}) => {
   const {fps} = useVideoConfig();
-  const g1 = spring({frame: f - 14, fps, config: {damping: 200}, durationInFrames: 30});
-  const g2 = spring({frame: f - 70, fps, config: {damping: 200}, durationInFrames: 45});
+  const g1 = spring({frame: f - 14, fps, config: {damping: 14, stiffness: 90, mass: 0.8}});
+  const g2 = spring({frame: f - 70, fps, config: {damping: 14, stiffness: 70, mass: 0.9}});
   const base = 770, unit = 2.55; // px per index point
-  const bar = (v: number, x: number, color: string, label: string, grow: number, valueText: string) => (
+  const bar = (v: number, x: number, color: string, label: string, grow: number, prefix: string) => (
     <g>
-      <rect x={x} y={base - v * unit * grow} width={170} height={v * unit * grow} rx={10} fill={color} />
+      <defs>
+        <linearGradient id={`bg${x}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={color} /><stop offset="1" stopColor={color} stopOpacity={0.7} /></linearGradient>
+      </defs>
+      <rect x={x} y={base - v * unit * grow} width={170} height={Math.max(0, v * unit * grow)} rx={10} fill={`url(#bg${x})`} />
+      <rect x={x} y={base - v * unit * grow} width={170} height={6} rx={3} fill="rgba(255,255,255,0.45)" opacity={grow > 0.05 ? 1 : 0} />
       <text x={x + 85} y={base + 50} textAnchor="middle" fontSize={34} fontWeight={800} fill={C.text}>{label}</text>
-      <text x={x + 85} y={base - v * unit * grow - 22} textAnchor="middle" fontSize={56} fontWeight={900} fill={color} opacity={interpolate(grow, [0.85, 1], [0, 1], clamp)}>{valueText}</text>
+      <text x={x + 85} y={base - v * unit * grow - 22} textAnchor="middle" fontSize={56} fontWeight={900} fill={color} opacity={interpolate(grow, [0.1, 0.4], [0, 1], clamp)}>
+        {grow > 0.98 ? prefix : ''}{Math.round(v * Math.min(1, grow))}
+      </text>
     </g>
   );
-  const amyg = interpolate(f, [70, 115], [0.15, 1], clamp);
+  const bracketLen = 2 * 45 + 60 * unit;
+  const bk = interpolate(f, [108, 126], [0, 1], clamp);
   return (
     <Board>
       <Cite />
       <div style={{position: 'absolute', left: 56, top: 48, padding: '8px 16px', borderRadius: 8, background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.2)', fontSize: 26, fontWeight: 700}}>結果（説明図）</div>
-      <Brain x={40} y={260} scale={1.08} amyg={amyg} />
       <svg style={{position: 'absolute', left: 0, top: 0}} width={1920} height={1080} fontFamily={FONT}>
         <text x={860} y={170} fontSize={36} fontWeight={800} fill={C.text}>不快な画像への扁桃体の反応</text>
         <text x={860} y={214} fontSize={26} fill={C.sub}>通常睡眠グループ＝100とした指数</text>
         <line x1={860} x2={1420} y1={base} y2={base} stroke="#8aa0c8" strokeWidth={3} />
         <line x1={860} x2={1420} y1={base - 100 * unit} y2={base - 100 * unit} stroke="rgba(255,255,255,0.25)" strokeDasharray="8 8" strokeWidth={2} />
-        {bar(100, 910, C.sleep, '通常睡眠', g1, '100')}
-        {bar(160, 1170, C.wake, '断眠', g2, '約160')}
-        <g opacity={interpolate(f, [110, 125], [0, 1], clamp)}>
-          <path d={`M 1355 ${base - 100 * unit} L 1400 ${base - 100 * unit} L 1400 ${base - 160 * unit} L 1355 ${base - 160 * unit}`} fill="none" stroke={C.warn} strokeWidth={3} />
-          <text x={1415} y={base - 133 * unit} fontSize={36} fontWeight={900} fill={C.warn}>約60%</text>
-          <text x={1415} y={base - 133 * unit + 42} fontSize={36} fontWeight={900} fill={C.warn}>大きい</text>
+        {bar(100, 910, C.sleep, '通常睡眠', g1, '')}
+        {bar(160, 1170, C.wake, '断眠', g2, '約')}
+        <g>
+          <path strokeDasharray={bracketLen} strokeDashoffset={bracketLen * (1 - bk)} d={`M 1355 ${base - 100 * unit} L 1400 ${base - 100 * unit} L 1400 ${base - 160 * unit} L 1355 ${base - 160 * unit}`} fill="none" stroke={C.warn} strokeWidth={3} />
+          <text x={1415} y={base - 133 * unit} fontSize={36} fontWeight={900} fill={C.warn} opacity={interpolate(f, [120, 130], [0, 1], clamp)}>約60%</text>
+          <text x={1415} y={base - 133 * unit + 42} fontSize={36} fontWeight={900} fill={C.warn} opacity={interpolate(f, [120, 130], [0, 1], clamp)}>大きい</text>
         </g>
       </svg>
-      <div style={{position: 'absolute', left: 70, top: 760, width: 720, fontSize: 24, lineHeight: 1.5, color: C.sub, opacity: interpolate(f, [24, 40], [0, 1], clamp)}}>
-        論文が報告した「約60%大きい」を指数で表した説明図。<br />fMRIの信号値そのものではありません。
+      <div style={{position: 'absolute', left: 860, top: 236, width: 900, fontSize: 22, lineHeight: 1.5, color: C.sub, opacity: interpolate(f, [24, 40], [0, 1], clamp)}}>
+        「約60%大きい」を指数にした説明図（fMRIの信号値ではありません）
       </div>
     </Board>
   );
@@ -170,12 +215,10 @@ const Trace: React.FC<{f: number; x: number; y: number; w: number; h: number; co
 export const Connectivity: React.FC<{f: number}> = ({f}) => {
   const a = interpolate(f, [6, 20], [0, 1], clamp);
   const b = interpolate(f, [40, 56], [0, 1], clamp);
-  const dim = interpolate(f, [60, 90], [0, 1], clamp);
   return (
     <Board>
       <Cite />
       <div style={{position: 'absolute', left: 56, top: 48, padding: '8px 16px', borderRadius: 8, background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.2)', fontSize: 26, fontWeight: 700}}>機能的結合（模式図）</div>
-      <Brain x={40} y={250} scale={1.0} amyg={0.45} pfc={a} link={a} linkDim={dim} />
       <svg style={{position: 'absolute', left: 0, top: 0}} width={1920} height={1080} fontFamily={FONT}>
         {[{label: '通常睡眠', coupled: true, y: 190, o: a, col: C.sleep, verdict: '活動が一緒に動く'}, {label: '断眠', coupled: false, y: 500, o: b, col: C.wake, verdict: '一緒に動きにくい'}].map((p) => (
           <g key={p.label} opacity={p.o}>

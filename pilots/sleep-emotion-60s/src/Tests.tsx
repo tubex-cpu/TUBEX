@@ -41,3 +41,20 @@ export const MascotTest: React.FC = () => {
     </AbsoluteFill>
   );
 };
+
+import {Brain3D} from './three/Brain3D';
+export const BrainTest: React.FC = () => {
+  const {width, height} = useVideoConfig();
+  const f = useCurrentFrame();
+  return (
+    <AbsoluteFill style={{background: '#0b1020'}}>
+      <ThreeCanvas width={width} height={height} gl={{...gl, alpha: true}}>
+        <CameraRig pos={[-2.4, 0.9, 2.6]} target={[0, -0.1, 0]} fov={32} />
+        <hemisphereLight args={['#dbe6ff', '#1a2030', 1.0]} />
+        <directionalLight position={[-2, 3, 3]} intensity={2.2} />
+        <directionalLight position={[3, 1, -3]} intensity={1.2} color="#8fb0ff" />
+        <Brain3D t={f / 30} rotY={f < 100 ? 0.0 : -1.2} amyg={0.8} pfc={0.8} link={1} coupling={1} />
+      </ThreeCanvas>
+    </AbsoluteFill>
+  );
+};

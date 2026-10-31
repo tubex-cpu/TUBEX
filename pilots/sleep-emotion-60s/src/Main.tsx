@@ -1,4 +1,4 @@
-import {AbsoluteFill, Audio, Sequence, interpolate, staticFile, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, Audio, Easing, Sequence, interpolate, staticFile, useCurrentFrame} from 'remotion';
 import {XF, ConditionsScene, ConnectivityScene, HookScene, LimitsScene, MRIScene, ObserveScene, ResultScene, SleepScene, UpdateScene} from './scenes/Scenes';
 import {FONT} from './theme';
 import {Subtitles} from './ui/Overlay';
@@ -18,8 +18,10 @@ export const SCENES = [
 
 const FadeIn: React.FC<{children: React.ReactNode; first: boolean}> = ({children, first}) => {
   const f = useCurrentFrame();
-  const o = first ? 1 : interpolate(f, [0, XF], [0, 1], {extrapolateRight: 'clamp'});
-  return <AbsoluteFill style={{opacity: o}}>{children}</AbsoluteFill>;
+  const o = first ? 1 : interpolate(f, [0, XF], [0, 1], {extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic)});
+  // incoming scene settles from a slight push-in (motivated, not flashy)
+  const sc = first ? 1 : interpolate(f, [0, XF * 3], [1.035, 1], {extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
+  return <AbsoluteFill style={{opacity: o, transform: `scale(${sc})`}}>{children}</AbsoluteFill>;
 };
 
 const Credits: React.FC = () => {
@@ -40,8 +42,19 @@ export const Main: React.FC = () => (
         <FadeIn first={i === 0}><C /></FadeIn>
       </Sequence>
     ))}
+    <Grain />
     <Subtitles />
     <Sequence from={1752}><Credits /></Sequence>
     <Audio src={staticFile('audio/mix.wav')} />
   </AbsoluteFill>
 );
+
+// fine film grain (pre-generated deterministic noise tiles), very low opacity
+const Grain: React.FC = () => {
+  const f = useCurrentFrame();
+  const k = f % 4;
+  const ox = (f * 137) % 512, oy = (f * 251) % 512;
+  return (
+    <AbsoluteFill style={{pointerEvents: 'none', opacity: 0.07, mixBlendMode: 'overlay', backgroundImage: `url(${staticFile(`grain/g${k}.png`)})`, backgroundPosition: `${ox}px ${oy}px`, backgroundSize: '512px 512px'}} />
+  );
+};

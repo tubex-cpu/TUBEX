@@ -6,7 +6,9 @@
 | 音声モデルの入手経路 | npm パッケージ `@nmemonica/voice-ja@0.1.14` の wasm に同梱されたもの（GitHub 本家 icn-lab/htsvoice-tohoku-f01 はこの環境のネットワーク制限で取得不可）。`scripts/extract_voice.py` で取り出し。`voice/tohoku-f01-neutral.htsvoice` sha256 `1c76d4d5646c46e13410651c4232b95af8b878e67afd370a605b5de792ba17ee` | 同上（パッケージの README にライセンス全文あり） | — |
 | BGM・効果音 | `scripts/make_audio.py` で numpy 合成（固定シード） | 自作 | — |
 | 3DCG（人物・寝室・机・MRI・キャラクター） | Three.js / React Three Fiber のプリミティブとコードで自作。画像生成・外部モデル・有料素材なし | 自作 | 画面左上に「再現映像（CG）」「測定の再現（CG）」 |
-| 脳の図・グラフ・波形 | SVG で自作（論文の図の転載なし） | 自作 | 「説明図」「模式図」と表示 |
+| 脳の3Dモデル | `src/three/Brain3D.tsx` で手続き的に自作（楕円体＋ノイズで脳溝・脳回、小脳、脳幹）。外部の脳モデル・画像・医用データは不使用 | 自作 | 「脳のCGモデル（自作の模式。部位の位置はおおよそ）」と表示 |
+| グラフ・波形・時計 | SVG で自作（論文の図の転載なし） | 自作 | 「説明図」「模式図」と表示 |
+| フィルムグレイン | `public/grain/` numpy で固定シード生成 | 自作 | — |
 | フォント | Noto Sans CJK JP（Debian `fonts-noto-cjk`） | SIL OFL 1.1 | — |
 | ライブラリ | Remotion 4.0.534 / three 0.176 / @react-three/fiber 9 | Remotion は個人・小規模チームは無料ライセンス（会社規模により有料ライセンスが必要。規約の確認は公開前に社長側で） | — |
 
