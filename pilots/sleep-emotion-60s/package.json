@@ -1,0 +1,29 @@
+{
+  "name": "sleep-emotion-60s",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "still": "node scripts/render.mjs --still",
+    "render": "node scripts/render.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@pmndrs/assets": "^1.7.0",
+    "@react-three/fiber": "9.1.2",
+    "@remotion/bundler": "4.0.534",
+    "@remotion/cli": "4.0.534",
+    "@remotion/renderer": "4.0.534",
+    "@remotion/three": "4.0.534",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.534",
+    "three": "0.176.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "@types/three": "0.176.0",
+    "typescript": "5.8.3"
+  }
+}

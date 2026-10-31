@@ -1,4 +1,5 @@
 import React from 'react';
+import {HabiIcon, isHabiIcon} from './HabiIcons';
 import {IconName, theme} from './types';
 
 // Simple flat illustrations so no paid/licensed image assets are needed.
@@ -104,6 +105,7 @@ const Moon: React.FC<{t: number}> = ({t}) => (
 );
 
 export const Icon: React.FC<{name: IconName; t: number; size?: number}> = ({name, t, size = 420}) => {
+  if (isHabiIcon(name)) return <HabiIcon name={name} t={t} size={size} />;
   const C = {hydra: Hydra, jellyfish: Jellyfish, bird: Bird, brain: Brain, dna: Dna, moon: Moon}[name];
   return (
     <svg width={size} height={size} viewBox="0 0 400 400">

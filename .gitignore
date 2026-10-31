@@ -16,3 +16,8 @@ desktop.ini
 # 誤ってリポジトリ内に作ったときの保険
 _素材/
 _competitor_thumbs/
+
+# 長尺回のナレーション音声は make_audio.py で再生成できるため git に入れない
+video/public/episodes/habi-002-mu/
+# パイロット動画の監査用軽量版
+!pilots/*/preview.mp4
