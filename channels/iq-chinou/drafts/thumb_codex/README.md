@@ -1,5 +1,7 @@
 # IQ回 サムネイル・ラフ3案
 
+**最新版は [v2/README.md](v2/README.md)。初稿はユーザーの「AI生成感が強すぎる」という指摘で差し戻し。以下の初稿は比較履歴として保存し、採用候補から外す。**
+
 2026-10-31 / Codex制作 / **試作・Claude未監査・方向選択待ち**。
 
 依頼: [codex_request_thumbnail.md](../../codex_request_thumbnail.md)。入力は `codex/weekly-operations-20261025` の `122760fe8689cfac84ed1c50241dc8ceab1f1cb0`。ゲートA承認ではなく、完成版ではない。変更はこのフォルダのみ。
