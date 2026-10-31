@@ -1,0 +1,562 @@
+{
+ "title": "いち早く動いた寿司屋と、ひとつの決まり",
+ "source": "script_v6_chapters.json（社長承認 2026-10-30）",
+ "timing": "voice",
+ "audio": {
+  "fade_in": 0.6,
+  "fade_out": 1.2
+ },
+ "segments": [
+  {
+   "narration": [
+    "回転寿司のラーメンには、先頭を走った店があります。"
+   ],
+   "shots": [
+    {
+     "asset": "conveyor",
+     "bg": {
+      "type": "photo",
+      "asset": "conveyor",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "寿司レーンの再現イメージ"
+      },
+      {
+       "type": "title",
+       "text": "回転寿司の、ラーメン。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "回転寿司の、ラーメン。",
+     "hit": true
+    },
+    {
+     "asset": "cm-ramen-niboshi-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-niboshi-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "回転寿司の業界で、いち早くラーメンに乗り出したのが、くら寿司でした。"
+   ],
+   "shots": [
+    {
+     "asset": "real-01",
+     "bg": {
+      "type": "photo",
+      "asset": "real-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：くら寿司 中百舌鳥店 ／ Tokumeigakarinoaoshima・CC0"
+      },
+      {
+       "type": "title",
+       "text": "くら寿司",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "くら寿司"
+    },
+    {
+     "asset": "diagram:869d333d04",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "回転寿司のラーメン"
+      },
+      {
+       "points": [
+        [
+         "2012.11",
+         "くら寿司"
+        ]
+       ],
+       "highlight": 0,
+       "type": "timeline_n"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "くら寿司がラーメンを売り出したのは、2012年11月。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:31adf844b6",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "回転寿司のラーメン"
+      },
+      {
+       "points": [
+        [
+         "2012.11",
+         "くら寿司"
+        ],
+        [
+         "2013.3",
+         "はま寿司"
+        ],
+        [
+         "2014.4",
+         "スシロー"
+        ]
+       ],
+       "highlight": 0,
+       "type": "timeline_n"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "はま寿司がラーメンを始めたのは2013年3月、スシローは2014年4月です。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-kaiten-lane-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-lane-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：回転寿司のレーンと積まれた皿 ／ Maarten Heerlien from Voorschoten, The Netherlands・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    },
+    {
+     "asset": "diagram:b042eac5e0",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "回転寿司のラーメン"
+      },
+      {
+       "items": [
+        "はま寿司 2013年3月",
+        "スシロー 2014年4月"
+       ],
+       "cols": 2,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-kaiten-lane-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-lane-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：長い回転寿司レーンの俯瞰 ／ bigbirdz・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "くら寿司のラーメンは、1年半後の2014年5月には、醤油らーめんだけで累計1000万杯。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:b0c33cdf20",
+     "note": "steps",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "回転寿司のラーメン"
+      },
+      {
+       "items": [
+        [
+         "2014年5月",
+         1000,
+         "1,000万杯"
+        ]
+       ],
+       "type": "steps"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：チャーシュー麺（醤油・黒い盆） ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "ramen"
+    },
+    {
+     "asset": "cm-nigiri-salmon-plate-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-nigiri-salmon-plate-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：皿にのったサーモンの握り ／ RuinDig/Yuki Uchida・CC BY 4.0"
+      }
+     ],
+     "note": "sushi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2015年の年末には、シリーズで2300万杯。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:d4d20c2c3a",
+     "note": "steps",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "回転寿司のラーメン"
+      },
+      {
+       "items": [
+        [
+         "2014年5月",
+         1000,
+         "1,000万杯"
+        ],
+        [
+         "2015年12月",
+         2300,
+         "2,300万杯"
+        ]
+       ],
+       "type": "steps"
+      }
+     ]
+    },
+    {
+     "asset": "cm-noodles-fresh-kitchen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-fresh-kitchen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：厨房の生麺と湯気 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+      }
+     ],
+     "note": "noodles"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2017年1月には、累計3000万食を超えていました。"
+   ],
+   "shots": [
+    {
+     "asset": "giant:165d801a80",
+     "note": "数字 3,000",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "回転寿司のラーメン"
+      },
+      {
+       "type": "giant",
+       "value": "3,000",
+       "unit": "万食",
+       "y": 300,
+       "n": 380
+      }
+     ],
+     "flash": true,
+     "hit": true
+    },
+    {
+     "asset": "diagram:a6296f7b29",
+     "note": "steps",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "回転寿司のラーメン"
+      },
+      {
+       "items": [
+        [
+         "2014年5月",
+         1000,
+         "1,000万杯"
+        ],
+        [
+         "2015年12月",
+         2300,
+         "2,300万杯"
+        ],
+        [
+         "2017年1月",
+         3000,
+         "3,000万食"
+        ]
+       ],
+       "type": "steps"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "しかも、このラーメンには、ひとつの決まりがあります。"
+   ],
+   "shots": [
+    {
+     "asset": "ramenhero",
+     "bg": {
+      "type": "photo",
+      "asset": "ramenhero",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "料理の再現イメージ"
+      },
+      {
+       "type": "title",
+       "text": "ひとつの、決まり。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "ひとつの、決まり。"
+    },
+    {
+     "asset": "cm-broth-kitchen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-broth-kitchen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：厨房のスープ作り（白黒） ／ H. Alexander Talbot・CC BY 2.0"
+      }
+     ],
+     "note": "dashi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "化学調味料を、一切使わないこと。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:36385ae67a",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "回転寿司のラーメン"
+      },
+      {
+       "items": [
+        "化学調味料"
+       ],
+       "cross": true,
+       "title": "一切、使わない",
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（メンマ・チャーシュー） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "ラーメンのうま味を、化学調味料なしで、どうやって出すのか。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-ramen-shoyu-04",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-04",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昔ながらの醤油ラーメン（なると） ／ Ocdp・CC0"
+      }
+     ],
+     "note": "ramen"
+    },
+    {
+     "asset": "text:9e952c4de9",
+     "note": "化学調味料なしで、",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "回転寿司のラーメン"
+      },
+      {
+       "type": "title_card",
+       "text": "化学調味料なしで、",
+       "sub": "うま味は、どこから？"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "実はくら寿司は、一度、この壁に負けています。"
+   ],
+   "shots": [
+    {
+     "asset": "text:cd67bf736b",
+     "note": "一度、負けている。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "回転寿司のラーメン"
+      },
+      {
+       "type": "title_card",
+       "text": "一度、負けている。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-kaiten-express-lane-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-express-lane-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：新幹線型の特急レーン ／ Karl Baron from Malmö, Sweden・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  }
+ ]
+}

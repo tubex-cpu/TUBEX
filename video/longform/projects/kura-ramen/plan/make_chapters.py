@@ -129,8 +129,9 @@ class Chapter:
             s = self.take(b)
             if s:
                 return s
-        # 写真が尽きたら、どの章でも使える写真から
-        for tag in self.tags:
+        # 章の fill が尽きたら、ラーメンに近い題材の順で
+        for tag in ['ramen', 'misoramen', 'tonkotsu', 'noodles', 'noodlelift', 'kitchen', 'steam', 'ramenshop', 'shop',
+                    'dashi', 'misosoup', 'sushi', 'conveyor', 'noren', 'queue']:
             a = self.photo_id(tag)
             if a:
                 return self.take('p:' + tag)

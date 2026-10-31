@@ -1,0 +1,911 @@
+{
+ "title": "寿司を食べた舌は、麻痺している",
+ "source": "script_v6_chapters.json（社長承認 2026-10-30）",
+ "timing": "voice",
+ "audio": {
+  "fade_in": 0.6,
+  "fade_out": 1.2
+ },
+ "segments": [
+  {
+   "narration": [
+    "寿司を食べている人の舌は、ある意味、麻痺した状態です。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-nigiri-salmon-plate-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-nigiri-salmon-plate-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：皿にのったサーモンの握り ／ RuinDig/Yuki Uchida・CC BY 4.0"
+      },
+      {
+       "type": "title",
+       "text": "寿司を食べた舌は、麻痺している。",
+       "y": 760,
+       "n": 84
+      }
+     ],
+     "note": "寿司を食べた舌は、麻痺してい",
+     "hit": true
+    },
+    {
+     "asset": "cm-nigiri-tuna-plate-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-nigiri-tuna-plate-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：皿にのったまぐろの握り（薬味のせ） ／ RuinDig/Yuki Uchida・CC BY 4.0"
+      }
+     ],
+     "note": "sushi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "すし酢には、塩と砂糖がたくさん入っています。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-sushi-gari-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-sushi-gari-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：カウンターの握りとガリ ／ rabbit_akra from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "rice"
+    },
+    {
+     "asset": "diagram:65473ae9f5",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ライバルたち"
+      },
+      {
+       "title": "すし酢",
+       "items": [
+        "塩",
+        "砂糖"
+       ],
+       "cols": 2,
+       "type": "chips"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "そこに醤油をつけて食べるからです。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-shoyu-kioke-barrels-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-shoyu-kioke-barrels-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油蔵の大きな木桶 ／ nubobo・CC BY 2.0"
+      }
+     ],
+     "note": "soy"
+    },
+    {
+     "asset": "diagram:ba97fbccd8",
+     "note": "flow",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ライバルたち"
+      },
+      {
+       "items": [
+        "すし酢",
+        "＋ 醤油",
+        "舌が麻痺した状態"
+       ],
+       "type": "flow"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "これを明かしたのは、ライバルのはま寿司でした。"
+   ],
+   "shots": [
+    {
+     "asset": "text:0fed574b78",
+     "note": "明かしたのは、はま寿司。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ライバルたち"
+      },
+      {
+       "type": "title_card",
+       "text": "明かしたのは、はま寿司。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-niboshi-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-niboshi-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "はま寿司は、寿司に味負けしないように、ラーメンのうま味とダシ感を強めにしました。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:1c07a6d669",
+     "note": "flow",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ライバルたち"
+      },
+      {
+       "items": [
+        "寿司に味負けしない",
+        "うま味とダシ感を強めに"
+       ],
+       "type": "flow"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-street-retro-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-street-retro-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昭和の街並みを再現したラーメン横丁 ／ Brakeet・CC0"
+      }
+     ],
+     "note": "queue"
+    },
+    {
+     "asset": "cm-ramen-counter-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-counter-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ラーメン店のカウンターと調味料 ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramenshop"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "最初に出した海鮮のラーメンは、失敗しています。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-miso-soup-shrimp-head-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-miso-soup-shrimp-head-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：えびの頭の味噌汁 ／ City Foodsters・CC BY 2.0"
+      }
+     ],
+     "note": "seafoodramen"
+    },
+    {
+     "asset": "text:3e3894c55a",
+     "note": "海鮮ラーメンは、失敗。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ライバルたち"
+      },
+      {
+       "type": "title_card",
+       "text": "海鮮ラーメンは、失敗。"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "お客さんの反応は、「おすしを食べにきているのに、ラーメンにまで海鮮を求めない」。"
+   ],
+   "shots": [
+    {
+     "asset": "quote:8da254e87b",
+     "note": "引用",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "quote",
+       "text": "おすしを食べにきているのに、\nラーメンにまで海鮮を求めない",
+       "by": "お客さんの反応"
+      }
+     ]
+    },
+    {
+     "asset": "cm-niboshi-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-niboshi-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：袋入りの煮干し（かえり） ／ Nesnad・CC BY 4.0"
+      }
+     ],
+     "note": "niboshi"
+    },
+    {
+     "asset": "cm-kaiten-lane-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-lane-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：回転寿司のレーンと積まれた皿 ／ Maarten Heerlien from Voorschoten, The Netherlands・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "そこで、都心で行列を作るラーメンの味を、全国の店で出す道を選びました。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-ramen-queue-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-queue-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ラーメン店に並ぶ行列（遠景） ／ くろふね・CC BY 3.0"
+      },
+      {
+       "type": "title",
+       "text": "行列の味を、全国へ。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "行列の味を、全国へ。"
+    },
+    {
+     "asset": "cm-nigiri-closeup-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-nigiri-closeup-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：握り寿司の寄り（サーモン・まぐろ） ／ Think Draw from Dubai, UAE・CC BY 2.0"
+      }
+     ],
+     "note": "sushi"
+    },
+    {
+     "asset": "cm-ramen-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2015年には、「コク旨煮干しラーメン」が、6週間ほどで100万食を売っています。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-iwashi-dried-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-iwashi-dried-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：焼いた目刺し（干しいわし） ／ Kossy@FINEDAYS from Tokyo・CC BY 2.0"
+      }
+     ],
+     "note": "niboshi"
+    },
+    {
+     "asset": "diagram:0a97e3d454",
+     "note": "band",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ライバルたち"
+      },
+      {
+       "label": "2015年「コク旨煮干しラーメン」",
+       "value": "100万食",
+       "sub": "6週間ほどで",
+       "type": "band"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shop-interior-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shop-interior-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昔ながらのラーメン店の店内 ／ Mark Mrwizard・CC BY 2.0"
+      }
+     ],
+     "note": "ramenshop"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "スシローは、2014年4月に、税抜き280円のラーメンで参戦しました。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:54b8199ba3",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ライバルたち"
+      },
+      {
+       "points": [
+        [
+         "2014.4",
+         "スシロー参戦"
+        ]
+       ],
+       "highlight": 0,
+       "type": "timeline_n"
+      }
+     ]
+    },
+    {
+     "asset": "text:119528a6d3",
+     "note": "税抜き280円",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ライバルたち"
+      },
+      {
+       "type": "title_card",
+       "text": "税抜き280円"
+      }
+     ]
+    },
+    {
+     "asset": "cm-kaiten-lane-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-lane-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：長い回転寿司レーンの俯瞰 ／ bigbirdz・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "当時の社長、豊﨑賢一さんの言葉です。"
+   ],
+   "shots": [
+    {
+     "asset": "text:83ef97b9fb",
+     "note": "当時の社長 豊﨑賢一さん",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ライバルたち"
+      },
+      {
+       "type": "title_card",
+       "text": "当時の社長 豊﨑賢一さん"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：チャーシュー麺（醤油・黒い盆） ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "「お客さんのニーズも多様化しているので、従来のように直球ばかりではなく、すし以外のものを投入していく」"
+   ],
+   "shots": [
+    {
+     "asset": "quote:55e6c0c050",
+     "note": "引用",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "quote",
+       "text": "従来のように直球ばかりではなく、\nすし以外のものを投入していく",
+       "by": "豊﨑賢一さん（2014年）"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-sample-window-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-sample-window-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ラーメン店のショーウィンドウ（食品サンプル） ／ Marie-Sophie Mejan・CC BY 4.0"
+      }
+     ],
+     "note": "ramenshop"
+    },
+    {
+     "asset": "cm-kaiten-express-lane-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-express-lane-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：新幹線型の特急レーン ／ Karl Baron from Malmö, Sweden・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2021年の時点で、スシローのラーメンは1年におよそ990万杯。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:27d27858dc",
+     "note": "bars",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ライバルたち"
+      },
+      {
+       "items": [
+        [
+         "スシローのラーメン（2021年）",
+         990,
+         "約990万杯／年"
+        ]
+       ],
+       "type": "bars"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（メンマ・チャーシュー） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    },
+    {
+     "asset": "cm-ramen-shop-exterior-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shop-exterior-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：中華料理・ラーメン店の外観 ／ Urawa Zero from Japan・CC BY 2.0"
+      }
+     ],
+     "note": "ramenshop"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "開発したラーメンやまぜそばは、2026年6月までに170種類です。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:cfc4acbfa6",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ライバルたち"
+      },
+      {
+       "items": [
+        "開発したラーメン・まぜそば",
+        "170種類（2026年6月まで）"
+       ],
+       "cols": 1,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-kaiten-lane-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-lane-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：回転寿司のカウンターとレーン ／ Benjamin Hollis from Seattle, WA, USA・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    },
+    {
+     "asset": "cm-ramen-shoyu-04",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-04",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昔ながらの醤油ラーメン（なると） ／ Ocdp・CC0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "かっぱ寿司は、2018年6月から、ラーメンの名店に監修を頼むシリーズを続け、累計は2025年12月に出した数字で1840万食以上。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:8a6526ab84",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ライバルたち"
+      },
+      {
+       "points": [
+        [
+         "2018.6",
+         "かっぱ寿司 名店監修"
+        ],
+        [
+         "2025.12",
+         "累計1,840万食以上"
+        ]
+       ],
+       "highlight": 1,
+       "type": "timeline_n"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shop-night-interior-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shop-night-interior-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：深夜のラーメン店の店内 ／ Ryo FUKAsawa from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "ramenshop"
+    },
+    {
+     "asset": "cm-kaiten-cover-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-cover-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：カバー付きの皿が回るレーン ／ Syced・CC0"
+      }
+     ],
+     "note": "conveyor"
+    },
+    {
+     "asset": "cm-ramen-saba-dashi-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-saba-dashi-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：さばだしのラーメン ／ 石巻敎祖・CC BY 4.0"
+      }
+     ],
+     "note": "ramen"
+    },
+    {
+     "asset": "cm-ramen-shop-night-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shop-night-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：夜のラーメン店の外観 ／ 博柳・CC BY 3.0"
+      }
+     ],
+     "note": "ramenshop"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "行列店や名店の味を追いかける、ライバルたち。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-ramen-shop-night-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shop-night-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：雪の夜のラーメン店 ／ くろふね・CC BY 3.0"
+      }
+     ],
+     "note": "ramenshop"
+    },
+    {
+     "asset": "text:a24864d776",
+     "note": "行列店・名店の味を追う。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ライバルたち"
+      },
+      {
+       "type": "title_card",
+       "text": "行列店・名店の味を追う。"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "その中で、くら寿司の定番は、今も、自分の店でとるだしのラーメンです。"
+   ],
+   "shots": [
+    {
+     "asset": "broth",
+     "bg": {
+      "type": "photo",
+      "asset": "broth",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "調理の再現イメージ"
+      },
+      {
+       "type": "title",
+       "text": "くら寿司の定番は、店でとるだし。",
+       "y": 760,
+       "n": 84
+      }
+     ],
+     "note": "くら寿司の定番は、店でとるだ"
+    },
+    {
+     "asset": "cm-kaiten-lane-04",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-lane-04",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：照明に浮かぶ回転レーン ／ V0lkanic・CC0"
+      }
+     ],
+     "note": "conveyor"
+    },
+    {
+     "asset": "cm-ramen-shop-night-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shop-night-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：夜に灯るラーメン店 ／ zaopharm・CC BY 2.0"
+      }
+     ],
+     "note": "ramenshop"
+    }
+   ]
+  }
+ ]
+}

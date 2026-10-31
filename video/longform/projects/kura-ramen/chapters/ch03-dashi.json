@@ -1,0 +1,642 @@
+{
+ "title": "手がかり1：寿司屋の厨房で、毎日とるだし",
+ "source": "script_v6_chapters.json（社長承認 2026-10-30）",
+ "timing": "voice",
+ "audio": {
+  "fade_in": 0.6,
+  "fade_out": 1.2
+ },
+ "segments": [
+  {
+   "narration": [
+    "寿司屋の厨房で、毎日、ラーメンのためのだしがとられています。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-broth-kitchen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-broth-kitchen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：厨房のスープ作り（白黒） ／ H. Alexander Talbot・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "毎日、店でとる。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "毎日、店でとる。",
+     "hit": true
+    },
+    {
+     "asset": "cm-noodles-fresh-kitchen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-fresh-kitchen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：厨房の生麺と湯気 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+      }
+     ],
+     "note": "steam"
+    },
+    {
+     "asset": "cm-broth-pot-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-broth-pot-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：鍋の黄金色のスープとお玉 ／ Hannes Grobe ( talk )・CC BY 3.0"
+      }
+     ],
+     "note": "dashi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "鍋に入るのは、北海道産の昆布、直火で焼いたかつお、そして、さば。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-kombu-drying-hokkaido-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kombu-drying-hokkaido-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：北海道の浜で天日干しされる昆布 ／ Marie-Sophie Mejan・CC BY 4.0"
+      }
+     ],
+     "note": "kombu"
+    },
+    {
+     "asset": "cm-katsuobushi-shop-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-katsuobushi-shop-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：鰹節と削り節の量り売り ／ Naotake Murayama from San Francisco, CA, USA・CC BY 2.0"
+      }
+     ],
+     "note": "katsuo"
+    },
+    {
+     "asset": "cm-saba-fresh-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-saba-fresh-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：店頭に並ぶ鮮魚のさば ／ Nesnad・CC BY 4.0"
+      }
+     ],
+     "note": "saba"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "これが、くら寿司の「7種の魚介だし」の土台です。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:9f070807ad",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり1　だし"
+      },
+      {
+       "title": "「7種の魚介だし」の土台",
+       "items": [
+        "北海道産の昆布",
+        "直火で焼いたかつお",
+        "さば"
+       ],
+       "cols": 3,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-kombu-drying-hokkaido-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kombu-drying-hokkaido-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：干し場に吊るされた昆布（北海道） ／ Marie-Sophie Mejan・CC BY 4.0"
+      }
+     ],
+     "note": "kombu"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "研究を重ねて、今の形になるまでにかかった時間は、35年。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:aafd5e114c",
+     "note": "band",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり1　だし"
+      },
+      {
+       "label": "研究を重ねて、今の形になるまで",
+       "value": "35年",
+       "type": "band"
+      }
+     ]
+    },
+    {
+     "asset": "cm-katsuobushi-blocks-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-katsuobushi-blocks-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：鹿児島の鰹節（荒節） ／ Sakurai Midori・CC BY 2.5"
+      }
+     ],
+     "note": "katsuo"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "このだしを、それぞれの店で、毎日とっています。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-broth-clear-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-broth-clear-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：透き通ったスープ ／ J Doll・CC BY 3.0"
+      }
+     ],
+     "note": "dashi"
+    },
+    {
+     "asset": "diagram:4d87fe3e64",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり1　だし"
+      },
+      {
+       "items": [
+        "それぞれの店で",
+        "毎日"
+       ],
+       "cols": 2,
+       "type": "chips"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "しかも、1日に何回かに分けて。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:c0cfb0cdb9",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり1　だし"
+      },
+      {
+       "items": [
+        "1日に",
+        "何回かに分けて"
+       ],
+       "cols": 2,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-saba-grilled-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-saba-grilled-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：焼きさばの定食 ／ lazy fri13th from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "saba"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "まとめて作るのではなく、だしの風味を損なわないように、少しずつ作るのです。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-ramen-kitchen-steam-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-kitchen-steam-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：湯気の立つラーメン店の厨房 ／ Syced・CC0"
+      },
+      {
+       "type": "title",
+       "text": "だしの風味を、損なわないように。",
+       "y": 760,
+       "n": 84
+      }
+     ],
+     "note": "だしの風味を、損なわないよう"
+    },
+    {
+     "asset": "cm-ramen-boiler-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-boiler-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ラーメン店の麺釜とてぼ ／ yamakk・CC BY 2.0"
+      }
+     ],
+     "note": "steam"
+    },
+    {
+     "asset": "cm-akadashi-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-akadashi-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：赤だし（なめこと豆腐） ／ Ocdp・CC0"
+      }
+     ],
+     "note": "misosoup"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "このだしは、ラーメンだけのものではありません。"
+   ],
+   "shots": [
+    {
+     "asset": "broth",
+     "bg": {
+      "type": "photo",
+      "asset": "broth",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "調理の再現イメージ"
+      },
+      {
+       "type": "title",
+       "text": "ラーメンだけでは、ない。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "ラーメンだけでは、ない。"
+    },
+    {
+     "asset": "cm-stockpot-simmer-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-stockpot-simmer-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：骨と香味野菜を煮込む寸胴鍋 ／ Blue Lotus・CC BY 2.0"
+      }
+     ],
+     "note": "dashi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "寿司の横に置かれる赤だしや味噌汁にも、同じだしが使われています。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-akadashi-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-akadashi-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：赤だしの椀（寄り） ／ Ippei Suzuki・CC BY 2.0"
+      }
+     ],
+     "note": "misosoup"
+    },
+    {
+     "asset": "diagram:dd31c14792",
+     "note": "branch",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり1　だし"
+      },
+      {
+       "source": "7種の魚介だし",
+       "targets": [
+        "赤だし",
+        "味噌汁",
+        "ラーメン"
+       ],
+       "type": "branch"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "寿司を食べながら飲む汁物と、ラーメンのスープは、同じだしから生まれているのです。"
+   ],
+   "shots": [
+    {
+     "asset": "real-06",
+     "bg": {
+      "type": "photo",
+      "asset": "real-06",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：くら寿司 西新宿店 ／ 経済特区・CC0"
+      }
+     ],
+     "note": "real-06"
+    },
+    {
+     "asset": "cm-ramen-niboshi-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-niboshi-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    },
+    {
+     "asset": "cm-kombu-drying-racks-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kombu-drying-racks-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：家の前の干し棚に吊るされた昆布 ／ Ryo FUKAsawa from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "kombu"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "化学調味料を使わない店で、うま味の土台になっているのは、魚介のうま味が溶け込んだ、このだしです。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-dashi-pour-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-dashi-pour-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昆布だしを注ぐ一皿 ／ City Foodsters・CC BY 2.0"
+      }
+     ],
+     "note": "dashi"
+    },
+    {
+     "asset": "text:b401239ccc",
+     "note": "うま味の土台は、だし。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり1　だし"
+      },
+      {
+       "type": "title_card",
+       "text": "うま味の土台は、だし。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-katsuobushi-blocks-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-katsuobushi-blocks-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：枯本節（本枯節）の量り売り ／ Jun Seita from Palo Alto, CA, U.S.・CC BY 2.0"
+      }
+     ],
+     "note": "katsuo"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "でも、答えは、だしだけではありませんでした。"
+   ],
+   "shots": [
+    {
+     "asset": "text:c60178753e",
+     "note": "答えは、だしだけではない。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり1　だし"
+      },
+      {
+       "type": "title_card",
+       "text": "答えは、だしだけではない。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-saba-fresh-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-saba-fresh-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：海藻の上のさば一尾 ／ Mikael Nyman・CC BY 4.0"
+      }
+     ],
+     "note": "saba"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "くら寿司は、このだしを、思いもよらない形で売り出します。"
+   ],
+   "shots": [
+    {
+     "asset": "text:5ef6cf6eb4",
+     "note": "思いもよらない、売り方。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり1　だし"
+      },
+      {
+       "type": "title_card",
+       "text": "思いもよらない、売り方。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-stockpots-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-stockpots-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：コンロに並ぶスープ鍋 ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "steam"
+    },
+    {
+     "asset": "cm-miso-soup-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-miso-soup-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：豆腐とわかめの味噌汁 ／ Ocdp・CC0"
+      }
+     ],
+     "note": "misosoup"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1172 @@
+{
+ "title": "まとめ：次に行ったら、ここを確かめてほしい",
+ "source": "script_v6_chapters.json（社長承認 2026-10-30）",
+ "timing": "voice",
+ "audio": {
+  "fade_in": 0.6,
+  "fade_out": 1.2
+ },
+ "segments": [
+  {
+   "narration": [
+    "3年あまりで2300万杯。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:a1a5c8af92",
+     "note": "steps",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "次に行ったら"
+      },
+      {
+       "items": [
+        [
+         "2012年11月",
+         1,
+         "発売"
+        ],
+        [
+         "2015年12月",
+         2300,
+         "2,300万杯"
+        ]
+       ],
+       "type": "steps"
+      }
+     ],
+     "hit": true
+    },
+    {
+     "asset": "cm-ramen-niboshi-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-niboshi-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "1日あたり、およそ2万杯。"
+   ],
+   "shots": [
+    {
+     "asset": "giant:b762b6ccdd",
+     "note": "数字 2",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "次に行ったら"
+      },
+      {
+       "type": "giant",
+       "value": "2",
+       "unit": "万杯／日",
+       "y": 300,
+       "n": 420
+      }
+     ],
+     "flash": true,
+     "hit": true
+    }
+   ]
+  },
+  {
+   "narration": [
+    "その始まりは、1998年に半年で閉じた、「無添加ラーメン」の店でした。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:924526e24b",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "次に行ったら"
+      },
+      {
+       "points": [
+        [
+         "1998",
+         "無添加ラーメン"
+        ],
+        [
+         "2011",
+         "押し寿司"
+        ],
+        [
+         "2012",
+         "7種の魚介醤油らーめん"
+        ]
+       ],
+       "highlight": 0,
+       "type": "timeline_n"
+      }
+     ]
+    },
+    {
+     "asset": "cm-broth-kitchen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-broth-kitchen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：厨房のスープ作り（白黒） ／ H. Alexander Talbot・CC BY 2.0"
+      }
+     ],
+     "note": "dashi"
+    },
+    {
+     "asset": "cm-noodles-fresh-kitchen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-fresh-kitchen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：厨房の生麺と湯気 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+      }
+     ],
+     "note": "noodles"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "化学調味料なしで、うま味をどう出すか。"
+   ],
+   "shots": [
+    {
+     "asset": "text:4d6f490b27",
+     "note": "化学調味料なしで、",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "次に行ったら"
+      },
+      {
+       "type": "title_card",
+       "text": "化学調味料なしで、",
+       "sub": "うま味をどう出すか"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-kitchen-steam-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-kitchen-steam-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：湯気の立つラーメン店の厨房 ／ Syced・CC0"
+      }
+     ],
+     "note": "steam"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "くら寿司の答えは、毎日店でとる魚介のだし。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-broth-pot-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-broth-pot-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：鍋の黄金色のスープとお玉 ／ Hannes Grobe ( talk )・CC BY 3.0"
+      },
+      {
+       "type": "title",
+       "text": "毎日、店でとる魚介のだし。",
+       "y": 760,
+       "n": 84
+      }
+     ],
+     "note": "毎日、店でとる魚介のだし。"
+    },
+    {
+     "asset": "cm-shoyu-kioke-barrels-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-shoyu-kioke-barrels-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油蔵の大きな木桶 ／ nubobo・CC BY 2.0"
+      }
+     ],
+     "note": "soy"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "そのスープに合わせて作り直した、極太の麺。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-noodles-handmade-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-handmade-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：打ちたての麺の束（寄り） ／ Sarah Boyle sboyle・CC0"
+      },
+      {
+       "type": "title",
+       "text": "作り直した、極太の麺。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "作り直した、極太の麺。"
+    },
+    {
+     "asset": "cm-akadashi-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-akadashi-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：赤だし（なめこと豆腐） ／ Ocdp・CC0"
+      }
+     ],
+     "note": "misosoup"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "そして、まろやかさを足した醤油でした。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-shoyu-dish-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-shoyu-dish-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：小皿の醤油 ／ Tim Reckmann from Hamm, Deutschland・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "まろやかさを足した、醤油。",
+       "y": 760,
+       "n": 84
+      }
+     ],
+     "note": "まろやかさを足した、醤油。"
+    },
+    {
+     "asset": "cm-ramen-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "次にくら寿司へ行ったら、ここを確かめてみてください。"
+   ],
+   "shots": [
+    {
+     "asset": "text:7c722f8e67",
+     "note": "次に行ったら、",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "次に行ったら"
+      },
+      {
+       "type": "title_card",
+       "text": "次に行ったら、",
+       "sub": "ここを確かめてほしい"
+      }
+     ]
+    },
+    {
+     "asset": "cm-broth-clear-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-broth-clear-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：透き通ったスープ ／ J Doll・CC BY 3.0"
+      }
+     ],
+     "note": "dashi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "1つ目。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:a110afb569",
+     "note": "checklist",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "次に行ったら"
+      },
+      {
+       "items": [
+        "最初のひと口は、スープから",
+        "寿司の横の味噌汁を、ひと口",
+        "麺をすすって、噛んでみる",
+        "醤油らーめんのまろやかさ",
+        "店の中でしか食べられない"
+       ],
+       "active": 0,
+       "type": "checklist"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "最初のひと口は、麺より先に、スープから。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-ramen-boiler-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-boiler-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ラーメン店の麺釜とてぼ ／ yamakk・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "麺より先に、スープから。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "麺より先に、スープから。"
+    },
+    {
+     "asset": "cm-noodles-packed-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-packed-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：袋詰めされた生麺の山 ／ François Nguyen・CC BY 2.0"
+      }
+     ],
+     "note": "noodles"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "昆布、直火で焼いたかつお、さばを土台にした、7種の魚介だしです。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-kombu-drying-hokkaido-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kombu-drying-hokkaido-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：北海道の浜で天日干しされる昆布 ／ Marie-Sophie Mejan・CC BY 4.0"
+      }
+     ],
+     "note": "kombu"
+    },
+    {
+     "asset": "cm-katsuobushi-shop-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-katsuobushi-shop-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：鰹節と削り節の量り売り ／ Naotake Murayama from San Francisco, CA, USA・CC BY 2.0"
+      }
+     ],
+     "note": "katsuo"
+    },
+    {
+     "asset": "cm-saba-fresh-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-saba-fresh-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：店頭に並ぶ鮮魚のさば ／ Nesnad・CC BY 4.0"
+      }
+     ],
+     "note": "saba"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2つ目。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:ee412437fa",
+     "note": "checklist",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "次に行ったら"
+      },
+      {
+       "items": [
+        "最初のひと口は、スープから",
+        "寿司の横の味噌汁を、ひと口",
+        "麺をすすって、噛んでみる",
+        "醤油らーめんのまろやかさ",
+        "店の中でしか食べられない"
+       ],
+       "active": 1,
+       "type": "checklist"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "寿司の横の味噌汁を、ひと口。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-akadashi-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-akadashi-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：赤だしの椀（寄り） ／ Ippei Suzuki・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "寿司の横の味噌汁を、ひと口。",
+       "y": 760,
+       "n": 84
+      }
+     ],
+     "note": "寿司の横の味噌汁を、ひと口。"
+    },
+    {
+     "asset": "cm-stockpots-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-stockpots-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：コンロに並ぶスープ鍋 ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "steam"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "ラーメンのスープと同じ、店でとるだしです。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:024f5e9d00",
+     "note": "branch",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "次に行ったら"
+      },
+      {
+       "source": "店でとるだし",
+       "targets": [
+        "味噌汁",
+        "ラーメン"
+       ],
+       "type": "branch"
+      }
+     ]
+    },
+    {
+     "asset": "cm-miso-soup-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-miso-soup-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：豆腐とわかめの味噌汁 ／ Ocdp・CC0"
+      }
+     ],
+     "note": "misosoup"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "3つ目。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:15573a1d99",
+     "note": "checklist",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "次に行ったら"
+      },
+      {
+       "items": [
+        "最初のひと口は、スープから",
+        "寿司の横の味噌汁を、ひと口",
+        "麺をすすって、噛んでみる",
+        "醤油らーめんのまろやかさ",
+        "店の中でしか食べられない"
+       ],
+       "active": 2,
+       "type": "checklist"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "麺をすすって、噛んでみる。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-tantanmen-noodles-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-tantanmen-noodles-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：黒ごま担々麺の太麺の寄り ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "すすって、噛んでみる。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "すすって、噛んでみる。"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "くら寿司が2016年に作り直したのは、ツルツル、もちもちで、コシとのどごしを狙った極太のストレート麺でした。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:daab1e97a2",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "次に行ったら"
+      },
+      {
+       "title": "2016年に作り直した麺",
+       "items": [
+        "ツルツル",
+        "もちもち",
+        "コシ",
+        "のどごし"
+       ],
+       "cols": 4,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "diagram:a5f9c852a3",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "次に行ったら"
+      },
+      {
+       "items": [
+        "極太のストレート麺（2016年）"
+       ],
+       "cols": 1,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：チャーシュー麺（醤油・黒い盆） ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "今の一杯の麺は、あなたの目と口で確かめてください。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-noodle-machine-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodle-machine-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：製麺機から出てくる麺 ／ Magic Madzik・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "あなたの目と口で。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "あなたの目と口で。"
+    },
+    {
+     "asset": "cm-stockpot-simmer-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-stockpot-simmer-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：骨と香味野菜を煮込む寸胴鍋 ／ Blue Lotus・CC BY 2.0"
+      }
+     ],
+     "note": "dashi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "4つ目。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:aaa7add0d3",
+     "note": "checklist",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "次に行ったら"
+      },
+      {
+       "items": [
+        "最初のひと口は、スープから",
+        "寿司の横の味噌汁を、ひと口",
+        "麺をすすって、噛んでみる",
+        "醤油らーめんのまろやかさ",
+        "店の中でしか食べられない"
+       ],
+       "active": 3,
+       "type": "checklist"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "醤油らーめんのまろやかさ。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-stockpots-steam-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-stockpots-steam-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：湯気の立つ寸胴と麺釜（ラーメン店厨房） ／ lazy fri13th from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "steam"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2024年に変えた醤油の味です。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:55e5c65f4f",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "次に行ったら"
+      },
+      {
+       "points": [
+        [
+         "2024.7",
+         "醤油を変更"
+        ]
+       ],
+       "highlight": 0,
+       "type": "timeline_n"
+      }
+     ]
+    },
+    {
+     "asset": "cm-miso-soup-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-miso-soup-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：朱塗りの椀の味噌汁 ／ yoppy・CC BY 2.0"
+      }
+     ],
+     "note": "misosoup"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "5つ目。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:f7c8d13c4b",
+     "note": "checklist",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "次に行ったら"
+      },
+      {
+       "items": [
+        "最初のひと口は、スープから",
+        "寿司の横の味噌汁を、ひと口",
+        "麺をすすって、噛んでみる",
+        "醤油らーめんのまろやかさ",
+        "店の中でしか食べられない"
+       ],
+       "active": 4,
+       "type": "checklist"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "この醤油らーめんは、今は持ち帰りができません。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:1dffa079e3",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "次に行ったら"
+      },
+      {
+       "items": [
+        "7種の魚介 醤油らーめん",
+        "お持ち帰り 不可"
+       ],
+       "cols": 2,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（メンマ・チャーシュー） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "店の中でしか食べられない一杯です。"
+   ],
+   "shots": [
+    {
+     "asset": "real-01",
+     "bg": {
+      "type": "photo",
+      "asset": "real-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：くら寿司 中百舌鳥店 ／ Tokumeigakarinoaoshima・CC0"
+      },
+      {
+       "type": "title",
+       "text": "店の中でしか、食べられない一杯。",
+       "y": 760,
+       "n": 84
+      }
+     ],
+     "note": "店の中でしか、食べられない一"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "定番の「7種の魚介 醤油らーめん」は、味玉なしで480円、味玉入りで540円。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:41765032cb",
+     "note": "ladder",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "次に行ったら"
+      },
+      {
+       "items": [
+        [
+         "味玉なし",
+         "480円"
+        ],
+        [
+         "味玉入り",
+         "540円"
+        ]
+       ],
+       "type": "ladder"
+      }
+     ]
+    },
+    {
+     "asset": "cm-dashi-pour-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-dashi-pour-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昆布だしを注ぐ一皿 ／ City Foodsters・CC BY 2.0"
+      }
+     ],
+     "note": "dashi"
+    },
+    {
+     "asset": "cm-miso-soup-shrimp-head-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-miso-soup-shrimp-head-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：えびの頭の味噌汁 ／ City Foodsters・CC BY 2.0"
+      }
+     ],
+     "note": "misosoup"
+    },
+    {
+     "asset": "cm-ramen-shoyu-04",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-04",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昔ながらの醤油ラーメン（なると） ／ Ocdp・CC0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "美味しいラーメンがあるだけで、寿司屋に行く理由になる。"
+   ],
+   "shots": [
+    {
+     "asset": "conveyor",
+     "bg": {
+      "type": "photo",
+      "asset": "conveyor",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "寿司レーンの再現イメージ"
+      },
+      {
+       "type": "title",
+       "text": "寿司屋に行く理由になる。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "寿司屋に行く理由になる。"
+    },
+    {
+     "asset": "cm-miso-soup-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-miso-soup-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：黒い盆にのせたなめこ汁 ／ City Foodsters・CC BY 2.0"
+      }
+     ],
+     "note": "misosoup"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "その一杯の向こうには、毎日のだしと、半年で消えたラーメン店があります。"
+   ],
+   "shots": [
+    {
+     "asset": "ramenhero",
+     "bg": {
+      "type": "photo",
+      "asset": "ramenhero",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "料理の再現イメージ"
+      },
+      {
+       "type": "title",
+       "text": "毎日のだしと、半年で消えた店。",
+       "y": 760,
+       "n": 84
+      }
+     ],
+     "note": "毎日のだしと、半年で消えた店"
+    },
+    {
+     "asset": "cm-ramen-saba-dashi-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-saba-dashi-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：さばだしのラーメン ／ 石巻敎祖・CC BY 4.0"
+      }
+     ],
+     "note": "ramen"
+    },
+    {
+     "asset": "cm-ramen-miso-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：札幌の味噌ラーメン ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "misoramen"
+    }
+   ]
+  }
+ ]
+}

@@ -90,10 +90,11 @@ def cmd_check(p, args):
         print(f'フォント {kind}: {path} [{index}]')
     errors += ['素材ファイルがない（fetch-assets を実行）: ' + k for k in p.assets.missing()]
     v = voice_of(p)
-    print('VOICEVOX:', v.available() or '未起動（声のある章の voice/render 前に起動する）')
+    ok = v.available()
+    print('VOICEVOX:', ok or '未起動（声のある章は字数からの見積もりで検査する）')
     for cid in p.chapter_ids():
         ch = p.chapter(cid)
-        tl = timeline(p, ch, None)
+        tl = timeline(p, ch, v if ok and ch['timing'] == 'voice' else None)
         e, w = lint(p, ch, tl)
         errors += e
         for x in w:

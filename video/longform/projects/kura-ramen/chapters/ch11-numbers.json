@@ -1,0 +1,721 @@
+{
+ "title": "100円の寿司屋で、300円台のラーメン",
+ "source": "script_v6_chapters.json（社長承認 2026-10-30）",
+ "timing": "voice",
+ "audio": {
+  "fade_in": 0.6,
+  "fade_out": 1.2
+ },
+ "segments": [
+  {
+   "narration": [
+    "1皿100円の寿司屋で、ラーメンは300円台。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:72cb317883",
+     "note": "ladder",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ラーメンが変えた数字"
+      },
+      {
+       "items": [
+        [
+         "寿司 1皿",
+         "100円"
+        ],
+        [
+         "ラーメン",
+         "300円台"
+        ]
+       ],
+       "type": "ladder"
+      }
+     ],
+     "hit": true
+    },
+    {
+     "asset": "cm-nigiri-salmon-plate-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-nigiri-salmon-plate-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：皿にのったサーモンの握り ／ RuinDig/Yuki Uchida・CC BY 4.0"
+      }
+     ],
+     "note": "sushi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "寿司の3倍以上の値段の一杯が、くら寿司の数字を変えました。"
+   ],
+   "shots": [
+    {
+     "asset": "ramenhero",
+     "bg": {
+      "type": "photo",
+      "asset": "ramenhero",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "料理の再現イメージ"
+      },
+      {
+       "type": "title",
+       "text": "寿司の3倍以上の一杯。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "寿司の3倍以上の一杯。"
+    },
+    {
+     "asset": "cm-ramen-niboshi-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-niboshi-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "サイドメニューを本格的に入れ始めたのは、2013年10月期から。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:bd12a1414c",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ラーメンが変えた数字"
+      },
+      {
+       "points": [
+        [
+         "2013年10月期",
+         "サイドメニュー本格投入"
+        ]
+       ],
+       "highlight": 0,
+       "type": "timeline_n"
+      }
+     ]
+    },
+    {
+     "asset": "cm-kaiten-lane-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-lane-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：回転寿司のレーンと積まれた皿 ／ Maarten Heerlien from Voorschoten, The Netherlands・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "その先頭に立ったのが、2012年11月に売り出したラーメンです。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:c411221f08",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ラーメンが変えた数字"
+      },
+      {
+       "points": [
+        [
+         "2012.11",
+         "ラーメン"
+        ],
+        [
+         "2013年10月期",
+         "サイドメニュー"
+        ]
+       ],
+       "highlight": 0,
+       "type": "timeline_n"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-miso-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：札幌の味噌ラーメン ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "misoramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "ラーメンやコーヒー、デザートといったサイドメニューが広がるのに合わせて、客単価は、2015年1月まで26か月続けて前の年の同じ月を上回り、1000円を超えるところまで上がりました。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:745374a0ee",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ラーメンが変えた数字"
+      },
+      {
+       "items": [
+        "ラーメン",
+        "コーヒー",
+        "デザート"
+       ],
+       "cols": 3,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "giant:3a64c947b9",
+     "note": "数字 26",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ラーメンが変えた数字"
+      },
+      {
+       "type": "giant",
+       "value": "26",
+       "unit": "か月連続",
+       "y": 300,
+       "n": 400
+      }
+     ],
+     "flash": true,
+     "hit": true
+    },
+    {
+     "asset": "diagram:64d665704e",
+     "note": "dots",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ラーメンが変えた数字"
+      },
+      {
+       "total": 26,
+       "lit": 26,
+       "cols": 13,
+       "caption": "客単価が前年同月を上回った月",
+       "type": "dots"
+      }
+     ]
+    },
+    {
+     "asset": "text:ed67b96609",
+     "note": "客単価 1,000円超え",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ラーメンが変えた数字"
+      },
+      {
+       "type": "title_card",
+       "text": "客単価 1,000円超え",
+       "sub": "2015年1月まで"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shop-interior-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shop-interior-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昔ながらのラーメン店の店内 ／ Mark Mrwizard・CC BY 2.0"
+      }
+     ],
+     "note": "shop"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "創業者の田中邦彦社長の信念は、これです。"
+   ],
+   "shots": [
+    {
+     "asset": "text:8048bd6914",
+     "note": "創業者・田中邦彦社長の信念",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ラーメンが変えた数字"
+      },
+      {
+       "type": "title_card",
+       "text": "創業者・田中邦彦社長の信念"
+      }
+     ]
+    },
+    {
+     "asset": "cm-nigiri-tuna-plate-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-nigiri-tuna-plate-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：皿にのったまぐろの握り（薬味のせ） ／ RuinDig/Yuki Uchida・CC BY 4.0"
+      }
+     ],
+     "note": "sushi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "「安くておいしいだけでは飽きられる」"
+   ],
+   "shots": [
+    {
+     "asset": "quote:d179b89899",
+     "note": "引用",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "quote",
+       "text": "安くておいしいだけでは\n飽きられる",
+       "by": "田中邦彦社長"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "値段も、少しずつ変わってきました。"
+   ],
+   "shots": [
+    {
+     "asset": "text:c0bdb71d84",
+     "note": "値段も、変わってきた。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ラーメンが変えた数字"
+      },
+      {
+       "type": "title_card",
+       "text": "値段も、変わってきた。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2016年の味噌らーめんは、税込み388円。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:86e81f76f9",
+     "note": "ladder",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ラーメンが変えた数字"
+      },
+      {
+       "items": [
+        [
+         "2016年 味噌らーめん",
+         "388円"
+        ]
+       ],
+       "type": "ladder"
+      }
+     ]
+    },
+    {
+     "asset": "cm-kaiten-lane-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-lane-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：長い回転寿司レーンの俯瞰 ／ bigbirdz・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2024年7月の時点で、醤油らーめんは490円。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:49d6cf2ab3",
+     "note": "ladder",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ラーメンが変えた数字"
+      },
+      {
+       "items": [
+        [
+         "2016年 味噌らーめん",
+         "388円"
+        ],
+        [
+         "2024年7月 醤油らーめん",
+         "490円"
+        ]
+       ],
+       "type": "ladder"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-miso-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：味噌ラーメンの寄り（コーン・にんにく） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "misoramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "今の公式メニューでは、味玉なしの醤油らーめんが480円です。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:41d4d3345a",
+     "note": "ladder",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ラーメンが変えた数字"
+      },
+      {
+       "items": [
+        [
+         "2016年 味噌らーめん",
+         "388円"
+        ],
+        [
+         "2024年7月 醤油らーめん",
+         "490円"
+        ],
+        [
+         "今 醤油（味玉なし）",
+         "480円"
+        ]
+       ],
+       "type": "ladder"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-sample-window-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-sample-window-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ラーメン店のショーウィンドウ（食品サンプル） ／ Marie-Sophie Mejan・CC BY 4.0"
+      }
+     ],
+     "note": "shop"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2016年には、日本版顧客満足度指数の調査で、くら寿司は、レストランチェーン部門の顧客満足度1位になりました。"
+   ],
+   "shots": [
+    {
+     "asset": "text:9fd7546f1b",
+     "note": "顧客満足度 1位",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ラーメンが変えた数字"
+      },
+      {
+       "type": "title_card",
+       "text": "顧客満足度 1位",
+       "sub": "2016年 日本版顧客満足度指数・レストランチェーン部門"
+      }
+     ]
+    },
+    {
+     "asset": "cm-sushi-gari-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-sushi-gari-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：カウンターの握りとガリ ／ rabbit_akra from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "sushi"
+    },
+    {
+     "asset": "cm-ramen-shoyu-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：チャーシュー麺（醤油・黒い盆） ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "ramen"
+    },
+    {
+     "asset": "cm-kaiten-express-lane-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-express-lane-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：新幹線型の特急レーン ／ Karl Baron from Malmö, Sweden・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2024年に、回転寿司でサイドメニューを頼んだことがある200人に聞いた調査でも、サイドメニューが最も美味しい回転寿司チェーンの1位は、くら寿司で32.5%でした。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:4ddc575cf3",
+     "note": "bars",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "ラーメンが変えた数字"
+      },
+      {
+       "items": [
+        [
+         "くら寿司",
+         32.5,
+         "32.5%"
+        ],
+        [
+         "スシロー",
+         31,
+         "31%"
+        ]
+       ],
+       "highlight": 0,
+       "unit_note": "サイドメニューが最も美味しい回転寿司チェーン（2024年・200人）",
+       "type": "bars"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-miso-burnt-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-burnt-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：焦がし味噌ラーメン（暗いトーン） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "misoramen"
+    },
+    {
+     "asset": "cm-ramen-shop-exterior-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shop-exterior-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：中華料理・ラーメン店の外観 ／ Urawa Zero from Japan・CC BY 2.0"
+      }
+     ],
+     "note": "shop"
+    },
+    {
+     "asset": "cm-nigiri-closeup-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-nigiri-closeup-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：握り寿司の寄り（サーモン・まぐろ） ／ Think Draw from Dubai, UAE・CC BY 2.0"
+      }
+     ],
+     "note": "sushi"
+    },
+    {
+     "asset": "cm-ramen-shoyu-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（メンマ・チャーシュー） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  }
+ ]
+}

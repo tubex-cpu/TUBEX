@@ -1,0 +1,676 @@
+{
+ "title": "1998年、半年で閉じたラーメン店",
+ "source": "script_v6_chapters.json（社長承認 2026-10-30）",
+ "timing": "voice",
+ "audio": {
+  "fade_in": 0.6,
+  "fade_out": 1.2
+ },
+ "segments": [
+  {
+   "narration": [
+    "くら寿司は、ラーメン店を、わずか半年で閉じたことがあります。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-noren-night-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noren-night-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：夜ののれんと格子戸 ／ watashiwani・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "半年で、閉じた店。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "半年で、閉じた店。",
+     "hit": true
+    },
+    {
+     "asset": "text:ec1dfdf0cf",
+     "note": "半年",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "1998年"
+      },
+      {
+       "type": "title_card",
+       "text": "半年"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "1998年のことです。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:d159cd2d7d",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "1998年"
+      },
+      {
+       "points": [
+        [
+         "1998",
+         "無添加ラーメン"
+        ]
+       ],
+       "highlight": 0,
+       "type": "timeline_n"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "店の名前は、「無添加ラーメン」。"
+   ],
+   "shots": [
+    {
+     "asset": "text:b4e21fe8bf",
+     "note": "「無添加ラーメン」",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "1998年"
+      },
+      {
+       "type": "title_card",
+       "text": "「無添加ラーメン」",
+       "sub": "1998年の店の名前"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shop-interior-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shop-interior-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昔ながらのラーメン店の店内 ／ Mark Mrwizard・CC BY 2.0"
+      }
+     ],
+     "note": "shop"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "くら寿司が使わないのは、化学調味料、人工甘味料、合成着色料、人工保存料の4つ。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:5399ca555f",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "1998年"
+      },
+      {
+       "title": "くら寿司が使わない4つ",
+       "items": [
+        "化学調味料",
+        "人工甘味料",
+        "合成着色料",
+        "人工保存料"
+       ],
+       "cross": true,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-niboshi-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-niboshi-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    },
+    {
+     "asset": "cm-ramen-sample-window-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-sample-window-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ラーメン店のショーウィンドウ（食品サンプル） ／ Marie-Sophie Mejan・CC BY 4.0"
+      }
+     ],
+     "note": "shop"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "寿司ネタやシャリ、醤油、ガリ、マヨネーズまで、200種類以上あるすべての食材で、この決まりを守っています。"
+   ],
+   "shots": [
+    {
+     "asset": "real-06",
+     "bg": {
+      "type": "photo",
+      "asset": "real-06",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：くら寿司 西新宿店 ／ 経済特区・CC0"
+      }
+     ],
+     "note": "real-06"
+    },
+    {
+     "asset": "diagram:d931220bcf",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "1998年"
+      },
+      {
+       "title": "200種類以上、すべての食材で",
+       "items": [
+        "寿司ネタ",
+        "シャリ",
+        "醤油",
+        "ガリ",
+        "マヨネーズ"
+       ],
+       "cols": 5,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "real-19",
+     "bg": {
+      "type": "photo",
+      "asset": "real-19",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：くら寿司 西新宿店 ／ 経済特区・CC0"
+      }
+     ],
+     "note": "real-19"
+    },
+    {
+     "asset": "cm-ramen-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "自分たちが食べたい、そして家族に安心して食べさせられる食事を出したい。"
+   ],
+   "shots": [
+    {
+     "asset": "text:6c6b4b9566",
+     "note": "家族に、安心して。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "1998年"
+      },
+      {
+       "type": "title_card",
+       "text": "家族に、安心して。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-sushi-gari-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-sushi-gari-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：カウンターの握りとガリ ／ rabbit_akra from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "rice"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "それが、この決まりの出発点です。"
+   ],
+   "shots": [
+    {
+     "asset": "text:82110d988a",
+     "note": "決まりの、出発点。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "1998年"
+      },
+      {
+       "type": "title_card",
+       "text": "決まりの、出発点。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-broth-kitchen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-broth-kitchen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：厨房のスープ作り（白黒） ／ H. Alexander Talbot・CC BY 2.0"
+      }
+     ],
+     "note": "dashi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "ところが、無添加をうたったそのラーメン店は、お客さんに受け入れられませんでした。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-ramen-shop-exterior-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shop-exterior-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：中華料理・ラーメン店の外観 ／ Urawa Zero from Japan・CC BY 2.0"
+      }
+     ],
+     "note": "shop"
+    },
+    {
+     "asset": "quote:03b1fc915d",
+     "note": "引用",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "quote",
+       "text": "無添加のラーメン店は、\nお客さんに受け入れられなかった",
+       "by": "1998年"
+      }
+     ]
+    },
+    {
+     "asset": "cm-noren-ramen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noren-ramen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ラーメン店ののれんと自転車 ／ yortlabs・CC BY 2.0"
+      }
+     ],
+     "note": "noren"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "わずか半年で、閉店です。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:e38f712418",
+     "note": "band",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "1998年"
+      },
+      {
+       "label": "開店から",
+       "value": "半年",
+       "sub": "閉店",
+       "type": "band"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "それから14年後の2012年。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:14e79d4d49",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "1998年"
+      },
+      {
+       "points": [
+        [
+         "1998",
+         "閉店"
+        ],
+        [
+         "2012",
+         "もう一度"
+        ]
+       ],
+       "highlight": 1,
+       "type": "timeline_n"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "くら寿司は、同じ無添加のまま、もう一度ラーメンを出します。"
+   ],
+   "shots": [
+    {
+     "asset": "ramenhero",
+     "bg": {
+      "type": "photo",
+      "asset": "ramenhero",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "料理の再現イメージ"
+      },
+      {
+       "type": "title",
+       "text": "同じ無添加のまま、もう一度。",
+       "y": 760,
+       "n": 84
+      }
+     ],
+     "note": "同じ無添加のまま、もう一度。"
+    },
+    {
+     "asset": "cm-noodles-fresh-kitchen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-fresh-kitchen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：厨房の生麺と湯気 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+      }
+     ],
+     "note": "kitchen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "今度は、3年あまりで2300万杯。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:a1a5c8af92",
+     "note": "steps",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "1998年"
+      },
+      {
+       "items": [
+        [
+         "2012年11月",
+         1,
+         "発売"
+        ],
+        [
+         "2015年12月",
+         2300,
+         "2,300万杯"
+        ]
+       ],
+       "type": "steps"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-closed-sign-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-closed-sign-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：「本日はスープのできが悪い為」の貼り紙 ／ Masahiko OHKUBO・CC BY 2.0"
+      }
+     ],
+     "note": "shop"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "1998年と2012年。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:f0345b3c86",
+     "note": "compare",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "1998年"
+      },
+      {
+       "left": {
+        "title": "1998年",
+        "items": [
+         "無添加",
+         "半年で閉店"
+        ]
+       },
+       "right": {
+        "title": "2012年",
+        "items": [
+         "無添加",
+         "2,300万杯"
+        ]
+       },
+       "common": [
+        "無添加"
+       ],
+       "type": "compare"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：チャーシュー麺（醤油・黒い盆） ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "いったい、何が違ったのか。"
+   ],
+   "shots": [
+    {
+     "asset": "text:4c24421cc8",
+     "note": "何が、違ったのか。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "1998年"
+      },
+      {
+       "type": "title_card",
+       "text": "何が、違ったのか。"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "最初の手がかりは、寿司屋の厨房にあります。"
+   ],
+   "shots": [
+    {
+     "asset": "kitchen",
+     "bg": {
+      "type": "photo",
+      "asset": "kitchen",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "調理の再現イメージ"
+      },
+      {
+       "type": "title",
+       "text": "手がかりは、厨房に。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "手がかりは、厨房に。"
+    },
+    {
+     "asset": "cm-broth-pot-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-broth-pot-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：鍋の黄金色のスープとお玉 ／ Hannes Grobe ( talk )・CC BY 3.0"
+      }
+     ],
+     "note": "dashi"
+    }
+   ]
+  }
+ ]
+}

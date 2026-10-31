@@ -41,7 +41,7 @@ CH['ch02-1998'] = {
         [{'t': '「無添加ラーメン」', 'sub': '1998年の店の名前'}, 'p:shop'],
         [{'d': 'chips', 'title': 'くら寿司が使わない4つ', 'items': ['化学調味料', '人工甘味料', '合成着色料', '人工保存料'], 'cross': True}, 'p:ramen'],
         ['k:real-06', {'d': 'chips', 'title': '200種類以上、すべての食材で', 'items': ['寿司ネタ', 'シャリ', '醤油', 'ガリ', 'マヨネーズ'], 'cols': 5}, 'k:real-19'],
-        ['p:family|家族に、安心して。', 'p:rice'],
+        [{'t': '家族に、安心して。'}, 'p:rice'],
         [{'t': '決まりの、出発点。'}],
         ['p:shop', {'q': '無添加のラーメン店は、\nお客さんに受け入れられなかった', 'by': '1998年'}],
         [{'d': 'band', 'label': '開店から', 'value': '半年', 'sub': '閉店'}],
@@ -63,7 +63,7 @@ CH['ch03-dashi'] = {
         [{'d': 'chips', 'title': '「7種の魚介だし」の土台', 'items': ['北海道産の昆布', '直火で焼いたかつお', 'さば'], 'cols': 3}],
         [{'d': 'band', 'label': '研究を重ねて、今の形になるまで', 'value': '35年'}],
         ['p:dashi', {'d': 'chips', 'items': ['それぞれの店で', '毎日'], 'cols': 2}],
-        [{'d': 'timeline_n', 'points': [['朝', ''], ['昼', ''], ['夕', '']], 'highlight': None}],
+        [{'d': 'chips', 'items': ['1日に', '何回かに分けて'], 'cols': 2}],
         ['p:steam|だしの風味を、損なわないように。'],
         ['k:broth|ラーメンだけでは、ない。'],
         ['p:misosoup', {'d': 'branch', 'source': '7種の魚介だし', 'targets': ['赤だし', '味噌汁', 'ラーメン']}],
@@ -84,7 +84,7 @@ CH['ch04-dashi-sold'] = {
         [{'d': 'chips', 'title': '四大添加物', 'items': ['無添加'], 'cols': 1}],
         ['p:steam|いくつもの風味が、折り重なる。', 'p:dashi'],
         [{'d': 'chips', 'title': 'だしをかけて食べる丼', 'items': ['牛丼', '天丼', 'うな丼'], 'cols': 3}, 'p:donburi'],
-        ['p:unagi|まるで、ひつまぶし。'],
+        [{'t': 'まるで、ひつまぶし。'}],
         [{'t': '「7種の魚介」は、', 'sub': '料理ごとに違う'}],
         [{'d': 'chips', 'title': 'うな丼のタレの7種', 'items': ['昆布', 'かつお', 'さば', 'うるめいわし', '片口いわし', 'ほたて', 'ぐち'], 'cols': 4, 'step': .3}, 'p:fish'],
         [{'d': 'chips', 'title': '牛丼のタレの7種', 'items': ['マグロ', 'カタクチイワシ', 'ウルメイワシ', 'カツオ', 'ソウダガツオ', 'アジ', 'サバ'], 'cols': 4, 'step': .3}, 'p:fish'],
@@ -105,7 +105,7 @@ CH['ch04-dashi-sold'] = {
 
 CH['ch05-noodles'] = {
     'eyebrow': '手がかり3　麺',
-    'fill': ['p:noodles', 'p:noodlemaking', 'p:ramen', 'p:flour', 'p:miso'],
+    'fill': ['p:noodles', 'p:noodlemaking', 'p:ramen', 'p:misoramen', 'p:flour', 'p:tonkotsu', 'p:kitchen', 'p:steam', 'p:noodlelift'],
     'beats': [
         ['p:noodles|売れている麺を、作り直す。'],
         [{'d': 'timeline_n', 'points': [['2012.11', '発売'], ['2016.1', '麺を作り直し']], 'highlight': 1}],
@@ -119,7 +119,7 @@ CH['ch05-noodles'] = {
         [{'d': 'flow', 'items': ['麺を打つ前', '切ったあと']}],
         ['p:noodlemaking', {'d': 'flow', 'items': ['熟成 1回目', '熟成 2回目']}],
         ['p:noodles|コシ、のどごし。'],
-        [{'d': 'sizes', 'items': [['極太のストレート', 7, 3]], 'highlight': 0, 'note': '2016年1月の発表時点の麺'}],
+        [{'d': 'chips', 'title': '2016年1月に作り直した麺', 'items': ['極太', 'ストレート'], 'cols': 2}],
         ['p:noodlelift|すすれば、ツルッ。', 'p:noodles|噛めば、もちっ。'],
         [{'t': 'スープにも、手を入れた。'}],
         ['p:negi', 'p:garlic', {'d': 'chips', 'title': '醤油らーめん', 'items': ['焦がしネギ', '焦がしニンニク'], 'cols': 2}],
@@ -137,7 +137,7 @@ CH['ch05-noodles'] = {
 
 CH['ch06-soy-tantan'] = {
     'eyebrow': '手がかり4　醤油',
-    'fill': ['p:soy', 'p:ramen', 'p:sesame', 'p:chili', 'p:tantan'],
+    'fill': ['p:soy', 'p:soybarrel', 'p:ramen', 'p:sesame', 'p:chili', 'p:tantan', 'p:noodlelift', 'p:steam'],
     'beats': [
         ['p:soy|醤油を、変えた。'],
         [{'d': 'timeline_n', 'points': [['2012.11', '醤油らーめん'], ['2024.7', '醤油を変更']], 'highlight': 1}],
@@ -164,14 +164,14 @@ CH['ch06-soy-tantan'] = {
 
 CH['ch07-for-whom'] = {
     'eyebrow': '寿司を食べない人のために',
-    'fill': ['p:family', 'p:conveyor', 'p:sushi', 'p:ramen', 'p:udon', 'p:lunch'],
+    'fill': ['p:conveyor', 'p:sushi', 'p:ramen', 'p:udon', 'p:lunch'],
     'beats': [
         ['k:real-03|寿司を食べない人のためにも。'],
         [{'t': '東洋経済オンラインの取材', 'sub': '2025年9月・くら寿司の広報'}],
         ['p:family', {'d': 'chips', 'items': ['小さな子ども連れの家族', 'グループ'], 'cols': 2}],
         ['p:sushi', {'t': '生の魚が、食べられない。'}],
         [{'d': 'chips', 'items': ['ラーメン', 'うどん', 'ケーキ', 'おつまみ'], 'cols': 4}, 'p:udon'],
-        ['p:family|店を決めるとき。'],
+        [{'t': '店を決めるとき。'}],
         [{'q': 'あの子、生もの\n食べられないからな', 'by': '家族の会話'}],
         ['p:conveyor', {'t': '候補から、外れる。'}],
         ['k:ramenhero|ラーメンがあれば。'],
@@ -231,10 +231,10 @@ CH['ch08-vs-specialists'] = {
 
 CH['ch09-oshizushi'] = {
     'eyebrow': '幻のラーメン押し寿司',
-    'fill': ['p:oshizushi', 'p:sushi', 'p:rice', 'p:ramen', 'p:chashu'],
+    'fill': ['p:oshizushi', 'p:sushi', 'p:rice', 'p:ramen', 'p:chashu', 'p:conveyor', 'p:noodles'],
     'beats': [
         [{'t': '寿司と、ラーメンを、合体。'}],
-        ['p:oshizushi|「ラーメン押し寿司」'],
+        [{'t': '「ラーメン押し寿司」'}, 'p:oshizushi'],
         [{'t': '商品開発本部長 松島由剛さん'}],
         [{'d': 'timeline_n', 'points': [['2011', '押し寿司'], ['2012.11', 'ラーメン発売']], 'highlight': 0}],
         [{'t': 'ラーメンを売り出す、前の年。'}],
@@ -286,7 +286,7 @@ CH['ch10-rivals'] = {
 
 CH['ch11-numbers'] = {
     'eyebrow': 'ラーメンが変えた数字',
-    'fill': ['p:sushi', 'p:ramen', 'p:conveyor', 'p:coins'],
+    'fill': ['p:sushi', 'p:ramen', 'p:conveyor', 'p:misoramen', 'p:shop'],
     'beats': [
         [{'d': 'ladder', 'items': [['寿司 1皿', '100円'], ['ラーメン', '300円台']]}],
         ['k:ramenhero|寿司の3倍以上の一杯。'],
@@ -324,7 +324,7 @@ CH['ch12-summary-check'] = {
         [{'d': 'branch', 'source': '店でとるだし', 'targets': ['味噌汁', 'ラーメン']}],
         [{'d': 'checklist', 'items': ['最初のひと口は、スープから', '寿司の横の味噌汁を、ひと口', '麺をすすって、噛んでみる', '醤油らーめんのまろやかさ', '店の中でしか食べられない'], 'active': 2}],
         ['p:noodlelift|すすって、噛んでみる。'],
-        [{'d': 'chips', 'title': '2016年に作り直した麺', 'items': ['ツルツル', 'もちもち', 'コシ', 'のどごし'], 'cols': 4}, {'d': 'sizes', 'items': [['極太のストレート（2016年）', 7, 3]], 'highlight': 0}],
+        [{'d': 'chips', 'title': '2016年に作り直した麺', 'items': ['ツルツル', 'もちもち', 'コシ', 'のどごし'], 'cols': 4}, {'d': 'chips', 'items': ['極太のストレート麺（2016年）'], 'cols': 1}],
         ['p:noodles|あなたの目と口で。'],
         [{'d': 'checklist', 'items': ['最初のひと口は、スープから', '寿司の横の味噌汁を、ひと口', '麺をすすって、噛んでみる', '醤油らーめんのまろやかさ', '店の中でしか食べられない'], 'active': 3}],
         ['p:soy|醤油のまろやかさ。'],

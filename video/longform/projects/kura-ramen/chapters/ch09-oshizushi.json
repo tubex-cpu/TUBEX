@@ -1,0 +1,1032 @@
+{
+ "title": "寿司とラーメンを、合体させた日",
+ "source": "script_v6_chapters.json（社長承認 2026-10-30）",
+ "timing": "voice",
+ "audio": {
+  "fade_in": 0.6,
+  "fade_out": 1.2
+ },
+ "segments": [
+  {
+   "narration": [
+    "くら寿司は、寿司とラーメンを、合体させたことがあります。"
+   ],
+   "shots": [
+    {
+     "asset": "text:88b59eb940",
+     "note": "寿司と、ラーメンを、合体。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "type": "title_card",
+       "text": "寿司と、ラーメンを、合体。"
+      }
+     ],
+     "hit": true
+    },
+    {
+     "asset": "cm-oshizushi-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-oshizushi-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：押し寿司（鮭・型入り） ／ くろふね・CC BY 4.0"
+      }
+     ],
+     "note": "oshizushi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "その名も、「ラーメン押し寿司」。"
+   ],
+   "shots": [
+    {
+     "asset": "text:2fe0ba501e",
+     "note": "「ラーメン押し寿司」",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "type": "title_card",
+       "text": "「ラーメン押し寿司」"
+      }
+     ]
+    },
+    {
+     "asset": "cm-oshizushi-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-oshizushi-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：押し寿司（黒い角皿） ／ くろふね・CC BY 4.0"
+      }
+     ],
+     "note": "oshizushi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "開発したのは、くら寿司の商品開発本部長、松島由剛さんです。"
+   ],
+   "shots": [
+    {
+     "asset": "text:baf20c0b70",
+     "note": "商品開発本部長 松島由剛さん",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "type": "title_card",
+       "text": "商品開発本部長 松島由剛さん"
+      }
+     ]
+    },
+    {
+     "asset": "cm-nigiri-salmon-plate-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-nigiri-salmon-plate-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：皿にのったサーモンの握り ／ RuinDig/Yuki Uchida・CC BY 4.0"
+      }
+     ],
+     "note": "sushi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2011年。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:4f97f27f3a",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "points": [
+        [
+         "2011",
+         "押し寿司"
+        ],
+        [
+         "2012.11",
+         "ラーメン発売"
+        ]
+       ],
+       "highlight": 0,
+       "type": "timeline_n"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "くら寿司がラーメンを売り出す前の年です。"
+   ],
+   "shots": [
+    {
+     "asset": "text:15b98dae69",
+     "note": "ラーメンを売り出す、前の年。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "type": "title_card",
+       "text": "ラーメンを売り出す、前の年。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-sushi-gari-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-sushi-gari-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：カウンターの握りとガリ ／ rabbit_akra from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "rice"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "家族連れに喜ばれるメニューを作ろうとアンケートを取ると、人気が高かったのは、寿司とラーメンでした。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:8563c0703c",
+     "note": "bars",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "items": [
+        [
+         "寿司",
+         1,
+         "人気"
+        ],
+        [
+         "ラーメン",
+         1,
+         "人気"
+        ]
+       ],
+       "unit_note": "家族連れ向けのアンケート",
+       "type": "bars"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-niboshi-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-niboshi-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    },
+    {
+     "asset": "cm-ramen-shoyu-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：チャーシュー麺（醤油・黒い盆） ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "chashu"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "そこで松島さんは考えます。"
+   ],
+   "shots": [
+    {
+     "asset": "text:ecab75c20c",
+     "note": "松島さんは、考えた。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "type": "title_card",
+       "text": "松島さんは、考えた。"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "寿司とラーメンを、一つにしてしまおう。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:52853930c6",
+     "note": "flow",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "items": [
+        "寿司",
+        "ラーメン",
+        "一つに"
+       ],
+       "type": "flow"
+      }
+     ]
+    },
+    {
+     "asset": "cm-kaiten-lane-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-lane-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：回転寿司のレーンと積まれた皿 ／ Maarten Heerlien from Voorschoten, The Netherlands・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "細かく刻んだ麺に、チャーシュー、ネギ、ゴマ、メンマ。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-ramen-shoyu-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（メンマ・チャーシュー） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "chashu"
+    },
+    {
+     "asset": "diagram:9fc1c3b66c",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "items": [
+        "刻んだ麺",
+        "チャーシュー",
+        "ネギ",
+        "ゴマ",
+        "メンマ"
+       ],
+       "cols": 5,
+       "type": "chips"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "それをシャリの上にのせて、甘だれとコショウで味をつけ、棒の形に押し固めます。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-nigiri-closeup-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-nigiri-closeup-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：握り寿司の寄り（サーモン・まぐろ） ／ Think Draw from Dubai, UAE・CC BY 2.0"
+      }
+     ],
+     "note": "rice"
+    },
+    {
+     "asset": "diagram:a84f1da7b2",
+     "note": "flow",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "items": [
+        "シャリにのせる",
+        "甘だれとコショウ",
+        "棒の形に押す"
+       ],
+       "type": "flow"
+      }
+     ]
+    },
+    {
+     "asset": "cm-oshizushi-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-oshizushi-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：炙りサーモンの押し寿司（暗め） ／ City Foodsters・CC BY 2.0"
+      }
+     ],
+     "note": "oshizushi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "まるでラーメンを食べているような、不思議な食感。"
+   ],
+   "shots": [
+    {
+     "asset": "text:f50174885f",
+     "note": "不思議な食感。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "type": "title_card",
+       "text": "不思議な食感。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-noodles-fresh-kitchen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-fresh-kitchen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：厨房の生麺と湯気 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+      }
+     ],
+     "note": "noodles"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "試食したスタッフからは、「おいしい」「発想が面白い」と大絶賛でした。"
+   ],
+   "shots": [
+    {
+     "asset": "quote:49721ab8c0",
+     "note": "引用",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "quote",
+       "text": "おいしい\n発想が面白い",
+       "by": "試食したスタッフ"
+      }
+     ]
+    },
+    {
+     "asset": "cm-nigiri-tuna-plate-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-nigiri-tuna-plate-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：皿にのったまぐろの握り（薬味のせ） ／ RuinDig/Yuki Uchida・CC BY 4.0"
+      }
+     ],
+     "note": "sushi"
+    },
+    {
+     "asset": "cm-ramen-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "松島さんは、「これはイケる」と手応えを感じます。"
+   ],
+   "shots": [
+    {
+     "asset": "quote:d10e50145a",
+     "note": "引用",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "quote",
+       "text": "これはイケる",
+       "by": "松島さん"
+      }
+     ]
+    },
+    {
+     "asset": "cm-kaiten-lane-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-lane-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：長い回転寿司レーンの俯瞰 ／ bigbirdz・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "ところが、試験販売した店では、お客さんの声は厳しいものでした。"
+   ],
+   "shots": [
+    {
+     "asset": "text:74aa2c5556",
+     "note": "試験販売の店では……",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "type": "title_card",
+       "text": "試験販売の店では……"
+      }
+     ]
+    },
+    {
+     "asset": "cm-noodles-handmade-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-handmade-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：打ちたての麺の束（寄り） ／ Sarah Boyle sboyle・CC0"
+      }
+     ],
+     "note": "noodles"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "「おいしいけど、わざわざ食べようと思わない」"
+   ],
+   "shots": [
+    {
+     "asset": "quote:8babbaeefe",
+     "note": "引用",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "quote",
+       "text": "おいしいけど、\nわざわざ食べようと思わない",
+       "by": "お客さんの声"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-04",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-04",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昔ながらの醤油ラーメン（なると） ／ Ocdp・CC0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "ラーメン押し寿司は、正式なメニューになりませんでした。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:8302ed72b3",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "items": [
+        "正式メニューにならず"
+       ],
+       "cols": 1,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-kaiten-express-lane-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-express-lane-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：新幹線型の特急レーン ／ Karl Baron from Malmö, Sweden・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "松島さんの言葉です。"
+   ],
+   "shots": [
+    {
+     "asset": "text:ef114ee2ba",
+     "note": "松島さんの言葉",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "type": "title_card",
+       "text": "松島さんの言葉"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "「くら寿司にきてくださる“お客様目線”が欠けていた」"
+   ],
+   "shots": [
+    {
+     "asset": "quote:0ca6ffb26d",
+     "note": "引用",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "quote",
+       "text": "くら寿司にきてくださる\n“お客様目線”が欠けていた",
+       "by": "松島さん"
+      }
+     ]
+    },
+    {
+     "asset": "cm-noodles-packed-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-packed-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：袋詰めされた生麺の山 ／ François Nguyen・CC BY 2.0"
+      }
+     ],
+     "note": "noodles"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "くら寿司の開発チームが試作する新商品は、年間3000品。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:0f8c6015d9",
+     "note": "dots",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "total": 3000,
+       "lit": 300,
+       "cols": 75,
+       "caption": "試作は年間3,000品",
+       "type": "dots"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-saba-dashi-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-saba-dashi-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：さばだしのラーメン ／ 石巻敎祖・CC BY 4.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "正式に採用されるのは、そのうちの1割です。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:250d8e7fce",
+     "note": "dots",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "total": 100,
+       "lit": 10,
+       "cols": 20,
+       "caption": "正式に採用されるのは1割",
+       "type": "dots"
+      }
+     ]
+    },
+    {
+     "asset": "cm-kaiten-lane-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-lane-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：回転寿司のカウンターとレーン ／ Benjamin Hollis from Seattle, WA, USA・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "寿司とラーメンを一つにする案は、ここで止まりました。"
+   ],
+   "shots": [
+    {
+     "asset": "text:0dfe9b7e23",
+     "note": "ここで、止まった。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "type": "title_card",
+       "text": "ここで、止まった。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-noodle-machine-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodle-machine-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：製麺機から出てくる麺 ／ Magic Madzik・CC BY 2.0"
+      }
+     ],
+     "note": "noodles"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "翌年の2012年11月、くら寿司は「7種の魚介醤油らーめん」を売り出します。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:93c3363f75",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "points": [
+        [
+         "2011",
+         "押し寿司"
+        ],
+        [
+         "2012.11",
+         "7種の魚介醤油らーめん"
+        ]
+       ],
+       "highlight": 1,
+       "type": "timeline_n"
+      }
+     ]
+    },
+    {
+     "asset": "cm-kaiten-cover-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-cover-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：カバー付きの皿が回るレーン ／ Syced・CC0"
+      }
+     ],
+     "note": "conveyor"
+    },
+    {
+     "asset": "cm-kaiten-lane-04",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-lane-04",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：照明に浮かぶ回転レーン ／ V0lkanic・CC0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "寿司の横に置く、毎日のだしのラーメンです。"
+   ],
+   "shots": [
+    {
+     "asset": "real-06",
+     "bg": {
+      "type": "photo",
+      "asset": "real-06",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：くら寿司 西新宿店 ／ 経済特区・CC0"
+      }
+     ],
+     "note": "real-06"
+    },
+    {
+     "asset": "broth",
+     "bg": {
+      "type": "photo",
+      "asset": "broth",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "調理の再現イメージ"
+      },
+      {
+       "type": "title",
+       "text": "寿司の横に、毎日のだしの一杯。",
+       "y": 760,
+       "n": 84
+      }
+     ],
+     "note": "寿司の横に、毎日のだしの一杯"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "そして3年あまりで、2300万杯。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:a1a5c8af92",
+     "note": "steps",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "幻のラーメン押し寿司"
+      },
+      {
+       "items": [
+        [
+         "2012年11月",
+         1,
+         "発売"
+        ],
+        [
+         "2015年12月",
+         2300,
+         "2,300万杯"
+        ]
+       ],
+       "type": "steps"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-miso-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：札幌の味噌ラーメン ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "misoramen"
+    }
+   ]
+  }
+ ]
+}

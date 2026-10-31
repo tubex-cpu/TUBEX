@@ -1,0 +1,1505 @@
+{
+ "title": "寿司屋が相手に選んだのは、ラーメン専門店",
+ "source": "script_v6_chapters.json（社長承認 2026-10-30）",
+ "timing": "voice",
+ "audio": {
+  "fade_in": 0.6,
+  "fade_out": 1.2
+ },
+ "segments": [
+  {
+   "narration": [
+    "寿司屋が、ライバルに選んだのは、ラーメン専門店でした。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-ramen-counter-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-counter-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ラーメン店のカウンターと調味料 ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "ライバルは、ラーメン専門店。",
+       "y": 760,
+       "n": 84
+      }
+     ],
+     "note": "ライバルは、ラーメン専門店。",
+     "hit": true
+    },
+    {
+     "asset": "cm-ramen-shop-interior-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shop-interior-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昔ながらのラーメン店の店内 ／ Mark Mrwizard・CC BY 2.0"
+      }
+     ],
+     "note": "ramenshop"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "くら寿司が掲げるのは、「専門店を超える味の追求」。"
+   ],
+   "shots": [
+    {
+     "asset": "text:39781ef040",
+     "note": "「専門店を超える味の追求」",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "type": "title_card",
+       "text": "「専門店を超える味の追求」"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-niboshi-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-niboshi-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "うどん屋やラーメン屋に行かなくても、くら寿司に来れば、まとめて満足できる。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-udon-sanuki-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-udon-sanuki-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：釜揚げ讃岐うどん ／ sekido・CC BY 2.0"
+      }
+     ],
+     "note": "udon"
+    },
+    {
+     "asset": "cm-ramen-sample-window-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-sample-window-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ラーメン店のショーウィンドウ（食品サンプル） ／ Marie-Sophie Mejan・CC BY 4.0"
+      }
+     ],
+     "note": "ramenshop"
+    },
+    {
+     "asset": "diagram:7c08307f80",
+     "note": "flow",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "items": [
+        "うどん屋",
+        "ラーメン屋",
+        "くら寿司でまとめて"
+       ],
+       "type": "flow"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "そのために、サイドメニューを充実させているのです。"
+   ],
+   "shots": [
+    {
+     "asset": "real-15",
+     "bg": {
+      "type": "photo",
+      "asset": "real-15",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：くら寿司 西新宿店の店内備品 ／ 経済特区・CC0"
+      }
+     ],
+     "note": "real-15"
+    },
+    {
+     "asset": "text:7978e73a7e",
+     "note": "サイドメニューを、充実させる",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "type": "title_card",
+       "text": "サイドメニューを、充実させる。"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2025年5月、くら寿司は、ラーメンの名店と手を組みました。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:6aee0be977",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "points": [
+        [
+         "2025.5",
+         "名店と手を組む"
+        ]
+       ],
+       "highlight": 0,
+       "type": "timeline_n"
+      }
+     ]
+    },
+    {
+     "asset": "cm-udon-sanuki-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-udon-sanuki-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：讃岐うどん（黒い器・暗めのトーン） ／ open-arms・CC BY 2.0"
+      }
+     ],
+     "note": "udon"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "相手は、食べログ百名店に8年連続で選ばれた、大阪の「らーめん香澄」。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:d049e8c66d",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "items": [
+        "らーめん香澄（大阪）",
+        "食べログ百名店 8年連続"
+       ],
+       "cols": 1,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shop-exterior-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shop-exterior-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：中華料理・ラーメン店の外観 ／ Urawa Zero from Japan・CC BY 2.0"
+      }
+     ],
+     "note": "ramenshop"
+    },
+    {
+     "asset": "cm-noren-night-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noren-night-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：夜ののれんと格子戸 ／ watashiwani・CC BY 2.0"
+      }
+     ],
+     "note": "noren"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "天然の魚介素材を活かしたスープで人気の店です。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-iwashi-dried-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-iwashi-dried-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：焼いた目刺し（干しいわし） ／ Kossy@FINEDAYS from Tokyo・CC BY 2.0"
+      }
+     ],
+     "note": "fish"
+    },
+    {
+     "asset": "text:32f59d2817",
+     "note": "天然の魚介素材のスープ。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "type": "title_card",
+       "text": "天然の魚介素材のスープ。"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "そして、日本各地の名店の味が2か月に1度入れ替わるラーメン店、「ラーメンステーション」の運営会社。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:59ec27f9dc",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "items": [
+        "ラーメンステーション",
+        "名店の味が2か月に1度入れ替わる"
+       ],
+       "cols": 1,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-noren-ramen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noren-ramen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ラーメン店ののれんと自転車 ／ yortlabs・CC BY 2.0"
+      }
+     ],
+     "note": "noren"
+    },
+    {
+     "asset": "cm-ramen-street-retro-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-street-retro-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昭和の街並みを再現したラーメン横丁 ／ Brakeet・CC0"
+      }
+     ],
+     "note": "queue"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "3社の担当者が打ち合わせを重ね、試作と改良を何度も繰り返して、開発に1年以上。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:c3ffd485d4",
+     "note": "branch",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "source": "3社",
+       "targets": [
+        "くら寿司",
+        "らーめん香澄",
+        "ラーメンステーション"
+       ],
+       "type": "branch"
+      }
+     ]
+    },
+    {
+     "asset": "diagram:5c3ce3b1e9",
+     "note": "band",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "label": "開発",
+       "value": "1年以上",
+       "type": "band"
+      }
+     ]
+    },
+    {
+     "asset": "cm-noodles-fresh-kitchen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-fresh-kitchen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：厨房の生麺と湯気 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+      }
+     ],
+     "note": "noodles"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "できあがったのが、「サバ白湯らーめん」です。"
+   ],
+   "shots": [
+    {
+     "asset": "text:4cd2a2deaf",
+     "note": "「サバ白湯らーめん」",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "type": "title_card",
+       "text": "「サバ白湯らーめん」"
+      }
+     ]
+    },
+    {
+     "asset": "cm-hotate-dried-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-hotate-dried-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：干し貝柱（ほたて） ／ Fumikas Sagisavas・CC0"
+      }
+     ],
+     "note": "fish"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "豚骨の濃厚な味わいと、サバのうま味。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-saba-fresh-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-saba-fresh-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：店頭に並ぶ鮮魚のさば ／ Nesnad・CC BY 4.0"
+      }
+     ],
+     "note": "saba"
+    },
+    {
+     "asset": "cm-ramen-tonkotsu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-tonkotsu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：豚骨ラーメン（海苔・ねぎ） ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "tonkotsu"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "れんこんの粉でとろみをつけて、スープが麺に絡みつきます。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-renkon-dish-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-renkon-dish-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：れんこんの炒め物 ／ Gerda Arendt・CC0"
+      }
+     ],
+     "note": "lotus"
+    },
+    {
+     "asset": "cm-tantanmen-noodles-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-tantanmen-noodles-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：黒ごま担々麺の太麺の寄り ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "スープが、麺に絡みつく。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "スープが、麺に絡みつく。"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "組んだのは、考えが一致したからです。"
+   ],
+   "shots": [
+    {
+     "asset": "text:27390395d4",
+     "note": "考えが、一致した。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "type": "title_card",
+       "text": "考えが、一致した。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shop-night-interior-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shop-night-interior-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：深夜のラーメン店の店内 ／ Ryo FUKAsawa from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "ramenshop"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "くら寿司は、国産の天然魚をその土地で食べる「地魚地食」を進め、地方の活性化に取り組んでいます。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-kombu-boat-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kombu-boat-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：海に出る昆布漁の小舟 ／ tuyainu・CC BY 3.0"
+      }
+     ],
+     "note": "fishport"
+    },
+    {
+     "asset": "text:571b7738b6",
+     "note": "「地魚地食」",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "type": "title_card",
+       "text": "「地魚地食」",
+       "sub": "国産の天然魚を、その土地で"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "食を通して地方を元気にしたいラーメンステーションと、同じ方向を向いていました。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:668b4e455a",
+     "note": "compare",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "left": {
+        "title": "くら寿司",
+        "items": [
+         "地魚地食",
+         "地方を元気に"
+        ]
+       },
+       "right": {
+        "title": "ラーメンステーション",
+        "items": [
+         "食を通して",
+         "地方を元気に"
+        ]
+       },
+       "common": [
+        "地方を元気に"
+       ],
+       "type": "compare"
+      }
+     ]
+    },
+    {
+     "asset": "cm-soba-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-soba-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：月見そば ／ Zengame from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "udon"
+    },
+    {
+     "asset": "cm-ramen-queue-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-queue-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ラーメン店に並ぶ行列（遠景） ／ くろふね・CC BY 3.0"
+      }
+     ],
+     "note": "queue"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "3社の一杯は、2025年9月の「かに白湯らーめん」へと続きます。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-crab-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-crab-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ゆでたベニズワイガニ ／ Nishimuraya Kinosaki Onsen・CC BY 2.0"
+      }
+     ],
+     "note": "crab"
+    },
+    {
+     "asset": "diagram:576ce1e317",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "points": [
+        [
+         "2025.5",
+         "サバ白湯"
+        ],
+        [
+         "2025.9",
+         "かに白湯"
+        ]
+       ],
+       "highlight": 1,
+       "type": "timeline_n"
+      }
+     ]
+    },
+    {
+     "asset": "cm-noodles-handmade-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-handmade-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：打ちたての麺の束（寄り） ／ Sarah Boyle sboyle・CC0"
+      }
+     ],
+     "note": "noodles"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2026年8月には、北海道産の甘えびの頭からとっただしに、揚げた桜えびをのせた「濃厚えびまぜそば」。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-miso-soup-shrimp-head-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-miso-soup-shrimp-head-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：えびの頭の味噌汁 ／ City Foodsters・CC BY 2.0"
+      }
+     ],
+     "note": "shrimp"
+    },
+    {
+     "asset": "cm-sakuraebi-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-sakuraebi-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：桜えびの寄り ／ AyaKatase・CC BY 4.0"
+      }
+     ],
+     "note": "sakuraebi"
+    },
+    {
+     "asset": "diagram:005542a107",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "items": [
+        "北海道産の甘えびの頭のだし",
+        "揚げた桜えび"
+       ],
+       "cols": 1,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-fish-market-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-fish-market-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：築地市場の場内 ／ ElHeineken・CC BY 4.0"
+      }
+     ],
+     "note": "fish"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "サクサクとした食感まで、ひと皿に重ねました。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-ramen-shop-night-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shop-night-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：夜のラーメン店の外観 ／ 博柳・CC BY 3.0"
+      }
+     ],
+     "note": "ramenshop"
+    },
+    {
+     "asset": "cm-ramen-shoyu-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：チャーシュー麺（醤油・黒い盆） ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "麺の本気は、うどんにも及びます。"
+   ],
+   "shots": [
+    {
+     "asset": "text:820f148f10",
+     "note": "麺の本気は、うどんにも。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "type": "title_card",
+       "text": "麺の本気は、うどんにも。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-noodles-packed-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-packed-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：袋詰めされた生麺の山 ／ François Nguyen・CC BY 2.0"
+      }
+     ],
+     "note": "noodles"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2025年9月、くら寿司は、3年かけて開発した讃岐うどんを売り出しました。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:cb46e9135d",
+     "note": "band",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "label": "讃岐うどんの開発",
+       "value": "3年",
+       "type": "band"
+      }
+     ]
+    },
+    {
+     "asset": "cm-fish-market-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-fish-market-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：銚子の鮮魚店の店頭 ／ t-mizo from Japan・CC BY 2.0"
+      }
+     ],
+     "note": "fish"
+    },
+    {
+     "asset": "cm-ramen-shop-night-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shop-night-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：雪の夜のラーメン店 ／ くろふね・CC BY 3.0"
+      }
+     ],
+     "note": "ramenshop"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "東洋経済オンラインの記者が、ゆで上がった麺をノギスで測っています。"
+   ],
+   "shots": [
+    {
+     "asset": "text:1f3c3073d8",
+     "note": "記者が、ノギスで測った。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "type": "title_card",
+       "text": "記者が、ノギスで測った。",
+       "sub": "東洋経済オンライン（2025年9月）"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（メンマ・チャーシュー） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "それまでの麺は、太さ4ミリ、厚さ2ミリ。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:f170b6edb9",
+     "note": "sizes",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "items": [
+        [
+         "それまでの麺",
+         4,
+         2
+        ]
+       ],
+       "highlight": 0,
+       "type": "sizes"
+      }
+     ]
+    },
+    {
+     "asset": "cm-noodle-machine-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodle-machine-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：製麺機から出てくる麺 ／ Magic Madzik・CC BY 2.0"
+      }
+     ],
+     "note": "noodles"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "新しい麺は、太さ7ミリ、厚さ3ミリ。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:d01f61c6d2",
+     "note": "sizes",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "items": [
+        [
+         "それまでの麺",
+         4,
+         2
+        ],
+        [
+         "新しい麺",
+         7,
+         3
+        ]
+       ],
+       "highlight": 1,
+       "type": "sizes"
+      }
+     ]
+    },
+    {
+     "asset": "cm-fish-market-04",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-fish-market-04",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：串に刺して並べた魚 ／ istolethetv・CC BY 2.0"
+      }
+     ],
+     "note": "fish"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "同じ記者が測った、うどん専門店の丸亀製麺の釜揚げうどんは、太さ5ミリ、厚さ3ミリでした。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:be3004fd46",
+     "note": "sizes",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "items": [
+        [
+         "それまでの麺",
+         4,
+         2
+        ],
+        [
+         "新しい麺",
+         7,
+         3
+        ],
+        [
+         "丸亀製麺 釜揚げ",
+         5,
+         3
+        ]
+       ],
+       "highlight": 1,
+       "note": "記者の計測（計測店舗・メニューにより違いあり）",
+       "type": "sizes"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shop-night-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shop-night-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：夜に灯るラーメン店 ／ zaopharm・CC BY 2.0"
+      }
+     ],
+     "note": "ramenshop"
+    },
+    {
+     "asset": "cm-ramen-shoyu-04",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-04",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昔ながらの醤油ラーメン（なると） ／ Ocdp・CC0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "寿司屋のうどんが、うどん専門店より太かったのです。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-fish-market-05",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-fish-market-05",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：函館朝市の通り ／ 663highland・CC BY 2.5"
+      }
+     ],
+     "note": "fish"
+    },
+    {
+     "asset": "cm-ramen-saba-dashi-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-saba-dashi-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：さばだしのラーメン ／ 石巻敎祖・CC BY 4.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "手で引っ張れば2割から3割は伸び、10分ほど置いて食べても、まだ食感が残っていました。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:7ae7071ede",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "items": [
+        "引っ張ると2〜3割伸びる",
+        "10分置いても食感が残る"
+       ],
+       "cols": 1,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-tuna-market-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-tuna-market-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：市場に並ぶまぐろ（荷札付き） ／ Marie-Sophie Mejan・CC BY 4.0"
+      }
+     ],
+     "note": "fish"
+    },
+    {
+     "asset": "cm-ramen-miso-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：札幌の味噌ラーメン ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "misoramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "その記者が見逃せないと書いたのが、釜揚げうどんのつけだしの香りです。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-ramen-kitchen-steam-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-kitchen-steam-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：湯気の立つラーメン店の厨房 ／ Syced・CC0"
+      },
+      {
+       "type": "title",
+       "text": "つけだしの、香り。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "つけだしの、香り。"
+    },
+    {
+     "asset": "cm-ramen-miso-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：味噌ラーメンの寄り（コーン・にんにく） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "misoramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "昆布やかつお節から店でとった、あのだしの香りでした。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-kombu-drying-hokkaido-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kombu-drying-hokkaido-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：北海道の浜で天日干しされる昆布 ／ Marie-Sophie Mejan・CC BY 4.0"
+      }
+     ],
+     "note": "kombu"
+    },
+    {
+     "asset": "cm-katsuobushi-shop-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-katsuobushi-shop-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：鰹節と削り節の量り売り ／ Naotake Murayama from San Francisco, CA, USA・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "店でとった、あのだし。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "店でとった、あのだし。"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "専門店を超える味を目指す、くら寿司。"
+   ],
+   "shots": [
+    {
+     "asset": "ramenhero",
+     "bg": {
+      "type": "photo",
+      "asset": "ramenhero",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "料理の再現イメージ"
+      },
+      {
+       "type": "title",
+       "text": "専門店を超える味へ。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "専門店を超える味へ。"
+    },
+    {
+     "asset": "cm-ramen-miso-burnt-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-burnt-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：焦がし味噌ラーメン（暗いトーン） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "misoramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "その陰には、正式なメニューになれなかった、もう一つのラーメンがありました。"
+   ],
+   "shots": [
+    {
+     "asset": "text:d4e601d133",
+     "note": "もう一つの、ラーメン。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "相手は、専門店"
+      },
+      {
+       "type": "title_card",
+       "text": "もう一つの、ラーメン。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-tonkotsu-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-tonkotsu-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：豚骨ラーメン（きくらげ・ねぎ） ／ Syced・CC0"
+      }
+     ],
+     "note": "tonkotsu"
+    },
+    {
+     "asset": "cm-noodle-lift-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodle-lift-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：箸で持ち上げた麺 ／ Hajime NAKANO・CC BY 2.0"
+      }
+     ],
+     "note": "noodlelift"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,979 @@
+{
+ "title": "手がかり4：12年近く売った味の、醤油を変えた",
+ "source": "script_v6_chapters.json（社長承認 2026-10-30）",
+ "timing": "voice",
+ "audio": {
+  "fade_in": 0.6,
+  "fade_out": 1.2
+ },
+ "segments": [
+  {
+   "narration": [
+    "くら寿司は、12年近く売ってきた醤油らーめんの、醤油を変えました。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-shoyu-kioke-barrels-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-shoyu-kioke-barrels-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油蔵の大きな木桶 ／ nubobo・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "醤油を、変えた。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "醤油を、変えた。",
+     "hit": true
+    },
+    {
+     "asset": "cm-shoyu-dish-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-shoyu-dish-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：小皿の醤油 ／ Tim Reckmann from Hamm, Deutschland・CC BY 2.0"
+      }
+     ],
+     "note": "soy"
+    },
+    {
+     "asset": "cm-shoyu-town-yuasa-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-shoyu-town-yuasa-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油の町・湯浅の蔵（暗い門越し） ／ 663highland・CC BY 2.5"
+      }
+     ],
+     "note": "soybarrel"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2024年7月。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:702be1608f",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり4　醤油"
+      },
+      {
+       "points": [
+        [
+         "2012.11",
+         "醤油らーめん"
+        ],
+        [
+         "2024.7",
+         "醤油を変更"
+        ]
+       ],
+       "highlight": 1,
+       "type": "timeline_n"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "新しい醤油は、老舗の醤油メーカー、寺岡有機醸造のものです。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-shoyu-town-yuasa-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-shoyu-town-yuasa-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：湯浅の醤油蔵の町並み ／ 663highland・CC BY 2.5"
+      }
+     ],
+     "note": "soybarrel"
+    },
+    {
+     "asset": "text:77e2814caa",
+     "note": "寺岡有機醸造",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり4　醤油"
+      },
+      {
+       "type": "title_card",
+       "text": "寺岡有機醸造",
+       "sub": "老舗の醤油メーカー"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-niboshi-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-niboshi-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "狙いは、醤油ラーメンらしい、まろやかさと、うま味を強めること。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:4361bd9786",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり4　醤油"
+      },
+      {
+       "items": [
+        "まろやかさ",
+        "うま味"
+       ],
+       "cols": 2,
+       "title": "狙い",
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-sesame-toasted-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-sesame-toasted-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：いりごまと木のさじ ／ dabok2014・CC0"
+      }
+     ],
+     "note": "sesame"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "魚介のだしの上に、醤油のまろやかさを重ねたのです。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:18c9e49736",
+     "note": "flow",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり4　醤油"
+      },
+      {
+       "items": [
+        "魚介のだし",
+        "＋ 醤油のまろやかさ"
+       ],
+       "type": "flow"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "新しい味と前の味を食べ比べた、グルメ Watch の記者の言葉です。"
+   ],
+   "shots": [
+    {
+     "asset": "text:ac034ab4f2",
+     "note": "食べ比べた記者の言葉",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり4　醤油"
+      },
+      {
+       "type": "title_card",
+       "text": "食べ比べた記者の言葉",
+       "sub": "グルメ Watch（2024年7月）"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-spicy-miso-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-spicy-miso-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：辛味噌ラーメン（赤い一杯） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "chili"
+    },
+    {
+     "asset": "cm-tantanmen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-tantanmen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：担々麺（ひき肉・青菜） ／ nesnad・CC BY 3.0"
+      }
+     ],
+     "note": "tantan"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "「旧バージョンは寿司屋らしく魚介の旨みをしっかりと感じられる」"
+   ],
+   "shots": [
+    {
+     "asset": "quote:7708cd6b53",
+     "note": "引用",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "quote",
+       "text": "旧バージョンは寿司屋らしく\n魚介の旨みをしっかりと感じられる",
+       "by": "グルメ Watch"
+      }
+     ]
+    },
+    {
+     "asset": "cm-tantanmen-noodles-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-tantanmen-noodles-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：黒ごま担々麺の太麺の寄り ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "noodlelift"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "「新バージョンは醤油の風味が強調され」"
+   ],
+   "shots": [
+    {
+     "asset": "quote:7803ac22db",
+     "note": "引用",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "quote",
+       "text": "新バージョンは\n醤油の風味が強調され",
+       "by": "グルメ Watch"
+      }
+     ]
+    },
+    {
+     "asset": "cm-noodles-fresh-kitchen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-fresh-kitchen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：厨房の生麺と湯気 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+      }
+     ],
+     "note": "steam"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "だしは、ラーメンの外にも広がりました。"
+   ],
+   "shots": [
+    {
+     "asset": "text:cdf744d9a9",
+     "note": "だしは、ラーメンの外へ。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり4　醤油"
+      },
+      {
+       "type": "title_card",
+       "text": "だしは、ラーメンの外へ。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：チャーシュー麺（醤油・黒い盆） ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "担々麺に、魚介のだし。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-tantanmen-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-tantanmen-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：湯気の立つ汁なし担々麺 ／ Sharon Ang・CC0"
+      },
+      {
+       "type": "title",
+       "text": "担々麺に、魚介のだし。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "担々麺に、魚介のだし。"
+    },
+    {
+     "asset": "cm-sesame-seeds-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-sesame-seeds-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ごまの粒の寄り ／ Keith McDuffee from Northborough, MA, USA・CC BY 2.0"
+      }
+     ],
+     "note": "sesame"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2017年1月の「胡麻香る担々麺」です。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:b989f93ef5",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり4　醤油"
+      },
+      {
+       "points": [
+        [
+         "2017.1",
+         "胡麻香る担々麺"
+        ]
+       ],
+       "highlight": 0,
+       "type": "timeline_n"
+      }
+     ]
+    },
+    {
+     "asset": "cm-doubanjiang-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-doubanjiang-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：豆板醤（辛味噌） ／ Badagnani・CC BY 3.0"
+      }
+     ],
+     "note": "chili"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "練り胡麻の香り、特製辛味噌の辛さ、そこに7種の魚介だしで、担々麺には珍しい、魚介のコクを加えました。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-chili-oil-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-chili-oil-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：自家製ラー油（唐辛子） ／ Suginami・CC0"
+      }
+     ],
+     "note": "chili"
+    },
+    {
+     "asset": "diagram:9777c8e9a5",
+     "note": "flow",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり4　醤油"
+      },
+      {
+       "items": [
+        "練り胡麻",
+        "特製辛味噌",
+        "7種の魚介だし"
+       ],
+       "type": "flow"
+      }
+     ]
+    },
+    {
+     "asset": "cm-noodle-lift-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodle-lift-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：箸で持ち上げた麺 ／ Hajime NAKANO・CC BY 2.0"
+      }
+     ],
+     "note": "noodlelift"
+    },
+    {
+     "asset": "cm-ramen-kitchen-steam-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-kitchen-steam-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：湯気の立つラーメン店の厨房 ／ Syced・CC0"
+      }
+     ],
+     "note": "steam"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "辛味噌は、トウバンジャンでもテンメンジャンでもなく、あえてヤンニンジャン。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:7940e607d2",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり4　醤油"
+      },
+      {
+       "items": [
+        "トウバンジャン",
+        "テンメンジャン"
+       ],
+       "cross": true,
+       "cols": 2,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "text:652d2b23d7",
+     "note": "ヤンニンジャン",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり4　醤油"
+      },
+      {
+       "type": "title_card",
+       "text": "ヤンニンジャン"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "椎茸やにらなど7種の野菜と、いちごやいちじくなど7種の果物で作った、くら寿司オリジナルです。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:464039e52d",
+     "note": "compare",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり4　醤油"
+      },
+      {
+       "left": {
+        "title": "7種の野菜",
+        "items": [
+         "椎茸",
+         "にら",
+         "ほか"
+        ]
+       },
+       "right": {
+        "title": "7種の果物",
+        "items": [
+         "いちご",
+         "いちじく",
+         "ほか"
+        ]
+       },
+       "type": "compare"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（メンマ・チャーシュー） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    },
+    {
+     "asset": "cm-ramen-boiler-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-boiler-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ラーメン店の麺釜とてぼ ／ yamakk・CC BY 2.0"
+      }
+     ],
+     "note": "steam"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "辛さだけでなく、甘みとうま味まで重ねるためです。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:a3abb920e6",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり4　醤油"
+      },
+      {
+       "items": [
+        "辛さ",
+        "甘み",
+        "うま味"
+       ],
+       "cols": 3,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-04",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-04",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昔ながらの醤油ラーメン（なると） ／ Ocdp・CC0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "担々麺は人気商品になり、2017年のうちに、冷やし担々麺、そして極太麺の汁なし担々麺へと広がりました。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:f95d3ad5df",
+     "note": "flow",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり4　醤油"
+      },
+      {
+       "items": [
+        "担々麺",
+        "冷やし担々麺",
+        "汁なし担々麺"
+       ],
+       "type": "flow"
+      }
+     ]
+    },
+    {
+     "asset": "cm-stockpots-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-stockpots-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：コンロに並ぶスープ鍋 ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "steam"
+    },
+    {
+     "asset": "cm-ramen-saba-dashi-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-saba-dashi-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：さばだしのラーメン ／ 石巻敎祖・CC BY 4.0"
+      }
+     ],
+     "note": "ramen"
+    },
+    {
+     "asset": "cm-stockpots-steam-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-stockpots-steam-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：湯気の立つ寸胴と麺釜（ラーメン店厨房） ／ lazy fri13th from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "steam"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "だし、麺、醤油。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:167f1fb703",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり4　醤油"
+      },
+      {
+       "items": [
+        "だし",
+        "麺",
+        "醤油"
+       ],
+       "cols": 3,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-miso-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：札幌の味噌ラーメン ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "misoramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "ここまでが、くら寿司のラーメンの中身です。"
+   ],
+   "shots": [
+    {
+     "asset": "ramenhero",
+     "bg": {
+      "type": "photo",
+      "asset": "ramenhero",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "料理の再現イメージ"
+      },
+      {
+       "type": "title",
+       "text": "ここまでが、中身。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "ここまでが、中身。"
+    },
+    {
+     "asset": "cm-ramen-miso-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：味噌ラーメンの寄り（コーン・にんにく） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "misoramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "では、くら寿司は、なぜ寿司屋でここまでやるのか。"
+   ],
+   "shots": [
+    {
+     "asset": "text:725f1c64c5",
+     "note": "なぜ、寿司屋でここまで？",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり4　醤油"
+      },
+      {
+       "type": "title_card",
+       "text": "なぜ、寿司屋でここまで？"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-miso-burnt-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-burnt-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：焦がし味噌ラーメン（暗いトーン） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "misoramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "その答えを、くら寿司自身が明かしています。"
+   ],
+   "shots": [
+    {
+     "asset": "text:61e5751ccd",
+     "note": "答えは、くら寿司自身が。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり4　醤油"
+      },
+      {
+       "type": "title_card",
+       "text": "答えは、くら寿司自身が。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-tonkotsu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-tonkotsu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：豚骨ラーメン（海苔・ねぎ） ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "tonkotsu"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1079 @@
+{
+ "title": "手がかり3：売れている麺を、作り直した",
+ "source": "script_v6_chapters.json（社長承認 2026-10-30）",
+ "timing": "voice",
+ "audio": {
+  "fade_in": 0.6,
+  "fade_out": 1.2
+ },
+ "segments": [
+  {
+   "narration": [
+    "くら寿司は、売れているラーメンの麺を、作り直しました。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-noodles-fresh-kitchen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-fresh-kitchen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：厨房の生麺と湯気 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "売れている麺を、作り直す。",
+       "y": 760,
+       "n": 84
+      }
+     ],
+     "note": "売れている麺を、作り直す。",
+     "hit": true
+    },
+    {
+     "asset": "cm-noodles-handmade-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-handmade-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：打ちたての麺の束（寄り） ／ Sarah Boyle sboyle・CC0"
+      }
+     ],
+     "note": "noodles"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2016年1月。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:c59e54ea02",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "points": [
+        [
+         "2012.11",
+         "発売"
+        ],
+        [
+         "2016.1",
+         "麺を作り直し"
+        ]
+       ],
+       "highlight": 1,
+       "type": "timeline_n"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "累計2300万杯を突破した、まさにそのときです。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:122518dbf6",
+     "note": "steps",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "items": [
+        [
+         "2015年12月",
+         2300,
+         "2,300万杯"
+        ]
+       ],
+       "type": "steps"
+      }
+     ]
+    },
+    {
+     "asset": "cm-noodle-making-kitchen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodle-making-kitchen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：麺打ちをする厨房（後ろ姿） ／ Ermell・CC0"
+      }
+     ],
+     "note": "noodlemaking"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "目指したのは、毎朝店で作る7種の魚介のスープに、最も合う麺。"
+   ],
+   "shots": [
+    {
+     "asset": "broth",
+     "bg": {
+      "type": "photo",
+      "asset": "broth",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "調理の再現イメージ"
+      }
+     ],
+     "note": "broth"
+    },
+    {
+     "asset": "diagram:99ac17157f",
+     "note": "flow",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "items": [
+        "毎朝店で作るスープ",
+        "に、最も合う麺"
+       ],
+       "type": "flow"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "開発期間は、およそ2年。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:ee356febd9",
+     "note": "band",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "label": "麺の開発期間",
+       "value": "およそ2年",
+       "type": "band"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "数十種類を試作しています。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-noodle-making-cut-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodle-making-cut-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：生地を切って作る手打ち麺 ／ Karen and Brad Emerson・CC BY 2.0"
+      }
+     ],
+     "note": "noodlemaking"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "1つ目の工夫は、「多加水製法」。"
+   ],
+   "shots": [
+    {
+     "asset": "text:a939952ba8",
+     "note": "工夫1",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "type": "title_card",
+       "text": "工夫1",
+       "sub": "多加水製法"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-niboshi-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-niboshi-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "ふつうより練り水を多く加えて、麺を、ツルツル、もちもちの食感に仕上げます。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-noodle-making-hands-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodle-making-hands-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：厨房で生地を扱う手元 ／ Franck Michel from Antibes, France・CC BY 2.0"
+      }
+     ],
+     "note": "flour"
+    },
+    {
+     "asset": "cm-noodles-packed-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-packed-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：袋詰めされた生麺の山 ／ François Nguyen・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "ツルツル、もちもち。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "ツルツル、もちもち。"
+    },
+    {
+     "asset": "cm-ramen-miso-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：札幌の味噌ラーメン ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "misoramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2つ目は、「二段熟成製法」。"
+   ],
+   "shots": [
+    {
+     "asset": "text:ba39fd06f4",
+     "note": "工夫2",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "type": "title_card",
+       "text": "工夫2",
+       "sub": "二段熟成製法"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-tonkotsu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-tonkotsu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：豚骨ラーメン（海苔・ねぎ） ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "tonkotsu"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "麺を打つ前と、切ったあと。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:fc0ee58132",
+     "note": "flow",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "items": [
+        "麺を打つ前",
+        "切ったあと"
+       ],
+       "type": "flow"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2回に分けて、麺を寝かせます。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-noodle-machine-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodle-machine-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：製麺機で麺を作る店内 ／ Syced・CC0"
+      }
+     ],
+     "note": "noodlemaking"
+    },
+    {
+     "asset": "diagram:d350291bde",
+     "note": "flow",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "items": [
+        "熟成 1回目",
+        "熟成 2回目"
+       ],
+       "type": "flow"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "こうして、コシがあり、のどごしのよい麺になりました。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-noodle-machine-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodle-machine-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：製麺機から出てくる麺 ／ Magic Madzik・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "コシ、のどごし。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "コシ、のどごし。"
+    },
+    {
+     "asset": "cm-broth-kitchen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-broth-kitchen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：厨房のスープ作り（白黒） ／ H. Alexander Talbot・CC BY 2.0"
+      }
+     ],
+     "note": "kitchen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "形は、極太のストレート。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:9aeb221eeb",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "title": "2016年1月に作り直した麺",
+       "items": [
+        "極太",
+        "ストレート"
+       ],
+       "cols": 2,
+       "type": "chips"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "すすれば、ツルッと唇を通り、噛めば、もちっと押し返す。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-tantanmen-noodles-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-tantanmen-noodles-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：黒ごま担々麺の太麺の寄り ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "すすれば、ツルッ。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "すすれば、ツルッ。"
+    },
+    {
+     "asset": "cm-ramen-kitchen-steam-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-kitchen-steam-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：湯気の立つラーメン店の厨房 ／ Syced・CC0"
+      }
+     ],
+     "note": "steam"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "同じとき、スープにも手を入れています。"
+   ],
+   "shots": [
+    {
+     "asset": "text:3410be6c47",
+     "note": "スープにも、手を入れた。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "type": "title_card",
+       "text": "スープにも、手を入れた。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-noodle-lift-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodle-lift-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：箸で持ち上げた麺 ／ Hajime NAKANO・CC BY 2.0"
+      }
+     ],
+     "note": "noodlelift"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "醤油らーめんには、焦がしネギと焦がしニンニクを加えて、風味をさらに豊かに。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-negi-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-negi-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ねぎの束（暗い背景） ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+      }
+     ],
+     "note": "negi"
+    },
+    {
+     "asset": "cm-garlic-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-garlic-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：にんにくの山 ／ Matthew Pilachowski matthewpilachowski・CC0"
+      }
+     ],
+     "note": "garlic"
+    },
+    {
+     "asset": "diagram:741f816342",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "title": "醤油らーめん",
+       "items": [
+        "焦がしネギ",
+        "焦がしニンニク"
+       ],
+       "cols": 2,
+       "type": "chips"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "とんこつ醤油らーめんには、豚の背脂を加えて、より深みのあるコクに。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-ramen-tonkotsu-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-tonkotsu-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：豚骨ラーメン（きくらげ・ねぎ） ／ Syced・CC0"
+      }
+     ],
+     "note": "tonkotsu"
+    },
+    {
+     "asset": "diagram:dc414e9bd5",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "title": "とんこつ醤油らーめん",
+       "items": [
+        "豚の背脂"
+       ],
+       "cols": 1,
+       "type": "chips"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "そして、新しい味噌味。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-ramen-miso-burnt-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-burnt-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：焦がし味噌ラーメン（暗いトーン） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "新しい、味噌味。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "新しい、味噌味。"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "開発に3年、数十種類の試作を重ねて、北海道産の味噌で、深みとコクのある濃厚なスープに仕上げました。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:3af3ae97bf",
+     "note": "band",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "label": "味噌スープの開発",
+       "value": "3年",
+       "type": "band"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-miso-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：味噌ラーメンの寄り（コーン・にんにく） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "misoramen"
+    },
+    {
+     "asset": "diagram:903eedd563",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "items": [
+        "北海道産の味噌",
+        "深みとコク"
+       ],
+       "cols": 2,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "テレビCMでは、俳優の北大路欣也さんが、この味噌らーめんの美味しさに驚きます。"
+   ],
+   "shots": [
+    {
+     "asset": "text:fa32715381",
+     "note": "俳優・北大路欣也さん",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "type": "title_card",
+       "text": "俳優・北大路欣也さん",
+       "sub": "テレビCM（2016年）"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-boiler-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-boiler-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ラーメン店の麺釜とてぼ ／ yamakk・CC BY 2.0"
+      }
+     ],
+     "note": "kitchen"
+    },
+    {
+     "asset": "cm-stockpots-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-stockpots-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：コンロに並ぶスープ鍋 ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "steam"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "CMのタイトルは、「想像を超える味噌らーめん」。"
+   ],
+   "shots": [
+    {
+     "asset": "text:6e77185d5b",
+     "note": "「想像を超える味噌らーめん」",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "type": "title_card",
+       "text": "「想像を超える味噌らーめん」",
+       "sub": "CMのタイトル"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：チャーシュー麺（醤油・黒い盆） ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "味噌らーめんの目標は、初年度だけで400万杯でした。"
+   ],
+   "shots": [
+    {
+     "asset": "giant:68ed5ba09f",
+     "note": "数字 400",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "type": "giant",
+       "value": "400",
+       "unit": "万杯",
+       "y": 330,
+       "n": 380
+      }
+     ],
+     "flash": true,
+     "hit": true
+    },
+    {
+     "asset": "diagram:600c5b9bc4",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "items": [
+        "初年度の目標（予定）"
+       ],
+       "cols": 1,
+       "type": "chips"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2300万杯売れた味を、自分たちで変えたのです。"
+   ],
+   "shots": [
+    {
+     "asset": "ramenhero",
+     "bg": {
+      "type": "photo",
+      "asset": "ramenhero",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "料理の再現イメージ"
+      },
+      {
+       "type": "title",
+       "text": "売れた味を、自分たちで変えた。",
+       "y": 760,
+       "n": 84
+      }
+     ],
+     "note": "売れた味を、自分たちで変えた"
+    },
+    {
+     "asset": "cm-stockpots-steam-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-stockpots-steam-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：湯気の立つ寸胴と麺釜（ラーメン店厨房） ／ lazy fri13th from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "kitchen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "作り直しは、2024年にも起きます。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:76abb381c4",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "points": [
+        [
+         "2016.1",
+         "麺とスープ"
+        ],
+        [
+         "2024",
+         "もう一度"
+        ]
+       ],
+       "highlight": 1,
+       "type": "timeline_n"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（メンマ・チャーシュー） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "今度変えたのは、たった1つの材料でした。"
+   ],
+   "shots": [
+    {
+     "asset": "text:9b42db54e0",
+     "note": "たった1つの、材料。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり3　麺"
+      },
+      {
+       "type": "title_card",
+       "text": "たった1つの、材料。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-04",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-04",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昔ながらの醤油ラーメン（なると） ／ Ocdp・CC0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  }
+ ]
+}

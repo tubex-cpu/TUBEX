@@ -1,0 +1,1048 @@
+{
+ "title": "手がかり2：だしだけを、1杯100円で売った",
+ "source": "script_v6_chapters.json（社長承認 2026-10-30）",
+ "timing": "voice",
+ "audio": {
+  "fade_in": 0.6,
+  "fade_out": 1.2
+ },
+ "segments": [
+  {
+   "narration": [
+    "くら寿司は、だしだけを、1杯100円で売りました。"
+   ],
+   "shots": [
+    {
+     "asset": "text:a749fc15c7",
+     "note": "だしだけを、1杯100円。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり2　だしを売る"
+      },
+      {
+       "type": "title_card",
+       "text": "だしだけを、1杯100円。"
+      }
+     ],
+     "hit": true
+    },
+    {
+     "asset": "cm-akadashi-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-akadashi-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：赤だしの椀（寄り） ／ Ippei Suzuki・CC BY 2.0"
+      }
+     ],
+     "note": "bowl"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2017年12月の「くら出汁」です。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:e9d803bd42",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり2　だしを売る"
+      },
+      {
+       "points": [
+        [
+         "2017.12",
+         "「くら出汁」"
+        ]
+       ],
+       "highlight": 0,
+       "type": "timeline_n"
+      }
+     ]
+    },
+    {
+     "asset": "cm-broth-kitchen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-broth-kitchen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：厨房のスープ作り（白黒） ／ H. Alexander Talbot・CC BY 2.0"
+      }
+     ],
+     "note": "dashi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "昆布や鰹をはじめとする7種の素材を使い、店で毎日、手作りしただし。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-kombu-drying-hokkaido-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kombu-drying-hokkaido-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：北海道の浜で天日干しされる昆布 ／ Marie-Sophie Mejan・CC BY 4.0"
+      }
+     ],
+     "note": "kombu"
+    },
+    {
+     "asset": "cm-katsuobushi-shop-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-katsuobushi-shop-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：鰹節と削り節の量り売り ／ Naotake Murayama from San Francisco, CA, USA・CC BY 2.0"
+      }
+     ],
+     "note": "katsuo"
+    },
+    {
+     "asset": "diagram:835b53ddbe",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり2　だしを売る"
+      },
+      {
+       "items": [
+        "店で毎日",
+        "手作り"
+       ],
+       "cols": 2,
+       "type": "chips"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "もちろん、四大添加物は無添加です。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:621156d39b",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり2　だしを売る"
+      },
+      {
+       "title": "四大添加物",
+       "items": [
+        "無添加"
+       ],
+       "cols": 1,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-miso-soup-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-miso-soup-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：朱塗りの椀の味噌汁 ／ yoppy・CC BY 2.0"
+      }
+     ],
+     "note": "bowl"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "魚介のうま味が溶け込み、いくつもの風味が折り重なるだしです。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-noodles-fresh-kitchen-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-fresh-kitchen-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：厨房の生麺と湯気 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "いくつもの風味が、折り重なる。",
+       "y": 760,
+       "n": 84
+      }
+     ],
+     "note": "いくつもの風味が、折り重なる"
+    },
+    {
+     "asset": "cm-broth-pot-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-broth-pot-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：鍋の黄金色のスープとお玉 ／ Hannes Grobe ( talk )・CC BY 3.0"
+      }
+     ],
+     "note": "dashi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "同じ日には、このだしをかけて食べる、牛丼、天丼、うな丼も登場しました。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:716c86a786",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり2　だしを売る"
+      },
+      {
+       "title": "だしをかけて食べる丼",
+       "items": [
+        "牛丼",
+        "天丼",
+        "うな丼"
+       ],
+       "cols": 3,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-kombu-drying-hokkaido-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kombu-drying-hokkaido-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：干し場に吊るされた昆布（北海道） ／ Marie-Sophie Mejan・CC BY 4.0"
+      }
+     ],
+     "note": "kombu"
+    },
+    {
+     "asset": "cm-katsuobushi-blocks-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-katsuobushi-blocks-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：鹿児島の鰹節（荒節） ／ Sakurai Midori・CC BY 2.5"
+      }
+     ],
+     "note": "katsuo"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "うな丼にだしをかければ、まるでひつまぶしを食べているような感覚です。"
+   ],
+   "shots": [
+    {
+     "asset": "text:3e563ec204",
+     "note": "まるで、ひつまぶし。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり2　だしを売る"
+      },
+      {
+       "type": "title_card",
+       "text": "まるで、ひつまぶし。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-kitchen-steam-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-kitchen-steam-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：湯気の立つラーメン店の厨房 ／ Syced・CC0"
+      }
+     ],
+     "note": "steam"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "そして、「7種の魚介」の中身は、料理によって違います。"
+   ],
+   "shots": [
+    {
+     "asset": "text:7f0ed838a0",
+     "note": "「7種の魚介」は、",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり2　だしを売る"
+      },
+      {
+       "type": "title_card",
+       "text": "「7種の魚介」は、",
+       "sub": "料理ごとに違う"
+      }
+     ]
+    },
+    {
+     "asset": "cm-iwashi-dried-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-iwashi-dried-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：焼いた目刺し（干しいわし） ／ Kossy@FINEDAYS from Tokyo・CC BY 2.0"
+      }
+     ],
+     "note": "fish"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "うな丼のタレに使う7種は、昆布、かつお、さば、うるめいわし、片口いわし、ほたて、ぐち。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:a6ba6d2e80",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり2　だしを売る"
+      },
+      {
+       "title": "うな丼のタレの7種",
+       "items": [
+        "昆布",
+        "かつお",
+        "さば",
+        "うるめいわし",
+        "片口いわし",
+        "ほたて",
+        "ぐち"
+       ],
+       "cols": 4,
+       "step": 0.3,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-hotate-dried-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-hotate-dried-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：干し貝柱（ほたて） ／ Fumikas Sagisavas・CC0"
+      }
+     ],
+     "note": "fish"
+    },
+    {
+     "asset": "cm-broth-clear-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-broth-clear-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：透き通ったスープ ／ J Doll・CC BY 3.0"
+      }
+     ],
+     "note": "dashi"
+    },
+    {
+     "asset": "cm-kombu-drying-racks-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kombu-drying-racks-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：家の前の干し棚に吊るされた昆布 ／ Ryo FUKAsawa from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "kombu"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "牛丼のタレに入れる7種類の魚介だしは、マグロ、カタクチイワシ、ウルメイワシ、カツオ、ソウダガツオ、アジ、サバ。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:b676f4e646",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり2　だしを売る"
+      },
+      {
+       "title": "牛丼のタレの7種",
+       "items": [
+        "マグロ",
+        "カタクチイワシ",
+        "ウルメイワシ",
+        "カツオ",
+        "ソウダガツオ",
+        "アジ",
+        "サバ"
+       ],
+       "cols": 4,
+       "step": 0.3,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-fish-market-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-fish-market-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：築地市場の場内 ／ ElHeineken・CC BY 4.0"
+      }
+     ],
+     "note": "fish"
+    },
+    {
+     "asset": "cm-katsuobushi-blocks-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-katsuobushi-blocks-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：枯本節（本枯節）の量り売り ／ Jun Seita from Palo Alto, CA, U.S.・CC BY 2.0"
+      }
+     ],
+     "note": "katsuo"
+    },
+    {
+     "asset": "cm-ramen-boiler-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-boiler-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ラーメン店の麺釜とてぼ ／ yamakk・CC BY 2.0"
+      }
+     ],
+     "note": "steam"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "料理ごとに、魚介の組み合わせを変えているのです。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:79e9f68983",
+     "note": "compare",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり2　だしを売る"
+      },
+      {
+       "left": {
+        "title": "うな丼のタレ",
+        "items": [
+         "昆布",
+         "かつお",
+         "さば",
+         "うるめいわし",
+         "片口いわし",
+         "ほたて",
+         "ぐち"
+        ]
+       },
+       "right": {
+        "title": "牛丼のタレ",
+        "items": [
+         "マグロ",
+         "カタクチイワシ",
+         "ウルメイワシ",
+         "カツオ",
+         "ソウダガツオ",
+         "アジ",
+         "サバ"
+        ]
+       },
+       "common": [
+        "かつお",
+        "さば",
+        "うるめいわし",
+        "片口いわし",
+        "カツオ",
+        "サバ",
+        "ウルメイワシ",
+        "カタクチイワシ"
+       ],
+       "type": "compare"
+      }
+     ]
+    },
+    {
+     "asset": "cm-fish-market-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-fish-market-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：銚子の鮮魚店の店頭 ／ t-mizo from Japan・CC BY 2.0"
+      }
+     ],
+     "note": "fish"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "では、ラーメンのスープは、どうか。"
+   ],
+   "shots": [
+    {
+     "asset": "text:d7adcd7596",
+     "note": "ラーメンのスープは？",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり2　だしを売る"
+      },
+      {
+       "type": "title_card",
+       "text": "ラーメンのスープは？"
+      }
+     ]
+    },
+    {
+     "asset": "cm-stockpot-simmer-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-stockpot-simmer-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：骨と香味野菜を煮込む寸胴鍋 ／ Blue Lotus・CC BY 2.0"
+      }
+     ],
+     "note": "dashi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "くら寿司が出しているのは、魚介のうま味を溶け込ませ、最後の一滴まで味わってもらうためのスープです。"
+   ],
+   "shots": [
+    {
+     "asset": "broth",
+     "bg": {
+      "type": "photo",
+      "asset": "broth",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "調理の再現イメージ"
+      },
+      {
+       "type": "title",
+       "text": "最後の一滴まで。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "最後の一滴まで。"
+    },
+    {
+     "asset": "cm-ramen-niboshi-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-niboshi-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    },
+    {
+     "asset": "cm-kombu-beach-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kombu-beach-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：浜に打ち上げられた昆布と波 ／ Ryo FUKAsawa from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "kombu"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "お客さんからは、四大添加物を使っていないから、安心してスープを飲み干せる、という声が寄せられていました。"
+   ],
+   "shots": [
+    {
+     "asset": "quote:ce3e5b5606",
+     "note": "引用",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "quote",
+       "text": "四大添加物を使っていないから、\n安心してスープを飲み干せる",
+       "by": "お客さんの声（2017年の発表より）"
+      }
+     ]
+    },
+    {
+     "asset": "cm-katsuobushi-shavings-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-katsuobushi-shavings-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：花かつお・糸かつおの削り節 ／ Stephan Ridgway from Brisbane, Australia・CC BY 2.0"
+      }
+     ],
+     "note": "katsuo"
+    },
+    {
+     "asset": "cm-stockpots-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-stockpots-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：コンロに並ぶスープ鍋 ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "steam"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "丼を持ち上げて、最後の一滴まで。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-ramen-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "丼を持ち上げて、最後の一滴まで。",
+       "y": 760,
+       "n": 84
+      }
+     ],
+     "note": "丼を持ち上げて、最後の一滴ま"
+    },
+    {
+     "asset": "cm-fish-market-04",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-fish-market-04",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：串に刺して並べた魚 ／ istolethetv・CC BY 2.0"
+      }
+     ],
+     "note": "fish"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2017年8月には、麺を抜いて、スープに4種類の蒸し野菜を入れた「麺抜き」のらーめんまで出しています。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:fcb20649d2",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり2　だしを売る"
+      },
+      {
+       "title": "2017年8月「麺抜き」",
+       "items": [
+        "ニンジン",
+        "チンゲン菜",
+        "モヤシ",
+        "キャベツ"
+       ],
+       "cols": 4,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-moyashi-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-moyashi-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：もやし ／ Raysonho・CC0"
+      }
+     ],
+     "note": "vegetables"
+    },
+    {
+     "asset": "cm-dashi-pour-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-dashi-pour-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昆布だしを注ぐ一皿 ／ City Foodsters・CC BY 2.0"
+      }
+     ],
+     "note": "dashi"
+    },
+    {
+     "asset": "cm-kombu-dried-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kombu-dried-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：乾燥した刻み昆布（すき昆布） ／ Nesnad・CC BY 4.0"
+      }
+     ],
+     "note": "kombu"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "キャベツとモヤシの、シャキシャキとした歯ごたえ。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-chingensai-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-chingensai-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：青梗菜 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "シャキシャキ。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "シャキシャキ。"
+    },
+    {
+     "asset": "cm-katsuobushi-block-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-katsuobushi-block-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：鰹節の一本と削り台 ／ 克年 三沢・CC BY 2.0"
+      }
+     ],
+     "note": "katsuo"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "麺がなくても、1品になるスープです。"
+   ],
+   "shots": [
+    {
+     "asset": "text:07d70eb6a4",
+     "note": "麺がなくても、1品。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり2　だしを売る"
+      },
+      {
+       "type": "title_card",
+       "text": "麺がなくても、1品。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-stockpots-steam-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-stockpots-steam-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：湯気の立つ寸胴と麺釜（ラーメン店厨房） ／ lazy fri13th from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "steam"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "では、このスープに合わせる麺は、どうなっているのか。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-noodles-handmade-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-handmade-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：打ちたての麺の束（寄り） ／ Sarah Boyle sboyle・CC0"
+      }
+     ],
+     "note": "noodles"
+    },
+    {
+     "asset": "text:5cc6aebfeb",
+     "note": "では、麺は？",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり2　だしを売る"
+      },
+      {
+       "type": "title_card",
+       "text": "では、麺は？"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "くら寿司は、麺だけに、2年をかけていました。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:2da20483b1",
+     "note": "band",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "手がかり2　だしを売る"
+      },
+      {
+       "label": "麺の開発",
+       "value": "2年",
+       "type": "band"
+      }
+     ]
+    },
+    {
+     "asset": "cm-fish-market-05",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-fish-market-05",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：函館朝市の通り ／ 663highland・CC BY 2.5"
+      }
+     ],
+     "note": "fish"
+    }
+   ]
+  }
+ ]
+}

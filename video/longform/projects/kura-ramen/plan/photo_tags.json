@@ -1,0 +1,266 @@
+{
+ "kombu": [
+  "cm-kombu-drying-hokkaido-01",
+  "cm-kombu-drying-hokkaido-02",
+  "cm-kombu-drying-racks-01",
+  "cm-kombu-beach-01",
+  "cm-kombu-dried-01",
+  "cm-kombu-boat-01",
+  "cm-kombu-dried-02"
+ ],
+ "katsuo": [
+  "cm-katsuobushi-shop-01",
+  "cm-katsuobushi-blocks-01",
+  "cm-katsuobushi-blocks-02",
+  "cm-katsuobushi-shavings-01",
+  "cm-katsuobushi-block-03",
+  "cm-katsuobushi-flakes-dish-01",
+  "cm-katsuo-tataki-01",
+  "cm-katsuo-tataki-02"
+ ],
+ "saba": [
+  "cm-saba-fresh-01",
+  "cm-saba-grilled-01",
+  "cm-saba-fresh-02",
+  "cm-saba-grilled-02",
+  "cm-saba-grilled-03"
+ ],
+ "niboshi": [
+  "cm-niboshi-01",
+  "cm-iwashi-dried-01",
+  "cm-ramen-niboshi-shoyu-01"
+ ],
+ "fish": [
+  "cm-iwashi-dried-01",
+  "cm-hotate-dried-01",
+  "cm-fish-market-01",
+  "cm-fish-market-03",
+  "cm-fish-market-04",
+  "cm-fish-market-05",
+  "cm-tuna-market-01"
+ ],
+ "dashi": [
+  "cm-broth-kitchen-01",
+  "cm-broth-pot-01",
+  "cm-broth-clear-01",
+  "cm-stockpot-simmer-01",
+  "cm-dashi-pour-01"
+ ],
+ "steam": [
+  "cm-noodles-fresh-kitchen-01",
+  "cm-ramen-kitchen-steam-01",
+  "cm-ramen-boiler-01",
+  "cm-stockpots-01",
+  "cm-stockpots-steam-01"
+ ],
+ "misosoup": [
+  "cm-akadashi-01",
+  "cm-akadashi-02",
+  "cm-miso-soup-01",
+  "cm-miso-soup-02",
+  "cm-miso-soup-shrimp-head-01",
+  "cm-miso-soup-03"
+ ],
+ "ramen": [
+  "cm-ramen-niboshi-shoyu-01",
+  "cm-ramen-shoyu-01",
+  "cm-ramen-shoyu-02",
+  "cm-ramen-shoyu-03",
+  "cm-ramen-shoyu-04",
+  "cm-ramen-saba-dashi-01"
+ ],
+ "misoramen": [
+  "cm-ramen-miso-01",
+  "cm-ramen-miso-02",
+  "cm-ramen-miso-burnt-01"
+ ],
+ "miso": [
+  "cm-ramen-miso-burnt-01",
+  "cm-miso-shelf-01"
+ ],
+ "tonkotsu": [
+  "cm-ramen-tonkotsu-01",
+  "cm-ramen-tonkotsu-02"
+ ],
+ "noodles": [
+  "cm-noodles-fresh-kitchen-01",
+  "cm-noodles-handmade-01",
+  "cm-noodles-packed-01",
+  "cm-noodle-machine-02"
+ ],
+ "noodlelift": [
+  "cm-tantanmen-noodles-01",
+  "cm-noodle-lift-01"
+ ],
+ "noodlemaking": [
+  "cm-noodle-making-kitchen-01",
+  "cm-noodle-making-cut-01",
+  "cm-noodle-machine-01",
+  "cm-noodle-machine-02",
+  "cm-noodle-making-hands-01"
+ ],
+ "flour": [
+  "cm-noodle-making-cut-01",
+  "cm-noodle-making-hands-01"
+ ],
+ "soy": [
+  "cm-shoyu-kioke-barrels-01",
+  "cm-shoyu-dish-01"
+ ],
+ "soybarrel": [
+  "cm-shoyu-kioke-barrels-01",
+  "cm-shoyu-town-yuasa-01",
+  "cm-shoyu-town-yuasa-02"
+ ],
+ "sesame": [
+  "cm-sesame-toasted-01",
+  "cm-sesame-seeds-01"
+ ],
+ "chili": [
+  "cm-ramen-spicy-miso-01",
+  "cm-doubanjiang-01",
+  "cm-chili-oil-01"
+ ],
+ "tantan": [
+  "cm-tantanmen-01",
+  "cm-tantanmen-02"
+ ],
+ "negi": [
+  "cm-negi-01"
+ ],
+ "garlic": [
+  "cm-garlic-01",
+  "cm-garlic-02"
+ ],
+ "vegetables": [
+  "cm-moyashi-01",
+  "cm-chingensai-01",
+  "cm-carrot-01"
+ ],
+ "cabbage": [
+  "cm-chingensai-01",
+  "cm-carrot-01"
+ ],
+ "sprouts": [
+  "cm-moyashi-01"
+ ],
+ "konjac": [
+  "cm-konnyaku-01"
+ ],
+ "shrimp": [
+  "cm-miso-soup-shrimp-head-01",
+  "cm-shrimp-head-01",
+  "cm-shrimp-fresh-01"
+ ],
+ "sakuraebi": [
+  "cm-sakuraebi-01"
+ ],
+ "crab": [
+  "cm-crab-01",
+  "cm-crab-shells-01"
+ ],
+ "lotus": [
+  "cm-renkon-dish-01",
+  "cm-renkon-salad-01"
+ ],
+ "udon": [
+  "cm-udon-sanuki-01",
+  "cm-udon-sanuki-02",
+  "cm-soba-01"
+ ],
+ "udonlift": [
+  "cm-udon-sanuki-02",
+  "cm-soba-01"
+ ],
+ "conveyor": [
+  "cm-kaiten-lane-01",
+  "cm-kaiten-lane-02",
+  "cm-kaiten-express-lane-01",
+  "cm-kaiten-lane-03",
+  "cm-kaiten-cover-01",
+  "cm-kaiten-lane-04"
+ ],
+ "sushi": [
+  "cm-nigiri-salmon-plate-01",
+  "cm-nigiri-tuna-plate-01",
+  "cm-sushi-gari-01",
+  "cm-nigiri-closeup-01"
+ ],
+ "oshizushi": [
+  "cm-oshizushi-01",
+  "cm-oshizushi-02",
+  "cm-oshizushi-03"
+ ],
+ "rice": [
+  "cm-sushi-gari-01",
+  "cm-nigiri-closeup-01"
+ ],
+ "shop": [
+  "cm-ramen-shop-interior-01",
+  "cm-ramen-sample-window-01",
+  "cm-ramen-shop-exterior-01",
+  "cm-ramen-closed-sign-01",
+  "cm-ramen-shop-night-interior-01",
+  "cm-ramen-shop-night-01",
+  "cm-ramen-shop-night-02",
+  "cm-ramen-shop-night-03"
+ ],
+ "noren": [
+  "cm-noren-night-01",
+  "cm-noren-ramen-01"
+ ],
+ "ramenshop": [
+  "cm-ramen-counter-01",
+  "cm-ramen-shop-interior-01",
+  "cm-ramen-sample-window-01",
+  "cm-ramen-shop-exterior-01",
+  "cm-ramen-street-retro-01",
+  "cm-ramen-shop-night-interior-01",
+  "cm-ramen-shop-night-01",
+  "cm-ramen-shop-night-02",
+  "cm-ramen-shop-night-03"
+ ],
+ "queue": [
+  "cm-ramen-street-retro-01",
+  "cm-ramen-queue-01"
+ ],
+ "kitchen": [
+  "cm-broth-kitchen-01",
+  "cm-noodles-fresh-kitchen-01",
+  "cm-noodle-making-kitchen-01",
+  "cm-ramen-kitchen-steam-01",
+  "cm-ramen-boiler-01",
+  "cm-stockpots-01",
+  "cm-stockpots-steam-01"
+ ],
+ "fishport": [
+  "cm-kombu-boat-01",
+  "cm-fishing-port-hidaka-01",
+  "cm-fishing-port-shakotan-01"
+ ],
+ "family": [],
+ "lunch": [
+  "cm-ramen-counter-01",
+  "cm-ramen-shop-interior-01"
+ ],
+ "takeout": [
+  "cm-noodles-packed-01"
+ ],
+ "unagi": [],
+ "donburi": [],
+ "bowl": [
+  "cm-akadashi-02",
+  "cm-miso-soup-02",
+  "cm-broth-clear-01"
+ ],
+ "fruit": [],
+ "chashu": [
+  "cm-ramen-shoyu-02",
+  "cm-ramen-shoyu-03"
+ ],
+ "seafoodramen": [
+  "cm-miso-soup-shrimp-head-01",
+  "cm-crab-shells-01"
+ ],
+ "coins": []
+}

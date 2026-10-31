@@ -10,7 +10,19 @@
   "assets_dir": "../../.assets/kura-ramen",
   "build_dir": "../../.build/kura-ramen",
   "chapters": [
-    "ch00-opening"
+    "ch00-opening",
+    "ch01-first-and-rule",
+    "ch02-1998",
+    "ch03-dashi",
+    "ch04-dashi-sold",
+    "ch05-noodles",
+    "ch06-soy-tantan",
+    "ch07-for-whom",
+    "ch08-vs-specialists",
+    "ch09-oshizushi",
+    "ch10-rivals",
+    "ch11-numbers",
+    "ch12-summary-check"
   ],
   "selftest_chapter": "ch00-opening",
   "giant_every_min": 2,

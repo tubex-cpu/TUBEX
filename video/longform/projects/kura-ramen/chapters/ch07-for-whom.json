@@ -1,0 +1,1050 @@
+{
+ "title": "寿司を食べない人と、寿司のあとの一杯",
+ "source": "script_v6_chapters.json（社長承認 2026-10-30）",
+ "timing": "voice",
+ "audio": {
+  "fade_in": 0.6,
+  "fade_out": 1.2
+ },
+ "segments": [
+  {
+   "narration": [
+    "寿司屋のラーメンは、寿司を食べない人のためにも、置かれています。"
+   ],
+   "shots": [
+    {
+     "asset": "real-03",
+     "bg": {
+      "type": "photo",
+      "asset": "real-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：くら寿司の店内 ／ Tamaki Sono・CC BY 2.0（2011年撮影）"
+      },
+      {
+       "type": "title",
+       "text": "寿司を食べない人のためにも。",
+       "y": 760,
+       "n": 84
+      }
+     ],
+     "note": "寿司を食べない人のためにも。",
+     "hit": true
+    },
+    {
+     "asset": "cm-kaiten-lane-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-lane-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：回転寿司のレーンと積まれた皿 ／ Maarten Heerlien from Voorschoten, The Netherlands・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2025年9月、経済誌の東洋経済オンラインの取材に、くら寿司の広報が答えました。"
+   ],
+   "shots": [
+    {
+     "asset": "text:05e94f9913",
+     "note": "東洋経済オンラインの取材",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "寿司を食べない人のために"
+      },
+      {
+       "type": "title_card",
+       "text": "東洋経済オンラインの取材",
+       "sub": "2025年9月・くら寿司の広報"
+      }
+     ]
+    },
+    {
+     "asset": "cm-nigiri-salmon-plate-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-nigiri-salmon-plate-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：皿にのったサーモンの握り ／ RuinDig/Yuki Uchida・CC BY 4.0"
+      }
+     ],
+     "note": "sushi"
+    },
+    {
+     "asset": "cm-ramen-niboshi-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-niboshi-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "くら寿司には、小さな子ども連れの家族や、グループのお客さんがたくさん来ます。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:ca9d61cc8d",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "寿司を食べない人のために"
+      },
+      {
+       "items": [
+        "小さな子ども連れの家族",
+        "グループ"
+       ],
+       "cols": 2,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-udon-sanuki-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-udon-sanuki-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：釜揚げ讃岐うどん ／ sekido・CC BY 2.0"
+      }
+     ],
+     "note": "udon"
+    },
+    {
+     "asset": "cm-ramen-counter-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-counter-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ラーメン店のカウンターと調味料 ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "lunch"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "その中には、生の魚が中心の寿司を食べられない人もいます。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-nigiri-tuna-plate-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-nigiri-tuna-plate-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：皿にのったまぐろの握り（薬味のせ） ／ RuinDig/Yuki Uchida・CC BY 4.0"
+      }
+     ],
+     "note": "sushi"
+    },
+    {
+     "asset": "text:b5baac0e2e",
+     "note": "生の魚が、食べられない。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "寿司を食べない人のために"
+      },
+      {
+       "type": "title_card",
+       "text": "生の魚が、食べられない。"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "そんな人のためにも、ラーメンやうどん、ケーキ、おつまみまで、いろいろなメニューをそろえているのです。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:f39c45208e",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "寿司を食べない人のために"
+      },
+      {
+       "items": [
+        "ラーメン",
+        "うどん",
+        "ケーキ",
+        "おつまみ"
+       ],
+       "cols": 4,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-udon-sanuki-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-udon-sanuki-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：讃岐うどん（黒い器・暗めのトーン） ／ open-arms・CC BY 2.0"
+      }
+     ],
+     "note": "udon"
+    },
+    {
+     "asset": "cm-kaiten-lane-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-lane-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：長い回転寿司レーンの俯瞰 ／ bigbirdz・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "家族で行く店を決めるとき。"
+   ],
+   "shots": [
+    {
+     "asset": "text:6db0bba1de",
+     "note": "店を決めるとき。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "寿司を食べない人のために"
+      },
+      {
+       "type": "title_card",
+       "text": "店を決めるとき。"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "「あの子、生もの食べられないからな」"
+   ],
+   "shots": [
+    {
+     "asset": "quote:35a06b2c7d",
+     "note": "引用",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "quote",
+       "text": "あの子、生もの\n食べられないからな",
+       "by": "家族の会話"
+      }
+     ]
+    },
+    {
+     "asset": "cm-sushi-gari-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-sushi-gari-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：カウンターの握りとガリ ／ rabbit_akra from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "sushi"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "その一言で、回転寿司は候補から外れてしまいます。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-kaiten-express-lane-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-express-lane-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：新幹線型の特急レーン ／ Karl Baron from Malmö, Sweden・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    },
+    {
+     "asset": "text:7683cda413",
+     "note": "候補から、外れる。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "寿司を食べない人のために"
+      },
+      {
+       "type": "title_card",
+       "text": "候補から、外れる。"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "でも、ラーメンがあれば、話は変わります。"
+   ],
+   "shots": [
+    {
+     "asset": "ramenhero",
+     "bg": {
+      "type": "photo",
+      "asset": "ramenhero",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "料理の再現イメージ"
+      },
+      {
+       "type": "title",
+       "text": "ラーメンがあれば。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "ラーメンがあれば。"
+    },
+    {
+     "asset": "cm-ramen-shoyu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "糖質を控えたい人には、2018年2月、こんにゃく粉で作った糖質オフ麺のラーメン。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-konnyaku-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-konnyaku-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：こんにゃく ／ Nesnad・CC BY 4.0"
+      }
+     ],
+     "note": "konjac"
+    },
+    {
+     "asset": "diagram:3c9ae37388",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "寿司を食べない人のために"
+      },
+      {
+       "points": [
+        [
+         "2018.2",
+         "糖質オフ麺"
+        ]
+       ],
+       "highlight": 0,
+       "type": "timeline_n"
+      }
+     ]
+    },
+    {
+     "asset": "cm-soba-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-soba-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：月見そば ／ Zengame from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "udon"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "糖質は、最大97%オフです。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:3e908539ba",
+     "note": "bars",
+     "bg": {
+      "type": "dark",
+      "grid": true
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "寿司を食べない人のために"
+      },
+      {
+       "items": [
+        [
+         "糖質（従来品）",
+         100,
+         "100"
+        ],
+        [
+         "糖質オフ麺",
+         3,
+         "最大97%オフ"
+        ]
+       ],
+       "highlight": 1,
+       "type": "bars"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shop-interior-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shop-interior-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昔ながらのラーメン店の店内 ／ Mark Mrwizard・CC BY 2.0"
+      }
+     ],
+     "note": "lunch"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "そして、量。"
+   ],
+   "shots": [
+    {
+     "asset": "text:21e2342435",
+     "note": "そして、量。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "寿司を食べない人のために"
+      },
+      {
+       "type": "title_card",
+       "text": "そして、量。"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "広報が挙げたポイントは、「お寿司と一緒に楽しめるほどよい分量」。"
+   ],
+   "shots": [
+    {
+     "asset": "quote:2027fcece1",
+     "note": "引用",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "quote",
+       "text": "お寿司と一緒に楽しめる\nほどよい分量",
+       "by": "くら寿司の広報"
+      }
+     ]
+    },
+    {
+     "asset": "cm-kaiten-lane-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-lane-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：回転寿司のカウンターとレーン ／ Benjamin Hollis from Seattle, WA, USA・CC BY 2.0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "寿司を何皿か食べて、そこにラーメンを一杯。"
+   ],
+   "shots": [
+    {
+     "asset": "real-19",
+     "bg": {
+      "type": "photo",
+      "asset": "real-19",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：くら寿司 西新宿店 ／ 経済特区・CC0"
+      }
+     ],
+     "note": "real-19"
+    },
+    {
+     "asset": "cm-ramen-shoyu-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：チャーシュー麺（醤油・黒い盆） ／ ノボホショコロトソ・CC BY 4.0"
+      },
+      {
+       "type": "title",
+       "text": "寿司のあとに、一杯。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "寿司のあとに、一杯。"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "寿司と一緒に食べることを前提にした量なのです。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-nigiri-closeup-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-nigiri-closeup-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：握り寿司の寄り（サーモン・まぐろ） ／ Think Draw from Dubai, UAE・CC BY 2.0"
+      }
+     ],
+     "note": "sushi"
+    },
+    {
+     "asset": "text:43dd2f675a",
+     "note": "寿司と一緒が、前提の量。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "寿司を食べない人のために"
+      },
+      {
+       "type": "title_card",
+       "text": "寿司と一緒が、前提の量。"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "narration": [
+    "一方で、サッとお腹を満たしたいランチでも、うどんやラーメンは人気です。"
+   ],
+   "shots": [
+    {
+     "asset": "cm-ramen-shoyu-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：醤油ラーメン（メンマ・チャーシュー） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "ramen"
+    },
+    {
+     "asset": "cm-kaiten-cover-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-cover-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：カバー付きの皿が回るレーン ／ Syced・CC0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2020年8月には、平日のランチに、醤油らーめんかきつねうどんを選べるセットを、期間限定の税抜き700円で出しました。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:f43c6efee6",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "寿司を食べない人のために"
+      },
+      {
+       "title": "平日ランチ（2020年8月・期間限定）",
+       "items": [
+        "醤油らーめん",
+        "きつねうどん"
+       ],
+       "cols": 2,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "text:f54abc24f3",
+     "note": "税抜き700円",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "寿司を食べない人のために"
+      },
+      {
+       "type": "title_card",
+       "text": "税抜き700円"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-shoyu-04",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shoyu-04",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：昔ながらの醤油ラーメン（なると） ／ Ocdp・CC0"
+      }
+     ],
+     "note": "ramen"
+    },
+    {
+     "asset": "cm-kaiten-lane-04",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-kaiten-lane-04",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：照明に浮かぶ回転レーン ／ V0lkanic・CC0"
+      }
+     ],
+     "note": "conveyor"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "2020年5月には、うどんとラーメンの持ち帰りも始めました。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:54dfe0a851",
+     "note": "timeline_n",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "寿司を食べない人のために"
+      },
+      {
+       "points": [
+        [
+         "2020.5",
+         "持ち帰り開始"
+        ]
+       ],
+       "highlight": 0,
+       "type": "timeline_n"
+      }
+     ]
+    },
+    {
+     "asset": "cm-noodles-packed-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-noodles-packed-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：袋詰めされた生麺の山 ／ François Nguyen・CC BY 2.0"
+      }
+     ],
+     "note": "takeout"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "回転寿司チェーンでは、初めての取り組みです。"
+   ],
+   "shots": [
+    {
+     "asset": "text:e0b70c2c6c",
+     "note": "回転寿司チェーンで、初めて。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "寿司を食べない人のために"
+      },
+      {
+       "type": "title_card",
+       "text": "回転寿司チェーンで、初めて。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-saba-dashi-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-saba-dashi-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：さばだしのラーメン ／ 石巻敎祖・CC BY 4.0"
+      }
+     ],
+     "note": "ramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "ただし、今の公式メニューでは、「7種の魚介 醤油らーめん」は持ち帰りできません。"
+   ],
+   "shots": [
+    {
+     "asset": "diagram:9f15a07567",
+     "note": "chips",
+     "bg": {
+      "type": "dark",
+      "grid": false
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "寿司を食べない人のために"
+      },
+      {
+       "title": "今の公式メニュー",
+       "items": [
+        "7種の魚介 醤油らーめん",
+        "お持ち帰り 不可"
+       ],
+       "cols": 2,
+       "type": "chips"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-miso-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：札幌の味噌ラーメン ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "misoramen"
+    },
+    {
+     "asset": "cm-ramen-miso-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：味噌ラーメンの寄り（コーン・にんにく） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+      }
+     ],
+     "note": "misoramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "店の中で食べる一杯なのです。"
+   ],
+   "shots": [
+    {
+     "asset": "real-08",
+     "bg": {
+      "type": "photo",
+      "asset": "real-08",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：くら寿司 西新宿店 ／ 経済特区・CC0"
+      },
+      {
+       "type": "title",
+       "text": "店の中で食べる一杯。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "店の中で食べる一杯。"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "美味しいラーメンがあるだけで、くら寿司に行く理由になるのです。"
+   ],
+   "shots": [
+    {
+     "asset": "broth",
+     "bg": {
+      "type": "photo",
+      "asset": "broth",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "調理の再現イメージ"
+      },
+      {
+       "type": "title",
+       "text": "行く理由になる。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "行く理由になる。"
+    },
+    {
+     "asset": "cm-ramen-miso-burnt-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-burnt-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：焦がし味噌ラーメン（暗いトーン） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      }
+     ],
+     "note": "misoramen"
+    }
+   ]
+  },
+  {
+   "narration": [
+    "そして、広報が挙げた理由の中で、いちばん踏み込んでいたのが、ラーメンの相手です。"
+   ],
+   "shots": [
+    {
+     "asset": "text:d5643712d6",
+     "note": "ラーメンの、相手。",
+     "bg": {
+      "type": "dark"
+     },
+     "layers": [
+      {
+       "type": "eyebrow",
+       "text": "寿司を食べない人のために"
+      },
+      {
+       "type": "title_card",
+       "text": "ラーメンの、相手。"
+      }
+     ]
+    },
+    {
+     "asset": "cm-ramen-tonkotsu-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-tonkotsu-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：豚骨ラーメン（海苔・ねぎ） ／ ノボホショコロトソ・CC BY 4.0"
+      }
+     ],
+     "note": "tonkotsu"
+    },
+    {
+     "asset": "cm-ramen-tonkotsu-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-tonkotsu-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：豚骨ラーメン（きくらげ・ねぎ） ／ Syced・CC0"
+      }
+     ],
+     "note": "tonkotsu"
+    }
+   ]
+  }
+ ]
+}
