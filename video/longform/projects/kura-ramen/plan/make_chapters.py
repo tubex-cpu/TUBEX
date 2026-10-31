@@ -24,6 +24,14 @@ from engine.audio import Voicevox  # noqa: E402
 
 SCRIPT = PROJ.parents[3] / 'channels/shoku-karakuri/drafts/kara-001-sushi-ramen/script_v6_chapters.json'
 MAX_SHOT = 2.9
+FILM_CAP = 2       # 1枚の写真を全編で使う上限
+FILM_CAP_KEY = 3   # くら寿司の実写・再現画像（要所の決めカット）の上限
+USES = None
+OVER = []
+
+
+def cap(a):
+    return FILM_CAP_KEY if not a.startswith('cm-') else FILM_CAP
 MIN_SHOT = 1.3
 
 PKG_CREDIT = {
@@ -59,11 +67,11 @@ class Chapter:
         self.fill_i = 0
         self.giants = 0
 
-    def photo_id(self, tag):
-        for a in self.tags.get(tag, []):
-            if a not in self.used and a in self.reg:
-                return a
-        return None
+    def photo_id(self, tag, slack=0):
+        """タグの写真のうち、この章で未使用・全編での使用が上限未満のものから、使用回数の少ない順に選ぶ。"""
+        cand = [a for a in self.tags.get(tag, []) if a not in self.used and a in self.reg
+                and USES[a] < cap(a) + slack]
+        return min(cand, key=lambda a: (USES[a], self.tags[tag].index(a))) if cand else None
 
     def credit(self, a):
         if a in PKG_CREDIT:
@@ -86,6 +94,8 @@ class Chapter:
             name, _, title = rest.partition('|')
             if kind == 'k':
                 a = name
+                if USES[a] >= cap(a):
+                    return None
             else:
                 a = self.photo_id(name)
                 if a is None:
@@ -119,6 +129,8 @@ class Chapter:
         if s is None or s['asset'] in self.used:
             return None
         self.used.add(s['asset'])
+        if s['bg']['type'] == 'photo':
+            USES[s['asset']] += 1
         return s
 
     def filler(self):
@@ -132,9 +144,16 @@ class Chapter:
         # 章の fill が尽きたら、ラーメンに近い題材の順で
         for tag in ['ramen', 'misoramen', 'tonkotsu', 'noodles', 'noodlelift', 'kitchen', 'steam', 'ramenshop', 'shop',
                     'dashi', 'misosoup', 'sushi', 'conveyor', 'noren', 'queue']:
-            a = self.photo_id(tag)
-            if a:
+            if self.photo_id(tag):
                 return self.take('p:' + tag)
+        # それでも足りなければ上限を1つだけ緩める（使ったら報告に出す）
+        for tag in list(self.tags):
+            a = self.photo_id(tag, slack=1)
+            if a:
+                OVER.append((self.cid, a))
+                self.used.add(a)
+                USES[a] += 1
+                return self.photo_shot(a)
         raise RuntimeError(f'{self.cid}: 素材が足りない（写真を増やすか fill を足す）')
 
 
@@ -146,6 +165,9 @@ def main():
     voice = Voicevox(proj['voice'], PROJ.parent.parent / '.build/kura-ramen/voice-cache')
     pace = proj.get('pace', {})
     gap = pace.get('gap', .45)
+    global USES
+    from collections import Counter
+    USES = Counter()
     ids = ['ch00-opening']
     report = []
     for cid, spec in CH.items():
@@ -176,6 +198,7 @@ def main():
     proj['chapters'] = ids
     (PROJ / 'project.json').write_text(json.dumps(proj, ensure_ascii=False, indent=2))
     print('\n'.join(report))
+    print('写真の使用回数:', dict(sorted(Counter(USES.values()).items())), '上限超え:', OVER)
 
 
 if __name__ == '__main__':
