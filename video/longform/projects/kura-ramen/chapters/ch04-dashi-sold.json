@@ -31,16 +31,16 @@
      "hit": true
     },
     {
-     "asset": "cm-akadashi-02",
+     "asset": "cm-miso-soup-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-akadashi-02",
+      "asset": "cm-miso-soup-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：赤だしの椀（寄り） ／ Ippei Suzuki・CC BY 2.0"
+       "text": "実写：朱塗りの椀の味噌汁 ／ yoppy・CC BY 2.0"
       }
      ],
      "note": "bowl"
@@ -77,16 +77,16 @@
      ]
     },
     {
-     "asset": "cm-broth-kitchen-01",
+     "asset": "cm-broth-simmer-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-broth-kitchen-01",
+      "asset": "cm-broth-simmer-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：厨房のスープ作り（白黒） ／ H. Alexander Talbot・CC BY 2.0"
+       "text": "実写：鍋で煮立つスープ ／ Karen・CC BY 2.0"
       }
      ],
      "note": "dashi"
@@ -99,31 +99,31 @@
    ],
    "shots": [
     {
-     "asset": "cm-kombu-drying-hokkaido-01",
+     "asset": "cm-kombu-beach-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-kombu-drying-hokkaido-01",
+      "asset": "cm-kombu-beach-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：北海道の浜で天日干しされる昆布 ／ Marie-Sophie Mejan・CC BY 4.0"
+       "text": "実写：浜に打ち上げられた昆布と波 ／ Ryo FUKAsawa from Tokyo, Japan・CC BY 2.0"
       }
      ],
      "note": "kombu"
     },
     {
-     "asset": "cm-katsuobushi-shop-01",
+     "asset": "cm-katsuobushi-shavings-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-katsuobushi-shop-01",
+      "asset": "cm-katsuobushi-shavings-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：鰹節と削り節の量り売り ／ Naotake Murayama from San Francisco, CA, USA・CC BY 2.0"
+       "text": "実写：花かつお・糸かつおの削り節 ／ Stephan Ridgway from Brisbane, Australia・CC BY 2.0"
       }
      ],
      "note": "katsuo"
@@ -180,16 +180,16 @@
      ]
     },
     {
-     "asset": "cm-miso-soup-02",
+     "asset": "cm-miso-soup-shrimp-head-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-miso-soup-02",
+      "asset": "cm-miso-soup-shrimp-head-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：朱塗りの椀の味噌汁 ／ yoppy・CC BY 2.0"
+       "text": "実写：えびの頭の味噌汁 ／ City Foodsters・CC BY 2.0"
       }
      ],
      "note": "bowl"
@@ -202,16 +202,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-noodles-fresh-kitchen-01",
+     "asset": "cm-gas-flame-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodles-fresh-kitchen-01",
+      "asset": "cm-gas-flame-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：厨房の生麺と湯気 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+       "text": "実写：コンロの青い炎 ／ Tamaki Sono from Shiga, Japan・CC BY 2.0"
       },
       {
        "type": "title",
@@ -223,16 +223,16 @@
      "note": "いくつもの風味が、折り重なる"
     },
     {
-     "asset": "cm-broth-pot-01",
+     "asset": "cm-stockpot-bones-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-broth-pot-01",
+      "asset": "cm-stockpot-bones-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：鍋の黄金色のスープとお玉 ／ Hannes Grobe ( talk )・CC BY 3.0"
+       "text": "実写：鶏ガラを煮出す寸胴鍋 ／ Ryan Snyder・CC BY 2.0"
       }
      ],
      "note": "dashi"
@@ -269,31 +269,31 @@
      ]
     },
     {
-     "asset": "cm-kombu-drying-hokkaido-02",
+     "asset": "cm-kombu-dried-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-kombu-drying-hokkaido-02",
+      "asset": "cm-kombu-dried-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：干し場に吊るされた昆布（北海道） ／ Marie-Sophie Mejan・CC BY 4.0"
+       "text": "実写：乾燥した刻み昆布（すき昆布） ／ Nesnad・CC BY 4.0"
       }
      ],
      "note": "kombu"
     },
     {
-     "asset": "cm-katsuobushi-blocks-01",
+     "asset": "cm-katsuobushi-block-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-katsuobushi-blocks-01",
+      "asset": "cm-katsuobushi-block-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：鹿児島の鰹節（荒節） ／ Sakurai Midori・CC BY 2.5"
+       "text": "実写：鰹節の一本と削り台 ／ 克年 三沢・CC BY 2.0"
       }
      ],
      "note": "katsuo"
@@ -323,16 +323,16 @@
      ]
     },
     {
-     "asset": "cm-ramen-kitchen-steam-01",
+     "asset": "cm-stock-vegetables-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-kitchen-steam-01",
+      "asset": "cm-stock-vegetables-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：湯気の立つラーメン店の厨房 ／ Syced・CC0"
+       "text": "実写：スープ用の香味野菜 ／ Ryan Snyder・CC BY 2.0"
       }
      ],
      "note": "steam"
@@ -429,34 +429,34 @@
      "note": "fish"
     },
     {
-     "asset": "cm-broth-clear-01",
+     "asset": "cm-broth-strained-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-broth-clear-01",
+      "asset": "cm-broth-strained-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：透き通ったスープ ／ J Doll・CC BY 3.0"
+       "text": "実写：こしたスープ（ボウル） ／ Ryan Snyder・CC BY 2.0"
       }
      ],
      "note": "dashi"
     },
     {
-     "asset": "cm-kombu-drying-racks-01",
+     "asset": "cm-miso-soup-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-kombu-drying-racks-01",
+      "asset": "cm-miso-soup-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：家の前の干し棚に吊るされた昆布 ／ Ryo FUKAsawa from Tokyo, Japan・CC BY 2.0"
+       "text": "実写：黒い盆にのせたなめこ汁 ／ City Foodsters・CC BY 2.0"
       }
      ],
-     "note": "kombu"
+     "note": "bowl"
     }
    ]
   },
@@ -510,34 +510,34 @@
      "note": "fish"
     },
     {
-     "asset": "cm-katsuobushi-blocks-02",
+     "asset": "cm-kombu-boat-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-katsuobushi-blocks-02",
+      "asset": "cm-kombu-boat-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：枯本節（本枯節）の量り売り ／ Jun Seita from Palo Alto, CA, U.S.・CC BY 2.0"
+       "text": "実写：海に出る昆布漁の小舟 ／ tuyainu・CC BY 3.0"
+      }
+     ],
+     "note": "kombu"
+    },
+    {
+     "asset": "cm-katsuobushi-flakes-dish-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-katsuobushi-flakes-dish-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：かつお節をのせたおひたし ／ City Foodsters・CC BY 2.0"
       }
      ],
      "note": "katsuo"
-    },
-    {
-     "asset": "cm-ramen-boiler-01",
-     "bg": {
-      "type": "photo",
-      "asset": "cm-ramen-boiler-01",
-      "scrim": 160
-     },
-     "layers": [
-      {
-       "type": "credit",
-       "text": "実写：ラーメン店の麺釜とてぼ ／ yamakk・CC BY 2.0"
-      }
-     ],
-     "note": "steam"
     }
    ]
   },
@@ -598,19 +598,19 @@
      ]
     },
     {
-     "asset": "cm-fish-market-03",
+     "asset": "cm-noodles-fresh-kitchen-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-fish-market-03",
+      "asset": "cm-noodles-fresh-kitchen-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：銚子の鮮魚店の店頭 ／ t-mizo from Japan・CC BY 2.0"
+       "text": "実写：厨房の生麺と湯気 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
       }
      ],
-     "note": "fish"
+     "note": "steam"
     }
    ]
   },
@@ -637,19 +637,19 @@
      ]
     },
     {
-     "asset": "cm-stockpot-simmer-01",
+     "asset": "cm-fish-market-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-stockpot-simmer-01",
+      "asset": "cm-fish-market-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：骨と香味野菜を煮込む寸胴鍋 ／ Blue Lotus・CC BY 2.0"
+       "text": "実写：銚子の鮮魚店の店頭 ／ t-mizo from Japan・CC BY 2.0"
       }
      ],
-     "note": "dashi"
+     "note": "fish"
     }
    ]
   },
@@ -680,34 +680,34 @@
      "note": "最後の一滴まで。"
     },
     {
-     "asset": "cm-ramen-niboshi-shoyu-01",
+     "asset": "cm-ramen-shoyu-08",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-niboshi-shoyu-01",
+      "asset": "cm-ramen-shoyu-08",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+       "text": "実写：ラーメンと餃子の定食 ／ RJD・CC BY 3.0"
       }
      ],
      "note": "ramen"
     },
     {
-     "asset": "cm-kombu-beach-01",
+     "asset": "cm-stockpot-bones-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-kombu-beach-01",
+      "asset": "cm-stockpot-bones-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：浜に打ち上げられた昆布と波 ／ Ryo FUKAsawa from Tokyo, Japan・CC BY 2.0"
+       "text": "実写：鍋の中の焼いた鶏ガラと香味野菜 ／ Ryan Snyder・CC BY 2.0"
       }
      ],
-     "note": "kombu"
+     "note": "dashi"
     }
    ]
   },
@@ -731,34 +731,34 @@
      ]
     },
     {
-     "asset": "cm-katsuobushi-shavings-01",
+     "asset": "cm-miso-soup-04",
      "bg": {
       "type": "photo",
-      "asset": "cm-katsuobushi-shavings-01",
+      "asset": "cm-miso-soup-04",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：花かつお・糸かつおの削り節 ／ Stephan Ridgway from Brisbane, Australia・CC BY 2.0"
+       "text": "実写：魚のあら汁（味噌） ／ City Foodsters・CC BY 2.0"
       }
      ],
-     "note": "katsuo"
+     "note": "bowl"
     },
     {
-     "asset": "cm-stockpots-01",
+     "asset": "cm-kombu-dried-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-stockpots-01",
+      "asset": "cm-kombu-dried-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：コンロに並ぶスープ鍋 ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：乾燥昆布（海辺に広げたもの） ／ freddy an・CC0"
       }
      ],
-     "note": "steam"
+     "note": "kombu"
     }
    ]
   },
@@ -768,16 +768,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-ramen-shoyu-01",
+     "asset": "cm-ramen-shoyu-09",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-01",
+      "asset": "cm-ramen-shoyu-09",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+       "text": "実写：赤い器の醤油ラーメン ／ Guilhem Vellut from Paris, France・CC BY 2.0"
       },
       {
        "type": "title",
@@ -789,19 +789,19 @@
      "note": "丼を持ち上げて、最後の一滴ま"
     },
     {
-     "asset": "cm-fish-market-04",
+     "asset": "cm-katsuo-tataki-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-fish-market-04",
+      "asset": "cm-katsuo-tataki-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：串に刺して並べた魚 ／ istolethetv・CC BY 2.0"
+       "text": "実写：かつおのたたき（高知） ／ ノボホショコロトソ・CC BY 4.0"
       }
      ],
-     "note": "fish"
+     "note": "katsuo"
     }
    ]
   },
@@ -851,34 +851,34 @@
      "note": "vegetables"
     },
     {
-     "asset": "cm-dashi-pour-01",
+     "asset": "cm-ramen-kitchen-steam-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-dashi-pour-01",
+      "asset": "cm-ramen-kitchen-steam-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：昆布だしを注ぐ一皿 ／ City Foodsters・CC BY 2.0"
+       "text": "実写：湯気の立つラーメン店の厨房 ／ Syced・CC0"
       }
      ],
-     "note": "dashi"
+     "note": "steam"
     },
     {
-     "asset": "cm-kombu-dried-01",
+     "asset": "cm-fish-market-04",
      "bg": {
       "type": "photo",
-      "asset": "cm-kombu-dried-01",
+      "asset": "cm-fish-market-04",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：乾燥した刻み昆布（すき昆布） ／ Nesnad・CC BY 4.0"
+       "text": "実写：串に刺して並べた魚 ／ istolethetv・CC BY 2.0"
       }
      ],
-     "note": "kombu"
+     "note": "fish"
     }
    ]
   },
@@ -909,19 +909,19 @@
      "note": "シャキシャキ。"
     },
     {
-     "asset": "cm-katsuobushi-block-03",
+     "asset": "cm-broth-kitchen-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-katsuobushi-block-03",
+      "asset": "cm-broth-kitchen-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：鰹節の一本と削り台 ／ 克年 三沢・CC BY 2.0"
+       "text": "実写：厨房のスープ作り（白黒） ／ H. Alexander Talbot・CC BY 2.0"
       }
      ],
-     "note": "katsuo"
+     "note": "dashi"
     }
    ]
   },
@@ -948,19 +948,19 @@
      ]
     },
     {
-     "asset": "cm-stockpots-steam-01",
+     "asset": "cm-miso-soup-05",
      "bg": {
       "type": "photo",
-      "asset": "cm-stockpots-steam-01",
+      "asset": "cm-miso-soup-05",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：湯気の立つ寸胴と麺釜（ラーメン店厨房） ／ lazy fri13th from Tokyo, Japan・CC BY 2.0"
+       "text": "実写：あさりの味噌汁 ／ Ocdp・CC0"
       }
      ],
-     "note": "steam"
+     "note": "bowl"
     }
    ]
   },
@@ -970,16 +970,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-noodles-handmade-01",
+     "asset": "cm-tantanmen-noodles-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodles-handmade-01",
+      "asset": "cm-tantanmen-noodles-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：打ちたての麺の束（寄り） ／ Sarah Boyle sboyle・CC0"
+       "text": "実写：黒ごま担々麺の太麺の寄り ／ Guilhem Vellut from Paris, France・CC BY 2.0"
       }
      ],
      "note": "noodles"
@@ -1028,19 +1028,19 @@
      ]
     },
     {
-     "asset": "cm-fish-market-05",
+     "asset": "cm-kombu-fresh-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-fish-market-05",
+      "asset": "cm-kombu-fresh-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：函館朝市の通り ／ 663highland・CC BY 2.5"
+       "text": "実写：海の昆布（生） ／ Omelele Ngxameleni・CC0"
       }
      ],
-     "note": "fish"
+     "note": "kombu"
     }
    ]
   }

@@ -155,16 +155,16 @@
      ]
     },
     {
-     "asset": "cm-ramen-niboshi-shoyu-01",
+     "asset": "cm-ramen-saba-dashi-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-niboshi-shoyu-01",
+      "asset": "cm-ramen-saba-dashi-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+       "text": "実写：さばだしのラーメン ／ 石巻敎祖・CC BY 4.0"
       }
      ],
      "note": "ramen"
@@ -248,16 +248,16 @@
      "note": "real-19"
     },
     {
-     "asset": "cm-ramen-shoyu-01",
+     "asset": "cm-ramen-shoyu-05",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-01",
+      "asset": "cm-ramen-shoyu-05",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+       "text": "実写：浅い器の醤油ラーメン（暗いトーン） ／ Nori Norisa・CC BY 2.0"
       }
      ],
      "note": "ramen"
@@ -326,16 +326,16 @@
      ]
     },
     {
-     "asset": "cm-broth-kitchen-01",
+     "asset": "cm-broth-pot-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-broth-kitchen-01",
+      "asset": "cm-broth-pot-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：厨房のスープ作り（白黒） ／ H. Alexander Talbot・CC BY 2.0"
+       "text": "実写：鍋の黄金色のスープとお玉 ／ Hannes Grobe ( talk )・CC BY 3.0"
       }
      ],
      "note": "dashi"
@@ -482,16 +482,16 @@
      "note": "同じ無添加のまま、もう一度。"
     },
     {
-     "asset": "cm-noodles-fresh-kitchen-01",
+     "asset": "cm-noodle-making-kitchen-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodles-fresh-kitchen-01",
+      "asset": "cm-noodle-making-kitchen-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：厨房の生麺と湯気 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+       "text": "実写：麺打ちをする厨房（後ろ姿） ／ Ermell・CC0"
       }
      ],
      "note": "kitchen"
@@ -589,16 +589,16 @@
      ]
     },
     {
-     "asset": "cm-ramen-shoyu-02",
+     "asset": "cm-ramen-shoyu-06",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-02",
+      "asset": "cm-ramen-shoyu-06",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：チャーシュー麺（醤油・黒い盆） ／ ノボホショコロトソ・CC BY 4.0"
+       "text": "実写：もやしのせ醤油ラーメン ／ DoctorDoughnut・CC0"
       }
      ],
      "note": "ramen"
@@ -656,16 +656,16 @@
      "note": "手がかりは、厨房に。"
     },
     {
-     "asset": "cm-broth-pot-01",
+     "asset": "cm-broth-clear-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-broth-pot-01",
+      "asset": "cm-broth-clear-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：鍋の黄金色のスープとお玉 ／ Hannes Grobe ( talk )・CC BY 3.0"
+       "text": "実写：透き通ったスープ ／ J Doll・CC BY 3.0"
       }
      ],
      "note": "dashi"

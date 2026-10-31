@@ -94,7 +94,10 @@ def cmd_check(p, args):
     print('VOICEVOX:', ok or '未起動（声のある章は字数からの見積もりで検査する）')
     for cid in p.chapter_ids():
         ch = p.chapter(cid)
-        tl = timeline(p, ch, v if ok and ch['timing'] == 'voice' else None)
+        try:
+            tl = timeline(p, ch, v if ch['timing'] == 'voice' else None)  # 合成済みの文はキャッシュから測る
+        except OSError:
+            tl = timeline(p, ch, None)
         e, w = lint(p, ch, tl)
         errors += e
         for x in w:

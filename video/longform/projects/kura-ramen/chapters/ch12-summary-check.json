@@ -43,16 +43,16 @@
      "hit": true
     },
     {
-     "asset": "cm-ramen-niboshi-shoyu-01",
+     "asset": "cm-ramen-ajitama-05",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-niboshi-shoyu-01",
+      "asset": "cm-ramen-ajitama-05",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+       "text": "実写：黒ごまをかけた味玉の寄り ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       }
      ],
      "note": "ramen"
@@ -127,31 +127,31 @@
      ]
     },
     {
-     "asset": "cm-broth-kitchen-01",
+     "asset": "cm-broth-pot-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-broth-kitchen-01",
+      "asset": "cm-broth-pot-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：厨房のスープ作り（白黒） ／ H. Alexander Talbot・CC BY 2.0"
+       "text": "実写：鍋の黄金色のスープとお玉 ／ Hannes Grobe ( talk )・CC BY 3.0"
       }
      ],
      "note": "dashi"
     },
     {
-     "asset": "cm-noodles-fresh-kitchen-01",
+     "asset": "cm-noodle-machine-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodles-fresh-kitchen-01",
+      "asset": "cm-noodle-machine-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：厨房の生麺と湯気 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+       "text": "実写：製麺機で麺を作る店内 ／ Syced・CC0"
       }
      ],
      "note": "noodles"
@@ -182,16 +182,16 @@
      ]
     },
     {
-     "asset": "cm-ramen-kitchen-steam-01",
+     "asset": "cm-noodle-boiling-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-kitchen-steam-01",
+      "asset": "cm-noodle-boiling-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：湯気の立つラーメン店の厨房 ／ Syced・CC0"
+       "text": "実写：麺をゆでる厨房（白黒・手元） ／ H. Alexander Talbot・CC BY 2.0"
       }
      ],
      "note": "steam"
@@ -204,16 +204,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-broth-pot-01",
+     "asset": "cm-broth-clear-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-broth-pot-01",
+      "asset": "cm-broth-clear-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：鍋の黄金色のスープとお玉 ／ Hannes Grobe ( talk )・CC BY 3.0"
+       "text": "実写：透き通ったスープ ／ J Doll・CC BY 3.0"
       },
       {
        "type": "title",
@@ -225,16 +225,16 @@
      "note": "毎日、店でとる魚介のだし。"
     },
     {
-     "asset": "cm-shoyu-kioke-barrels-01",
+     "asset": "cm-shoyu-dish-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-shoyu-kioke-barrels-01",
+      "asset": "cm-shoyu-dish-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：醤油蔵の大きな木桶 ／ nubobo・CC BY 2.0"
+       "text": "実写：小皿の醤油 ／ Tim Reckmann from Hamm, Deutschland・CC BY 2.0"
       }
      ],
      "note": "soy"
@@ -247,16 +247,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-noodles-handmade-01",
+     "asset": "cm-noodle-machine-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodles-handmade-01",
+      "asset": "cm-noodle-machine-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：打ちたての麺の束（寄り） ／ Sarah Boyle sboyle・CC0"
+       "text": "実写：製麺機から出てくる麺 ／ Magic Madzik・CC BY 2.0"
       },
       {
        "type": "title",
@@ -268,16 +268,16 @@
      "note": "作り直した、極太の麺。"
     },
     {
-     "asset": "cm-akadashi-01",
+     "asset": "cm-miso-soup-06",
      "bg": {
       "type": "photo",
-      "asset": "cm-akadashi-01",
+      "asset": "cm-miso-soup-06",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：赤だし（なめこと豆腐） ／ Ocdp・CC0"
+       "text": "実写：ねぎの味噌汁（寄り） ／ Kari Sullivan from Austin, TX・CC BY 2.0"
       }
      ],
      "note": "misosoup"
@@ -290,16 +290,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-shoyu-dish-01",
+     "asset": "cm-sashimi-soy-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-shoyu-dish-01",
+      "asset": "cm-sashimi-soy-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：小皿の醤油 ／ Tim Reckmann from Hamm, Deutschland・CC BY 2.0"
+       "text": "実写：刺身と醤油の小皿 ／ Douglas Perkins・CC BY 4.0"
       },
       {
        "type": "title",
@@ -311,16 +311,16 @@
      "note": "まろやかさを足した、醤油。"
     },
     {
-     "asset": "cm-ramen-shoyu-01",
+     "asset": "cm-ramen-shoyu-16",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-01",
+      "asset": "cm-ramen-shoyu-16",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+       "text": "実写：竹岡式の黒い醤油ラーメン ／ くろふね・CC BY 4.0"
       }
      ],
      "note": "ramen"
@@ -351,16 +351,16 @@
      ]
     },
     {
-     "asset": "cm-broth-clear-01",
+     "asset": "cm-stockpot-simmer-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-broth-clear-01",
+      "asset": "cm-stockpot-simmer-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：透き通ったスープ ／ J Doll・CC BY 3.0"
+       "text": "実写：骨と香味野菜を煮込む寸胴鍋 ／ Blue Lotus・CC BY 2.0"
       }
      ],
      "note": "dashi"
@@ -405,16 +405,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-ramen-boiler-01",
+     "asset": "cm-gas-flame-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-boiler-01",
+      "asset": "cm-gas-flame-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：ラーメン店の麺釜とてぼ ／ yamakk・CC BY 2.0"
+       "text": "実写：コンロの青い炎 ／ Tamaki Sono from Shiga, Japan・CC BY 2.0"
       },
       {
        "type": "title",
@@ -426,16 +426,16 @@
      "note": "麺より先に、スープから。"
     },
     {
-     "asset": "cm-noodles-packed-01",
+     "asset": "cm-ramen-noodles-closeup-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodles-packed-01",
+      "asset": "cm-ramen-noodles-closeup-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：袋詰めされた生麺の山 ／ François Nguyen・CC BY 2.0"
+       "text": "実写：スープの中の麺の寄り ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       }
      ],
      "note": "noodles"
@@ -448,46 +448,46 @@
    ],
    "shots": [
     {
-     "asset": "cm-kombu-drying-hokkaido-01",
+     "asset": "cm-kombu-tsukudani-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-kombu-drying-hokkaido-01",
+      "asset": "cm-kombu-tsukudani-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：北海道の浜で天日干しされる昆布 ／ Marie-Sophie Mejan・CC BY 4.0"
+       "text": "実写：昆布の佃煮 ／ Jun OHWADA・CC BY 2.0"
       }
      ],
      "note": "kombu"
     },
     {
-     "asset": "cm-katsuobushi-shop-01",
+     "asset": "cm-katsuobushi-blocks-04",
      "bg": {
       "type": "photo",
-      "asset": "cm-katsuobushi-shop-01",
+      "asset": "cm-katsuobushi-blocks-04",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：鰹節と削り節の量り売り ／ Naotake Murayama from San Francisco, CA, USA・CC BY 2.0"
+       "text": "実写：鰹節の量り売り（木箱） ／ Naotake Murayama from San Francisco, CA, USA・CC BY 2.0"
       }
      ],
      "note": "katsuo"
     },
     {
-     "asset": "cm-saba-fresh-01",
+     "asset": "cm-saba-grilled-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-saba-fresh-01",
+      "asset": "cm-saba-grilled-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：店頭に並ぶ鮮魚のさば ／ Nesnad・CC BY 4.0"
+       "text": "実写：焼きさば（鉄板） ／ Daniel Moskowitz・CC0"
       }
      ],
      "note": "saba"
@@ -532,16 +532,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-akadashi-02",
+     "asset": "cm-miso-soup-07",
      "bg": {
       "type": "photo",
-      "asset": "cm-akadashi-02",
+      "asset": "cm-miso-soup-07",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：赤だしの椀（寄り） ／ Ippei Suzuki・CC BY 2.0"
+       "text": "実写：小さな椀の味噌汁（暗いトーン） ／ T.Tseng・CC BY 2.0"
       },
       {
        "type": "title",
@@ -553,16 +553,16 @@
      "note": "寿司の横の味噌汁を、ひと口。"
     },
     {
-     "asset": "cm-stockpots-01",
+     "asset": "cm-stock-vegetables-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-stockpots-01",
+      "asset": "cm-stock-vegetables-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：コンロに並ぶスープ鍋 ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：スープ用の香味野菜 ／ Ryan Snyder・CC BY 2.0"
       }
      ],
      "note": "steam"
@@ -597,16 +597,16 @@
      ]
     },
     {
-     "asset": "cm-miso-soup-01",
+     "asset": "cm-miso-soup-sushi-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-miso-soup-01",
+      "asset": "cm-miso-soup-sushi-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：豆腐とわかめの味噌汁 ／ Ocdp・CC0"
+       "text": "実写：寿司店の味噌汁 ／ Guilhem Vellut from Paris, France・CC BY 2.0"
       }
      ],
      "note": "misosoup"
@@ -651,16 +651,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-tantanmen-noodles-01",
+     "asset": "cm-ramen-noodle-lift-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-tantanmen-noodles-01",
+      "asset": "cm-ramen-noodle-lift-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：黒ごま担々麺の太麺の寄り ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：箸で持ち上げる辛いラーメンの麺 ／ insatiablemunch・CC BY 2.0"
       },
       {
        "type": "title",
@@ -725,16 +725,16 @@
      ]
     },
     {
-     "asset": "cm-ramen-shoyu-02",
+     "asset": "cm-ramen-shoyu-17",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-02",
+      "asset": "cm-ramen-shoyu-17",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：チャーシュー麺（醤油・黒い盆） ／ ノボホショコロトソ・CC BY 4.0"
+       "text": "実写：醤油ラーメンの定食 ／ Syced・CC0"
       }
      ],
      "note": "ramen"
@@ -747,16 +747,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-noodle-machine-02",
+     "asset": "cm-noodles-closeup-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodle-machine-02",
+      "asset": "cm-noodles-closeup-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：製麺機から出てくる麺 ／ Magic Madzik・CC BY 2.0"
+       "text": "実写：スープからすくった縮れ麺 ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       },
       {
        "type": "title",
@@ -768,16 +768,16 @@
      "note": "あなたの目と口で。"
     },
     {
-     "asset": "cm-stockpot-simmer-01",
+     "asset": "cm-dashi-pour-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-stockpot-simmer-01",
+      "asset": "cm-dashi-pour-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：骨と香味野菜を煮込む寸胴鍋 ／ Blue Lotus・CC BY 2.0"
+       "text": "実写：昆布だしを注ぐ一皿 ／ City Foodsters・CC BY 2.0"
       }
      ],
      "note": "dashi"
@@ -822,19 +822,19 @@
    ],
    "shots": [
     {
-     "asset": "cm-stockpots-steam-01",
+     "asset": "cm-noodles-closeup-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-stockpots-steam-01",
+      "asset": "cm-noodles-closeup-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：湯気の立つ寸胴と麺釜（ラーメン店厨房） ／ lazy fri13th from Tokyo, Japan・CC BY 2.0"
+       "text": "実写：スープの中の麺の寄り（ストレート麺） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       }
      ],
-     "note": "steam"
+     "note": "noodles"
     }
    ]
   },
@@ -868,16 +868,16 @@
      ]
     },
     {
-     "asset": "cm-miso-soup-02",
+     "asset": "cm-miso-soup-sushi-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-miso-soup-02",
+      "asset": "cm-miso-soup-sushi-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：朱塗りの椀の味噌汁 ／ yoppy・CC BY 2.0"
+       "text": "実写：寿司店のカウンターの味噌汁（暗いトーン） ／ City Foodsters・CC BY 2.0"
       }
      ],
      "note": "misosoup"
@@ -944,16 +944,16 @@
      ]
     },
     {
-     "asset": "cm-ramen-shoyu-03",
+     "asset": "cm-ramen-shoyu-18",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-03",
+      "asset": "cm-ramen-shoyu-18",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：醤油ラーメン（メンマ・チャーシュー） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：高山ラーメン ／ Ocdp・CC0"
       }
      ],
      "note": "ramen"
@@ -1021,49 +1021,49 @@
      ]
     },
     {
-     "asset": "cm-dashi-pour-01",
+     "asset": "cm-soup-pot-ladle-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-dashi-pour-01",
+      "asset": "cm-soup-pot-ladle-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：昆布だしを注ぐ一皿 ／ City Foodsters・CC BY 2.0"
+       "text": "実写：土鍋のスープとお玉 ／ Guilhem Vellut from Paris, France・CC BY 2.0"
       }
      ],
      "note": "dashi"
     },
     {
-     "asset": "cm-miso-soup-shrimp-head-01",
+     "asset": "cm-udon-inaniwa-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-miso-soup-shrimp-head-01",
+      "asset": "cm-udon-inaniwa-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：えびの頭の味噌汁 ／ City Foodsters・CC BY 2.0"
+       "text": "実写：稲庭うどんのつけ麺 ／ yoppy・CC BY 2.0"
+      }
+     ],
+     "note": "noodles"
+    },
+    {
+     "asset": "cm-akadashi-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-akadashi-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：赤だし（なめこと豆腐） ／ Ocdp・CC0"
       }
      ],
      "note": "misosoup"
-    },
-    {
-     "asset": "cm-ramen-shoyu-04",
-     "bg": {
-      "type": "photo",
-      "asset": "cm-ramen-shoyu-04",
-      "scrim": 160
-     },
-     "layers": [
-      {
-       "type": "credit",
-       "text": "実写：昔ながらの醤油ラーメン（なると） ／ Ocdp・CC0"
-      }
-     ],
-     "note": "ramen"
     }
    ]
   },
@@ -1094,19 +1094,19 @@
      "note": "寿司屋に行く理由になる。"
     },
     {
-     "asset": "cm-miso-soup-03",
+     "asset": "cm-ramen-shoyu-19",
      "bg": {
       "type": "photo",
-      "asset": "cm-miso-soup-03",
+      "asset": "cm-ramen-shoyu-19",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：黒い盆にのせたなめこ汁 ／ City Foodsters・CC BY 2.0"
+       "text": "実写：中華そば（俯瞰・カウンター） ／ 経済特区・CC0"
       }
      ],
-     "note": "misosoup"
+     "note": "ramen"
     }
    ]
   },
@@ -1116,55 +1116,49 @@
    ],
    "shots": [
     {
-     "asset": "ramenhero",
+     "asset": "cm-broth-simmer-02",
      "bg": {
       "type": "photo",
-      "asset": "ramenhero",
+      "asset": "cm-broth-simmer-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "料理の再現イメージ"
-      },
-      {
-       "type": "title",
-       "text": "毎日のだしと、半年で消えた店。",
-       "y": 760,
-       "n": 84
+       "text": "実写：鍋で煮立つスープ ／ Karen・CC BY 2.0"
       }
      ],
-     "note": "毎日のだしと、半年で消えた店"
+     "note": "dashi"
     },
     {
-     "asset": "cm-ramen-saba-dashi-01",
+     "asset": "cm-noodles-dried-bundles-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-saba-dashi-01",
+      "asset": "cm-noodles-dried-bundles-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：さばだしのラーメン ／ 石巻敎祖・CC BY 4.0"
+       "text": "実写：束ねた乾麺の山 ／ François Nguyen・CC BY 2.0"
       }
      ],
-     "note": "ramen"
+     "note": "noodles"
     },
     {
-     "asset": "cm-ramen-miso-01",
+     "asset": "cm-akadashi-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-miso-01",
+      "asset": "cm-akadashi-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：札幌の味噌ラーメン ／ ノボホショコロトソ・CC BY 4.0"
+       "text": "実写：赤だしの椀（寄り） ／ Ippei Suzuki・CC BY 2.0"
       }
      ],
-     "note": "misoramen"
+     "note": "misosoup"
     }
    ]
   }

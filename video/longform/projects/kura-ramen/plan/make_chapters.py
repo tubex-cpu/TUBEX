@@ -142,8 +142,8 @@ class Chapter:
             if s:
                 return s
         # 章の fill が尽きたら、ラーメンに近い題材の順で
-        for tag in ['ramen', 'misoramen', 'tonkotsu', 'noodles', 'noodlelift', 'kitchen', 'steam', 'ramenshop', 'shop',
-                    'dashi', 'misosoup', 'sushi', 'conveyor', 'noren', 'queue']:
+        for tag in ['ramen', 'misoramen', 'tonkotsu', 'tsukemen', 'noodles', 'noodlelift', 'kitchen', 'steam', 'ramenshop', 'shop',
+                    'dashi', 'misosoup', 'sushi', 'conveyor', 'noren', 'queue', 'udon', 'fish', 'fishport']:
             if self.photo_id(tag):
                 return self.take('p:' + tag)
         # それでも足りなければ上限を1つだけ緩める（使ったら報告に出す）

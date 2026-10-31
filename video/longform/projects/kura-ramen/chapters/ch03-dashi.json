@@ -13,16 +13,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-broth-kitchen-01",
+     "asset": "cm-stockpot-simmer-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-broth-kitchen-01",
+      "asset": "cm-stockpot-simmer-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：厨房のスープ作り（白黒） ／ H. Alexander Talbot・CC BY 2.0"
+       "text": "実写：骨と香味野菜を煮込む寸胴鍋 ／ Blue Lotus・CC BY 2.0"
       },
       {
        "type": "title",
@@ -35,31 +35,31 @@
      "hit": true
     },
     {
-     "asset": "cm-noodles-fresh-kitchen-01",
+     "asset": "cm-ramen-kitchen-steam-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodles-fresh-kitchen-01",
+      "asset": "cm-ramen-kitchen-steam-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：厨房の生麺と湯気 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+       "text": "実写：湯気の立つラーメン店の厨房 ／ Syced・CC0"
       }
      ],
      "note": "steam"
     },
     {
-     "asset": "cm-broth-pot-01",
+     "asset": "cm-dashi-pour-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-broth-pot-01",
+      "asset": "cm-dashi-pour-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：鍋の黄金色のスープとお玉 ／ Hannes Grobe ( talk )・CC BY 3.0"
+       "text": "実写：昆布だしを注ぐ一皿 ／ City Foodsters・CC BY 2.0"
       }
      ],
      "note": "dashi"
@@ -211,16 +211,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-broth-clear-01",
+     "asset": "cm-stockpots-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-broth-clear-01",
+      "asset": "cm-stockpots-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：透き通ったスープ ／ J Doll・CC BY 3.0"
+       "text": "実写：コンロに並ぶスープ鍋 ／ Guilhem Vellut from Paris, France・CC BY 2.0"
       }
      ],
      "note": "dashi"
@@ -299,16 +299,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-ramen-kitchen-steam-01",
+     "asset": "cm-ramen-boiler-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-kitchen-steam-01",
+      "asset": "cm-ramen-boiler-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：湯気の立つラーメン店の厨房 ／ Syced・CC0"
+       "text": "実写：ラーメン店の麺釜とてぼ ／ yamakk・CC BY 2.0"
       },
       {
        "type": "title",
@@ -320,16 +320,16 @@
      "note": "だしの風味を、損なわないよう"
     },
     {
-     "asset": "cm-ramen-boiler-01",
+     "asset": "cm-stockpots-steam-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-boiler-01",
+      "asset": "cm-stockpots-steam-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：ラーメン店の麺釜とてぼ ／ yamakk・CC BY 2.0"
+       "text": "実写：湯気の立つ寸胴と麺釜（ラーメン店厨房） ／ lazy fri13th from Tokyo, Japan・CC BY 2.0"
       }
      ],
      "note": "steam"
@@ -378,16 +378,16 @@
      "note": "ラーメンだけでは、ない。"
     },
     {
-     "asset": "cm-stockpot-simmer-01",
+     "asset": "cm-stockpots-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-stockpot-simmer-01",
+      "asset": "cm-stockpots-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：骨と香味野菜を煮込む寸胴鍋 ／ Blue Lotus・CC BY 2.0"
+       "text": "実写：ラーメン店のスープ鍋（コンロ） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
       }
      ],
      "note": "dashi"
@@ -460,16 +460,16 @@
      "note": "real-06"
     },
     {
-     "asset": "cm-ramen-niboshi-shoyu-01",
+     "asset": "cm-ramen-shoyu-07",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-niboshi-shoyu-01",
+      "asset": "cm-ramen-shoyu-07",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+       "text": "実写：夜鳴きそば（海苔・ねぎ） ／ Totti・CC0"
       }
      ],
      "note": "ramen"
@@ -497,16 +497,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-dashi-pour-01",
+     "asset": "cm-soup-pot-ladle-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-dashi-pour-01",
+      "asset": "cm-soup-pot-ladle-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：昆布だしを注ぐ一皿 ／ City Foodsters・CC BY 2.0"
+       "text": "実写：土鍋のスープとお玉 ／ Guilhem Vellut from Paris, France・CC BY 2.0"
       }
      ],
      "note": "dashi"
@@ -607,16 +607,16 @@
      ]
     },
     {
-     "asset": "cm-stockpots-01",
+     "asset": "cm-noodle-boiling-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-stockpots-01",
+      "asset": "cm-noodle-boiling-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：コンロに並ぶスープ鍋 ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：麺をゆでる厨房（白黒・手元） ／ H. Alexander Talbot・CC BY 2.0"
       }
      ],
      "note": "steam"

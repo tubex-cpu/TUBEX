@@ -140,16 +140,16 @@
      ]
     },
     {
-     "asset": "cm-ramen-niboshi-shoyu-01",
+     "asset": "cm-ramen-shoyu-10",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-niboshi-shoyu-01",
+      "asset": "cm-ramen-shoyu-10",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+       "text": "実写：メンマ・チャーシューの醤油ラーメン ／ Ocdp・CC0"
       }
      ],
      "note": "ramen"
@@ -161,6 +161,21 @@
     "狙いは、醤油ラーメンらしい、まろやかさと、うま味を強めること。"
    ],
    "shots": [
+    {
+     "asset": "cm-sushi-soy-gari-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-sushi-soy-gari-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：巻き寿司と醤油・ガリ（暗い背景） ／ Tim Reckmann from Hamm, Deutschland・CC BY 2.0"
+      }
+     ],
+     "note": "soy"
+    },
     {
      "asset": "diagram:4361bd9786",
      "note": "chips",
@@ -183,21 +198,6 @@
        "type": "chips"
       }
      ]
-    },
-    {
-     "asset": "cm-sesame-toasted-01",
-     "bg": {
-      "type": "photo",
-      "asset": "cm-sesame-toasted-01",
-      "scrim": 160
-     },
-     "layers": [
-      {
-       "type": "credit",
-       "text": "実写：いりごまと木のさじ ／ dabok2014・CC0"
-      }
-     ],
-     "note": "sesame"
     }
    ]
   },
@@ -228,16 +228,16 @@
      ]
     },
     {
-     "asset": "cm-ramen-shoyu-01",
+     "asset": "cm-ramen-shio-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-01",
+      "asset": "cm-ramen-shio-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+       "text": "実写：塩ラーメンのチャーシュー寄り ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       }
      ],
      "note": "ramen"
@@ -268,34 +268,34 @@
      ]
     },
     {
-     "asset": "cm-ramen-spicy-miso-01",
+     "asset": "cm-sesame-toasted-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-spicy-miso-01",
+      "asset": "cm-sesame-toasted-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：辛味噌ラーメン（赤い一杯） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+       "text": "実写：いりごまと木のさじ ／ dabok2014・CC0"
+      }
+     ],
+     "note": "sesame"
+    },
+    {
+     "asset": "cm-doubanjiang-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-doubanjiang-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：豆板醤（辛味噌） ／ Badagnani・CC BY 3.0"
       }
      ],
      "note": "chili"
-    },
-    {
-     "asset": "cm-tantanmen-01",
-     "bg": {
-      "type": "photo",
-      "asset": "cm-tantanmen-01",
-      "scrim": 160
-     },
-     "layers": [
-      {
-       "type": "credit",
-       "text": "実写：担々麺（ひき肉・青菜） ／ nesnad・CC BY 3.0"
-      }
-     ],
-     "note": "tantan"
     }
    ]
   },
@@ -319,19 +319,19 @@
      ]
     },
     {
-     "asset": "cm-tantanmen-noodles-01",
+     "asset": "cm-tantanmen-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-tantanmen-noodles-01",
+      "asset": "cm-tantanmen-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：黒ごま担々麺の太麺の寄り ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：担々麺（ひき肉・青菜） ／ nesnad・CC BY 3.0"
       }
      ],
-     "note": "noodlelift"
+     "note": "tantan"
     }
    ]
   },
@@ -355,19 +355,19 @@
      ]
     },
     {
-     "asset": "cm-noodles-fresh-kitchen-01",
+     "asset": "cm-noodle-lift-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodles-fresh-kitchen-01",
+      "asset": "cm-noodle-lift-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：厨房の生麺と湯気 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+       "text": "実写：箸で持ち上げる麺（寄り） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       }
      ],
-     "note": "steam"
+     "note": "noodlelift"
     }
    ]
   },
@@ -394,19 +394,19 @@
      ]
     },
     {
-     "asset": "cm-ramen-shoyu-02",
+     "asset": "cm-stockpots-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-02",
+      "asset": "cm-stockpots-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：チャーシュー麺（醤油・黒い盆） ／ ノボホショコロトソ・CC BY 4.0"
+       "text": "実写：コンロに並ぶスープ鍋 ／ Guilhem Vellut from Paris, France・CC BY 2.0"
       }
      ],
-     "note": "ramen"
+     "note": "steam"
     }
    ]
   },
@@ -437,19 +437,19 @@
      "note": "担々麺に、魚介のだし。"
     },
     {
-     "asset": "cm-sesame-seeds-01",
+     "asset": "cm-sashimi-soy-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-sesame-seeds-01",
+      "asset": "cm-sashimi-soy-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：ごまの粒の寄り ／ Keith McDuffee from Northborough, MA, USA・CC BY 2.0"
+       "text": "実写：刺身と醤油の小皿 ／ Douglas Perkins・CC BY 4.0"
       }
      ],
-     "note": "sesame"
+     "note": "soy"
     }
    ]
   },
@@ -483,19 +483,19 @@
      ]
     },
     {
-     "asset": "cm-doubanjiang-01",
+     "asset": "cm-shoyu-town-yuasa-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-doubanjiang-01",
+      "asset": "cm-shoyu-town-yuasa-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：豆板醤（辛味噌） ／ Badagnani・CC BY 3.0"
+       "text": "実写：湯浅の醤油蔵の通り ／ 663highland・CC BY 2.5"
       }
      ],
-     "note": "chili"
+     "note": "soybarrel"
     }
    ]
   },
@@ -504,6 +504,21 @@
     "練り胡麻の香り、特製辛味噌の辛さ、そこに7種の魚介だしで、担々麺には珍しい、魚介のコクを加えました。"
    ],
    "shots": [
+    {
+     "asset": "cm-sesame-seeds-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-sesame-seeds-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ごまの粒の寄り ／ Keith McDuffee from Northborough, MA, USA・CC BY 2.0"
+      }
+     ],
+     "note": "sesame"
+    },
     {
      "asset": "cm-chili-oil-01",
      "bg": {
@@ -542,34 +557,19 @@
      ]
     },
     {
-     "asset": "cm-noodle-lift-01",
+     "asset": "cm-ramen-shio-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodle-lift-01",
+      "asset": "cm-ramen-shio-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：箸で持ち上げた麺 ／ Hajime NAKANO・CC BY 2.0"
+       "text": "実写：塩ラーメン（味玉・海苔） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       }
      ],
-     "note": "noodlelift"
-    },
-    {
-     "asset": "cm-ramen-kitchen-steam-01",
-     "bg": {
-      "type": "photo",
-      "asset": "cm-ramen-kitchen-steam-01",
-      "scrim": 160
-     },
-     "layers": [
-      {
-       "type": "credit",
-       "text": "実写：湯気の立つラーメン店の厨房 ／ Syced・CC0"
-      }
-     ],
-     "note": "steam"
+     "note": "ramen"
     }
    ]
   },
@@ -659,34 +659,34 @@
      ]
     },
     {
-     "asset": "cm-ramen-shoyu-03",
+     "asset": "cm-sesame-toasted-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-03",
+      "asset": "cm-sesame-toasted-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：醤油ラーメン（メンマ・チャーシュー） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：いりごまの山 ／ dabok2014・CC0"
       }
      ],
-     "note": "ramen"
+     "note": "sesame"
     },
     {
-     "asset": "cm-ramen-boiler-01",
+     "asset": "cm-ramen-spicy-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-boiler-01",
+      "asset": "cm-ramen-spicy-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：ラーメン店の麺釜とてぼ ／ yamakk・CC BY 2.0"
+       "text": "実写：白菜入りの辛いラーメン ／ Ocdp・CC0"
       }
      ],
-     "note": "steam"
+     "note": "chili"
     }
    ]
   },
@@ -695,6 +695,21 @@
     "辛さだけでなく、甘みとうま味まで重ねるためです。"
    ],
    "shots": [
+    {
+     "asset": "cm-chili-dried-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-chili-dried-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：かごに盛った乾燥唐辛子 ／ Erik Charlton・CC BY 2.0"
+      }
+     ],
+     "note": "chili"
+    },
     {
      "asset": "diagram:a3abb920e6",
      "note": "chips",
@@ -717,21 +732,6 @@
        "type": "chips"
       }
      ]
-    },
-    {
-     "asset": "cm-ramen-shoyu-04",
-     "bg": {
-      "type": "photo",
-      "asset": "cm-ramen-shoyu-04",
-      "scrim": 160
-     },
-     "layers": [
-      {
-       "type": "credit",
-       "text": "実写：昔ながらの醤油ラーメン（なると） ／ Ocdp・CC0"
-      }
-     ],
-     "note": "ramen"
     }
    ]
   },
@@ -763,49 +763,49 @@
      ]
     },
     {
-     "asset": "cm-stockpots-01",
+     "asset": "cm-tantanmen-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-stockpots-01",
+      "asset": "cm-tantanmen-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：コンロに並ぶスープ鍋 ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：担々麺（汁なし・暗いトーン） ／ Syced・CC0"
       }
      ],
-     "note": "steam"
+     "note": "tantan"
     },
     {
-     "asset": "cm-ramen-saba-dashi-01",
+     "asset": "cm-tantanmen-04",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-saba-dashi-01",
+      "asset": "cm-tantanmen-04",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：さばだしのラーメン ／ 石巻敎祖・CC BY 4.0"
+       "text": "実写：担々麺（濃いスープ） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
       }
      ],
-     "note": "ramen"
+     "note": "tantan"
     },
     {
-     "asset": "cm-stockpots-steam-01",
+     "asset": "cm-udon-lift-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-stockpots-steam-01",
+      "asset": "cm-udon-lift-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：湯気の立つ寸胴と麺釜（ラーメン店厨房） ／ lazy fri13th from Tokyo, Japan・CC BY 2.0"
+       "text": "実写：釜から持ち上げる手打ちうどん ／ keiichiro shikano from Tokyo, Japan・CC BY 2.0"
       }
      ],
-     "note": "steam"
+     "note": "noodlelift"
     }
    ]
   },
@@ -838,19 +838,19 @@
      ]
     },
     {
-     "asset": "cm-ramen-miso-01",
+     "asset": "cm-stockpots-steam-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-miso-01",
+      "asset": "cm-stockpots-steam-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：札幌の味噌ラーメン ／ ノボホショコロトソ・CC BY 4.0"
+       "text": "実写：湯気の立つ寸胴と麺釜（ラーメン店厨房） ／ lazy fri13th from Tokyo, Japan・CC BY 2.0"
       }
      ],
-     "note": "misoramen"
+     "note": "steam"
     }
    ]
   },
@@ -860,40 +860,34 @@
    ],
    "shots": [
     {
-     "asset": "ramenhero",
+     "asset": "cm-ramen-shio-03",
      "bg": {
       "type": "photo",
-      "asset": "ramenhero",
+      "asset": "cm-ramen-shio-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "料理の再現イメージ"
-      },
-      {
-       "type": "title",
-       "text": "ここまでが、中身。",
-       "y": 760,
-       "n": 100
+       "text": "実写：塩バターラーメン（ねぎ・チャーシュー） ／ ノボホショコロトソ・CC BY 4.0"
       }
      ],
-     "note": "ここまでが、中身。"
+     "note": "ramen"
     },
     {
-     "asset": "cm-ramen-miso-02",
+     "asset": "cm-chili-dried-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-miso-02",
+      "asset": "cm-chili-dried-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：味噌ラーメンの寄り（コーン・にんにく） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：木の上の乾燥唐辛子 ／ qubodup・CC0"
       }
      ],
-     "note": "misoramen"
+     "note": "chili"
     }
    ]
   },
@@ -920,19 +914,19 @@
      ]
     },
     {
-     "asset": "cm-ramen-miso-burnt-01",
+     "asset": "cm-tantanmen-05",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-miso-burnt-01",
+      "asset": "cm-tantanmen-05",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：焦がし味噌ラーメン（暗いトーン） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+       "text": "実写：勝浦タンタンメン（ラー油） ／ くろふね・CC BY 4.0"
       }
      ],
-     "note": "misoramen"
+     "note": "tantan"
     }
    ]
   },
@@ -959,19 +953,19 @@
      ]
     },
     {
-     "asset": "cm-ramen-tonkotsu-01",
+     "asset": "cm-tantanmen-noodles-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-tonkotsu-01",
+      "asset": "cm-tantanmen-noodles-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：豚骨ラーメン（海苔・ねぎ） ／ ノボホショコロトソ・CC BY 4.0"
+       "text": "実写：黒ごま担々麺の太麺の寄り ／ Guilhem Vellut from Paris, France・CC BY 2.0"
       }
      ],
-     "note": "tonkotsu"
+     "note": "noodlelift"
     }
    ]
   }

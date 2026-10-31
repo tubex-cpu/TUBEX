@@ -13,16 +13,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-noodles-fresh-kitchen-01",
+     "asset": "cm-noodles-handmade-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodles-fresh-kitchen-01",
+      "asset": "cm-noodles-handmade-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：厨房の生麺と湯気 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+       "text": "実写：打ちたての麺の束（寄り） ／ Sarah Boyle sboyle・CC0"
       },
       {
        "type": "title",
@@ -35,16 +35,16 @@
      "hit": true
     },
     {
-     "asset": "cm-noodles-handmade-01",
+     "asset": "cm-noodles-packed-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodles-handmade-01",
+      "asset": "cm-noodles-packed-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：打ちたての麺の束（寄り） ／ Sarah Boyle sboyle・CC0"
+       "text": "実写：袋詰めされた生麺の山 ／ François Nguyen・CC BY 2.0"
       }
      ],
      "note": "noodles"
@@ -116,16 +116,16 @@
      ]
     },
     {
-     "asset": "cm-noodle-making-kitchen-01",
+     "asset": "cm-noodle-making-cut-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodle-making-kitchen-01",
+      "asset": "cm-noodle-making-cut-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：麺打ちをする厨房（後ろ姿） ／ Ermell・CC0"
+       "text": "実写：生地を切って作る手打ち麺 ／ Karen and Brad Emerson・CC BY 2.0"
       }
      ],
      "note": "noodlemaking"
@@ -207,16 +207,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-noodle-making-cut-01",
+     "asset": "cm-noodle-machine-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodle-making-cut-01",
+      "asset": "cm-noodle-machine-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：生地を切って作る手打ち麺 ／ Karen and Brad Emerson・CC BY 2.0"
+       "text": "実写：製麺機で麺を作る店内 ／ Syced・CC0"
       }
      ],
      "note": "noodlemaking"
@@ -247,16 +247,16 @@
      ]
     },
     {
-     "asset": "cm-ramen-niboshi-shoyu-01",
+     "asset": "cm-ramen-chashu-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-niboshi-shoyu-01",
+      "asset": "cm-ramen-chashu-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+       "text": "実写：チャーシューともやしの寄り ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       }
      ],
      "note": "ramen"
@@ -284,16 +284,16 @@
      "note": "flour"
     },
     {
-     "asset": "cm-noodles-packed-01",
+     "asset": "cm-noodle-machine-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodles-packed-01",
+      "asset": "cm-noodle-machine-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：袋詰めされた生麺の山 ／ François Nguyen・CC BY 2.0"
+       "text": "実写：製麺機から出てくる麺 ／ Magic Madzik・CC BY 2.0"
       },
       {
        "type": "title",
@@ -345,19 +345,19 @@
      ]
     },
     {
-     "asset": "cm-ramen-tonkotsu-01",
+     "asset": "cm-flour-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-tonkotsu-01",
+      "asset": "cm-flour-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：豚骨ラーメン（海苔・ねぎ） ／ ノボホショコロトソ・CC BY 4.0"
+       "text": "実写：小麦粉をすくうスコップ ／ Margaret Hoogstrate・CC BY 3.0"
       }
      ],
-     "note": "tonkotsu"
+     "note": "flour"
     }
    ]
   },
@@ -395,16 +395,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-noodle-machine-01",
+     "asset": "cm-somen-drying-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodle-machine-01",
+      "asset": "cm-somen-drying-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：製麺機で麺を作る店内 ／ Syced・CC0"
+       "text": "実写：吊るして干す素麺 ／ iku・CC BY 4.0"
       }
      ],
      "note": "noodlemaking"
@@ -438,16 +438,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-noodle-machine-02",
+     "asset": "cm-ramen-noodles-closeup-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodle-machine-02",
+      "asset": "cm-ramen-noodles-closeup-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：製麺機から出てくる麺 ／ Magic Madzik・CC BY 2.0"
+       "text": "実写：スープの中の麺の寄り ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       },
       {
        "type": "title",
@@ -459,19 +459,19 @@
      "note": "コシ、のどごし。"
     },
     {
-     "asset": "cm-broth-kitchen-01",
+     "asset": "cm-ramen-tonkotsu-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-broth-kitchen-01",
+      "asset": "cm-ramen-tonkotsu-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：厨房のスープ作り（白黒） ／ H. Alexander Talbot・CC BY 2.0"
+       "text": "実写：豚骨ラーメン（海苔・ねぎ） ／ ノボホショコロトソ・CC BY 4.0"
       }
      ],
-     "note": "kitchen"
+     "note": "tonkotsu"
     }
    ]
   },
@@ -511,16 +511,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-tantanmen-noodles-01",
+     "asset": "cm-noodle-lift-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-tantanmen-noodles-01",
+      "asset": "cm-noodle-lift-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：黒ごま担々麺の太麺の寄り ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：箸で持ち上げた麺 ／ Hajime NAKANO・CC BY 2.0"
       },
       {
        "type": "title",
@@ -532,19 +532,25 @@
      "note": "すすれば、ツルッ。"
     },
     {
-     "asset": "cm-ramen-kitchen-steam-01",
+     "asset": "cm-noodles-closeup-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-kitchen-steam-01",
+      "asset": "cm-noodles-closeup-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：湯気の立つラーメン店の厨房 ／ Syced・CC0"
+       "text": "実写：スープからすくった縮れ麺 ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "噛めば、もちっ。",
+       "y": 760,
+       "n": 100
       }
      ],
-     "note": "steam"
+     "note": "噛めば、もちっ。"
     }
    ]
   },
@@ -571,19 +577,19 @@
      ]
     },
     {
-     "asset": "cm-noodle-lift-01",
+     "asset": "cm-kitchen-colanders-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodle-lift-01",
+      "asset": "cm-kitchen-colanders-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：箸で持ち上げた麺 ／ Hajime NAKANO・CC BY 2.0"
+       "text": "実写：厨房のざる（奥に調理場） ／ perke・CC BY 2.0"
       }
      ],
-     "note": "noodlelift"
+     "note": "kitchen"
     }
    ]
   },
@@ -781,19 +787,19 @@
      ]
     },
     {
-     "asset": "cm-ramen-shoyu-01",
+     "asset": "cm-ramen-boiler-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-01",
+      "asset": "cm-ramen-boiler-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+       "text": "実写：ラーメン店の麺釜とてぼ ／ yamakk・CC BY 2.0"
       }
      ],
-     "note": "ramen"
+     "note": "steam"
     }
    ]
   },
@@ -821,34 +827,34 @@
      ]
     },
     {
-     "asset": "cm-ramen-boiler-01",
+     "asset": "cm-ramen-noodle-lift-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-boiler-01",
+      "asset": "cm-ramen-noodle-lift-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：ラーメン店の麺釜とてぼ ／ yamakk・CC BY 2.0"
+       "text": "実写：箸で持ち上げる辛いラーメンの麺 ／ insatiablemunch・CC BY 2.0"
       }
      ],
-     "note": "kitchen"
+     "note": "noodlelift"
     },
     {
-     "asset": "cm-stockpots-01",
+     "asset": "cm-noodles-closeup-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-stockpots-01",
+      "asset": "cm-noodles-closeup-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：コンロに並ぶスープ鍋 ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：スープの中の麺の寄り（ストレート麺） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       }
      ],
-     "note": "steam"
+     "note": "noodles"
     }
    ]
   },
@@ -876,19 +882,19 @@
      ]
     },
     {
-     "asset": "cm-ramen-shoyu-02",
+     "asset": "cm-flour-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-02",
+      "asset": "cm-flour-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：チャーシュー麺（醤油・黒い盆） ／ ノボホショコロトソ・CC BY 4.0"
+       "text": "実写：小麦粉と麦の穂 ／ congerdesign・CC0"
       }
      ],
-     "note": "ramen"
+     "note": "noodlemaking"
     }
    ]
   },
@@ -970,19 +976,19 @@
      "note": "売れた味を、自分たちで変えた"
     },
     {
-     "asset": "cm-stockpots-steam-01",
+     "asset": "cm-ramen-dark-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-stockpots-steam-01",
+      "asset": "cm-ramen-dark-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：湯気の立つ寸胴と麺釜（ラーメン店厨房） ／ lazy fri13th from Tokyo, Japan・CC BY 2.0"
+       "text": "実写：黒い器のラーメン（暗いトーン） ／ Tokumeigakarinoaoshima・CC0"
       }
      ],
-     "note": "kitchen"
+     "note": "ramen"
     }
    ]
   },
@@ -1020,19 +1026,19 @@
      ]
     },
     {
-     "asset": "cm-ramen-shoyu-03",
+     "asset": "cm-ramen-spicy-miso-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-03",
+      "asset": "cm-ramen-spicy-miso-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：醤油ラーメン（メンマ・チャーシュー） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：辛味噌ラーメン（赤い一杯） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       }
      ],
-     "note": "ramen"
+     "note": "misoramen"
     }
    ]
   },
@@ -1059,19 +1065,19 @@
      ]
     },
     {
-     "asset": "cm-ramen-shoyu-04",
+     "asset": "cm-flour-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-04",
+      "asset": "cm-flour-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：昔ながらの醤油ラーメン（なると） ／ Ocdp・CC0"
+       "text": "実写：ボウルの小麦粉 ／ Shams948・CC0"
       }
      ],
-     "note": "ramen"
+     "note": "flour"
     }
    ]
   }

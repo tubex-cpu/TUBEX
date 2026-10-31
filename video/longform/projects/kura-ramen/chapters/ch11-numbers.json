@@ -41,16 +41,16 @@
      "hit": true
     },
     {
-     "asset": "cm-nigiri-salmon-plate-01",
+     "asset": "cm-nigiri-ebi-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-nigiri-salmon-plate-01",
+      "asset": "cm-nigiri-ebi-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：皿にのったサーモンの握り ／ RuinDig/Yuki Uchida・CC BY 4.0"
+       "text": "実写：えびの握り（白背景） ／ Tim Reckmann from Hamm, Deutschland・CC BY 2.0"
       }
      ],
      "note": "sushi"
@@ -63,40 +63,34 @@
    ],
    "shots": [
     {
-     "asset": "ramenhero",
+     "asset": "cm-ramen-toppings-01",
      "bg": {
       "type": "photo",
-      "asset": "ramenhero",
+      "asset": "cm-ramen-toppings-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "料理の再現イメージ"
-      },
-      {
-       "type": "title",
-       "text": "寿司の3倍以上の一杯。",
-       "y": 760,
-       "n": 100
-      }
-     ],
-     "note": "寿司の3倍以上の一杯。"
-    },
-    {
-     "asset": "cm-ramen-niboshi-shoyu-01",
-     "bg": {
-      "type": "photo",
-      "asset": "cm-ramen-niboshi-shoyu-01",
-      "scrim": 160
-     },
-     "layers": [
-      {
-       "type": "credit",
-       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+       "text": "実写：味玉・チャーシュー・メンマの小皿 ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       }
      ],
      "note": "ramen"
+    },
+    {
+     "asset": "cm-ramen-miso-03",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-miso-03",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：もやし山盛りの味噌ラーメン ／ Luis Carlos Diaz・CC BY 4.0"
+      }
+     ],
+     "note": "misoramen"
     }
    ]
   },
@@ -130,19 +124,19 @@
      ]
     },
     {
-     "asset": "cm-kaiten-lane-01",
+     "asset": "cm-shop-night-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-kaiten-lane-01",
+      "asset": "cm-shop-night-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：回転寿司のレーンと積まれた皿 ／ Maarten Heerlien from Voorschoten, The Netherlands・CC BY 2.0"
+       "text": "実写：夜の寿司店の外観 ／ Andy Atzert・CC BY 2.0"
       }
      ],
-     "note": "conveyor"
+     "note": "shop"
     }
    ]
   },
@@ -180,19 +174,19 @@
      ]
     },
     {
-     "asset": "cm-ramen-miso-01",
+     "asset": "cm-nigiri-salmon-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-miso-01",
+      "asset": "cm-nigiri-salmon-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：札幌の味噌ラーメン ／ ノボホショコロトソ・CC BY 4.0"
+       "text": "実写：サーモンの握り（暗い背景） ／ Tim Reckmann from Hamm, Deutschland・CC BY 2.0"
       }
      ],
-     "note": "misoramen"
+     "note": "sushi"
     }
    ]
   },
@@ -287,19 +281,19 @@
      ]
     },
     {
-     "asset": "cm-ramen-shop-interior-01",
+     "asset": "cm-ramen-ajitama-04",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shop-interior-01",
+      "asset": "cm-ramen-ajitama-04",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：昔ながらのラーメン店の店内 ／ Mark Mrwizard・CC BY 2.0"
+       "text": "実写：スープに浮かぶ味玉 ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       }
      ],
-     "note": "shop"
+     "note": "ramen"
     }
    ]
   },
@@ -326,19 +320,19 @@
      ]
     },
     {
-     "asset": "cm-nigiri-tuna-plate-01",
+     "asset": "cm-ramen-miso-04",
      "bg": {
       "type": "photo",
-      "asset": "cm-nigiri-tuna-plate-01",
+      "asset": "cm-ramen-miso-04",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：皿にのったまぐろの握り（薬味のせ） ／ RuinDig/Yuki Uchida・CC BY 4.0"
+       "text": "実写：チャーシューと味玉の味噌ラーメン（斜め） ／ Luis Carlos Diaz・CC BY 4.0"
       }
      ],
-     "note": "sushi"
+     "note": "misoramen"
     }
    ]
   },
@@ -386,19 +380,19 @@
      ]
     },
     {
-     "asset": "cm-ramen-shoyu-01",
+     "asset": "cm-ramen-closed-sign-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-01",
+      "asset": "cm-ramen-closed-sign-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+       "text": "実写：「本日はスープのできが悪い為」の貼り紙 ／ Masahiko OHKUBO・CC BY 2.0"
       }
      ],
-     "note": "ramen"
+     "note": "shop"
     }
    ]
   },
@@ -431,19 +425,19 @@
      ]
     },
     {
-     "asset": "cm-kaiten-lane-02",
+     "asset": "cm-nigiri-awabi-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-kaiten-lane-02",
+      "asset": "cm-nigiri-awabi-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：長い回転寿司レーンの俯瞰 ／ bigbirdz・CC BY 2.0"
+       "text": "実写：木の台にのった握り ／ takaokun・CC BY 2.0"
       }
      ],
-     "note": "conveyor"
+     "note": "sushi"
     }
    ]
   },
@@ -480,19 +474,19 @@
      ]
     },
     {
-     "asset": "cm-ramen-miso-02",
+     "asset": "cm-ramen-shoyu-13",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-miso-02",
+      "asset": "cm-ramen-shoyu-13",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：味噌ラーメンの寄り（コーン・にんにく） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：ねぎ山盛りの黒醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       }
      ],
-     "note": "misoramen"
+     "note": "ramen"
     }
    ]
   },
@@ -533,19 +527,19 @@
      ]
     },
     {
-     "asset": "cm-ramen-sample-window-01",
+     "asset": "cm-ramen-miso-05",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-sample-window-01",
+      "asset": "cm-ramen-miso-05",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：ラーメン店のショーウィンドウ（食品サンプル） ／ Marie-Sophie Mejan・CC BY 4.0"
+       "text": "実写：白味噌系ラーメン（チャーシュー・ねぎ） ／ ノボホショコロトソ・CC BY 4.0"
       }
      ],
-     "note": "shop"
+     "note": "misoramen"
     }
    ]
   },
@@ -573,49 +567,49 @@
      ]
     },
     {
-     "asset": "cm-sushi-gari-01",
+     "asset": "cm-ramen-shop-night-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-sushi-gari-01",
+      "asset": "cm-ramen-shop-night-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：カウンターの握りとガリ ／ rabbit_akra from Tokyo, Japan・CC BY 2.0"
+       "text": "実写：夜のラーメン店の外観 ／ 博柳・CC BY 3.0"
+      }
+     ],
+     "note": "shop"
+    },
+    {
+     "asset": "cm-nigiri-assorted-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-nigiri-assorted-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：握りの盛り合わせ（染付の皿） ／ City Foodsters・CC BY 2.0"
       }
      ],
      "note": "sushi"
     },
     {
-     "asset": "cm-ramen-shoyu-02",
+     "asset": "cm-ramen-shoyu-14",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-02",
+      "asset": "cm-ramen-shoyu-14",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：チャーシュー麺（醤油・黒い盆） ／ ノボホショコロトソ・CC BY 4.0"
+       "text": "実写：白髪ねぎと海苔の醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       }
      ],
      "note": "ramen"
-    },
-    {
-     "asset": "cm-kaiten-express-lane-01",
-     "bg": {
-      "type": "photo",
-      "asset": "cm-kaiten-express-lane-01",
-      "scrim": 160
-     },
-     "layers": [
-      {
-       "type": "credit",
-       "text": "実写：新幹線型の特急レーン ／ Karl Baron from Malmö, Sweden・CC BY 2.0"
-      }
-     ],
-     "note": "conveyor"
     }
    ]
   },
@@ -656,61 +650,61 @@
      ]
     },
     {
-     "asset": "cm-ramen-miso-burnt-01",
+     "asset": "cm-ramen-miso-06",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-miso-burnt-01",
+      "asset": "cm-ramen-miso-06",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：焦がし味噌ラーメン（暗いトーン） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+       "text": "実写：札幌の味噌ラーメン（海苔・れんげ） ／ ノボホショコロトソ・CC BY 4.0"
       }
      ],
      "note": "misoramen"
     },
     {
-     "asset": "cm-ramen-shop-exterior-01",
+     "asset": "cm-ramen-shop-night-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shop-exterior-01",
+      "asset": "cm-ramen-shop-night-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：中華料理・ラーメン店の外観 ／ Urawa Zero from Japan・CC BY 2.0"
+       "text": "実写：雪の夜のラーメン店 ／ くろふね・CC BY 3.0"
       }
      ],
      "note": "shop"
     },
     {
-     "asset": "cm-nigiri-closeup-01",
+     "asset": "cm-sushi-soy-gari-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-nigiri-closeup-01",
+      "asset": "cm-sushi-soy-gari-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：握り寿司の寄り（サーモン・まぐろ） ／ Think Draw from Dubai, UAE・CC BY 2.0"
+       "text": "実写：巻き寿司と醤油・ガリ（暗い背景） ／ Tim Reckmann from Hamm, Deutschland・CC BY 2.0"
       }
      ],
      "note": "sushi"
     },
     {
-     "asset": "cm-ramen-shoyu-03",
+     "asset": "cm-ramen-shoyu-15",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-03",
+      "asset": "cm-ramen-shoyu-15",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：醤油ラーメン（メンマ・チャーシュー） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：チャーシューのせ醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       }
      ],
      "note": "ramen"

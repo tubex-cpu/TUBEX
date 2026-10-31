@@ -175,3 +175,262 @@
 - 桜えびの天日干し（富士山背景, CC BY 4.0）：ファイルページに人格権警告（Personality rights）があるため除外。
 - 築地で魚の頭を見る男性の写真、そば打ち職人、湯切りする店員：顔が判別できるため不採用。
 - 他社チェーン（スシロー・トリトン・魚べい・かっぱ寿司・丸亀製麺など）の看板・商品が主題の写真は不採用。
+
+---
+
+# 第2回 追加分（2026-10-31・208枚）
+
+同じ手順・同じ基準（CC0 / CC BY のみ、各ファイルページでライセンス確認、顔・他社ブランド主題を除外、全画像を目視確認）。台帳 `assets_photos_new.json` に追記（第1回の121件は変更なし）。
+
+ライセンス内訳: CC BY 2.0 104 / CC0 45 / CC BY 4.0 44 / CC BY 3.0 8 / CC BY 2.5 7
+
+## 第2回 1. ラーメン（丼・具・スープ・つけ麺）（76枚）
+
+| id | 被写体 | ライセンス | 作者 | サイズ |
+|---|---|---|---|---|
+| cm-ramen-shoyu-05 | 浅い器の醤油ラーメン（暗いトーン） | CC BY 2.0 | Nori Norisa | 2560×1920 |
+| cm-ramen-miso-03 | もやし山盛りの味噌ラーメン | CC BY 4.0 | Luis Carlos Diaz | 2560×1440 |
+| cm-ramen-miso-04 | チャーシューと味玉の味噌ラーメン（斜め） | CC BY 4.0 | Luis Carlos Diaz | 2560×1440 |
+| cm-ramen-shoyu-06 | もやしのせ醤油ラーメン | CC0 | DoctorDoughnut | 2560×1920 |
+| cm-ramen-shoyu-07 | 夜鳴きそば（海苔・ねぎ） | CC0 | Totti | 2560×1920 |
+| cm-ramen-shoyu-08 | ラーメンと餃子の定食 | CC BY 3.0 | RJD | 2560×1920 |
+| cm-ramen-shoyu-09 | 赤い器の醤油ラーメン | CC BY 2.0 | Guilhem Vellut from Paris, France | 2560×1707 |
+| cm-ramen-miso-05 | 白味噌系ラーメン（チャーシュー・ねぎ） | CC BY 4.0 | ノボホショコロトソ | 2560×1920 |
+| cm-ramen-miso-06 | 札幌の味噌ラーメン（海苔・れんげ） | CC BY 4.0 | ノボホショコロトソ | 2560×1920 |
+| cm-ramen-miso-07 | 味噌コーンラーメン（俯瞰） | CC BY 4.0 | ノボホショコロトソ | 2560×1920 |
+| cm-ramen-miso-08 | 黒い器の味噌ラーメン（味玉） | CC BY 2.0 | Guilhem Vellut from Paris, France | 2560×1707 |
+| cm-ramen-miso-09 | 辛味噌ラーメン（糸唐辛子） | CC0 | Douglas Perkins | 2560×1440 |
+| cm-ramen-miso-10 | 黒い器の味噌ラーメン（チャーシュー） | CC BY 2.5 | Eric Hunt | 2560×1709 |
+| cm-ramen-miso-11 | 味噌ラーメン（メンマ・味玉） | CC BY 4.0 | ノボホショコロトソ | 2560×1920 |
+| cm-ramen-chashu-01 | チャーシューともやしの寄り | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1920 |
+| cm-ramen-tonkotsu-03 | 豚骨ラーメン（赤い器・味玉） | CC BY 2.0 | Guilhem Vellut from Paris, France | 2560×1707 |
+| cm-ramen-dark-01 | 黒い器のラーメン（暗いトーン） | CC0 | Tokumeigakarinoaoshima | 1920×1440 |
+| cm-ramen-tonkotsu-04 | 豚骨ラーメン（きくらげ・味玉）の寄り | CC BY 4.0 | Shisma | 2560×1920 |
+| cm-ramen-shoyu-10 | メンマ・チャーシューの醤油ラーメン | CC0 | Ocdp | 2560×1920 |
+| cm-ramen-tonkotsu-05 | 徳島ラーメン（甘辛の豚骨醤油） | CC BY 2.0 | Kzaral | 1920×1440 |
+| cm-tantanmen-03 | 担々麺（汁なし・暗いトーン） | CC0 | Syced | 2560×1920 |
+| cm-tantanmen-04 | 担々麺（濃いスープ） | CC BY 2.0 | Guilhem Vellut from Paris, France | 2560×1707 |
+| cm-tantanmen-05 | 勝浦タンタンメン（ラー油） | CC BY 4.0 | くろふね | 1599×1199 |
+| cm-tantanmen-06 | 担々麺と箸 | CC0 | Fumikas Sagisavas | 1920×864 |
+| cm-ramen-shio-01 | 塩ラーメンのチャーシュー寄り | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1920 |
+| cm-ramen-shio-02 | 塩ラーメン（味玉・海苔） | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1920 |
+| cm-ramen-shio-03 | 塩バターラーメン（ねぎ・チャーシュー） | CC BY 4.0 | ノボホショコロトソ | 2560×1920 |
+| cm-ramen-shio-04 | 黒い器の塩ラーメン（暗いトーン） | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1920 |
+| cm-ramen-ajitama-01 | 味玉の断面（とろとろの黄身） | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1920 |
+| cm-ramen-shio-05 | 澄んだ塩ラーメン（白髪ねぎ） | CC BY 2.0 | Ryosuke Hosoi | 1920×1440 |
+| cm-ramen-shio-06 | 黒い器の塩ラーメン（角煮・味玉） | CC BY 4.0 | ノボホショコロトソ | 2560×1920 |
+| cm-ramen-shio-07 | 塩バターラーメン（わかめ） | CC BY 4.0 | ノボホショコロトソ | 2560×1920 |
+| cm-tsukemen-01 | つけ麺（太麺と海苔） | CC0 | Douglas Perkins | 2560×1440 |
+| cm-tsukemen-02 | つけ麺（濃厚つけ汁・味玉） | CC BY 2.0 | Alper Çuğun from Berlin, Germany | 2560×1920 |
+| cm-tsukemen-03 | つけ麺（太麺とつけ汁） | CC0 | Ocdp | 2560×1700 |
+| cm-ramen-noodle-lift-02 | 箸で持ち上げる辛いラーメンの麺 | CC BY 2.0 | insatiablemunch | 1499×999 |
+| cm-tsukemen-04 | つけ汁から持ち上げる麺 | CC BY 2.0 | City Foodsters | 2560×1707 |
+| cm-tsukemen-05 | 麺を持ち上げる（つけ麺） | CC BY 2.0 | City Foodsters | 2560×1707 |
+| cm-tsukemen-06 | チャーシューをのせたつけ麺 | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1920 |
+| cm-tsukemen-07 | 煮干しつけ麺（暗いトーン） | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1920 |
+| cm-ramen-chashu-02 | チャーシューとスープの寄り（赤い器） | CC BY 2.0 | Guilhem Vellut from Paris, France | 2560×1707 |
+| cm-ramen-chashu-03 | チャーシュー・メンマ・味玉の寄り | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1707 |
+| cm-ramen-tonkotsu-06 | 澄んだ白湯スープのラーメン | CC0 | Syced | 2560×1928 |
+| cm-ramen-chashu-04 | チャーシュー麺（青磁風の器） | CC BY 4.0 | Nesnad | 2560×1920 |
+| cm-ajitama-01 | 味付け玉子 | CC BY 2.0 | Guilhem Vellut | 2560×1920 |
+| cm-ramen-ajitama-02 | 味玉とコーンのラーメン | CC0 | Douglas Paul Perkins | 2560×1920 |
+| cm-ramen-ajitama-03 | 味玉・なるとの寄り | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1707 |
+| cm-ramen-tonkotsu-07 | 豚骨ラーメン（海苔・赤い器） | CC0 | aco pbc | 2560×1704 |
+| cm-ramen-shoyu-11 | 昔ながらの醤油ラーメン（なると・海苔） | CC0 | Ocdp | 2560×1700 |
+| cm-ramen-shoyu-12 | 澄んだ醤油ラーメン（なると） | CC0 | Ocdp | 2560×1700 |
+| cm-ramen-menma-01 | メンマたっぷりのラーメン | CC BY 2.0 | mappi1322 from Shopping centre Hasshoku Sentaa in Hachinohe, Aomori | 2560×1920 |
+| cm-ramen-gyokai-01 | 魚介豚骨ラーメンの味玉寄り | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1920 |
+| cm-ramen-gyokai-02 | 魚介豚骨ラーメン（暗いトーン） | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1920 |
+| cm-ramen-toppings-01 | 味玉・チャーシュー・メンマの小皿 | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1920 |
+| cm-ramen-noodles-closeup-01 | スープの中の麺の寄り | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1707 |
+| cm-ramen-ajitama-04 | スープに浮かぶ味玉 | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1707 |
+| cm-ramen-shoyu-13 | ねぎ山盛りの黒醤油ラーメン | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1920 |
+| cm-ramen-shoyu-14 | 白髪ねぎと海苔の醤油ラーメン | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1920 |
+| cm-ramen-shoyu-15 | チャーシューのせ醤油ラーメン | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1920 |
+| cm-ramen-tonkotsu-08 | 豚骨醤油ラーメン | CC BY 4.0 | ノボホショコロトソ | 2560×1920 |
+| cm-ramen-ajitama-05 | 黒ごまをかけた味玉の寄り | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1707 |
+| cm-ramen-chashu-05 | ねぎとチャーシューのラーメン | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1920 |
+| cm-ramen-chashu-06 | 喜多方系チャーシュー麺 | CC BY 4.0 | くろふね | 1920×1442 |
+| cm-ramen-shoyu-16 | 竹岡式の黒い醤油ラーメン | CC BY 4.0 | くろふね | 1599×1199 |
+| cm-ramen-shoyu-17 | 醤油ラーメンの定食 | CC0 | Syced | 2560×1928 |
+| cm-ramen-spicy-01 | 白菜入りの辛いラーメン | CC0 | Ocdp | 2560×1932 |
+| cm-ramen-shoyu-18 | 高山ラーメン | CC0 | Ocdp | 2560×1905 |
+| cm-ramen-shoyu-19 | 中華そば（俯瞰・カウンター） | CC0 | 経済特区 | 1919×1079 |
+| cm-ramen-seabura-01 | 背脂中華そば | CC BY 4.0 | くろふね | 1599×1199 |
+| cm-ramen-shoyu-20 | 縮れ麺の中華そば | CC BY 4.0 | くろふね | 1599×1200 |
+| cm-ramen-crab-01 | かにだしの味噌ラーメン | CC BY 2.0 | T.Tseng | 2560×1919 |
+| cm-ramen-paitan-01 | 鶏白湯ラーメン | CC BY 4.0 | くろふね | 1599×1199 |
+| cm-ramen-tonkotsu-09 | ねぎたっぷりの豚骨ラーメン | CC BY 2.0 | David Pursehouse from Kawasaki, Japan | 1599×1199 |
+| cm-ramen-chashu-07 | 塩チャーシュー麺 | CC BY 4.0 | くろふね | 1599×1200 |
+| cm-zaru-ramen-01 | ざるラーメン（冷たい麺） | CC BY 4.0 | Oq10pass | 2560×1440 |
+| cm-ramen-miso-12 | コーンのせ味噌ラーメン | CC0 | Syced | 2560×1920 |
+
+## 第2回 2. 麺（生麺・乾麺・製麺・小麦粉・うどん/そば/素麺/きしめん）（30枚）
+
+| id | 被写体 | ライセンス | 作者 | サイズ |
+|---|---|---|---|---|
+| cm-udon-01 | 讃岐うどん（ざる） | CC BY 4.0 | Kanesue | 2560×1920 |
+| cm-udon-02 | 赤い器のうどん | CC BY 3.0 | Shene81 | 2560×1920 |
+| cm-udon-03 | ぶっかけうどん（かつお節） | CC BY 2.0 | yoppy | 2560×1707 |
+| cm-udon-04 | かけうどん（暗いトーン） | CC BY 2.0 | Joe Jones from Tokyo | 1920×1440 |
+| cm-udon-05 | つけ汁とうどん | CC0 | Ocdp | 2560×1700 |
+| cm-soba-02 | ざるそば（容器） | CC BY 4.0 | RuinDig/Yuki Uchida | 2560×1920 |
+| cm-soba-03 | 野菜のせそば | CC BY 2.0 | HarshLight | 2560×1707 |
+| cm-udon-06 | 月見うどん（黒い器） | CC BY 4.0 | Alexander Klink | 2560×1711 |
+| cm-udon-07 | 水沢うどん（ざる） | CC BY 2.0 | Dirty | 1920×1440 |
+| cm-udon-08 | 幅広のひもかわうどん | CC0 | Ocdp | 2560×1700 |
+| cm-udon-09 | 肉とキャベツのうどん | CC0 | Ocdp | 2560×1920 |
+| cm-noodle-boiling-01 | 麺をゆでる厨房（白黒・手元） | CC BY 2.0 | H. Alexander Talbot | 2560×1920 |
+| cm-noodles-closeup-02 | スープからすくった縮れ麺 | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1707 |
+| cm-noodles-closeup-03 | スープの中の麺の寄り（ストレート麺） | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1707 |
+| cm-noodle-lift-03 | 箸で持ち上げる麺（寄り） | CC BY 2.0 | Guilhem Vellut from Annecy, France | 2560×1707 |
+| cm-udon-inaniwa-01 | 稲庭うどんのつけ麺 | CC BY 2.0 | yoppy | 2560×1707 |
+| cm-noodles-dried-bundles-01 | 束ねた乾麺の山 | CC BY 2.0 | François Nguyen | 2560×1920 |
+| cm-udon-lift-01 | 釜から持ち上げる手打ちうどん | CC BY 2.0 | keiichiro shikano from Tokyo, Japan | 2560×1707 |
+| cm-soba-raw-01 | バットに並べた打ちたての生そば | CC BY 4.0 | Nori Norisa from 熊谷市, Japan | 2560×1920 |
+| cm-soba-04 | せいろのもりそば | CC0 | Ocdp | 2560×1700 |
+| cm-soba-05 | 竹ざるのそば（暗いトーン） | CC BY 2.5 | 663highland | 2560×1704 |
+| cm-udon-10 | 肉汁うどん（つけ汁） | CC0 | Ocdp | 2560×1700 |
+| cm-somen-01 | にゅうめん | CC BY 4.0 | くろふね | 1599×1199 |
+| cm-somen-drying-01 | 吊るして干す素麺 | CC BY 4.0 | iku | 1919×1274 |
+| cm-udon-inaniwa-02 | ざるにのせた稲庭うどん | CC BY 2.0 | [2] from Yakitori Restaurant Sumika in Los Altos, California | 1920×1440 |
+| cm-flour-01 | 小麦粉をすくうスコップ | CC BY 3.0 | Margaret Hoogstrate | 2560×1707 |
+| cm-flour-02 | 小麦粉と麦の穂 | CC0 | congerdesign | 2560×1228 |
+| cm-flour-03 | ボウルの小麦粉 | CC0 | Shams948 | 2560×1965 |
+| cm-kishimen-01 | きしめん（油揚げ・卵） | CC BY 2.0 | Yuya Tamai | 2560×1920 |
+| cm-kishimen-02 | きしめん（木の器・卓上） | CC BY 4.0 | ノボホショコロトソ | 2560×1920 |
+
+## 第2回 3. 厨房・湯気・スープ作り（寸胴・ガラ・こし・コンロ）（11枚）
+
+| id | 被写体 | ライセンス | 作者 | サイズ |
+|---|---|---|---|---|
+| cm-stockpots-02 | ラーメン店のスープ鍋（コンロ） | CC BY 2.0 | Guilhem Vellut from Paris, France | 2560×1707 |
+| cm-soup-pot-ladle-01 | 土鍋のスープとお玉 | CC BY 2.0 | Guilhem Vellut from Paris, France | 2560×1707 |
+| cm-kitchen-colanders-01 | 厨房のざる（奥に調理場） | CC BY 2.0 | perke | 1631×1223 |
+| cm-kitchen-counter-01 | 営業前の厨房カウンター | CC BY 2.0 | whity | 2560×1696 |
+| cm-kitchen-open-01 | 照明の当たるオープンキッチン | CC BY 2.0 | chia ying Yang from Taichung,Taiwan 台灣 台中, Taiwan | 2560×1442 |
+| cm-gas-flame-01 | コンロの青い炎 | CC BY 2.0 | Tamaki Sono from Shiga, Japan | 2560×1920 |
+| cm-broth-simmer-02 | 鍋で煮立つスープ | CC BY 2.0 | Karen | 1920×1367 |
+| cm-stockpot-bones-01 | 鶏ガラを煮出す寸胴鍋 | CC BY 2.0 | Ryan Snyder | 1920×1437 |
+| cm-broth-strained-01 | こしたスープ（ボウル） | CC BY 2.0 | Ryan Snyder | 1920×1437 |
+| cm-stockpot-bones-02 | 鍋の中の焼いた鶏ガラと香味野菜 | CC BY 2.0 | Ryan Snyder | 1920×1437 |
+| cm-stock-vegetables-01 | スープ用の香味野菜 | CC BY 2.0 | Ryan Snyder | 1920×1437 |
+
+## 第2回 4. 寿司・回転レーン・寿司と味噌汁（24枚）
+
+| id | 被写体 | ライセンス | 作者 | サイズ |
+|---|---|---|---|---|
+| cm-miso-soup-04 | 魚のあら汁（味噌） | CC BY 2.0 | City Foodsters | 2560×1707 |
+| cm-miso-soup-05 | あさりの味噌汁 | CC0 | Ocdp | 2560×1920 |
+| cm-miso-soup-06 | ねぎの味噌汁（寄り） | CC BY 2.0 | Kari Sullivan from Austin, TX | 2560×1920 |
+| cm-miso-soup-07 | 小さな椀の味噌汁（暗いトーン） | CC BY 2.0 | T.Tseng | 2560×1920 |
+| cm-nigiri-tamago-01 | 玉子の握り | CC BY 2.0 | Tim Reckmann from Hamm, Deutschland | 2560×1707 |
+| cm-nigiri-ika-01 | いかの握り | CC BY 2.0 | Tim Reckmann from Hamm, Deutschland | 2560×1707 |
+| cm-oshizushi-04 | さんまの押し寿司（箱） | CC BY 2.0 | Naotake Murayama from San Francisco, CA, USA | 2560×1707 |
+| cm-oshizushi-05 | 押し寿司（白飯・海苔） | CC BY 4.0 | くろふね | 1599×1199 |
+| cm-sushi-box-01 | パック寿司の盛り合わせ | CC0 | Ocdp | 2560×1700 |
+| cm-kobujime-01 | 昆布締めの刺身 | CC BY 2.0 | Naotake Murayama from San Francisco, CA, USA | 2560×1707 |
+| cm-nigiri-salmon-02 | サーモンの握り（白背景） | CC BY 2.0 | Tim Reckmann from Hamm, Deutschland | 2560×1707 |
+| cm-nigiri-ebi-01 | えびの握り（白背景） | CC BY 2.0 | Tim Reckmann from Hamm, Deutschland | 2560×1707 |
+| cm-nigiri-salmon-03 | サーモンの握り（暗い背景） | CC BY 2.0 | Tim Reckmann from Hamm, Deutschland | 2560×1706 |
+| cm-nigiri-awabi-01 | 木の台にのった握り | CC BY 2.0 | takaokun | 2560×1920 |
+| cm-nigiri-assorted-01 | 握りの盛り合わせ（染付の皿） | CC BY 2.0 | City Foodsters | 2560×1707 |
+| cm-sushi-soy-gari-01 | 巻き寿司と醤油・ガリ（暗い背景） | CC BY 2.0 | Tim Reckmann from Hamm, Deutschland | 2560×1707 |
+| cm-nigiri-platter-01 | 握りの盛り合わせ（白い角皿） | CC BY 2.0 | t-mizo | 2560×1707 |
+| cm-sashimi-soy-01 | 刺身と醤油の小皿 | CC BY 4.0 | Douglas Perkins | 2560×1546 |
+| cm-nigiri-unagi-01 | うなぎの握り（寄り） | CC BY 2.0 | Gregg Tavares from Tokyo, Japan | 2560×2030 |
+| cm-kaiten-express-lane-02 | 新幹線型の特急レーンと皿 | CC BY 2.0 | Karl Baron | 1920×1440 |
+| cm-kaiten-express-lane-03 | 新幹線型の配膳レーン | CC0 | Syced | 2560×1920 |
+| cm-miso-soup-sushi-01 | 寿司店の味噌汁 | CC BY 2.0 | Guilhem Vellut from Paris, France | 2560×1707 |
+| cm-miso-soup-sushi-02 | 寿司店のカウンターの味噌汁（暗いトーン） | CC BY 2.0 | City Foodsters | 2560×1707 |
+| cm-sushi-set-01 | 寿司と味噌汁のセット | CC BY 2.0 | elmimmo | 1920×1440 |
+
+## 第2回 5. 食材（昆布・干物・味噌・唐辛子・ねぎ・キャベツ・えび・ほたて・かに）（43枚）
+
+| id | 被写体 | ライセンス | 作者 | サイズ |
+|---|---|---|---|---|
+| cm-shrimp-heads-02 | 容器に入ったえびの頭 | CC BY 2.0 | Mike Steinhoff | 2560×1701 |
+| cm-sakuraebi-02 | トレーに盛った桜えび | CC BY 4.0 | 広報課 | 2560×1707 |
+| cm-sesame-toasted-02 | いりごまの山 | CC0 | dabok2014 | 2560×1707 |
+| cm-negi-02 | ねぎの束（市場） | CC BY 2.0 | Rhett Maxwell | 1663×935 |
+| cm-garlic-03 | 割ったにんにく（暗い背景） | CC BY 2.0 | Felipe Gabaldón | 2560×1706 |
+| cm-garlic-04 | にんにくの寄り | CC BY 2.0 | INRA DIST from France | 1920×1277 |
+| cm-chingensai-02 | 青菜の束 | CC BY 2.0 | claralieu | 2560×2027 |
+| cm-oden-01 | おでん（こんにゃく・大根） | CC0 | Ocdp | 2560×1700 |
+| cm-crab-02 | 店頭のずわいがに | CC BY 4.0 | Nesnad | 1920×1420 |
+| cm-shoyu-town-yuasa-03 | 湯浅の醤油蔵の通り | CC BY 2.5 | 663highland | 2560×1714 |
+| cm-kombu-fresh-01 | 海の昆布（生） | CC0 | Omelele Ngxameleni | 2560×1908 |
+| cm-katsuobushi-blocks-04 | 鰹節の量り売り（木箱） | CC BY 2.0 | Naotake Murayama from San Francisco, CA, USA | 2560×1707 |
+| cm-saba-dish-01 | さばの一皿（暗いトーン） | CC BY 2.0 | Jaume Escofet from London, UK | 2560×1707 |
+| cm-fish-market-06 | 鮮魚店の店頭 | CC BY 4.0 | Nesnad | 2560×1920 |
+| cm-saba-grilled-04 | 焼きさば（ねぎのせ） | CC0 | Daderot | 2560×1678 |
+| cm-saba-grilled-05 | 焼きさば一尾 | CC BY 3.0 | Benreis | 2560×1664 |
+| cm-hotate-dried-02 | 干し貝柱の一皿 | CC BY 2.0 | City Foodsters | 2560×1707 |
+| cm-hotate-dried-03 | 干し貝柱の料理（暗いトーン） | CC BY 2.0 | Studio Sarah Lou | 2560×1700 |
+| cm-crab-live-01 | 生簀の活がに | CC BY 2.0 | mrpbps | 2560×1607 |
+| cm-menma-01 | 穂先メンマ | CC BY 2.5 | DryPot | 1920×1445 |
+| cm-kombu-kamaboko-01 | 昆布巻きかまぼこ | CC0 | 漱石の猫 | 2560×1920 |
+| cm-kombu-tsukudani-01 | 昆布の佃煮 | CC BY 2.0 | Jun OHWADA | 2560×1707 |
+| cm-fish-drying-racks-01 | 九十九里の干物干し場 | CC0 | Syced | 2560×1920 |
+| cm-fish-drying-01 | 網の上の干し魚（小魚） | CC BY 4.0 | Marie-Sophie Mejan | 2560×1738 |
+| cm-fish-drying-02 | 干し網に吊るした魚 | CC BY 2.0 | George Alexander Ishida Newman | 2560×1707 |
+| cm-saketoba-01 | 鮭とば | CC BY 2.5 | Dddeco | 2560×1920 |
+| cm-sakuraebi-03 | 桜えびの寄り | CC BY 4.0 | 広報課 | 2560×1707 |
+| cm-miso-01 | 器に盛った味噌 | CC0 | https://publicdomainq.net/miso-0018849/ | 2560×1707 |
+| cm-miso-shop-02 | 量り売りの味噌の袋 | CC BY 4.0 | Nesnad | 2560×1920 |
+| cm-chili-dried-01 | かごに盛った乾燥唐辛子 | CC BY 2.0 | Erik Charlton | 2560×1994 |
+| cm-chili-dried-02 | 木の上の乾燥唐辛子 | CC0 | qubodup | 2560×1920 |
+| cm-chili-dried-03 | 吊るした唐辛子（暗い背景） | CC0 | Priscilla Du Preez artographybyp | 2560×1700 |
+| cm-leek-01 | まな板の長ねぎ | CC BY 2.0 | Karen and Brad Emerson | 1920×1440 |
+| cm-hakusai-01 | 白菜と青唐辛子 | CC0 | 이동원 | 2560×1244 |
+| cm-cabbage-01 | キャベツ | CC BY 4.0 | Iwai-Dialax | 2560×1920 |
+| cm-shrimp-02 | ボウルに盛ったえび（暗いトーン） | CC BY 4.0 | TamunoIyowunaA | 2560×1707 |
+| cm-shrimp-dried-01 | 干しえび | CC0 | AUSH baowHAO 260088 | 2560×1920 |
+| cm-hotate-01 | ほたて貝柱の寄り | CC BY 2.0 | H. Alexander Talbot | 2560×1707 |
+| cm-hotate-02 | 殻つきのほたて | CC BY 2.0 | Cristina Bejarano | 1823×1367 |
+| cm-crab-03 | かに一杯 | CC BY 2.0 | THOR | 2560×1732 |
+| cm-crab-legs-01 | ゆでたかにの脚 | CC BY 2.0 | missbossy from Singapore, Singapore | 2560×1714 |
+| cm-fish-drying-03 | 港で干される開き魚 | CC0 | Bernard Gagnon | 2560×1634 |
+| cm-katsuo-01 | かつおの刺身（海鮮丼） | CC BY 4.0 | ノボホショコロトソ | 2560×1920 |
+
+## 第2回 6. 雰囲気（夜の店・屋台・のれん・通り・漁港・市場）（24枚）
+
+| id | 被写体 | ライセンス | 作者 | サイズ |
+|---|---|---|---|---|
+| cm-fish-market-07 | 函館朝市の通り | CC BY 2.5 | 663highland | 2560×1701 |
+| cm-fish-market-08 | 函館朝市の店舗外観 | CC BY 2.5 | 663highland | 2560×1701 |
+| cm-ramen-shop-interior-02 | ラーメン店の店内（カウンター） | CC0 | Daderot | 2560×1707 |
+| cm-ramen-street-01 | ラーメン店の並ぶ通り | CC BY 2.0 | Jason Riedy | 2560×1920 |
+| cm-fishing-port-02 | 北海道の漁港 | CC BY 4.0 | 禁樹なずな | 2560×1696 |
+| cm-fishing-port-03 | 白糠漁港 | CC BY 3.0 | pakku | 1920×1440 |
+| cm-fishing-port-04 | サロマの漁港 | CC BY 3.0 | RJD | 2560×1920 |
+| cm-fishing-port-05 | 漁港と崖 | CC BY 2.0 | inunami | 2560×1920 |
+| cm-noren-night-02 | 夜ののれんの路地 | CC BY 2.0 | tommy chheng | 2560×1707 |
+| cm-shop-night-03 | 夜の寿司店の外観 | CC BY 2.0 | Andy Atzert | 2560×1920 |
+| cm-ramen-shop-night-04 | 夜道に灯るラーメン店 | CC BY 3.0 | 運転太郎 | 2560×1922 |
+| cm-street-night-01 | 温泉街の夜道（白黒） | CC0 | Yiannis Theologos Michellis | 2560×1707 |
+| cm-street-night-02 | 雨の夜の温泉街 | CC BY 4.0 | Alexkom000 | 2560×1707 |
+| cm-street-night-03 | 夜の商店街 | CC BY 2.0 | Maarten Heerlien from Voorschoten, The Netherlands | 2560×1709 |
+| cm-street-night-04 | 提灯の灯る飲み屋街 | CC BY 3.0 | Andrew Braun | 1920×1281 |
+| cm-fishing-port-06 | 銚子漁港 | CC0 | Higa4 | 2560×1920 |
+| cm-fishing-port-07 | 漁港に並ぶ漁船 | CC BY 2.0 | 2.5JIGEN.com | 2560×1707 |
+| cm-fishing-port-08 | 氷見漁港 | CC BY 2.0 | squeuei | 2560×1702 |
+| cm-fishing-port-09 | 波崎漁港 | CC BY 4.0 | Σ64 | 2560×1707 |
+| cm-fishing-port-10 | 稲取漁港 | CC0 | Drivephotographer | 2560×1440 |
+| cm-yatai-night-01 | 夜の屋台ラーメン | CC BY 4.0 | くろふね | 1599×1066 |
+| cm-yatai-rain-01 | 雨の日の屋台 | CC BY 4.0 | Hirho | 2560×1920 |
+| cm-yatai-parked-01 | 並んで置かれた屋台 | CC BY 2.0 | Jun Seita | 2560×1707 |
+| cm-yatai-counter-01 | 屋台のカウンターと品書き | CC BY 4.0 | Nesnad | 2560×1920 |
+
+## 第2回 薄い／埋められなかったもの
+
+- **てぼでの湯切り・麺をゆでる釜**：自由ライセンスで顔の写らないものが少なく、白黒の手元1枚（noodle-boiling-01）と第1回の麺釜のみ。
+- **昆布・かつお節を鍋に入れる場面、鍋の中のだし**：該当写真が見つからず。洋風のスープ作り（鶏ガラ・香味野菜・こしたスープ）で代替。
+- **醤油を注ぐ場面**：展示作品のみで不採用。
+- **製麺工場**：外観・人物写真のみで不採用。乾麺の束・素麺の天日干し・生そば・小麦粉で代替。
+- **回転レーン（顔なし・他社ブランドが主題でないもの）**：新幹線型レーン2枚のみ追加。くら寿司の皿の写真（沖縄・CC BY）は「追加不要」の指示に従い見送り。
+
+## 第2回 注意点
+
+- 他社店舗・他社商品が写るもの（kaiten-express-lane-02/03、sushi-set-01、zaru-ramen-01、器に店名入りのラーメン数点）は `notes` に記載。くら寿司の商品・設備と誤認させる使い方をしない。
+- 人物が小さく写るもの（fish-market-07/08、ramen-street-01、kitchen-colanders-01、yatai-night-01）は `notes` に記載。必要ならトリミング。

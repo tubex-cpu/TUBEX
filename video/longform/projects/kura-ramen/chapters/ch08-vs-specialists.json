@@ -13,16 +13,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-ramen-counter-01",
+     "asset": "cm-ramen-street-retro-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-counter-01",
+      "asset": "cm-ramen-street-retro-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：ラーメン店のカウンターと調味料 ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+       "text": "実写：昭和の街並みを再現したラーメン横丁 ／ Brakeet・CC0"
       },
       {
        "type": "title",
@@ -35,16 +35,16 @@
      "hit": true
     },
     {
-     "asset": "cm-ramen-shop-interior-01",
+     "asset": "cm-ramen-shop-night-interior-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shop-interior-01",
+      "asset": "cm-ramen-shop-night-interior-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：昔ながらのラーメン店の店内 ／ Mark Mrwizard・CC BY 2.0"
+       "text": "実写：深夜のラーメン店の店内 ／ Ryo FUKAsawa from Tokyo, Japan・CC BY 2.0"
       }
      ],
      "note": "ramenshop"
@@ -74,16 +74,16 @@
      ]
     },
     {
-     "asset": "cm-ramen-niboshi-shoyu-01",
+     "asset": "cm-ramen-chashu-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-niboshi-shoyu-01",
+      "asset": "cm-ramen-chashu-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+       "text": "実写：チャーシューとスープの寄り（赤い器） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
       }
      ],
      "note": "ramen"
@@ -96,31 +96,31 @@
    ],
    "shots": [
     {
-     "asset": "cm-udon-sanuki-01",
+     "asset": "cm-udon-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-udon-sanuki-01",
+      "asset": "cm-udon-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：釜揚げ讃岐うどん ／ sekido・CC BY 2.0"
+       "text": "実写：ぶっかけうどん（かつお節） ／ yoppy・CC BY 2.0"
       }
      ],
      "note": "udon"
     },
     {
-     "asset": "cm-ramen-sample-window-01",
+     "asset": "cm-ramen-shop-night-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-sample-window-01",
+      "asset": "cm-ramen-shop-night-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：ラーメン店のショーウィンドウ（食品サンプル） ／ Marie-Sophie Mejan・CC BY 4.0"
+       "text": "実写：夜のラーメン店の外観 ／ 博柳・CC BY 3.0"
       }
      ],
      "note": "ramenshop"
@@ -218,16 +218,16 @@
      ]
     },
     {
-     "asset": "cm-udon-sanuki-02",
+     "asset": "cm-udon-04",
      "bg": {
       "type": "photo",
-      "asset": "cm-udon-sanuki-02",
+      "asset": "cm-udon-04",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：讃岐うどん（黒い器・暗めのトーン） ／ open-arms・CC BY 2.0"
+       "text": "実写：かけうどん（暗いトーン） ／ Joe Jones from Tokyo・CC BY 2.0"
       }
      ],
      "note": "udon"
@@ -262,31 +262,31 @@
      ]
     },
     {
-     "asset": "cm-ramen-shop-exterior-01",
+     "asset": "cm-ramen-shop-night-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shop-exterior-01",
+      "asset": "cm-ramen-shop-night-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：中華料理・ラーメン店の外観 ／ Urawa Zero from Japan・CC BY 2.0"
+       "text": "実写：雪の夜のラーメン店 ／ くろふね・CC BY 3.0"
       }
      ],
      "note": "ramenshop"
     },
     {
-     "asset": "cm-noren-night-01",
+     "asset": "cm-noren-night-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-noren-night-01",
+      "asset": "cm-noren-night-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：夜ののれんと格子戸 ／ watashiwani・CC BY 2.0"
+       "text": "実写：夜ののれんの路地 ／ tommy chheng・CC BY 2.0"
       }
      ],
      "note": "noren"
@@ -299,16 +299,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-iwashi-dried-01",
+     "asset": "cm-fish-market-05",
      "bg": {
       "type": "photo",
-      "asset": "cm-iwashi-dried-01",
+      "asset": "cm-fish-market-05",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：焼いた目刺し（干しいわし） ／ Kossy@FINEDAYS from Tokyo・CC BY 2.0"
+       "text": "実写：函館朝市の通り ／ 663highland・CC BY 2.5"
       }
      ],
      "note": "fish"
@@ -360,31 +360,31 @@
      ]
     },
     {
-     "asset": "cm-noren-ramen-01",
+     "asset": "cm-noren-night-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noren-ramen-01",
+      "asset": "cm-noren-night-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：ラーメン店ののれんと自転車 ／ yortlabs・CC BY 2.0"
+       "text": "実写：夜ののれんと格子戸 ／ watashiwani・CC BY 2.0"
       }
      ],
      "note": "noren"
     },
     {
-     "asset": "cm-ramen-street-retro-01",
+     "asset": "cm-ramen-queue-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-street-retro-01",
+      "asset": "cm-ramen-queue-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：昭和の街並みを再現したラーメン横丁 ／ Brakeet・CC0"
+       "text": "実写：ラーメン店に並ぶ行列（遠景） ／ くろふね・CC BY 3.0"
       }
      ],
      "note": "queue"
@@ -439,16 +439,16 @@
      ]
     },
     {
-     "asset": "cm-noodles-fresh-kitchen-01",
+     "asset": "cm-udon-inaniwa-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodles-fresh-kitchen-01",
+      "asset": "cm-udon-inaniwa-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：厨房の生麺と湯気 ／ Jeremy Keith from Brighton & Hove, United Kingdom・CC BY 2.0"
+       "text": "実写：稲庭うどんのつけ麺 ／ yoppy・CC BY 2.0"
       }
      ],
      "note": "noodles"
@@ -478,16 +478,16 @@
      ]
     },
     {
-     "asset": "cm-hotate-dried-01",
+     "asset": "cm-tuna-market-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-hotate-dried-01",
+      "asset": "cm-tuna-market-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：干し貝柱（ほたて） ／ Fumikas Sagisavas・CC0"
+       "text": "実写：市場に並ぶまぐろ（荷札付き） ／ Marie-Sophie Mejan・CC BY 4.0"
       }
      ],
      "note": "fish"
@@ -500,31 +500,31 @@
    ],
    "shots": [
     {
-     "asset": "cm-saba-fresh-01",
+     "asset": "cm-saba-grilled-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-saba-fresh-01",
+      "asset": "cm-saba-grilled-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：店頭に並ぶ鮮魚のさば ／ Nesnad・CC BY 4.0"
+       "text": "実写：炭火焼きさばの定食 ／ Raita Futo from Tokyo, Japan・CC BY 2.0"
       }
      ],
      "note": "saba"
     },
     {
-     "asset": "cm-ramen-tonkotsu-01",
+     "asset": "cm-ramen-tonkotsu-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-tonkotsu-01",
+      "asset": "cm-ramen-tonkotsu-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：豚骨ラーメン（海苔・ねぎ） ／ ノボホショコロトソ・CC BY 4.0"
+       "text": "実写：豚骨ラーメン（赤い器・味玉） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
       }
      ],
      "note": "tonkotsu"
@@ -552,16 +552,16 @@
      "note": "lotus"
     },
     {
-     "asset": "cm-tantanmen-noodles-01",
+     "asset": "cm-noodle-lift-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-tantanmen-noodles-01",
+      "asset": "cm-noodle-lift-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：黒ごま担々麺の太麺の寄り ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：箸で持ち上げた麺 ／ Hajime NAKANO・CC BY 2.0"
       },
       {
        "type": "title",
@@ -597,16 +597,16 @@
      ]
     },
     {
-     "asset": "cm-ramen-shop-night-interior-01",
+     "asset": "cm-ramen-shop-night-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shop-night-interior-01",
+      "asset": "cm-ramen-shop-night-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：深夜のラーメン店の店内 ／ Ryo FUKAsawa from Tokyo, Japan・CC BY 2.0"
+       "text": "実写：夜に灯るラーメン店 ／ zaopharm・CC BY 2.0"
       }
      ],
      "note": "ramenshop"
@@ -619,16 +619,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-kombu-boat-01",
+     "asset": "cm-fishing-port-hidaka-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-kombu-boat-01",
+      "asset": "cm-fishing-port-hidaka-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：海に出る昆布漁の小舟 ／ tuyainu・CC BY 3.0"
+       "text": "実写：日高・様似漁港 ／ wakimasa・CC0"
       }
      ],
      "note": "fishport"
@@ -652,16 +652,16 @@
      ]
     },
     {
-     "asset": "cm-ramen-shoyu-01",
+     "asset": "cm-ramen-chashu-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-01",
+      "asset": "cm-ramen-chashu-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+       "text": "実写：チャーシュー・メンマ・味玉の寄り ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       }
      ],
      "note": "ramen"
@@ -708,34 +708,34 @@
      ]
     },
     {
-     "asset": "cm-soba-01",
+     "asset": "cm-udon-05",
      "bg": {
       "type": "photo",
-      "asset": "cm-soba-01",
+      "asset": "cm-udon-05",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：月見そば ／ Zengame from Tokyo, Japan・CC BY 2.0"
+       "text": "実写：つけ汁とうどん ／ Ocdp・CC0"
       }
      ],
      "note": "udon"
     },
     {
-     "asset": "cm-ramen-queue-01",
+     "asset": "cm-noren-ramen-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-queue-01",
+      "asset": "cm-noren-ramen-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：ラーメン店に並ぶ行列（遠景） ／ くろふね・CC BY 3.0"
+       "text": "実写：ラーメン店ののれんと自転車 ／ yortlabs・CC BY 2.0"
       }
      ],
-     "note": "queue"
+     "note": "noren"
     }
    ]
   },
@@ -788,19 +788,19 @@
      ]
     },
     {
-     "asset": "cm-noodles-handmade-01",
+     "asset": "cm-ramen-street-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodles-handmade-01",
+      "asset": "cm-ramen-street-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：打ちたての麺の束（寄り） ／ Sarah Boyle sboyle・CC0"
+       "text": "実写：ラーメン店の並ぶ通り ／ Jason Riedy・CC BY 2.0"
       }
      ],
-     "note": "noodles"
+     "note": "queue"
     }
    ]
   },
@@ -810,16 +810,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-miso-soup-shrimp-head-01",
+     "asset": "cm-shrimp-head-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-miso-soup-shrimp-head-01",
+      "asset": "cm-shrimp-head-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：えびの頭の味噌汁 ／ City Foodsters・CC BY 2.0"
+       "text": "実写：皿にのったえびの頭 ／ Syced・CC0"
       }
      ],
      "note": "shrimp"
@@ -862,19 +862,19 @@
      ]
     },
     {
-     "asset": "cm-fish-market-01",
+     "asset": "cm-soba-raw-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-fish-market-01",
+      "asset": "cm-soba-raw-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：築地市場の場内 ／ ElHeineken・CC BY 4.0"
+       "text": "実写：バットに並べた打ちたての生そば ／ Nori Norisa from 熊谷市, Japan・CC BY 4.0"
       }
      ],
-     "note": "fish"
+     "note": "noodles"
     }
    ]
   },
@@ -884,34 +884,40 @@
    ],
    "shots": [
     {
-     "asset": "cm-ramen-shop-night-01",
+     "asset": "cm-sakuraebi-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shop-night-01",
+      "asset": "cm-sakuraebi-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：夜のラーメン店の外観 ／ 博柳・CC BY 3.0"
+       "text": "実写：トレーに盛った桜えび ／ 広報課・CC BY 4.0"
+      },
+      {
+       "type": "title",
+       "text": "サクサク。",
+       "y": 760,
+       "n": 100
       }
      ],
-     "note": "ramenshop"
+     "note": "サクサク。"
     },
     {
-     "asset": "cm-ramen-shoyu-02",
+     "asset": "cm-fish-market-06",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-02",
+      "asset": "cm-fish-market-06",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：チャーシュー麺（醤油・黒い盆） ／ ノボホショコロトソ・CC BY 4.0"
+       "text": "実写：鮮魚店の店頭 ／ Nesnad・CC BY 4.0"
       }
      ],
-     "note": "ramen"
+     "note": "fish"
     }
    ]
   },
@@ -938,19 +944,19 @@
      ]
     },
     {
-     "asset": "cm-noodles-packed-01",
+     "asset": "cm-ramen-shop-night-04",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodles-packed-01",
+      "asset": "cm-ramen-shop-night-04",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：袋詰めされた生麺の山 ／ François Nguyen・CC BY 2.0"
+       "text": "実写：夜道に灯るラーメン店 ／ 運転太郎・CC BY 3.0"
       }
      ],
-     "note": "noodles"
+     "note": "ramenshop"
     }
    ]
   },
@@ -959,6 +965,21 @@
     "2025年9月、くら寿司は、3年かけて開発した讃岐うどんを売り出しました。"
    ],
    "shots": [
+    {
+     "asset": "cm-soba-02",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-soba-02",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：ざるそば（容器） ／ RuinDig/Yuki Uchida・CC BY 4.0"
+      }
+     ],
+     "note": "udon"
+    },
     {
      "asset": "diagram:cb46e9135d",
      "note": "band",
@@ -979,34 +1000,19 @@
      ]
     },
     {
-     "asset": "cm-fish-market-03",
+     "asset": "cm-ramen-chashu-04",
      "bg": {
       "type": "photo",
-      "asset": "cm-fish-market-03",
+      "asset": "cm-ramen-chashu-04",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：銚子の鮮魚店の店頭 ／ t-mizo from Japan・CC BY 2.0"
+       "text": "実写：チャーシュー麺（青磁風の器） ／ Nesnad・CC BY 4.0"
       }
      ],
-     "note": "fish"
-    },
-    {
-     "asset": "cm-ramen-shop-night-02",
-     "bg": {
-      "type": "photo",
-      "asset": "cm-ramen-shop-night-02",
-      "scrim": 160
-     },
-     "layers": [
-      {
-       "type": "credit",
-       "text": "実写：雪の夜のラーメン店 ／ くろふね・CC BY 3.0"
-      }
-     ],
-     "note": "ramenshop"
+     "note": "ramen"
     }
    ]
   },
@@ -1034,19 +1040,19 @@
      ]
     },
     {
-     "asset": "cm-ramen-shoyu-03",
+     "asset": "cm-soba-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-03",
+      "asset": "cm-soba-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：醤油ラーメン（メンマ・チャーシュー） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：野菜のせそば ／ HarshLight・CC BY 2.0"
       }
      ],
-     "note": "ramen"
+     "note": "udon"
     }
    ]
   },
@@ -1081,19 +1087,19 @@
      ]
     },
     {
-     "asset": "cm-noodle-machine-02",
+     "asset": "cm-street-night-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodle-machine-02",
+      "asset": "cm-street-night-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：製麺機から出てくる麺 ／ Magic Madzik・CC BY 2.0"
+       "text": "実写：温泉街の夜道（白黒） ／ Yiannis Theologos Michellis・CC0"
       }
      ],
-     "note": "noodles"
+     "note": "queue"
     }
    ]
   },
@@ -1133,19 +1139,19 @@
      ]
     },
     {
-     "asset": "cm-fish-market-04",
+     "asset": "cm-somen-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-fish-market-04",
+      "asset": "cm-somen-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：串に刺して並べた魚 ／ istolethetv・CC BY 2.0"
+       "text": "実写：にゅうめん ／ くろふね・CC BY 4.0"
       }
      ],
-     "note": "fish"
+     "note": "noodles"
     }
    ]
   },
@@ -1191,34 +1197,34 @@
      ]
     },
     {
-     "asset": "cm-ramen-shop-night-03",
+     "asset": "cm-hotate-dried-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shop-night-03",
+      "asset": "cm-hotate-dried-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：夜に灯るラーメン店 ／ zaopharm・CC BY 2.0"
+       "text": "実写：干し貝柱の一皿 ／ City Foodsters・CC BY 2.0"
+      }
+     ],
+     "note": "fish"
+    },
+    {
+     "asset": "cm-yatai-night-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-yatai-night-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：夜の屋台ラーメン ／ くろふね・CC BY 4.0"
       }
      ],
      "note": "ramenshop"
-    },
-    {
-     "asset": "cm-ramen-shoyu-04",
-     "bg": {
-      "type": "photo",
-      "asset": "cm-ramen-shoyu-04",
-      "scrim": 160
-     },
-     "layers": [
-      {
-       "type": "credit",
-       "text": "実写：昔ながらの醤油ラーメン（なると） ／ Ocdp・CC0"
-      }
-     ],
-     "note": "ramen"
     }
    ]
   },
@@ -1228,31 +1234,37 @@
    ],
    "shots": [
     {
-     "asset": "cm-fish-market-05",
+     "asset": "cm-udon-06",
      "bg": {
       "type": "photo",
-      "asset": "cm-fish-market-05",
+      "asset": "cm-udon-06",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：函館朝市の通り ／ 663highland・CC BY 2.5"
+       "text": "実写：月見うどん（黒い器） ／ Alexander Klink・CC BY 4.0"
+      },
+      {
+       "type": "title",
+       "text": "うどん専門店より、太い。",
+       "y": 760,
+       "n": 100
       }
      ],
-     "note": "fish"
+     "note": "うどん専門店より、太い。"
     },
     {
-     "asset": "cm-ramen-saba-dashi-01",
+     "asset": "cm-ajitama-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-saba-dashi-01",
+      "asset": "cm-ajitama-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：さばだしのラーメン ／ 石巻敎祖・CC BY 4.0"
+       "text": "実写：味付け玉子 ／ Guilhem Vellut・CC BY 2.0"
       }
      ],
      "note": "ramen"
@@ -1264,6 +1276,21 @@
     "手で引っ張れば2割から3割は伸び、10分ほど置いて食べても、まだ食感が残っていました。"
    ],
    "shots": [
+    {
+     "asset": "cm-udon-07",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-udon-07",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：水沢うどん（ざる） ／ Dirty・CC BY 2.0"
+      }
+     ],
+     "note": "udonlift"
+    },
     {
      "asset": "diagram:7ae7071ede",
      "note": "chips",
@@ -1287,34 +1314,19 @@
      ]
     },
     {
-     "asset": "cm-tuna-market-01",
+     "asset": "cm-udon-08",
      "bg": {
       "type": "photo",
-      "asset": "cm-tuna-market-01",
+      "asset": "cm-udon-08",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：市場に並ぶまぐろ（荷札付き） ／ Marie-Sophie Mejan・CC BY 4.0"
+       "text": "実写：幅広のひもかわうどん ／ Ocdp・CC0"
       }
      ],
-     "note": "fish"
-    },
-    {
-     "asset": "cm-ramen-miso-01",
-     "bg": {
-      "type": "photo",
-      "asset": "cm-ramen-miso-01",
-      "scrim": 160
-     },
-     "layers": [
-      {
-       "type": "credit",
-       "text": "実写：札幌の味噌ラーメン ／ ノボホショコロトソ・CC BY 4.0"
-      }
-     ],
-     "note": "misoramen"
+     "note": "udon"
     }
    ]
   },
@@ -1324,16 +1336,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-ramen-kitchen-steam-01",
+     "asset": "cm-stockpots-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-kitchen-steam-01",
+      "asset": "cm-stockpots-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：湯気の立つラーメン店の厨房 ／ Syced・CC0"
+       "text": "実写：ラーメン店のスープ鍋（コンロ） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
       },
       {
        "type": "title",
@@ -1345,19 +1357,19 @@
      "note": "つけだしの、香り。"
     },
     {
-     "asset": "cm-ramen-miso-02",
+     "asset": "cm-street-night-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-miso-02",
+      "asset": "cm-street-night-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：味噌ラーメンの寄り（コーン・にんにく） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：雨の夜の温泉街 ／ Alexkom000・CC BY 4.0"
       }
      ],
-     "note": "misoramen"
+     "note": "queue"
     }
    ]
   },
@@ -1367,31 +1379,31 @@
    ],
    "shots": [
     {
-     "asset": "cm-kombu-drying-hokkaido-01",
+     "asset": "cm-kombu-kamaboko-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-kombu-drying-hokkaido-01",
+      "asset": "cm-kombu-kamaboko-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：北海道の浜で天日干しされる昆布 ／ Marie-Sophie Mejan・CC BY 4.0"
+       "text": "実写：昆布巻きかまぼこ ／ 漱石の猫・CC0"
       }
      ],
      "note": "kombu"
     },
     {
-     "asset": "cm-katsuobushi-shop-01",
+     "asset": "cm-katsuo-tataki-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-katsuobushi-shop-01",
+      "asset": "cm-katsuo-tataki-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：鰹節と削り節の量り売り ／ Naotake Murayama from San Francisco, CA, USA・CC BY 2.0"
+       "text": "実写：かつおのたたき（皿盛り） ／ ノボホショコロトソ・CC BY 4.0"
       },
       {
        "type": "title",
@@ -1410,40 +1422,34 @@
    ],
    "shots": [
     {
-     "asset": "ramenhero",
+     "asset": "cm-udon-inaniwa-02",
      "bg": {
       "type": "photo",
-      "asset": "ramenhero",
+      "asset": "cm-udon-inaniwa-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "料理の再現イメージ"
-      },
-      {
-       "type": "title",
-       "text": "専門店を超える味へ。",
-       "y": 760,
-       "n": 100
+       "text": "実写：ざるにのせた稲庭うどん ／ [2] from Yakitori Restaurant Sumika in Los Altos, California・CC BY 2.0"
       }
      ],
-     "note": "専門店を超える味へ。"
+     "note": "noodles"
     },
     {
-     "asset": "cm-ramen-miso-burnt-01",
+     "asset": "cm-hotate-dried-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-miso-burnt-01",
+      "asset": "cm-hotate-dried-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：焦がし味噌ラーメン（暗いトーン） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+       "text": "実写：干し貝柱の料理（暗いトーン） ／ Studio Sarah Lou・CC BY 2.0"
       }
      ],
-     "note": "misoramen"
+     "note": "fish"
     }
    ]
   },
@@ -1470,34 +1476,34 @@
      ]
     },
     {
-     "asset": "cm-ramen-tonkotsu-02",
+     "asset": "cm-yatai-rain-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-tonkotsu-02",
+      "asset": "cm-yatai-rain-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：豚骨ラーメン（きくらげ・ねぎ） ／ Syced・CC0"
+       "text": "実写：雨の日の屋台 ／ Hirho・CC BY 4.0"
       }
      ],
-     "note": "tonkotsu"
+     "note": "ramenshop"
     },
     {
-     "asset": "cm-noodle-lift-01",
+     "asset": "cm-ramen-ajitama-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodle-lift-01",
+      "asset": "cm-ramen-ajitama-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：箸で持ち上げた麺 ／ Hajime NAKANO・CC BY 2.0"
+       "text": "実写：味玉とコーンのラーメン ／ Douglas Paul Perkins・CC0"
       }
      ],
-     "note": "noodlelift"
+     "note": "ramen"
     }
    ]
   }

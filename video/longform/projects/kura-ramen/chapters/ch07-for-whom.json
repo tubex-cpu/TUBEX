@@ -35,16 +35,16 @@
      "hit": true
     },
     {
-     "asset": "cm-kaiten-lane-01",
+     "asset": "cm-kaiten-lane-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-kaiten-lane-01",
+      "asset": "cm-kaiten-lane-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：回転寿司のレーンと積まれた皿 ／ Maarten Heerlien from Voorschoten, The Netherlands・CC BY 2.0"
+       "text": "実写：回転寿司のカウンターとレーン ／ Benjamin Hollis from Seattle, WA, USA・CC BY 2.0"
       }
      ],
      "note": "conveyor"
@@ -75,31 +75,31 @@
      ]
     },
     {
-     "asset": "cm-nigiri-salmon-plate-01",
+     "asset": "cm-nigiri-tuna-plate-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-nigiri-salmon-plate-01",
+      "asset": "cm-nigiri-tuna-plate-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：皿にのったサーモンの握り ／ RuinDig/Yuki Uchida・CC BY 4.0"
+       "text": "実写：皿にのったまぐろの握り（薬味のせ） ／ RuinDig/Yuki Uchida・CC BY 4.0"
       }
      ],
      "note": "sushi"
     },
     {
-     "asset": "cm-ramen-niboshi-shoyu-01",
+     "asset": "cm-ramen-shio-04",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-niboshi-shoyu-01",
+      "asset": "cm-ramen-shio-04",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：煮干し醤油ラーメン ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+       "text": "実写：黒い器の塩ラーメン（暗いトーン） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       }
      ],
      "note": "ramen"
@@ -171,16 +171,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-nigiri-tuna-plate-01",
+     "asset": "cm-nigiri-closeup-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-nigiri-tuna-plate-01",
+      "asset": "cm-nigiri-closeup-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：皿にのったまぐろの握り（薬味のせ） ／ RuinDig/Yuki Uchida・CC BY 4.0"
+       "text": "実写：握り寿司の寄り（サーモン・まぐろ） ／ Think Draw from Dubai, UAE・CC BY 2.0"
       }
      ],
      "note": "sushi"
@@ -249,16 +249,16 @@
      "note": "udon"
     },
     {
-     "asset": "cm-kaiten-lane-02",
+     "asset": "cm-kaiten-cover-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-kaiten-lane-02",
+      "asset": "cm-kaiten-cover-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：長い回転寿司レーンの俯瞰 ／ bigbirdz・CC BY 2.0"
+       "text": "実写：カバー付きの皿が回るレーン ／ Syced・CC0"
       }
      ],
      "note": "conveyor"
@@ -309,16 +309,16 @@
      ]
     },
     {
-     "asset": "cm-sushi-gari-01",
+     "asset": "cm-nigiri-tamago-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-sushi-gari-01",
+      "asset": "cm-nigiri-tamago-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：カウンターの握りとガリ ／ rabbit_akra from Tokyo, Japan・CC BY 2.0"
+       "text": "実写：玉子の握り ／ Tim Reckmann from Hamm, Deutschland・CC BY 2.0"
       }
      ],
      "note": "sushi"
@@ -331,16 +331,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-kaiten-express-lane-01",
+     "asset": "cm-kaiten-lane-04",
      "bg": {
       "type": "photo",
-      "asset": "cm-kaiten-express-lane-01",
+      "asset": "cm-kaiten-lane-04",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：新幹線型の特急レーン ／ Karl Baron from Malmö, Sweden・CC BY 2.0"
+       "text": "実写：照明に浮かぶ回転レーン ／ V0lkanic・CC0"
       }
      ],
      "note": "conveyor"
@@ -370,40 +370,34 @@
    ],
    "shots": [
     {
-     "asset": "ramenhero",
+     "asset": "cm-ramen-ajitama-01",
      "bg": {
       "type": "photo",
-      "asset": "ramenhero",
+      "asset": "cm-ramen-ajitama-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "料理の再現イメージ"
-      },
-      {
-       "type": "title",
-       "text": "ラーメンがあれば。",
-       "y": 760,
-       "n": 100
-      }
-     ],
-     "note": "ラーメンがあれば。"
-    },
-    {
-     "asset": "cm-ramen-shoyu-01",
-     "bg": {
-      "type": "photo",
-      "asset": "cm-ramen-shoyu-01",
-      "scrim": 160
-     },
-     "layers": [
-      {
-       "type": "credit",
-       "text": "実写：醤油ラーメン（味玉・俯瞰） ／ Guilhem Vellut・CC BY 2.0"
+       "text": "実写：味玉の断面（とろとろの黄身） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
       }
      ],
      "note": "ramen"
+    },
+    {
+     "asset": "cm-soba-01",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-soba-01",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：月見そば ／ Zengame from Tokyo, Japan・CC BY 2.0"
+      }
+     ],
+     "note": "udon"
     }
    ]
   },
@@ -452,19 +446,19 @@
      ]
     },
     {
-     "asset": "cm-soba-01",
+     "asset": "cm-ramen-shop-interior-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-soba-01",
+      "asset": "cm-ramen-shop-interior-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：月見そば ／ Zengame from Tokyo, Japan・CC BY 2.0"
+       "text": "実写：ラーメン店の店内（カウンター） ／ Daderot・CC0"
       }
      ],
-     "note": "udon"
+     "note": "lunch"
     }
    ]
   },
@@ -504,19 +498,19 @@
      ]
     },
     {
-     "asset": "cm-ramen-shop-interior-01",
+     "asset": "cm-kaiten-express-lane-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shop-interior-01",
+      "asset": "cm-kaiten-express-lane-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：昔ながらのラーメン店の店内 ／ Mark Mrwizard・CC BY 2.0"
+       "text": "実写：新幹線型の特急レーンと皿 ／ Karl Baron・CC BY 2.0"
       }
      ],
-     "note": "lunch"
+     "note": "conveyor"
     }
    ]
   },
@@ -564,19 +558,19 @@
      ]
     },
     {
-     "asset": "cm-kaiten-lane-03",
+     "asset": "cm-nigiri-ika-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-kaiten-lane-03",
+      "asset": "cm-nigiri-ika-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：回転寿司のカウンターとレーン ／ Benjamin Hollis from Seattle, WA, USA・CC BY 2.0"
+       "text": "実写：いかの握り ／ Tim Reckmann from Hamm, Deutschland・CC BY 2.0"
       }
      ],
-     "note": "conveyor"
+     "note": "sushi"
     }
    ]
   },
@@ -601,16 +595,16 @@
      "note": "real-19"
     },
     {
-     "asset": "cm-ramen-shoyu-02",
+     "asset": "cm-ramen-shio-05",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-02",
+      "asset": "cm-ramen-shio-05",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：チャーシュー麺（醤油・黒い盆） ／ ノボホショコロトソ・CC BY 4.0"
+       "text": "実写：澄んだ塩ラーメン（白髪ねぎ） ／ Ryosuke Hosoi・CC BY 2.0"
       },
       {
        "type": "title",
@@ -629,16 +623,16 @@
    ],
    "shots": [
     {
-     "asset": "cm-nigiri-closeup-01",
+     "asset": "cm-sushi-box-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-nigiri-closeup-01",
+      "asset": "cm-sushi-box-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：握り寿司の寄り（サーモン・まぐろ） ／ Think Draw from Dubai, UAE・CC BY 2.0"
+       "text": "実写：パック寿司の盛り合わせ ／ Ocdp・CC0"
       }
      ],
      "note": "sushi"
@@ -668,34 +662,40 @@
    ],
    "shots": [
     {
-     "asset": "cm-ramen-shoyu-03",
+     "asset": "cm-kitchen-counter-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-03",
+      "asset": "cm-kitchen-counter-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：醤油ラーメン（メンマ・チャーシュー） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：営業前の厨房カウンター ／ whity・CC BY 2.0"
+      },
+      {
+       "type": "title",
+       "text": "サッと、ランチにも。",
+       "y": 760,
+       "n": 100
+      }
+     ],
+     "note": "サッと、ランチにも。"
+    },
+    {
+     "asset": "cm-ramen-shio-06",
+     "bg": {
+      "type": "photo",
+      "asset": "cm-ramen-shio-06",
+      "scrim": 160
+     },
+     "layers": [
+      {
+       "type": "credit",
+       "text": "実写：黒い器の塩ラーメン（角煮・味玉） ／ ノボホショコロトソ・CC BY 4.0"
       }
      ],
      "note": "ramen"
-    },
-    {
-     "asset": "cm-kaiten-cover-01",
-     "bg": {
-      "type": "photo",
-      "asset": "cm-kaiten-cover-01",
-      "scrim": 160
-     },
-     "layers": [
-      {
-       "type": "credit",
-       "text": "実写：カバー付きの皿が回るレーン ／ Syced・CC0"
-      }
-     ],
-     "note": "conveyor"
     }
    ]
   },
@@ -745,34 +745,34 @@
      ]
     },
     {
-     "asset": "cm-ramen-shoyu-04",
+     "asset": "cm-udon-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-shoyu-04",
+      "asset": "cm-udon-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：昔ながらの醤油ラーメン（なると） ／ Ocdp・CC0"
+       "text": "実写：讃岐うどん（ざる） ／ Kanesue・CC BY 4.0"
       }
      ],
-     "note": "ramen"
+     "note": "udon"
     },
     {
-     "asset": "cm-kaiten-lane-04",
+     "asset": "cm-yatai-counter-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-kaiten-lane-04",
+      "asset": "cm-yatai-counter-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：照明に浮かぶ回転レーン ／ V0lkanic・CC0"
+       "text": "実写：屋台のカウンターと品書き ／ Nesnad・CC BY 4.0"
       }
      ],
-     "note": "conveyor"
+     "note": "lunch"
     }
    ]
   },
@@ -806,16 +806,16 @@
      ]
     },
     {
-     "asset": "cm-noodles-packed-01",
+     "asset": "cm-noodles-dried-bundles-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-noodles-packed-01",
+      "asset": "cm-noodles-dried-bundles-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：袋詰めされた生麺の山 ／ François Nguyen・CC BY 2.0"
+       "text": "実写：束ねた乾麺の山 ／ François Nguyen・CC BY 2.0"
       }
      ],
      "note": "takeout"
@@ -845,19 +845,19 @@
      ]
     },
     {
-     "asset": "cm-ramen-saba-dashi-01",
+     "asset": "cm-kaiten-express-lane-03",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-saba-dashi-01",
+      "asset": "cm-kaiten-express-lane-03",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：さばだしのラーメン ／ 石巻敎祖・CC BY 4.0"
+       "text": "実写：新幹線型の配膳レーン ／ Syced・CC0"
       }
      ],
-     "note": "ramen"
+     "note": "conveyor"
     }
    ]
   },
@@ -890,34 +890,34 @@
      ]
     },
     {
-     "asset": "cm-ramen-miso-01",
+     "asset": "cm-nigiri-salmon-02",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-miso-01",
+      "asset": "cm-nigiri-salmon-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：札幌の味噌ラーメン ／ ノボホショコロトソ・CC BY 4.0"
+       "text": "実写：サーモンの握り（白背景） ／ Tim Reckmann from Hamm, Deutschland・CC BY 2.0"
       }
      ],
-     "note": "misoramen"
+     "note": "sushi"
     },
     {
-     "asset": "cm-ramen-miso-02",
+     "asset": "cm-ramen-shio-07",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-miso-02",
+      "asset": "cm-ramen-shio-07",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：味噌ラーメンの寄り（コーン・にんにく） ／ Guilhem Vellut from Paris, France・CC BY 2.0"
+       "text": "実写：塩バターラーメン（わかめ） ／ ノボホショコロトソ・CC BY 4.0"
       }
      ],
-     "note": "misoramen"
+     "note": "ramen"
     }
    ]
   },
@@ -955,40 +955,34 @@
    ],
    "shots": [
     {
-     "asset": "broth",
+     "asset": "cm-udon-02",
      "bg": {
       "type": "photo",
-      "asset": "broth",
+      "asset": "cm-udon-02",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "調理の再現イメージ"
-      },
-      {
-       "type": "title",
-       "text": "行く理由になる。",
-       "y": 760,
-       "n": 100
+       "text": "実写：赤い器のうどん ／ Shene81・CC BY 3.0"
       }
      ],
-     "note": "行く理由になる。"
+     "note": "udon"
     },
     {
-     "asset": "cm-ramen-miso-burnt-01",
+     "asset": "cm-ramen-shop-interior-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-miso-burnt-01",
+      "asset": "cm-ramen-shop-interior-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：焦がし味噌ラーメン（暗いトーン） ／ Guilhem Vellut from Annecy, France・CC BY 2.0"
+       "text": "実写：昔ながらのラーメン店の店内 ／ Mark Mrwizard・CC BY 2.0"
       }
      ],
-     "note": "misoramen"
+     "note": "lunch"
     }
    ]
   },
@@ -1015,34 +1009,34 @@
      ]
     },
     {
-     "asset": "cm-ramen-tonkotsu-01",
+     "asset": "cm-kaiten-lane-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-tonkotsu-01",
+      "asset": "cm-kaiten-lane-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：豚骨ラーメン（海苔・ねぎ） ／ ノボホショコロトソ・CC BY 4.0"
+       "text": "実写：回転寿司のレーンと積まれた皿 ／ Maarten Heerlien from Voorschoten, The Netherlands・CC BY 2.0"
       }
      ],
-     "note": "tonkotsu"
+     "note": "conveyor"
     },
     {
-     "asset": "cm-ramen-tonkotsu-02",
+     "asset": "cm-nigiri-ebi-01",
      "bg": {
       "type": "photo",
-      "asset": "cm-ramen-tonkotsu-02",
+      "asset": "cm-nigiri-ebi-01",
       "scrim": 160
      },
      "layers": [
       {
        "type": "credit",
-       "text": "実写：豚骨ラーメン（きくらげ・ねぎ） ／ Syced・CC0"
+       "text": "実写：えびの握り（白背景） ／ Tim Reckmann from Hamm, Deutschland・CC BY 2.0"
       }
      ],
-     "note": "tonkotsu"
+     "note": "sushi"
     }
    ]
   }
