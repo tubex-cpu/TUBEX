@@ -1,10 +1,11 @@
 import {useMemo} from 'react';
 import * as THREE from 'three';
 import {RBox, Spot, canvasTexture, rand, woodTexture} from './common';
-import {SeatedPerson} from './Human';
-import type {ArmPose} from './Human';
+import {Blob, City, Curtain2, Env, Frame, Plant, RB, Shelf, Wall, WindowFrame, plasterTex} from './Decor';
+import {SeatedPersonV4} from './Person';
+import type {ArmPoseV4 as ArmPose} from './personSdf';
 
-export type PersonPose = {headYaw?: number; headPitch?: number; headRoll?: number; shoulderRaise?: number; slump?: number; armL?: ArmPose; armR?: ArmPose; breath?: number; blink?: number};
+export type PersonPose = {headYaw?: number; headPitch?: number; headRoll?: number; shoulderRaise?: number; slump?: number; armL?: ArmPose; armR?: ArmPose; breath?: number};
 
 // Pre-dawn desk after an all-nighter. Desk top y = 0.74. Person sits at z ≈ 0.45 facing -z.
 export const DESK_Y = 0.74;
@@ -33,6 +34,7 @@ export const DeskRoom: React.FC<{t: number; buzz?: number; person?: PersonPose; 
     g.fillStyle = 'rgba(20,24,40,0.85)';
     for (let i = 0; i < 9; i++) { const h = 40 + rand(i + 3) * 90; g.fillRect(i * 30, 384 - h, 26, h); }
   }), []);
+  const wallTex = useMemo(() => plasterTex('#b5ada2'), []);
   const jitter = buzz > 0 ? Math.sin(t * 160) * 0.003 * buzz : 0;
   return (
     <group>
@@ -42,12 +44,29 @@ export const DeskRoom: React.FC<{t: number; buzz?: number; person?: PersonPose; 
       {/* laptop glow on the face */}
       <Spot position={[0, 0.95, -0.12]} target={[0, 1.25, 0.45]} angle={0.7} penumbra={1} intensity={2.2} distance={2.5} decay={1.4} color="#cfe0ff" />
       <pointLight position={[0.42, 0.8, 0.02]} intensity={0.9 * buzz} distance={0.8} decay={2} color="#bcd0ff" />
-      {/* room */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow><planeGeometry args={[8, 8]} /><meshStandardMaterial map={wood} roughness={0.75} /></mesh>
-      <mesh position={[0, 1.5, -0.62]} receiveShadow><planeGeometry args={[6, 3]} /><meshStandardMaterial color="#b7b0a6" roughness={0.95} /></mesh>
-      <mesh position={[-1.4, 1.5, 0.5]} rotation={[0, Math.PI / 2, 0]} receiveShadow><planeGeometry args={[4, 3]} /><meshStandardMaterial color="#aaa49b" roughness={0.95} /></mesh>
-      <mesh position={[-1.395, 1.5, -0.05]} rotation={[0, Math.PI / 2, 0]}><planeGeometry args={[0.75, 1.05]} /><meshBasicMaterial map={dawn} toneMapped={false} /></mesh>
-      <RBox size={[0.06, 0.05, 0.85]} position={[-1.37, 0.96, -0.05]} color="#e6e0d6" />
+      {/* room: left wall has a real window opening onto the city at dawn */}
+      <Env name="apartment" intensity={0.09} />
+      <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow><planeGeometry args={[8, 8]} /><meshStandardMaterial map={wood} roughness={0.55} /></mesh>
+      <Wall position={[0.4, 0, -0.62]} w={3.6} color="#bdb5aa" />
+      <Wall position={[-1.4, 0, 1.4]} rotationY={Math.PI / 2} w={2.1} color="#b5ada2" />
+      <Wall position={[-1.4, 0, -1.1]} rotationY={Math.PI / 2} w={0.9} color="#b5ada2" />
+      <mesh position={[-1.4, 0.49, -0.05]} rotation={[0, Math.PI / 2, 0]} receiveShadow><planeGeometry args={[1.2, 0.98]} /><meshStandardMaterial map={wallTex} roughness={0.92} /></mesh>
+      <mesh position={[-1.4, 2.29, -0.05]} rotation={[0, Math.PI / 2, 0]} receiveShadow><planeGeometry args={[1.2, 0.62]} /><meshStandardMaterial map={wallTex} roughness={0.92} /></mesh>
+      <WindowFrame position={[-1.4, 1.5, -0.05]} rotationY={Math.PI / 2} w={1.2} h={1.0} />
+      <City dawn position={[-10, -4.5, 0]} rotationY={Math.PI / 2} />
+      <Curtain2 position={[-1.33, 1.3, -0.82]} rotationY={Math.PI / 2} w={0.38} h={2.2} color="#7a7f8f" seed={2} />
+      <Curtain2 position={[-1.33, 1.3, 0.72]} rotationY={Math.PI / 2} w={0.38} h={2.2} color="#7a7f8f" seed={5} />
+      <Shelf position={[0.45, 1.3, -0.5]} width={0.9} levels={2} seed={7} />
+      <Frame position={[-0.55, 1.5, -0.605]} w={0.42} h={0.56} seed={5} />
+      <Plant position={[-1.12, 0, -0.38]} scale={1.8} />
+      <Blob position={[0, 0.002, -0.22]} sx={2.0} sz={1.2} o={0.7} />
+      <Blob position={[0, 0.002, 0.5]} sx={0.8} sz={0.8} o={0.6} />
+      {/* desk lamp (off) */}
+      <group position={[0.6, DESK_Y, -0.45]}>
+        <mesh castShadow><cylinderGeometry args={[0.06, 0.07, 0.02, 32]} /><meshStandardMaterial color="#2a2d33" metalness={0.5} roughness={0.35} /></mesh>
+        <mesh castShadow position={[0, 0.2, 0]} rotation={[0, 0, 0.15]}><cylinderGeometry args={[0.008, 0.008, 0.4, 12]} /><meshStandardMaterial color="#2a2d33" metalness={0.6} roughness={0.3} /></mesh>
+        <mesh castShadow position={[-0.06, 0.38, 0.0]} rotation={[0, 0, 1.2]}><coneGeometry args={[0.06, 0.1, 32, 1, true]} /><meshStandardMaterial color="#2a2d33" metalness={0.5} roughness={0.35} side={THREE.DoubleSide} /></mesh>
+      </group>
       {/* desk */}
       <mesh position={[0, DESK_Y - 0.02, -0.22]} castShadow receiveShadow><boxGeometry args={[1.5, 0.04, 0.72]} /><meshStandardMaterial map={deskWood} roughness={0.55} /></mesh>
       {[[-0.7, -0.53], [0.7, -0.53], [-0.7, 0.09], [0.7, 0.09]].map(([x, z], i) => (
@@ -82,8 +101,17 @@ export const DeskRoom: React.FC<{t: number; buzz?: number; person?: PersonPose; 
       {/* chair */}
       <RBox size={[0.46, 0.06, 0.44]} position={[0, 0.45, 0.47]} color="#2b2e35" radius={0.02} />
       <RBox size={[0.44, 0.5, 0.05]} position={[0, 0.78, 0.72]} rotation={[-0.08, 0, 0]} color="#2b2e35" radius={0.02} />
-      <mesh position={[0, 0.22, 0.47]} castShadow><cylinderGeometry args={[0.025, 0.025, 0.42, 16]} /><meshStandardMaterial color="#555b66" roughness={0.3} metalness={0.6} /></mesh>
-      <SeatedPerson position={[0, 0.48, 0.45]} rotationY={Math.PI} {...person} />
+      <mesh position={[0, 0.26, 0.47]} castShadow><cylinderGeometry args={[0.025, 0.025, 0.36, 16]} /><meshStandardMaterial color="#555b66" roughness={0.3} metalness={0.6} /></mesh>
+      {[0, 1, 2, 3, 4].map((k) => {
+        const a = (k / 5) * Math.PI * 2;
+        return (
+          <group key={k} position={[0, 0.07, 0.47]} rotation={[0, a, 0]}>
+            <RB s={[0.03, 0.03, 0.3]} r={0.01} p={[0, 0, 0.15]} c="#30333a" rough={0.4} metal={0.3} />
+            <mesh position={[0, -0.035, 0.29]} rotation={[0, 0, Math.PI / 2]} castShadow><cylinderGeometry args={[0.025, 0.025, 0.02, 16]} /><meshStandardMaterial color="#15171b" roughness={0.5} /></mesh>
+          </group>
+        );
+      })}
+      <SeatedPersonV4 position={[0, 0.48, 0.45]} rotationY={Math.PI} {...person} />
       {children}
     </group>
   );

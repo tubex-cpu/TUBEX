@@ -58,3 +58,20 @@ export const BrainTest: React.FC = () => {
     </AbsoluteFill>
   );
 };
+
+import {HeadV4} from './three/Person';
+export const HeadTest: React.FC<{closed?: boolean}> = ({closed = false}) => {
+  const {width, height} = useVideoConfig();
+  const f = useCurrentFrame();
+  return (
+    <AbsoluteFill style={{background: '#20242c'}}>
+      <ThreeCanvas width={width} height={height} gl={gl} shadows>
+        <CameraRig pos={[Math.sin(f / 40) * 0.42, 0.04, Math.cos(f / 40) * 0.42]} target={[0, -0.02, 0]} fov={30} />
+        <hemisphereLight args={['#dbe6ff', '#3a2a20', 0.8]} />
+        <directionalLight position={[-1, 1.5, 1.5]} intensity={2.4} castShadow />
+        <directionalLight position={[1.5, 0.5, -1]} intensity={1.2} color="#9fb4ff" />
+        <HeadV4 eyesClosed={closed} />
+      </ThreeCanvas>
+    </AbsoluteFill>
+  );
+};

@@ -10,14 +10,15 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@pmndrs/assets": "^1.7.0",
+    "@react-three/fiber": "9.1.2",
     "@remotion/bundler": "4.0.534",
     "@remotion/cli": "4.0.534",
     "@remotion/renderer": "4.0.534",
     "@remotion/three": "4.0.534",
-    "@react-three/fiber": "9.1.2",
-    "remotion": "4.0.534",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "remotion": "4.0.534",
     "three": "0.176.0"
   },
   "devDependencies": {
