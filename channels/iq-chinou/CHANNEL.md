@@ -9,6 +9,8 @@
 
 **1本目（2026-10-31・社長提示）**：テーマ「フレネミー」。サムネ3案・タイトルは `channels/iq-chinou/drafts/ep001-frenemy/00_title_thumb.md`。2026-10-31 社長が「30分台本を作成して企画を進める」と指示し、台本初稿 `05_script.md` を作成。**サムネに「2行・12字以内」は適用しない**（社長）。**台本は Google ドキュメントで社長に渡す**（社長 2026-10-31。リポジトリの Markdown は元データ）。ep001 の台本：https://docs.google.com/document/d/1D2-0o_xvtIrTqPXbgJP70mqt2lR8CRqo2oNlUVNlT8M/edit
 
+**2本目（2026-11-02・社長提示）**：テーマ「ドパガキ」。サムネ3パターン・タイトルは社長決定（`channels/iq-chinou/drafts/ep002-dopagaki/00_title_thumb.md`。ゲート0・Aの承認記録ではない）。ep001 と同じ作り方で資料表・競合照合・台本 v1 を作成。ep002 の台本：https://docs.google.com/document/d/1vTH6tWNgcP7u68tvBEri8etqwS6M5eORaVLonZi0okw/edit
+
 ここに書いたのは決定事項と、既存の調査で確認済みの数字だけ。未決の項目は「未決」と書き、推測で埋めない。
 
 ## 決まっていること
