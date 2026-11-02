@@ -59,7 +59,7 @@ export const PathArrow: React.FC<{dir: 'same' | 'diff'; width?: number; color?: 
 
 // smartphone with a chat thread (2D). msgs: {from: 'me'|'them', text, at (local frame), typing?: frames shown "入力中…" before}
 export type Msg = {from: 'me' | 'them'; text: string; at: number; typing?: number; name?: string; time?: string; sticker?: boolean};
-export const Phone: React.FC<{f: number; msgs: Msg[]; x?: number; y?: number; scale?: number; title?: string; input?: string; caret?: boolean; inputSend?: number}> = ({f, msgs, x = 660, y = 60, scale = 1, title = 'トーク', input, caret, inputSend}) => {
+export const Phone: React.FC<{f: number; msgs: Msg[]; x?: number; y?: number; scale?: number; title?: string; input?: string; caret?: boolean; inputSend?: number}> = ({f, msgs, x = 702, y = 36, scale = 0.86, title = 'トーク', input, caret, inputSend}) => {
   const visible = msgs.filter((m) => f >= m.at);
   const typingNow = msgs.find((m) => m.typing && f >= m.at - m.typing && f < m.at);
   return (

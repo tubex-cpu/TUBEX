@@ -347,7 +347,7 @@ const C4bPhone: React.FC<SceneProps> = ({f, dur}) => (
   <AbsoluteFill>
     <BgStill src="bg/cafe.png" f={f} dur={dur} blur={8} dark={0.55} />
     <Tag text="再現" />
-    <Phone f={f} x={660} y={60} title="グループ" msgs={[
+    <Phone f={f} title="グループ" msgs={[
       {from: 'me', text: '昇進決まった！', at: 6, time: '18:02'},
       {from: 'them', name: '同じ道を歩く友達', text: 'すごい。……でもさ、責任重くなるし、大変だよね', at: 34, typing: 16, time: '18:09'},
       {from: 'them', name: '違う道を歩く友達', text: 'えー！最高じゃん！どんな仕事するの？今度お祝いさせて！', at: 62, typing: 10, time: '18:03'},
@@ -409,7 +409,7 @@ const C5Chat: React.FC<SceneProps> = ({f, dur}) => (
   <AbsoluteFill>
     <BgStill src="bg/cafe.png" f={f} dur={dur} blur={8} dark={0.55} />
     <Tag text="再現" />
-    <Phone f={f} x={660} y={60} title="同じ道を歩く友達" msgs={[
+    <Phone f={f} title="同じ道を歩く友達" msgs={[
       {from: 'me', text: '彼氏できた！', at: 6, time: '4/2'},
       {from: 'them', text: 'えー、おめでと。……でもその人、大丈夫？', at: 60, typing: 40, time: '4/2'},
       {from: 'me', text: '5キロ痩せた！', at: 84, time: '6/18'},
@@ -445,13 +445,13 @@ const C5Cases: React.FC<SceneProps> = ({f, T}) => {
       <Tag text="再現（演出）" />
       <Chip f={f} text={['① 距離', '② 大事さ', '③ 出来の評価'][k]} />
       {!done && k === 0 && (
-        <Phone f={f} x={660} y={80} scale={0.95} title="同じ道を歩く友達" msgs={[
+        <Phone f={f} x={702} y={36} scale={0.86} title="同じ道を歩く友達" msgs={[
           {from: 'me', text: '今度ごはん行かない？', at: 10, time: '5/1'}, {from: 'them', text: 'ごめん、その日ちょっと…', at: 30, time: '5/3'},
           {from: 'me', text: '来週はどう？', at: 55, time: '5/10'}, {from: 'them', text: 'また連絡するね', at: 80, time: '5/24'},
         ]} />
       )}
-      {!done && k === 1 && <Phone f={f - T('C5_11') + 10} x={660} y={80} scale={0.95} title="同じ道を歩く友達" msgs={[{from: 'me', text: '昇進決まった！', at: 0}, {from: 'them', text: 'てか私、別に出世とか興味ないし', at: 14}]} />}
-      {!done && k === 2 && <Phone f={f - T('C5_12') + 10} x={660} y={80} scale={0.95} title="同じ道を歩く友達" msgs={[{from: 'me', text: '昇進決まった！', at: 0}, {from: 'them', text: '運がよかったよね。タイミングもあったし', at: 14}]} />}
+      {!done && k === 1 && <Phone f={f - T('C5_11') + 10} x={702} y={36} scale={0.86} title="同じ道を歩く友達" msgs={[{from: 'me', text: '昇進決まった！', at: 0}, {from: 'them', text: 'てか私、別に出世とか興味ないし', at: 14}]} />}
+      {!done && k === 2 && <Phone f={f - T('C5_12') + 10} x={702} y={36} scale={0.86} title="同じ道を歩く友達" msgs={[{from: 'me', text: '昇進決まった！', at: 0}, {from: 'them', text: '運がよかったよね。タイミングもあったし', at: 14}]} />}
       {done && (
         <Pop f={f} at={T('C5_13')} style={{position: 'absolute', left: 0, right: 0, top: 380, textAlign: 'center'}}>
           <div style={{fontSize: 52, fontWeight: 900, color: K.ink}}>計算ではなく、<span style={{color: K.gold}}>自分を守るための動き</span></div>
@@ -769,7 +769,7 @@ const C7Phone4: React.FC<SceneProps> = ({f, dur}) => (
   <AbsoluteFill>
     <BgStill src="bg/cafe.png" f={f} dur={dur} blur={8} dark={0.55} />
     <Tag text="再現" />
-    <Phone f={f} x={660} y={60} title="友達4人" msgs={[
+    <Phone f={f} title="友達4人" msgs={[
       {from: 'me', text: '資格、受かったの', at: 6},
       {from: 'them', name: '① 積極的・建設的', text: 'やったじゃん！あれ難しいやつでしょ？どうやって勉強したの？', at: 30},
       {from: 'them', name: '② 消極的・建設的', text: 'おめでと〜（既読から数時間後）', at: 60},
@@ -811,7 +811,7 @@ const C7Phone2: React.FC<SceneProps> = ({f, dur}) => (
   <AbsoluteFill>
     <BgStill src="bg/cafe.png" f={f} dur={dur} blur={8} dark={0.55} />
     <Tag text="再現" />
-    <Phone f={f} x={660} y={60} title="同じ道を歩く友達" msgs={[
+    <Phone f={f} title="同じ道を歩く友達" msgs={[
       {from: 'me', text: '弟がマラソンで入賞したの', at: 6, time: '7/3'},
       {from: 'them', text: 'えー！すごい！今度お祝いしよ！', at: 34, typing: 10, time: '7/3'},
       {from: 'me', text: '昇進が決まったの', at: 70, time: '10/1'},
@@ -885,7 +885,7 @@ const C8Phone: React.FC<SceneProps> = ({f, dur, T, E}) => {
       <BgStill src="bg/apartment_night.png" f={f} dur={dur} blur={6} dark={0.55 - 0.2 * warm} />
       <AbsoluteFill style={{background: `rgba(255,170,90,${0.12 * warm})`}} />
       <Tag text="再現" />
-      <Phone f={f} x={660} y={60} title="同じ道を歩く友達" msgs={msgs} input={f < sent ? input : ''} caret={f >= e6 - 20 && f < sent} inputSend={sent - 4} />
+      <Phone f={f} title="同じ道を歩く友達" msgs={msgs} input={f < sent ? input : ''} caret={f >= e6 - 20 && f < sent} inputSend={sent - 4} />
     </AbsoluteFill>
   );
 };
