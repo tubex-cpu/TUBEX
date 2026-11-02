@@ -2,7 +2,7 @@
 
 台本：Googleドキュメント「【台本 v9】フレネミーの正体」0章（オープニング）〜「…恐ろしい仕組みがあります。」まで（元データ `channels/iq-chinou/drafts/ep001-frenemy/05_script.md`）。ナレーションは台本の文言どおり（社長が直接書いた一言目「〜かもしれません」もそのまま）。
 
-- 完成MP4：`out/ep001-frenemy-op60_v1.mp4`（git に入れない。軽量版 `preview.mp4` をコミット）
+- 完成MP4：`out/ep001-frenemy-op60_v2.mp4`（git に入れない。軽量版 `preview.mp4` をコミット）
 - 字幕：`docs/subtitles.srt`（元 `data/narration.json` → `data/timings.json`）／ 記録：`docs/notes.md`
 
 | 秒 | 画 | キャラ（傍観者） |
