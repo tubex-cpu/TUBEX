@@ -250,6 +250,15 @@ def main():
         (23.85, sfx_soft_whoosh(), 0.35, 0.5),
     ]:
         place(sfx, x, at, gn, p)
+    if DUR > 30:
+        for at, x, gn, p in [
+            (30.65, sfx_soft_whoosh(0.9), 0.4, 0.5), (30.9, sfx_noise_swell(0.8), 0.5, 0.5),
+            (39.4, hit(0.8), 0.7, 0.5),                    # "削られ続けます"
+            (40.8, hit(1.4), 1.0, 0.5), (40.8, sfx_chime(523, 1.6), 0.5, 0.5),  # title card
+            (46.75, sfx_soft_whoosh(0.9), 0.4, 0.5),
+            (58.75, sfx_noise_swell(0.6), 0.6, 0.6), (58.95, sfx_tick(), 0.8, 0.6),
+        ]:
+            place(sfx, x, at, gn, p)
     for k in range(10):  # footsteps on the walk home
         place(sfx, click() * 0.3, 24.2 + k * 0.55, 0.45, 0.45 + 0.1 * (k % 2))
 
@@ -258,10 +267,10 @@ def main():
     duck = np.ones(len(voice))
     for tm in timings:
         a, b = int((tm["start"] - 0.3) * SR), int((tm["end"] + 0.3) * SR)
-        duck[max(0, a):b] = 0.5
+        duck[max(0, a):b] = 0.35
     duck = np.convolve(duck, np.ones(SR // 5) / (SR // 5), "same")
     fade = np.minimum(1, np.minimum(np.arange(len(duck)) / SR / 1.0, (DUR - np.arange(len(duck)) / SR) / 1.5))
-    bed = sfx + music * (duck * fade)[:, None]
+    bed = sfx + music * 0.33 * (duck * fade)[:, None]
     with tempfile.TemporaryDirectory() as td:
         a_, b_ = Path(td) / "a.wav", Path(td) / "b.wav"
         with wave.open(str(a_), "wb") as w:
