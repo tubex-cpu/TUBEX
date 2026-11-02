@@ -1,6 +1,7 @@
 import {AbsoluteFill, Audio, Easing, Sequence, interpolate, staticFile, useCurrentFrame} from 'remotion';
 import {S1Cafe, S2aApartment, S2bStreet, S3Freeze, S4Demo, S5WalkHome, S6Hall, S7Title, S8Brain, XF} from './scenes/Scenes';
 import {Subtitles} from './ui/Overlay';
+import {FONT} from './theme';
 
 export const SCENES = [
   {id: 'S1 cafe', from: 0, to: 240, C: S1Cafe},
@@ -35,6 +36,16 @@ export const Main: React.FC = () => (
     ))}
     <Grain />
     <Subtitles />
+    <Sequence from={1740}><Credit /></Sequence>
     <Audio src={staticFile('audio/mix.wav')} />
   </AbsoluteFill>
 );
+
+const Credit: React.FC = () => {
+  const f = useCurrentFrame();
+  return (
+    <AbsoluteFill style={{justifyContent: 'flex-end', alignItems: 'flex-end', padding: '0 40px 22px 0', opacity: interpolate(f, [0, 8], [0, 1], {extrapolateRight: 'clamp'}), fontFamily: FONT, fontSize: 22, color: 'rgba(255,255,255,0.8)', textShadow: '0 1px 2px #000'}}>
+      音声：VOICEVOX:ナースロボ＿タイプＴ
+    </AbsoluteFill>
+  );
+};

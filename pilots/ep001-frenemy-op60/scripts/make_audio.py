@@ -1,7 +1,8 @@
 """Narration + SFX + BGM for the 60s pilot. Fully local and free.
 
 Usage: python3 scripts/make_audio.py [--measure]
-- Narration: Open JTalk + HTS voice "tohoku-f01 (neutral)"
+- Narration: VOICEVOX engine 0.26 (docker), voice ナースロボ＿タイプＴ ノーマル — credit "VOICEVOX:ナースロボ＿タイプＴ".
+  (old: Open JTalk + HTS voice "tohoku-f01 (neutral)"
   (c) 2015 Intelligent Communication Network (Ito-Nose) Laboratory, Tohoku University, CC BY 4.0.
   Extracted from the npm package @nmemonica/voice-ja@0.1.14 (see docs/credits.md, scripts/extract_voice.py).
 - SFX and BGM are synthesized here with numpy (deterministic, no third-party audio).
@@ -25,14 +26,23 @@ def read_wav(p):
     return x
 
 
+VV = "http://127.0.0.1:50021"
+SPEAKER = 47  # VOICEVOX: ナースロボ＿タイプＴ（ノーマル）
+
+
 def tts(text, rate):
+    """VOICEVOX engine (local docker container). Credit: VOICEVOX:ナースロボ＿タイプＴ"""
+    import urllib.parse, urllib.request
+    q = urllib.request.urlopen(urllib.request.Request(f"{VV}/audio_query?speaker={SPEAKER}&text={urllib.parse.quote(text)}", method="POST")).read()
+    query = json.loads(q)
+    query.update({"speedScale": rate, "prePhonemeLength": 0.0, "postPhonemeLength": 0.05, "outputSamplingRate": SR, "outputStereo": False, "volumeScale": 1.0, "intonationScale": 1.1})
+    wavb = urllib.request.urlopen(urllib.request.Request(f"{VV}/synthesis?speaker={SPEAKER}", data=json.dumps(query).encode(), headers={"Content-Type": "application/json"}, method="POST")).read()
     with tempfile.TemporaryDirectory() as t:
         raw, out = Path(t) / "r.wav", Path(t) / "o.wav"
-        subprocess.run(["open_jtalk", "-x", DIC, "-m", str(VOICE), "-r", str(rate), "-ow", str(raw)],
-                       input=text, text=True, check=True, stderr=subprocess.DEVNULL)
-        af = ("silenceremove=start_periods=1:start_threshold=-45dB,areverse,"
-              "silenceremove=start_periods=1:start_threshold=-45dB,areverse,"
-              "highpass=f=70,equalizer=f=3200:t=q:w=1.2:g=2,acompressor=threshold=-20dB:ratio=2.5:attack=8:release=120")
+        raw.write_bytes(wavb)
+        af = ("silenceremove=start_periods=1:start_threshold=-50dB,areverse,"
+              "silenceremove=start_periods=1:start_threshold=-50dB,areverse,"
+              "highpass=f=70,acompressor=threshold=-20dB:ratio=2:attack=8:release=120")
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(raw), "-af", af, "-ar", str(SR), "-ac", "1", str(out)], check=True)
         return read_wav(out)
 

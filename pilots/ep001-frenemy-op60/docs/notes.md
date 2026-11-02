@@ -10,7 +10,7 @@
 ## 素材
 - 人物・部屋・街並み・ホール・キャラ：コードで自作（符号付き距離関数で人物を彫刻）。画像生成・外部モデルなし
 - 環境光：Poly Haven HDRI（CC0）を `@pmndrs/assets` 経由
-- ナレーション：Open JTalk＋HTS voice tohoku-f01（東北大学 伊藤・能勢研究室, CC BY 4.0。概要欄にクレジットが必要）
+- ナレーション（v2〜・社長指定 2026-11-02）：**VOICEVOX ナースロボ＿タイプＴ（ノーマル, style 47）**。VOICEVOX ENGINE 0.26.0 を公式 Docker イメージ（`voicevox/voicevox_engine:cpu-latest`、Docker Hub の制限のため mirror.gcr.io 経由で取得）でこの環境内で動かして生成。規約（エンジンの speaker_info）：「『VOICEVOX:ナースロボ＿タイプＴ』とクレジットを記載すれば、商用・非商用で利用可能」。画面の最後2秒に表記し、概要欄にも同じ表記が必要。詳細規約 https://www.krnr.top/rules はこの環境から開けず未確認。読み上げ速度 1.12、抑揚 1.1。v1 は Open JTalk＋tohoku-f01（CC BY 4.0）
 - BGM・効果音：numpy で自作合成
 - 社長から受領したキャラ参照画像・バナー画像は権利の記録が未確認のため、リポジトリに入れていない
 
