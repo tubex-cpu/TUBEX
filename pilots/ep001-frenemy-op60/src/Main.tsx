@@ -15,14 +15,14 @@ export const SCENES = [
   {id: 'S8 brain', from: 1410, to: 1800, C: S8Brain},
 ];
 
-const FadeIn: React.FC<{children: React.ReactNode; first: boolean}> = ({children, first}) => {
+export const FadeIn: React.FC<{children: React.ReactNode; first: boolean}> = ({children, first}) => {
   const f = useCurrentFrame();
   const o = first ? 1 : interpolate(f, [0, XF], [0, 1], {extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic)});
   const sc = first ? 1 : interpolate(f, [0, XF * 3], [1.03, 1], {extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
   return <AbsoluteFill style={{opacity: o, transform: `scale(${sc})`}}>{children}</AbsoluteFill>;
 };
 
-const Grain: React.FC = () => {
+export const Grain: React.FC = () => {
   const f = useCurrentFrame();
   return <AbsoluteFill style={{pointerEvents: 'none', opacity: 0.07, mixBlendMode: 'overlay', backgroundImage: `url(${staticFile(`grain/g${f % 4}.png`)})`, backgroundPosition: `${(f * 137) % 512}px ${(f * 251) % 512}px`, backgroundSize: '512px 512px'}} />;
 };

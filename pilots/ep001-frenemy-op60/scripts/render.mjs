@@ -27,6 +27,7 @@ console.log('browser:', browserExecutable ?? '(Remotion default)', 'gl:', chromi
 const serveUrl = await bundle({entryPoint: path.join(root, 'src/index.ts'), publicDir: path.join(root, 'public')});
 const common = {serveUrl, browserExecutable, chromiumOptions, timeoutInMilliseconds: 120000};
 
+try {
 if (args.includes('--still')) {
   const [id, frame, out] = pos;
   const composition = await selectComposition({...common, id});
@@ -40,8 +41,12 @@ if (args.includes('--still')) {
   await renderMedia({
     ...common, composition, codec: 'h264', crf: 18, outputLocation: path.resolve(out),
     frameRange: fr ? [fr[0], fr[1]] : undefined, scale: Number(flag('scale') ?? 1),
-    concurrency: Number(flag('concurrency') ?? 4), audioCodec: 'aac', audioBitrate: '192k',
+    concurrency: Number(flag('concurrency') ?? 4), audioCodec: 'aac', audioBitrate: '192k', muted: args.includes('--muted'),
     onProgress: ({progress}) => { const p = Math.floor(progress * 100); if (p % 10 === 0 && p !== last) { last = p; console.log(`${p}%`); } },
   });
   console.log('video:', out);
+}
+} finally {
+  // remove the temporary bundle (it contains a copy of public/)
+  try { fs.rmSync(serveUrl, {recursive: true, force: true}); } catch {}
 }

@@ -306,4 +306,5 @@ def main():
     print("wrote", out, "peak-normalized from", round(float(peak), 3))
 
 
-main()
+if __name__ == "__main__":
+    main()

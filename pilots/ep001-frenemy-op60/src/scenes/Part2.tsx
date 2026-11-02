@@ -255,7 +255,7 @@ const SceneIJ: React.FC = () => {
   );
 };
 
-const SCENES_P2 = [
+export const SCENES_P2 = [
   {id: 'A vitrines', from: 0, to: S(30), C: SceneA},
   {id: 'B sealed', from: S(30), to: S(39), C: SceneB},
   {id: 'C cafe phone', from: S(39), to: S(45.6), C: SceneC},

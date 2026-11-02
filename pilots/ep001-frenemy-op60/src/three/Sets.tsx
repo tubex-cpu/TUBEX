@@ -12,7 +12,7 @@ import {V3} from './sdf';
 type FriendProps = {expr: Expr; gaze?: [number, number]; head?: V3; armL?: ArmPoseV4; armR?: ArmPoseV4; breath?: number; slump?: number};
 
 // ---------------- apartment at night: the friend listens on the sofa ----------------
-export const Apartment: React.FC<{friend: FriendProps}> = ({friend}) => {
+export const Apartment: React.FC<{friend?: FriendProps}> = ({friend}) => {
   const wall = useMemo(() => plasterTex('#c9c0b4'), []);
   const wood = useMemo(() => { const w = woodTexture(); w.wrapS = w.wrapT = THREE.RepeatWrapping; w.repeat.set(4, 4); return w; }, []);
   const fabric = '#7b8a7f';
@@ -53,7 +53,7 @@ export const Apartment: React.FC<{friend: FriendProps}> = ({friend}) => {
       <Cup position={[0.22, 0.42, 0.2]} color="#c8d3e0" />
       <RB s={[0.22, 0.09, 0.12]} r={0.01} p={[0.35, 0.465, 0.02]} c="#e9e4dc" rough={0.7} />
       <Blob position={[0, 0.003, -0.6]} sx={2.6} sz={1.6} o={0.6} />
-      <Friend position={[0.05, 0.36, -0.95]} armL={{pitch: 0.42, out: -0.12, elbow: 0.95}} armR={{pitch: 0.4, out: -0.1, elbow: 1.0}} top="#7a5b66" {...friend} />
+      {friend && <Friend position={[0.05, 0.36, -0.95]} armL={{pitch: 0.42, out: -0.12, elbow: 0.95}} armR={{pitch: 0.4, out: -0.1, elbow: 1.0}} top="#7a5b66" {...friend} />}
     </group>
   );
 };

@@ -7,6 +7,10 @@ import {perlin3, ridged} from './noise';
 // Purpose: a readable "where in the brain" schematic. Region positions are approximate (schematic).
 export const AMYG: [number, number, number][] = [[-0.27, -0.3, 0.14], [0.27, -0.3, 0.14]];
 export const MPFC: [number, number, number][] = [[-0.06, 0.08, 0.64], [0.06, 0.08, 0.64]];
+// approximate (schematic) positions
+export const DACC: [number, number, number][] = [[-0.05, 0.22, 0.28], [0.05, 0.22, 0.28]];
+export const VSTR: [number, number, number][] = [[-0.12, -0.08, 0.3], [0.12, -0.08, 0.3]];
+export type ExtraGlow = {pos: [number, number, number][]; color: string; k: number; size?: number};
 
 const hemisphere = (s: number) => {
   const g = new THREE.SphereGeometry(1, 320, 220);
@@ -101,8 +105,8 @@ const Glow: React.FC<{pos: [number, number, number]; color: string; k: number; s
   </group>
 );
 
-export const Brain3D: React.FC<{t: number; rotY?: number; amyg?: number; pfc?: number; link?: number; coupling?: number; showSecondSide?: boolean}> = ({
-  t, rotY = 0, amyg = 0.3, pfc = 0, link = 0, coupling = 1,
+export const Brain3D: React.FC<{t: number; rotY?: number; amyg?: number; pfc?: number; link?: number; coupling?: number; showSecondSide?: boolean; extra?: ExtraGlow[]}> = ({
+  t, rotY = 0, amyg = 0.3, pfc = 0, link = 0, coupling = 1, extra = [],
 }) => {
   const geo = useMemo(() => ({L: hemisphere(-1), R: hemisphere(1), cb: cerebellum()}), []);
   const mats = useMemo(() => {
@@ -131,7 +135,8 @@ export const Brain3D: React.FC<{t: number; rotY?: number; amyg?: number; pfc?: n
         <cylinderGeometry args={[0.12, 0.085, 0.62, 32]} />
       </mesh>
       {/* regions */}
-      {AMYG.map((p, i) => <Glow key={`a${i}`} pos={p} color="#ff6a3d" k={amyg} size={0.36} tex={tex} />)}
+      {extra.map((e, j) => e.k > 0 && e.pos.map((p, i) => <Glow key={`x${j}${i}`} pos={p} color={e.color} k={e.k} size={e.size ?? 0.38} tex={tex} core={[0.05, 0.05, 0.08]} />))}
+      {amyg > 0 && AMYG.map((p, i) => <Glow key={`a${i}`} pos={p} color="#ff6a3d" k={amyg} size={0.36} tex={tex} />)}
       {pfc > 0 && MPFC.map((p, i) => <Glow key={`p${i}`} pos={p} color="#3fd6c4" k={pfc} size={0.4} tex={tex} core={[0.035, 0.08, 0.07]} />)}
       {/* activity coupling: light pulses travelling between the regions (schematic, not wiring) */}
       {link > 0 && curves.map((c, ci) => (
