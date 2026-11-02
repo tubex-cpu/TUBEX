@@ -2,12 +2,13 @@ import {AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig} from 'remoti
 import timings from '../../data/timings.json';
 import {C, FONT} from '../theme';
 
-export const Subtitles: React.FC = () => {
+export const Subtitles: React.FC<{data?: {start: number; end: number; sub: string}[]; plate?: boolean}> = ({data, plate = false}) => {
+  const timingsData = data ?? timings;
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const t = frame / fps;
-  const cur = timings.find((x, i) => {
-    const next = timings[i + 1];
+  const cur = timingsData.find((x, i) => {
+    const next = timingsData[i + 1];
     const end = Math.min(x.end + 0.35, next ? next.start - 0.05 : 1e9);
     return t >= x.start - 0.08 && t < end;
   });
@@ -20,7 +21,7 @@ export const Subtitles: React.FC = () => {
         maxWidth: 1560, whiteSpace: 'pre-line', letterSpacing: '0.02em',
         textShadow: '0 0 2px #000, 0 0 2px #000, 0 2px 4px rgba(0,0,0,0.9), 0 0 18px rgba(0,0,0,0.55)',
         WebkitTextStroke: '1.5px rgba(0,0,0,0.85)', paintOrder: 'stroke fill',
-        background: 'linear-gradient(rgba(5,8,16,0), rgba(5,8,16,0.0))',
+        background: plate ? 'rgba(12,16,26,0.62)' : 'transparent', padding: plate ? '10px 28px' : 0, borderRadius: plate ? 12 : 0,
       }}>{cur.sub}</div>
     </AbsoluteFill>
   );

@@ -194,7 +194,9 @@ def bgm2(dur):
 
 
 def main():
-    cfg = json.loads((ROOT / "data/narration.json").read_text())
+    NARR = os.environ.get("NARR", "data/narration.json")
+    PART = os.environ.get("PART", "op")
+    cfg = json.loads((ROOT / NARR).read_text())
     rate = cfg["rate"]
     voice = np.zeros((int(DUR * SR), 2))
     timings, prev_end = [], 0.0
@@ -208,7 +210,7 @@ def main():
         place(voice, x, start, 0.95)
         timings.append({"id": ln["id"], "start": round(start, 3), "end": round(end, 3), "sub": ln["sub"]})
         prev_end = end
-    (ROOT / "data/timings.json").write_text(json.dumps(timings, ensure_ascii=False, indent=1))
+    (ROOT / os.environ.get("TIMINGS", "data/timings.json")).write_text(json.dumps(timings, ensure_ascii=False, indent=1))
     if "--measure" in sys.argv:
         return
 
@@ -239,7 +241,8 @@ def main():
     def hit(d=0.9):  # soft tension hit (mid range, no sub-bass)
         n = int(d * SR); t = np.arange(n) / SR
         return (np.sin(2 * np.pi * 220 * t) * 0.5 + np.sin(2 * np.pi * 330 * t) * 0.3 + np.sin(2 * np.pi * 440 * t) * 0.15) * np.exp(-t / 0.35) * 0.35
-    for at, x, gn, p in [
+    op_fx = PART == "op"
+    for at, x, gn, p in ([] if not op_fx else [
         (0.25, click(), 0.6, 0.5),                     # pendant lamp switches on
         (7.6, sfx_soft_whoosh(), 0.35, 0.5), (10.6, sfx_soft_whoosh(), 0.35, 0.5), (13.65, sfx_soft_whoosh(), 0.35, 0.5),
         (16.2, hit(), 1.0, 0.5),                       # "フレネミーじゃないですか" freeze
@@ -248,9 +251,9 @@ def main():
         (20.3, sfx_chime(1046, 0.8), 0.45, 0.5),      # "おめでとう"
         (22.5, hit(0.7), 0.6, 0.5),                    # "でも"
         (23.85, sfx_soft_whoosh(), 0.35, 0.5),
-    ]:
+    ]):
         place(sfx, x, at, gn, p)
-    if DUR > 30:
+    if op_fx and DUR > 30:
         for at, x, gn, p in [
             (30.65, sfx_soft_whoosh(0.9), 0.4, 0.5), (30.9, sfx_noise_swell(0.8), 0.5, 0.5),
             (39.4, hit(0.8), 0.7, 0.5),                    # "削られ続けます"
@@ -259,7 +262,19 @@ def main():
             (58.75, sfx_noise_swell(0.6), 0.6, 0.6), (58.95, sfx_tick(), 0.8, 0.6),
         ]:
             place(sfx, x, at, gn, p)
-    for k in range(10):  # footsteps on the walk home
+    if PART == "p2":
+        for at, x, gn, p in [
+            (5.1, sfx_chime(784, 1.2), 0.45, 0.35), (14.5, sfx_chime(880, 1.2), 0.45, 0.5), (19.8, sfx_chime(988, 1.2), 0.45, 0.65),
+            (29.9, sfx_soft_whoosh(), 0.35, 0.5), (38.9, sfx_soft_whoosh(), 0.35, 0.5),
+            (45.7, sfx_noise_swell(0.6), 0.6, 0.65), (46.0, sfx_tick(), 0.8, 0.65),
+            (64.5, sfx_soft_whoosh(0.5), 0.4, 0.4), (75.4, sfx_soft_whoosh(0.5), 0.4, 0.5), (83.8, sfx_soft_whoosh(0.5), 0.4, 0.6),
+            (94.9, sfx_soft_whoosh(0.7), 0.4, 0.5), (98.6, hit(0.9), 0.7, 0.5),
+        ]:
+            place(sfx, x, at, gn, p)
+        for start in (73.5, 81.9, 92.8):  # soft clock while the viewer scores
+            for k in range(4):
+                place(sfx, sfx_tick(), start + k * 0.55, 0.5, 0.5 + 0.1 * (k % 2))
+    for k in range(10 if PART == "op" else 0):  # footsteps on the walk home
         place(sfx, click() * 0.3, 24.2 + k * 0.55, 0.45, 0.45 + 0.1 * (k % 2))
 
     music = bgm2(DUR)
@@ -284,7 +299,7 @@ def main():
     mix = (voice + bedh * 0.9) * fadeout[:, None]
     peak = np.abs(mix).max()
     mix = mix / max(peak, 1e-9) * 0.89
-    out = ROOT / "public/audio/mix.wav"
+    out = ROOT / os.environ.get("OUT", "public/audio/mix.wav")
     with wave.open(str(out), "wb") as w:
         w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR)
         w.writeframes((np.clip(mix, -1, 1) * 32767).astype("<i2").tobytes())
