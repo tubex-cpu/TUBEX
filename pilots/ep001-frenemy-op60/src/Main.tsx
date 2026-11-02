@@ -49,3 +49,27 @@ const Credit: React.FC = () => {
     </AbsoluteFill>
   );
 };
+
+// First 30 s cut (S1–S5), ends on "…もやもやする。" with a fade to black. Voice: VOICEVOX:No.7
+export const Main30: React.FC = () => {
+  const f = useCurrentFrame();
+  const fade = interpolate(f, [878, 899], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  return (
+    <AbsoluteFill style={{background: '#000'}}>
+      {SCENES.filter((s) => s.from < 900).map(({id, from, to, C}, i) => (
+        <Sequence key={id} name={id} from={from - XF} durationInFrames={Math.min(to, 900) - from + XF}>
+          <FadeIn first={i === 0}><C /></FadeIn>
+        </Sequence>
+      ))}
+      <Grain />
+      <Subtitles />
+      <Sequence from={845}>
+        <AbsoluteFill style={{justifyContent: 'flex-end', alignItems: 'flex-end', padding: '0 40px 22px 0', fontFamily: FONT, fontSize: 22, color: 'rgba(255,255,255,0.8)', textShadow: '0 1px 2px #000'}}>
+          音声：VOICEVOX:No.7
+        </AbsoluteFill>
+      </Sequence>
+      <AbsoluteFill style={{background: '#000', opacity: fade}} />
+      <Audio src={staticFile('audio/mix.wav')} />
+    </AbsoluteFill>
+  );
+};

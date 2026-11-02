@@ -8,7 +8,7 @@ Usage: python3 scripts/make_audio.py [--measure]
 - SFX and BGM are synthesized here with numpy (deterministic, no third-party audio).
 Writes public/audio/mix.wav and data/timings.json (exact narration start/end for subtitles).
 """
-import json, subprocess, sys, tempfile, wave
+import json, os, subprocess, sys, tempfile, wave
 from pathlib import Path
 import numpy as np
 
@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DIC = "/var/lib/mecab/dic/open-jtalk/naist-jdic"
 VOICE = ROOT / "voice/tohoku-f01-neutral.htsvoice"
 SR = 48000
-DUR = 60.0
+DUR = float(os.environ.get("DUR", "30"))
 
 
 def read_wav(p):
@@ -27,7 +27,8 @@ def read_wav(p):
 
 
 VV = "http://127.0.0.1:50021"
-SPEAKER = 47  # VOICEVOX: ナースロボ＿タイプＴ（ノーマル）
+import os
+SPEAKER = int(os.environ.get("VV_SPEAKER", "29"))  # 29 = VOICEVOX: No.7（ノーマル）／47 = ナースロボ＿タイプＴ（ノーマル）
 
 
 def tts(text, rate):
@@ -134,12 +135,70 @@ def bgm(dur):
     return out
 
 
+def piano(f, d=2.2, vel=1.0):
+    n = int(d * SR); t = np.arange(n) / SR
+    x = np.zeros(n)
+    for k in range(1, 9):
+        fk = f * k * (1 + 0.0004 * k * k)  # slight inharmonicity
+        if fk > 9000:
+            break
+        x += np.sin(2 * np.pi * fk * t + k) * (0.9 ** k) / k * np.exp(-t * (1.2 + 0.9 * k))
+    att = np.minimum(1, t / 0.004)
+    return x * att * vel * 0.22
+
+
+def strings(freqs, d, att=1.6, rel=1.6):
+    n = int(d * SR); t = np.arange(n) / SR
+    x = np.zeros(n)
+    for f in freqs:
+        for det in (-0.25, 0.0, 0.3):
+            ph = 2 * np.pi * (f * (1 + det / 100)) * t
+            # band-limited saw (first 6 partials) -> soft string tone
+            x += sum(np.sin(ph * k) / k for k in range(1, 7)) * (1 + 0.1 * np.sin(2 * np.pi * 5.2 * t))
+    env = np.minimum(1, t / att) * np.clip((d - t) / rel, 0, 1)
+    return x * env * 0.012
+
+
+def bgm2(dur):
+    n = int(dur * SR)
+    out = np.zeros((n, 2))
+    hz = lambda m: 440.0 * 2 ** ((m - 69) / 12)
+    beat = 60 / 76
+    # Am - F - Dm - E, 2 bars each (4/4)
+    prog = [(57, [57, 60, 64, 69, 72, 69, 64, 60]), (53, [53, 57, 60, 65, 69, 65, 60, 57]),
+            (50, [50, 53, 57, 62, 65, 62, 57, 53]), (52, [52, 56, 59, 64, 68, 64, 59, 56])]
+    t0 = 2.3
+    bar = 0
+    while True:
+        at = t0 + bar * 4 * beat
+        if at > dur:
+            break
+        root, arp = prog[(bar // 2) % 4]
+        for i in range(8):  # eighth notes
+            tt = at + i * beat / 2
+            if tt > dur - 0.4:
+                break
+            v = 0.8 if i % 4 == 0 else 0.55
+            place(out, piano(hz(arp[i] + 12), 2.0, v), tt, 1.0, 0.4 + 0.2 * (i % 2))
+        if bar % 2 == 0:
+            chord = [hz(m + 12) for m in arp[:3]]
+            place(out, strings(chord, min(8 * beat + 1.2, dur - at)), at, 1.0, 0.5)
+        bar += 1
+    # faint clock tick from the "frenemy" moment on (tension)
+    for k in range(int((dur - 16.2) / beat)):
+        tt = 16.2 + k * beat
+        m = int(0.03 * SR); t = np.arange(m) / SR
+        tick = np.sin(2 * np.pi * 3200 * t) * np.exp(-t / 0.004) * 0.05
+        place(out, tick, tt, 1.0, 0.65)
+    return out
+
+
 def main():
     cfg = json.loads((ROOT / "data/narration.json").read_text())
     rate = cfg["rate"]
     voice = np.zeros((int(DUR * SR), 2))
     timings, prev_end = [], 0.0
-    for ln in cfg["lines"]:
+    for ln in [l for l in cfg["lines"] if l["at"] < DUR - 0.5]:
         x = tts(ln["tts"], rate)
         d = len(x) / SR
         start, end = ln["at"], ln["at"] + d
@@ -177,40 +236,43 @@ def main():
         env = 0.6 + 0.4 * np.sin(2 * np.pi * 0.7 * t) * np.sin(2 * np.pi * 0.23 * t)
         fade = np.minimum(1, np.minimum(t / 0.4, (d - t) / 0.4))
         return x * env * fade * 0.12
+    def hit(d=0.9):  # soft tension hit (mid range, no sub-bass)
+        n = int(d * SR); t = np.arange(n) / SR
+        return (np.sin(2 * np.pi * 220 * t) * 0.5 + np.sin(2 * np.pi * 330 * t) * 0.3 + np.sin(2 * np.pi * 440 * t) * 0.15) * np.exp(-t / 0.35) * 0.35
     for at, x, gn, p in [
-        (0.25, click(), 0.8, 0.5),                     # pendant lamp switches on
-        (7.55, sfx_soft_whoosh(), 0.5, 0.5), (10.55, sfx_soft_whoosh(), 0.5, 0.5), (13.65, sfx_soft_whoosh(), 0.5, 0.5),
-        (16.2, pulse(), 1.0, 0.5), (16.95, pulse(), 0.8, 0.5),   # "フレネミーじゃないですか" freeze
-        (16.2, sfx_noise_swell(0.9), 0.9, 0.6),       # observer appears
-        (18.15, sfx_soft_whoosh(), 0.5, 0.5),
-        (20.3, sfx_chime(1046, 0.8), 0.5, 0.5),       # "おめでとう"
-        (22.5, pulse(0.6), 0.9, 0.5),                  # "でも"
-        (23.85, sfx_soft_whoosh(), 0.5, 0.5),
-        (30.65, sfx_soft_whoosh(0.9), 0.7, 0.5), (30.9, sfx_noise_swell(1.0), 0.8, 0.5),
-        (39.4, pulse(0.7), 1.0, 0.5),                  # "削られ続けます"
-        (40.8, boom(), 1.0, 0.5),                       # title card
-        (46.75, sfx_soft_whoosh(0.9), 0.6, 0.5),
-        (58.75, sfx_noise_swell(0.8), 0.9, 0.6), (58.95, sfx_tick(), 0.8, 0.6),
+        (0.25, click(), 0.6, 0.5),                     # pendant lamp switches on
+        (7.6, sfx_soft_whoosh(), 0.35, 0.5), (10.6, sfx_soft_whoosh(), 0.35, 0.5), (13.65, sfx_soft_whoosh(), 0.35, 0.5),
+        (16.2, hit(), 1.0, 0.5),                       # "フレネミーじゃないですか" freeze
+        (16.25, sfx_noise_swell(0.7), 0.6, 0.6),      # observer appears
+        (18.15, sfx_soft_whoosh(), 0.35, 0.5),
+        (20.3, sfx_chime(1046, 0.8), 0.45, 0.5),      # "おめでとう"
+        (22.5, hit(0.7), 0.6, 0.5),                    # "でも"
+        (23.85, sfx_soft_whoosh(), 0.35, 0.5),
     ]:
         place(sfx, x, at, gn, p)
-    place(sfx, murmur(7.6), 0.3, 0.9, 0.5)
-    place(sfx, murmur(4.6), 13.7, 0.7, 0.5)
-    place(sfx, murmur(5.7), 18.2, 0.8, 0.5)
-    place(sfx, ambience(3.0, 300, 0.04), 7.6, 1.0, 0.5)
-    place(sfx, ambience(2.9, 120, 0.06), 10.6, 1.0, 0.5)
-    place(sfx, ambience(7.0, 120, 0.06), 23.9, 1.0, 0.5)
-    for k in range(12):  # footsteps on the walk home
-        place(sfx, click() * 0.35, 24.1 + k * 0.55, 0.5, 0.45 + 0.1 * (k % 2))
+    for k in range(10):  # footsteps on the walk home
+        place(sfx, click() * 0.3, 24.2 + k * 0.55, 0.45, 0.45 + 0.1 * (k % 2))
 
-    music = bgm(DUR)
+    music = bgm2(DUR)
     # duck music under narration
     duck = np.ones(len(voice))
     for tm in timings:
         a, b = int((tm["start"] - 0.3) * SR), int((tm["end"] + 0.3) * SR)
-        duck[max(0, a):b] = 0.45
+        duck[max(0, a):b] = 0.5
     duck = np.convolve(duck, np.ones(SR // 5) / (SR // 5), "same")
     fade = np.minimum(1, np.minimum(np.arange(len(duck)) / SR / 1.0, (DUR - np.arange(len(duck)) / SR) / 1.5))
-    mix = voice + sfx + music * (duck * fade)[:, None]
+    bed = sfx + music * (duck * fade)[:, None]
+    with tempfile.TemporaryDirectory() as td:
+        a_, b_ = Path(td) / "a.wav", Path(td) / "b.wav"
+        with wave.open(str(a_), "wb") as w:
+            w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR)
+            w.writeframes((np.clip(bed / max(1e-9, np.abs(bed).max()) * 0.9, -1, 1) * 32767).astype("<i2").tobytes())
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(a_), "-af", "highpass=f=110:poles=2,highpass=f=110:poles=2", str(b_)], check=True)
+        with wave.open(str(b_)) as w:
+            bedh = np.frombuffer(w.readframes(w.getnframes()), "<i2").astype(np.float64).reshape(-1, 2) / 32768
+        bedh = bedh[: len(voice)] * (np.abs(bed).max() / 0.9)
+    fadeout = np.clip((DUR - np.arange(len(voice)) / SR) / 0.8, 0, 1)
+    mix = (voice + bedh * 0.9) * fadeout[:, None]
     peak = np.abs(mix).max()
     mix = mix / max(peak, 1e-9) * 0.89
     out = ROOT / "public/audio/mix.wav"

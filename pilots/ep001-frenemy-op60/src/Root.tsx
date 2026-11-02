@@ -1,9 +1,10 @@
 import {Composition} from 'remotion';
-import {Main} from './Main';
+import {Main, Main30} from './Main';
 import {CafeTest, FaceTest, MascotTest, SetTest} from './Tests';
 export const RemotionRoot = () => (
   <>
     <Composition id="Main" component={Main} durationInFrames={1800} fps={30} width={1920} height={1080} />
+    <Composition id="Main30" component={Main30} durationInFrames={900} fps={30} width={1920} height={1080} />
     <Composition id="MascotTest" component={MascotTest} durationInFrames={60} fps={30} width={1080} height={1080} />
     <Composition id="CafePOV" component={CafeTest} durationInFrames={60} fps={30} width={1920} height={1080} defaultProps={{cam: 0}} />
     <Composition id="CafeClose" component={CafeTest} durationInFrames={60} fps={30} width={1920} height={1080} defaultProps={{cam: 1}} />
