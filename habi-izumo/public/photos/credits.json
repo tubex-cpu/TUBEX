@@ -20,5 +20,1666 @@
    1920,
    1440
   ]
+ },
+ "museum-ext-1": {
+  "file": "museum-ext-1.jpg",
+  "title": "ShimaneMuseumOfAncientIzumo 02.jpg",
+  "artist": "micra",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:ShimaneMuseumOfAncientIzumo_02.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "museum-ext-2": {
+  "file": "museum-ext-2.jpg",
+  "title": "Shimane Museum of Ancient Izumo No,8.JPG",
+  "artist": "Mti",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Shimane_Museum_of_Ancient_Izumo_No,8.JPG",
+  "size": [
+   2304,
+   1536
+  ]
+ },
+ "taisha-model-1": {
+  "file": "taisha-model-1.jpg",
+  "title": "Shimane MAI IMG 20161020 121130.jpg",
+  "artist": "G41rn8",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Shimane_MAI_IMG_20161020_121130.jpg",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "inasa-sunset-1": {
+  "file": "inasa-sunset-1.jpg",
+  "title": "Inasa beach evening view of visitors.jpg",
+  "artist": "Nesnad",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Inasa_beach_evening_view_of_visitors.jpg",
+  "size": [
+   2684,
+   1399
+  ]
+ },
+ "inasa-pano-w": {
+  "file": "inasa-pano-w.jpg",
+  "title": "Inasa beach 2023 Aug 19 various 09 02 39 551000.jpeg",
+  "artist": "Nesnad",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Inasa_beach_2023_Aug_19_various_09_02_39_551000.jpeg",
+  "size": [
+   3840,
+   1168
+  ]
+ },
+ "inasa-lowtide": {
+  "file": "inasa-lowtide.jpg",
+  "title": "Inasa Beach at low tide.jpg",
+  "artist": "kajikawa",
+  "license": "CC BY 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Inasa_Beach_at_low_tide.jpg",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "inasa-crowd": {
+  "file": "inasa-crowd.jpg",
+  "title": "Insasa Beach 2023-11-19 1.jpg",
+  "artist": "nobu3withfoxy",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Insasa_Beach_2023-11-19_1.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "benten-1": {
+  "file": "benten-1.jpg",
+  "title": "Bentenjima (51820613402).jpg",
+  "artist": "Raita Futo from Tokyo, Japan",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bentenjima_(51820613402).jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "kojindani-hoko-display": {
+  "file": "kojindani-hoko-display.jpg",
+  "title": "Shimane Museum of Ancient Izumo Dōhoko.jpg",
+  "artist": "663highland",
+  "license": "CC BY 2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:Shimane_Museum_of_Ancient_Izumo_D%C5%8Dhoko.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "kamo-dotaku-display-1": {
+  "file": "kamo-dotaku-display-1.jpg",
+  "title": "150322 Shimane Museum of Ancient Izumo Japan07s.jpg",
+  "artist": "663highland",
+  "license": "CC BY 2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:150322_Shimane_Museum_of_Ancient_Izumo_Japan07s.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "kamo-dotaku-display-2": {
+  "file": "kamo-dotaku-display-2.jpg",
+  "title": "加茂岩倉遺跡 銅鐸群.JPG",
+  "artist": "Saigen Jiro",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E5%8A%A0%E8%8C%82%E5%B2%A9%E5%80%89%E9%81%BA%E8%B7%A1_%E9%8A%85%E9%90%B8%E7%BE%A4.JPG",
+  "size": [
+   2400,
+   1578
+  ]
+ },
+ "kamo-guidance": {
+  "file": "kamo-guidance.jpg",
+  "title": "KamoIwakura PA.JPG",
+  "artist": "アラツク",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:KamoIwakura_PA.JPG",
+  "size": [
+   2400,
+   1350
+  ]
+ },
+ "kojindani-dotaku-2": {
+  "file": "kojindani-dotaku-2.jpg",
+  "title": "荒神谷遺跡 2号銅鐸.JPG",
+  "artist": "Saigen Jiro",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E8%8D%92%E7%A5%9E%E8%B0%B7%E9%81%BA%E8%B7%A1_2%E5%8F%B7%E9%8A%85%E9%90%B8.JPG",
+  "size": [
+   1794,
+   2400
+  ]
+ },
+ "kanbara-iron": {
+  "file": "kanbara-iron.jpg",
+  "title": "神原神社古墳 鉄製品.JPG",
+  "artist": "Saigen Jiro",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E7%A5%9E%E5%8E%9F%E7%A5%9E%E7%A4%BE%E5%8F%A4%E5%A2%B3_%E9%89%84%E8%A3%BD%E5%93%81.JPG",
+  "size": [
+   2400,
+   1573
+  ]
+ },
+ "benten-2": {
+  "file": "benten-2.jpg",
+  "title": "Bentenjima on Inasa Beach.jpg",
+  "artist": "photo: Qurren (talk) Taken with Canon IXY 10S (Digital IXUS 210)",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bentenjima_on_Inasa_Beach.jpg",
+  "size": [
+   2400,
+   1802
+  ]
+ },
+ "kamimukae-road": {
+  "file": "kamimukae-road.jpg",
+  "title": "Insasa Beach 2023-11-19 3.jpg",
+  "artist": "nobu3withfoxy",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Insasa_Beach_2023-11-19_3.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "benten-torii": {
+  "file": "benten-torii.jpg",
+  "title": "Bentenjima view of Torii from below.jpg",
+  "artist": "kajikawa",
+  "license": "CC BY 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bentenjima_view_of_Torii_from_below.jpg",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "harvest-1914": {
+  "file": "harvest-1914.jpg",
+  "title": "Rice Harvesting in Japan (1914 by Elstner Hilton).jpg",
+  "artist": "A.Davey from Portland, Oregon, EE UU",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Rice_Harvesting_in_Japan_(1914_by_Elstner_Hilton).jpg",
+  "size": [
+   2400,
+   1677
+  ]
+ },
+ "harvest-field": {
+  "file": "harvest-field.jpg",
+  "title": "Rice fields and Kashima line during the harvest season,Katori city,Japan.jpg",
+  "artist": "Katorisi",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Rice_fields_and_Kashima_line_during_the_harvest_season,Katori_city,Japan.jpg",
+  "size": [
+   2400,
+   1604
+  ]
+ },
+ "harvest-hazakake": {
+  "file": "harvest-hazakake.jpg",
+  "title": "山形県朝日町2013年秋 (11060632914).jpg",
+  "artist": "Syuzo Tsushima",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%E5%B1%B1%E5%BD%A2%E7%9C%8C%E6%9C%9D%E6%97%A5%E7%94%BA2013%E5%B9%B4%E7%A7%8B_(11060632914).jpg",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "orochi-yoshitoshi-1": {
+  "file": "orochi-yoshitoshi-1.jpg",
+  "title": "Yoshitoshi Nihon-ryakushi Susanoo-no-mikoto.jpg",
+  "artist": "Tsukioka Yoshitoshi (月岡芳年, Japanese, *1839, †1892)",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Yoshitoshi_Nihon-ryakushi_Susanoo-no-mikoto.jpg",
+  "size": [
+   1920,
+   1080
+  ]
+ },
+ "iwato-kunisada": {
+  "file": "iwato-kunisada.jpg",
+  "title": "Origin of Iwato Kagura Dance Amaterasu by Toyokuni III (Kunisada) 1856.png",
+  "artist": "Toyokuni III (Kunisada)",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Origin_of_Iwato_Kagura_Dance_Amaterasu_by_Toyokuni_III_(Kunisada)_1856.png",
+  "size": [
+   2935,
+   1400
+  ]
+ },
+ "okuninushi-kyoto": {
+  "file": "okuninushi-kyoto.jpg",
+  "title": "Jishu-jinja Shintô Shrine - Bronze statues of Ôkuninushi and white rabbit.jpg",
+  "artist": "Yanajin33",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Jishu-jinja_Shint%C3%B4_Shrine_-_Bronze_statues_of_%C3%94kuninushi_and_white_rabbit.jpg",
+  "size": [
+   1800,
+   2400
+  ]
+ },
+ "sanbe-1": {
+  "file": "sanbe-1.jpg",
+  "title": "Mount Sanbe 2023 Jan 03 02-28PM.jpeg",
+  "artist": "Nesnad",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mount_Sanbe_2023_Jan_03_02-28PM.jpeg",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "mihonoseki-meotoiwa": {
+  "file": "mihonoseki-meotoiwa.jpg",
+  "title": "Meoto Iwa (Mihonoseki).jpg",
+  "artist": "Aimaimyi",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Meoto_Iwa_(Mihonoseki).jpg",
+  "size": [
+   2400,
+   1487
+  ]
+ },
+ "shimane-iss": {
+  "file": "shimane-iss.jpg",
+  "title": "ISS039-E-18167 - View of Japan.jpg",
+  "artist": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:ISS039-E-18167_-_View_of_Japan.jpg",
+  "size": [
+   2400,
+   1597
+  ]
+ },
+ "miho-shrine-1": {
+  "file": "miho-shrine-1.jpg",
+  "title": "美保神社.JPG",
+  "artist": "SNHRRN",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%E7%BE%8E%E4%BF%9D%E7%A5%9E%E7%A4%BE.JPG",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "kojindani-site-replica": {
+  "file": "kojindani-site-replica.jpg",
+  "title": "Koujindani Remains 03.JPG",
+  "artist": "by Reggaeman",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Koujindani_Remains_03.JPG",
+  "size": [
+   1600,
+   1064
+  ]
+ },
+ "kojindani-swords-wall": {
+  "file": "kojindani-swords-wall.jpg",
+  "title": "150322 Shimane Museum of Ancient Izumo Japan01s.jpg",
+  "artist": "663highland",
+  "license": "CC BY 2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:150322_Shimane_Museum_of_Ancient_Izumo_Japan01s.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "kamo-dotaku-18": {
+  "file": "kamo-dotaku-18.jpg",
+  "title": "加茂岩倉遺跡 18号銅鐸.JPG",
+  "artist": "Saigen Jiro",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E5%8A%A0%E8%8C%82%E5%B2%A9%E5%80%89%E9%81%BA%E8%B7%A1_18%E5%8F%B7%E9%8A%85%E9%90%B8.JPG",
+  "size": [
+   1798,
+   2400
+  ]
+ },
+ "yayoi-diorama": {
+  "file": "yayoi-diorama.jpg",
+  "title": "150322 Shimane Museum of Ancient Izumo Japan18s.jpg",
+  "artist": "663highland",
+  "license": "CC BY 2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:150322_Shimane_Museum_of_Ancient_Izumo_Japan18s.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "hii-river-1": {
+  "file": "hii-river-1.jpg",
+  "title": "Otsutown Izumocity Shimanepref Hii river.JPG",
+  "artist": "Mti",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Otsutown_Izumocity_Shimanepref_Hii_river.JPG",
+  "size": [
+   2304,
+   1536
+  ]
+ },
+ "hii-river-2": {
+  "file": "hii-river-2.jpg",
+  "title": "斐伊川 - panoramio.jpg",
+  "artist": "Multi Ewell",
+  "license": "CC BY 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%E6%96%90%E4%BC%8A%E5%B7%9D_-_panoramio.jpg",
+  "size": [
+   2400,
+   1349
+  ]
+ },
+ "dotaku-kagawa": {
+  "file": "dotaku-kagawa.jpg",
+  "title": "Dotaku (bell-shaped bronze), Yayoi period, 2nd-1st century BC, reportedly from Kagawa, a National Treasure - Tokyo National Museum - DSC06320.JPG",
+  "artist": "Daderot",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Dotaku_(bell-shaped_bronze),_Yayoi_period,_2nd-1st_century_BC,_reportedly_from_Kagawa,_a_National_Treasure_-_Tokyo_National_Museum_-_DSC06320.JPG",
+  "size": [
+   1565,
+   2400
+  ]
+ },
+ "dotaku-late-large": {
+  "file": "dotaku-late-large.jpg",
+  "title": "DotakuBronzeBellLateYayoi3rdCenturyCE.jpg",
+  "artist": "PHGCOM",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:DotakuBronzeBellLateYayoi3rdCenturyCE.jpg",
+  "size": [
+   1800,
+   2400
+  ]
+ },
+ "kojindani-swords-case": {
+  "file": "kojindani-swords-case.jpg",
+  "title": "荒神谷遺跡 銅剣・銅矛.JPG",
+  "artist": "Saigen Jiro",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E8%8D%92%E7%A5%9E%E8%B0%B7%E9%81%BA%E8%B7%A1_%E9%8A%85%E5%89%A3%E3%83%BB%E9%8A%85%E7%9F%9B.JPG",
+  "size": [
+   2400,
+   1596
+  ]
+ },
+ "kamo-site-dotaku": {
+  "file": "kamo-site-dotaku.jpg",
+  "title": "Doutaku in Kamoiwakura ruins.JPG",
+  "artist": "Sapphire123",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Doutaku_in_Kamoiwakura_ruins.JPG",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "autumn-mikoshi": {
+  "file": "autumn-mikoshi.jpg",
+  "title": "Shrine carriers carrying the Mikoshi (6454021625).jpg",
+  "artist": "Maarten Heerlien from Voorschoten, The Netherlands",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Shrine_carriers_carrying_the_Mikoshi_(6454021625).jpg",
+  "size": [
+   2400,
+   1607
+  ]
+ },
+ "orochi-chikanobu": {
+  "file": "orochi-chikanobu.jpg",
+  "title": "Susanoo rescues Kushinada Hime by Toyohara Chikanobu 1886.jpg",
+  "artist": "Toyohara Chikanobu",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Susanoo_rescues_Kushinada_Hime_by_Toyohara_Chikanobu_1886.jpg",
+  "size": [
+   1722,
+   2400
+  ]
+ },
+ "sonnonagahama": {
+  "file": "sonnonagahama.jpg",
+  "title": "山頂から見た薗の長濱.jpg",
+  "artist": "Koda6029",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%E5%B1%B1%E9%A0%82%E3%81%8B%E3%82%89%E8%A6%8B%E3%81%9F%E8%96%97%E3%81%AE%E9%95%B7%E6%BF%B1.jpg",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "yumigahama-daisen": {
+  "file": "yumigahama-daisen.jpg",
+  "title": "Tottori-Yumigahama Beach-xl.jpg",
+  "artist": "米子市",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Tottori-Yumigahama_Beach-xl.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "yumigahama-hill": {
+  "file": "yumigahama-hill.jpg",
+  "title": "Yumigahama Peninsula.jpg",
+  "artist": "SNHRRN",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Yumigahama_Peninsula.jpg",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "shinji-sunset-2": {
+  "file": "shinji-sunset-2.jpg",
+  "title": "Sunset On Lake Shinji (100916655).jpeg",
+  "artist": "Firas Kraïem",
+  "license": "CC BY 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sunset_On_Lake_Shinji_(100916655).jpeg",
+  "size": [
+   2048,
+   1365
+  ]
+ },
+ "kagura-orochi-1": {
+  "file": "kagura-orochi-1.jpg",
+  "title": "Susanoo-Orochi.jpg",
+  "artist": "pattio (投稿者編集/Myself) , Japanese",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Susanoo-Orochi.jpg",
+  "size": [
+   2000,
+   1200
+  ]
+ },
+ "matsuho-dotaku-w": {
+  "file": "matsuho-dotaku-w.jpg",
+  "title": "松帆銅鐸.jpg",
+  "artist": "アトさん",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:%E6%9D%BE%E5%B8%86%E9%8A%85%E9%90%B8.jpg",
+  "size": [
+   1804,
+   570
+  ]
+ },
+ "nishidani-2": {
+  "file": "nishidani-2.jpg",
+  "title": "Nishidani Graves-2, funkyu.jpg",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Nishidani_Graves-2,_funkyu.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "tamatsukuri-site": {
+  "file": "tamatsukuri-site.jpg",
+  "title": "140427 Izumo Tamatsukuri Historical Park Matsue Shimane pref Japan01bs4.jpg",
+  "artist": "663highland",
+  "license": "CC BY 2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:140427_Izumo_Tamatsukuri_Historical_Park_Matsue_Shimane_pref_Japan01bs4.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "lelang-incense": {
+  "file": "lelang-incense.jpg",
+  "title": "Incense burner, attributed to Nangnang, (Lelang) tomb, Korea, 1st to 3rd century AD, ceramic, green glaze - Tokyo National Museum - Tokyo, Japan - DSC08229.jpg",
+  "artist": "Daderot",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Incense_burner,_attributed_to_Nangnang,_(Lelang)_tomb,_Korea,_1st_to_3rd_century_AD,_ceramic,_green_glaze_-_Tokyo_National_Museum_-_Tokyo,_Japan_-_DSC08229.jpg",
+  "size": [
+   1781,
+   2400
+  ]
+ },
+ "dainenji-sekkan": {
+  "file": "dainenji-sekkan.jpg",
+  "title": "Imaichi Dainenji Kofun, genshitsu, sekkan-1.jpg",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Imaichi_Dainenji_Kofun,_genshitsu,_sekkan-1.jpg",
+  "size": [
+   2400,
+   1580
+  ]
+ },
+ "todaiji-daibutsuden": {
+  "file": "todaiji-daibutsuden.jpg",
+  "title": "Daibutsu-den in Todaiji Nara01bs3200.jpg",
+  "artist": "663highland",
+  "license": "CC BY 2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:Daibutsu-den_in_Todaiji_Nara01bs3200.jpg",
+  "size": [
+   2400,
+   1598
+  ]
+ },
+ "taisha-pano-w": {
+  "file": "taisha-pano-w.jpg",
+  "title": "Izumo grand shrine - panorama.jpg",
+  "artist": "Nesnad",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo_grand_shrine_-_panorama.jpg",
+  "size": [
+   3840,
+   764
+  ]
+ },
+ "taisha-kagura": {
+  "file": "taisha-kagura.jpg",
+  "title": "Izumo Taisha Kagura.jpg",
+  "artist": "iku",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo_Taisha_Kagura.jpg",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "taisha-karihaiden": {
+  "file": "taisha-karihaiden.jpg",
+  "title": "Izumo Taisha Karihaiden.JPG",
+  "artist": "by Reggaeman",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo_Taisha_Karihaiden.JPG",
+  "size": [
+   1600,
+   1064
+  ]
+ },
+ "kumano-taisha": {
+  "file": "kumano-taisha.jpg",
+  "title": "Kumano taisha.jpg",
+  "artist": "by Monado",
+  "license": "CC BY-SA 2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:Kumano_taisha.jpg",
+  "size": [
+   2400,
+   1607
+  ]
+ },
+ "seasnake-1": {
+  "file": "seasnake-1.jpg",
+  "title": "Yellow Bellied Sea Snake in Two Oceans Aquarium 1.jpg",
+  "artist": "Sherwin",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Yellow_Bellied_Sea_Snake_in_Two_Oceans_Aquarium_1.jpg",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "mankusen-shrine": {
+  "file": "mankusen-shrine.jpg",
+  "title": "Makusenoyashiro.JPG",
+  "artist": "tanohei",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Makusenoyashiro.JPG",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "hiroshige-izumo": {
+  "file": "hiroshige-izumo.jpg",
+  "title": "Afbeelding van de Hotohoto ceremonie bij het Oyashiro heiligdom in de provincie Izumi. Izumo Taisha Hotohoto no zu (titel op object) Beroemde plaatsen in de meer dan 60 provincies (serietitel) Rokuju yoshu meisho zue , RP-P-1956-751.jpg",
+  "artist": "Rijksmuseum",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Afbeelding_van_de_Hotohoto_ceremonie_bij_het_Oyashiro_heiligdom_in_de_provincie_Izumi._Izumo_Taisha_Hotohoto_no_zu_(titel_op_object)_Beroemde_plaatsen_in_de_meer_dan_60_provincies_(serietitel)_Rokuju_yoshu_meisho_zue_,_RP-P-1956-751.jpg",
+  "size": [
+   1634,
+   2400
+  ]
+ },
+ "hakuto-coast": {
+  "file": "hakuto-coast.jpg",
+  "title": "Tottori-Morning on the Hakuto Coast. -xl.jpg",
+  "artist": "rikky_photography",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Tottori-Morning_on_the_Hakuto_Coast._-xl.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "hakuto-usagi": {
+  "file": "hakuto-usagi.jpg",
+  "title": "Tottori Yazu-cho Hakuto Shrine Koma Usagi.jpg",
+  "artist": "Msht05",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Tottori_Yazu-cho_Hakuto_Shrine_Koma_Usagi.jpg",
+  "size": [
+   2048,
+   1536
+  ]
+ },
+ "orochi-print-old": {
+  "file": "orochi-print-old.jpg",
+  "title": "Susano-o no Mikoto Killing the Eight-headed Dragon.jpg",
+  "artist": "Torii Kiyomasu II",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Susano-o_no_Mikoto_Killing_the_Eight-headed_Dragon.jpg",
+  "size": [
+   1148,
+   2400
+  ]
+ },
+ "inasa-sanbe-dawn": {
+  "file": "inasa-sanbe-dawn.jpg",
+  "title": "Inasa coast and a distant view of Mt. Sanbe Dec 20, 2015.jpg",
+  "artist": "mstk east",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Inasa_coast_and_a_distant_view_of_Mt._Sanbe_Dec_20,_2015.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "orochi-chikanobu-tri": {
+  "file": "orochi-chikanobu-tri.jpg",
+  "title": "YamataNoOrochi.jpg",
+  "artist": "Toyohara Chikanobu (豊原周延)",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:YamataNoOrochi.jpg",
+  "size": [
+   1662,
+   801
+  ]
+ },
+ "izumo-plain-satellite": {
+  "file": "izumo-plain-satellite.jpg",
+  "title": "Japan, Shimane - Hii river 2018.jpg",
+  "artist": "USGS Landsat",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Japan,_Shimane_-_Hii_river_2018.jpg",
+  "size": [
+   1396,
+   1080
+  ]
+ },
+ "kagura-orochi-2": {
+  "file": "kagura-orochi-2.jpg",
+  "title": "Orochi 2011-09-27.jpg",
+  "artist": "Kyle McDonald",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Orochi_2011-09-27.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "tatetsuki-finds": {
+  "file": "tatetsuki-finds.jpg",
+  "title": "楯築墳丘墓 出土品.JPG",
+  "artist": "Saigen Jiro",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E6%A5%AF%E7%AF%89%E5%A2%B3%E4%B8%98%E5%A2%93_%E5%87%BA%E5%9C%9F%E5%93%81.JPG",
+  "size": [
+   2400,
+   1661
+  ]
+ },
+ "kanbara-sword": {
+  "file": "kanbara-sword.jpg",
+  "title": "神原神社古墳 素環頭大刀.JPG",
+  "artist": "Saigen Jiro",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E7%A5%9E%E5%8E%9F%E7%A5%9E%E7%A4%BE%E5%8F%A4%E5%A2%B3_%E7%B4%A0%E7%92%B0%E9%A0%AD%E5%A4%A7%E5%88%80.JPG",
+  "size": [
+   2400,
+   1599
+  ]
+ },
+ "kanbara-mirror": {
+  "file": "kanbara-mirror.jpg",
+  "title": "神原神社古墳 三角縁神獣鏡.JPG",
+  "artist": "Saigen Jiro",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E7%A5%9E%E5%8E%9F%E7%A5%9E%E7%A4%BE%E5%8F%A4%E5%A2%B3_%E4%B8%89%E8%A7%92%E7%B8%81%E7%A5%9E%E7%8D%A3%E9%8F%A1.JPG",
+  "size": [
+   2395,
+   2400
+  ]
+ },
+ "matsuho-dotaku-2": {
+  "file": "matsuho-dotaku-2.jpg",
+  "title": "松帆銅鐸 1-4号.JPG",
+  "artist": "Saigen Jiro",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E6%9D%BE%E5%B8%86%E9%8A%85%E9%90%B8_1-4%E5%8F%B7.JPG",
+  "size": [
+   2400,
+   1599
+  ]
+ },
+ "suwa-torii": {
+  "file": "suwa-torii.jpg",
+  "title": "Suwa Taisha Kamisha Honmiya Big Torii.jpg",
+  "artist": "Immanuelle",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Suwa_Taisha_Kamisha_Honmiya_Big_Torii.jpg",
+  "size": [
+   1800,
+   2400
+  ]
+ },
+ "dainenji-mound": {
+  "file": "dainenji-mound.jpg",
+  "title": "Imaichi Dainenji Kofun zenkei.JPG",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Imaichi_Dainenji_Kofun_zenkei.JPG",
+  "size": [
+   2400,
+   1568
+  ]
+ },
+ "taisha-model-2": {
+  "file": "taisha-model-2.jpg",
+  "title": "Izumo-taisha scale model 121281969 6127ff6b17 o.jpg",
+  "artist": "Blue Lotus",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo-taisha_scale_model_121281969_6127ff6b17_o.jpg",
+  "size": [
+   1902,
+   1488
+  ]
+ },
+ "taisha-keidai": {
+  "file": "taisha-keidai.jpg",
+  "title": "Izumo grand shrine - central complex.jpg",
+  "artist": "Nesnad",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo_grand_shrine_-_central_complex.jpg",
+  "size": [
+   2400,
+   2024
+  ]
+ },
+ "taisha-yatsuashimon": {
+  "file": "taisha-yatsuashimon.jpg",
+  "title": "Izumo-Taisha Hassokumon.jpg",
+  "artist": "MaedaAkihiko",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo-Taisha_Hassokumon.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "senge-takatomi": {
+  "file": "senge-takatomi.jpg",
+  "title": "千家尊福 Senge Takatomi 2.jpg",
+  "artist": "Unknown authorUnknown author",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E5%8D%83%E5%AE%B6%E5%B0%8A%E7%A6%8F_Senge_Takatomi_2.jpg",
+  "size": [
+   1729,
+   2273
+  ]
+ },
+ "kaguraden-shimenawa": {
+  "file": "kaguraden-shimenawa.jpg",
+  "title": "Kagura-den, Izumo Taisha (35952964750).jpg",
+  "artist": "Big Ben in Japan from Kawasaki, Japan",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Kagura-den,_Izumo_Taisha_(35952964750).jpg",
+  "size": [
+   2400,
+   1601
+  ]
+ },
+ "taisha-torii-haiden": {
+  "file": "taisha-torii-haiden.jpg",
+  "title": "Izumo Taisha Grand Shrine (51822283655).jpg",
+  "artist": "Raita Futo from Tokyo, Japan",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo_Taisha_Grand_Shrine_(51822283655).jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "taisha-roofs": {
+  "file": "taisha-roofs.jpg",
+  "title": "Izumo grand shrine - 2023 Aug 19 various 12 40 40 292000.jpeg",
+  "artist": "Nesnad",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo_grand_shrine_-_2023_Aug_19_various_12_40_40_292000.jpeg",
+  "size": [
+   2400,
+   1555
+  ]
+ },
+ "jukusha-1": {
+  "file": "jukusha-1.jpg",
+  "title": "Izumo Taisha-jukusha 2.JPG",
+  "artist": "by Reggaeman",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo_Taisha-jukusha_2.JPG",
+  "size": [
+   1600,
+   1064
+  ]
+ },
+ "bronze-display": {
+  "file": "bronze-display.jpg",
+  "title": "150322 Shimane Museum of Ancient Izumo Japan08s.jpg",
+  "artist": "663highland",
+  "license": "CC BY 2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:150322_Shimane_Museum_of_Ancient_Izumo_Japan08s.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "kamo-dotaku-35": {
+  "file": "kamo-dotaku-35.jpg",
+  "title": "加茂岩倉遺跡 35号銅鐸.JPG",
+  "artist": "Saigen Jiro",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E5%8A%A0%E8%8C%82%E5%B2%A9%E5%80%89%E9%81%BA%E8%B7%A1_35%E5%8F%B7%E9%8A%85%E9%90%B8.JPG",
+  "size": [
+   1801,
+   2400
+  ]
+ },
+ "sada-shrine": {
+  "file": "sada-shrine.jpg",
+  "title": "Sada jinja.jpg",
+  "artist": "by Monado",
+  "license": "CC BY-SA 2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:Sada_jinja.jpg",
+  "size": [
+   2400,
+   1607
+  ]
+ },
+ "shinji-yomegashima": {
+  "file": "shinji-yomegashima.jpg",
+  "title": "Lake-Shinji Yomegashima sunset.jpg",
+  "artist": "MaedaAkihiko",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Lake-Shinji_Yomegashima_sunset.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "suga-shrine": {
+  "file": "suga-shrine.jpg",
+  "title": "Suga jinja.jpg",
+  "artist": "by Monado",
+  "license": "CC BY-SA 2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:Suga_jinja.jpg",
+  "size": [
+   2400,
+   1607
+  ]
+ },
+ "tokushu-kidai": {
+  "file": "tokushu-kidai.jpg",
+  "title": "特殊器台・特殊壺 (複製).JPG",
+  "artist": "Saigen Jiro",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E7%89%B9%E6%AE%8A%E5%99%A8%E5%8F%B0%E3%83%BB%E7%89%B9%E6%AE%8A%E5%A3%BA_(%E8%A4%87%E8%A3%BD).JPG",
+  "size": [
+   2400,
+   1718
+  ]
+ },
+ "takemikazuchi-gakutei": {
+  "file": "takemikazuchi-gakutei.jpg",
+  "title": "武甕槌太神 Takemikazuchi by 八島岳亭 Yashima Gakutei.jpg",
+  "artist": "Yashima Gakutei",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E6%AD%A6%E7%94%95%E6%A7%8C%E5%A4%AA%E7%A5%9E_Takemikazuchi_by_%E5%85%AB%E5%B3%B6%E5%B2%B3%E4%BA%AD_Yashima_Gakutei.jpg",
+  "size": [
+   2033,
+   2325
+  ]
+ },
+ "kashima-romon": {
+  "file": "kashima-romon.jpg",
+  "title": "Kashima-jingu roumon.JPG",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Kashima-jingu_roumon.JPG",
+  "size": [
+   2400,
+   1543
+  ]
+ },
+ "matsue-evening": {
+  "file": "matsue-evening.jpg",
+  "title": "Matsue at Lake Shinji in the evening 水の都松江.jpg",
+  "artist": "Cheng-en Cheng",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Matsue_at_Lake_Shinji_in_the_evening_%E6%B0%B4%E3%81%AE%E9%83%BD%E6%9D%BE%E6%B1%9F.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "kojindani-site-1": {
+  "file": "kojindani-site-1.jpg",
+  "title": "Koujindani Remains 01.JPG",
+  "artist": "by Reggaeman",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Koujindani_Remains_01.JPG",
+  "size": [
+   1600,
+   1064
+  ]
+ },
+ "yoshinogari-sword-w": {
+  "file": "yoshinogari-sword-w.jpg",
+  "title": "Yoshinogari smart bronze sword BC1c.jpg",
+  "artist": "Pekachu",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Yoshinogari_smart_bronze_sword_BC1c.jpg",
+  "size": [
+   3500,
+   1000
+  ]
+ },
+ "korea-bronze-swords": {
+  "file": "korea-bronze-swords.jpg",
+  "title": "Yoshinogari 4 smart bronze swords from Korea penninsula BC1c.JPG",
+  "artist": "Pekachu",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Yoshinogari_4_smart_bronze_swords_from_Korea_penninsula_BC1c.JPG",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "sugitani-4": {
+  "file": "sugitani-4.jpg",
+  "title": "Sugitani Kofun Group-4, funkyu.jpg",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sugitani_Kofun_Group-4,_funkyu.jpg",
+  "size": [
+   2400,
+   1568
+  ]
+ },
+ "mukibanda-yosumi": {
+  "file": "mukibanda-yosumi.jpg",
+  "title": "Mukianda remains four corners projection grave.jpg",
+  "artist": "by Reggaeman",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mukianda_remains_four_corners_projection_grave.jpg",
+  "size": [
+   2272,
+   1704
+  ]
+ },
+ "jukusha-2": {
+  "file": "jukusha-2.jpg",
+  "title": "IzumoTaisha-jukusha (35494061934).jpg",
+  "artist": "Big Ben in Japan from Kawasaki, Japan",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:IzumoTaisha-jukusha_(35494061934).jpg",
+  "size": [
+   2400,
+   1601
+  ]
+ },
+ "izanagi-eitaku": {
+  "file": "izanagi-eitaku.jpg",
+  "title": "Kobayashi Eitaku - Izanami and Izanagi creating the Japanese Islands alternate version restored.jpg",
+  "artist": "Kobayashi Eitaku",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Kobayashi_Eitaku_-_Izanami_and_Izanagi_creating_the_Japanese_Islands_alternate_version_restored.jpg",
+  "size": [
+   2000,
+   1416
+  ]
+ },
+ "agate-stones": {
+  "file": "agate-stones.jpg",
+  "title": "Izumo Magatama-sato2.JPG",
+  "artist": "江戸村のとくぞう (Edomura no Tokuzo)",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo_Magatama-sato2.JPG",
+  "size": [
+   2400,
+   1594
+  ]
+ },
+ "futagozuka": {
+  "file": "futagozuka.jpg",
+  "title": "Yamashiro Futagozuka Kofun, funkyu.jpg",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Yamashiro_Futagozuka_Kofun,_funkyu.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "taisha-haiden": {
+  "file": "taisha-haiden.jpg",
+  "title": "Izumo-Taisha Haiden.jpg",
+  "artist": "MaedaAkihiko",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo-Taisha_Haiden.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "taisha-1999": {
+  "file": "taisha-1999.jpg",
+  "title": "Izumo-taisha-1999-3.jpg",
+  "artist": "Bigjap",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo-taisha-1999-3.jpg",
+  "size": [
+   1561,
+   947
+  ]
+ },
+ "kamosu-shrine": {
+  "file": "kamosu-shrine.jpg",
+  "title": "Kamosu jinja shaden.jpg",
+  "artist": "by Monado",
+  "license": "CC BY-SA 2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:Kamosu_jinja_shaden.jpg",
+  "size": [
+   2400,
+   1607
+  ]
+ },
+ "hinomisaki-lighthouse": {
+  "file": "hinomisaki-lighthouse.jpg",
+  "title": "Izumo Hinomisaki Lighthouse (51821560441).jpg",
+  "artist": "Raita Futo from Tokyo, Japan",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo_Hinomisaki_Lighthouse_(51821560441).jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "hinomisaki-shrine": {
+  "file": "hinomisaki-shrine.jpg",
+  "title": "Hinomisaki Shrine (51821904894).jpg",
+  "artist": "Raita Futo from Tokyo, Japan",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Hinomisaki_Shrine_(51821904894).jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "hinomisaki-cape": {
+  "file": "hinomisaki-cape.jpg",
+  "title": "Cape Hinomisaki Izumo01n4592.jpg",
+  "artist": "663highland",
+  "license": "CC BY 2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:Cape_Hinomisaki_Izumo01n4592.jpg",
+  "size": [
+   2400,
+   1598
+  ]
+ },
+ "fudoki-book": {
+  "file": "fudoki-book.jpg",
+  "title": "Izumo-no-Kuni Fudoki.jpg",
+  "artist": "Immanuelle",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo-no-Kuni_Fudoki.jpg",
+  "size": [
+   1746,
+   2400
+  ]
+ },
+ "tatetsuki-top": {
+  "file": "tatetsuki-top.jpg",
+  "title": "Tatetsuki Funkyu-bo, funcho.jpg",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Tatetsuki_Funkyu-bo,_funcho.jpg",
+  "size": [
+   2400,
+   1547
+  ]
+ },
+ "sueki-misakiyama": {
+  "file": "sueki-misakiyama.jpg",
+  "title": "御崎山古墳 須恵器.JPG",
+  "artist": "Saigen Jiro",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E5%BE%A1%E5%B4%8E%E5%B1%B1%E5%8F%A4%E5%A2%B3_%E9%A0%88%E6%81%B5%E5%99%A8.JPG",
+  "size": [
+   2400,
+   1570
+  ]
+ },
+ "dotaku-mold": {
+  "file": "dotaku-mold.jpg",
+  "title": "唐古・鍵遺跡出土 銅鐸鋳型.JPG",
+  "artist": "Saigen Jiro",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E5%94%90%E5%8F%A4%E3%83%BB%E9%8D%B5%E9%81%BA%E8%B7%A1%E5%87%BA%E5%9C%9F_%E9%8A%85%E9%90%B8%E9%8B%B3%E5%9E%8B.JPG",
+  "size": [
+   2400,
+   1517
+  ]
+ },
+ "kamo-dotaku-8": {
+  "file": "kamo-dotaku-8.jpg",
+  "title": "加茂岩倉遺跡 8号銅鐸.JPG",
+  "artist": "Saigen Jiro",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E5%8A%A0%E8%8C%82%E5%B2%A9%E5%80%89%E9%81%BA%E8%B7%A1_8%E5%8F%B7%E9%8A%85%E9%90%B8.JPG",
+  "size": [
+   2400,
+   1801
+  ]
+ },
+ "nihonshoki-tanaka": {
+  "file": "nihonshoki-tanaka.jpg",
+  "title": "Nihonshoki tanaka version.jpg",
+  "artist": "Unknown authorUnknown author",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Nihonshoki_tanaka_version.jpg",
+  "size": [
+   1472,
+   632
+  ]
+ },
+ "shimane-peninsula-sea": {
+  "file": "shimane-peninsula-sea.jpg",
+  "title": "Edge of Shimane peninsula.JPG",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Edge_of_Shimane_peninsula.JPG",
+  "size": [
+   2400,
+   1595
+  ]
+ },
+ "okuizumo-loop": {
+  "file": "okuizumo-loop.jpg",
+  "title": "島根県奥出雲町「おろちループ」付近の国道314号.jpg",
+  "artist": "Hidaka-Nyo",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%E5%B3%B6%E6%A0%B9%E7%9C%8C%E5%A5%A5%E5%87%BA%E9%9B%B2%E7%94%BA%E3%80%8C%E3%81%8A%E3%82%8D%E3%81%A1%E3%83%AB%E3%83%BC%E3%83%97%E3%80%8D%E4%BB%98%E8%BF%91%E3%81%AE%E5%9B%BD%E9%81%93314%E5%8F%B7.jpg",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "okuizumo-gorge": {
+  "file": "okuizumo-gorge.jpg",
+  "title": "Oninoshitaburui.jpg",
+  "artist": "As6022014",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Oninoshitaburui.jpg",
+  "size": [
+   2304,
+   1728
+  ]
+ },
+ "forge-edo": {
+  "file": "forge-edo.jpg",
+  "title": "Scene-de-forge-edo-p1000666.jpg",
+  "artist": "Rama",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Scene-de-forge-edo-p1000666.jpg",
+  "size": [
+   1823,
+   2400
+  ]
+ },
+ "japan-sea": {
+  "file": "japan-sea.jpg",
+  "title": "日本海.JPG",
+  "artist": "ペ有家音",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%E6%97%A5%E6%9C%AC%E6%B5%B7.JPG",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "kannazuki-kunisada": {
+  "file": "kannazuki-kunisada.jpg",
+  "title": "NDL-DC 9369970-Utagawa Kunisada-意勢固世身見立十二直 神無月夷講-crd.jpg",
+  "artist": "Utagawa Kunisada",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:NDL-DC_9369970-Utagawa_Kunisada-%E6%84%8F%E5%8B%A2%E5%9B%BA%E4%B8%96%E8%BA%AB%E8%A6%8B%E7%AB%8B%E5%8D%81%E4%BA%8C%E7%9B%B4_%E7%A5%9E%E7%84%A1%E6%9C%88%E5%A4%B7%E8%AC%9B-crd.jpg",
+  "size": [
+   1654,
+   2400
+  ]
+ },
+ "benten-aerial": {
+  "file": "benten-aerial.jpg",
+  "title": "弁天島（空撮）2022年7月11日.jpg",
+  "artist": "Tademaru",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%E5%BC%81%E5%A4%A9%E5%B3%B6%EF%BC%88%E7%A9%BA%E6%92%AE%EF%BC%892022%E5%B9%B47%E6%9C%8811%E6%97%A5.jpg",
+  "size": [
+   2400,
+   1893
+  ]
+ },
+ "taisha-snow": {
+  "file": "taisha-snow.jpg",
+  "title": "Izumo Taisha 20170126-2.jpg",
+  "artist": "Suicasmo",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo_Taisha_20170126-2.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "engishiki": {
+  "file": "engishiki.jpg",
+  "title": "Engishiki cropped Engishiki Vol 1 Flame 12.jpg",
+  "artist": "国立国会図書館",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Engishiki_cropped_Engishiki_Vol_1_Flame_12.jpg",
+  "size": [
+   2400,
+   1853
+  ]
+ },
+ "heian-jingu": {
+  "file": "heian-jingu.jpg",
+  "title": "Heian-jingu, keidai-1.jpg",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Heian-jingu,_keidai-1.jpg",
+  "size": [
+   2400,
+   1575
+  ]
+ },
+ "gaya-slag": {
+  "file": "gaya-slag.jpg",
+  "title": "Gaya Confederacy Iron Slag (17971805366).jpg",
+  "artist": "Gary Todd from Xinzheng, China",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Gaya_Confederacy_Iron_Slag_(17971805366).jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "nishidani-mound": {
+  "file": "nishidani-mound.jpg",
+  "title": "Nishidani Graves 02.JPG",
+  "artist": "by Reggaeman",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Nishidani_Graves_02.JPG",
+  "size": [
+   1600,
+   1064
+  ]
+ },
+ "kyushu-spear": {
+  "file": "kyushu-spear.jpg",
+  "title": "YayoiBronzeSpearTip1-2ndCenturyKyushu.jpg",
+  "artist": "PHGCOM",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:YayoiBronzeSpearTip1-2ndCenturyKyushu.jpg",
+  "size": [
+   1843,
+   904
+  ]
+ },
+ "matsue-pano-w": {
+  "file": "matsue-pano-w.jpg",
+  "title": "Matsue City Area from Mt.Asahi.jpg",
+  "artist": "Gkiseki",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Matsue_City_Area_from_Mt.Asahi.jpg",
+  "size": [
+   3000,
+   841
+  ]
+ },
+ "wako-museum": {
+  "file": "wako-museum.jpg",
+  "title": "Wakō Museum, Yasugi 和鋼博物館 安来市 Jul 5, 2025.jpg",
+  "artist": "Spiegel",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Wak%C5%8D_Museum,_Yasugi_%E5%92%8C%E9%8B%BC%E5%8D%9A%E7%89%A9%E9%A4%A8_%E5%AE%89%E6%9D%A5%E5%B8%82_Jul_5,_2025.jpg",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "momiji-torii": {
+  "file": "momiji-torii.jpg",
+  "title": "下賀茂神社の西参道の鳥居と紅葉 Pcs34560 IMG3374.jpg",
+  "artist": "pcs34560",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E4%B8%8B%E8%B3%80%E8%8C%82%E7%A5%9E%E7%A4%BE%E3%81%AE%E8%A5%BF%E5%8F%82%E9%81%93%E3%81%AE%E9%B3%A5%E5%B1%85%E3%81%A8%E7%B4%85%E8%91%89_Pcs34560_IMG3374.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "old-calendar": {
+  "file": "old-calendar.jpg",
+  "title": "NDL1288393 〔天文二年具注暦断簡〕.jpg",
+  "artist": "作者不明",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:NDL1288393_%E3%80%94%E5%A4%A9%E6%96%87%E4%BA%8C%E5%B9%B4%E5%85%B7%E6%B3%A8%E6%9A%A6%E6%96%AD%E7%B0%A1%E3%80%95.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "sueki-okadayama": {
+  "file": "sueki-okadayama.jpg",
+  "title": "岡田山1号墳 須恵器.JPG",
+  "artist": "Saigen Jiro",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E5%B2%A1%E7%94%B0%E5%B1%B11%E5%8F%B7%E5%A2%B3_%E9%A0%88%E6%81%B5%E5%99%A8.JPG",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "sword-mold-saga": {
+  "file": "sword-mold-saga.jpg",
+  "title": "Templates of bronze sword 1c Yasunagata Saga.JPG",
+  "artist": "Pekachu",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Templates_of_bronze_sword_1c_Yasunagata_Saga.JPG",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "yoshitake-bronze": {
+  "file": "yoshitake-bronze.jpg",
+  "title": "吉武高木遺跡 出土品.JPG",
+  "artist": "Saigen Jiro",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E5%90%89%E6%AD%A6%E9%AB%98%E6%9C%A8%E9%81%BA%E8%B7%A1_%E5%87%BA%E5%9C%9F%E5%93%81.JPG",
+  "size": [
+   2400,
+   1969
+  ]
+ },
+ "nishidani-3": {
+  "file": "nishidani-3.jpg",
+  "title": "Nishidani Graves-3, funkyu.jpg",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Nishidani_Graves-3,_funkyu.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "mukibanda-sentani": {
+  "file": "mukibanda-sentani.jpg",
+  "title": "Mukibanda Site, Sentani Funbo Group.jpg",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mukibanda_Site,_Sentani_Funbo_Group.jpg",
+  "size": [
+   2400,
+   1596
+  ]
+ },
+ "glass-beads": {
+  "file": "glass-beads.jpg",
+  "title": "Small glass beads and cilyndrical beads from Yoshinogari Site.jpg",
+  "artist": "Pekachu",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Small_glass_beads_and_cilyndrical_beads_from_Yoshinogari_Site.jpg",
+  "size": [
+   2400,
+   2400
+  ]
+ },
+ "kojiki-shinpukuji": {
+  "file": "kojiki-shinpukuji.jpg",
+  "title": "Shinpukuji-bon Kojiki (真福寺本古事記).png",
+  "artist": "Ken'yu (賢瑜), Koten Hozonkai (古典保存会)",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Shinpukuji-bon_Kojiki_(%E7%9C%9F%E7%A6%8F%E5%AF%BA%E6%9C%AC%E5%8F%A4%E4%BA%8B%E8%A8%98).png",
+  "size": [
+   1115,
+   1877
+  ]
+ },
+ "sada-shrine-2": {
+  "file": "sada-shrine-2.jpg",
+  "title": "佐太神社（松江市鹿島町）.jpg",
+  "artist": "Kamdoomi",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:%E4%BD%90%E5%A4%AA%E7%A5%9E%E7%A4%BE%EF%BC%88%E6%9D%BE%E6%B1%9F%E5%B8%82%E9%B9%BF%E5%B3%B6%E7%94%BA%EF%BC%89.jpg",
+  "size": [
+   2048,
+   1536
+  ]
+ },
+ "dotaku-bm": {
+  "file": "dotaku-bm.jpg",
+  "title": "Bell (dotaku), Yayoi people, Japan, 200 BC to 20 AD, bronze - British Museum - DSC01441.jpg",
+  "artist": "Daderot",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bell_(dotaku),_Yayoi_people,_Japan,_200_BC_to_20_AD,_bronze_-_British_Museum_-_DSC01441.jpg",
+  "size": [
+   1478,
+   2400
+  ]
+ },
+ "mukibanda-village": {
+  "file": "mukibanda-village.jpg",
+  "title": "Mukibanda Site, Mukiyama area-1.jpg",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mukibanda_Site,_Mukiyama_area-1.jpg",
+  "size": [
+   2400,
+   1596
+  ]
+ },
+ "tatara-site": {
+  "file": "tatara-site.jpg",
+  "title": "Ohitayama-tatara Iron Works 03 Dusting place of sand iron.JPG",
+  "artist": "TT mk2",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ohitayama-tatara_Iron_Works_03_Dusting_place_of_sand_iron.JPG",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "taisha-haiden-honden": {
+  "file": "taisha-haiden-honden.jpg",
+  "title": "Haiden of Izumo-taisha-1.JPG",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Haiden_of_Izumo-taisha-1.JPG",
+  "size": [
+   2400,
+   1596
+  ]
+ },
+ "kamosu-shrine-2": {
+  "file": "kamosu-shrine-2.jpg",
+  "title": "Kamosu Shrine in Matsue, Japan - 松江市の神魂神社2.jpg",
+  "artist": "Mister99",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Kamosu_Shrine_in_Matsue,_Japan_-_%E6%9D%BE%E6%B1%9F%E5%B8%82%E3%81%AE%E7%A5%9E%E9%AD%82%E7%A5%9E%E7%A4%BE2.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "kumano-haiden": {
+  "file": "kumano-haiden.jpg",
+  "title": "熊野大社拝殿.JPG",
+  "artist": "小池 隆",
+  "license": "CC BY 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%E7%86%8A%E9%87%8E%E5%A4%A7%E7%A4%BE%E6%8B%9D%E6%AE%BF.JPG",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "museum-ext-3": {
+  "file": "museum-ext-3.jpg",
+  "title": "Shimane Museum of Ancient Izumo.JPG",
+  "artist": "Reggaeman",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Shimane_Museum_of_Ancient_Izumo.JPG",
+  "size": [
+   1600,
+   1064
+  ]
+ },
+ "unnan-hills": {
+  "file": "unnan-hills.jpg",
+  "title": "Unnan Shimane 2023 Aug 20 08-33 AM.jpeg",
+  "artist": "Nesnad",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Unnan_Shimane_2023_Aug_20_08-33_AM.jpeg",
+  "size": [
+   2400,
+   1635
+  ]
+ },
+ "unnan-valley": {
+  "file": "unnan-valley.jpg",
+  "title": "Unnan Shimane - 2023 Jan 4 various 15 46 36 745000.jpeg",
+  "artist": "Nesnad",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Unnan_Shimane_-_2023_Jan_4_various_15_46_36_745000.jpeg",
+  "size": [
+   2400,
+   1349
+  ]
+ },
+ "kanbara-shrine": {
+  "file": "kanbara-shrine.jpg",
+  "title": "Kanbara-jinja (Unnan), torii.jpg",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Kanbara-jinja_(Unnan),_torii.jpg",
+  "size": [
+   2400,
+   1598
+  ]
+ },
+ "shin-no-mihashira": {
+  "file": "shin-no-mihashira.jpg",
+  "title": "Izumo-shrine Shin-no-mihashira.jpg",
+  "artist": "Miya.m",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo-shrine_Shin-no-mihashira.jpg",
+  "size": [
+   1600,
+   1200
+  ]
+ },
+ "izumo-coast": {
+  "file": "izumo-coast.jpg",
+  "title": "Izumo coastline 001.jpg",
+  "artist": "Naokijp",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo_coastline_001.jpg",
+  "size": [
+   2400,
+   1800
+  ]
+ },
+ "kamakura-honden-model": {
+  "file": "kamakura-honden-model.jpg",
+  "title": "Izumooyashiro11.JPG",
+  "artist": "Jnn",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumooyashiro11.JPG",
+  "size": [
+   1600,
+   1200
+  ]
+ },
+ "taisha-1922": {
+  "file": "taisha-1922.jpg",
+  "title": "Izumo Taisha 1922.jpg",
+  "artist": "皇国敬神会",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo_Taisha_1922.jpg",
+  "size": [
+   1510,
+   1076
+  ]
+ },
+ "taisha-honden-roofs": {
+  "file": "taisha-honden-roofs.jpg",
+  "title": "Izumo-taisha14bs4592.jpg",
+  "artist": "663highland",
+  "license": "CC BY 2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo-taisha14bs4592.jpg",
+  "size": [
+   2400,
+   1598
+  ]
+ },
+ "seasnake-beach": {
+  "file": "seasnake-beach.jpg",
+  "title": "Yellow-bellied sea snake.jpg",
+  "artist": "Anik Sarker",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Yellow-bellied_sea_snake.jpg",
+  "size": [
+   2400,
+   1600
+  ]
+ },
+ "iron-sand": {
+  "file": "iron-sand.jpg",
+  "title": "Iron sand attracted to a magnet.jpg",
+  "artist": "Jlahorn",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Iron_sand_attracted_to_a_magnet.jpg",
+  "size": [
+   2265,
+   1488
+  ]
+ },
+ "musubi-statue": {
+  "file": "musubi-statue.jpg",
+  "title": "Izumo Oyashiro -03.jpg",
+  "artist": "Aimaimyi",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Izumo_Oyashiro_-03.jpg",
+  "size": [
+   2694,
+   1400
+  ]
  }
 }
