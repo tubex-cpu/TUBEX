@@ -11,6 +11,7 @@
 | shoku-karakuri-week1 | 新規チャンネル「食のからくり帳」（`channels/shoku-karakuri/`） | 初週の企画。案は `channels/shoku-karakuri/week1_plan.md` | **企画2 回転寿司ラーメン・企画1 ホテル朝食は Codex 正式監査合格（2026-10-27、https://github.com/tubex-cpu/TUBEX/pull/16#issuecomment-6438046818 ）→ ゲートA承認待ち**。企画3 時間価格＝候補（昼夜5件比較が未達）／予備 マック＝予備（現行公式の照合未了）。**初週の3本目は未定**。ゲートA承認前は台本・タイトル確定・サムネ・動画に進まない |
 | habi-001-sumer | ① ハビ判事（`channels/habi-judge/`） | 日本人とシュメール判決（社長作の台本あり） | **納品済み・重複制作しない**（2026-10-25 指示）。公開実績は別途URLで確認し、未確認でも再制作しない |
 | habi-002-mu | ① ハビ判事 | ムー大陸（社長選択 2026-10-26）。約60分 | ゲートA 承認済み（2026-10-26）。台本初稿 `episodes/habi-002-mu/05_script.md`（約53分で確定）。一次資料の確認・Codex 監査・タイトル（工程4）が残る |
+| chizu-001-australia-coast | 地図×雑学チャンネル（仮称「地図の向こうの理由」・名前未定・`channels/chizu/`） | なぜオーストラリアの大都市は、海の近くに集まるのか？（Codex の試作を 2026-11-03 に社長の指示で Claude が引き継ぎ） | 台本 v2 `episodes/chizu-001-australia-coast/05_script_v2.md`・全編絵コンテ v1 `storyboard_v1.md`・出典表 `01_research.md` を作成 → Codex 監査待ち。ネタ10案 `channels/chizu/ideas.md` は社長の選択待ち。素材の確保・ナレーション・書き出しは未着手 |
 | note | note（有料 note・ジャンル：不倫・`pipeline/README.md`「note」） | 不倫ジャンルの切り口・価格帯の方針（ゲートN0）。主案は `channels/furin_atode/CHANNEL.md`（2026-10-25 社長方針）。運用はnoteのみ（他SNSは扱わない）。YouTube とは独立して進める | 工程N0。方針案 `notes/00_strategy.md`（2026-10-25、CHANNEL.md の読者・4テーマで作り直し。PR #14 の草案は書き換えていない）。競合原ページの確認が残件・Codex 監査前。N0承認前のN1以降は禁止 |
 | 001-sleep-without-brain | （試運転） | 脳がない生き物も眠る | **試運転として終了**（2026-10-10 社長判断）。パイプラインの動作確認用サンプル。公開しない |
 
