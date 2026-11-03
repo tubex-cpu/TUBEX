@@ -22,3 +22,4 @@ video/public/episodes/habi-002-mu/
 # パイロット動画の監査用軽量版
 !pilots/*/preview.mp4
 !pilots/*/preview_*.mp4
+!pilots/*/preview_full.mp4
