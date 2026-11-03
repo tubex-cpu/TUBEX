@@ -35,12 +35,15 @@ for ((i=0; i<N; i++)); do s=$((i*CH)); e=$((s+CH-1)); [ $e -ge $TOTAL ] && e=$((
 done
 echo "encode $(date +%T)"
 ffmpeg -loglevel error -y -f concat -safe 0 -i $C/alist.txt -af loudnorm=I=-14:TP=-1.5:LRA=11 -ar 48000 $C/audio.wav
+# ディスクを節約：区間ごとの音声は、まとめたら消す
+rm -f $C/a[0-9]*.wav
 
 # 3. 1本の1080pにまとめる（映像 VB kbps・音声128kbps。1150kbpsなら1時間で約580MB）
 F=out/$NAME-1080p.mp4
 ffmpeg -loglevel error -y -f concat -safe 0 -i $C/list.txt -c:v libx264 -preset slow -tune stillimage -b:v ${VB}k -pass 1 -passlogfile out/pass1080 -an -f mp4 /dev/null
 ffmpeg -loglevel error -y -f concat -safe 0 -i $C/list.txt -i $C/audio.wav -map 0:v -map 1:a -c:v libx264 -preset slow -tune stillimage -b:v ${VB}k -pass 2 -passlogfile out/pass1080 -c:a aac -b:a 128k -shortest -movflags +faststart $F
 echo "full $(du -m $F | cut -f1)MB $(date +%T)"
+rm -f out/pass1080*.mbtree
 
 # 4. GitHubの100MB制限に合わせて97MBずつに分割し、つなぎ方と確認用の値を添える
 D=完成動画; mkdir -p $D
@@ -59,6 +62,8 @@ cat $PARTS> $NAME-1080p.mp4
 sha256sum -c $NAME-1080p.mp4.sha256
 EOS
 chmod +x $D/join.sh
+# 分割ファイルができたら、元の1本は消してよい（join.sh で同じものに戻る）
+rm -f $F
 
 # 5. チャット用の確認版（360p・30MB以下）
 DUR=$(python3 -c "print($TOTAL/30)")
