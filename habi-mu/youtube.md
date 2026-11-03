@@ -72,108 +72,47 @@
 ナレーション：VOICEVOX:玄野武宏
 BGM・効果音：オリジナル
 地図：Natural Earth（陸地・海底の深さのデータ。パブリックドメイン）をもとに作成
-写真・資料（Wikimedia Commons。登場順）
-・ナン・マドール（ポンペイ島） Uhooep / CC BY-SA 4.0
-・ナン・マドールの玄武岩の壁 Patrick Nunn / CC BY-SA 4.0
-・アフ・トンガリキ Rivi / CC BY-SA 3.0
-・与那国島海底地形「メインテラス」 Melkov / CC0
-・マドリード絵文書（複製）アメリカ博物館 Simon Burchell / CC BY-SA 3.0
-・ナン・マドールとその周り Uhooep / CC BY-SA 4.0
-・月夜の海 Pierce, C.C. (Charles C.), 1861-1946 / パブリックドメイン
-・ムー大陸の地図（新聞の切り抜き） James Churchward / パブリックドメイン
-・ブラッスール・ド・ブールブール Nicolas Claude Persus (1831-1909) / パブリックドメイン
-・パレンケ 碑文の神殿 Bernard DUPONT / CC BY-SA 2.0
-・アメリカ博物館（マドリード） Emilio J. Rodríguez Posada / CC BY-SA 4.0
-・ディエゴ・デ・ランダ / パブリックドメイン
-・ランダの記録にある「マヤのアルファベット」 / パブリックドメイン
-・マドリード絵文書 アメリカ博物館 Michel wal / CC BY-SA 3.0
-・マドリード絵文書（複製） Simon Burchell / CC BY-SA 3.0
-・マドリード絵文書（複製） Simon Burchell / CC BY-SA 3.0
-・マドリード絵文書（複製） Simon Burchell / CC BY-SA 3.0
-・ユーリー・クノロゾフの記念像（メリダ） Yodigo / CC BY-SA 4.0
-・コパンの石碑22 Morley, Sylvanus Griswold / パブリックドメイン
-・キャザウッド「コパンの石碑」 Frederick Catherwood / CC0
-・オーギュスト・ル・プロンジョン Alice Dixon Le Plongeon (1851-1910) / パブリックドメイン
-・アリス・ル・プロンジョン Augustus Le Plongeon (1825-1908) / パブリックドメイン
-・チチェン・イッツァのル・プロンジョン（1875年） / パブリックドメイン
-・『女王ムーとエジプトのスフィンクス』（1896年）の図版 Augustus Le Plongeon (1826-1908) / パブリックドメイン
-・ギザの大スフィンクス Hamerani / CC BY-SA 4.0
-・『女王ムーとエジプトのスフィンクス』（1896年）の図版 Augustus Le Plongeon (1826-1908) / パブリックドメイン
-・『女王ムーとエジプトのスフィンクス』（1896年）の図版 Augustus Le Plongeon (1826-1908) / パブリックドメイン
-・デイヴィッド・ロバーツ「ギザのスフィンクス」（1839年） David Roberts / パブリックドメイン
-・ル・プロンジョンの発掘跡 チチェン・イッツァ（1924年） Jerome O. Kilmartin / パブリックドメイン
-・ジェームズ・チャーチワード（1926年） / パブリックドメイン
-・『失われたムー大陸』（1926年）の地図 James Churchward / パブリックドメイン
-・ナン・マドールの遺跡 Uhooep / CC BY-SA 4.0
-・ウィリアム・ニーヴン / パブリックドメイン
-・ナン・マドール Uhooep / CC BY-SA 4.0
-・ナン・マドールの巨石遺跡 Patrick Nunn / CC BY-SA 4.0
-・ナン・マドールの遺跡 Uhooep / CC BY-SA 4.0
-・ナン・マドールの巨石遺跡 Patrick Nunn / CC BY-SA 4.0
-・ナン・マドールの遺跡 Uhooep / CC BY-SA 4.0
-・ナン・マドールの巨石遺跡 Patrick Nunn / CC BY-SA 4.0
-・ポンペイ島（1899〜1900年） / パブリックドメイン
-・ナン・マドールの巨石遺跡 Patrick Nunn / CC BY-SA 4.0
-・ナン・マドールの石積み Patrick Nunn / CC BY-SA 4.0
-・ナン・マドールの巨石遺跡 Patrick Nunn / CC BY-SA 4.0
-・アフ・ナウナウ Docrgd / CC BY 4.0
-・イースター島の風景 Bjørn Christian Tørrissen / CC BY-SA 3.0
-・アフ・トンガリキ TravelingOtter / CC BY 2.0
-・アフ・トンガリキ Sznegra / CC BY-SA 3.0
-・アフ・アカハンガ近くのモアイ Arian Zwegers / CC BY 2.0
-・アフ・アキビ kallerna / CC BY-SA 4.0
-・ラノ・ララク Bjørn Christian Tørrissen / CC BY-SA 3.0
-・ラノ・ララクのモアイ Arian Zwegers / CC BY 2.0
-・アフ・トンガリキ Rocío Mantis / CC BY-SA 4.0
-・ラノ・ララクの石切り場 Dennis G. Jarvis / CC BY-SA 2.0
-・「旅するモアイ」とアフ・トンガリキ Bjørn Christian Tørrissen / CC BY-SA 4.0
-・アフ・トンガリキの15体のモアイ / CC BY-SA 3.0
-・イースター島の風景 Otávio Nogueira / CC BY 2.0
-・星の羅針盤 Newportm / CC BY-SA 3.0
-・ホクレア号（1976年） Phil Uhl / CC BY-SA 3.0
-・マウ・ピアイルグ Poro amara / CC BY-SA 4.0
-・イースター島の海岸 Koppas / CC BY-SA 3.0
-・マナバイ（石で囲んだ畑） Dennis G. Jarvis / CC BY-SA 2.0
-・ハンガロア（イースター島） Chris Hoare / CC BY 2.0
-・与那国島（国際宇宙ステーションから） / パブリックドメイン
-・与那国島海底地形 Melkov / CC0
-・与那国島海底地形のテラス Melkov / CC0
-・沖ノ島 Indiana jo / CC BY-SA 4.0
-・宗像大社沖津宮 Indiana jo / CC BY-SA 4.0
-・北センチネル島 PJeganathan / CC BY-SA 4.0
-・タスマン海とサンゴ海（国際宇宙ステーションから） NASA / パブリックドメイン
-・研究船サザン・サーベイヤー号 Edwina Hollander, CSIRO / CC BY 3.0
-・フィリップ・スクレーター / パブリックドメイン
-・ワオキツネザル（マダガスカル） Charles J. Sharp / CC BY-SA 4.0
-・ワオキツネザル（マダガスカル） Charles J. Sharp / CC BY-SA 4.0
-・アルフレート・ヴェーゲナー / パブリックドメイン
-・太平洋の夕暮れ Ryan Hallock / CC BY 2.0
-・花こう岩の岩場 Pi3.124 / CC BY-SA 4.0
-・太平洋の海底の枕状溶岩（玄武岩） / パブリックドメイン
-・ヘス・ギヨーなどの海底地形図 / パブリックドメイン
-・ミクロネシアの海底地形図 / パブリックドメイン
-・国際宇宙ステーションから見た富士山 NASA Johnson Space Center / パブリックドメイン
-・津波避難の案内（鎌倉） DimiTalen / CC0
-・日本列島の地形図 / パブリックドメイン
-・太平洋の夕暮れ Rick Obst / CC BY 4.0
-・ニュージーランドのサザンアルプス lumoplank / CC0
-・ジーランディアの地形図 Ulrich Lange, Bochum, Germany / CC0
-・ニューカレドニア（国際宇宙ステーションから） / パブリックドメイン
-・ニュージーランドのサザンアルプス W. Bulach / CC BY-SA 4.0
-・クレメント・リードによるドッガーバンクの地図（1913年） Clement Reid / パブリックドメイン
-・星空とアフ・トンガリキのモアイ Anne Dirkse (www.annedirkse.com) / CC BY-SA 4.0
-・ナン・マドールの巨石遺跡 Patrick Nunn / CC BY-SA 4.0
-・ホクレア号の帰港 Matsujima / CC BY-SA 4.0
-・イースター島のアフ / CC BY 2.5
-・イースター島（国際宇宙ステーションから） / パブリックドメイン
-・ロンゴロンゴの板（ホノルル） / CC BY-SA 3.0
-・ロンゴロンゴの板C「ママリ」 / CC BY-SA 3.0
-・インダス文明の印章（ハラッパー） Gary Todd / CC0
-・ロンゴロンゴの板C（スミソニアン協会年報 1889年） Internet Archive Book Images / No restrictions
-・ロンゴロンゴの板B「アルク・クレンガ」 / CC BY-SA 3.0
-・夜明けのアフ・トンガリキ Claire Provost / CC BY-SA 3.0
-・太平洋の夕日（マウイ島） Peckphotographyart / CC BY-SA 4.0
-・夜明けのアフ・トンガリキ Claire Provost / CC BY-SA 3.0
-・ナン・マドールの遺跡 Uhooep / CC BY-SA 4.0
+写真・資料：Wikimedia Commons（作者・ライセンス：写したもの）
+・Uhooep（CC BY-SA 4.0）：ナン・マドール、ナン・マドールとその周り、ナン・マドールの遺跡
+・Patrick Nunn（CC BY-SA 4.0）：ナン・マドールの玄武岩の壁、ナン・マドールの巨石遺跡、ナン・マドールの石積み
+・Rivi（CC BY-SA 3.0）：アフ・トンガリキ
+・Simon Burchell（CC BY-SA 3.0）：マドリード絵文書（複製）アメリカ博物館、マドリード絵文書
+・Bernard DUPONT（CC BY-SA 2.0）：パレンケ
+・Emilio J. Rodríguez Posada（CC BY-SA 4.0）：アメリカ博物館
+・Michel wal（CC BY-SA 3.0）：マドリード絵文書
+・Yodigo（CC BY-SA 4.0）：ユーリー・クノロゾフの記念像
+・Hamerani（CC BY-SA 4.0）：ギザの大スフィンクス
+・Docrgd（CC BY 4.0）：アフ・ナウナウ
+・Bjørn Christian Tørrissen（CC BY-SA 3.0）：イースター島の風景、ラノ・ララク
+・TravelingOtter（CC BY 2.0）：アフ・トンガリキ
+・Sznegra（CC BY-SA 3.0）：アフ・トンガリキ
+・Arian Zwegers（CC BY 2.0）：アフ・アカハンガ近くのモアイ、ラノ・ララクのモアイ
+・kallerna（CC BY-SA 4.0）：アフ・アキビ
+・Rocío Mantis（CC BY-SA 4.0）：アフ・トンガリキ
+・Dennis G. Jarvis（CC BY-SA 2.0）：ラノ・ララクの石切り場、マナバイ
+・Bjørn Christian Tørrissen（CC BY-SA 4.0）：「旅するモアイ」とアフ・トンガリキ
+・Bjørn Christian Tørrissen（改変：George Tsiagalakis）（CC BY-SA 3.0）：アフ・トンガリキの15体のモアイ
+・Otávio Nogueira（CC BY 2.0）：イースター島の風景
+・Newportm（CC BY-SA 3.0）：星の羅針盤
+・Phil Uhl（CC BY-SA 3.0）：ホクレア号
+・Poro amara（CC BY-SA 4.0）：マウ・ピアイルグ
+・Koppas（CC BY-SA 3.0）：イースター島の海岸
+・Chris Hoare（CC BY 2.0）：ハンガロア
+・Indiana jo（CC BY-SA 4.0）：沖ノ島、宗像大社沖津宮
+・PJeganathan（CC BY-SA 4.0）：北センチネル島
+・Edwina Hollander, CSIRO（CC BY 3.0）：研究船サザン・サーベイヤー号
+・Charles J. Sharp（CC BY-SA 4.0）：ワオキツネザル
+・Ryan Hallock（CC BY 2.0）：太平洋の夕暮れ
+・Pi3.124（CC BY-SA 4.0）：花こう岩の岩場
+・Rick Obst（CC BY 4.0）：太平洋の夕暮れ
+・W. Bulach（CC BY-SA 4.0）：ニュージーランドのサザンアルプス
+・Anne Dirkse (www.annedirkse.com)（CC BY-SA 4.0）：星空とアフ・トンガリキのモアイ
+・Matsujima（CC BY-SA 4.0）：ホクレア号の帰港
+・Hhooper1（英語版ウィキペディア）（CC BY 2.5）：イースター島のアフ
+・作者不明（CC BY-SA 3.0）：ロンゴロンゴの板、ロンゴロンゴの板C「ママリ」
+・トロカデロ博物館の写真（CC BY-SA 3.0）：ロンゴロンゴの板B「アルク・クレンガ」
+・Claire Provost（CC BY-SA 3.0）：夜明けのアフ・トンガリキ
+・Peckphotographyart（CC BY-SA 4.0）：太平洋の夕日
+・ほかに、パブリックドメイン・CC0の写真と資料 37点（NASA の宇宙からの写真、アメリカ地質調査所の海底地形図、19〜20世紀の古写真・図版など）
 
 #ムー大陸 #都市伝説 #ミステリー #モアイ #ナンマドール #ハビ判事

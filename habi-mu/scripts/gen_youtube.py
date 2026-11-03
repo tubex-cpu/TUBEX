@@ -37,7 +37,34 @@ for sc in order:
         if x not in ids: ids.append(x)
 ph = open(f'{root}/src/data/photos.ts').read()
 cred = {m.group(1).strip("'"): m.group(2) for m in re.finditer(r"\t('?[\w-]+'?): \{file: '[\w-]+\.jpg', credit: '([^']+)'", ph)}
-credits = '\n'.join('・' + cred[i].replace(' / Wikimedia Commons', '') for i in ids)
+# 概要欄は5000字までなので、写真のクレジットは「作者（ライセンス）：写したもの」にまとめる
+import json as _json
+cr = _json.load(open(f'{root}/public/photos/credits.json'))
+FIX = {
+    'unknown (for GFDL, cite source above as old copyright holder)': '作者不明',
+    'Photograph form the Trocadéro Museum (for GFDL, cite source above as old copyright holder)': 'トロカデロ博物館の写真',
+    'Bjørn Christian Tørrissen derivative work: George Tsiagalakis': 'Bjørn Christian Tørrissen（改変：George Tsiagalakis）',
+    'The original uploader was Hhooper1 at English Wikipedia.': 'Hhooper1（英語版ウィキペディア）',
+    'Otávio Nogueira from Fortaleza, BR': 'Otávio Nogueira',
+}
+FREE = ('Public domain', 'パブリックドメイン', 'CC0', 'No restrictions', 'PD')
+groups, free = {}, []
+for i in ids:
+    c = cr.get(i)
+    if not c:
+        continue
+    lic = c.get('license', '')
+    what = re.sub(r'（[^）]*）$', '', cred[i].split(' ')[0]) if i in cred else i
+    if any(lic.startswith(f) for f in FREE):
+        if what not in free:
+            free.append(what)
+        continue
+    who = FIX.get(c.get('artist', '').strip(), c.get('artist', '').strip()) or '作者不明'
+    g = groups.setdefault((who, lic), [])
+    if what not in g:
+        g.append(what)
+credits = '\n'.join(f'・{who}（{lic}）：' + '、'.join(w) for (who, lic), w in groups.items())
+credits += f'\n・ほかに、パブリックドメイン・CC0の写真と資料 {len(free)}点（NASA の宇宙からの写真、アメリカ地質調査所の海底地形図、19〜20世紀の古写真・図版など）'
 md = f'''# YouTube 投稿用テキスト：ムー大陸判決
 
 ## タイトル案
@@ -89,7 +116,7 @@ md = f'''# YouTube 投稿用テキスト：ムー大陸判決
 ナレーション：VOICEVOX:玄野武宏
 BGM・効果音：オリジナル
 地図：Natural Earth（陸地・海底の深さのデータ。パブリックドメイン）をもとに作成
-写真・資料（Wikimedia Commons。登場順）
+写真・資料：Wikimedia Commons（作者・ライセンス：写したもの）
 {credits}
 
 #ムー大陸 #都市伝説 #ミステリー #モアイ #ナンマドール #ハビ判事
