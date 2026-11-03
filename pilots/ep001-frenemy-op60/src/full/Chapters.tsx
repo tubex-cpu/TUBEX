@@ -112,7 +112,6 @@ const C2Step2: React.FC<SceneProps> = ({f, T}) => (
     <Chip f={f} text="手順2" sub="自分と比べる人物が登場する" />
     <YouRef f={f} />
     <Trio f={f} T={T} />
-    <div style={{position: 'absolute', right: 70, bottom: 150, fontSize: 24, color: K.sub, opacity: fadeIn(f, 20)}}>★＝自分より優秀　→＝目指す道</div>
   </Board>
 );
 const C2Step3: React.FC<SceneProps> = ({f, T}) => {
@@ -178,7 +177,6 @@ const BrainShot: React.FC<{f: number; region: 'dacc' | 'vstr'; k: number; label:
         <div style={{fontSize: 52, fontWeight: 900, color}}>{label}</div>
         <div style={{fontSize: 30, color: K.ink, marginTop: 6}}>{note}</div>
       </div>
-      <div style={{position: 'absolute', left: 60, bottom: 150, fontSize: 22, color: K.sub, fontFamily: FONT}}>脳のCGモデル（自作の模式。部位の位置はおおよそ）</div>
     </AbsoluteFill>
   );
 };
@@ -523,7 +521,6 @@ const C6Axes: React.FC<SceneProps> = ({f, T}) => {
             {Array.from({length: 10}, (_, i) => <Pop key={i} f={f} at={T('C6_5') + i * 3}><PersonIcon size={100} color={i < 5 ? K.red : '#5a6378'} /></Pop>)}
           </div>
           <Pop f={f} at={T('C6_5', 1)}><div style={{fontSize: 56, fontWeight: 900, color: K.red, marginTop: 20}}>ほぼ半分</div></Pop>
-          <div style={{fontSize: 22, color: K.sub, marginTop: 8}}>※ アイコンは割合のイメージ</div>
         </div>
       )}
     </Board>
@@ -564,7 +561,6 @@ const C6Bp: React.FC<SceneProps> = ({f, T}) => {
         <Gauge label="嫌いな相手" v={0.35 + 0.15 * res} color="#8a95ad" />
         <Gauge label="フレネミーのような相手" v={0.35 + 0.35 * res} color={K.red} />
       </div>
-      <div style={{position: 'absolute', left: 760, top: 830, fontSize: 22, color: K.sub, opacity: fadeIn(f, T('C6_9'), 12)}}>※ 説明図（上がり方の大小のイメージ。実測値ではありません）</div>
     </Board>
   );
 };
@@ -590,7 +586,6 @@ const C6Lab: React.FC<SceneProps> = ({f, T}) => {
         <Gauge label="支えてくれる友達" v={0.3 + 0.12 * res} color={K.blue} />
         <Gauge label="フレネミーのような友達" v={0.3 + 0.4 * res} color={K.red} />
       </div>
-      <div style={{position: 'absolute', left: 820, top: 830, fontSize: 22, color: K.sub, opacity: fadeIn(f, T('C6_12'), 12)}}>※ 説明図（上がり方の大小のイメージ。実測値ではありません）</div>
     </Board>
   );
 };
@@ -762,7 +757,6 @@ const C7Grid: React.FC<SceneProps> = ({f, T}) => (
         );
       })}
     </div>
-    <div style={{position: 'absolute', right: 70, bottom: 150, fontSize: 22, color: K.sub}}>例のセリフは自作</div>
   </Board>
 );
 const C7Phone4: React.FC<SceneProps> = ({f, dur}) => (

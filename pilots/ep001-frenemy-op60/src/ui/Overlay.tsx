@@ -28,7 +28,8 @@ export const Subtitles: React.FC<{data?: {start: number; end: number; sub: strin
 };
 
 // Small tag that tells what kind of picture this is (re-enactment / schematic / study figure).
-export const Tag: React.FC<{text: string; sub?: string; delay?: number}> = ({text, sub, delay = 0}) => {
+export const Tag: React.FC<{text: string; sub?: string; delay?: number}> = (_props) => null;
+export const TagOld: React.FC<{text: string; sub?: string; delay?: number}> = ({text, sub, delay = 0}) => {
   const frame = useCurrentFrame();
   const a = interpolate(frame - delay, [0, 8], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   return (

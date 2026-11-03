@@ -14,7 +14,8 @@ export const Board: React.FC<{children?: React.ReactNode; tone?: 'dark' | 'light
   <AbsoluteFill style={{fontFamily: FONT, color: tone === 'dark' ? K.ink : '#1d2230',
     background: tone === 'dark' ? 'radial-gradient(ellipse at 50% 18%, #222838 0%, #0c0f16 62%, #07080b 100%)' : 'radial-gradient(ellipse at 50% 20%, #ffffff 0%, #eeece8 60%, #dedbd5 100%)'}}>
     <AbsoluteFill style={{background: tone === 'dark' ? 'radial-gradient(ellipse at 50% 108%, rgba(232,196,106,0.10) 0%, rgba(0,0,0,0) 45%)' : 'none'}} />
-    {children}
+    {/* diagrams live in the top 84% so they never sit under the subtitles */}
+    <AbsoluteFill style={{transform: 'scale(0.84)', transformOrigin: '50% 2%'}}>{children}</AbsoluteFill>
   </AbsoluteFill>
 );
 

@@ -61,7 +61,24 @@ def synth(text):
         ma.subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(raw), "-af", af, "-ar", str(SR), "-ac", "1", str(f)], check=True)
         raw.unlink()
         kf.write_text(q["kana"])
-    return ma.read_wav(f), kf.read_text()
+    x = ma.read_wav(f)
+    # even out loudness between lines: scale so the RMS of the voiced part hits a fixed target
+    fr = 1024
+    n = len(x) // fr
+    if n > 0:
+        r = np.sqrt((x[: n * fr].reshape(n, fr) ** 2).mean(1))
+        act = r[r > r.max() * 0.15]
+        rms = float(np.sqrt((act ** 2).mean())) if len(act) else float(r.mean())
+        g = min(4.0, 0.12 / max(rms, 1e-6))
+        x = x * g
+        pk = np.abs(x).max()
+        if pk > 0.95:
+            x = np.tanh(x / pk * 1.2) / np.tanh(1.2) * 0.95
+    return x, kf.read_text()
+
+
+INSERT_AT = 18.3  # the new line (L4b) goes here; everything anchored after it moves by SHIFT
+SHIFT = 0.0
 
 
 def ensure_dict():
@@ -71,15 +88,48 @@ def ensure_dict():
         urllib.request.urlopen(urllib.request.Request(f"{VV}/user_dict_word?{q}", method="POST")).read()
 
 
+RED = ["フレネミー", "痛み", "妬み", "でもさ", "でも」", "比較", "不幸", "敵", "削られ続け", "水を差", "すり替え", "トゲ", "ヤバい", "恐ろしい", "半分", "身構え", "テロメアが", "短い"]
+YEL = ["正体", "反映", "本当の味方", "いい知らせテスト", "報酬", "自己評価維持モデル", "背側前帯状皮質", "腹側線条体", "同じ道", "近さ", "近い", "思考実験", "ほっとする", "ごほうび", "蜜", "どんな仕事するの", "どうなったの", "積極的で、建設的", "積極的で建設的", "親密さ", "分野"]
+
+
+def segments(sub):
+    # mark at most 3 words per line: red = danger / pain, yellow = key idea
+    hits = []
+    for words, c in ((RED, "r"), (YEL, "y")):
+        for w in words:
+            i = sub.find(w)
+            while i >= 0:
+                if not any(a < i + len(w) and i < b for a, b, _ in hits):
+                    hits.append((i, i + len(w), c))
+                i = sub.find(w, i + len(w))
+    hits = sorted(hits)[:3]
+    out, pos = [], 0
+    for a, b, c in hits:
+        if a > pos:
+            out.append({"t": sub[pos:a], "c": "w"})
+        out.append({"t": sub[a:b], "c": c})
+        pos = b
+    if pos < len(sub):
+        out.append({"t": sub[pos:], "c": "w"})
+    return out
+
+
+CHAPTER_STARTS = {"c2_mri": "第2章", "c3_step4": "第3章", "c4_icons": "第4章", "c5_chat": "第5章", "c6_axes": "第6章", "c6b_year": "第6章", "c7_title": "第7章", "c8_phone": "第8章", "c9_cards": "第9章"}
+
+
 def build():
     ensure_dict()
     lines = []
     t = 0.0
+    global SHIFT
     for part in (P1, P2, REST):
         for lid, text, ex in part:
             chunks = [c for c in text.split("｜") if c]
-            start = ex.get("at", t + ex.get("pre", 0.0))
-            if "at" in ex and start < t - 0.01:
+            at = ex.get("at")
+            if at is not None and at >= INSERT_AT:
+                at += SHIFT
+            start = at if at is not None else t + ex.get("pre", 0.0)
+            if at is not None and start < t - 0.01:
                 print(f"!! {lid}: anchor {start:.2f} < previous end {t:.2f}")
                 start = t
             cs = []
@@ -87,12 +137,89 @@ def build():
             for c in chunks:
                 x, kana = synth(c)
                 d = len(x) / SR
-                cs.append({"sub": c, "start": round(c0, 3), "end": round(c0 + d, 3), "kana": kana, "_x": x})
+                cs.append({"sub": c, "seg": segments(c), "start": round(c0, 3), "end": round(c0 + d, 3), "kana": kana, "_x": x})
                 c0 += d + 0.14
             end = cs[-1]["end"]
             lines.append({"id": lid, "start": round(start, 3), "end": end, "scene": ex.get("scene"), "chunks": cs})
             t = end + ex.get("gap", 0.45)
+            if lid == "L4b":
+                SHIFT = round(max(0.0, t - INSERT_AT), 3)
     return lines, t
+
+
+def _note(f, d, kind="pluck", vel=1.0):
+    m = int(d * SR); tt = np.arange(m) / SR
+    if kind == "pluck":
+        x = sum(np.sin(2 * np.pi * f * k * tt) / k ** 1.3 * np.exp(-tt * (4 + 2 * k)) for k in range(1, 6))
+    elif kind == "marimba":
+        x = np.sin(2 * np.pi * f * tt) * np.exp(-tt * 5) + 0.35 * np.sin(2 * np.pi * f * 4 * tt) * np.exp(-tt * 18)
+    elif kind == "bell":
+        x = sum(np.sin(2 * np.pi * f * r * tt) * a * np.exp(-tt * dcy) for r, a, dcy in ((1, 1, 1.2), (2.76, 0.4, 3), (5.4, 0.2, 6)))
+    else:
+        x = ma.piano(f, d, 1.0) / 0.22
+    return x * np.minimum(1, tt / 0.003) * vel
+
+
+def _pad(freqs, d, amp=0.010):
+    return ma.strings(freqs, d, att=1.2, rel=1.2) * (amp / 0.012)
+
+
+def _hat(d=0.05):
+    m = int(d * SR); tt = np.arange(m) / SR
+    x = np.random.default_rng(int(d * 1e6)).standard_normal(m)
+    x = x - np.convolve(x, np.ones(3) / 3, "same")
+    return x * np.exp(-tt / 0.012) * 0.05
+
+
+hz = lambda m_: 440.0 * 2 ** ((m_ - 69) / 12)
+
+
+def _track(dur, bpm, prog, kind, pattern, pad_oct=12, hats=False, vel=0.55):
+    out = np.zeros((int(dur * SR), 2))
+    beat = 60 / bpm
+    bar = 0
+    while bar * 4 * beat < dur:
+        at = bar * 4 * beat
+        chord = prog[bar % len(prog)]
+        for i, k in enumerate(pattern):
+            tt = at + i * beat / 2
+            if k is None or tt > dur - 0.3:
+                continue
+            ma.place(out, _note(hz(chord[k % len(chord)] + 12 * (k // len(chord)) + 12), 1.6, kind, vel * (1.0 if i % 4 == 0 else 0.7)), tt, 1.0, 0.35 + 0.3 * ((i * 3) % 2))
+            if hats and i % 2 == 1:
+                ma.place(out, _hat(), tt, 1.0, 0.7)
+        if bar % 2 == 0:
+            ma.place(out, _pad([hz(c + pad_oct) for c in chord[:3]], min(8 * beat + 1.0, dur - at + 0.01)), at, 1.0, 0.5)
+        bar += 1
+    return out
+
+
+def track_mystery(dur):   # D minor, pulsing plucks + ticking hats (curiosity, experiments)
+    return _track(dur, 92, [[50, 53, 57, 60], [46, 50, 53, 57], [48, 52, 55, 58], [45, 49, 52, 57]], "pluck", [0, 2, 1, 3, 0, 2, 4, 2], hats=True, vel=0.5)
+
+
+def track_explain(dur):   # C major / A minor marimba, brighter (theory, explanation)
+    return _track(dur, 100, [[48, 52, 55, 59], [45, 48, 52, 55], [41, 45, 48, 52], [43, 47, 50, 53]], "marimba", [0, 2, 1, 2, 3, 2, 1, 2], vel=0.5)
+
+
+def track_warm(dur):      # F major, slow piano + bells (the test, the ending)
+    return _track(dur, 72, [[41, 45, 48, 52], [46, 50, 53, 57], [45, 48, 52, 55], [43, 46, 50, 53]], "bell", [0, None, 2, None, 1, None, 3, None], vel=0.45)
+
+
+def mix_tracks(dur, parts, xf=2.5):
+    n = int(dur * SR)
+    out = np.zeros((n, 2))
+    for a, b, fn in parts:
+        a0, b1 = max(0.0, a - xf / 2), min(dur, b + xf / 2)
+        seg = fn(b1 - a0)
+        tt = np.arange(len(seg)) / SR + a0
+        env = np.clip((tt - (a - xf / 2)) / xf, 0, 1) * np.clip(((b + xf / 2) - tt) / xf, 0, 1)
+        if a <= 0:
+            env = np.clip(((b + xf / 2) - tt) / xf, 0, 1)
+        i0 = int(a0 * SR)
+        m = min(len(seg), n - i0)
+        out[i0:i0 + m] += seg[:m] * env[:m, None]
+    return out
 
 
 def main():
@@ -100,7 +227,7 @@ def main():
     DUR = round(total + 2.6, 2)  # room for the power-off at the end
     print("lines", len(lines), "chunks", sum(len(l["chunks"]) for l in lines), "duration", DUR)
     scenes = [{"id": l["scene"], "start": l["start"]} for l in lines if l["scene"]]
-    tl = {"duration": DUR, "lines": [{**l, "chunks": [{k: v for k, v in c.items() if k != "_x"} for c in l["chunks"]]} for l in lines], "scenes": scenes}
+    tl = {"shift": SHIFT, "insert_at": INSERT_AT, "duration": DUR, "lines": [{**l, "chunks": [{k: v for k, v in c.items() if k != "_x"} for c in l["chunks"]]} for l in lines], "scenes": scenes}
     (ROOT / "data/timeline_full.json").write_text(json.dumps(tl, ensure_ascii=False, indent=1))
     if "--measure" in sys.argv:
         return
@@ -111,6 +238,11 @@ def main():
             ma.place(voice, c["_x"], c["start"], 0.95)
     sfx = np.zeros_like(voice)
     rng = np.random.default_rng(11)
+    sh = lambda t: t + SHIFT if t >= INSERT_AT else t
+    _place = ma.place
+
+    def place_sh(buf, x, at, g=1.0, p=0.5):
+        _place(buf, x, sh(at), g, p)
 
     def click():
         m = int(0.06 * SR); tt = np.arange(m) / SR
@@ -140,18 +272,18 @@ def main():
                         (22.5, hit(0.7), 0.6, 0.5), (23.85, ma.sfx_soft_whoosh(), 0.35, 0.5), (30.65, ma.sfx_soft_whoosh(0.9), 0.4, 0.5), (30.9, ma.sfx_noise_swell(0.8), 0.5, 0.5),
                         (39.4, hit(0.8), 0.7, 0.5), (40.8, hit(1.4), 1.0, 0.5), (40.8, ma.sfx_chime(523, 1.6), 0.5, 0.5), (46.75, ma.sfx_soft_whoosh(0.9), 0.4, 0.5),
                         (58.75, ma.sfx_noise_swell(0.6), 0.6, 0.6), (58.95, ma.sfx_tick(), 0.8, 0.6)]:
-        ma.place(sfx, x, at, g, p)
+        place_sh(sfx, x, at, g, p)
     for k in range(10):
-        ma.place(sfx, click() * 0.3, 24.2 + k * 0.55, 0.45, 0.45 + 0.1 * (k % 2))
+        place_sh(sfx, click() * 0.3, 24.2 + k * 0.55, 0.45, 0.45 + 0.1 * (k % 2))
     O = 60.0
     for at, x, g, p in [(5.1, ma.sfx_chime(784, 1.2), 0.45, 0.35), (14.5, ma.sfx_chime(880, 1.2), 0.45, 0.5), (19.8, ma.sfx_chime(988, 1.2), 0.45, 0.65),
                         (29.9, ma.sfx_soft_whoosh(), 0.35, 0.5), (38.9, ma.sfx_soft_whoosh(), 0.35, 0.5), (45.7, ma.sfx_noise_swell(0.6), 0.6, 0.65), (46.0, ma.sfx_tick(), 0.8, 0.65),
                         (64.5, ma.sfx_soft_whoosh(0.5), 0.4, 0.4), (75.4, ma.sfx_soft_whoosh(0.5), 0.4, 0.5), (83.8, ma.sfx_soft_whoosh(0.5), 0.4, 0.6),
                         (94.9, ma.sfx_soft_whoosh(0.7), 0.4, 0.5), (98.6, hit(0.9), 0.7, 0.5)]:
-        ma.place(sfx, x, O + at, g, p)
+        place_sh(sfx, x, O + at, g, p)
     for start in (73.5, 81.9, 92.8):
         for k in range(4):
-            ma.place(sfx, ma.sfx_tick(), O + start + k * 0.55, 0.5, 0.5 + 0.1 * (k % 2))
+            place_sh(sfx, ma.sfx_tick(), O + start + k * 0.55, 0.5, 0.5 + 0.1 * (k % 2))
     # chapters 2–9: a soft whoosh on every scene change, accents on key reveals
     accents = {"c2_result": hit(0.8), "c2_brain": ma.sfx_chime(659, 1.4), "c3_brain": ma.sfx_chime(784, 1.4), "c3_quote": hit(1.2), "c5_formula": hit(1.0),
                "c7_title": ma.sfx_chime(880, 1.4), "c7_bang": ma.sfx_chime(1046, 1.0)}
@@ -167,6 +299,33 @@ def main():
         if sc["id"] in ("c6_bp", "c6_lab"):
             for k in range(3):
                 ma.place(sfx, ma.sfx_tick(), sc["start"] + 0.4 + k * 0.4, 0.5, 0.5)
+    # subtitle-linked accents: red words get a short low-mid hit, yellow words a soft sparkle (not on every line)
+    def sparkle():
+        m = int(0.5 * SR); tt = np.arange(m) / SR
+        return sum(np.sin(2 * np.pi * f * tt) * np.exp(-tt / 0.12) for f in (2093, 2637, 3136)) * 0.05
+    last_acc = -9.0
+    for l in lines:
+        for c in l["chunks"]:
+            kinds = {s_["c"] for s_ in c["seg"]}
+            if c["start"] - last_acc < 4.0 or c["start"] < 2.0:
+                continue
+            if "r" in kinds:
+                ma.place(sfx, hit(0.5), c["start"] - 0.02, 0.45, 0.5); last_acc = c["start"]
+            elif "y" in kinds:
+                ma.place(sfx, sparkle(), c["start"] - 0.02, 0.8, 0.6); last_acc = c["start"]
+    # chapter bumpers (big title at the start of each chapter): riser + impact
+    def riser(d=1.0):
+        m = int(d * SR); tt = np.arange(m) / SR
+        x = rng.standard_normal(m)
+        x = x - np.convolve(x, np.ones(6) / 6, "same")
+        return x * (tt / d) ** 2 * 0.12
+    for sc in scenes:
+        if sc["id"] in CHAPTER_STARTS:
+            ma.place(sfx, riser(), sc["start"] - 1.3, 1.0, 0.5)
+            ma.place(sfx, hit(1.2), sc["start"] - 0.3, 1.0, 0.5)
+            ma.place(sfx, ma.sfx_chime(392, 1.6), sc["start"] - 0.3, 0.6, 0.5)
+    l4b = next(l for l in lines if l["id"] == "L4b")
+    ma.place(sfx, hit(0.9), l4b["chunks"][1]["start"] - 0.05, 0.9, 0.5)
     # chapter 8: typing "でもさ、" then deleting and retyping
     c8 = next(l for l in lines if l["id"] == "C8_6")
     for k in range(4):
@@ -183,7 +342,12 @@ def main():
     tl["off_at"] = round(off_at, 3)
     (ROOT / "data/timeline_full.json").write_text(json.dumps(tl, ensure_ascii=False, indent=1))
 
-    music = ma.bgm2(DUR)
+    sc_at = {x["id"]: x["start"] for x in scenes}
+    b1 = sh(60.0)                       # opening -> part 2
+    b2 = sc_at["c4_icons"] - 1.0        # thought experiment & brain -> theory
+    b3 = sc_at["c7_title"] - 2.0        # theory & body -> the test & ending
+    music = mix_tracks(DUR, [(0, b1, ma.bgm2), (b1, b2, track_mystery), (b2, b3, track_explain), (b3, DUR, track_warm)])
+    tl["bgm"] = [round(b1, 2), round(b2, 2), round(b3, 2)]
     duck = np.ones(n)
     for l in lines:
         a, b = int((l["start"] - 0.3) * SR), int((l["end"] + 0.3) * SR)
@@ -199,7 +363,7 @@ def main():
         with wave.open(str(a_), "wb") as w:
             w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR)
             w.writeframes((np.clip(bed / peak * 0.9, -1, 1) * 32767).astype("<i2").tobytes())
-        ma.subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(a_), "-af", "highpass=f=110:poles=2,highpass=f=110:poles=2", str(b_)], check=True)
+        ma.subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(a_), "-af", "highpass=f=95:poles=2,highpass=f=95:poles=2", str(b_)], check=True)
         with wave.open(str(b_)) as w:
             bedh = np.frombuffer(w.readframes(w.getnframes()), "<i2").astype(np.float64).reshape(-1, 2) / 32768
         bedh = bedh[:n] * (peak / 0.9)
