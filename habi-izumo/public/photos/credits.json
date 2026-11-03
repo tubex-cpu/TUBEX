@@ -20,5 +20,49 @@
    1920,
    1440
   ]
+ },
+ "museum-ext-2": {
+  "file": "museum-ext-2.jpg",
+  "title": "Shimane Museum of Ancient Izumo No,8.JPG",
+  "artist": "Mti",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Shimane_Museum_of_Ancient_Izumo_No,8.JPG",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "taisha-model-1": {
+  "file": "taisha-model-1.jpg",
+  "title": "Shimane MAI IMG 20161020 121130.jpg",
+  "artist": "G41rn8",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Shimane_MAI_IMG_20161020_121130.jpg",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "inasa-sunset-1": {
+  "file": "inasa-sunset-1.jpg",
+  "title": "Inasa beach evening view of visitors.jpg",
+  "artist": "Nesnad",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Inasa_beach_evening_view_of_visitors.jpg",
+  "size": [
+   3840,
+   2002
+  ]
+ },
+ "inasa-lowtide": {
+  "file": "inasa-lowtide.jpg",
+  "title": "Inasa Beach at low tide.jpg",
+  "artist": "kajikawa",
+  "license": "CC BY 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Inasa_Beach_at_low_tide.jpg",
+  "size": [
+   1920,
+   1440
+  ]
  }
 }
