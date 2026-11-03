@@ -69,10 +69,10 @@ export const SwordReveal: React.FC = () => {
 				const y = 420 + row * 120;
 				return i < n ? <Sword key={i} x={x} y={y} len={110} w={9} rot={-90 + (rand(i) - 0.5) * 6} color={i === n - 1 ? BRONZE_LIGHT : BRONZE} /> : null;
 			})}
-			<text x={1780} y={950} textAnchor="end" {...svgMincho(170, colors.goldSoft)}>
+			<text x={1780} y={820} textAnchor="end" {...svgMincho(170, colors.goldSoft)}>
 				{n}
 			</text>
-			<text x={1780} y={1010} textAnchor="end" {...svgGothic(40, '#efe6d2', 900)}>
+			<text x={1780} y={880} textAnchor="end" {...svgGothic(40, '#efe6d2', 900)}>
 				本
 			</text>
 		</Canvas>
@@ -186,7 +186,7 @@ export const KanjiNo: React.FC = () => {
 			})}
 			<Reveal at={30}>
 				<text x={960} y={850} textAnchor="middle" {...svgGothic(48, colors.goldSoft, 900)}>
-					かみ「な」づき　→　「な」は「の」？
+					{'かみ「な」づき　→　「な」は「の」？'}
 				</text>
 			</Reveal>
 		</Canvas>
@@ -201,8 +201,8 @@ export const MonthNames: React.FC = () => {
 		<Canvas tone="night">
 			{names.map((n, i) => {
 				const a = ((i - 2.5) / 12) * Math.PI * 2;
-				const x = 960 + Math.cos(a) * 330;
-				const y = 600 + Math.sin(a) * 300;
+				const x = 960 + Math.cos(a) * 300;
+				const y = 590 + Math.sin(a) * 225;
 				const hot = i === 5 || i === 9;
 				const o = interpolate(frame, [6 + i * 4, 18 + i * 4], [0, 1], clamp);
 				return (
@@ -497,15 +497,15 @@ export const NakagoMark: React.FC = () => {
 					なかご（持ち手の部分）
 				</text>
 			</g>
-			<g opacity={zoom} transform={`translate(960 600) scale(${0.6 + zoom * 0.4})`}>
-				<circle r={300} fill="#0c1a16" stroke="#ffcf7a" strokeWidth={6} />
+			<g opacity={zoom} transform={`translate(960 560) scale(${0.6 + zoom * 0.4})`}>
+				<circle r={250} fill="#0c1a16" stroke="#ffcf7a" strokeWidth={6} />
 				<rect x={-260} y={-60} width={520} height={120} fill={BRONZE} />
 				<g stroke="#ffcf7a" strokeWidth={22} strokeLinecap="round">
 					<line x1={-70} y1={-45} x2={70} y2={45} />
 					<line x1={70} y1={-45} x2={-70} y2={45} />
 				</g>
 			</g>
-			<text x={960} y={990} textAnchor="middle" {...svgMincho(60, colors.goldSoft)} opacity={interpolate(frame, [100, 120], [0, 1], clamp)}>
+			<text x={960} y={890} textAnchor="middle" {...svgMincho(60, colors.goldSoft)} opacity={interpolate(frame, [100, 120], [0, 1], clamp)}>
 				ほとんどの剣に、同じ印
 			</text>
 		</Canvas>

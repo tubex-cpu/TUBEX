@@ -39,10 +39,10 @@ export const Summary = () => {
 				</Stage>
 			</Beat>
 			<Beat name="神話そのものではなかった" captions={c} from={20} to={21}>
-				<Photo id="PHOTO_SUM1" move="out" label="神々が集まる、本当の理由" />
+				<Photo id="taisha-keidai" move="out" label="神々が集まる、本当の理由" />
 			</Beat>
 			<Beat name="今も見つかり続ける証拠" captions={c} from={22}>
-				<Photo id="PHOTO_SUM2" move="in" label="出雲の土の中から、今も" />
+				<Photo id="kojindani-site-replica" move="in" label="出雲の土の中から、今も" />
 			</Beat>
 		</SceneFrame>
 	);

@@ -18,12 +18,10 @@ URL = 'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'
 OUT_W, OUT_H = 2560, 1440
 # 名前: (中心の経度, 中心の緯度, 横に映す経度の幅, タイルのズーム)
 VIEWS = {
-	'nihonkai': (132.0, 36.3, 16.0, 8),
+	'nihonkai': (132.0, 35.8, 16.0, 8),
 	'chugoku': (133.2, 35.0, 5.6, 10),
 	'izumo': (133.05, 35.35, 1.25, 12),
-	'hiikawa': (132.85, 35.25, 0.62, 13),
-	'kojindani': (132.865, 35.355, 0.11, 15),
-	'taisha': (132.684, 35.399, 0.05, 15),
+	'kojindani': (132.871, 35.358, 0.16, 15),
 }
 ONLY = set(sys.argv[1:])
 
@@ -90,6 +88,10 @@ def render(v):
 	lab, n = ndimage.label(water)
 	size = ndimage.sum(water, lab, range(1, n + 1))
 	water &= np.isin(lab, np.nonzero(size >= small)[0] + 1)
+	if VIEWS[v][2] < 0.2:
+		# 狭い範囲の地図では、画面の端につながる海だけを水面にする（低い田んぼを湖と見まちがえないため）
+		edge_ids = set(np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))) - {0}
+		water &= np.isin(lab, list(edge_ids))
 	lab, n = ndimage.label(~water)
 	size = ndimage.sum(~water, lab, range(1, n + 1))
 	water |= np.isin(lab, np.nonzero(size < small * 0.25)[0] + 1)

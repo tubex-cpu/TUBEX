@@ -1,4 +1,4 @@
-"""public/photos/credits.json から src/data/photos.ts を作る（元寇判決）。
+"""public/photos/credits.json から src/data/photos.ts を作る（出雲判決）。
   python3 scripts/gen_photos.py
 説明（desc）は写真リストを作ったときの表（scripts/photo-desc.json）を使う。"""
 import json, re
@@ -8,10 +8,10 @@ ROOT = Path(__file__).resolve().parent.parent
 cr = json.loads((ROOT / 'public/photos/credits.json').read_text())
 desc = json.loads((ROOT / 'scripts/photo-desc.json').read_text())
 # 縦長・極端な横長・地図は全体を見せる（contain）。人物の顔がある写真と地図は、テロップを下に置く
-CONTAIN = {'yosai-mouko', 'kublai-letter', 'tapestry-mouko', 'kameyama-statue-1', 'bow-mouko', 'genko-monument', 'komoda-stele', 'genshizuka', 'song-celadon-2', 'goryeo-celadon-2', 'mongol-warrior', 'tokimune', 'kublai', 'kameyama', 'map-mongol-1-w', 'map-mongol-2-w', 'ekotoba-e21', 'woodseal-mouko', 'mongol-helmet-1'}
+CONTAIN = {'orochi-chikanobu-tri', 'iwato-kunisada', 'kannazuki-kunisada', 'orochi-print-old', 'orochi-chikanobu', 'senge-takatomi', 'takemikazuchi-gakutei', 'hiroshige-izumo', 'forge-edo', 'old-calendar', 'izanagi-eitaku'}
 # 明るい地図は、夜の画面に合うよう色を反転させる
-FILTER = {'map-strait': 'invert(1) hue-rotate(180deg) brightness(0.75) contrast(1.15)', 'map-mongol-1-w': 'invert(1) brightness(0.9) contrast(1.15)', 'map-mongol-2-w': 'grayscale(1) invert(1) sepia(1) saturate(2.6) brightness(0.85) contrast(1.2)'}
-FACE = {'map-strait', 'map-mongol-1-w', 'map-mongol-2-w', 'kublai', 'tokimune', 'kameyama', 'kameyama-statue-1', 'kameyama-statue-2', 'kameyama-statue-3', 'komoda-statue', 'mongol-warrior'}
+FILTER = {}
+FACE = {'harvest-1914', 'autumn-mikoshi', 'kannazuki-kunisada', 'iwato-kunisada', 'okuninushi-kyoto', 'izanagi-eitaku', 'musubi-statue', 'orochi-yoshitoshi-1', 'orochi-chikanobu', 'kagura-orochi-1', 'orochi-print-old', 'orochi-chikanobu-tri', 'kagura-orochi-2', 'yayoi-diorama', 'forge-edo', 'takemikazuchi-gakutei', 'senge-takatomi', 'taisha-kagura'}
 lines = []
 for pid, c in cr.items():
     w, h = c.get('size', [1, 1])

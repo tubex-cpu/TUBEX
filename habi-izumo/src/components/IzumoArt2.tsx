@@ -58,22 +58,24 @@ export const PitLayout: React.FC = () => {
 	);
 };
 
-// 第9の手がかり：入れ子の銅鐸（大きな銅鐸の中に小さな銅鐸）
+// 第9の手がかり：入れ子の銅鐸（横に倒し、ひれを上下に立てて、大きな銅鐸の中に小さな銅鐸）
 export const NestBells: React.FC = () => {
 	const frame = useCurrentFrame();
-	const slide = interpolate(frame, [30, 90], [0, 1], easeInOut);
-	const tilt = interpolate(frame, [100, 140], [0, 1], easeInOut);
+	const slide = interpolate(frame, [30, 100], [0, 1], easeInOut);
 	return (
 		<Canvas tone="bronze">
-			<g transform={`translate(960 760) rotate(${-90 * tilt})`}>
-				<Bell x={0} y={0} h={460} />
-				<g transform={`translate(${-560 * (1 - slide)} 0)`}>
-					<Bell x={0} y={-20} h={300} color="#7fae98" />
+			<line x1={300} y1={760} x2={1620} y2={760} stroke="#3c5a4e" strokeWidth={6} />
+			<g transform="translate(1100 600) rotate(-90)">
+				<Bell x={0} y={0} h={420} opacity={0.55} />
+				<g transform={`translate(0 ${-110 - 700 * (1 - slide)})`}>
+					<Bell x={0} y={0} h={260} color="#8fc2aa" />
 				</g>
 			</g>
-			<text x={960} y={980} textAnchor="middle" {...svgMincho(56, colors.goldSoft)} opacity={interpolate(frame, [80, 100], [0, 1], clamp)}>
-				大きな銅鐸の中に、小さな銅鐸
-			</text>
+			<g opacity={interpolate(frame, [100, 120], [0, 1], clamp)}>
+				<text x={960} y={870} textAnchor="middle" {...svgMincho(52, colors.goldSoft)}>
+					横に倒して、大きな銅鐸の中に小さな銅鐸
+				</text>
+			</g>
 		</Canvas>
 	);
 };
@@ -88,16 +90,16 @@ export const MarkGrid: React.FC = () => {
 				const col = i % 13;
 				const row = Math.floor(i / 13);
 				const x = 190 + col * 128;
-				const y = 480 + row * 190;
+				const y = 470 + row * 160;
 				const lit = marked.has(i) && frame > 60 + [...marked].indexOf(i) * 5;
 				return (
 					<g key={i} opacity={interpolate(frame, [4 + i, 14 + i], [0, 1], clamp)}>
-						<Bell x={x} y={y} h={140} mark={lit} opacity={lit ? 1 : 0.55} />
+						<Bell x={x} y={y} h={120} mark={lit} opacity={lit ? 1 : 0.55} />
 					</g>
 				);
 			})}
 			<g opacity={interpolate(frame, [140, 160], [0, 1], clamp)}>
-				<text x={960} y={980} textAnchor="middle" {...svgMincho(70, '#ffcf7a')}>
+				<text x={960} y={880} textAnchor="middle" {...svgMincho(70, '#ffcf7a')}>
 					39個のうち、14個
 				</text>
 			</g>
@@ -201,10 +203,10 @@ export const YosumiTomb: React.FC = () => {
 					四隅が、ヒトデの足のように
 				</text>
 				<text x={500} y={860} {...svgGothic(40, '#efe6d2', 900)}>
-					四角い部分　40m × 30m
+					{'四角い部分　40m × 30m'}
 				</text>
 				<text x={1080} y={860} {...svgGothic(40, '#ffcf7a', 900)}>
-					足まで含めると　50m超
+					{'足まで含めると　50m超'}
 				</text>
 			</g>
 		</Canvas>
@@ -213,7 +215,6 @@ export const YosumiTomb: React.FC = () => {
 
 // 第12の手がかり：墓の中の断面（木の棺と木の部屋、赤い朱、4本の柱）
 export const TombSection: React.FC = () => {
-	const frame = useCurrentFrame();
 	return (
 		<Canvas tone="ember">
 			<path d="M 160 720 L 500 450 L 1420 450 L 1760 720 Z" fill="#5a4630" />
@@ -261,7 +262,7 @@ export const PotteryShare: React.FC = () => {
 				const col = i % 10;
 				const row = Math.floor(i / 10);
 				const x = 330 + col * 140;
-				const y = 450 + row * 170;
+				const y = 470 + row * 140;
 				const out = i % 3 === 0;
 				const lit = frame > 70;
 				const color = !lit || !out ? '#9a7a56' : i % 2 ? '#d98a4a' : '#7fb0d0';
@@ -272,11 +273,11 @@ export const PotteryShare: React.FC = () => {
 				);
 			})}
 			<g opacity={interpolate(frame, [80, 100], [0, 1], clamp)}>
-				<rect x={560} y={890} width={800} height={90} rx={14} fill="rgba(3,6,14,0.8)" />
-				<text x={760} y={950} textAnchor="middle" {...svgMincho(46, '#ffb07a')}>
+				<rect x={560} y={790} width={800} height={90} rx={14} fill="rgba(3,6,14,0.8)" />
+				<text x={760} y={850} textAnchor="middle" {...svgMincho(46, '#ffb07a')}>
 					吉備の土器
 				</text>
-				<text x={1160} y={950} textAnchor="middle" {...svgMincho(46, '#9fd0ee')}>
+				<text x={1160} y={850} textAnchor="middle" {...svgMincho(46, '#9fd0ee')}>
 					北陸の土器
 				</text>
 			</g>

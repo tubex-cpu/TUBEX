@@ -42,7 +42,7 @@ export const SwordOnWave: React.FC = () => {
 // 第15の手がかり：6世紀の東西の大きな古墳（前方後方墳と前方後円墳）
 export const TwoKofun: React.FC = () => {
 	const frame = useCurrentFrame();
-	const k = 6.4;
+	const k = 4.4;
 	const square = (len: number) => {
 		const a = len * 0.45;
 		return `M ${-a} ${-a * 0.9} L ${a * 0.2} ${-a * 0.9} L ${a * 0.2} ${-a * 0.4} L ${len - a} ${-a * 0.7} L ${len - a} ${a * 0.7} L ${a * 0.2} ${a * 0.4} L ${a * 0.2} ${a * 0.9} L ${-a} ${a * 0.9} Z`;
@@ -54,24 +54,24 @@ export const TwoKofun: React.FC = () => {
 	return (
 		<Canvas tone="moss">
 			<Reveal at={8}>
-				<g transform={`translate(430 600) scale(${k})`}>
+				<g transform={`translate(400 560) scale(${k})`}>
 					<path d={square(94)} fill="#4b6a3a" stroke="#a8c48a" strokeWidth={0.6} />
 				</g>
-				<text x={560} y={880} textAnchor="middle" {...svgMincho(50, colors.goldSoft)}>
+				<text x={560} y={790} textAnchor="middle" {...svgMincho(50, colors.goldSoft)}>
 					山代二子塚古墳
 				</text>
-				<text x={560} y={940} textAnchor="middle" {...svgGothic(34, '#e6efd8', 900)}>
+				<text x={560} y={845} textAnchor="middle" {...svgGothic(34, '#e6efd8', 900)}>
 					前方後方墳・約94m（東）
 				</text>
 			</Reveal>
 			<Reveal at={40}>
-				<g transform={`translate(1350 600) scale(${k})`}>
+				<g transform={`translate(1330 560) scale(${k})`}>
 					<path d={round(92)} fill="#4b6a3a" stroke="#a8c48a" strokeWidth={0.6} />
 				</g>
-				<text x={1460} y={880} textAnchor="middle" {...svgMincho(50, colors.goldSoft)}>
+				<text x={1430} y={790} textAnchor="middle" {...svgMincho(50, colors.goldSoft)}>
 					今市大念寺古墳
 				</text>
-				<text x={1460} y={940} textAnchor="middle" {...svgGothic(34, '#e6efd8', 900)}>
+				<text x={1430} y={845} textAnchor="middle" {...svgGothic(34, '#e6efd8', 900)}>
 					前方後円墳・約92m（西）
 				</text>
 			</Reveal>
@@ -147,7 +147,7 @@ export const Podium: React.FC = () => {
 export const HeightCompare: React.FC = () => {
 	const frame = useCurrentFrame();
 	const ground = 990;
-	const m = 7.2;
+	const m = 5.8;
 	const bars = [
 		{x: 360, h: 96, label: '大昔', sub: '32丈', at: 10, faint: true},
 		{x: 760, h: 48, label: '平安時代', sub: '16丈', at: 30},
@@ -176,9 +176,6 @@ export const HeightCompare: React.FC = () => {
 					</g>
 				);
 			})}
-			<text x={360} y={1050} textAnchor="middle" {...svgGothic(28, '#9fb0c8', 700)} opacity={interpolate(frame, [20, 40], [0, 1], clamp)}>
-				言い伝え
-			</text>
 		</Canvas>
 	);
 };
@@ -186,7 +183,7 @@ export const HeightCompare: React.FC = () => {
 // 第16の手がかり：杉3本を束ねた柱（断面）
 export const PillarBundle: React.FC = () => {
 	const frame = useCurrentFrame();
-	const r = 175;
+	const r = 115;
 	const ring = interpolate(frame, [70, 110], [0, 1], easeInOut);
 	const centers = [
 		[0, -r * 1.05],
@@ -195,7 +192,7 @@ export const PillarBundle: React.FC = () => {
 	];
 	return (
 		<Canvas tone="ember">
-			<g transform="translate(960 620)">
+			<g transform="translate(960 580)">
 				{centers.map(([x, y], i) => (
 					<Reveal key={i} at={8 + i * 18}>
 						<circle cx={x} cy={y} r={r} fill="#a0703e" stroke="#5a3a1e" strokeWidth={8} />
@@ -212,7 +209,7 @@ export const PillarBundle: React.FC = () => {
 					</text>
 				</g>
 			</g>
-			<text x={960} y={1010} textAnchor="middle" {...svgMincho(60, colors.goldSoft)} opacity={interpolate(frame, [100, 120], [0, 1], clamp)}>
+			<text x={960} y={900} textAnchor="middle" {...svgMincho(60, colors.goldSoft)} opacity={interpolate(frame, [100, 120], [0, 1], clamp)}>
 				束ねると、直径 約3m
 			</text>
 		</Canvas>
@@ -327,15 +324,15 @@ export const ShrineFall: React.FC = () => {
 			<line x1={200} y1={980} x2={1720} y2={980} stroke="#4a5a72" strokeWidth={4} />
 			<g transform={`translate(960 980) rotate(${tilt})`}>
 				{[-110, 0, 110].map((dx) => (
-					<rect key={dx} x={dx - 12} y={-640} width={24} height={640} fill={WOOD} />
+					<rect key={dx} x={dx - 12} y={-500} width={24} height={500} fill={WOOD} />
 				))}
-				<rect x={-180} y={-720} width={360} height={90} fill="#c9a06a" />
-				<path d="M -220 -715 L 0 -820 L 220 -715 Z" fill="#6b4a2e" />
+				<rect x={-180} y={-580} width={360} height={90} fill="#c9a06a" />
+				<path d="M -220 -575 L 0 -660 L 220 -575 Z" fill="#6b4a2e" />
 			</g>
-			<text x={1500} y={420} textAnchor="middle" {...svgMincho(56, '#ffd0c8')} opacity={interpolate(frame, [20, 40], [0, 1], clamp)}>
+			<text x={420} y={520} textAnchor="middle" {...svgMincho(56, '#ffd0c8')} opacity={interpolate(frame, [20, 40], [0, 1], clamp)}>
 				地震も、強い風も
 			</text>
-			<text x={1500} y={490} textAnchor="middle" {...svgMincho(56, '#ffd0c8')} opacity={interpolate(frame, [30, 50], [0, 1], clamp)}>
+			<text x={420} y={590} textAnchor="middle" {...svgMincho(56, '#ffd0c8')} opacity={interpolate(frame, [30, 50], [0, 1], clamp)}>
 				記録にないのに？
 			</text>
 		</Canvas>
@@ -344,7 +341,6 @@ export const ShrineFall: React.FC = () => {
 
 // 第18の手がかり：国造の家の系譜（神話から記録へ）
 export const Lineage: React.FC = () => {
-	const frame = useCurrentFrame();
 	const nodes = [
 		{y: 360, label: 'アメノホヒ', sub: '神話の神（日本書紀）', myth: true},
 		{y: 540, label: '出雲臣果安', sub: '716年 記録に残る国造'},
