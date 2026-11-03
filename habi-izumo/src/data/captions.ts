@@ -1,172 +1,214 @@
 // scripts/build-voice.py で自動生成。手で編集しないこと。
 import type {Caption} from '@remotion/captions';
 
-// 0:00 謎の先出し（5307フレーム）
+// 0:00 謎の先出し（6476フレーム）
 export const introCaptions: Caption[] = [
   {
-    "text": "750年前。日本は、国が滅びるかもしれない、最大の危機に立たされていた。",
+    "text": "1984年、夏。島根県の出雲で、小さな谷の斜面を掘っていた調査員たちは、自分の目を疑った。",
     "startMs": 500,
-    "endMs": 6964,
+    "endMs": 9225,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "海の向こうから押し寄せてきたのは、ユーラシア大陸の東西にまたがる大帝国、モンゴルの大軍。",
-    "startMs": 7444,
-    "endMs": 13929,
+    "text": "土の中から、銅の剣が、次から次へと現れたのだ。",
+    "startMs": 9705,
+    "endMs": 13908,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2度目の襲来では、14万人、4400隻とも言われる大艦隊が、九州の海を埋めつくした。",
-    "startMs": 14409,
-    "endMs": 21983,
+    "text": "その数、358本。",
+    "startMs": 14388,
+    "endMs": 16756,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "その大艦隊は、一夜の嵐で、海の底に消えた。",
-    "startMs": 22463,
-    "endMs": 26516,
+    "text": "それまで日本中で見つかっていた銅剣を、すべて合わせても、およそ300本。それを、たった一つの谷が、上回ってしまった。",
+    "startMs": 17236,
+    "endMs": 26665,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "日本は、神の風に救われた。私たちは、そう教わってきた。",
-    "startMs": 26996,
-    "endMs": 31796,
+    "text": "しかも、剣は、刃を立てて、4列に、きっちりと並べて埋められていた。",
+    "startMs": 27145,
+    "endMs": 32745,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "でも、その「神風」の物語が、今、海の底から崩れ始めている。",
-    "startMs": 32276,
-    "endMs": 38623,
+    "text": "そして、そのほとんどに、同じ印が刻まれていた。小さな、バツの印だ。",
+    "startMs": 33225,
+    "endMs": 39220,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2026年10月28日。長崎県の小さな島、鷹島の沖で、元軍の沈没船を調べていたチームが、ある発表をした。",
-    "startMs": 39103,
-    "endMs": 49321,
+    "text": "12年後。そこから山を越えて、3キロあまり離れた場所で、今度は、工事の重機が、銅鐸を掘り当てた。",
+    "startMs": 39700,
+    "endMs": 47807,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "海の底の泥の中から、小さなサイコロが5個。そして、親指の先ほどの札が29枚、見つかったというのだ。",
-    "startMs": 49801,
-    "endMs": 58185,
+    "text": "その数、39個。1か所から見つかった銅鐸として、日本でいちばん多い数だった。",
+    "startMs": 48287,
+    "endMs": 54761,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "日本を滅ぼしに来たはずの兵士たちは、船の中で、遊んでいた。",
-    "startMs": 58665,
-    "endMs": 63263,
+    "text": "出雲。そこは、日本の神話の、ふるさとと呼ばれる土地だ。",
+    "startMs": 55241,
+    "endMs": 59753,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "しかも、その船は、全長およそ30メートル。これまで見つかった中で、最大級の船だった。",
-    "startMs": 63743,
-    "endMs": 70953,
+    "text": "国を引き寄せた神。ヤマタノオロチを退治した神。そして、この国を、天の神に譲ったとされる、大国主の神。",
+    "startMs": 60233,
+    "endMs": 68948,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "今年、この海の底から上がってきた証拠は、それだけではない。",
-    "startMs": 71433,
-    "endMs": 75860,
+    "text": "古事記に書かれた神話の、およそ3分の1が、出雲にまつわる話だと言われている。",
+    "startMs": 69428,
+    "endMs": 75167,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "4月には、元の年号が墨で書かれた、木の板。ところが、その年号は、船が沈む5年以上も前のものだった。",
-    "startMs": 76340,
-    "endMs": 84980,
+    "text": "それなのに、長いあいだ、多くの学者は、こう考えてきた。出雲の神話は、都で作られたお話にすぎない。出雲に、そんな大きな力を持つ国はなかった、と。",
+    "startMs": 75647,
+    "endMs": 88063,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "8月には、元が滅ぼした中国の国、南宋の矢。元軍は、敵だった国の武器を持って、日本に来ていた。",
-    "startMs": 85460,
-    "endMs": 93801,
+    "text": "その考えを、地面の下から現れた銅剣と銅鐸が、ひっくり返し始めた。",
+    "startMs": 88543,
+    "endMs": 94047,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、教科書の物語にも、次々と疑いがかかっている。",
-    "startMs": 94281,
-    "endMs": 98857,
+    "text": "そして2000年。出雲大社の境内から、巨大な柱が姿を現した。",
+    "startMs": 94527,
+    "endMs": 99828,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1度目の襲来は、今の暦でいえば、11月の終わり。台風が来る季節ではない。それなのに、なぜ元軍は、たった一晩で消えたのか。",
-    "startMs": 99337,
-    "endMs": 109908,
+    "text": "杉の大木を3本束ねた、直径およそ3メートルの柱。",
+    "startMs": 100308,
+    "endMs": 104649,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "鎌倉の武士は、名乗りを上げて一騎打ちを挑み、元軍に負けた。その話のもとをたどると、ある神社の側が書いた本に行き着く。",
-    "startMs": 110388,
-    "endMs": 119359,
+    "text": "平安時代の出雲大社は、高さ48メートル。15階建てのビルほどの神殿だったという言い伝えがある。ただの伝説だと思われていたその話に、本物の柱が、突然、現れたのだ。",
+    "startMs": 105129,
+    "endMs": 118868,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "教科書に必ず載っている、あの元寇の絵。炎を上げる玉の向こうで弓を引く3人の兵士は、あとから描き足された疑いがある。",
-    "startMs": 119839,
-    "endMs": 128852,
+    "text": "そして、今年。2026年の秋。",
+    "startMs": 119348,
+    "endMs": 122740,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、2度目の大艦隊。本当に、嵐だけで沈んだのか。嵐が来るまでの2か月、海の上で、いったい何が起きていたのか。",
-    "startMs": 129332,
-    "endMs": 138825,
+    "text": "出雲の研究者が、ある発表をした。荒神谷の銅剣に刻まれていたバツの印が、山の向こうの加茂岩倉の銅鐸にも、刻まれていたというのだ。",
+    "startMs": 123220,
+    "endMs": 133439,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "私たちが習った元寇は、本当の元寇だったのか。",
-    "startMs": 139305,
-    "endMs": 142996,
+    "text": "3キロ離れた2つの谷に、同じ印。いったい誰が、何のために、刻んだのか。",
+    "startMs": 133919,
+    "endMs": 140372,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "答えは、750年のあいだ、海の底の泥の中に眠っていた。",
-    "startMs": 143476,
-    "endMs": 148436,
+    "text": "そしてもう一つ、出雲には、千年近く語り継がれてきた、不思議な言い伝えがある。",
+    "startMs": 140852,
+    "endMs": 146761,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして今、その泥の中の証拠を、最新の科学の技術が、次々と読み解き始めている。",
-    "startMs": 148916,
-    "endMs": 155497,
+    "text": "毎年、旧暦の10月になると、日本中の神々が、出雲に集まってくる、というのだ。",
+    "startMs": 147241,
+    "endMs": 154239,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "X線のCTで、割らずに中身を見る。赤外線で、消えた墨の文字を浮かび上がらせる。音の波で、泥の下に埋もれた船を探し出す。",
-    "startMs": 155977,
-    "endMs": 166292,
+    "text": "だから、ほかの国では10月を、神様のいない月、神無月と呼ぶ。そして出雲だけは、神在月と呼ぶ。",
+    "startMs": 154719,
+    "endMs": 162943,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "研究者たちの地道な調査と、最新の技術が導き出したのは、教科書の元寇をくつがえすかもしれない、驚くべき発見だった。",
-    "startMs": 166772,
-    "endMs": 175700,
+    "text": "今年、神々を迎える祭りが行われるのは、11月18日の夜。もう、すぐそこだ。",
+    "startMs": 163423,
+    "endMs": 170804,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "神々は、なぜ、出雲に集まるのか。",
+    "startMs": 171284,
+    "endMs": 174452,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "出雲の神話は、ただの作り話だったのか。それとも、消えた王国の記憶なのか。",
+    "startMs": 174932,
+    "endMs": 181087,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、358本の銅剣は、なぜ、土の中に隠されたのか。",
+    "startMs": 181567,
+    "endMs": 187039,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "答えは、2000年ちかく、出雲の土の中に眠っていた。",
+    "startMs": 187519,
+    "endMs": 191647,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "木の柱の年代を測る科学の技術。地面を掘らずに、その下の石の部屋を探る、地中レーダー。そして、何百もの青銅器に刻まれた印を、一つずつ見比べる、研究者たちの地道な調査。",
+    "startMs": 192127,
+    "endMs": 206612,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "最新の研究と技術が導き出したのは、教科書の神話の向こう側にある、驚くべき古代出雲の姿だった。",
+    "startMs": 207092,
+    "endMs": 214665,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 ハビ判事登場（840フレーム）
+// 0:00 ハビ判事登場（783フレーム）
 export const judgeEntranceCaptions: Caption[] = [
   {
     "text": "こんばんは。閉園後の法廷にようこそ。ハビ判事です。",
@@ -176,3616 +218,3000 @@ export const judgeEntranceCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "今夜は、教科書でおなじみの、あの大事件に挑む。",
+    "text": "今夜は、日本の神話のふるさとに挑む。",
     "startMs": 5097,
-    "endMs": 8937,
+    "endMs": 7903,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "今夜の問いは、これだ。",
-    "startMs": 9417,
-    "endMs": 11177,
+    "startMs": 8383,
+    "endMs": 10143,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "日本を元から救ったのは、本当に、神風だったのか。",
-    "startMs": 11657,
-    "endMs": 15732,
+    "text": "神々は、なぜ、出雲に集まるのか。",
+    "startMs": 10623,
+    "endMs": 13791,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "海の底から上がってきた、最新の証拠をもとに、手がかりを、ひとつずつたどっていく。",
-    "startMs": 16212,
-    "endMs": 22313,
+    "text": "神話の言葉と、土の中から現れた証拠をもとに、手がかりを、ひとつずつたどっていく。",
+    "startMs": 14271,
+    "endMs": 20681,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "最初の手がかりは、すべての始まり。一通の手紙だ。",
-    "startMs": 22793,
-    "endMs": 26772,
+    "text": "最初の手がかりは、誰もが知っている、あの言葉だ。",
+    "startMs": 21161,
+    "endMs": 24895,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第1の手がかり 元は、いきなり攻めてきた？（6049フレーム）
-export const clue1LetterCaptions: Caption[] = [
+// 0:00 第1の手がかり 神無月は、神様がいない月？（3461フレーム）
+export const clue1KannazukiCaptions: Caption[] = [
   {
-    "text": "13世紀。ユーラシア大陸には、人類の歴史で最大級の国が生まれていた。モンゴル帝国だ。",
+    "text": "10月の古い呼び名は、神無月。神が、無い、月と書く。",
     "startMs": 500,
-    "endMs": 7647,
+    "endMs": 5908,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "始まりは、1206年。草原の遊牧民をまとめたチンギス・カンが、モンゴルの人々の王になった。",
-    "startMs": 8127,
-    "endMs": 16031,
+    "text": "日本中の神々が出雲に出かけてしまうから、ほかの国には、神様がいなくなる。だから神無月。",
+    "startMs": 6388,
+    "endMs": 13300,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "モンゴルの騎馬軍団は、東は中国から、西はヨーロッパの入り口まで、次々と国々を従えていった。",
-    "startMs": 16511,
-    "endMs": 23935,
+    "text": "そう聞いたことがある人は、多いと思う。",
+    "startMs": 13780,
+    "endMs": 16564,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "その孫が、フビライ・ハン。クビライとも呼ばれる。",
-    "startMs": 24415,
-    "endMs": 28596,
+    "text": "では、辞書を開いてみよう。",
+    "startMs": 17044,
+    "endMs": 19092,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "フビライは、1260年に、モンゴルの皇帝になった。そして1271年、国の名前を「元」と定めた。",
-    "startMs": 29076,
-    "endMs": 38793,
+    "text": "日本でいちばん大きな国語辞典、日本国語大辞典には、神無月の名前の由来について、いくつもの説が並んでいる。",
+    "startMs": 19572,
+    "endMs": 27828,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "都は、今の北京。フビライのねらいは、中国の南に残っていた大国、南宋を倒すことだった。",
-    "startMs": 39273,
-    "endMs": 46687,
+    "text": "その中で、辞典が有力としているのは、まったく別の説だ。",
+    "startMs": 28308,
+    "endMs": 32660,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "朝鮮半島の高麗は、およそ30年にわたってモンゴルの攻撃を受け、ついにモンゴルに従っていた。",
-    "startMs": 47167,
-    "endMs": 54079,
+    "text": "神無月の「な」は、「無い」ではなく、「の」という意味だというのだ。",
+    "startMs": 33140,
+    "endMs": 39487,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、フビライの目は、海の向こうの日本にも向けられた。",
-    "startMs": 54559,
-    "endMs": 58687,
+    "text": "昔の日本語では、「な」が「の」の働きをすることがあった。たとえば、「水な月」は、「水の月」。6月の水無月も、水が無い月ではなく、田んぼに水を引く、水の月だと考えられている。",
+    "startMs": 39967,
+    "endMs": 55593,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1268年の正月。高麗の使いが、九州の大宰府に、一通の手紙を届けた。",
-    "startMs": 59167,
-    "endMs": 66217,
+    "text": "同じように、神無月は、「神の月」。つまり、神様をお祭りする月、という意味だった可能性が高い。",
+    "startMs": 56073,
+    "endMs": 64159,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "差出人は、モンゴルの皇帝、フビライ。宛先は、「日本国王」だった。",
-    "startMs": 66697,
-    "endMs": 73289,
+    "text": "10月は、秋の収穫が終わるころ。実りを神々に感謝する祭りが、あちこちで開かれる季節だ。",
+    "startMs": 64639,
+    "endMs": 71743,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "奈良の東大寺には、その写しが今も残っている。",
-    "startMs": 73769,
-    "endMs": 77097,
+    "text": "ほかにも、新しい米で酒をかもす月、「醸成月」から来たという説。雷が鳴らなくなる月、「雷無月」から来たという説もある。",
+    "startMs": 72223,
+    "endMs": 82591,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "手紙は、こう始まる。「大蒙古国皇帝、書を日本国王に奉る」。",
-    "startMs": 77577,
-    "endMs": 83263,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "文面は、ていねいだ。親しく付き合おう、と呼びかけている。",
-    "startMs": 83743,
-    "endMs": 88244,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "でも、最後には、こんな一文がある。",
-    "startMs": 88724,
-    "endMs": 91753,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "「兵を用いることを、誰が好むだろうか」。",
-    "startMs": 92233,
-    "endMs": 95188,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "付き合わないなら、兵を送ることもある。そう読める、脅しの言葉だった。",
-    "startMs": 95668,
-    "endMs": 100916,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手紙は、鎌倉の幕府を通して、京都の朝廷に届けられた。",
-    "startMs": 101396,
-    "endMs": 106271,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "朝廷では、返事を書くかどうか、話し合いが重ねられた。でも、最後には、返事を出さないことに決まった。",
-    "startMs": 106751,
-    "endMs": 114687,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "このとき、幕府のかじ取りを任されたのが、北条時宗。まだ10代の若さで、執権という、幕府の最高の地位についた。",
-    "startMs": 115167,
-    "endMs": 124393,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "フビライは、あきらめなかった。その後も、何度も使いを送ってきた。",
-    "startMs": 124873,
-    "endMs": 129737,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "日本は、そのたびに、返事をしなかった。",
-    "startMs": 130217,
-    "endMs": 133289,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "1271年。鎌倉の幕府は、九州に領地を持つ御家人たちに、九州へ下って、守りを固めるよう命じた。",
-    "startMs": 133769,
-    "endMs": 142825,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "これが、異国警固番役の始まりだ。九州の海岸を、御家人たちが交代で見張る仕組みだった。",
-    "startMs": 143305,
-    "endMs": 150271,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "同じころ、鎌倉の僧、日蓮は、外国が攻めてくる、と説いていた。",
-    "startMs": 150751,
-    "endMs": 156500,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "1260年、日蓮は、幕府に『立正安国論』という書を差し出している。正しい教えを信じなければ、外国に攻められる災いが起きる、と警告する書だった。",
-    "startMs": 156980,
-    "endMs": 170057,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "国じゅうに、不安が広がっていた。",
-    "startMs": 170537,
-    "endMs": 172948,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "最初の手紙から、6年あまり。そのあいだ、元は、使いを送り続け、日本は、守りの準備を始めていた。",
-    "startMs": 173428,
-    "endMs": 182015,
+    "text": "そして、神々が出雲に行ってしまうから神が無い、という説は、辞典の中では、俗説、つまり、世間で言われている説として、並べて書かれている。",
+    "startMs": 83071,
+    "endMs": 94217,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 182495,
-    "endMs": 183924,
+    "startMs": 94697,
+    "endMs": 96127,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 184404,
-    "endMs": 185065,
+    "startMs": 96607,
+    "endMs": 97268,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "元は、いきなり攻めてきたのではない。6年以上前から手紙を送り、日本は返事をせず、守りを固め始めていた。",
-    "startMs": 185545,
-    "endMs": 194015,
+    "text": "神無月は、もともと「神の月」、神を祭る月という意味だったと考えられている。神様がいない月、というのは、あとから生まれた説明だ。",
+    "startMs": 97748,
+    "endMs": 108265,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、ついに元軍がやってきたとき、最初に戦ったのは、どこの人々だったのか。",
-    "startMs": 194495,
-    "endMs": 200425,
+    "text": "では、神々が出雲に集まるという話は、いったい、いつ生まれたのか。",
+    "startMs": 108745,
+    "endMs": 114153,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第2の手がかり 最初に襲われたのは博多だった？（3899フレーム）
-export const clue2IslandsCaptions: Caption[] = [
+// 0:00 第2の手がかり 神々が出雲に集まる話は、古事記に書いてある？（4546フレーム）
+export const clue2OkugiCaptions: Caption[] = [
   {
-    "text": "1274年、文永11年。10月の初め、高麗の港、合浦を、大船団が出発した。",
+    "text": "出雲の神話といえば、古事記だ。",
     "startMs": 500,
-    "endMs": 9343,
+    "endMs": 2964,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "船の数は、およそ900隻。兵の数は、記録によって違い、2万数千とも、4万とも言われる。",
-    "startMs": 9823,
-    "endMs": 17961,
+    "text": "古事記は、712年。奈良時代の初めに、天皇の命令でまとめられた、日本で最も古い歴史の本だ。",
+    "startMs": 3444,
+    "endMs": 11615,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "モンゴルの兵、中国北部の兵、そして高麗の兵が乗り込んだ、寄せ集めの大軍だった。",
-    "startMs": 18441,
-    "endMs": 25065,
+    "text": "その8年後、720年には、日本書紀ができた。",
+    "startMs": 12095,
+    "endMs": 16201,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "船団が最初に向かったのは、博多ではなかった。",
-    "startMs": 25545,
-    "endMs": 28745,
+    "text": "そして733年には、出雲の国の役人たちが、自分の国の地理や言い伝えをまとめた、出雲国風土記を作っている。",
+    "startMs": 16681,
+    "endMs": 25481,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "朝鮮半島と九州のあいだに浮かぶ島、対馬だ。",
-    "startMs": 29225,
-    "endMs": 32905,
+    "text": "出雲のことを書いた古い本が、これだけそろっている。どこかに、神々が出雲に集まる話がありそうだ。",
+    "startMs": 25961,
+    "endMs": 33193,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "10月5日。元軍は、対馬の西の海岸、小茂田浜に姿を現した。",
-    "startMs": 33385,
-    "endMs": 39263,
+    "text": "ところが、島根県の古代文化センターによれば、古事記にも、日本書紀にも、そして出雲国風土記にも、神々が10月に出雲に集まる話は、出てこない。",
+    "startMs": 33673,
+    "endMs": 45247,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "島を守っていたのは、宗資国。わずか80騎ほどを率いて、海岸に向かった。",
-    "startMs": 39743,
-    "endMs": 45844,
+    "text": "では、その話は、いつ初めて、文字に書かれたのか。",
+    "startMs": 45727,
+    "endMs": 49812,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "数千の大軍を相手に、勝ち目はなかった。資国たちは戦い、全員が討ち死にしたと伝えられている。",
-    "startMs": 46324,
-    "endMs": 53716,
+    "text": "いちばん古いとされるのは、平安時代の終わり、1140年ごろに、藤原清輔という歌人が書いた『奥義抄』という本だ。",
+    "startMs": 50292,
+    "endMs": 59924,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "小茂田浜には今、資国をまつる、小茂田浜神社が建っている。",
-    "startMs": 54196,
-    "endMs": 58687,
+    "text": "和歌の知識をまとめたこの本に、こう書かれている。",
+    "startMs": 60404,
+    "endMs": 63583,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "元軍は、対馬の島々を荒らしたあと、さらに南へ進んだ。",
-    "startMs": 59167,
-    "endMs": 63636,
+    "text": "天の下の、もろもろの神が、出雲の国に行って、この国に神がいなくなるので、かみなし月と言う。",
+    "startMs": 64063,
+    "endMs": 71209,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "10月14日。次に襲われたのは、壱岐だ。",
-    "startMs": 64116,
-    "endMs": 67711,
+    "text": "古事記ができてから、400年以上もあとのことだ。",
+    "startMs": 71689,
+    "endMs": 74996,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "壱岐を守っていたのは、平景隆。わずかな兵で迎え撃ったが、押し返され、城に立てこもった。",
-    "startMs": 68191,
-    "endMs": 75551,
+    "text": "しかも、神々がどこに集まるのかについては、時代によって、違う話も伝わっている。",
+    "startMs": 75476,
+    "endMs": 81908,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、城が落ちる前に、自ら命を絶ったと伝えられている。",
-    "startMs": 76031,
-    "endMs": 80639,
+    "text": "1366年の『詞林采葉抄』という本では、神々は、まず、松江の佐太神社に集まるとされている。",
+    "startMs": 82388,
+    "endMs": 91348,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "城があった場所には、今、新城神社が建ち、景隆がまつられている。",
-    "startMs": 81119,
-    "endMs": 86612,
+    "text": "では、出雲大社に神々が集まる話は、どうやって、日本中に広まったのか。",
+    "startMs": 91828,
+    "endMs": 97812,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "壱岐の島には、このとき亡くなった人々をとむらう塚が、いくつも残っている。",
-    "startMs": 87092,
-    "endMs": 92244,
+    "text": "大きな役割を果たしたと考えられているのが、御師と呼ばれる人々だ。",
+    "startMs": 98292,
+    "endMs": 102857,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "島の人々にとって、元寇は、まず、自分たちの島が戦場になった事件だった。",
-    "startMs": 92724,
-    "endMs": 98804,
+    "text": "御師は、全国をめぐって、出雲大社のお札を配り、参拝に来る人々を案内し、宿の世話をした人々だ。",
+    "startMs": 103337,
+    "endMs": 111487,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "対馬や壱岐の被害を伝える話は、地元で長く語り継がれてきた。",
-    "startMs": 99284,
-    "endMs": 103764,
+    "text": "中世から江戸時代にかけて、御師たちは、出雲の神は縁を結ぶ神だ、神在月には神々が集まって、人々の縁を話し合うのだと、各地で語ったと考えられている。",
+    "startMs": 111967,
+    "endMs": 124255,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして10月20日。元軍は、ついに博多湾に入り、上陸を始めた。",
-    "startMs": 104244,
-    "endMs": 109961,
+    "text": "そして江戸時代の中ごろには、出雲の名前は、日本中に知られるようになった。",
+    "startMs": 124735,
+    "endMs": 129993,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 110441,
-    "endMs": 111871,
+    "startMs": 130473,
+    "endMs": 131903,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 112351,
-    "endMs": 113012,
+    "startMs": 132383,
+    "endMs": 133044,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "最初に襲われたのは、博多ではなく、対馬と壱岐だった。島を守った武士たちは、わずかな兵で大軍に立ち向かい、命を落とした。",
-    "startMs": 113492,
-    "endMs": 122975,
+    "text": "神々が出雲に集まる話は、古事記にも、日本書紀にも、出雲国風土記にもない。文字に残るのは、400年以上あとの、平安時代の終わりからだ。",
+    "startMs": 133524,
+    "endMs": 144703,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、博多で元軍を迎え撃った鎌倉の武士たちは、どのように戦ったのか。",
-    "startMs": 123455,
-    "endMs": 128767,
+    "text": "では、古事記に書かれた出雲の神話は、どれほど特別なものだったのか。",
+    "startMs": 145183,
+    "endMs": 150313,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第3の手がかり 鎌倉武士は一騎打ちで負けた？（4937フレーム）
-export const clue3SamuraiCaptions: Caption[] = [
+// 0:00 第3の手がかり 古事記の神話の3分の1は、出雲の話？（4259フレーム）
+export const clue3KojikiCaptions: Caption[] = [
   {
-    "text": "1274年10月20日。今の暦でいえば、11月の下旬。",
+    "text": "古事記は、上・中・下の3巻でできている。",
     "startMs": 500,
-    "endMs": 5983,
+    "endMs": 4692,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "元軍は、博多湾の西、百道原のあたりに上陸した。今の、福岡市の早良区のあたりだ。",
-    "startMs": 6463,
-    "endMs": 13652,
+    "text": "神々の時代を描いているのは、上巻だ。",
+    "startMs": 5172,
+    "endMs": 8148,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "九州の御家人たちが、各地から駆けつけた。日本側の大将は、少弐景資だった。",
-    "startMs": 14132,
-    "endMs": 20297,
+    "text": "天と地の始まり。イザナギとイザナミの国生み。天の岩屋戸に隠れたアマテラス。そして、天から降りてきた神の子孫が、天皇になるまで。",
+    "startMs": 8628,
+    "endMs": 18548,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "戦いは、赤坂、鳥飼、祖原など、今の福岡市の中心部で繰り広げられた。",
-    "startMs": 20777,
-    "endMs": 27476,
+    "text": "その上巻の神話の、およそ3分の1が、出雲にまつわる話だと言われている。",
+    "startMs": 19028,
+    "endMs": 24660,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "この戦いについて、よく語られる話がある。",
-    "startMs": 27956,
-    "endMs": 31049,
+    "text": "天の国で乱暴をはたらいて追い出されたスサノオが、降り立ったのは、出雲の、肥の河のほとりだった。",
+    "startMs": 25140,
+    "endMs": 31764,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "鎌倉の武士は、まず、名乗りを上げ、合図の矢を放ってから、一人ずつ敵に向かっていった。",
-    "startMs": 31529,
-    "endMs": 38143,
+    "text": "そこでヤマタノオロチを退治し、出雲の須賀の地に、宮を建てた。",
+    "startMs": 32244,
+    "endMs": 36905,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ところが元軍は、名乗りなど聞かず、太鼓や鐘の合図で、集団で一斉に襲いかかってきた。",
-    "startMs": 38623,
-    "endMs": 45289,
+    "text": "スサノオの子孫として生まれたのが、大国主の神だ。",
+    "startMs": 37385,
+    "endMs": 41001,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "武士たちは、そのやり方についていけず、次々と討たれた。",
-    "startMs": 45769,
-    "endMs": 49908,
+    "text": "ワニにだまされて皮をはがれたウサギを助けた、因幡の白兎の話。兄の神々にねたまれて、2度も殺されては、よみがえった話。地下の国、根の国で、スサノオの試練をくぐり抜けた話。",
+    "startMs": 41481,
+    "endMs": 55177,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "教科書や、歴史の本で、何度も見てきた場面だ。",
-    "startMs": 50388,
-    "endMs": 54057,
+    "text": "大国主は、たくさんの名前を持つ神でもある。古事記には、オオナムヂ、アシハラシコオ、ヤチホコなど、5つの名前が書かれている。",
+    "startMs": 55657,
+    "endMs": 65343,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "でも、この話には、出どころがある。",
-    "startMs": 54537,
-    "endMs": 57545,
+    "text": "そして大国主は、地上の国を造り上げた神として描かれる。",
+    "startMs": 65823,
+    "endMs": 69993,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "『八幡愚童訓』という本だ。八幡の神のありがたさを、わかりやすく説くために書かれた本だった。",
-    "startMs": 58025,
-    "endMs": 64884,
+    "text": "ところが、不思議なことがある。",
+    "startMs": 70473,
+    "endMs": 72553,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "八幡の神の力で元軍が退いた、という話を語る本で、武士の戦いぶりを、正確に伝えるための記録ではない。",
-    "startMs": 65364,
-    "endMs": 73769,
+    "text": "8年後にできた日本書紀の本文には、大国主が兄の神々にいじめられる話も、根の国の試練の話も、出てこないのだ。",
+    "startMs": 73033,
+    "endMs": 81897,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そのため、この本の描く戦いの様子は、そのまま信じてよいのか、研究者のあいだで疑問が出ている。",
-    "startMs": 74249,
-    "endMs": 81332,
+    "text": "古代の日本で、いちばん広く読まれたのは、国の正式な歴史書である、日本書紀のほうだった。",
+    "startMs": 82377,
+    "endMs": 88895,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、実際の戦いを描いた資料は、ないのだろうか。",
-    "startMs": 81812,
-    "endMs": 85865,
+    "text": "国の正式な歴史からは、出雲の物語の多くが、こぼれ落ちている。",
+    "startMs": 89375,
+    "endMs": 94388,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ある。この戦いに加わった、一人の武士が残した絵巻だ。",
-    "startMs": 86345,
-    "endMs": 90527,
+    "text": "なぜ、古事記だけが、これほど出雲の物語をくわしく書いたのか。その理由は、研究者のあいだでも、意見が分かれている。",
+    "startMs": 94868,
+    "endMs": 103828,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "肥後の国、今の熊本県の御家人、竹崎季長が描かせた、『蒙古襲来絵詞』。",
-    "startMs": 91007,
-    "endMs": 97588,
+    "text": "天皇の物語の中に、出雲の神々の話が、これほど大きな場所を占めていることは、確かだ。",
+    "startMs": 104308,
+    "endMs": 111359,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "この絵巻には、季長のほかにも、多くの武士たちが、仲間と一緒に馬を走らせ、矢を射かける姿が描かれている。",
-    "startMs": 98068,
-    "endMs": 106377,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "鎌倉の武士は、もともと、一族や家来たちと、まとまって戦うのがふつうだった。",
-    "startMs": 106857,
-    "endMs": 112799,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "武士の戦い方を研究する人の中には、絵巻を見ると、武士たちは集団で戦っていたと考える人もいる。",
-    "startMs": 113279,
-    "endMs": 120639,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "もちろん、元軍の戦い方に、武士たちが苦しめられたのは確かだ。",
-    "startMs": 121119,
-    "endMs": 126057,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "元の兵は、弓の扱いにたけ、集団で動き、見たことのない武器まで使ってきた。",
-    "startMs": 126537,
-    "endMs": 132511,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "それでも、武士たちは、一日じゅう戦い続けた。博多の町や、筥崎宮が焼かれるほどの、激しい戦いだった。",
-    "startMs": 132991,
-    "endMs": 141609,
+    "text": "ただし、3分の1という数字は、何を数えるかで変わる。文字の数で正確に数えた研究は、見当たらない。",
+    "startMs": 111839,
+    "endMs": 119999,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 142089,
-    "endMs": 143519,
+    "startMs": 120479,
+    "endMs": 121908,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "半分正しい。",
-    "startMs": 143999,
-    "endMs": 145065,
+    "startMs": 122388,
+    "endMs": 123455,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "武士たちが元軍の戦い方に苦戦したのは確かだ。でも、一人ずつ名乗って負けたという話は、神社の側が書いた本がもとで、実際には、仲間とまとまって戦っていたとみられている。",
-    "startMs": 145545,
-    "endMs": 158100,
+    "text": "古事記の神話の大きな部分を出雲の物語が占めているのは確かだ。でも、3分の1という数字は目安で、日本書紀の本文では、その多くが消えている。",
+    "startMs": 123935,
+    "endMs": 134580,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、武士たちを苦しめた、見たことのない武器とは、何だったのか。",
-    "startMs": 158580,
-    "endMs": 163359,
+    "text": "では、出雲の人々自身は、自分たちの国の始まりを、どう語っていたのか。",
+    "startMs": 135060,
+    "endMs": 140735,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第4の手がかり てつはうは音だけのこけおどし？（4460フレーム）
-export const clue4TetsuhauCaptions: Caption[] = [
+// 0:00 第4の手がかり 出雲の国は、神が引き寄せて作った？（4742フレーム）
+export const clue4KunibikiCaptions: Caption[] = [
   {
-    "text": "『蒙古襲来絵詞』の中でも、いちばん有名な場面がある。",
+    "text": "733年。出雲の国の役人たちがまとめた、出雲国風土記。",
     "startMs": 500,
-    "endMs": 4980,
+    "endMs": 5972,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "馬に乗った竹崎季長の目の前で、丸い玉が、炎と煙を上げて破裂している。",
-    "startMs": 5460,
-    "endMs": 11177,
+    "text": "日本各地で作られた風土記の中で、ほぼ完全な形で残っているのは、この出雲国風土記だけだ。",
+    "startMs": 6452,
+    "endMs": 12969,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "季長の馬は、矢を受けて血を流し、季長自身も、傷を負っている。",
-    "startMs": 11657,
-    "endMs": 17225,
+    "text": "その最初のほうに、出雲の国の始まりの物語が書かれている。国引きの神話だ。",
+    "startMs": 13449,
+    "endMs": 19241,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "この丸い玉が、「てつはう」だ。",
-    "startMs": 17705,
-    "endMs": 20447,
+    "text": "主人公は、ヤツカミズオミツノという神。",
+    "startMs": 19721,
+    "endMs": 22644,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "絵巻には、そのそばに、「てつはう」という文字が書き込まれている。",
-    "startMs": 20927,
-    "endMs": 25705,
+    "text": "神は、出雲の国を見渡して、こう言った。この国は、細長い布のように、小さく作られてしまった。どこかの国の余った土地を、縫いつけて、大きくしよう。",
+    "startMs": 23124,
+    "endMs": 35049,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "陶器でできた玉の中に火薬を詰めて、火をつけて投げる。爆発で、大きな音と炎を出す武器だった。",
-    "startMs": 26185,
-    "endMs": 33172,
+    "text": "神は、海の向こうの新羅の国に、余った土地を見つけた。",
+    "startMs": 35529,
+    "endMs": 39796,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "日本の人々にとっては、初めて見る、火薬の武器だったとみられている。",
-    "startMs": 33652,
-    "endMs": 38505,
+    "text": "大きなすきで土地を切り取り、太い綱をかけて、「国よ来い、国よ来い」と引き寄せた。",
+    "startMs": 40276,
+    "endMs": 47092,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "長いあいだ、てつはうは、大きな音で馬や人を驚かせる、こけおどしの武器だったと考えられてきた。",
-    "startMs": 38985,
-    "endMs": 46068,
+    "text": "こうしてできたのが、今の出雲大社のあたりの土地だという。",
+    "startMs": 47572,
+    "endMs": 51241,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ところが、その実物が、海の底から見つかった。",
-    "startMs": 46548,
-    "endMs": 50239,
+    "text": "このとき、綱をつなぎとめた杭が、三瓶山。そして綱は、薗の長浜という、長く続く砂浜になった。",
+    "startMs": 51721,
+    "endMs": 59945,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "鷹島の海の底からは、てつはうの実物が、いくつも引き揚げられている。",
-    "startMs": 50719,
-    "endMs": 55839,
+    "text": "神は、さらに北の国からも土地を引き寄せた。",
+    "startMs": 60425,
+    "endMs": 63519,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "直径は、13センチほど。陶器でできた、丸い玉だ。",
-    "startMs": 56319,
-    "endMs": 60873,
+    "text": "最後に、北陸の越の国から引き寄せた土地が、美保関のあたり。このときの杭が、伯耆の大山。綱は、弓ヶ浜になったという。",
+    "startMs": 63999,
+    "endMs": 73897,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "研究者たちは、この玉の中を、X線のCTで調べた。体の中を写す、病院の検査と同じ仕組みだ。",
-    "startMs": 61353,
-    "endMs": 69823,
+    "text": "こうして引き寄せた4つの土地が、今の島根半島になった、と風土記は語っている。",
+    "startMs": 74377,
+    "endMs": 79839,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "すると、玉の中から、細長い鉄の破片と、陶器のかけらのようなものが見つかった。",
-    "startMs": 70303,
-    "endMs": 76372,
+    "text": "もちろん、土地が綱で引かれてきたはずはない。",
+    "startMs": 80319,
+    "endMs": 83348,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "火薬が爆発すると、この鉄の破片が、四方に飛び散る。",
-    "startMs": 76852,
-    "endMs": 81151,
+    "text": "でも、地形を調べると、この神話には、不思議な一致がある。",
+    "startMs": 83828,
+    "endMs": 88671,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "つまり、てつはうは、音で驚かせるだけでなく、人を傷つけるための武器だったのだ。",
-    "startMs": 81631,
-    "endMs": 87700,
+    "text": "島根半島と、中国山地のあいだには、宍道湖と中海という、2つの大きな湖が並んでいる。そのあいだの土地は、とても低い。",
+    "startMs": 89151,
+    "endMs": 98825,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "鉄の破片には、細かい泡のあとがあり、溶かした鉄を型に流して作った、鋳物の鉄だとわかった。",
-    "startMs": 88180,
-    "endMs": 95188,
+    "text": "今からおよそ6000年前、縄文時代には、今より海面が高く、島根半島は、本土から海で隔てられた、細長い島のような姿だったと考えられている。",
+    "startMs": 99305,
+    "endMs": 110815,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "玉の口のまわりには、繊維のあとも残っていた。火をつけるための、導火線のようなものだった可能性がある。",
-    "startMs": 95668,
-    "endMs": 102889,
+    "text": "その後、斐伊川などが運んだ大量の土砂が、海を埋め、島と本土をつないでいった。",
+    "startMs": 111295,
+    "endMs": 117353,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ただし、どれほどの威力があったのかは、はっきりしていない。",
-    "startMs": 103369,
-    "endMs": 107401,
+    "text": "海の向こうにあった土地が、少しずつ、陸に引き寄せられてきた。国引きの神話は、そんな土地の成り立ちを、どこかで見ていた人々の記憶なのかもしれない、と考える人もいる。",
+    "startMs": 117833,
+    "endMs": 129951,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "火薬そのものは、750年のあいだに、すっかり失われているからだ。",
-    "startMs": 107881,
-    "endMs": 112959,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "てつはうを再現して威力を確かめようとした実験もあるが、その評価は、まだ分かれている。",
-    "startMs": 113439,
-    "endMs": 119487,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "それでも、絵巻に描かれた、あの炎の玉が、本当に戦場で使われていたことは、海の底の実物で確かめられた。",
-    "startMs": 119967,
-    "endMs": 128532,
+    "text": "ただし、出雲の人々が、何千年も前の地形を覚えていたという証拠はない。",
+    "startMs": 130431,
+    "endMs": 135999,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 129012,
-    "endMs": 130441,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "まちがい。",
-    "startMs": 130921,
-    "endMs": 131583,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "てつはうの中には、鉄の破片が詰められていた。音で驚かせるだけでなく、人を傷つけるための武器だった。",
-    "startMs": 132063,
-    "endMs": 139412,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、教科書に載っている、あの有名な絵は、本当に、戦いの場面をそのまま描いたものなのだろうか。",
-    "startMs": 139892,
-    "endMs": 147455,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第5の手がかり 教科書のあの絵は、見たままを描いた？（6494フレーム）
-export const clue5EkotobaCaptions: Caption[] = [
-  {
-    "text": "てつはうの場面は、日本史の教科書に、必ずと言っていいほど載っている。",
-    "startMs": 500,
-    "endMs": 5513,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "馬に乗った竹崎季長。炎を上げて破裂するてつはう。そして、その向こうで弓を引く、3人の元の兵士。",
-    "startMs": 5993,
-    "endMs": 14068,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "元寇と聞いて、この絵を思い浮かべる人も多いだろう。",
-    "startMs": 14548,
-    "endMs": 18207,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "『蒙古襲来絵詞』は、季長が、自分の戦いぶりを伝えるために描かせた絵巻だ。",
-    "startMs": 18687,
-    "endMs": 25236,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "戦いに加わった本人が、記憶をもとに描かせたもので、元寇を描いた、ほぼ同じ時代の絵として、とても貴重な資料とされている。",
-    "startMs": 25716,
-    "endMs": 35156,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ところが、この有名な場面には、ある疑いがかけられている。",
-    "startMs": 35636,
-    "endMs": 40009,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "てつはうの向こうで弓を引く、3人の元の兵士。この3人は、あとの時代に描き足されたのではないか、というのだ。",
-    "startMs": 40489,
-    "endMs": 48756,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この説を唱えたのは、絵巻を長年研究してきた、佐藤鉄太郎だ。",
-    "startMs": 49236,
-    "endMs": 54175,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "佐藤たちは、絵巻の紙のつなぎ目を、一枚一枚調べた。さらに、赤外線の写真を撮って、絵の下に隠れたあとを探った。",
-    "startMs": 54655,
-    "endMs": 64095,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "すると、おかしなことがわかった。",
-    "startMs": 64575,
-    "endMs": 66943,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この場面の紙は、つなぎ目で、上下にずれて貼り合わされている。ところが、3人の兵士の絵は、そのつなぎ目をまたいでいるのに、少しもずれていない。",
-    "startMs": 67423,
-    "endMs": 77940,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "もし、絵巻ができたときから描かれていたなら、紙と一緒に、絵もずれているはずだ。",
-    "startMs": 78420,
-    "endMs": 84415,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "紙を貼り合わせたあとで、上から描き加えた。そう考えると、つじつまが合う。",
-    "startMs": 84895,
-    "endMs": 90633,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "しかも、この3人は、ほかの場面の元の兵士と、身につけている装備も、筆の運びも、はっきりと違っていた。",
-    "startMs": 91113,
-    "endMs": 99369,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そのため、3人の兵士は、江戸時代に描き足された可能性が高い、と考える研究者が多い。",
-    "startMs": 99849,
-    "endMs": 107113,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "一方で、九州大学の服部英雄のように、3人は絵巻と同じころに描かれたと反論する研究者もいる。紙のつなぎ目をまたいで絵を描くのは、絵巻ではよくあることだ、というのだ。",
-    "startMs": 107593,
-    "endMs": 120457,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この絵巻は、およそ700年のあいだに、傷んだり、ばらばらになったり、順番が入れ替わったりしながら伝えられてきた。",
-    "startMs": 120937,
-    "endMs": 129172,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "江戸時代には、熊本の天草の大矢野家に伝わり、大名や学者たちが、こぞって写しを作った。今、知られている写しは、およそ40にのぼるという。",
-    "startMs": 129652,
-    "endMs": 141012,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "その長い旅の途中で、直されたり、描き足されたりした部分があると考えられているのだ。",
-    "startMs": 141492,
-    "endMs": 147497,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "もし、そうだとすると、季長は、3人の兵士に向かって突撃したのではなかったことになる。",
-    "startMs": 147977,
-    "endMs": 154569,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "本当は、どんな場面だったのか。それは、描き足される前の姿が残っていないので、確かめようがない。",
-    "startMs": 155049,
-    "endMs": 162388,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ただし、てつはうそのものは、作り話ではなかった。",
-    "startMs": 162868,
-    "endMs": 166676,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "前の手がかりで見たように、鷹島の海の底から、本物のてつはうが見つかっている。",
-    "startMs": 167156,
-    "endMs": 172788,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "絵巻に描かれた炎の玉は、確かに、元軍が使っていた武器だったのだ。",
-    "startMs": 173268,
-    "endMs": 178463,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "絵巻は、明治23年、1890年に大矢野家から皇室に献上され、今は、皇居三の丸尚蔵館が収めている。2021年には、国宝に指定された。",
-    "startMs": 178943,
-    "endMs": 191977,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 192457,
-    "endMs": 193887,
+    "startMs": 136479,
+    "endMs": 137908,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "半分正しい。",
-    "startMs": 194367,
-    "endMs": 195433,
+    "startMs": 138388,
+    "endMs": 139455,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "てつはうは、本当に元軍が使っていた武器だった。でも、教科書でおなじみの3人の元の兵士は、紙のつなぎ目と赤外線の調査から、江戸時代に描き足された可能性が高いとみられている。",
-    "startMs": 195913,
-    "endMs": 208980,
+    "text": "島根半島は、かつて海で隔てられ、川の土砂で本土とつながったと考えられている。でも、神が引き寄せたのではないし、神話がその記憶だという証拠もない。",
+    "startMs": 139935,
+    "endMs": 151188,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、元軍が、たった一日の戦いで海へ引き揚げていったのは、なぜなのか。",
-    "startMs": 209460,
-    "endMs": 215241,
+    "text": "では、出雲の神話でいちばん有名な、あの怪物は、何だったのか。",
+    "startMs": 151668,
+    "endMs": 156841,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第6の手がかり 1度目の元軍は、嵐で追い返された？（5738フレーム）
-export const clue6StormCaptions: Caption[] = [
+// 0:00 第5の手がかり ヤマタノオロチは、暴れ川だった？（5987フレーム）
+export const clue5OrochiCaptions: Caption[] = [
   {
-    "text": "10月20日の夜。元軍は、博多の陸から船に引き揚げた。",
+    "text": "天の国を追われたスサノオが、出雲の肥の河のほとりに降りてくると、川上から、箸が流れてきた。",
     "startMs": 500,
-    "endMs": 4980,
+    "endMs": 7444,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、翌朝。博多湾から、元の大船団の姿が消えていた。",
-    "startMs": 5460,
-    "endMs": 10740,
+    "text": "川上に人が住んでいると知ったスサノオが、さかのぼっていくと、年老いた夫婦と娘が、泣いていた。",
+    "startMs": 7924,
+    "endMs": 14836,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "この出来事は、長いあいだ、こう語られてきた。夜のうちに嵐が吹き荒れ、元の船は沈み、残った船も逃げ帰ったのだと。",
-    "startMs": 11220,
-    "endMs": 20180,
+    "text": "夫婦には、8人の娘がいた。でも、毎年、ヤマタノオロチがやってきて、娘を1人ずつ食べてしまう。今年は、最後の娘、クシナダヒメの番だというのだ。",
+    "startMs": 15316,
+    "endMs": 27753,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "これが、1度目の神風だ。",
-    "startMs": 20660,
-    "endMs": 22847,
+    "text": "ヤマタノオロチは、頭が8つ、尾が8つ。その体には、苔や、ヒノキや杉が生え、長さは、8つの谷と、8つの峰にわたる。目は、ほおずきのように赤く、腹は、いつも血でただれている。",
+    "startMs": 28233,
+    "endMs": 43785,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "でも、昔の記録を、一つひとつ読み比べると、話は、そう簡単ではない。",
-    "startMs": 23327,
-    "endMs": 29503,
+    "text": "スサノオは、強い酒を8つの桶に満たして待ち、酒に酔って眠ったオロチを、剣で切り刻んだ。",
+    "startMs": 44265,
+    "endMs": 51071,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "まず、嵐のことを書いている記録がある。",
-    "startMs": 29983,
-    "endMs": 32788,
+    "text": "すると、肥の河は、血に染まって流れた。",
+    "startMs": 51551,
+    "endMs": 54761,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "高麗の歴史をまとめた『高麗史』には、夜に大風雨にあい、多くの船が岩や崖にぶつかって壊れた、という意味のことが書かれている。",
-    "startMs": 33268,
-    "endMs": 43039,
+    "text": "そして、オロチの尾を切ったとき、剣の刃が欠けた。尾の中から、1本の剣が出てきたのだ。",
+    "startMs": 55241,
+    "endMs": 61769,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "京都の公家の日記、『勘仲記』にも、逆風が吹いて、元の船が帰っていった、という伝え聞きが書きとめられている。",
-    "startMs": 43519,
-    "endMs": 52201,
+    "text": "これが、のちに草薙の剣と呼ばれる、三種の神器の一つだ。",
+    "startMs": 62249,
+    "endMs": 66665,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ところが、嵐のことを書いていない記録もある。",
-    "startMs": 52681,
-    "endMs": 55711,
+    "text": "では、ヤマタノオロチの正体は、何だったのか。",
+    "startMs": 67145,
+    "endMs": 70655,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "元の正式な歴史書、『元史』には、こう書かれている。「官軍整わず、また矢尽き、ただ四境を虜掠して帰る」。",
-    "startMs": 56191,
-    "endMs": 65225,
+    "text": "よく言われるのが、暴れ川、斐伊川だという説だ。",
+    "startMs": 71135,
+    "endMs": 74857,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "軍の足並みがそろわず、矢も尽きたので、まわりを荒らして帰った。そこに、嵐の話は出てこない。",
-    "startMs": 65705,
-    "endMs": 72628,
+    "text": "肥の河は、今の斐伊川だと考えられている。斐伊川は、中国山地から、たくさんの支流を集めて流れ下る川だ。",
+    "startMs": 75337,
+    "endMs": 83881,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "さらに、あの『八幡愚童訓』でさえ、暴風のことは書いていない。夜に、白い装束の神の軍勢が現れて、元軍が逃げていった、と書いているのだ。",
-    "startMs": 73108,
-    "endMs": 85417,
+    "text": "いくつにも枝分かれした流れは、8つの頭と8つの尾に、たとえられる。",
+    "startMs": 84361,
+    "endMs": 89311,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "しかも、『高麗史』の嵐も、日本の近くでのことなのか、帰る途中の海でのことなのか、はっきりしない。",
-    "startMs": 85897,
-    "endMs": 93759,
+    "text": "国の資料でも、斐伊川は、ヤマタノオロチの話にあるように、昔から氾濫をくり返してきたと伝えられている、と紹介されている。",
+    "startMs": 89791,
+    "endMs": 98964,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1958年。気象学者の荒川秀俊は、文永の役の神風はなかった、という論文を発表した。",
-    "startMs": 94239,
-    "endMs": 102473,
+    "text": "そしてもう一つの説が、鉄の説だ。",
+    "startMs": 99444,
+    "endMs": 102164,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1度目の戦いは、今の暦でいえば、11月の下旬。台風が来る季節は、もう過ぎている。",
-    "startMs": 102953,
-    "endMs": 110239,
+    "text": "出雲国風土記には、斐伊川の上流の仁多郡などで、鉄がとれると書かれている。しかも、その鉄は、かたく、さまざまな道具を作るのに向いている、とある。",
+    "startMs": 102644,
+    "endMs": 114196,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "荒川は、元軍は嵐で負けたのではなく、自分たちの判断で引き揚げたのだと考えた。",
-    "startMs": 110719,
-    "endMs": 116841,
+    "text": "川の砂に含まれる砂鉄を集め、炭で焼いて鉄を作る、たたら製鉄。オロチの尾から剣が出てきたのは、上流で鉄を作っていた人々の姿を表しているのではないか、という説だ。",
+    "startMs": 114676,
+    "endMs": 127284,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "その後も、研究者のあいだで、議論が続いてきた。",
-    "startMs": 117321,
-    "endMs": 121087,
+    "text": "さらに、砂鉄をとるために山を崩して土砂を流したことで、川の底が上がり、氾濫が起きやすくなった、という説明もある。",
+    "startMs": 127764,
+    "endMs": 136447,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2017年には、歴史学者の服部英雄が、『蒙古襲来と神風』という本を出した。",
-    "startMs": 121567,
-    "endMs": 128159,
+    "text": "ただし、山を大きく崩して砂鉄をとる方法が盛んになったのは、ずっとあと、中世から江戸時代にかけてのことだ。神話ができた奈良時代とは、時代が合わない。",
+    "startMs": 136927,
+    "endMs": 148116,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "元軍は一晩で帰った、という話そのものが不自然だと指摘し、戦いは、もっと長く続いたのではないかと論じている。",
-    "startMs": 128639,
-    "endMs": 136905,
+    "text": "暴れ川の説も、鉄の説も、のちの時代の人々の解釈で、確かめられた定説ではない。",
+    "startMs": 148596,
+    "endMs": 155263,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "元軍が引き揚げた理由として、ほかにも、いくつかの見方がある。",
-    "startMs": 137385,
-    "endMs": 141865,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "元軍の副司令官が、戦いで矢を受けて傷ついたこと。矢が尽きかけていたこと。",
-    "startMs": 142345,
-    "endMs": 148063,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "寄せ集めの軍で、モンゴル、中国、高麗の指揮官のあいだで、意見が合わなかったこと。",
-    "startMs": 148543,
-    "endMs": 155124,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "今の教科書では、元軍が引き揚げた理由を、軍の内部の対立などとして書くものが出てきている。",
-    "startMs": 155604,
-    "endMs": 162175,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "何かしらの風雨は、あったのかもしれない。でも、それが元軍を追い返した決め手だったのかは、わからないのだ。",
-    "startMs": 162655,
-    "endMs": 170505,
+    "text": "ヤマタノオロチの物語は、時代とともに、姿を変えてきた。2026年10月から、島根県立古代出雲歴史博物館では、ヤマタノオロチとスサノオの物語が、その後の時代にどう語り継がれ、どう変わっていったのかをたどる特別展が開かれている。",
+    "startMs": 155743,
+    "endMs": 173332,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 170985,
-    "endMs": 172415,
+    "startMs": 173812,
+    "endMs": 175241,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "半分正しい。",
-    "startMs": 172895,
-    "endMs": 173961,
+    "startMs": 175721,
+    "endMs": 176788,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "風雨があったことを書いた記録はある。でも、季節は11月で、台風の時期ではない。元軍が引き揚げた本当の理由は、嵐だけでは説明できない。",
-    "startMs": 174441,
-    "endMs": 185417,
+    "text": "斐伊川がくり返し氾濫したのは事実で、出雲で鉄がとれたことも、風土記に書かれている。でも、オロチの正体がそれだという証拠は、ない。",
+    "startMs": 177268,
+    "endMs": 187380,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、元軍が去ったあと、日本は、何をしたのか。",
-    "startMs": 185897,
-    "endMs": 190036,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第7の手がかり 幕府は、元の使いを斬った？（3277フレーム）
-export const clue7EnvoysCaptions: Caption[] = [
-  {
-    "text": "1度目の戦いが終わった翌年、1275年。フビライは、また使いを送ってきた。",
-    "startMs": 500,
-    "endMs": 7295,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "使いの代表は、杜世忠。5人の使いが、日本にやってきた。",
-    "startMs": 7775,
-    "endMs": 12639,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "今度は、使いたちは、鎌倉まで連れて行かれた。",
-    "startMs": 13119,
-    "endMs": 16660,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして、その年の9月。鎌倉の龍ノ口という処刑場で、5人とも、首を斬られた。",
-    "startMs": 17140,
-    "endMs": 23796,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "国と国とのあいだで、使いの命を奪うのは、とても重い意味を持つ。",
-    "startMs": 24276,
-    "endMs": 29204,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "二度と話し合いには応じない、という、はっきりした答えだった。",
-    "startMs": 29684,
-    "endMs": 34111,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "北条時宗は、戦う道を選んだのだ。",
-    "startMs": 34591,
-    "endMs": 37684,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "龍ノ口の処刑場の跡には、今、龍口寺という寺が建っている。",
-    "startMs": 38164,
-    "endMs": 42975,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして、すぐ近くの常立寺には、斬られた使いたちを葬ったとされる塚があり、「元使塚」と呼ばれている。",
-    "startMs": 43455,
-    "endMs": 51273,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "海を越えて手紙を届けに来た使いたちは、故郷に帰ることなく、鎌倉の地に眠ることになった。",
-    "startMs": 51753,
-    "endMs": 58111,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして1279年。元は、ふたたび使いを送ってきた。周福という人物だ。",
-    "startMs": 58591,
-    "endMs": 65247,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "このときも、幕府は、使いを斬ったとされている。",
-    "startMs": 65727,
-    "endMs": 69332,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "同じ年、元は、南宋を完全に滅ぼした。",
-    "startMs": 69812,
-    "endMs": 73609,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "中国の南の豊かな土地と、南宋の大きな水軍が、そっくり元のものになったのだ。",
-    "startMs": 74089,
-    "endMs": 80095,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "次に元が日本を攻めるとき、その軍は、前よりもはるかに大きくなる。",
-    "startMs": 80575,
-    "endMs": 85588,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 86068,
-    "endMs": 87497,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "正しい。",
-    "startMs": 87977,
-    "endMs": 88617,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "1275年、幕府は、元の使い5人を、鎌倉の龍ノ口で斬った。1279年の使いも斬ったとされる。日本は、話し合いではなく、戦うことを選んだ。",
-    "startMs": 89097,
-    "endMs": 102249,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、次の戦いに備えて、日本は、どんな守りを固めたのだろうか。",
-    "startMs": 102729,
-    "endMs": 108020,
+    "text": "では、神話の舞台となった出雲に、本当に、大きな力を持つ国はあったのか。その答えが、1984年、土の中から現れた。",
+    "startMs": 187860,
+    "endMs": 198345,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第8の手がかり 博多湾に、20キロの石の壁を築いた？（5464フレーム）
-export const clue8WallCaptions: Caption[] = [
+// 0:00 第6の手がかり 出雲に、大きな力を持つ国はなかった？（4357フレーム）
+export const clue6KojindaniCaptions: Caption[] = [
   {
-    "text": "1276年3月。博多湾の海岸で、大きな工事が始まった。",
-    "startMs": 500,
-    "endMs": 6100,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "砂浜に沿って、石を積み上げた壁を築くのだ。",
-    "startMs": 6580,
-    "endMs": 9972,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "当時は、「石築地」と呼ばれた。今は、「元寇防塁」と呼ばれている。",
-    "startMs": 10452,
-    "endMs": 16543,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "石の壁は、西の今津から、東の香椎まで。博多湾の海岸線に沿って、およそ20キロにわたって築かれた。",
-    "startMs": 17023,
-    "endMs": 25087,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "工事を受け持ったのは、九州の9つの国の御家人たちだ。",
-    "startMs": 25567,
-    "endMs": 29588,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "持っている土地の広さに応じて、壁の長さが割り当てられた。",
-    "startMs": 30068,
-    "endMs": 34089,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "たとえば、福岡市西区の生の松原のあたりは、肥後の国、今の熊本県の武士たちが受け持った。",
-    "startMs": 34569,
-    "endMs": 41620,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "工事は急ピッチで進められ、その年の8月ごろには、ひと通りできあがったとされている。",
-    "startMs": 42100,
-    "endMs": 48116,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "わずか半年ほどで、20キロの壁を築いたのだ。",
-    "startMs": 48596,
-    "endMs": 51945,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "発掘調査によると、生の松原の防塁は、幅がおよそ1メートルから1.5メートル、高さはおよそ1.8メートル。",
-    "startMs": 52425,
-    "endMs": 61033,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "海側は、石を垂直に積み上げて、馬や人がよじ登れないようにしていた。",
-    "startMs": 61513,
-    "endMs": 66857,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "陸側は、なだらかな坂になっていて、武士たちが壁の上に上がり、海に向かって矢を射ることができた。",
-    "startMs": 67337,
-    "endMs": 74249,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "場所によって、石の種類や積み方が違う。それぞれの国の武士たちが、地元のやり方で築いたためだと考えられている。",
-    "startMs": 74729,
-    "endMs": 82975,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "防塁は、その後、長い年月のあいだに、砂に埋もれていった。",
-    "startMs": 83455,
-    "endMs": 88340,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "今、博多湾の海岸では、発掘された防塁の一部を、見ることができる。",
-    "startMs": 88820,
-    "endMs": 94623,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "今津や生の松原、西新などには、復元された石の壁が並んでいる。",
-    "startMs": 95103,
-    "endMs": 100137,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "福岡市東区の箱崎のあたりでは、防塁は、町づくりや大学の建設で、ほとんど消えてしまったと考えられてきた。",
-    "startMs": 100617,
-    "endMs": 108671,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ところが、2016年から、九州大学の箱崎キャンパスの移転に伴う発掘が進むと、石を積んだ防塁の跡が、次々と見つかった。",
-    "startMs": 109151,
-    "endMs": 119273,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "その場所は、大正時代に、医学者で考古学者の中山平次郎が、防塁があったはずだと推定していた場所と、ぴったり重なっていた。",
-    "startMs": 119753,
-    "endMs": 129161,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "100年前の研究者の見立てが、発掘で確かめられたのだ。",
-    "startMs": 129641,
-    "endMs": 133705,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2021年、ここで見つかった防塁も、国の史跡に加えられた。",
-    "startMs": 134185,
-    "endMs": 139273,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "石の壁の守りに加えて、御家人たちが交代で海岸を見張る、異国警固番役も、さらに強められた。",
-    "startMs": 139753,
-    "endMs": 147081,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "九州だけでなく、本州の西の端、長門の海岸の守りも固められた。",
-    "startMs": 147561,
-    "endMs": 152873,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "元が攻めてくるのを、ただ待つのではない。日本は、次の戦いのやり方を、根本から変えていた。",
-    "startMs": 153353,
-    "endMs": 160628,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 161108,
-    "endMs": 162537,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "正しい。",
-    "startMs": 163017,
-    "endMs": 163657,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "1276年、博多湾の今津から香椎まで、およそ20キロにわたって、石の壁が築かれた。九州9か国の御家人が、土地の広さに応じて分担した。",
-    "startMs": 164137,
-    "endMs": 176148,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、2度目にやってきた元軍は、どれほどの大軍だったのか。",
-    "startMs": 176628,
-    "endMs": 180916,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第9の手がかり 2度目は、14万人の大軍だった？（4241フレーム）
-export const clue9FleetCaptions: Caption[] = [
-  {
-    "text": "1281年、弘安4年。元軍は、ふたたび日本へ向かった。",
-    "startMs": 500,
-    "endMs": 6281,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "今度の軍は、2つに分かれていた。",
-    "startMs": 6761,
-    "endMs": 9279,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ひとつは、東路軍。前回と同じく、高麗の合浦から出発する、モンゴル、中国北部、高麗の兵の軍だ。",
-    "startMs": 9759,
-    "endMs": 18751,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "およそ4万人、船は900隻とされる。",
-    "startMs": 19231,
-    "endMs": 22452,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "もうひとつは、江南軍。元に滅ぼされた南宋の兵を中心とする軍で、中国の南、長江の河口のあたりから出発した。",
-    "startMs": 22932,
-    "endMs": 32244,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "こちらは、およそ10万人、船は3500隻とされる。",
-    "startMs": 32724,
-    "endMs": 37172,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "あわせて、14万人、4400隻。",
-    "startMs": 37652,
-    "endMs": 41300,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "世界の歴史の中でも、最大級の海からの攻撃だと言われてきた。",
-    "startMs": 41780,
-    "endMs": 46367,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2つの軍は、壱岐のあたりで落ち合い、一緒に日本を攻める計画だった。",
-    "startMs": 46847,
-    "endMs": 51924,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "東路軍は、5月3日に合浦を出発した。ところが、江南軍の出発は、6月18日。1か月半も遅れてしまった。",
-    "startMs": 52404,
-    "endMs": 61865,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ただし、この14万人、4400隻という数字は、元や高麗の側の記録に書かれた数字だ。",
-    "startMs": 62345,
-    "endMs": 69897,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "昔の記録の兵の数は、軍の大きさを誇るために、大きく書かれることがある。",
-    "startMs": 70377,
-    "endMs": 75913,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "アメリカの歴史研究者、トーマス・コンランは、実際の軍の規模は、言われているよりずっと小さかったと論じている。",
-    "startMs": 76393,
-    "endMs": 84447,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "一方で、鷹島の海の底からは、これまでに3隻の船が見つかり、何千点もの遺物が引き揚げられている。",
-    "startMs": 84927,
-    "endMs": 92617,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "大きな船団が、この海にいたことは、間違いない。",
-    "startMs": 93097,
-    "endMs": 96873,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "本当に14万人だったのかは、わからない。でも、日本がそれまで経験したことのない、巨大な軍がやってきたことは確かだ。",
-    "startMs": 97353,
-    "endMs": 106281,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "しかも、江南軍の兵の多くは、つい2年前まで、元と戦っていた南宋の兵だった。",
-    "startMs": 106761,
-    "endMs": 113343,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "国を滅ぼされた兵たちが、今度は、元の命令で、日本へ向かったのだ。",
-    "startMs": 113823,
-    "endMs": 119263,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 119743,
-    "endMs": 121172,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "半分正しい。",
-    "startMs": 121652,
-    "endMs": 122719,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "14万人、4400隻は、元や高麗の側の記録の数字だ。実際はもっと小さかったという研究者もいる。でも、空前の大軍だったことは確かだ。",
-    "startMs": 123199,
-    "endMs": 135007,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、この大軍は、本当に、嵐だけで敗れたのだろうか。",
-    "startMs": 135487,
-    "endMs": 140159,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第10の手がかり 2度目は、嵐だけで勝った？（4877フレーム）
-export const clue10KamikazeCaptions: Caption[] = [
-  {
-    "text": "1281年6月の初め。東路軍の船団が、博多湾の入り口に現れた。",
-    "startMs": 500,
-    "endMs": 6943,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ところが、元軍は、博多の海岸に上陸できなかった。",
-    "startMs": 7423,
-    "endMs": 11625,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "海岸線には、あの石の壁が、ずらりと並んでいたからだ。",
-    "startMs": 12105,
-    "endMs": 16340,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "石の壁の上には、武士たちが待ち構えていた。",
-    "startMs": 16820,
-    "endMs": 19967,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "元軍は、仕方なく、博多湾の入り口にある、志賀島に船をつけた。",
-    "startMs": 20447,
-    "endMs": 25812,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "すると、日本の武士たちは、小さな船で、夜のうちに元の船に近づき、攻撃をしかけた。",
-    "startMs": 26292,
-    "endMs": 33204,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "陸からも、海の中道という、志賀島へ続く細長い砂の道を通って、武士たちが攻めかかった。",
-    "startMs": 33684,
-    "endMs": 40841,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "竹崎季長も、このとき、小船で元の船に乗り込んで戦った様子を、絵巻に描かせている。",
-    "startMs": 41321,
-    "endMs": 48212,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "元軍は、志賀島からも引き、壱岐へ、そして、平戸や鷹島のあたりへと移っていった。",
-    "startMs": 48692,
-    "endMs": 55391,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "東路軍が日本の海に来てから、およそ2か月。元軍は、まともに上陸できないまま、海の上で過ごした。",
-    "startMs": 55871,
-    "endMs": 63657,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "夏の暑さの中、狭い船の中では、病気が広がったと伝えられている。",
-    "startMs": 64137,
-    "endMs": 69183,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "食べ物や水も、少しずつ減っていった。",
-    "startMs": 69663,
-    "endMs": 72436,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "7月の終わり、ようやく、遅れていた江南軍が、鷹島のあたりで東路軍と合流した。",
-    "startMs": 72916,
-    "endMs": 79497,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして、7月30日の夜。強い風と雨が、この海を襲った。",
-    "startMs": 79977,
-    "endMs": 85311,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "嵐は、翌日の閏7月1日まで続いた。今の暦でいえば、8月の下旬ごろ。台風の季節だ。",
-    "startMs": 85791,
-    "endMs": 93812,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "鷹島のまわりに集まっていた元の船は、次々とぶつかり合い、沈んでいった。",
-    "startMs": 94292,
-    "endMs": 99817,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "気象学の研究者も、このときの嵐は、台風だったと考えている。",
-    "startMs": 100297,
-    "endMs": 105332,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2度目の神風は、本当に吹いたのだ。",
-    "startMs": 105812,
-    "endMs": 108596,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "でも、ここで考えてほしい。もし、石の壁がなかったら。",
-    "startMs": 109076,
-    "endMs": 113737,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "元軍は、6月の初めに博多に上陸し、台風の季節が来る前に、九州の陸の上で戦いを進めていたかもしれない。",
-    "startMs": 114217,
-    "endMs": 122943,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2か月ものあいだ、元軍を海の上に足止めしたのは、石の壁と、夜襲をくり返した武士たちだった。",
-    "startMs": 123423,
-    "endMs": 130527,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "台風は、その最後の、とどめになったのだ。",
-    "startMs": 131007,
-    "endMs": 134271,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "コンランも、日本の勝利に、神の助けはほとんど必要なかった、と書いている。",
-    "startMs": 134751,
-    "endMs": 140308,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 140788,
-    "endMs": 142217,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "まちがい。",
-    "startMs": 142697,
-    "endMs": 143359,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2度目の戦いでは、台風が吹いたのは確かだ。でも、その前の2か月、石の壁と武士たちの夜襲が、元軍を海の上に足止めしていた。嵐だけで勝ったのではない。",
-    "startMs": 143839,
-    "endMs": 155903,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、嵐のあと、海に残された元軍は、どうなったのだろうか。",
-    "startMs": 156383,
-    "endMs": 161353,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第11の手がかり 嵐で、元軍は全滅した？（3558フレーム）
-export const clue11SurvivorsCaptions: Caption[] = [
-  {
-    "text": "閏7月1日。嵐が過ぎ去った海には、壊れた船と、たくさんの兵士が残されていた。",
-    "startMs": 500,
-    "endMs": 7316,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "江南軍の総大将、范文虎は、残った船の中から、じょうぶな船を選び、自分たちだけで逃げ帰ったと伝えられている。",
-    "startMs": 7796,
-    "endMs": 16553,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "兵士たちは、取り残された。",
-    "startMs": 17033,
-    "endMs": 19113,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "鷹島には、生き残った兵が、およそ5千人上陸したと、地元の松浦市は伝えている。",
-    "startMs": 19593,
-    "endMs": 26324,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "日本の武士たちは、島に残った元軍に攻めかかった。",
-    "startMs": 26804,
-    "endMs": 30377,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "鷹島には、今も、この戦いにまつわる地名や言い伝えが、いくつも残っている。",
-    "startMs": 30857,
-    "endMs": 36852,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "「10万の兵のうち、生きて帰れたのは3人だけだった」。そんな話を聞いたことがあるかもしれない。",
-    "startMs": 37332,
-    "endMs": 43796,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "でも、この話は、そのまま信じることはできない。",
-    "startMs": 44276,
-    "endMs": 47999,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "総大将の范文虎たちは、船で帰っている。高麗の記録では、高麗の兵のうち、帰らなかった者は7000人あまりとされている。",
-    "startMs": 48479,
-    "endMs": 58164,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "つまり、帰った兵も、少なくなかったのだ。",
-    "startMs": 58644,
-    "endMs": 62068,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "それでも、多くの兵が、命を落とし、あるいは捕らえられたことは確かだ。",
-    "startMs": 62548,
-    "endMs": 68009,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "捕らえられた兵のうち、元に滅ぼされた南宋の人々は、命を助けられた、という言い伝えもある。",
-    "startMs": 68489,
-    "endMs": 75593,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "嵐のあと、北条時宗が出した命令書が残っている。そこには、元の船の多くが、すでに去っていったことが書かれている。",
-    "startMs": 76073,
-    "endMs": 84660,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "元軍は、全滅したのではない。大きな損害を受けて、退いていったのだ。",
-    "startMs": 85140,
-    "endMs": 90719,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして、沈んだ船は、その後750年近く、鷹島の海の底に眠り続けることになる。",
-    "startMs": 91199,
-    "endMs": 98089,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 98569,
-    "endMs": 99999,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "まちがい。",
-    "startMs": 100479,
-    "endMs": 101140,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "元軍は、大きな損害を受けた。でも、総大将たちは船で逃げ帰り、高麗の兵にも、帰った者がいた。全滅したのではない。",
-    "startMs": 101620,
-    "endMs": 111817,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、海に沈んだ船は、本当に、見つけることができるのだろうか。",
-    "startMs": 112297,
-    "endMs": 117385,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第12の手がかり 海に沈んだ元の船は、見つからない？（5442フレーム）
-export const clue12WrecksCaptions: Caption[] = [
-  {
-    "text": "長崎県松浦市の鷹島。九州の北西、伊万里湾の入り口に浮かぶ島だ。",
-    "startMs": 500,
-    "endMs": 6388,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "今は、長い橋で、佐賀県の唐津とつながっている。",
-    "startMs": 6868,
-    "endMs": 10740,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "1281年の夏、この島のまわりに、元の大船団が集まり、そして嵐に襲われた。",
-    "startMs": 11220,
-    "endMs": 18409,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "1974年。鷹島の神崎という海岸で、貝を掘っていた島の人が、砂の中から、銅でできた小さな印を見つけた。",
-    "startMs": 18889,
-    "endMs": 28361,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "印には、文字が刻まれていた。「管軍総把印」。",
-    "startMs": 28841,
-    "endMs": 32564,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "元の軍で、兵を率いる隊長が使った印だった。",
-    "startMs": 33044,
-    "endMs": 36713,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "750年近く前の、元の軍の持ち物が、島の海岸に眠っていたのだ。",
-    "startMs": 37193,
-    "endMs": 42932,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "1980年から、鷹島の海の底の調査が始まった。",
-    "startMs": 43412,
-    "endMs": 47903,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "潜水士たちが、海の底の泥を少しずつ取り除いていくと、さまざまなものが出てきた。",
-    "startMs": 48383,
-    "endMs": 54271,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "船の部品、陶磁器、刀や矢の束、鉄のかぶと、漆塗りの道具。そして、あの、てつはう。",
-    "startMs": 54751,
-    "endMs": 63135,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "これまでに見つかった遺物は、およそ4000点にのぼる。",
-    "startMs": 63615,
-    "endMs": 67113,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして2011年10月。琉球大学の池田榮史教授たちの調査チームが、大きな発表をした。",
-    "startMs": 67593,
-    "endMs": 74836,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "鷹島の沖、およそ200メートル。水深23メートルから25メートルの海の底で、元の船の、船体そのものが見つかったのだ。",
-    "startMs": 75316,
-    "endMs": 84895,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "泥の中、およそ1メートルの深さに、船の背骨にあたる竜骨と、船の両側の板が残っていた。",
-    "startMs": 85375,
-    "endMs": 92532,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "竜骨は、幅がおよそ50センチ。見つかった長さは、およそ12メートル。船の全長は、およそ27メートルと推定された。",
-    "startMs": 93012,
-    "endMs": 102697,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "元寇の船の船体が、まとまった形で見つかったのは、これが初めてだった。",
-    "startMs": 103177,
-    "endMs": 108500,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "翌年の2012年。鷹島の神崎の沖、およそ38万平方メートルの海が、国の史跡に指定された。",
-    "startMs": 108980,
-    "endMs": 117236,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "「鷹島神崎遺跡」。海の中の遺跡が国の史跡になったのは、日本で初めてのことだった。",
-    "startMs": 117716,
-    "endMs": 123764,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2015年には、島の南の沖で、2隻目の船が見つかった。全長はおよそ20メートルと推定されている。",
-    "startMs": 124244,
-    "endMs": 132148,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして2023年。島の南東の沖、水深およそ18メートルの海の底で、木の構造物が見つかった。",
-    "startMs": 132628,
-    "endMs": 140767,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "調べを進めると、これも元寇の船だとわかった。3隻目の船だ。",
-    "startMs": 141247,
-    "endMs": 146164,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "見つかった船は、調べたあと、もう一度、泥と砂をかぶせて、海の底に戻している。",
-    "startMs": 146644,
-    "endMs": 153119,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "泥の中は、空気が少なく、木が腐りにくい。海の底こそが、いちばん安全な保管庫なのだ。",
-    "startMs": 153599,
-    "endMs": 160713,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 161193,
-    "endMs": 162623,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "まちがい。",
-    "startMs": 163103,
-    "endMs": 163764,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "鷹島の海の底からは、これまでに3隻の元の船が見つかっている。海の中の遺跡として、日本で初めて国の史跡にもなった。",
-    "startMs": 164244,
-    "endMs": 172895,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、濁った海の底に埋もれた船を、研究者たちは、どうやって見つけ、調べているのか。",
-    "startMs": 173375,
-    "endMs": 180180,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第13の手がかり 海の底の船は、潜って探せば見つかる？（4925フレーム）
-export const clue13SearchCaptions: Caption[] = [
-  {
-    "text": "海の底に沈んだ船を探す。そう聞くと、潜水士が海に潜って、目で探す姿を思い浮かべるかもしれない。",
+    "text": "1983年。島根県の斐川町、今の出雲市で、広い農道をつくる計画が進んでいた。",
     "startMs": 500,
     "endMs": 8223,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "でも、鷹島の海は、そう簡単ではない。",
+    "text": "工事の前に、道の通る場所に遺跡がないかを調べる、分布調査が行われた。",
     "startMs": 8703,
-    "endMs": 12073,
+    "endMs": 14217,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "海の水は濁っていて、いちばんよく見える日でも、見通せるのは5メートルほど。",
-    "startMs": 12553,
-    "endMs": 17940,
+    "text": "調査員が、田んぼのあぜ道を歩いていたとき、地面に落ちていた、古い焼き物のかけらを拾った。古墳時代から平安時代にかけて作られた、須恵器のかけらだった。",
+    "startMs": 14697,
+    "endMs": 26004,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "しかも、元の船は、海の底の砂や泥の、さらに下に埋まっている。潜って目で探しても、見つからないのだ。",
-    "startMs": 18420,
-    "endMs": 26633,
+    "text": "近くの谷の斜面に、何かがあるかもしれない。翌年、1984年の夏、本格的な発掘が始まった。",
+    "startMs": 26484,
+    "endMs": 35135,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そこで使われてきたのが、音だ。",
-    "startMs": 27113,
-    "endMs": 29481,
+    "text": "場所は、荒神谷と呼ばれる小さな谷。標高22メートルほどの丘の斜面だった。",
+    "startMs": 35615,
+    "endMs": 41460,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "船から海の底に向けて音を出し、はね返ってくる音を調べる。すると、海の底の地形を、細かい地図にすることができる。",
-    "startMs": 29961,
-    "endMs": 38868,
+    "text": "地面から50センチほど掘り下げた粘土の層から、緑色にさびた、銅の剣が現れた。",
+    "startMs": 41940,
+    "endMs": 47913,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "さらに、海の底の、そのまた下の地層まで音を通して、泥の中に埋もれたものの形を探る装置もある。",
-    "startMs": 39348,
-    "endMs": 46943,
+    "text": "1本、2本ではなかった。掘っても掘っても、剣が出てくる。",
+    "startMs": 48393,
+    "endMs": 53012,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "池田教授たちは、こうした音波の探査で、伊万里湾の海の底の詳しい地図と、地層の断面図を作り、船が埋まっていそうな場所をしぼり込んできた。",
-    "startMs": 47423,
-    "endMs": 57823,
+    "text": "最後に数えた数は、358本。",
+    "startMs": 53492,
+    "endMs": 56575,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "金属に反応する、磁気の探査も使われる。元軍の武器や、船を留める鉄の釘があれば、反応が出ることがある。",
-    "startMs": 58303,
-    "endMs": 66623,
+    "text": "当時、日本全国で見つかっていた銅剣の数は、すべて合わせても、およそ300本。たった一つの谷から、それを上回る数の銅剣が、一度に見つかったのだ。",
+    "startMs": 57055,
+    "endMs": 68895,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "場所がしぼれたら、いよいよ潜水士の出番だ。",
-    "startMs": 67103,
-    "endMs": 70175,
+    "text": "日本の考古学の歴史に残る、大発見だった。",
+    "startMs": 69375,
+    "endMs": 72756,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "潜水士たちは、ガイドのロープをたどりながら、ポンプで泥を少しずつ吸い取り、埋もれた船を掘り出していく。",
-    "startMs": 70655,
-    "endMs": 77929,
+    "text": "荒神谷の銅剣は、のちに、国宝に指定されている。",
+    "startMs": 73236,
+    "endMs": 77268,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "見つかった船は、近くからたくさんの写真を撮り、それを組み合わせて、立体的な姿を記録する。ある調査では、およそ3000枚の写真から、沈没船の3次元の画像が作られた。",
-    "startMs": 78409,
-    "endMs": 91348,
+    "text": "この発見の前、出雲には、弥生時代の大きな勢力の証拠は、ほとんど見つかっていなかった。",
+    "startMs": 77748,
+    "endMs": 84532,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "最近は、海の底の遺跡を記録するために、ケーブルでつないだ小型の無人の潜水機を使う研究も進められている。",
-    "startMs": 91828,
-    "endMs": 99711,
+    "text": "だから、多くの学者は、こう考えていた。出雲の神話は、都の人々が、頭の中で作り上げたお話だ。神話の舞台に選ばれただけで、出雲に、本当に力のある国があったわけではない、と。",
+    "startMs": 85012,
+    "endMs": 99881,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、引き揚げたものを調べる技術も、どんどん新しくなっている。",
-    "startMs": 100191,
-    "endMs": 104799,
+    "text": "でも、358本もの銅剣を集め、一か所に埋めることができたのは、大きな力と、たくさんの人々を動かせる何者かが、出雲にいたからだ。",
+    "startMs": 100361,
+    "endMs": 111199,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "てつはうの中身は、X線のCTで、割らずに調べられた。",
-    "startMs": 105279,
-    "endMs": 109823,
+    "text": "この発見から、出雲の古代史の見方は、大きく変わり始めた。",
+    "startMs": 111679,
+    "endMs": 116308,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "木の板の文字は、赤外線のカメラで、肉眼では見えない墨のあとが読み取られた。",
-    "startMs": 110303,
-    "endMs": 115839,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "南宋の矢は、船底の泥をすくい取り、ていねいに分析する中で見つかった。",
-    "startMs": 116319,
-    "endMs": 121684,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "日本には、およそ47万か所の遺跡があるとされる。でも、そのうち、海や湖の中の遺跡は、およそ400か所しか見つかっていない。",
-    "startMs": 122164,
-    "endMs": 132383,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "海の中の遺跡を調べるのは、それだけ難しく、お金もかかる。",
-    "startMs": 132863,
-    "endMs": 137460,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "鷹島は、その海の中の考古学の、日本の最前線なのだ。",
-    "startMs": 137940,
-    "endMs": 142473,
+    "text": "ただし、銅剣が見つかったからといって、神話に書かれた出来事が、そのまま本当にあったことになるわけではない。",
+    "startMs": 116788,
+    "endMs": 124201,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 142953,
-    "endMs": 144383,
+    "startMs": 124681,
+    "endMs": 126111,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 144863,
-    "endMs": 145524,
+    "startMs": 126591,
+    "endMs": 127252,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "元の船は、濁った海の底の、さらに泥の下に埋まっている。音波の探査で場所をしぼり、潜水士が泥を取り除き、最新の分析の技術で調べて、ようやく姿が見えてくる。",
-    "startMs": 146004,
-    "endMs": 158559,
+    "text": "弥生時代の出雲には、日本中の銅剣を上回る数の剣を集められるほどの、大きな力があった。神話の中身はともかく、出雲は、ただの舞台ではなかった。",
+    "startMs": 127732,
+    "endMs": 138921,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、そうして見つかった元の船は、どんな船だったのか。",
-    "startMs": 159039,
-    "endMs": 162953,
+    "text": "では、358本の銅剣は、いったい何に使われたのか。",
+    "startMs": 139401,
+    "endMs": 144031,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第14の手がかり 元の船は、急いで造った手抜きの船だった？（5177フレーム）
-export const clue14ShipsCaptions: Caption[] = [
+// 0:00 第7の手がかり 358本の銅剣は、戦いの武器だった？（3613フレーム）
+export const clue7SwordsCaptions: Caption[] = [
   {
-    "text": "2度目の戦いで、元の船が嵐で沈んだ理由について、よく語られる話がある。",
+    "text": "荒神谷の銅剣は、長さ50センチほど。刃のついた、剣の形をしている。",
     "startMs": 500,
-    "endMs": 6281,
+    "endMs": 6217,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "元の船は、短い期間で、無理やり造らされた。だから、手抜きの船で、嵐に耐えられなかったのだ、と。",
-    "startMs": 6761,
-    "endMs": 14772,
+    "text": "これだけの剣があれば、大きな軍隊を作れる。そう考えたくなる。",
+    "startMs": 6697,
+    "endMs": 11359,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "確かに、1度目の戦いの前、高麗は、元の命令で、大小900隻もの船を、わずか半年ほどで造らされたと記録されている。",
-    "startMs": 15252,
-    "endMs": 25375,
+    "text": "でも、銅剣が埋められていた様子を見ると、どうも様子がおかしい。",
+    "startMs": 11839,
+    "endMs": 16489,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、鷹島で見つかった船は、どうだったのか。",
-    "startMs": 25855,
-    "endMs": 29375,
+    "text": "358本の剣は、刃を立てた状態で、4つの列に、きちんと並べて埋められていた。",
+    "startMs": 16969,
+    "endMs": 23625,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "まず、見つかった3隻は、どれも、高麗の船ではなかった。",
-    "startMs": 29855,
-    "endMs": 34527,
+    "text": "戦いで使った武器を、慌てて隠したにしては、あまりにも整っている。",
+    "startMs": 24105,
+    "endMs": 29055,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "船の底がV字のように尖っていて、船の中が、板の壁で、いくつもの部屋に仕切られている。",
-    "startMs": 35007,
-    "endMs": 41588,
+    "text": "そして、剣の持ち手の部分、なかごには、ほとんどの剣に、同じバツの印が刻まれていた。その数は、344本と言われる。",
+    "startMs": 29535,
+    "endMs": 39668,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "これは、中国の南、江南で造られた船の特徴だ。つまり、江南軍の船だと考えられている。",
-    "startMs": 42068,
-    "endMs": 49780,
+    "text": "では、銅の剣は、戦いに向いていたのか。",
+    "startMs": 40148,
+    "endMs": 43519,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1号船を調べた池田教授は、船の底が二重に補強され、ていねいに組み立てられていることに気づいた。",
-    "startMs": 50260,
-    "endMs": 57385,
+    "text": "銅に、すずなどをまぜた青銅は、作りたてのときは、金色に輝く。でも、鉄にくらべると、やわらかく、折れやすい。",
+    "startMs": 43999,
+    "endMs": 53684,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "池田教授は、手抜きの船ではなかったのではないか、と話している。",
-    "startMs": 57865,
-    "endMs": 62399,
+    "text": "弥生時代の日本には、すでに鉄の武器も入ってきていた。",
+    "startMs": 54164,
+    "endMs": 57876,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2025年10月には、3号船で、新しい発見があった。",
-    "startMs": 62879,
-    "endMs": 67753,
+    "text": "そこで今では、こうした銅剣は、本物の戦いの武器ではなく、祭りの道具、武器の形をした祭器だったと考えられている。",
+    "startMs": 58356,
+    "endMs": 67156,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "竜骨と竜骨をつなぐ部分が、初めて見つかったのだ。",
-    "startMs": 68233,
-    "endMs": 71924,
+    "text": "荒神谷の剣は、出雲を中心とした山陰に多い形をしていることから、出雲型銅剣とも呼ばれる。島根県の資料では、出雲で作られた可能性が高いとされている。",
+    "startMs": 67636,
+    "endMs": 79412,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "竜骨の底に切り込みを入れ、そこに補強の材木をはめ込む。手間のかかる、しっかりしたつなぎ方だった。",
-    "startMs": 72404,
-    "endMs": 79508,
+    "text": "では、武器の形をした祭りの道具には、どんな意味があったのか。",
+    "startMs": 79892,
+    "endMs": 84372,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "池田教授は、こんなつなぎ方は、初めて見た、と驚いている。",
-    "startMs": 79988,
-    "endMs": 84756,
+    "text": "剣や矛の形には、武器の強さで、悪いものや、外からの敵を、はらいのける力があると信じられていた、という説が有力だ。",
+    "startMs": 84852,
+    "endMs": 94249,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "鷹島の海の底からは、船を止めるための、いかりの重りの石も、いくつも見つかっている。",
-    "startMs": 85236,
-    "endMs": 91721,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "碇石と呼ばれる、細長い石だ。鷹島では、これまでに30個以上が見つかっていて、重さが200キロを超えるものも多い。",
-    "startMs": 92201,
-    "endMs": 101097,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2022年には、木でできた、大きないかりが、海の底から引き揚げられた。",
-    "startMs": 101577,
-    "endMs": 107305,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "引き揚げられた木は、そのまま空気に触れると、縮んでぼろぼろになってしまう。",
-    "startMs": 107785,
-    "endMs": 112863,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そこで、トレハロースという糖の一種を、木にしみ込ませて、形を保つ処理が続けられている。",
-    "startMs": 113343,
-    "endMs": 119913,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "もちろん、900隻、4400隻もの船の中には、急いで造られた船も、あったのかもしれない。",
-    "startMs": 120393,
-    "endMs": 128009,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "でも、海の底で見つかった船を見るかぎり、手抜きの船だったという証拠は、見つかっていない。",
-    "startMs": 128489,
-    "endMs": 135028,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "むしろ、当時の中国の、高い造船の技術が見えてくる。",
-    "startMs": 135508,
-    "endMs": 139871,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "どんなにじょうぶな船でも、何百隻もの船が、狭い湾に集まっていたところに台風が来れば、船どうしがぶつかり合い、沈んでしまう。",
-    "startMs": 140351,
-    "endMs": 149663,
+    "text": "戦うための剣ではなく、守るための剣。祈りのための剣だった、というわけだ。",
+    "startMs": 94729,
+    "endMs": 100575,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 150143,
-    "endMs": 151572,
+    "startMs": 101055,
+    "endMs": 102484,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 152052,
-    "endMs": 152713,
+    "startMs": 102964,
+    "endMs": 103625,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "鷹島で見つかった元の船は、中国の江南で造られた、ていねいな造りの船だった。手抜きの船だったという証拠は、見つかっていない。",
-    "startMs": 153193,
-    "endMs": 162399,
+    "text": "358本の銅剣は、きちんと並べて、同じ印を刻んで埋められていた。戦いの武器ではなく、祭りに使われた道具だったと考えられている。",
+    "startMs": 104105,
+    "endMs": 114687,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、この船に乗っていたのは、どんな人々だったのか。その手がかりが、2026年、海の底から上がってきた。",
-    "startMs": 162879,
-    "endMs": 171348,
+    "text": "では、荒神谷から見つかったのは、銅剣だけだったのか。",
+    "startMs": 115167,
+    "endMs": 119209,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第15の手がかり 元の船には、文字は残っていない？（4572フレーム）
-export const clue15BoardCaptions: Caption[] = [
+// 0:00 第8の手がかり 銅剣の国と、銅鐸の国は、別々だった？（3245フレーム）
+export const clue8BellsCaptions: Caption[] = [
   {
-    "text": "海の底から見つかるのは、陶磁器や武器が多い。",
+    "text": "358本の銅剣が見つかった翌年、1985年。",
     "startMs": 500,
-    "endMs": 3753,
+    "endMs": 5439,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "紙に書かれた記録は、750年も海の中にあれば、跡形もなく溶けてしまう。",
-    "startMs": 4233,
-    "endMs": 9993,
+    "text": "調査員たちは、銅剣の場所から、わずか7メートルほど離れた斜面を掘り進めていた。",
+    "startMs": 5919,
+    "endMs": 11764,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "だから、元の船に乗っていた人々が、どんな文字を残したのかは、わからないと考えられてきた。",
-    "startMs": 10473,
-    "endMs": 17033,
+    "text": "そこから、また、青銅器が現れた。",
+    "startMs": 12244,
+    "endMs": 15284,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ところが、2026年4月。松浦市が、驚きの発見を公表した。",
-    "startMs": 17513,
-    "endMs": 23391,
+    "text": "銅鐸が6個。そして、銅矛が16本だ。",
+    "startMs": 15764,
+    "endMs": 19465,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "3号船の船底から引き揚げられた、一枚の木の板。",
-    "startMs": 23871,
-    "endMs": 27583,
+    "text": "このとき、学者たちは、もう一度驚いた。",
+    "startMs": 19945,
+    "endMs": 23295,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "大きさは、縦12センチ、横25センチほど。厚さは、1センチにも満たない、杉の薄い板だ。",
-    "startMs": 28063,
-    "endMs": 36052,
+    "text": "学校の教科書でも、かつて、こう習った人がいるかもしれない。弥生時代の日本には、2つの大きな文化の地域があった、と。",
+    "startMs": 23775,
+    "endMs": 33247,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "上のほうには、2つの穴があいていた。船の中で、壁に釘で打ち付けていたとみられる。",
-    "startMs": 36532,
-    "endMs": 42676,
+    "text": "一つは、北九州を中心とした、銅剣や銅矛を祭りに使う地域。",
+    "startMs": 33727,
+    "endMs": 38985,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "この板には、墨で、文字が書かれていた。",
-    "startMs": 43156,
-    "endMs": 46185,
+    "text": "もう一つは、近畿を中心とした、銅鐸を祭りに使う地域。",
+    "startMs": 39465,
+    "endMs": 44009,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ほとんどの文字は、薄れてしまって読めない。",
-    "startMs": 46665,
-    "endMs": 49492,
+    "text": "銅矛は北九州。銅鐸は近畿。それぞれ、別の人々の祭りの道具だと考えられていた。",
+    "startMs": 44489,
+    "endMs": 51508,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そこで、赤外線のカメラで撮影した。赤外線を使うと、肉眼では見えない墨のあとが、浮かび上がることがある。",
-    "startMs": 49972,
-    "endMs": 58356,
+    "text": "ところが、荒神谷では、北九州の銅矛と、近畿の銅鐸が、同じ谷の、すぐそばに埋められていた。",
+    "startMs": 51988,
+    "endMs": 60255,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "すると、最後の行に、元の年号が読み取れた。「至元十二年」、あるいは「至元十三年」。",
-    "startMs": 58836,
-    "endMs": 66324,
+    "text": "しかも、出雲型の銅剣と一緒にだ。",
+    "startMs": 60735,
+    "endMs": 63551,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "西暦でいえば、1275年か、1276年。1度目の戦いの、すぐあとだ。",
-    "startMs": 66804,
-    "endMs": 74377,
+    "text": "2つの文化圏の、ちょうど境目にあたる出雲で、両方の祭りの道具が、そろって見つかった。",
+    "startMs": 64031,
+    "endMs": 70644,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "文字を読み解いたのは、広島大学の舩田善之准教授。",
-    "startMs": 74857,
-    "endMs": 78964,
+    "text": "銅剣の国と、銅鐸の国という、教科書のわかりやすい分け方は、ここで大きく揺らいだ。",
+    "startMs": 71124,
+    "endMs": 77492,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "船に乗った人々に向けて、決まりごとを知らせる掲示だったか、あるいは、乗っている人の名簿だった可能性がある、という。",
-    "startMs": 79444,
-    "endMs": 87711,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "舩田准教授は、これまでになかった、唯一無二の資料だ、と評価している。",
-    "startMs": 88191,
-    "endMs": 93695,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "松浦市も、画期的な発見だと発表した。",
-    "startMs": 94175,
-    "endMs": 97417,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "元寇の船の中で、人々が文字を読み、決まりごとに従って暮らしていた。そのことを伝える、初めての証拠だ。",
-    "startMs": 97897,
-    "endMs": 105908,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "でも、謎も残る。",
-    "startMs": 106388,
-    "endMs": 108063,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "板に書かれていたのは、1275年か1276年の年号。でも、この船が沈んだのは、1281年の2度目の戦いのときだ。",
-    "startMs": 108543,
-    "endMs": 119572,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "年号から、5年以上もたっている。",
-    "startMs": 120052,
-    "endMs": 122591,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この板は、いつ、どこで書かれ、なぜ、この船に打ち付けられていたのか。",
-    "startMs": 123071,
-    "endMs": 128681,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "全文が読めない今、その答えは、まだわからない。",
-    "startMs": 129161,
-    "endMs": 132863,
+    "text": "出雲の人々は、西の九州とも、東の近畿とも、つながっていた。そして、両方の祭りの道具を、自分たちの手元に集めていたのだ。",
+    "startMs": 77972,
+    "endMs": 88212,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 133343,
-    "endMs": 134772,
+    "startMs": 88692,
+    "endMs": 90121,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 135252,
-    "endMs": 135913,
+    "startMs": 90601,
+    "endMs": 91263,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2026年、3号船の船底から、元の年号が墨で書かれた木の板が見つかった。元の船に残された文字の、初めての発見だった。",
-    "startMs": 136393,
-    "endMs": 146409,
+    "text": "荒神谷では、銅剣、銅矛、銅鐸が、すぐそばに埋められていた。銅剣の国と銅鐸の国を、きれいに分けることはできない。",
+    "startMs": 91743,
+    "endMs": 101503,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、この船に積まれていた武器は、どこから来たものだったのか。",
-    "startMs": 146889,
-    "endMs": 151199,
+    "text": "そして12年後、出雲の土は、さらに大きな驚きを用意していた。",
+    "startMs": 101983,
+    "endMs": 106964,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第16の手がかり 元軍は、滅ぼした国の武器まで使っていた？（4618フレーム）
-export const clue16ArrowsCaptions: Caption[] = [
+// 0:00 第9の手がかり 加茂岩倉の銅鐸は、すべて出雲で作られた？（5184フレーム）
+export const clue9KamoCaptions: Caption[] = [
   {
-    "text": "2026年8月。今度は、奈良文化財研究所と、高知大学の研究チームが発表をした。",
+    "text": "1996年10月14日。荒神谷から、山を越えて南東へ、およそ3.3キロ。島根県の加茂町、今の雲南市。",
     "startMs": 500,
-    "endMs": 7871,
+    "endMs": 11049,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "調べたのは、鷹島の沈没船の、船底にたまっていた泥だ。",
-    "startMs": 8351,
-    "endMs": 13012,
+    "text": "ここでも、農道をつくる工事が進んでいた。",
+    "startMs": 11529,
+    "endMs": 14569,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "泥を細かくふるい分けていくと、長さ3センチほどの、小さな竹のかけらが見つかった。",
-    "startMs": 13492,
-    "endMs": 19284,
+    "text": "重機が、山の斜面を削っていたときのことだ。土の中から、何かが姿を現した。銅鐸だった。",
+    "startMs": 15049,
+    "endMs": 22367,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "黒い漆が塗られ、端には、赤い漆が付いていた。",
-    "startMs": 19764,
-    "endMs": 23711,
+    "text": "本格的な調査が行われ、見つかった銅鐸の数は、39個。",
+    "startMs": 22847,
+    "endMs": 27892,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "これは、矢のいちばん後ろの部分、「矢筈」だった。弓の弦にかける部分だ。",
-    "startMs": 24191,
-    "endMs": 30207,
+    "text": "1か所から見つかった銅鐸の数として、日本でいちばん多い数だった。",
+    "startMs": 28372,
+    "endMs": 32820,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ふつう、矢筈には、弦をかけるための、切り込みの溝がある。",
-    "startMs": 30687,
-    "endMs": 35369,
+    "text": "銅鐸の高さは、45センチほどの大きなものが20個、30センチほどの小さなものが19個。",
+    "startMs": 33300,
+    "endMs": 40361,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ところが、この矢筈には溝がなく、お皿のように、浅くくぼんでいた。",
-    "startMs": 35849,
-    "endMs": 41012,
+    "text": "そして、ここでも、埋め方に不思議な特徴があった。",
+    "startMs": 40841,
+    "endMs": 44724,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "羽根も、鳥の羽ではなく、木の板でできていた。",
-    "startMs": 41492,
-    "endMs": 45012,
+    "text": "大きな銅鐸の中に、小さな銅鐸をすっぽりと入れた、入れ子の状態で埋められていたのだ。入れ子の埋め方が確かめられたのは、これが初めてだった。",
+    "startMs": 45204,
+    "endMs": 55060,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "こうした特徴が、南宋で作られていた矢と、一致したのだ。",
-    "startMs": 45492,
-    "endMs": 49887,
+    "text": "しかも、埋めたときのままの状態で残っていた銅鐸は、横に倒して、ひれと呼ばれる薄い板の部分を、上と下に立てて置かれていた。",
+    "startMs": 55540,
+    "endMs": 64777,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "南宋は、元の侵攻に備えて、武器の改良を進めていた。",
-    "startMs": 50367,
-    "endMs": 54804,
+    "text": "加茂岩倉の銅鐸も、のちに国宝に指定されている。",
+    "startMs": 65257,
+    "endMs": 68820,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "その南宋の矢が、なぜ、元の船に積まれていたのか。",
-    "startMs": 55284,
-    "endMs": 59337,
+    "text": "銅鐸の表面には、さまざまな絵が描かれていた。シカやトンボなどの生き物、そして人の顔のような模様。弥生時代の人々が、何を大切に思い、何を祈っていたのかを伝える、数少ない手がかりだ。",
+    "startMs": 69300,
+    "endMs": 83881,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "研究チームは、元が南宋を滅ぼしたとき、南宋の武器を取り上げ、それを日本との戦いに回したのではないか、と考えている。",
-    "startMs": 59817,
-    "endMs": 68980,
+    "text": "では、39個の銅鐸は、どこで作られたのか。",
+    "startMs": 84361,
+    "endMs": 88223,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "奈良文化財研究所の国武貞克主任研究員は、元軍の装備が、具体的に明らかになった、と話している。",
-    "startMs": 69460,
-    "endMs": 77855,
+    "text": "青銅器は、石や土で作った鋳型に、溶かした銅を流し込んで作る。同じ鋳型から作られた銅鐸は、兄弟のように、模様や形がそっくりになる。",
+    "startMs": 88703,
+    "endMs": 99369,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "思い出してほしい。江南軍の兵の多くは、元に滅ぼされた、南宋の兵だった。",
-    "startMs": 78335,
-    "endMs": 84468,
+    "text": "調べてみると、加茂岩倉の銅鐸の兄弟が、日本の各地から見つかっていた。",
+    "startMs": 99849,
+    "endMs": 105332,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "南宋の兵たちが、南宋の矢を持って、元の命令で、日本の海までやってきた。",
-    "startMs": 84948,
-    "endMs": 90943,
+    "text": "兵庫県の但馬や淡路島、大阪、和歌山、徳島、鳥取、そして福井。",
+    "startMs": 105812,
+    "endMs": 112553,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "小さな矢のかけらが、そんな物語を語っている。",
-    "startMs": 91423,
-    "endMs": 94740,
+    "text": "近畿を中心に、遠くは北陸まで。同じ鋳型から生まれた銅鐸が、出雲と各地に分かれて埋められていたのだ。",
+    "startMs": 113033,
+    "endMs": 120916,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ただし、これは、矢の形から考えた推定だ。矢が、どのようにして元の船に積まれたのかは、記録には残っていない。",
-    "startMs": 95220,
-    "endMs": 104041,
+    "text": "今年、2026年10月の研究会で、島根大学の研究者は、鋳造の技術を説明し、加茂岩倉の銅鐸の多くは、近畿地方で作られたとされることを紹介している。",
+    "startMs": 121396,
+    "endMs": 134377,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "江南軍は、中国の南の港、慶元、今の寧波から船出したとされている。",
-    "startMs": 104521,
-    "endMs": 110879,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "長崎県は、海の底で見つかった、いかりの重りの石が、どこの石なのかを調べることで、江南軍が、どんな道すじで日本の海までやってきたのかを探る研究も進めている。",
-    "startMs": 111359,
-    "endMs": 123561,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "武器や石の一つひとつが、750年前の大艦隊の旅の跡を、教えてくれるのだ。",
-    "startMs": 124041,
-    "endMs": 130335,
+    "text": "一方で、加茂岩倉の銅鐸の中には、近畿の銅鐸とは違う絵が描かれたものもある。人の顔や、シカやトンボ。そうした違いから、一部は、出雲で作られたのではないかと考える研究者もいる。",
+    "startMs": 134857,
+    "endMs": 148916,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 130815,
-    "endMs": 132244,
+    "startMs": 149396,
+    "endMs": 150825,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "まちがい。",
+    "startMs": 151305,
+    "endMs": 151967,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "加茂岩倉の銅鐸の兄弟は、近畿を中心に各地から見つかっていて、多くは近畿で作られたとされる。ただ、一部が出雲で作られた可能性は、今も議論されている。",
+    "startMs": 152447,
+    "endMs": 164372,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、3キロあまり離れた、荒神谷と加茂岩倉。2つの谷は、関係があったのか。",
+    "startMs": 164852,
+    "endMs": 171572,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第10の手がかり 荒神谷と加茂岩倉は、関係がない？（4545フレーム）
+export const clue10MarkCaptions: Caption[] = [
+  {
+    "text": "2つの谷のあいだは、山々をはさんで、まっすぐ測っておよそ3.3キロ。",
+    "startMs": 500,
+    "endMs": 5929,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "片方には、358本の銅剣と、銅鐸と銅矛。もう片方には、39個の銅鐸。",
+    "startMs": 6409,
+    "endMs": 14057,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "これほど近い場所に、日本一の数の青銅器が、2か所も埋められていた。偶然とは、考えにくい。",
+    "startMs": 14537,
+    "endMs": 21972,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "でも、長いあいだ、2つの遺跡を直接結びつける、はっきりとした証拠は見つかっていなかった。",
+    "startMs": 22452,
+    "endMs": 29204,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "初めに、手がかりは、遠く離れた淡路島から現れた。",
+    "startMs": 29684,
+    "endMs": 33972,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2015年、兵庫県の南あわじ市で、砂の山の中から、7個の銅鐸が見つかった。松帆銅鐸だ。",
+    "startMs": 34452,
+    "endMs": 42292,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その一つが、加茂岩倉の銅鐸と、同じ鋳型から作られた兄弟だった。",
+    "startMs": 42772,
+    "endMs": 48105,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、松帆銅鐸を調べた報告書は、この淡路の銅鐸を間にはさむことで、荒神谷と加茂岩倉のつながりが考えられる、としている。",
+    "startMs": 48585,
+    "endMs": 58473,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、今年。2026年10月10日。",
+    "startMs": 58953,
+    "endMs": 62793,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "加茂岩倉で銅鐸が見つかってから30年を記念して、雲南市で、研究者たちが集まるシンポジウムが開かれた。会場には、200人を超える人々が集まり、席を増やして対応したほどだった。",
+    "startMs": 63273,
+    "endMs": 76809,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その場で、荒神谷博物館の研究者、宍道年弘さんが、ある研究の成果を紹介した。",
+    "startMs": 77289,
+    "endMs": 84159,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "荒神谷の銅剣のなかごに刻まれていた、あのバツの印。",
+    "startMs": 84639,
+    "endMs": 88617,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "同じバツの印が、加茂岩倉の銅鐸の、14個にも刻まれていた、というのだ。",
+    "startMs": 89097,
+    "endMs": 95135,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "3キロ離れた2つの谷の青銅器に、同じ印。宍道さんは、銅剣を作った人々などが、共通の計画のもとで、この印を刻んだのではないかと考えている。",
+    "startMs": 95615,
+    "endMs": 107391,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "一方で、加茂岩倉の銅鐸には、バツの印がないものもある。",
+    "startMs": 107871,
+    "endMs": 112393,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そこから、いくつかの集団が、青銅器を集め、荒神谷と加茂岩倉に分けて埋めたのではないか、という見方も示された。",
+    "startMs": 112873,
+    "endMs": 121503,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ただし、これは、研究者の一人の見方で、学界で確かめられた結論ではない。",
+    "startMs": 121983,
+    "endMs": 128052,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 128532,
+    "endMs": 129961,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "まちがい。",
+    "startMs": 130441,
+    "endMs": 131103,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2つの谷は、3キロあまりしか離れておらず、銅剣と銅鐸には、同じバツの印が刻まれていた。共通の計画のもとで埋められた可能性が、今、議論されている。",
+    "startMs": 131583,
+    "endMs": 143700,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、出雲の人々は、なぜ、これほどの青銅器を、土の中に埋めたのか。",
+    "startMs": 144180,
+    "endMs": 150281,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第11の手がかり 青銅器は、敵から隠すために埋められた？（3876フレーム）
+export const clue11BurialCaptions: Caption[] = [
+  {
+    "text": "銅剣358本。銅鐸6個と、銅矛16本。そして、銅鐸39個。",
+    "startMs": 500,
+    "endMs": 7967,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "作りたての青銅器は、金色に輝く、大切な宝物だった。",
+    "startMs": 8447,
+    "endMs": 13236,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その宝物を、なぜ、人里離れた谷の斜面に、まとめて埋めたのか。",
+    "startMs": 13716,
+    "endMs": 19103,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "実は、その答えは、今もわかっていない。",
+    "startMs": 19583,
+    "endMs": 22729,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "島根県の資料では、いくつもの説が紹介されている。",
+    "startMs": 23209,
+    "endMs": 26964,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "一つ目は、隠した説。まわりの国から攻められそうになったとき、大切な神の宝を、一時的に、土の中に隠したというものだ。",
+    "startMs": 27444,
+    "endMs": 37129,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "でも、もしそうなら、戦いが終わったあと、掘り出しに来るはずだ。それなのに、青銅器は、2000年近くも、土の中に眠り続けていた。",
+    "startMs": 37609,
+    "endMs": 47956,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "二つ目は、祭りを禁じられた説。近畿や九州の大きな勢力に従うことになり、それまでの祭りをやめさせられて、祭りの道具を、すべて埋めたというものだ。",
+    "startMs": 48436,
+    "endMs": 59679,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "三つ目は、大地の神に捧げた説。国が安らかであるように祈って、大地の神に、宝物を納めたというものだ。",
+    "startMs": 60159,
+    "endMs": 68457,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ほかにも、ふだんは土の中に埋めておき、祭りのときにだけ掘り出して使っていた、という説もある。",
+    "startMs": 68937,
+    "endMs": 75625,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "どの説にも、決め手はない。",
+    "startMs": 76105,
+    "endMs": 78111,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ただ、一つ、注目されていることがある。",
+    "startMs": 78591,
+    "endMs": 81759,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "出雲では、弥生時代の終わりに向かう時期の、新しい形の銅剣や銅鐸が、ほとんど見つかっていないのだ。",
+    "startMs": 82239,
+    "endMs": 89641,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "近畿や東海では、弥生時代の終わりまで、銅鐸はどんどん大きくなっていった。ところが山陰では、それより早く、青銅器の祭りが終わってしまったと考えられている。",
+    "startMs": 90121,
+    "endMs": 101620,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "青銅器を埋めることは、一つの時代の祭りの、終わりの合図だったのかもしれない。",
+    "startMs": 102100,
+    "endMs": 107604,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 108084,
+    "endMs": 109513,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "半分正しい。",
+    "startMs": 109993,
+    "endMs": 111060,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "敵から隠したという説は、有力な説の一つだ。でも、祭りを禁じられた説、神に捧げた説などが並び立ち、どれも決め手はない。",
+    "startMs": 111540,
+    "endMs": 121471,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、青銅器の祭りが終わったあと、出雲の人々は、何を祭るようになったのか。",
+    "startMs": 121951,
+    "endMs": 127967,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第12の手がかり 出雲には、王がいた？（3886フレーム）
+export const clue12KingCaptions: Caption[] = [
+  {
+    "text": "出雲市の西谷という丘の上に、奇妙な形の墓が並んでいる。",
+    "startMs": 500,
+    "endMs": 4980,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "四角い墓の、4つの角が、ヒトデの足のように、外へ突き出している。四隅突出型墳丘墓と呼ばれる墓だ。",
+    "startMs": 5460,
+    "endMs": 13481,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "弥生時代の後半、今からおよそ1800年前に造られた。",
+    "startMs": 13961,
+    "endMs": 18271,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "中でも、西谷3号墓は、四角い部分だけで、40メートルと30メートル。突き出した足の部分を含めると、50メートルを超える。この形の墓として、全国で最大級の大きさだ。",
+    "startMs": 18751,
+    "endMs": 32671,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "墓の斜面には、びっしりと石が貼られ、すその部分には、立てた石が、二重にめぐらされていた。",
+    "startMs": 33151,
+    "endMs": 40127,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "1983年から、島根大学が、この墓を調べた。",
+    "startMs": 40607,
+    "endMs": 45396,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "墓の上からは、8人以上が葬られた跡が見つかった。",
+    "startMs": 45876,
+    "endMs": 49791,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その中心にあった、大きな2つの墓穴では、木の棺を、さらに木の部屋で囲む、手の込んだ造りになっていた。",
+    "startMs": 50271,
+    "endMs": 57951,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "棺の中には、赤い水銀朱が、大量にまかれていた。そして、ガラスの勾玉や管玉、鉄の剣が、副葬品として納められていた。",
+    "startMs": 58431,
+    "endMs": 68692,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "さらに、墓穴を埋めたあと、その上に、巨大な4本の柱を立てた跡も見つかった。たくさんの土器を使って、盛大な葬式の儀式が行われたと考えられている。",
+    "startMs": 69172,
+    "endMs": 80649,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "島根県は、西谷の墓には、代々の、出雲平野の王が葬られたと考えている。",
+    "startMs": 81129,
+    "endMs": 87455,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、この四隅突出型の墓は、出雲だけのものではなかった。",
+    "startMs": 87935,
+    "endMs": 92564,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "山陰を中心におよそ90基。さらに、遠く離れた北陸にも、8基が見つかっている。",
+    "startMs": 93044,
+    "endMs": 99604,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "同じ形の墓を造る人々が、日本海沿いに、広くつながっていたのだ。",
+    "startMs": 100084,
+    "endMs": 105161,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "青銅器を埋めた出雲の人々は、今度は、王の巨大な墓を舞台に、祭りを行うようになった。",
+    "startMs": 105641,
+    "endMs": 112564,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 113044,
+    "endMs": 114473,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "正しい。",
-    "startMs": 132724,
-    "endMs": 133364,
+    "startMs": 114953,
+    "endMs": 115593,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2026年、鷹島の沈没船から、南宋の矢の部品が見つかった。元が、滅ぼした南宋の武器を、日本との戦いに使ったとみられている。ただし、推定だ。",
-    "startMs": 133844,
-    "endMs": 146548,
+    "text": "弥生時代の終わりごろの出雲には、全国最大級の墓に葬られる、王と呼べるほどの有力者がいた。",
+    "startMs": 116073,
+    "endMs": 123092,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、この船に乗っていた兵士たちは、戦うことしか、していなかったのだろうか。",
-    "startMs": 147028,
-    "endMs": 152703,
+    "text": "では、出雲の王たちは、出雲の中だけで、暮らしていたのか。",
+    "startMs": 123572,
+    "endMs": 128308,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第17の手がかり 元の兵士は、戦うだけの集団だった？（4472フレーム）
-export const clue17GamesCaptions: Caption[] = [
+// 0:00 第13の手がかり 出雲は、閉ざされた国だった？（3750フレーム）
+export const clue13CrossroadsCaptions: Caption[] = [
   {
-    "text": "2026年10月。今年の調査は、10月2日から11月1日まで行われている。",
+    "text": "西谷3号墓の葬式の儀式で使われた土器を調べると、意外なことがわかった。",
     "startMs": 500,
-    "endMs": 7273,
+    "endMs": 5897,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "今回、初めて、韓国の研究チームも調査に加わった。",
-    "startMs": 7753,
-    "endMs": 12297,
+    "text": "土器の、およそ3分の1が、出雲の土器ではなかったのだ。",
+    "startMs": 6377,
+    "endMs": 10612,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "韓国の研究者も現地を訪れ、元寇の船の実態を解き明かすための、国と国との協力が始まっている。",
-    "startMs": 12777,
-    "endMs": 20393,
+    "text": "今の岡山県、吉備の国の特徴を持つ土器。そして、遠く離れた北陸の特徴を持つ土器。",
+    "startMs": 11092,
+    "endMs": 18079,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして10月28日。調査チームが、3号船の新しい成果を発表した。",
-    "startMs": 20873,
-    "endMs": 26804,
+    "text": "出雲の王の葬式に、遠くの国々の人々が、自分たちの土器を持って、駆けつけていたのかもしれない。",
+    "startMs": 18559,
+    "endMs": 25748,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "3号船は、船の後ろの部分が、長さおよそ15メートルにわたって、海の底に残っていた。",
-    "startMs": 27284,
-    "endMs": 34164,
+    "text": "さらに、西谷4号墓からは、吉備の国に特有の、特殊器台と呼ばれる、大きな土器の台が見つかっている。",
+    "startMs": 26228,
+    "endMs": 33961,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "船尾までそろって見つかったことから、船の全長は、およそ30メートルと推定された。",
-    "startMs": 34644,
-    "endMs": 40649,
+    "text": "出雲と吉備の王たちは、葬式の道具を分け合うほどの、深いつきあいがあったのだ。",
+    "startMs": 34441,
+    "endMs": 39871,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "これまでに見つかった3隻の中で、最大級の船だ。",
-    "startMs": 41129,
-    "endMs": 44777,
+    "text": "目を海の向こうに向けると、さらに驚く。",
+    "startMs": 40351,
+    "endMs": 43327,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "池田教授は、多くの船を率いる、母船だった可能性もある、と話している。",
-    "startMs": 45257,
-    "endMs": 50985,
+    "text": "出雲市の山持遺跡からは、朝鮮半島の南の土器や、北部にあった楽浪郡の土器が見つかっている。楽浪郡は、中国の漢の国が、朝鮮半島に置いた拠点だ。",
+    "startMs": 43807,
+    "endMs": 55945,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、この船の中から、思いがけないものが見つかった。",
-    "startMs": 51465,
-    "endMs": 55529,
+    "text": "北九州や、瀬戸内、吉備の土器も、同じ遺跡から出ている。",
+    "startMs": 56425,
+    "endMs": 61503,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1センチ四方ほどの、小さなサイコロが、5個。",
-    "startMs": 56009,
-    "endMs": 59508,
+    "text": "そして、青銅器の材料。",
+    "startMs": 61983,
+    "endMs": 64159,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、縦3センチ、横1.5センチほどの、小さな札が、29枚。",
-    "startMs": 59988,
-    "endMs": 66196,
+    "text": "弥生時代の青銅器の材料には、朝鮮半島や中国大陸から運ばれた鉛が使われていたことが、鉛の成分の分析からわかっている。",
+    "startMs": 64639,
+    "endMs": 74111,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "札は、「骨牌」と呼ばれる遊び道具とみられている。のちのマージャンの、起源のひとつとされる遊びだ。",
-    "startMs": 66676,
-    "endMs": 74047,
+    "text": "出雲は、海の道で、大陸とも、九州とも、近畿とも、北陸ともつながる、交流の十字路だった。",
+    "startMs": 74591,
+    "endMs": 82889,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "中国で生まれ、12世紀ごろから遊ばれていたとされるゲームに、形がよく似ているという。",
-    "startMs": 74527,
-    "endMs": 80756,
+    "text": "出雲には、もう一つ、全国に誇る特産品があった。玉だ。",
+    "startMs": 83369,
+    "endMs": 88244,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "元寇の船から、遊び道具が見つかったのは、初めてのことだ。",
-    "startMs": 81236,
-    "endMs": 85684,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "すぐそばからは、陶器や、包丁とみられる鉄の道具も見つかった。このあたりは、船の台所だったとみられている。",
-    "startMs": 86164,
-    "endMs": 94185,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "池田教授は、料理の担当が、ひと休みして、札遊びをしていたのかもしれない、と話している。",
-    "startMs": 94665,
-    "endMs": 101759,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "長い船旅のあいだ、兵士たちは、狭い船の中で、ご飯を作り、文字の掲示を読み、そして、遊んでいた。",
-    "startMs": 102239,
-    "endMs": 110751,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "教科書では、元軍は、ひとつのかたまりのように描かれる。",
-    "startMs": 111231,
-    "endMs": 115455,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "でも、海の底から上がってくるのは、その船に乗っていた、一人ひとりの人間の暮らしだ。",
-    "startMs": 115935,
-    "endMs": 122025,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "戦いの前の夜、彼らは、サイコロを振りながら、故郷のことを話していたのかもしれない。",
-    "startMs": 122505,
-    "endMs": 128735,
+    "text": "松江市の花仙山では、めのうや、碧玉と呼ばれる、美しい石がとれた。そのふもとでは、古墳時代から平安時代まで、勾玉などを作る工房が営まれ、出雲の玉は、全国の豪族たちのもとへと運ばれたと考えられている。",
+    "startMs": 88724,
+    "endMs": 105300,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 129215,
-    "endMs": 130644,
+    "startMs": 105780,
+    "endMs": 107209,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 131124,
-    "endMs": 131785,
+    "startMs": 107689,
+    "endMs": 108351,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2026年10月、3号船から、サイコロと札の遊び道具、そして台所の跡が見つかった。船の中には、兵士たちの暮らしがあった。",
-    "startMs": 132265,
-    "endMs": 142527,
+    "text": "出雲は、吉備や北陸、北九州、そして海の向こうの朝鮮半島とまで、つながっていた。閉ざされた国ではなく、交流の十字路だった。",
+    "startMs": 108831,
+    "endMs": 119241,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、元軍を退けた日本の側は、その後、どうなったのか。",
-    "startMs": 143007,
-    "endMs": 147860,
+    "text": "では、出雲の王たちの力の源は、何だったのか。",
+    "startMs": 119721,
+    "endMs": 123796,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第18の手がかり 元に勝った幕府は、強くなった？（5689フレーム）
-export const clue18BakufuCaptions: Caption[] = [
+// 0:00 第14の手がかり 出雲の力は、鉄から生まれた？（4358フレーム）
+export const clue14IronCaptions: Caption[] = [
   {
-    "text": "2度の戦いで、日本は、元軍を退けた。",
+    "text": "出雲といえば、鉄の国。そんなイメージを持つ人も多いかもしれない。",
+    "startMs": 500,
+    "endMs": 5247,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ヤマタノオロチの尾から出てきた剣。風土記に書かれた、かたい鉄。そして、江戸時代に大きく栄えた、奥出雲のたたら製鉄。",
+    "startMs": 5727,
+    "endMs": 14953,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、弥生時代の出雲の王たちの力も、鉄を作る技術から生まれたのだろうか。",
+    "startMs": 15433,
+    "endMs": 21161,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "弥生時代の出雲に、鉄があったことは確かだ。西谷3号墓には、鉄の剣が納められていた。",
+    "startMs": 21641,
+    "endMs": 28425,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "でも、その鉄は、どこから来たのか。",
+    "startMs": 28905,
+    "endMs": 31764,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "鉄の道具を使うことと、鉄そのものを作ることは、まったく別の技術だ。砂鉄や鉄の石を溶かして、鉄を取り出す技術を、製鉄という。",
+    "startMs": 32244,
+    "endMs": 42431,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "弥生時代の日本では、鉄の材料は、主に朝鮮半島から運ばれてきたと考えられている。日本の中で鉄を作り始めたのは、もっとあとの時代だ。",
+    "startMs": 42911,
+    "endMs": 53268,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "島根県で、鉄を作った跡として最も古いものの一つは、邑南町の今佐屋山遺跡で見つかった、鉄くずだ。その時代は、古墳時代の後半。しかも、場所は出雲ではなく、隣の石見の国だった。",
+    "startMs": 53748,
+    "endMs": 68809,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "最初は、鉄の石を使い、のちに、川の砂鉄を使うようになったと考えられている。",
+    "startMs": 69289,
+    "endMs": 75519,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、奈良時代の733年。出雲国風土記には、斐伊川の上流、仁多郡のいくつもの村で、鉄がとれることが書かれている。この時代には、出雲で鉄が作られていたのだ。",
+    "startMs": 75999,
+    "endMs": 89545,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "つまり、弥生時代の出雲の王たちは、自分で鉄を作っていたのではなく、海の向こうから鉄を手に入れ、それを各地に広める側だったと考えられている。",
+    "startMs": 90025,
+    "endMs": 100564,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "青銅器の祭りが終わり、王の墓が大きくなっていった時代。それは、鉄の道具が広く行きわたり、有力者たちが力を強めていった時代でもあった。",
+    "startMs": 101044,
+    "endMs": 111369,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "出雲の力の源は、鉄を作る技術というより、海の道を使って、鉄や玉や青銅器を動かす、交流の力だったのかもしれない。",
+    "startMs": 111849,
+    "endMs": 121673,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 122153,
+    "endMs": 123583,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "半分正しい。",
+    "startMs": 124063,
+    "endMs": 125129,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "出雲は、奈良時代には鉄を作る国になっていた。でも、弥生時代の出雲の王たちは、鉄を作るのではなく、海の向こうから手に入れる側だったと考えられている。",
+    "startMs": 125609,
+    "endMs": 136863,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、それほどの力を持っていた出雲は、なぜ、神話の中で、国を譲ることになったのか。",
+    "startMs": 137343,
+    "endMs": 144052,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第15の手がかり 出雲は、ヤマトに国を譲った？（7573フレーム）
+export const clue15YuzuriCaptions: Caption[] = [
+  {
+    "text": "古事記の国譲りの神話は、出雲の海辺から始まる。",
+    "startMs": 500,
+    "endMs": 4105,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "天の国を治めるアマテラスは、地上の国は、自分の子孫が治めるべきだと考えた。",
+    "startMs": 4585,
+    "endMs": 10409,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、地上を治める大国主のもとへ、使いの神を送った。ところが、送った神は、大国主に従ってしまったり、帰ってこなかったりした。",
+    "startMs": 10889,
+    "endMs": 21919,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "最後に送られたのが、力の強い神、タケミカヅチだった。",
+    "startMs": 22399,
+    "endMs": 26857,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "タケミカヅチは、出雲の稲佐の浜に降り立つと、剣を抜き、波の上に、刃を上にして逆さに突き立てた。そして、その剣の切っ先にあぐらをかいて座り、大国主に迫った。この国を、天の神の子に譲るか、と。",
+    "startMs": 27337,
+    "endMs": 43220,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "大国主は、自分の子の、コトシロヌシに答えをゆだねた。コトシロヌシは、国を譲ることを受け入れた。",
+    "startMs": 43700,
+    "endMs": 51209,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "もう一人の子、タケミナカタは、力くらべを挑んだ。でも、タケミカヅチに手を握りつぶされそうになって逃げ出し、遠く信濃の国、諏訪の湖まで追われて、降参した。",
+    "startMs": 51689,
+    "endMs": 64244,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "大国主は、ついに国を譲ることを決めた。そして、一つの条件を出した。",
+    "startMs": 64724,
+    "endMs": 70249,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "自分の住まいとして、天の神の子の宮殿と同じように、地の底の岩に太い柱を立て、天に届くほど高い宮殿を建ててほしい、と。",
+    "startMs": 70729,
+    "endMs": 80329,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "それが、出雲大社の始まりだとされている。日本書紀では、この宮を、天日隅宮と呼んでいる。",
+    "startMs": 80809,
+    "endMs": 88127,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、この国譲りは、本当にあった出来事の記憶なのか。",
+    "startMs": 88607,
+    "endMs": 92937,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "考古学からわかっていることを並べてみよう。",
+    "startMs": 93417,
+    "endMs": 96063,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "まず、出雲では、ほかの地域より早く、青銅器の祭りが終わり、王の巨大な墓を舞台にした祭りへと切り替わった。この切り替えは、外から押しつけられたものではなく、出雲が自分たちで選んだものだと考える研究者もいる。",
+    "startMs": 96543,
+    "endMs": 112137,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "次に、古墳時代の始まり。ヤマトでは、巨大な前方後円墳が造られ始めた。ところが、古墳時代の初めの出雲には、それに並ぶような巨大な古墳は見つかっていない。",
+    "startMs": 112617,
+    "endMs": 124927,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "加茂岩倉遺跡のすぐ近くにある神原神社古墳からは、1972年、「景初三年」という年号が入った鏡が見つかった。景初三年、つまり239年は、邪馬台国の卑弥呼が、中国の魏の国に使いを送った年だ。",
+    "startMs": 125407,
+    "endMs": 142655,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ヤマトの王権と結びつく、特別な鏡が、出雲にもたらされていたのだ。",
+    "startMs": 143135,
+    "endMs": 148351,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして6世紀の後半。出雲の東と西に、大きな古墳が現れる。",
+    "startMs": 148831,
+    "endMs": 154089,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "東の松江市には、山代二子塚古墳。長さおよそ94メートルの前方後方墳で、この時代の前方後方墳としては、全国でも最大級だ。",
+    "startMs": 154569,
+    "endMs": 165748,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "西の出雲市には、今市大念寺古墳。長さおよそ92メートルの前方後円墳だ。",
+    "startMs": 166228,
+    "endMs": 172596,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2025年9月、島根県は、山代二子塚古墳を、地中レーダーで探査した。地面を掘らずに、電波を使って、地下の様子を探る技術だ。",
+    "startMs": 173076,
+    "endMs": 184255,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その結果、後ろの四角い部分に、長さ11.5メートル、幅4.5メートルほどの、横穴式の石室がある可能性が出てきた。",
+    "startMs": 184735,
+    "endMs": 194025,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ただし、これは、まだ掘って確かめたものではなく、可能性の段階だ。",
+    "startMs": 194505,
+    "endMs": 199775,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "出雲の東と西に並び立った、2つの巨大な古墳。東の意宇の地と、西の杵築の地、それぞれの有力者の墓ではないか、と考える人もいる。",
+    "startMs": 200255,
+    "endMs": 210836,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "国譲りの神話を、そのまま裏づける考古学の証拠は、見つかっていない。でも、出雲の大きな力が、時代とともに、ヤマトを中心とする国の仕組みの中に組み込まれていったことは、確かだと考えられている。",
+    "startMs": 211316,
+    "endMs": 226153,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 226633,
+    "endMs": 228063,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "半分正しい。",
+    "startMs": 228543,
+    "endMs": 229609,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "出雲がヤマトの国の仕組みに組み込まれていったことは確かだ。でも、一度の国譲りがあったという証拠はなく、出雲は、長い時間をかけて、自分たちの道を選びながら変わっていったと考えられている。",
+    "startMs": 230089,
+    "endMs": 243487,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、国を譲った大国主のために建てられた、天にとどく宮殿。それは、本当にあったのか。",
+    "startMs": 243967,
+    "endMs": 251220,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第16の手がかり 出雲大社は、高さ48メートルの神殿だった？（7776フレーム）
+export const clue16ShrineCaptions: Caption[] = [
+  {
+    "text": "970年、平安時代のなかごろ。源為憲という学者が、貴族の子どものために、『口遊』という教科書を書いた。",
+    "startMs": 500,
+    "endMs": 10377,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "覚えておくべき知識を、口ずさみやすい言葉にまとめた本だ。",
+    "startMs": 10857,
+    "endMs": 14953,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その中に、当時の大きな建物を、大きい順に並べた一節がある。",
+    "startMs": 15433,
+    "endMs": 20276,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "雲太、和二、京三。",
+    "startMs": 20756,
+    "endMs": 22975,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "雲太は、出雲の国の、出雲大社。和二は、大和の国の、東大寺の大仏殿。京三は、平安京の、大極殿。",
+    "startMs": 23455,
+    "endMs": 33631,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "当時の東大寺の大仏殿は、高さ15丈、およそ45メートルあったとされる。その大仏殿よりも、出雲大社のほうが大きい、というのだ。",
+    "startMs": 34111,
+    "endMs": 44820,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "出雲大社には、こんな言い伝えもある。大昔の本殿は、32丈、およそ96メートル。その後、16丈、およそ48メートル。そして今は、8丈、およそ24メートル。",
+    "startMs": 45300,
+    "endMs": 60329,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "96メートルといえば、30階建てのビルほどの高さだ。さすがに、多くの人は、ただの伝説だと考えてきた。",
+    "startMs": 60809,
+    "endMs": 69151,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2000年4月。出雲大社では、拝殿の地下に部屋を広げる工事が計画され、その前に、境内の発掘調査が行われていた。",
+    "startMs": 69631,
+    "endMs": 78985,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "八足門と呼ばれる門の前を掘り進めたとき、地面の下から、巨大な木の柱の根元が姿を現した。",
+    "startMs": 79465,
+    "endMs": 86623,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "杉の大木、1本の直径が、およそ1.3メートル。その杉を、3本束ねて、1本の柱にしていた。束ねた柱の直径は、およそ3メートル。",
+    "startMs": 87103,
+    "endMs": 98889,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "地下水につかっていたおかげで、木は、驚くほどよい状態で残っていた。",
+    "startMs": 99369,
+    "endMs": 104457,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "柱は、全部で3か所から見つかった。本殿の中心にあたる心御柱、正面の中央の宇豆柱、そして、東南の隅の柱だ。",
+    "startMs": 104937,
+    "endMs": 114719,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、この柱は、いつのものなのか。",
+    "startMs": 115199,
+    "endMs": 118164,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "木には、炭素という成分が含まれている。生きている木は、空気から炭素を取り込むが、切り倒されると、その中の特別な炭素が、決まった速さで減っていく。その減り方を測れば、木が切られた年代がわかる。放射性炭素による年代測定だ。",
+    "startMs": 118644,
+    "endMs": 136191,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "測定の結果、柱の木が切り倒されたのは、西暦1215年から1240年ごろと出た。いっしょに出た土器も、12世紀の後半から13世紀のものだった。",
+    "startMs": 136671,
+    "endMs": 148457,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして記録によれば、鎌倉時代の1248年、出雲大社では、本殿が新しく建てられている。",
+    "startMs": 148937,
+    "endMs": 156585,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この柱は、1248年に建てられた本殿の柱である可能性が、きわめて高いとされた。",
+    "startMs": 157065,
+    "endMs": 163913,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "実は、この柱の姿を描いた、古い図面が残っていた。出雲大社の宮司の家、千家家に伝わる『金輪御造営差図』だ。",
+    "startMs": 164393,
+    "endMs": 174687,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そこには、3本の木を、鉄の輪で締めて1本にした柱が、9本並んで本殿を支える姿が描かれていた。発掘された柱は、この図面と、ほぼ一致していた。",
+    "startMs": 175167,
+    "endMs": 187103,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "図面には、正面の階段の長さが、一町と書かれている。およそ109メートルの、長い長い階段だ。",
+    "startMs": 187583,
+    "endMs": 195327,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "古代出雲歴史博物館には、建築史の学者、福山敏男の監修で作られた、平安時代の本殿の10分の1の模型が展示されている。高さ48メートル、109メートルの階段が、空へ向かって伸びている。",
+    "startMs": 195807,
+    "endMs": 211199,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ただし、見つかったのは、柱の根元だけだ。そこから本殿の高さが、そのまま決まるわけではない。",
+    "startMs": 211679,
+    "endMs": 218580,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "復元の案は、一つではなく、本殿が本当に48メートルあったのかについては、今も議論が続いている。",
+    "startMs": 219060,
+    "endMs": 226804,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "今の本殿は、江戸時代の1744年に建てられたもので、高さはおよそ24メートル。国宝に指定されている。",
+    "startMs": 227284,
+    "endMs": 235796,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 236276,
+    "endMs": 237705,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "半分正しい。",
+    "startMs": 238185,
+    "endMs": 239252,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "3本束ねた直径3メートルの柱が見つかり、巨大な本殿があったことは確かになった。でも、高さ48メートルは、言い伝えと図面からの推定で、まだ確かめられてはいない。",
+    "startMs": 239732,
+    "endMs": 252479,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、天にそびえる巨大な神殿は、ずっと立ち続けることができたのか。",
+    "startMs": 252959,
+    "endMs": 257983,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第17の手がかり 巨大な神殿は、何度も倒れた？（3987フレーム）
+export const clue17CollapseCaptions: Caption[] = [
+  {
+    "text": "1031年、平安時代のなかごろ。出雲の国から、都に、驚くべき知らせが届いた。",
+    "startMs": 500,
+    "endMs": 7700,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "出雲大社の本殿が、倒れた、というのだ。",
+    "startMs": 8180,
+    "endMs": 11561,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "このできごとは、『日本紀略』や『百錬抄』という歴史の記録、そして貴族の日記『左経記』にも書き残されている。",
+    "startMs": 12041,
+    "endMs": 21673,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "不思議なことに、このとき、出雲では、大きな地震も、強い風も、記録されていない。",
+    "startMs": 22153,
+    "endMs": 29076,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "なぜ、何の前ぶれもなく、本殿は倒れたのか。その理由をめぐっては、今も、研究者のあいだで議論がある。",
+    "startMs": 29556,
+    "endMs": 37748,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "本殿が倒れた記録は、これだけではない。",
+    "startMs": 38228,
+    "endMs": 41119,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "平安時代のなかごろから、鎌倉時代の初めにかけてのおよそ200年のあいだに、本殿は、7回倒れたと言われている。数え方によっては、5回から7回とされる。",
+    "startMs": 41599,
+    "endMs": 53140,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "高い柱で、宙に浮くように持ち上げられた巨大な本殿は、それだけ、倒れやすかったのかもしれない。",
+    "startMs": 53620,
+    "endMs": 60511,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "逆に言えば、何度も倒れたという記録こそが、本殿が、それだけ高く、大きかったことの、一つの証拠だと考えることもできる。",
+    "startMs": 60991,
+    "endMs": 70281,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "1110年には、こんな言い伝えもある。稲佐の浜に、大量の大木が流れ着いた。人々は、それを神様からの贈り物だと考え、その木を使って、本殿を建て直したというのだ。",
+    "startMs": 70761,
+    "endMs": 84127,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "倒れるたびに、出雲の人々は、巨大な神殿を建て直してきた。",
+    "startMs": 84607,
+    "endMs": 89204,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "本殿の建て替えや修理は、遷宮と呼ばれ、今も続いている。",
+    "startMs": 89684,
+    "endMs": 94217,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2013年5月には、平成の大遷宮で、本殿の屋根が葺き替えられた。そのとき、神様が本殿にお戻りになる儀式には、多くの人々が集まった。",
+    "startMs": 94697,
+    "endMs": 105844,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "遷宮は、およそ60年に一度。前回は、1953年だった。",
+    "startMs": 106324,
+    "endMs": 112159,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 112639,
+    "endMs": 114068,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "正しい。",
+    "startMs": 114548,
+    "endMs": 115188,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "出雲大社の本殿は、平安時代から鎌倉時代にかけて、何度も倒れたことが記録に残っている。そのたびに、人々は建て直してきた。",
+    "startMs": 115668,
+    "endMs": 125172,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、千年以上にわたって、この神殿を守り続けてきたのは、どんな人々なのか。",
+    "startMs": 125652,
+    "endMs": 131689,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第18の手がかり 出雲大社を守る家は、神話の神の子孫？（3992フレーム）
+export const clue18KokusoCaptions: Caption[] = [
+  {
+    "text": "出雲大社の宮司を務めるのは、千家家という家だ。",
     "startMs": 500,
     "endMs": 4031,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ふつう、戦いに勝てば、手柄を立てた武士には、ほうびの土地が与えられる。",
+    "text": "その家は、古くから、出雲国造と呼ばれてきた。国造とは、もともと、地方の国を治めた豪族の位だ。",
     "startMs": 4511,
-    "endMs": 9951,
+    "endMs": 12735,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ところが、元寇は、外国から攻めてきた敵を追い払う、守りの戦いだった。",
-    "startMs": 10431,
-    "endMs": 16287,
+    "text": "日本書紀によれば、出雲の国造の祖先は、アメノホヒという神だ。",
+    "startMs": 13215,
+    "endMs": 17983,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "敵の土地を奪ったわけではないので、武士たちに分け与える新しい土地が、ほとんどなかったのだ。",
-    "startMs": 16767,
-    "endMs": 22964,
+    "text": "アメノホヒは、国譲りの神話で、天の国から、最初に大国主のもとへ送られた使いの神だった。ところが、大国主に従ってしまい、天の国に戻らなかった、とされる神だ。",
+    "startMs": 18463,
+    "endMs": 31433,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "命がけで戦い、石の壁を築き、自分のお金で海岸の守りについた御家人たちに、十分なほうびが行き渡らなかった。",
-    "startMs": 23444,
-    "endMs": 32095,
+    "text": "天から送られた神が、大国主の側について、大国主を祭る家の祖先になった。不思議な物語だ。",
+    "startMs": 31913,
+    "endMs": 39412,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ここで、あの竹崎季長が登場する。",
-    "startMs": 32575,
-    "endMs": 35391,
+    "text": "中世の1340年ごろ、国造の家は、千家家と、北島家の2つに分かれた。2つの家は、今も続いている。千家家は、80代以上続くとされている。",
+    "startMs": 39892,
+    "endMs": 52500,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1度目の戦いのあと、季長には、ほうびが与えられなかった。",
-    "startMs": 35871,
-    "endMs": 40308,
+    "text": "では、記録の上では、国造の家は、いつまでさかのぼれるのか。",
+    "startMs": 52980,
+    "endMs": 57940,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そこで季長は、翌年、自分の馬を売るなどして旅の費用を作り、肥後から、はるばる鎌倉まで旅をした、と言われている。",
-    "startMs": 40788,
-    "endMs": 49780,
+    "text": "奈良時代の716年。出雲の国造、出雲臣果安が、都で、天皇の前に進み出て、ある言葉を述べた記録が残っている。",
+    "startMs": 58420,
+    "endMs": 68553,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "鎌倉で、季長は、ほうびを決める役目の、安達泰盛に、直接うったえた。",
-    "startMs": 50260,
-    "endMs": 56479,
+    "text": "出雲国造神賀詞と呼ばれる言葉だ。",
+    "startMs": 69033,
+    "endMs": 71497,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "自分は、一番に敵に向かっていった。その手柄を、認めてほしい。",
-    "startMs": 56959,
-    "endMs": 61865,
+    "text": "国造は、新しく任命されるたびに、都に上り、出雲の神々の祝福の言葉を、天皇に述べた。そして、出雲の玉などの宝を、天皇に捧げた。",
+    "startMs": 71977,
+    "endMs": 83689,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "泰盛は、季長の話を聞き入れた。季長は、肥後の国の海東郷の地頭の地位と、馬を与えられた。",
-    "startMs": 62345,
-    "endMs": 70249,
+    "text": "こうした儀式を行ったのは、国じゅうの国造の中で、出雲の国造だけだった。",
+    "startMs": 84169,
+    "endMs": 89620,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "季長は、この恩を忘れなかった。のちに、自分の戦いぶりと、泰盛への感謝を伝えるために描かせたのが、あの『蒙古襲来絵詞』だとされている。",
-    "startMs": 70729,
-    "endMs": 82441,
+    "text": "この儀式を、出雲がヤマトに従ったことを示すものと見る説もあれば、天皇の即位にかかわる、特別な祝福の儀式だと見る説もある。答えは、まだ出ていない。",
+    "startMs": 90100,
+    "endMs": 101385,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "絵巻ができたのは、1293年ごろと考えられている。",
-    "startMs": 82921,
-    "endMs": 87209,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "でも、季長のように、ほうびを手にできた武士ばかりではなかった。",
-    "startMs": 87689,
-    "endMs": 92084,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "北条時宗は、1284年、まだ30代の若さで亡くなった。",
-    "startMs": 92564,
-    "endMs": 97940,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "その翌年、季長の恩人、安達泰盛は、幕府の中の争いで、一族とともに滅ぼされた。霜月騒動と呼ばれる事件だ。",
-    "startMs": 98420,
-    "endMs": 108244,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "御家人たちの暮らしは、苦しくなっていった。",
-    "startMs": 108724,
-    "endMs": 111593,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "1297年、幕府は、永仁の徳政令を出して、御家人が手放した土地を、取り戻させようとした。でも、御家人の苦しさは、救えなかった。",
-    "startMs": 112073,
-    "endMs": 123721,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "しかも、元は、3度目の日本攻めを計画していた。船や食料を集め、準備を進めていたとされる。",
-    "startMs": 124201,
-    "endMs": 131647,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "けれども、元は、ベトナムでの戦いなどを優先し、3度目の計画は、取りやめになった。",
-    "startMs": 132127,
-    "endMs": 139049,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "それでも、日本の側は、いつまた元が来るかわからない。異国警固番役は、幕府がなくなるまで続けられた。",
-    "startMs": 139529,
-    "endMs": 147316,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "守りの負担は、終わることがなかったのだ。",
-    "startMs": 147796,
-    "endMs": 150612,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして1333年、鎌倉幕府は滅びた。",
-    "startMs": 151092,
-    "endMs": 155017,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "元寇だけが、幕府が滅びた理由ではない。でも、元寇は、幕府を支えてきた御家人たちの心が、幕府から離れていく、大きなきっかけのひとつになった。",
-    "startMs": 155497,
-    "endMs": 167007,
+    "text": "記録の上でさかのぼれるのは、奈良時代まで。それより前の神々との系譜は、神話の世界の話だ。",
+    "startMs": 101865,
+    "endMs": 108916,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 167487,
-    "endMs": 168916,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "まちがい。",
-    "startMs": 169396,
-    "endMs": 170057,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "元に勝っても、武士たちに分けるほうびの土地はなかった。守りの負担は続き、御家人の苦しさは増し、元寇は、幕府が弱まるきっかけのひとつになった。",
-    "startMs": 170537,
-    "endMs": 181268,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、日本を救ったとされる、あの「神風」という言葉は、どこから来たのだろうか。",
-    "startMs": 181748,
-    "endMs": 188425,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第19の手がかり 神風は、昔からの信仰だった？（4170フレーム）
-export const clue19ShinkokuCaptions: Caption[] = [
-  {
-    "text": "元寇のあと、恩賞を求めたのは、武士だけではなかった。",
-    "startMs": 500,
-    "endMs": 4639,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "全国の寺や神社も、自分たちが祈ったから、神風が吹いて敵が退いたのだ、と幕府にうったえた。",
-    "startMs": 5119,
-    "endMs": 12308,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "武士が戦いでほうびを求めたように、寺や神社も、祈りの手柄を認めてほしいと求めたのだ。",
-    "startMs": 12788,
-    "endMs": 19252,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "こうして、日本は神に守られた国だ、という考えが、広く語られるようになった。",
-    "startMs": 19732,
-    "endMs": 25577,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "あの『八幡愚童訓』も、そうした流れの中で書かれた本だ。",
-    "startMs": 26057,
-    "endMs": 30921,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "博多湾に近い、福岡市の筥崎宮。その楼門には、「敵国降伏」という大きな文字が掲げられている。",
-    "startMs": 31401,
-    "endMs": 39700,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この文字は、亀山上皇が書いた文字をもとにしたものと伝わっている。元寇のとき、上皇は、敵が退くようにと、神に祈りを捧げたとされる。",
-    "startMs": 40180,
-    "endMs": 50836,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "それから、600年あまり。明治時代になると、元寇の物語は、ふたたび大きく取り上げられるようになった。",
-    "startMs": 51316,
-    "endMs": 59305,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "福岡市の東公園には、明治時代の終わりに、大きな亀山上皇の像が建てられた。元寇を記念する碑だ。",
-    "startMs": 59785,
-    "endMs": 67913,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "外国と向き合う時代に、国がひとつになって外国の敵を退けた物語として、元寇は、学校や歌で、くり返し語られた。",
-    "startMs": 68393,
-    "endMs": 77780,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして、太平洋戦争の終わりごろ。飛行機ごと敵の艦隊に体当たりする部隊が作られた。",
-    "startMs": 78260,
-    "endMs": 84543,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "その部隊には、「神風」の名前がつけられた。",
-    "startMs": 85023,
-    "endMs": 88479,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "元寇の物語は、人々を戦争に向かわせるためにも、使われたのだ。",
-    "startMs": 88959,
-    "endMs": 94153,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "神に守られた国という考えは、元寇のあとに広まり、時代ごとに、形を変えて語られてきた。",
-    "startMs": 94633,
-    "endMs": 101769,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして、その考えは、本当の戦いの姿を、見えにくくしてきたのかもしれない。",
-    "startMs": 102249,
-    "endMs": 108159,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "石の壁を築いた人々。夜の海に小船でこぎ出した武士たち。島を守って倒れた人々。",
-    "startMs": 108639,
-    "endMs": 114943,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "「神風」という一言の陰に、その人々の働きが、隠れてしまったのだ。",
-    "startMs": 115423,
-    "endMs": 121055,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 121535,
-    "endMs": 122964,
+    "startMs": 109396,
+    "endMs": 110825,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "半分正しい。",
-    "startMs": 123444,
-    "endMs": 124511,
+    "startMs": 111305,
+    "endMs": 112372,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "神に守られた国という考えは、元寇のあとに広く語られるようになった。でも、その言葉は、時代ごとに形を変え、近代には、戦争に人々を向かわせるためにも使われた。",
-    "startMs": 124991,
-    "endMs": 137791,
+    "text": "千家家は、神話の神アメノホヒの子孫とされ、奈良時代から記録に残る、日本でも指折りの古い家だ。でも、神の子孫だという系譜は、神話の中の話だ。",
+    "startMs": 112852,
+    "endMs": 124532,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、最後の手がかり。神在月の夜、出雲では、本当に何が行われているのか。",
+    "startMs": 125012,
+    "endMs": 131860,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 海の底が語りはじめた（5066フレーム）
+// 0:00 第19の手がかり 神在月、神々は縁結びの会議を開く？（6319フレーム）
+export const clue19KamiariCaptions: Caption[] = [
+  {
+    "text": "2026年11月18日。旧暦では、10月10日にあたる日。",
+    "startMs": 500,
+    "endMs": 6196,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "日が暮れたあと、出雲大社から西へおよそ1キロの稲佐の浜で、神迎神事が行われる。",
+    "startMs": 6676,
+    "endMs": 13087,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "国譲りの神話で、タケミカヅチが剣を突き立てた、あの浜だ。",
+    "startMs": 13567,
+    "endMs": 17961,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "浜には、かがり火がたかれ、神様の宿る場所となる、神籬が立てられる。神職たちは、海の向こうから来る神々を、静かにお迎えする。",
+    "startMs": 18441,
+    "endMs": 28767,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "このとき、神々を先導するのが、龍蛇様だ。",
+    "startMs": 29247,
+    "endMs": 32948,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "龍蛇様の正体は、セグロウミヘビという、本物の海の蛇だ。",
+    "startMs": 33428,
+    "endMs": 37993,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "このころの出雲の海は、お忌み荒れと呼ばれる、荒れた天気が続く。その荒れた海から浜に打ち上げられるウミヘビを、出雲の人々は、竜宮からの使い、神々の道案内として、大切に祭ってきた。",
+    "startMs": 38473,
+    "endMs": 52809,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "神々は、龍蛇様に導かれて、浜から出雲大社へと向かう。道には、こもが敷かれ、人々は、その上を歩かないように気をつける。神様の通り道だからだ。",
+    "startMs": 53289,
+    "endMs": 65407,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "出雲大社に着いた神々は、どこに泊まるのか。",
+    "startMs": 65887,
+    "endMs": 69097,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "本殿の東と西には、十九社と呼ばれる、長い社が建っている。扉は19。ふだんは閉じているが、神在祭のあいだだけ、すべての扉が開かれる。ここが、神々の宿になるのだ。",
+    "startMs": 69577,
+    "endMs": 83636,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、旧暦10月11日から17日まで、神々は、稲佐の浜の近くにある、上宮という社に集まり、会議を開くとされる。神議りだ。",
+    "startMs": 84116,
+    "endMs": 95700,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "話し合われるのは、人々の縁。誰と誰が結ばれるか。どんな出会いがあるか。神々が、それを決めるのだという。",
+    "startMs": 96180,
+    "endMs": 104468,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "会議が終わると、神等去出祭。神職が、本殿の前の門の扉を叩き、「お立ち」と唱えて、神々を送り出す。2026年は、11月25日の夕方だ。",
+    "startMs": 104948,
+    "endMs": 118335,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "神々は、出雲の各地の社に立ち寄ってから、それぞれの国へ帰っていくとされる。",
+    "startMs": 118815,
+    "endMs": 124425,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "神在祭を行うのは、出雲大社だけではない。松江市の佐太神社でも、神在祭が行われる。佐太神社では、明治時代から、毎年11月20日から25日と日にちを決めて、神々を迎え、最後の夜には、近くの神目山という山で、神々を送り出す。",
+    "startMs": 124905,
+    "endMs": 145140,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "中世の本には、神々は、まず佐太神社に集まる、と書かれたものもある。出雲の中でも、神々の集まる場所の言い伝えは、一つではなかったのだ。",
+    "startMs": 145620,
+    "endMs": 156532,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "地元の人々は、このあいだを、お忌みさんと呼び、騒いだりせず、静かに過ごしてきた。神々の会議の、邪魔をしないためだ。",
+    "startMs": 157012,
+    "endMs": 166420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "神迎えも、神議りも、神送りも、今も、出雲で毎年、実際に行われている神事だ。",
+    "startMs": 166900,
+    "endMs": 174729,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ただし、2つ目の手がかりで見たように、神々が出雲に集まる話は、古事記にも、日本書紀にもない。そして、その会議が縁結びの会議だという話が、日本中に広まったのは、中世から江戸時代にかけてと考えられている。",
+    "startMs": 175209,
+    "endMs": 191497,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 191977,
+    "endMs": 193407,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "半分正しい。",
+    "startMs": 193887,
+    "endMs": 194953,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "神々を迎え、神議りを行い、送り出す神事は、今も出雲で続いている。でも、それが縁結びの会議だという話が広まったのは、古代ではなく、中世から江戸時代にかけてのことだ。",
+    "startMs": 195433,
+    "endMs": 209428,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 神々が出雲に集まる本当の理由（5062フレーム）
 export const rootsStoryCaptions: Caption[] = [
   {
-    "text": "神風は、本当に吹いたのか。",
+    "text": "では、ここまでの手がかりを、つなぎ合わせてみよう。",
     "startMs": 500,
-    "endMs": 2857,
+    "endMs": 4137,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1度目の戦いでは、嵐が元軍を追い返したとは言えない。2度目の戦いでは、台風が吹いた。でも、その前に、石の壁と武士たちが、元軍を2か月も海の上に足止めしていた。",
-    "startMs": 3337,
-    "endMs": 16809,
+    "text": "今から2000年ほど前。弥生時代の出雲には、大きな力を持つ人々がいた。",
+    "startMs": 4617,
+    "endMs": 10324,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、本当の元寇の物語は、どこで読めるのか。",
-    "startMs": 17289,
-    "endMs": 21236,
+    "text": "彼らは、358本の銅剣と、たくさんの銅鐸を集め、同じ印を刻み、谷の斜面に、ていねいに埋めた。",
+    "startMs": 10804,
+    "endMs": 19881,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "その答えの多くは、今、鷹島の海の底にある。",
-    "startMs": 21716,
-    "endMs": 25673,
+    "text": "その後、出雲の人々は、青銅器の祭りから、王の巨大な墓を舞台にした祭りへと、ほかの地域より早く切り替えた。",
+    "startMs": 20361,
+    "endMs": 28895,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "鷹島の海は、決して調べやすい海ではない。",
-    "startMs": 26153,
-    "endMs": 29353,
+    "text": "出雲の王の葬式には、吉備や北陸の人々が駆けつけた。海の向こうの朝鮮半島や、九州、近畿とも、出雲はつながっていた。",
+    "startMs": 29375,
+    "endMs": 39220,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2024年度には、水中スクーターで弱い水の流れを起こして、濁りを払いながら調べる方法も試されている。",
-    "startMs": 29833,
-    "endMs": 37471,
+    "text": "やがて、ヤマトの王権が、日本の中心になっていく。出雲の力も、少しずつ、その仕組みの中に組み込まれていった。",
+    "startMs": 39700,
+    "endMs": 48415,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、見つかった船の木は、泥の中にあるからこそ、750年近く残ってきた。",
-    "startMs": 37951,
-    "endMs": 44255,
+    "text": "奈良時代、古事記がまとめられたとき、天皇の物語の中には、出雲の神々の話が、大きな場所を占めていた。",
+    "startMs": 48895,
+    "endMs": 57343,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "泥から出して、そのままにしておくと、フナクイムシという、木を食べる貝のなかまに食べられてしまう。",
-    "startMs": 44735,
-    "endMs": 51263,
+    "text": "地上の国を造った神、大国主。その神が、天の神の子に国を譲り、その代わりに、天にとどく宮殿に祭られる。",
+    "startMs": 57823,
+    "endMs": 67113,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そのため、調べ終わった船は、もう一度泥をかぶせて埋め戻し、いかりには銅の網をかぶせて守っている。",
-    "startMs": 51743,
-    "endMs": 59071,
+    "text": "国造の家は、都に上り、出雲の神々の祝福を、天皇に届けた。",
+    "startMs": 67593,
+    "endMs": 73119,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "大きな船を、まるごと引き揚げることもできる。でも、引き揚げた木を、何年もかけて薬にひたし、保存し、展示する施設が足りない。",
-    "startMs": 59551,
-    "endMs": 69449,
+    "text": "出雲は、ただ負けた国として扱われたのではない。天皇の国にとって、なくてはならない、特別な神々の国として、語られてきたのだ。",
+    "startMs": 73599,
+    "endMs": 83476,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "松浦市は、ふるさと納税の仕組みも使って、調査や保存のための費用を集めている。",
-    "startMs": 69929,
-    "endMs": 75796,
+    "text": "平安時代、出雲大社の本殿は、東大寺の大仏殿よりも大きいと言われた。何度倒れても、人々は、巨大な神殿を建て直した。",
+    "startMs": 83956,
+    "endMs": 94057,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "それでも、調査は、少しずつ、確実に進んでいる。",
-    "startMs": 76276,
-    "endMs": 80575,
+    "text": "そして平安時代の終わり。神々が10月に出雲に集まるという話が、文字に書かれ始める。",
+    "startMs": 94537,
+    "endMs": 101012,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1974年に見つかった、一つの印。1980年から始まった、海の底の調査。2011年の、1隻目の船。",
-    "startMs": 81055,
-    "endMs": 91583,
+    "text": "中世から江戸時代にかけて、御師たちが、その話を、縁結びの神の話として、日本中に語り歩いた。",
+    "startMs": 101492,
+    "endMs": 109407,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして2026年。元の年号を書いた木の板、南宋の矢、サイコロと札。",
-    "startMs": 92063,
-    "endMs": 98132,
+    "text": "こうして、日本中の人々が、10月になると、神々は出雲に行く、と信じるようになった。",
+    "startMs": 109887,
+    "endMs": 116873,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "今年の調査には、初めて、韓国の研究チームも加わった。かつて、元の命令で船を造らされた高麗の地、朝鮮半島の研究者たちだ。",
-    "startMs": 98612,
-    "endMs": 109353,
+    "text": "神々が出雲に集まる、という言い伝えは、古代の神話そのものではない。",
+    "startMs": 117353,
+    "endMs": 122431,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "松浦市は、モンゴルや韓国の研究機関とも力を合わせて、調査を続けていく方針だ。",
-    "startMs": 109833,
-    "endMs": 116127,
+    "text": "でも、それは、何もないところから生まれた話でもない。",
+    "startMs": 122911,
+    "endMs": 126911,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "750年前、この海で敵どうしとして向き合った国々の研究者が、今、同じ海の底を、一緒に調べている。",
-    "startMs": 116607,
-    "endMs": 125620,
+    "text": "古代の出雲が持っていた大きな力。天皇の物語の中で、出雲の神々が占めてきた特別な場所。天にそびえた巨大な神殿。それらの記憶の上に、長い時間をかけて、人々が積み重ねてきた信仰なのだ。",
+    "startMs": 127391,
+    "endMs": 142804,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "元寇は、日本が神風に守られた物語として語られてきた。",
-    "startMs": 126100,
-    "endMs": 130345,
+    "text": "そして、今年も、国譲りの神話の舞台となった稲佐の浜に、神々を迎える火がともされる。",
+    "startMs": 143284,
+    "endMs": 150079,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "でも、海の底から上がってくる証拠は、別の物語を語っている。",
-    "startMs": 130825,
-    "endMs": 135700,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "滅ぼされた南宋の兵が、南宋の矢を持って海を渡ってきたこと。",
-    "startMs": 136180,
-    "endMs": 140649,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "大きな船の台所で、料理の担当が、札遊びをしていたかもしれないこと。",
-    "startMs": 141129,
-    "endMs": 146495,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして、その船に、決まりごとを書いた板が、打ち付けられていたこと。",
-    "startMs": 146975,
-    "endMs": 152063,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "日本の側でも、島を守って倒れた人々、石の壁を築いた人々、ほうびを求めて鎌倉まで旅をした武士がいた。",
-    "startMs": 152543,
-    "endMs": 160745,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "神風という一言では語りきれない、たくさんの人々の物語が、この海に眠っていたのだ。",
-    "startMs": 161225,
-    "endMs": 167636,
+    "text": "2026年10月、島根県立古代出雲歴史博物館は、およそ1年半ぶりに、新しく生まれ変わって開館した。荒神谷の銅剣と、加茂岩倉の銅鐸、そして出雲大社の巨大な柱が、今、そこで来る人を待っている。",
+    "startMs": 150559,
+    "endMs": 167529,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 まだ解けていない謎（3538フレーム）
+// 0:00 まだ解けていない謎（2731フレーム）
 export const unsolvedMysteryCaptions: Caption[] = [
   {
     "text": "最後に、今夜の調査で残った、まだ判決を出せない謎を、3つ。",
@@ -3795,120 +3221,85 @@ export const unsolvedMysteryCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "ひとつ目。木の板には、何が書かれていたのか。",
+    "text": "ひとつ目。バツの印は、何を意味していたのか。",
     "startMs": 6228,
-    "endMs": 9631,
+    "endMs": 9705,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2026年に見つかった木の板は、最後の行の年号しか、はっきりとは読めていない。",
-    "startMs": 10111,
-    "endMs": 16159,
+    "text": "荒神谷の銅剣と、加茂岩倉の銅鐸14個に刻まれた、同じ印。",
+    "startMs": 10185,
+    "endMs": 15775,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "船に乗る人々への決まりごとだったのか。それとも、乗っていた人の名簿だったのか。",
-    "startMs": 16639,
-    "endMs": 22057,
+    "text": "作った人々の印なのか。埋めた集団の目印なのか。それとも、悪いものを封じこめる、まじないの印なのか。",
+    "startMs": 16255,
+    "endMs": 24447,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "もし、名簿だったとしたら、そこには、この船に乗っていた人々の名前が、書かれていたのかもしれない。",
-    "startMs": 22537,
-    "endMs": 29812,
+    "text": "なぜ、一部の銅鐸にだけ、印があるのか。印のある青銅器と、ない青銅器を見比べる研究は、今まさに、進められているところだ。",
+    "startMs": 24927,
+    "endMs": 35487,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "新しい技術で、消えた墨のあとを読み取ることができれば、750年前の船の上の言葉が、よみがえるかもしれない。",
-    "startMs": 30292,
-    "endMs": 38633,
+    "text": "2つ目。出雲大社の本殿は、本当は、どんな姿をしていたのか。",
+    "startMs": 35967,
+    "endMs": 41097,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2つ目。3号船は、誰の船だったのか。",
-    "startMs": 39113,
-    "endMs": 42505,
+    "text": "見つかったのは、柱の根元だけ。高さ48メートルの本殿は、本当にあったのか。それとも、もっと低い本殿を、高い柱で持ち上げていたのか。",
+    "startMs": 41577,
+    "endMs": 52479,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "全長およそ30メートル。これまでで最大級の船で、多くの船を率いる母船だった可能性もある。",
-    "startMs": 42985,
-    "endMs": 49972,
+    "text": "平安時代の本殿の柱は、まだ見つかっていない。いつか、その柱が見つかれば、天にとどく宮殿の本当の姿が、見えてくるかもしれない。",
+    "startMs": 52959,
+    "endMs": 63124,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "もしそうなら、この船には、江南軍を率いる立場の人物が、乗っていたのかもしれない。",
-    "startMs": 50452,
-    "endMs": 56681,
+    "text": "そして3つ目。358本の銅剣は、なぜ、埋められたのか。",
+    "startMs": 63604,
+    "endMs": 68927,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、木の板の年号は、1275年か1276年。船が沈んだ1281年より、5年以上も前だ。",
-    "startMs": 57161,
-    "endMs": 67167,
+    "text": "隠したのか。捧げたのか。それとも、祭りを終わらせるためだったのか。",
+    "startMs": 69407,
+    "endMs": 74356,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "この船は、いつ、どこで造られ、どんな旅をして、鷹島の海にたどり着いたのか。それも、まだわかっていない。",
-    "startMs": 67647,
-    "endMs": 76052,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして3つ目。1度目の戦いで、元軍は、なぜ引き揚げたのか。",
-    "startMs": 76532,
-    "endMs": 81663,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "嵐なのか。矢が尽きたからなのか。指揮官たちの対立なのか。それとも、最初から、一度攻めて引き揚げる計画だったのか。",
-    "startMs": 82143,
-    "endMs": 90911,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "1274年の戦いでは、沈んだ船は、まだ見つかっていない。",
-    "startMs": 91391,
-    "endMs": 96329,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "もし、いつか、文永の役の船が、海の底から見つかれば、この謎にも、新しい光が当たるかもしれない。",
-    "startMs": 96809,
-    "endMs": 105119,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "鷹島の海の底には、まだ、見つかっていない船が、いくつも眠っていると考えられている。",
-    "startMs": 105599,
-    "endMs": 112009,
+    "text": "荒神谷と加茂岩倉は、3キロあまり離れた、2つの谷。そのあいだの山や谷には、まだ見つかっていない青銅器が、眠っているのかもしれない。",
+    "startMs": 74836,
+    "endMs": 85087,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "新しい発見があったら、ボクはまた、ここで判決を出す。",
-    "startMs": 112489,
-    "endMs": 116724,
+    "startMs": 85567,
+    "endMs": 89801,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 まとめ（4803フレーム）
+// 0:00 まとめ（5019フレーム）
 export const summaryCaptions: Caption[] = [
   {
     "text": "では、今夜の判決を振り返ろう。",
@@ -3918,163 +3309,163 @@ export const summaryCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "元は、いきなり攻めてきたのではない。6年以上前から手紙を送り、日本は守りを固め始めていた。まちがい。",
+    "text": "神無月は、もともと「神の月」、神を祭る月という意味だったと考えられている。まちがい。",
     "startMs": 3572,
-    "endMs": 11721,
+    "endMs": 10527,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "最初に襲われたのは、博多ではなく、対馬と壱岐だった。まちがい。",
-    "startMs": 12201,
-    "endMs": 17108,
+    "text": "神々が出雲に集まる話は、古事記にも日本書紀にもない。文字に残るのは平安時代の終わりからだ。まちがい。",
+    "startMs": 11007,
+    "endMs": 18719,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "武士たちは苦戦した。でも、一人ずつ名乗って負けたという話は、神社の側の本がもとだ。半分正しい。",
-    "startMs": 17588,
-    "endMs": 25300,
+    "text": "古事記の神話の大きな部分を出雲の物語が占めている。でも、3分の1は目安だ。半分正しい。",
+    "startMs": 19199,
+    "endMs": 26655,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "てつはうの中には、鉄の破片が詰められていた。音だけの武器ではない。まちがい。",
-    "startMs": 25780,
-    "endMs": 31647,
+    "text": "島根半島は、かつて海で隔てられていたと考えられている。でも、神が引き寄せたのではない。半分正しい。",
+    "startMs": 27135,
+    "endMs": 35188,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "てつはうは本物の武器だった。でも、教科書の絵の3人の兵士は、あとから描き足されたとみられる。半分正しい。",
-    "startMs": 32127,
-    "endMs": 40372,
+    "text": "斐伊川の氾濫も、出雲の鉄も事実だ。でも、オロチの正体だという証拠はない。半分正しい。",
+    "startMs": 35668,
+    "endMs": 43209,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1度目の戦いで、風雨の記録はある。でも、季節は11月。嵐だけでは説明できない。半分正しい。",
-    "startMs": 40852,
-    "endMs": 49535,
+    "text": "出雲には、日本中の銅剣を上回る数の剣を集めるほどの力があった。まちがい。",
+    "startMs": 43689,
+    "endMs": 49577,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "幕府は、元の使いを、鎌倉の龍ノ口で斬った。正しい。",
-    "startMs": 50015,
-    "endMs": 54772,
+    "text": "358本の銅剣は、戦いの武器ではなく、祭りの道具だったと考えられている。まちがい。",
+    "startMs": 50057,
+    "endMs": 57204,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "博多湾には、およそ20キロにわたって、石の壁が築かれた。正しい。",
-    "startMs": 55252,
-    "endMs": 60671,
+    "text": "荒神谷では、銅剣と銅矛と銅鐸が、すぐそばに埋められていた。まちがい。",
+    "startMs": 57684,
+    "endMs": 63423,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "14万人、4400隻は、元の側の記録の数字だ。でも、空前の大軍だった。半分正しい。",
-    "startMs": 61151,
-    "endMs": 69844,
+    "text": "加茂岩倉の銅鐸の多くは、近畿で作られたとされる。まちがい。",
+    "startMs": 63903,
+    "endMs": 68532,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2度目の戦いでは、台風の前に、石の壁と武士たちが、元軍を2か月足止めしていた。まちがい。",
-    "startMs": 70324,
-    "endMs": 77791,
+    "text": "荒神谷と加茂岩倉の青銅器には、同じバツの印が刻まれていた。まちがい。",
+    "startMs": 69012,
+    "endMs": 74697,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "元軍は、大きな損害を受けた。でも、全滅したのではない。まちがい。",
-    "startMs": 78271,
-    "endMs": 84105,
+    "text": "青銅器を埋めた理由は、隠した説を含め、どれも決め手がない。半分正しい。",
+    "startMs": 75177,
+    "endMs": 81204,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "鷹島の海の底からは、3隻の元の船が見つかっている。まちがい。",
-    "startMs": 84585,
-    "endMs": 89481,
+    "text": "出雲には、全国最大級の墓に葬られる王がいた。正しい。",
+    "startMs": 81684,
+    "endMs": 86452,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "元の船は、泥の下に埋まっている。音波の探査と潜水士の手作業、最新の分析で、ようやく姿が見えてくる。まちがい。",
-    "startMs": 89961,
-    "endMs": 99241,
+    "text": "出雲は、吉備や北陸、朝鮮半島とまでつながる、交流の十字路だった。まちがい。",
+    "startMs": 86932,
+    "endMs": 93492,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "見つかった元の船は、ていねいな造りの、中国の江南の船だった。まちがい。",
-    "startMs": 99721,
-    "endMs": 105471,
+    "text": "出雲は奈良時代には鉄を作る国になっていた。でも、弥生時代の王たちは、鉄を手に入れる側だった。半分正しい。",
+    "startMs": 93972,
+    "endMs": 102505,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2026年、元の年号を書いた木の板が見つかった。まちがい。",
-    "startMs": 105951,
-    "endMs": 110836,
+    "text": "出雲は、長い時間をかけて、ヤマトの国の仕組みに組み込まれていった。半分正しい。",
+    "startMs": 102985,
+    "endMs": 109001,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "元は、滅ぼした南宋の武器を、日本との戦いに使ったとみられる。正しい。",
-    "startMs": 111316,
-    "endMs": 116991,
+    "text": "巨大な本殿はあった。でも、高さ48メートルは、まだ確かめられていない。半分正しい。",
+    "startMs": 109481,
+    "endMs": 116852,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "元の船の中には、サイコロと札、そして台所があった。まちがい。",
-    "startMs": 117471,
-    "endMs": 122505,
+    "text": "出雲大社の本殿は、何度も倒れ、そのたびに建て直された。正しい。",
+    "startMs": 117332,
+    "endMs": 122580,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "元に勝っても、ほうびの土地はなく、幕府は弱まっていった。まちがい。",
-    "startMs": 122985,
-    "endMs": 128063,
+    "text": "千家家は奈良時代から記録に残る古い家だ。でも、神の子孫という系譜は神話の話だ。半分正しい。",
+    "startMs": 123060,
+    "endMs": 130815,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "神に守られた国という考えは、元寇のあとに広まり、時代ごとに形を変えた。半分正しい。",
-    "startMs": 128543,
-    "endMs": 135689,
+    "text": "神在月の神事は今も続く。でも、縁結びの会議という話が広まったのは、中世以降だ。半分正しい。",
+    "startMs": 131295,
+    "endMs": 139753,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "日本を救ったのは、神風だけではなかった。",
-    "startMs": 136169,
-    "endMs": 139135,
+    "text": "神々が出雲に集まるという言い伝えは、古代の神話そのものではなかった。",
+    "startMs": 140233,
+    "endMs": 145033,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "島を守った人々、石の壁を築いた人々、夜の海に漕ぎ出した武士たち。そして、2度目の戦いの最後に吹いた、本物の台風。",
-    "startMs": 139615,
-    "endMs": 149471,
+    "text": "でも、土の中から現れた銅剣と銅鐸、天にそびえた神殿の柱は、出雲が、神話にふさわしい特別な土地だったことを、確かに語っている。",
+    "startMs": 145513,
+    "endMs": 156180,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "海の底からは、今も、新しい証拠が上がり続けている。",
-    "startMs": 149951,
-    "endMs": 154249,
+    "text": "出雲の土の中からは、今も、新しい証拠が見つかり続けている。",
+    "startMs": 156660,
+    "endMs": 161481,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "本当の話は、作り話に負けないくらい、面白い。",
-    "startMs": 154729,
-    "endMs": 158868,
+    "startMs": 161961,
+    "endMs": 166100,
     "timestampMs": null,
     "confidence": null
   }
