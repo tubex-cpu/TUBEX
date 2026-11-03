@@ -7,7 +7,7 @@ from PIL import Image
 
 Image.MAX_IMAGE_PIXELS = None
 ROOT = Path(__file__).resolve().parent.parent
-UA = 'HabiJudgeVideo/1.0 (educational YouTube video; photo credits)'
+UA = 'HabiJudgeVideo/1.0 (https://github.com/tubex-cpu/TUBEX; educational video)'
 OUT = ROOT / 'public/photos'
 OUT.mkdir(parents=True, exist_ok=True)
 picks = json.loads((ROOT / 'scripts/photo-picks.json').read_text())
