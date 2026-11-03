@@ -73,7 +73,7 @@ setsid nohup bash .claude/skills/habi-video/scripts/render.sh habi-<題材> <108
 ```
 - 10分ずつ書き出す（1時間を一度に書くと Node がメモリ不足、音声もブラウザが落ちる）。1080pは1区間約21分。全体で約3〜4時間。止まったら同じコマンドで続きから。
 - 進み具合は Monitor で `tail -F render.log | grep -E --line-buffered "chunk|audio|encode|full|DONE|rror|Killed"`（30分で切れるので張り直す）。
-- できたら：分割ファイル・`.sha256`・`join.sh` を `habi-<題材>/完成動画/` にコミットしてプッシュ（1回のプッシュが2分を超えることがある）。確認版 `out/<名前>-preview.mp4` は SendUserFile で送る。
+- できたら：分割ファイル・`.sha256`・`join.sh` を `habi-<題材>/完成動画/` にコミットしてプッシュ。**分割ファイルは1つずつコミットしてプッシュする**（まとめて送ると100MBほどで通信が切れて失敗することがある）。確認版 `out/<名前>-preview.mp4` は SendUserFile で送る。
 - Codexにダウンロードしてもらうときは `habi-nintoku/Codex指示書_動画ダウンロード.md` を雛形に（sparse clone → `sh 完成動画/join.sh` → `OK` を確認）。
 - `scripts/gen_youtube.py` で `youtube.md`（タイトル3案・概要欄・チャプター・参考資料・写真クレジット・「VOICEVOX:玄野武宏」）。**概要欄はYouTubeの上限5000字以内**（写真クレジットはライセンスごとに作者名をまとめ、写真ごとの一覧は `写真クレジット一覧.md` に置いてリンクする。例 `habi-genko/scripts/gen_youtube_genko.py`）と `台本_<題材>.txt`（見出しに実際の時刻）を作る。**チャプター名は短く、答えを言わないフックの言い方**（例「誰も確かめていない墓」「150年、行方不明の宝」「閉廷」）。
 
