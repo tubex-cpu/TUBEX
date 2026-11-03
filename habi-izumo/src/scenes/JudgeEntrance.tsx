@@ -8,7 +8,7 @@ import {SceneFrame} from '../components/SceneFrame';
 import {judgeEntranceCaptions as c} from '../data/captions';
 import {colors, gothicFamily, minchoFamily} from '../theme';
 
-const clues = ['いきなり？', '最初は博多？', '一騎打ち？', 'てつはう？', 'あの絵？', '1度目の嵐？', '使いを斬った？', '石の壁？', '14万人？', '嵐だけ？', '全滅？', '沈んだ船？', '探し方？', '手抜きの船？', '木の板？', '南宋の矢？', '遊び道具？', '幕府は？', '神風？'];
+const clues = ['神無月？', '古事記に？', '3分の1？', '国引き？', 'オロチ？', '大きな国？', '武器？', '銅鐸の国？', '出雲製？', '関係ない？', '隠した？', '王がいた？', '閉ざされた？', '鉄の力？', '国譲り？', '48m？', '倒れた？', '神の子孫？', '縁結び？'];
 
 // 今夜の19の手がかり（3段に並べる）
 const ClueRow = () => {
@@ -124,7 +124,7 @@ export const JudgeEntrance = () => (
 			<NamePlate />
 		</Beat>
 		<Beat name="今夜の問い" captions={c} from={2} to={3}>
-			<Photo id="typhoon-jebi" move="in" label="日本を救ったのは、神風？" />
+			<Photo id="PHOTO_JUDGE" move="in" label="神々は、なぜ出雲に？" />
 		</Beat>
 		<Beat name="19の手がかり" captions={c} from={4}>
 			<ClueRow />
