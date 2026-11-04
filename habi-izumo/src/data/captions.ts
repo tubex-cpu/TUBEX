@@ -1,208 +1,229 @@
 // scripts/build-voice.py で自動生成。手で編集しないこと。
 import type {Caption} from '@remotion/captions';
 
-// 0:00 謎の先出し（6476フレーム）
+// 0:00 謎の先出し（7126フレーム）
 export const introCaptions: Caption[] = [
   {
-    "text": "1984年、夏。島根県の出雲で、小さな谷の斜面を掘っていた調査員たちは、自分の目を疑った。",
+    "text": "2026年11月18日、水曜日。日が暮れると、出雲大社から西へおよそ1キロの稲佐の浜に、かがり火がともされる。",
     "startMs": 500,
-    "endMs": 9225,
+    "endMs": 10420,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "土の中から、銅の剣が、次から次へと現れたのだ。",
-    "startMs": 9705,
-    "endMs": 13908,
+    "text": "海の向こうからやって来る、日本中の神々を、お迎えするためだ。神迎神事。",
+    "startMs": 10900,
+    "endMs": 16937,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "その数、358本。",
-    "startMs": 14388,
-    "endMs": 16756,
+    "text": "浜で迎えられた神々は、出雲大社へと向かい、神迎祭が行われる。",
+    "startMs": 17417,
+    "endMs": 23028,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "それまで日本中で見つかっていた銅剣を、すべて合わせても、およそ300本。それを、たった一つの谷が、上回ってしまった。",
-    "startMs": 17236,
-    "endMs": 26665,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "しかも、剣は、刃を立てて、4列に、きっちりと並べて埋められていた。",
-    "startMs": 27145,
-    "endMs": 32745,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして、そのほとんどに、同じ印が刻まれていた。小さな、バツの印だ。",
-    "startMs": 33225,
-    "endMs": 39220,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "12年後。そこから山を越えて、3キロあまり離れた場所で、今度は、工事の重機が、銅鐸を掘り当てた。",
-    "startMs": 39700,
-    "endMs": 47807,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "その数、39個。1か所から見つかった銅鐸として、日本でいちばん多い数だった。",
-    "startMs": 48287,
-    "endMs": 54761,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "出雲。そこは、日本の神話の、ふるさとと呼ばれる土地だ。",
-    "startMs": 55241,
-    "endMs": 59753,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "国を引き寄せた神。ヤマタノオロチを退治した神。そして、この国を、天の神に譲ったとされる、大国主の神。",
-    "startMs": 60233,
-    "endMs": 68948,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "古事記に書かれた神話の、およそ3分の1が、出雲にまつわる話だと言われている。",
-    "startMs": 69428,
-    "endMs": 75167,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "それなのに、長いあいだ、多くの学者は、こう考えてきた。出雲の神話は、都で作られたお話にすぎない。出雲に、そんな大きな力を持つ国はなかった、と。",
-    "startMs": 75647,
-    "endMs": 88063,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "その考えを、地面の下から現れた銅剣と銅鐸が、ひっくり返し始めた。",
-    "startMs": 88543,
-    "endMs": 94047,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして2000年。出雲大社の境内から、巨大な柱が姿を現した。",
-    "startMs": 94527,
-    "endMs": 99828,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "杉の大木を3本束ねた、直径およそ3メートルの柱。",
-    "startMs": 100308,
-    "endMs": 104649,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "平安時代の出雲大社は、高さ48メートル。15階建てのビルほどの神殿だったという言い伝えがある。ただの伝説だと思われていたその話に、本物の柱が、突然、現れたのだ。",
-    "startMs": 105129,
-    "endMs": 118868,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして、今年。2026年の秋。",
-    "startMs": 119348,
-    "endMs": 122740,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "出雲の研究者が、ある発表をした。荒神谷の銅剣に刻まれていたバツの印が、山の向こうの加茂岩倉の銅鐸にも、刻まれていたというのだ。",
-    "startMs": 123220,
-    "endMs": 133439,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "3キロ離れた2つの谷に、同じ印。いったい誰が、何のために、刻んだのか。",
-    "startMs": 133919,
-    "endMs": 140372,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そしてもう一つ、出雲には、千年近く語り継がれてきた、不思議な言い伝えがある。",
-    "startMs": 140852,
-    "endMs": 146761,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "毎年、旧暦の10月になると、日本中の神々が、出雲に集まってくる、というのだ。",
-    "startMs": 147241,
-    "endMs": 154239,
+    "text": "毎年、旧暦の10月になると、日本中の神々が出雲に集まってくる。千年近く語り継がれてきた、不思議な言い伝えだ。",
+    "startMs": 23508,
+    "endMs": 32543,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "だから、ほかの国では10月を、神様のいない月、神無月と呼ぶ。そして出雲だけは、神在月と呼ぶ。",
-    "startMs": 154719,
-    "endMs": 162943,
+    "startMs": 33023,
+    "endMs": 41247,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "今年、神々を迎える祭りが行われるのは、11月18日の夜。もう、すぐそこだ。",
-    "startMs": 163423,
-    "endMs": 170804,
+    "text": "今年も、その夜が、もうすぐやって来る。",
+    "startMs": 41727,
+    "endMs": 44831,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "神々は、なぜ、出雲に集まるのか。",
-    "startMs": 171284,
-    "endMs": 174452,
+    "startMs": 45311,
+    "endMs": 48479,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その答えを探す手がかりは、神話の中だけではなく、出雲の土の中にも眠っていた。",
+    "startMs": 48959,
+    "endMs": 54665,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "1984年、夏。島根県の出雲で、小さな谷の斜面を掘っていた調査員たちは、自分の目を疑った。",
+    "startMs": 55145,
+    "endMs": 63871,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "土の中から、銅の剣が、次から次へと現れたのだ。",
+    "startMs": 64351,
+    "endMs": 68553,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その数、358本。",
+    "startMs": 69033,
+    "endMs": 71401,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "それまで日本中で見つかっていた銅剣を、すべて合わせても、およそ300本。それを、たった一つの谷が、上回ってしまった。",
+    "startMs": 71881,
+    "endMs": 81311,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "しかも、剣は、刃を立てて、4列に、きっちりと並べて埋められていた。",
+    "startMs": 81791,
+    "endMs": 87391,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、そのほとんどに、同じ印が刻まれていた。小さな、バツの印だ。",
+    "startMs": 87871,
+    "endMs": 93865,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "12年後。そこから山を越えて、3キロあまり離れた場所で、今度は、工事の重機が、銅鐸を掘り当てた。",
+    "startMs": 94345,
+    "endMs": 102452,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その数、39個。1か所から見つかった銅鐸として、日本でいちばん多い数だった。",
+    "startMs": 102932,
+    "endMs": 109407,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "出雲。そこは、日本の神話の、ふるさとと呼ばれる土地だ。",
+    "startMs": 109887,
+    "endMs": 114399,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "国を引き寄せた神。ヤマタノオロチを退治した神。そして、この国を、天の神に譲ったとされる、大国主の神。",
+    "startMs": 114879,
+    "endMs": 123593,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "古事記に書かれた神話の、およそ3分の1が、出雲にまつわる話だと言われている。",
+    "startMs": 124073,
+    "endMs": 129812,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "それなのに、長いあいだ、多くの学者は、こう考えてきた。出雲の神話は、都で作られたお話にすぎない。出雲に、そんな大きな力を持つ国はなかった、と。",
+    "startMs": 130292,
+    "endMs": 142708,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その考えを、地面の下から現れた銅剣と銅鐸が、ひっくり返し始めた。",
+    "startMs": 143188,
+    "endMs": 148692,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして2000年。出雲大社の境内から、巨大な柱が姿を現した。",
+    "startMs": 149172,
+    "endMs": 154473,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "杉の大木を3本束ねた、直径およそ3メートルの柱。",
+    "startMs": 154953,
+    "endMs": 159295,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "平安時代の出雲大社は、高さ48メートル。15階建てのビルほどの神殿だったという言い伝えがある。ただの伝説だと思われていたその話に、本物の柱が、突然、現れたのだ。",
+    "startMs": 159775,
+    "endMs": 173513,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、今年。2026年の秋。",
+    "startMs": 173993,
+    "endMs": 177385,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "出雲の研究者が、ある発表をした。荒神谷の銅剣に刻まれていたバツの印が、山の向こうの加茂岩倉の銅鐸にも、刻まれていたというのだ。",
+    "startMs": 177865,
+    "endMs": 188084,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "3キロ離れた2つの谷に、同じ印。いったい誰が、何のために、刻んだのか。",
+    "startMs": 188564,
+    "endMs": 195017,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "出雲の神話は、ただの作り話だったのか。それとも、消えた王国の記憶なのか。",
-    "startMs": 174932,
-    "endMs": 181087,
+    "startMs": 195497,
+    "endMs": 201652,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "そして、358本の銅剣は、なぜ、土の中に隠されたのか。",
-    "startMs": 181567,
-    "endMs": 187039,
+    "startMs": 202132,
+    "endMs": 207604,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "答えは、2000年ちかく、出雲の土の中に眠っていた。",
-    "startMs": 187519,
-    "endMs": 191647,
+    "text": "答えは、2000年ちかく、出雲の土の中で、掘り出されるのを待っていた。",
+    "startMs": 208084,
+    "endMs": 213311,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "木の柱の年代を測る科学の技術。地面を掘らずに、その下の石の部屋を探る、地中レーダー。そして、何百もの青銅器に刻まれた印を、一つずつ見比べる、研究者たちの地道な調査。",
-    "startMs": 192127,
-    "endMs": 206612,
+    "startMs": 213791,
+    "endMs": 228276,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "最新の研究と技術が導き出したのは、教科書の神話の向こう側にある、驚くべき古代出雲の姿だった。",
-    "startMs": 207092,
-    "endMs": 214665,
+    "startMs": 228756,
+    "endMs": 236329,
     "timestampMs": null,
     "confidence": null
   }

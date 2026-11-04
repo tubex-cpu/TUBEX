@@ -2,7 +2,7 @@
 export const TRANSITION_FRAMES = 20;
 
 export const sceneDurations = {
-	Intro: 6476,
+	Intro: 7126,
 	JudgeEntrance: 783,
 	Clue1Kannazuki: 3461,
 	Clue2Okugi: 4546,
@@ -29,4 +29,4 @@ export const sceneDurations = {
 	Closing: 449,
 } as const;
 
-export const TOTAL_FRAMES = 109496;
+export const TOTAL_FRAMES = 110146;
