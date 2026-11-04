@@ -300,7 +300,7 @@ def d_three(img, t, d, labels=(("水", "雨と気候"), ("港", "船と真水"),
 def d_water(img, t, d):
     text(img, (W / 2, 170), "街を支えるのは、水", 60, anchor="mm", alpha=seg(t, 0, 0.5))
     items = [("飲み水", "毎日の暮らし"), ("畑・牧場", "食料をつくる"), ("工場", "働く場所")]
-    cx0, cy = W / 2, 620
+    cx0, cy = W / 2, 560
     dd = ImageDraw.Draw(img)
     a0 = seg(t, 0.2, 0.8)
     dd.ellipse((cx0 - 110, 300 - 110 + 40, cx0 + 110, 300 + 110 + 40), fill=(40, 120, 200, int(255 * a0)), outline=(160, 210, 255, int(255 * a0)), width=5)
@@ -308,22 +308,22 @@ def d_water(img, t, d):
     for i, (a_, b_) in enumerate(items):
         a = seg(t, 1.0 + i * 0.9, 1.6 + i * 0.9)
         x = cx0 + (i - 1) * 560
-        arrow(img, (cx0, 470), (x, 640), color=(120, 190, 255), width=7, alpha=a, prog=a)
-        panel(img, (x - 200, 660, x + 200, 860), fill=(16, 28, 50), alpha=0.9 * a)
-        text(img, (x, 730), a_, 56, anchor="mm", alpha=a)
-        text(img, (x, 810), b_, 36, fill=MUTED, anchor="mm", alpha=a, weight="500Medium")
-    text(img, (W / 2, 960), "広い土地 ＝ 大勢を支えられる、ではない", 44, fill=AMBER, anchor="mm", alpha=seg(t, d * 0.65, d * 0.75))
+        arrow(img, (cx0, 470), (x, 600), color=(120, 190, 255), width=7, alpha=a, prog=a)
+        panel(img, (x - 200, 610, x + 200, 800), fill=(16, 28, 50), alpha=0.9 * a)
+        text(img, (x, 675), a_, 56, anchor="mm", alpha=a)
+        text(img, (x, 755), b_, 36, fill=MUTED, anchor="mm", alpha=a, weight="500Medium")
+    text(img, (W / 2, 900), "広い土地 ＝ 大勢を支えられる、ではない", 44, fill=AMBER, anchor="mm", alpha=seg(t, d * 0.65, d * 0.75))
 
 
 def d_hadley(img, t, d):
     text(img, (W / 2, 140), "空気が下がると、雨が減る", 60, anchor="mm", alpha=seg(t, 0, 0.5))
     dd = ImageDraw.Draw(img)
     # ground line from equator (left) to 40S (right)
-    gx0, gx1, gy = 260, 1660, 860
+    gx0, gx1, gy = 260, 1660, 780
     dd.line((gx0, gy, gx1, gy), fill=(200, 200, 210, 255), width=4)
     for x, s in [(gx0, "赤道"), (gx0 + (gx1 - gx0) * 0.75, "南緯30度付近"), (gx1, "南緯40度")]:
         text(img, (x, gy + 50), s, 36, anchor="ma", fill=MUTED, weight="500Medium")
-    top = 330
+    top = 300
     xr = gx0 + (gx1 - gx0) * 0.75
     a1, a2, a3 = seg(t, 0.4, 2.2), seg(t, 2.0, 4.0), seg(t, 3.8, 6.0)
     arrow(img, (gx0 + 60, gy - 40), (gx0 + 60, top + 30), color=(255, 120, 90), width=12, prog=a1, alpha=min(1, a1 * 3))
@@ -590,7 +590,7 @@ def shots():
     add("S01", 4, "photo", file="real_00a_sydney_cbd.jpg", label="シドニー", zoom=(1.0, 1.1))
     add("S01", 6, "map", lon=AUS[0], lat=-27.0, kmpp=3.5, move=False, layers=[L_japan(0.3)])
     # S02
-    add("S02", 6, "photo", file="real_20_outback.jpg", label="内陸が砂漠だから？", zoom=(1.04, 1.12))
+    add("S02", 6, "map", lon=(134.0, 133.5), lat=(-27.0, -24.5), kmpp=(3.5, 1.6), layers=[L_caption("内陸が砂漠だから？", 0.3)])
     add("S02", 5, "map", **AUSV, move=False, layers=[L_coast_glow(0.3), L_caption("海沿いなら、どこでも育つ？", 0.6)])
     add("S02", 6, "photo", file="real_00b_canberra_parliament.jpg", label="首都キャンベラは、内陸", zoom=(1.0, 1.08))
     add("S02", 7, "diag", fn=d_three)
@@ -602,22 +602,22 @@ def shots():
                 L_caption("「市」ではなく、周りまで含めた「都市圏」", 0.3)])
     # S04
     add("S04", 7, "diag", fn=d_bars((2, 5)))
-    add("S04", 4, "photo", file="real_02_brisbane.jpg", label="ブリスベン")
-    add("S04", 4, "photo", file="real_03_perth.jpg", label="パース")
-    add("S04", 6, "map", **AUSV, move=False, layers=[L_coast_glow(0.2), L_dots(FIVE, 0.0, 0.1), L_caption("5都市すべてが、海の近く", 0.6)])
+    add("S04", 4, "photo", file="real_02_brisbane.jpg", label="ブリスベン", sent=1)
+    add("S04", 4, "photo", file="real_03_perth.jpg", label="パース", sent=2)
+    add("S04", 6, "map", sent=4, **AUSV, move=False, layers=[L_coast_glow(0.2), L_dots(FIVE, 0.0, 0.1), L_caption("5都市すべてが、海の近く", 0.6)])
     # S05
     add("S05", 4, "card", kicker="理由1", title="水と気候")
     add("S05", 9, "diag", fn=d_water)
-    add("S05", 7, "photo", file="real_04_warragamba.jpg", label="街の水がめ（ワラガンバ・ダム）")
+    add("S05", 7, "photo", file="real_04_warragamba_dam.jpg", label="シドニーの水がめ、ワラガンバ・ダム")
     add("S05", 6, "map", **AUSV, move=False, dim=0.0, layers=[L_caption("なぜ、内陸は乾く？", 0.4)])
     # S06
     add("S06", 14, "diag", fn=d_hadley)
     add("S06", 11, "globe", lon=(134, 134), lat=(-20, -26), r=(470, 520), cy=560, band=[(-24, -36)])
     # S07
     add("S07", 8, "map", **AUSV, move=False, dim=0.15, layers=[L_bands(0.3)])
-    add("S07", 5, "photo", file="real_05_tropical_north.jpg", label="北部の熱帯")
-    add("S07", 5, "photo", file="real_06_temperate_south.jpg", label="南部の温帯")
-    add("S07", 8, "diag", fn=d_coast_section)
+    add("S07", 5, "photo", file="real_05_tropical_wetland.jpg", label="北部の熱帯", sent=1)
+    add("S07", 5, "photo", file="real_06_temperate_farmland.jpg", label="南部の温帯", sent=2)
+    add("S07", 8, "diag", fn=d_coast_section, sent=3)
     # S08
     add("S08", 5, "card", kicker="理由2", title="港から始まった街")
     add("S08", 7, "photo", file="real_19_container_port.jpg", label="船を泊められる湾")
@@ -625,41 +625,41 @@ def shots():
     # S09
     add("S09", 7, "map", lon=(151.2, 151.2), lat=(-33.6, -33.93), kmpp=(0.6, 0.13), dim=0.05,
         layers=[L_points([(151.19, -34.00, "ボタニー湾（1788年1月）", "r")], 1.0)])
-    add("S09", 6, "photo", file="real_07_botany_bay.jpg", label="停泊地も真水も足りない")
-    add("S09", 6, "map", lon=151.2, lat=-33.93, kmpp=0.13, move=False,
+    add("S09", 6, "photo", file="real_07_botany_bay.jpg", label="停泊地も真水も足りない", sent=2)
+    add("S09", 6, "map", sent=3, lon=151.2, lat=-33.93, kmpp=0.13, move=False,
         layers=[L_points([(151.19, -34.00, "ボタニー湾", "r"), (151.21, -33.86, "シドニー・コーブ", "r")], 0.2), L_bay_arrow(1.0),
                 L_caption("北のポートジャクソンへ", 1.0)])
-    add("S09", 8, "photo", file="real_08_sydney_cove_1788.jpg", label="シドニー・コーブ（当時の絵）", zoom=(1.0, 1.06))
-    add("S09", 8, "photo", file="real_09_circular_quay.jpg", label="今のシドニーの始まり")
+    add("S09", 8, "photo", sent=4, file="real_08_sydney_cove_1788.jpg", label="1788年のシドニー・コーブ（当時の水彩画）", zoom=(1.0, 1.06))
+    add("S09", 8, "photo", sent=6, file="real_09_circular_quay.jpg", label="今のシドニーの始まり")
     # S10
     add("S10", 10, "diag", fn=d_timeline)
-    add("S10", 8, "photo", file="real_10_rock_engraving.jpg", label="シドニー周辺に残る、先住民の人々の岩の線刻")
+    add("S10", 8, "photo", file="real_10_rock_engraving.jpg", label="シドニー北部に残る、先住民の人々の岩の線刻")
     add("S10", 8, "map", **AUSV, move=False, dim=0.35, layers=[L_caption("土地を奪われていった歴史", 0.5)])
     # S11
     add("S11", 4, "card", kicker="理由3", title="人と仕事")
-    add("S11", 8, "photo", file="real_16_cbd_commuters.jpg", label="働き手が集まる街")
+    add("S11", 8, "photo", file="real_01_melbourne.jpg", label="働き手が集まる街", zoom=(1.15, 1.25), focus=(0.55, 0.5))
     add("S11", 10, "diag", fn=d_cycle)
     # S12
     add("S12", 8, "diag", fn=d_network)
-    add("S12", 4, "photo", file="real_17_sydney_airport.jpg", label="設備を大勢で使う：空港")
+    add("S12", 4, "photo", sent=3, file="real_17_sydney_airport.jpg", label="設備を大勢で使う：空港")
     add("S12", 4, "photo", file="real_18_train.jpg", label="設備を大勢で使う：鉄道")
-    add("S12", 9, "photo", file="real_11_dense_housing.jpg", label="住宅費・混雑も、同じ集まりから")
+    add("S12", 9, "photo", sent=5, file="real_11_suburbs.jpg", label="住宅費・混雑も、同じ集まりから")
     # S13
     add("S13", 4, "map", **AUSV, move=False, layers=[L_dots(FIVE, 0.0, 0.0)])
     add("S13", 14, "map", **AUSV, move=False, layers=[L_dots(FIVE, 0.0, 0.0, labels=False), L_layers(0.3)])
     # S14
     add("S14", 6, "map", lon=(AUS[0], 148.5), lat=(AUS[1], -34.5), kmpp=(3.5, 1.0), layers=[L_dots(["シドニー", "キャンベラ"], 0.2, 0.6)])
-    add("S14", 7, "photo", file="real_12_canberra_plan.jpg", label="答えは、政治", zoom=(1.0, 1.05))
-    add("S14", 7, "diag", fn=d_year)
+    add("S14", 7, "photo", file="real_12_griffin_plan.jpg", label="首都の設計案（グリフィン、1911〜12年）", zoom=(1.0, 1.05))
+    add("S14", 7, "diag", fn=d_year, sent=3)
     # S15
     add("S15", 8, "map", lon=148.0, lat=-33.0, kmpp=1.25, move=False, layers=[L_nsw(0.2)])
-    add("S15", 9, "map", lon=150.0, lat=-34.4, kmpp=0.55, move=False, layers=[L_circle(0.3)])
-    add("S15", 8, "photo", file="real_13_canberra_lake.jpg", label="条件に合わせて選ばれた首都")
+    add("S15", 9, "map", sent=2, lon=150.0, lat=-34.4, kmpp=0.55, move=False, layers=[L_circle(0.3)])
+    add("S15", 8, "photo", sent=3, file="real_13_canberra_lake.jpg", label="条件に合わせて選ばれた首都")
     # S16
     add("S16", 6, "map", **AUSV, move=False, dim=0.0, layers=[L_caption("大都市がない ≠ 何もない", 0.3)])
-    add("S16", 7, "photo", file="real_14_cattle_station.jpg", label="放牧地")
+    add("S16", 7, "photo", file="real_14_cattle_station.jpg", label="放牧地", sent=2)
     add("S16", 7, "photo", file="real_15_inland_park.jpg", label="自然保護区")
-    add("S16", 7, "photo", file="real_20_outback.jpg", label="土地の役割は、人口の多さだけでは測れない", zoom=(1.12, 1.04))
+    add("S16", 7, "map", **AUSV, move=False, dim=0.2, layers=[L_caption("土地の役割は、人口の多さだけでは測れない", 0.3)])
     # S17
     add("S17", 7, "map", **AUSV, move=False, layers=[L_dots(FIVE, 0.0, 0.0), L_caption("「砂漠だから」だけではない", 0.3)])
     add("S17", 13, "diag", fn=d_summary)
@@ -678,6 +678,7 @@ HEAD = {"S01": "なぜ、海の近くに？", "S02": "「砂漠だから」で�
 
 
 def timeline():
+    """Shots fill each scene by weight; a shot with sent=k starts exactly at the k-th sentence of the scene."""
     order = [s["scene"] for s in TIM["scenes"]]
     sh = shots()
     out = []
@@ -685,12 +686,16 @@ def timeline():
         a = SC[sc]["start"]
         b = SC[order[i + 1]]["start"] if i + 1 < len(order) else TOTAL
         items = [x for x in sh if x[0] == sc]
-        tw = sum(x[1] for x in items)
-        cur = a
-        for _, w, kind, P in items:
-            dur = (b - a) * w / tw
-            out.append({"scene": sc, "kind": kind, "P": P, "start": cur, "end": cur + dur})
-            cur += dur
+        sents = SC[sc]["sentences"]
+        anchors = [(0, a)] + [(j, sents[x[3]["sent"]]["start"] - 0.2) for j, x in enumerate(items) if "sent" in x[3] and j > 0] + [(len(items), b)]
+        for (j0, t0), (j1, t1) in zip(anchors, anchors[1:]):
+            grp = items[j0:j1]
+            tw = sum(x[1] for x in grp)
+            cur = t0
+            for _, w, kind, P in grp:
+                dur = (t1 - t0) * w / tw
+                out.append({"scene": sc, "kind": kind, "P": P, "start": cur, "end": cur + dur})
+                cur += dur
     return out
 
 
