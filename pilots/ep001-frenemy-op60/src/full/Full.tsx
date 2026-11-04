@@ -241,11 +241,15 @@ export const SubCard: React.FC = () => {
   const len = segs.reduce((n, s) => n + [...s.t].length, 0);
   const size = Math.min(74, Math.floor(1700 / Math.max(1, len * 1.04)));
   const col = (k: string) => (k === 'r' ? '#ff3b30' : k === 'y' ? '#ffd60a' : '#ffffff');
+  // white-room scenes (part 2 "DE white room" .. "IJ cards" = 45.6–112 s after P2_START): a faint shadow, elsewhere none
+  const mid = (c.start + c.end) / 2;
+  const white = mid >= P2_START + 45.6 && mid < P2_START + 112;
+  const shadow = white ? '0 2px 8px rgba(0,0,0,0.55), 0 0 3px rgba(0,0,0,0.5)' : 'none';
   return (
     <AbsoluteFill style={{justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 46}}>
       <div style={{fontFamily: '"Noto Sans JP", sans-serif', fontWeight: 900, fontSize: size, lineHeight: 1.2, whiteSpace: 'nowrap', letterSpacing: '0.04em'}}>
         {segs.map((s, k) => (
-          <span key={k} style={{color: col(s.c), WebkitTextStroke: `${Math.max(2, Math.round(size * 0.035))}px ${col(s.c)}`, paintOrder: 'stroke fill'}}>{s.t}</span>
+          <span key={k} style={{color: col(s.c), WebkitTextStroke: `${Math.max(1, Math.round(size * 0.018))}px ${col(s.c)}`, paintOrder: 'stroke fill', textShadow: shadow}}>{s.t}</span>
         ))}
       </div>
     </AbsoluteFill>
