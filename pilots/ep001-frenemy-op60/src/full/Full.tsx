@@ -169,8 +169,8 @@ const CHAPTERS: [string, string, string][] = [
   ['C3_1', '第3章', 'フレネミーの脳の中② あなたの不幸は「報酬」になる'],
   ['C4_1', '第4章', 'なぜフレネミーは「近い人」から生まれるのか'],
   ['C5_1', '第5章', 'フレネミーの正体 「でもさ」はなぜ出るのか'],
-  ['C6_1', '第6章', 'フレネミーが横にいるだけで、体に起きること'],
-  ['C6b_1', '第6章②', 'なぜ、フレネミーにはだまされるのか'],
+  ['C6_1', '第6章', 'フレネミーが横にいるだけで体に起きること'],
+  ['C6b_1', '第6章②', 'なぜフレネミーにはだまされるのか'],
   ['C7_1', '第7章', 'これが当てはまるならフレネミー「いい知らせテスト」'],
   ['C8_1', '第8章', 'あなたがフレネミーにならないために'],
   ['C9_1', '第9章', 'まとめ フレネミーの正体'],
@@ -245,7 +245,7 @@ export const SubCard: React.FC = () => {
     <AbsoluteFill style={{justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 46}}>
       <div style={{fontFamily: '"Noto Sans JP", sans-serif', fontWeight: 900, fontSize: size, lineHeight: 1.2, whiteSpace: 'nowrap', letterSpacing: '0.04em'}}>
         {segs.map((s, k) => (
-          <span key={k} style={{color: col(s.c), WebkitTextStroke: `${Math.max(2, Math.round(size * 0.035))}px ${col(s.c)}`, paintOrder: 'stroke fill', textShadow: '0 0 14px rgba(0,0,0,0.75), 0 0 4px rgba(0,0,0,0.6), 0 3px 6px rgba(0,0,0,0.5)'}}>{s.t}</span>
+          <span key={k} style={{color: col(s.c), WebkitTextStroke: `${Math.max(2, Math.round(size * 0.035))}px ${col(s.c)}`, paintOrder: 'stroke fill'}}>{s.t}</span>
         ))}
       </div>
     </AbsoluteFill>

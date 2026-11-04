@@ -79,7 +79,7 @@ export const cardTex = (k: 1 | 2 | 3) =>
       g.beginPath(); g.moveTo(470, 245); g.lineTo(430, 180); g.moveTo(550, 245); g.lineTo(590, 180); g.stroke();
       for (let i = 0; i < 14; i++) { g.fillStyle = '#ffcf4a'; g.beginPath(); g.ellipse(270 + (i * 37) % 480, 70 + ((i * 53) % 120), 14, 9, 0.4, 0, Math.PI * 2); g.fill(); }
       g.fillStyle = '#8e95a8'; g.fillRect(470, 420, 80, 30);
-      caption(g, '①', '世界的な有名人が、\n何十億円という大成功をおさめた');
+      caption(g, '①', '世界的な有名人が\n何十億円という大成功をおさめた');
     } else if (k === 2) {
       bg.addColorStop(0, '#e8eef6'); bg.addColorStop(1, '#cfd9e8'); g.fillStyle = bg; g.fillRect(0, 0, 1024, 470);
       person(g, 300, 200, 1.4, '#7d8796'); // you
@@ -89,7 +89,7 @@ export const cardTex = (k: 1 | 2 | 3) =>
       g.fillStyle = '#ffffff'; g.fillRect(690, 260, 60, 90);
       g.fillStyle = '#e0533d'; g.beginPath(); g.moveTo(840, 200); g.lineTo(880, 140); g.lineTo(920, 200); g.closePath(); g.fill(); g.fillRect(866, 200, 28, 70);
       g.fillStyle = '#4a5160'; g.fillText('違う仕事の友達', 720, 430); g.textAlign = 'left';
-      caption(g, '②', 'あなたとまったく違う仕事をしている友達が、\n昇進した');
+      caption(g, '②', 'あなたとまったく違う仕事をしている友達が\n昇進した');
     } else {
       bg.addColorStop(0, '#f6ebe6'); bg.addColorStop(1, '#ead2c8'); g.fillStyle = bg; g.fillRect(0, 0, 1024, 470);
       // staircase: friend one step ahead of you, same suits
@@ -100,7 +100,7 @@ export const cardTex = (k: 1 | 2 | 3) =>
       g.fillStyle = '#e0533d'; g.beginPath(); g.moveTo(700, 70); g.lineTo(735, 20); g.lineTo(770, 70); g.closePath(); g.fill(); g.fillRect(723, 70, 24, 50);
       g.fillStyle = '#4a5160'; g.font = `700 34px "Noto Sans CJK JP"`; g.textAlign = 'center';
       g.fillText('あなた', 450, 405); g.fillText('同じ仕事の友達', 820, 190); g.textAlign = 'left';
-      caption(g, '③', 'あなたと同じ仕事をしていて、ずっと一緒に\nがんばってきた友達が、あなたより先に昇進した');
+      caption(g, '③', 'あなたと同じ仕事をしていてずっと一緒に\nがんばってきた友達があなたより先に昇進した');
     }
   });
 

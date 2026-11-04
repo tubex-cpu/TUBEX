@@ -50,7 +50,7 @@ const C2Step1: React.FC<SceneProps> = ({f, T}) => {
   const icons = [['成績', '📈'], ['進路', '🧭'], ['持ち物', '👜'], ['人気', '💬']];
   return (
     <Board>
-      <Chip f={f} text="手順1" sub="MRIの中で、物語を読む" />
+      <Chip f={f} text="手順1" sub="MRIの中で物語を読む" />
       <Pop f={f} at={8} style={{position: 'absolute', left: 150, top: 240}} from="left">
         <svg width={620} height={420} viewBox="0 0 620 420">
           <rect x="40" y="60" width="540" height="300" rx="150" fill="#1e2433" stroke="#46506a" strokeWidth="6" />
@@ -207,7 +207,7 @@ const C2Recall: React.FC<SceneProps> = ({f, dur}) => {
 // ============ 3. あなたの不幸は「報酬」になる ============
 const C3Step4: React.FC<SceneProps> = ({f, T}) => (
   <Board>
-    <Chip f={f} text="手順4" sub="妬んだ相手に、不幸が起きる" />
+    <Chip f={f} text="手順4" sub="妬んだ相手に不幸が起きる" />
     <Pop f={f} at={T('C3_2')} style={{position: 'absolute', left: 300, top: 250}}>
       <div style={{textAlign: 'center'}}>
         <svg width={260} height={120} viewBox="0 0 260 120"><path d="M40 90 C10 90 10 50 45 50 C50 20 100 15 115 40 C135 15 190 25 190 55 C230 55 235 90 205 90 Z" fill="#59627a" />{[70, 120, 170].map((x) => <path key={x} d={`M${x} 98 l-12 20`} stroke="#6fa8dc" strokeWidth={6} strokeLinecap="round" />)}</svg>
@@ -231,8 +231,8 @@ const C3Brain: React.FC<SceneProps> = ({f, T}) => {
 const C3Quote: React.FC<SceneProps> = ({f}) => (
   <AbsoluteFill style={{background: '#040506', fontFamily: FONT, alignItems: 'center', justifyContent: 'center'}}>
     <div style={{textAlign: 'center', marginTop: -80}}>
-      <div style={{fontSize: 66, fontWeight: 900, color: K.ink, opacity: fadeIn(f, 6, 20), letterSpacing: '0.08em'}}>あなたの幸せは、<span style={{color: '#6fb6ff'}}>私の痛み</span>。</div>
-      <div style={{fontSize: 66, fontWeight: 900, color: K.ink, opacity: fadeIn(f, 40, 20), letterSpacing: '0.08em', marginTop: 34}}>あなたの不幸は、<span style={{color: K.gold}}>私の蜜</span>。</div>
+      <div style={{fontSize: 66, fontWeight: 900, color: K.ink, opacity: fadeIn(f, 6, 20), letterSpacing: '0.08em'}}>あなたの幸せは<span style={{color: '#6fb6ff'}}>私の痛み</span></div>
+      <div style={{fontSize: 66, fontWeight: 900, color: K.ink, opacity: fadeIn(f, 40, 20), letterSpacing: '0.08em', marginTop: 34}}>あなたの不幸は<span style={{color: K.gold}}>私の蜜</span></div>
     </div>
   </AbsoluteFill>
 );
@@ -304,10 +304,10 @@ const C4Axes: React.FC<SceneProps> = ({f, T}) => {
         <rect x={ox + w / 2} y={oy - h} width={w / 2} height={h / 2} fill={K.red} opacity={0.22 * comp + 0.15 * comp * strong} />
         <g opacity={refl}><text x={ox + w * 0.75} y={oy - h * 0.25} textAnchor="middle" fontSize={56} fontWeight={900} fill={K.gold}>反映</text><text x={ox + w * 0.75} y={oy - h * 0.25 + 46} textAnchor="middle" fontSize={26} fill={K.ink}>誇らしい</text></g>
         <g opacity={comp}><text x={ox + w * 0.75} y={oy - h * 0.75} textAnchor="middle" fontSize={56} fontWeight={900} fill={K.red}>比較</text><text x={ox + w * 0.75} y={oy - h * 0.75 + 46} textAnchor="middle" fontSize={26} fill={K.ink}>評価が下がる</text></g>
-        <g opacity={strong}><path d={`M ${ox + 80} ${oy + 90} L ${ox + w - 40} ${oy + 90}`} stroke={K.ink} strokeWidth={6} /><path d={`M ${ox + w - 50} ${oy + 76} L ${ox + w - 20} ${oy + 90} L ${ox + w - 50} ${oy + 104} Z`} fill={K.ink} /><text x={ox + w / 2} y={oy + 140} textAnchor="middle" fontSize={28} fill={K.ink}>近いほど、反映も比較も強くなる</text></g>
+        <g opacity={strong}><path d={`M ${ox + 80} ${oy + 90} L ${ox + w - 40} ${oy + 90}`} stroke={K.ink} strokeWidth={6} /><path d={`M ${ox + w - 50} ${oy + 76} L ${ox + w - 20} ${oy + 90} L ${ox + w - 50} ${oy + 104} Z`} fill={K.ink} /><text x={ox + w / 2} y={oy + 140} textAnchor="middle" fontSize={28} fill={K.ink}>近いほど反映も比較も強くなる</text></g>
       </svg>
       <Pop f={f} at={T('C4_11')} style={{position: 'absolute', left: 110, top: 420}} from="left">
-        <div style={{padding: '16px 24px', borderRadius: 22, background: '#fffaf2', color: '#2a2420', fontSize: 30, fontWeight: 800, width: 360}}>「すごいでしょ、<br />あれ私の友達なんだ」</div>
+        <div style={{padding: '16px 24px', borderRadius: 22, background: '#fffaf2', color: '#2a2420', fontSize: 30, fontWeight: 800, width: 360}}>「すごいでしょ<br />あれ私の友達なんだ」</div>
       </Pop>
     </Board>
   );
@@ -347,7 +347,7 @@ const C4bPhone: React.FC<SceneProps> = ({f, dur}) => (
     <Tag text="再現" />
     <Phone f={f} title="グループ" msgs={[
       {from: 'me', text: '昇進決まった！', at: 6, time: '18:02'},
-      {from: 'them', name: '同じ道を歩く友達', text: 'すごい。……でもさ、責任重くなるし、大変だよね', at: 34, typing: 16, time: '18:09'},
+      {from: 'them', name: '同じ道を歩く友達', text: 'すごい……でもさ責任重くなるし大変だよね', at: 34, typing: 16, time: '18:09'},
       {from: 'them', name: '違う道を歩く友達', text: 'えー！最高じゃん！どんな仕事するの？今度お祝いさせて！', at: 62, typing: 10, time: '18:03'},
     ]} />
   </AbsoluteFill>
@@ -367,7 +367,7 @@ const C4bOffice: React.FC<SceneProps> = ({f, T}) => (
           <path d="M 1060 720 C 1060 560 1080 500 1140 500 C 1200 500 1220 560 1220 720 Z" fill="#8a7a6a" />
         </svg>
         <Pop f={f} at={20} style={{position: 'absolute', left: 520, top: 190}}>
-          <div style={{padding: '18px 30px', borderRadius: 26, background: '#fffaf2', color: '#2a2420', fontSize: 36, fontWeight: 800}}>友達がね、昇進したんだって。すごくない？</div>
+          <div style={{padding: '18px 30px', borderRadius: 26, background: '#fffaf2', color: '#2a2420', fontSize: 36, fontWeight: 800}}>友達がね昇進したんだってすごくない？</div>
         </Pop>
       </>
     ) : (
@@ -396,7 +396,7 @@ const C4bSummary: React.FC<SceneProps> = ({f, T}) => {
         ))}
       </div>
       <Pop f={f} at={T('C4b_16', 1)} style={{position: 'absolute', left: 0, right: 0, top: 720, textAlign: 'center'}}>
-        <div style={{fontSize: 44, fontWeight: 900}}>痛みを感じた心は、そのあと<span style={{color: K.red}}>何をする？</span></div>
+        <div style={{fontSize: 44, fontWeight: 900}}>痛みを感じた心はそのあと<span style={{color: K.red}}>何をする？</span></div>
       </Pop>
     </Board>
   );
@@ -409,11 +409,11 @@ const C5Chat: React.FC<SceneProps> = ({f, dur}) => (
     <Tag text="再現" />
     <Phone f={f} title="同じ道を歩く友達" msgs={[
       {from: 'me', text: '彼氏できた！', at: 6, time: '4/2'},
-      {from: 'them', text: 'えー、おめでと。……でもその人、大丈夫？', at: 60, typing: 40, time: '4/2'},
+      {from: 'them', text: 'えーおめでと……でもその人大丈夫？', at: 60, typing: 40, time: '4/2'},
       {from: 'me', text: '5キロ痩せた！', at: 84, time: '6/18'},
-      {from: 'them', text: 'すごいじゃん。でもリバウンドには気をつけてね', at: 138, typing: 40, time: '6/18'},
+      {from: 'them', text: 'すごいじゃんでもリバウンドには気をつけてね', at: 138, typing: 40, time: '6/18'},
       {from: 'me', text: '昇進決まった！', at: 162, time: '10/1'},
-      {from: 'them', text: 'すごい。……でもさ、責任重くなるし、大変だよね', at: 216, typing: 40, time: '10/1'},
+      {from: 'them', text: 'すごい……でもさ責任重くなるし大変だよね', at: 216, typing: 40, time: '10/1'},
     ]} />
   </AbsoluteFill>
 );
@@ -444,15 +444,15 @@ const C5Cases: React.FC<SceneProps> = ({f, T}) => {
       <Chip f={f} text={['① 距離', '② 大事さ', '③ 出来の評価'][k]} />
       {!done && k === 0 && (
         <Phone f={f} x={702} y={36} scale={0.86} title="同じ道を歩く友達" msgs={[
-          {from: 'me', text: '今度ごはん行かない？', at: 10, time: '5/1'}, {from: 'them', text: 'ごめん、その日ちょっと…', at: 30, time: '5/3'},
+          {from: 'me', text: '今度ごはん行かない？', at: 10, time: '5/1'}, {from: 'them', text: 'ごめんその日ちょっと…', at: 30, time: '5/3'},
           {from: 'me', text: '来週はどう？', at: 55, time: '5/10'}, {from: 'them', text: 'また連絡するね', at: 80, time: '5/24'},
         ]} />
       )}
-      {!done && k === 1 && <Phone f={f - T('C5_11') + 10} x={702} y={36} scale={0.86} title="同じ道を歩く友達" msgs={[{from: 'me', text: '昇進決まった！', at: 0}, {from: 'them', text: 'てか私、別に出世とか興味ないし', at: 14}]} />}
-      {!done && k === 2 && <Phone f={f - T('C5_12') + 10} x={702} y={36} scale={0.86} title="同じ道を歩く友達" msgs={[{from: 'me', text: '昇進決まった！', at: 0}, {from: 'them', text: '運がよかったよね。タイミングもあったし', at: 14}]} />}
+      {!done && k === 1 && <Phone f={f - T('C5_11') + 10} x={702} y={36} scale={0.86} title="同じ道を歩く友達" msgs={[{from: 'me', text: '昇進決まった！', at: 0}, {from: 'them', text: 'てか私別に出世とか興味ないし', at: 14}]} />}
+      {!done && k === 2 && <Phone f={f - T('C5_12') + 10} x={702} y={36} scale={0.86} title="同じ道を歩く友達" msgs={[{from: 'me', text: '昇進決まった！', at: 0}, {from: 'them', text: '運がよかったよねタイミングもあったし', at: 14}]} />}
       {done && (
         <Pop f={f} at={T('C5_13')} style={{position: 'absolute', left: 0, right: 0, top: 380, textAlign: 'center'}}>
-          <div style={{fontSize: 52, fontWeight: 900, color: K.ink}}>計算ではなく、<span style={{color: K.gold}}>自分を守るための動き</span></div>
+          <div style={{fontSize: 52, fontWeight: 900, color: K.ink}}>計算ではなく<span style={{color: K.gold}}>自分を守るための動き</span></div>
         </Pop>
       )}
     </AbsoluteFill>
@@ -461,7 +461,7 @@ const C5Cases: React.FC<SceneProps> = ({f, T}) => {
 const C5Doors: React.FC<SceneProps> = ({f, T}) => {
   const lock = [f >= T('C5_15') + 20, f >= T('C5_16') + 20];
   const glow = seg(f, T('C5_17'), T('C5_17') + 20);
-  const q = [['「でもその人、大丈夫？」', 0], ['「リバウンドには気をつけてね」', 1], ['「責任重くなるし、大変だよね」', 2]] as const;
+  const q = [['「でもその人大丈夫？」', 0], ['「リバウンドには気をつけてね」', 1], ['「責任重くなるし大変だよね」', 2]] as const;
   const conv = seg(f, T('C5_19', 2), T('C5_19', 2) + 30);
   return (
     <Board>
@@ -492,7 +492,7 @@ const C5Formula: React.FC<SceneProps> = ({f, T}) => (
     <Chip f={f} text="フレネミーの正体" color={K.red} />
     <div style={{position: 'absolute', left: 0, right: 0, top: 330, textAlign: 'center', fontWeight: 900}}>
       <Pop f={f} at={T('C5_24')} from="scale"><div style={{fontSize: 120}}>近さ <span style={{color: K.gold}}>×</span> <span style={{color: K.red}}>同じ道</span></div></Pop>
-      <Pop f={f} at={T('C5_25', 2)} from="scale"><div style={{fontSize: 64, marginTop: 30, color: K.sub}}>＝ あなたの成功が、相手の<span style={{color: '#6fb6ff'}}>痛み</span>になる</div></Pop>
+      <Pop f={f} at={T('C5_25', 2)} from="scale"><div style={{fontSize: 64, marginTop: 30, color: K.sub}}>＝ あなたの成功が相手の<span style={{color: '#6fb6ff'}}>痛み</span>になる</div></Pop>
       <Pop f={f} at={T('C5_26')} from="scale"><div style={{fontSize: 64, marginTop: 20}}>→ 「<span style={{color: K.red}}>でもさ</span>」</div></Pop>
     </div>
   </Board>
@@ -505,7 +505,7 @@ const C6Axes: React.FC<SceneProps> = ({f, T}) => {
   const half = f >= T('C6_5');
   return (
     <Board>
-      <Chip f={f} text="第6章" sub="横にいるだけで、体に起きること" />
+      <Chip f={f} text="第6章" sub="横にいるだけで体に起きること" />
       <svg width={W} height={H} style={{position: 'absolute', inset: 0}} fontFamily={FONT}>
         <line x1={ox} y1={oy} x2={ox + w} y2={oy} stroke="#8a95ad" strokeWidth={4} />
         <line x1={ox} y1={oy} x2={ox} y2={oy - h} stroke="#8a95ad" strokeWidth={4} />
@@ -556,7 +556,7 @@ const C6Bp: React.FC<SceneProps> = ({f, T}) => {
           <div style={{padding: '20px 34px', borderRadius: 16, background: K.card, border: `2px solid ${K.line}`, fontSize: 52, fontWeight: 900}}>3日間</div>
         </div>
       </Pop>
-      <Pop f={f} at={T('C6_8')} style={{position: 'absolute', left: 760, top: 410, fontSize: 32, color: K.sub}}>人と会って話すたびに、血圧を記録</Pop>
+      <Pop f={f} at={T('C6_8')} style={{position: 'absolute', left: 760, top: 410, fontSize: 32, color: K.sub}}>人と会って話すたびに血圧を記録</Pop>
       <div style={{position: 'absolute', left: 740, top: 520, display: 'flex', gap: 40, opacity: fadeIn(f, T('C6_9'), 12)}}>
         <Gauge label="嫌いな相手" v={0.35 + 0.15 * res} color="#8a95ad" />
         <Gauge label="フレネミーのような相手" v={0.35 + 0.35 * res} color={K.red} />
@@ -611,10 +611,10 @@ const C6Telomere: React.FC<SceneProps> = ({f, T}) => {
       <div style={{position: 'absolute', left: 1060, top: 860, fontSize: 30, fontWeight: 800, width: 320, textAlign: 'center', color: K.red}}>多い</div>
       <Pop f={f} at={T('C6_14', 1)} style={{position: 'absolute', left: 1380, top: 300, width: 440}}>
         <div style={{fontSize: 34, fontWeight: 900, color: K.gold}}>テロメア</div>
-        <div style={{fontSize: 28, color: K.ink, marginTop: 8}}>染色体の端。細胞の老化の目安</div>
+        <div style={{fontSize: 28, color: K.ink, marginTop: 8}}>染色体の端細胞の老化の目安</div>
       </Pop>
       <Pop f={f} at={T('C6_15')} style={{position: 'absolute', left: 1380, top: 560, width: 460}}>
-        <div style={{padding: '18px 22px', borderRadius: 14, border: `2px solid ${K.gold}`, fontSize: 30, fontWeight: 800}}>分かったのは「関係がある」まで。<br /><span style={{color: K.sub}}>どちらが原因かは未確定</span></div>
+        <div style={{padding: '18px 22px', borderRadius: 14, border: `2px solid ${K.gold}`, fontSize: 30, fontWeight: 800}}>分かったのは「関係がある」まで<br /><span style={{color: K.sub}}>どちらが原因かは未確定</span></div>
       </Pop>
     </Board>
   );
@@ -659,7 +659,7 @@ const C6Chain: React.FC<SceneProps> = ({f, T}) => {
         ))}
       </div>
       <Pop f={f} at={T('C6_25')} style={{position: 'absolute', left: 0, right: 0, top: 620, textAlign: 'center'}}>
-        <div style={{fontSize: 42, fontWeight: 900, color: K.gold}}>正体と、体への影響が一本につながる</div>
+        <div style={{fontSize: 42, fontWeight: 900, color: K.gold}}>正体と体への影響が一本につながる</div>
       </Pop>
     </Board>
   );
@@ -697,7 +697,7 @@ const C6bYear: React.FC<SceneProps> = ({f, T}) => {
       </div>
       <div style={{position: 'absolute', left: 120, top: 550, fontSize: 26, color: K.sub}}>1年間</div>
       <Pop f={f} at={T('C6b_10')} style={{position: 'absolute', left: 0, right: 0, top: 680, textAlign: 'center'}}>
-        <div style={{fontSize: 44, fontWeight: 900}}>落ち込んでいる夜に、<span style={{color: K.blue}}>一番やさしい</span></div>
+        <div style={{fontSize: 44, fontWeight: 900}}>落ち込んでいる夜に<span style={{color: K.blue}}>一番やさしい</span></div>
       </Pop>
     </Board>
   );
@@ -716,7 +716,7 @@ const C6bCalendar: React.FC<SceneProps> = ({f, T}) => {
         <span><span style={{color: K.blue}}>■</span> 味方の日</span><span><span style={{color: K.red}}>■</span> トゲが出た日（あなたが前に出た日）</span>
       </div>
       <Pop f={f} at={T('C6b_14', 1)} style={{position: 'absolute', left: 0, right: 0, top: 560, textAlign: 'center'}}>
-        <div style={{fontSize: 48, fontWeight: 900}}>鍵は優しさの量ではなく、<br /><span style={{color: K.red}}>トゲが「どの話題で」出るか</span></div>
+        <div style={{fontSize: 48, fontWeight: 900}}>鍵は優しさの量ではなく<br /><span style={{color: K.red}}>トゲが「どの話題で」出るか</span></div>
       </Pop>
     </Board>
   );
@@ -736,9 +736,9 @@ const C7Title: React.FC<SceneProps> = ({f}) => (
 );
 const QUAD = [
   {k: '積極的・建設的', s: '「すごい！どんな仕事を任されるの？」', c: '#5fc6b4', id: 'C7_8'},
-  {k: '消極的・建設的', s: '「へえ、よかったね」', c: '#8a95ad', id: 'C7_9'},
-  {k: '積極的・破壊的', s: '「でもさ、責任重くなるし大変じゃない？」', c: K.red, id: 'C7_10'},
-  {k: '消極的・破壊的', s: '「そういえば私、昨日さ……」（話を変える）', c: '#b07fd6', id: 'C7_11'},
+  {k: '消極的・建設的', s: '「へえよかったね」', c: '#8a95ad', id: 'C7_9'},
+  {k: '積極的・破壊的', s: '「でもさ責任重くなるし大変じゃない？」', c: K.red, id: 'C7_10'},
+  {k: '消極的・破壊的', s: '「そういえば私昨日さ……」（話を変える）', c: '#b07fd6', id: 'C7_11'},
 ];
 const C7Grid: React.FC<SceneProps> = ({f, T}) => (
   <Board>
@@ -764,11 +764,11 @@ const C7Phone4: React.FC<SceneProps> = ({f, dur}) => (
     <BgStill src="bg/cafe.png" f={f} dur={dur} blur={8} dark={0.55} />
     <Tag text="再現" />
     <Phone f={f} title="友達4人" msgs={[
-      {from: 'me', text: '資格、受かったの', at: 6},
+      {from: 'me', text: '資格受かったの', at: 6},
       {from: 'them', name: '① 積極的・建設的', text: 'やったじゃん！あれ難しいやつでしょ？どうやって勉強したの？', at: 30},
       {from: 'them', name: '② 消極的・建設的', text: 'おめでと〜（既読から数時間後）', at: 60},
-      {from: 'them', name: '③ 積極的・破壊的', text: 'でもさ、それ取っても給料変わらないんでしょ？', at: 90},
-      {from: 'them', name: '④ 消極的・破壊的', text: 'へえ。そういえば駅前に新しいカフェできたの知ってる？', at: 120},
+      {from: 'them', name: '③ 積極的・破壊的', text: 'でもさそれ取っても給料変わらないんでしょ？', at: 90},
+      {from: 'them', name: '④ 消極的・破壊的', text: 'へえそういえば駅前に新しいカフェできたの知ってる？', at: 120},
     ]} />
   </AbsoluteFill>
 );
@@ -782,7 +782,7 @@ const C7Result: React.FC<SceneProps> = ({f, T}) => (
   </Board>
 );
 const C7Steps: React.FC<SceneProps> = ({f, T}) => {
-  const steps = [['C7_25', 'ステップ1', '小さないい知らせを話す'], ['C7_27', 'ステップ2', '反応が4つのどれかを見る'], ['C7_29', 'ステップ3', '話題を変えて、もう一度試す']];
+  const steps = [['C7_25', 'ステップ1', '小さないい知らせを話す'], ['C7_27', 'ステップ2', '反応が4つのどれかを見る'], ['C7_29', 'ステップ3', '話題を変えてもう一度試す']];
   return (
     <Board>
       <Chip f={f} text="いい知らせテスト" sub="手順は三つ" />
@@ -809,7 +809,7 @@ const C7Phone2: React.FC<SceneProps> = ({f, dur}) => (
       {from: 'me', text: '弟がマラソンで入賞したの', at: 6, time: '7/3'},
       {from: 'them', text: 'えー！すごい！今度お祝いしよ！', at: 34, typing: 10, time: '7/3'},
       {from: 'me', text: '昇進が決まったの', at: 70, time: '10/1'},
-      {from: 'them', text: '……でもさ、大変だよね', at: 120, typing: 36, time: '10/1'},
+      {from: 'them', text: '……でもさ大変だよね', at: 120, typing: 36, time: '10/1'},
     ]} />
     <div style={{position: 'absolute', left: 140, top: 300, opacity: fadeIn(f, 40), fontFamily: FONT}}><div style={{padding: '12px 24px', borderRadius: 12, background: K.gold, color: '#141820', fontSize: 34, fontWeight: 900}}>関係のない分野 → 反映</div></div>
     <div style={{position: 'absolute', left: 140, top: 640, opacity: fadeIn(f, 126), fontFamily: FONT}}><div style={{padding: '12px 24px', borderRadius: 12, background: K.red, color: '#fff', fontSize: 34, fontWeight: 900}}>大事な分野 → 比較</div></div>
@@ -861,15 +861,15 @@ const C7Bang: React.FC<SceneProps> = ({f, T}) => {
 // ============ 8 ============
 const C8Phone: React.FC<SceneProps> = ({f, dur, T, E}) => {
   const e6 = E('C8_6');
-  const typed1 = 'でもさ、';
-  const typed2 = 'すごい！ずっと行きたがってたところだよね。どんな仕事するの？';
+  const typed1 = 'でもさ';
+  const typed2 = 'すごい！ずっと行きたがってたところだよねどんな仕事するの？';
   let input = '';
   if (f >= e6 - 6 && f < e6 + 39) input = typed1.slice(0, Math.max(0, Math.floor((f - e6 + 6) / 5)));
   if (f >= e6 + 39 && f < e6 + 60) input = typed1.slice(0, Math.max(0, 4 - Math.floor((f - e6 - 39) / 3)));
   if (f >= e6 + 60 && f < e6 + 123) input = typed2.slice(0, Math.floor((f - e6 - 60) / 2));
   const sent = e6 + 123;
   const msgs = [
-    {from: 'them' as const, text: 'あのね、私も、ずっと行きたかった部署に異動が決まったの', at: 20, time: '21:14'},
+    {from: 'them' as const, text: 'あのね私もずっと行きたかった部署に異動が決まったの', at: 20, time: '21:14'},
     ...(f >= sent ? [{from: 'me' as const, text: typed2, at: sent, time: '21:16'}] : []),
     {from: 'them' as const, text: '😭✨', at: sent + 21, sticker: true, time: '21:16'},
   ];

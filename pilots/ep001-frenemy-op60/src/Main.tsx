@@ -50,7 +50,7 @@ const Credit: React.FC = () => {
   );
 };
 
-// First 30 s cut (S1–S5), ends on "…もやもやする。" with a fade to black. Voice: VOICEVOX:No.7
+// First 30 s cut (S1–S5), ends on "…もやもやする" with a fade to black. Voice: VOICEVOX:No.7
 export const Main30: React.FC = () => {
   const f = useCurrentFrame();
   const fade = interpolate(f, [878, 899], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
