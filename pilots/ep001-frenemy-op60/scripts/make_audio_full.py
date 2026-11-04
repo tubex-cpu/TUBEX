@@ -99,7 +99,9 @@ def segments(sub):
         for w in words:
             i = sub.find(w)
             while i >= 0:
-                if not any(a < i + len(w) and i < b for a, b, _ in hits):
+                # skip a match that is the tail of a longer word (e.g. 近い inside 最近いい)
+                inside = i > 0 and "\u4e00" <= sub[i - 1] <= "\u9fff"
+                if not inside and not any(a < i + len(w) and i < b for a, b, _ in hits):
                     hits.append((i, i + len(w), c))
                 i = sub.find(w, i + len(w))
     hits = sorted(hits)[:3]
