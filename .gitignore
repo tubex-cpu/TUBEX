@@ -30,3 +30,5 @@ episodes/chizu-*/audio/scenes/
 episodes/chizu-*/render/vendor/
 episodes/chizu-*/render/cache/
 episodes/chizu-*/render/out/
+# 地図×雑学：写真素材は git に入れない（出典・ライセンス・URL は 06c_assets.md に記録し、そこから再取得する）
+episodes/chizu-*/assets/
