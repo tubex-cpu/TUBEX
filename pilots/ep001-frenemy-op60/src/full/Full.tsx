@@ -237,14 +237,15 @@ export const SubCard: React.FC = () => {
   const i = useCurrentFrame();
   const c = SUB_CHUNKS[i];
   if (!c) return null;
-  const len = [...c.sub].length;
+  const segs = c.seg.map((s) => ({...s, t: s.t.replace(/[、。,.，．]/g, '')})).filter((s) => s.t.length > 0);
+  const len = segs.reduce((n, s) => n + [...s.t].length, 0);
   const size = Math.min(74, Math.floor(1700 / Math.max(1, len * 1.04)));
   const col = (k: string) => (k === 'r' ? '#ff3b30' : k === 'y' ? '#ffd60a' : '#ffffff');
   return (
     <AbsoluteFill style={{justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 46}}>
       <div style={{fontFamily: '"Noto Sans JP", sans-serif', fontWeight: 900, fontSize: size, lineHeight: 1.2, whiteSpace: 'nowrap', letterSpacing: '0.04em'}}>
-        {c.seg.map((s, k) => (
-          <span key={k} style={{color: col(s.c), WebkitTextStroke: `${Math.round(size * 0.13)}px #000`, paintOrder: 'stroke fill', textShadow: '0 4px 6px rgba(0,0,0,0.55)'}}>{s.t}</span>
+        {segs.map((s, k) => (
+          <span key={k} style={{color: col(s.c), WebkitTextStroke: `${Math.max(2, Math.round(size * 0.035))}px ${col(s.c)}`, paintOrder: 'stroke fill', textShadow: '0 0 14px rgba(0,0,0,0.75), 0 0 4px rgba(0,0,0,0.6), 0 3px 6px rgba(0,0,0,0.5)'}}>{s.t}</span>
         ))}
       </div>
     </AbsoluteFill>
