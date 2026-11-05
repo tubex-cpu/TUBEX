@@ -197,6 +197,7 @@ const K6Memo: React.FC<SceneProps> = ({f, T}) => {
           <div style={{position: 'absolute', left: 0, right: 0, top: 250, textAlign: 'center', fontSize: 50, fontWeight: 900, color: '#6a7080'}}>からっぽ</div>
         </div>
       ) : <PhonePOV f={f} flick={22} x={1180} y={60} scale={0.85} tilt={-5} />}
+      <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,0) 62%, rgba(40,36,30,0.45) 100%)'}} />
     </AbsoluteFill>
   );
 };
@@ -262,6 +263,7 @@ const K6Planner: React.FC<SceneProps> = ({f, T}) => {
           </div>
         ))}
       </div>
+      <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,0) 62%, rgba(40,36,30,0.45) 100%)'}} />
     </AbsoluteFill>
   );
 };

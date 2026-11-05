@@ -29,7 +29,7 @@ export const Still: React.FC<{src: string; f: number; dur: number; blur?: number
 
 // bright studio (the "thought experiment" room) drawn in 2D
 export const WhiteStudio: React.FC<{children?: React.ReactNode}> = ({children}) => (
-  <AbsoluteFill style={{background: 'linear-gradient(180deg, #e9e8e4 0%, #f3f2ef 58%, #e2e0db 58.2%, #ecebe7 100%)', fontFamily: FONT, color: '#1d2230'}}>
+  <AbsoluteFill style={{background: 'linear-gradient(180deg, #e9e8e4 0%, #f3f2ef 58%, #d6d3cd 58.2%, #b9b5ae 82%, #9a968f 100%)', fontFamily: FONT, color: '#1d2230'}}>
     <AbsoluteFill style={{background: 'radial-gradient(ellipse at 50% 30%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 60%)'}} />
     {children}
   </AbsoluteFill>
