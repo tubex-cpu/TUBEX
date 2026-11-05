@@ -16,8 +16,9 @@ try {
   const common = {serveUrl, browserExecutable: shell, chromiumOptions: {gl: 'swangle'}, timeoutInMilliseconds: 240000};
   const composition = await selectComposition({...common, id: 'FullNoGrain'});
   const n = Math.ceil(composition.durationInFrames / SEG);
-  const w = Number(process.argv[2] ?? 0), nw = Number(process.argv[3] ?? 1);
-  for (let k = w; k < n; k += nw) {
+  const w = Number(process.argv[2] ?? 0) || 0, nw = Number(process.argv[3] ?? 1) || 1;
+  const ks = process.argv[2] === 'list' ? process.argv[3].split(',').map(Number) : Array.from({length: n}, (_, k) => k).filter((k) => k % nw === w);
+  for (const k of ks) {
     const file = path.join(out, `seg${String(k).padStart(3, '0')}.mp4`);
     if (fs.existsSync(file)) continue;
     const tmp = file.replace('.mp4', '.part.mp4');
