@@ -417,12 +417,12 @@ const K3Map: React.FC<SceneProps> = ({f, T}) => {
   );
 };
 const K3NotDisease: React.FC<SceneProps> = ({f, T}) => {
-  const st = T('C24') + 10;
+  const st = T('C23') + 40;
   return (
     <DarkBoard>
-      <Pop f={f} at={T('C24')} from="scale" style={{position: 'absolute', left: 0, right: 0, top: 200, textAlign: 'center', fontSize: 120, fontWeight: 900}}>「ドーパミン中毒」</Pop>
-      {f >= st && <div style={{position: 'absolute', left: 640, top: 380, transform: `rotate(-8deg) scale(${interpolate(f - st, [0, 6, 10], [2, 0.94, 1], clamp)})`, border: '8px solid #ffd166', borderRadius: 20, padding: '10px 34px', fontSize: 80, fontWeight: 900, color: '#ffd166'}}>病名ではない</div>}
-      <Pop f={f} at={T('C25')} style={{position: 'absolute', left: 0, right: 0, top: 600, textAlign: 'center', fontSize: 72, fontWeight: 900, color: '#ff4d3d'}}>でも 安全ではない</Pop>
+      <Pop f={f} at={T('C23') + 6} from="scale" style={{position: 'absolute', left: 0, right: 0, top: 200, textAlign: 'center', fontSize: 120, fontWeight: 900}}>「ドーパミン中毒」</Pop>
+      {f >= st && <div style={{position: 'absolute', left: 560, top: 380, transform: `rotate(-8deg) scale(${interpolate(f - st, [0, 6, 10], [2, 0.94, 1], clamp)})`, border: '8px solid #ffd166', borderRadius: 20, padding: '10px 34px', fontSize: 80, fontWeight: 900, color: '#ffd166'}}>という病気はない</div>}
+      <Pop f={f} at={T('C25', 1)} style={{position: 'absolute', left: 0, right: 0, top: 600, textAlign: 'center', fontSize: 72, fontWeight: 900, color: '#ff4d3d'}}>だからこそ やっかい</Pop>
     </DarkBoard>
   );
 };

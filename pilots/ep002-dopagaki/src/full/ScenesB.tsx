@@ -90,17 +90,16 @@ const K4Room: React.FC<SceneProps> = ({f, dur, T}) => (
   </AbsoluteFill>
 );
 const K4Cause: React.FC<SceneProps> = ({f, T}) => {
-  const q = f >= T('E20');
+  const dim = seg(f, T('E22b'), T('E22b') + 40);
   return (
     <DarkBoard>
-      <Pop f={f} at={T('E19')} style={{position: 'absolute', left: 200, top: 150, fontSize: 48, fontWeight: 900}}>受け皿が少ない　→　ネットにはまる</Pop>
-      <Pop f={f} at={T('E19', 1)} style={{position: 'absolute', left: 200, top: 270, fontSize: 48, fontWeight: 900}}>ネットにはまる　→　受け皿が減る</Pop>
-      {q && <div style={{position: 'absolute', left: 1360, top: 140, fontSize: 220, fontWeight: 900, color: K.gold, opacity: fadeIn(f, T('E20'))}}>？</div>}
-      <Pop f={f} at={T('E22')} style={{position: 'absolute', left: 260, top: 450, display: 'flex', alignItems: 'center', gap: 80}}>
-        <div style={{width: 320, height: 240, borderRadius: '48% 52% 46% 54%', background: 'radial-gradient(circle at 40% 40%, #5b5f6e, #2a2d36)', boxShadow: 'inset 0 0 40px rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 34, fontWeight: 800, color: K.sub}}>届かない脳</div>
+      <Pop f={f} at={4} style={{position: 'absolute', left: 300, top: 140, display: 'flex', alignItems: 'center', gap: 80}}>
+        <div style={{width: 380, height: 290, borderRadius: '48% 52% 46% 54%', background: 'radial-gradient(circle at 40% 40%, #5b5f6e, #2a2d36)', boxShadow: 'inset 0 0 40px rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 36, fontWeight: 800, color: K.sub, opacity: 1 - 0.4 * dim}}>ごほうびが届かない脳</div>
         <div style={{fontSize: 90, color: K.sub}}>＋</div>
-        <div style={{width: 200, height: 330, borderRadius: 30, background: 'linear-gradient(160deg, #ff7a59, #ffd166)', boxShadow: '0 0 70px rgba(255,170,90,0.6)'}} />
+        <div style={{width: 220, height: 360, borderRadius: 30, background: 'linear-gradient(160deg, #ff7a59, #ffd166)', boxShadow: '0 0 70px rgba(255,170,90,0.6)', transform: `scale(${1 + 0.08 * dim})`}} />
       </Pop>
+      <Pop f={f} at={T('E22')} style={{position: 'absolute', left: 0, right: 0, top: 580, textAlign: 'center', fontSize: 50, fontWeight: 900, color: '#ff4d3d'}}>どんどんハマって抜け出せない</Pop>
+      <Pop f={f} at={T('E22c')} from="scale" style={{position: 'absolute', left: 0, right: 0, top: 690, textAlign: 'center', fontSize: 52, fontWeight: 900, color: K.gold}}>目先の快楽は 本当に大事？</Pop>
     </DarkBoard>
   );
 };
@@ -115,11 +114,11 @@ const K5Mri: React.FC<SceneProps> = ({f, dur, T}) => (
 );
 const K5Gray: React.FC<SceneProps> = ({f, T}) => {
   const a = seg(f, T('F8') - 6, T('F8') + 12), b = seg(f, T('F8', 1) - 6, T('F8', 1) + 12), c = seg(f, T('F8', 2) - 6, T('F8', 2) + 12);
-  const base = seg(f, T('F7'), T('F7') + 30) * 0.4;
+  const base = seg(f, T('F7'), T('F7') + 30) * 0.5;
   return (
-    <BrainShot f={f} cam={{pos: [-3.05, 0.2, 0.55], target: [0, -0.15, 0], fov: 30}} rot={0.15 - 0.1 * seg(f, 0, 600)}
+    <BrainShot f={f} cam={{pos: [-3.25, 0.05, 0.6], target: [0, -0.3, 0], fov: 30}} rot={0.15 - 0.1 * seg(f, 0, 600)}
       glows={[{pos: R.ins, color: '#4f8cff', k: Math.max(base, a), size: 0.42}, {pos: R.itg, color: '#4f8cff', k: Math.max(base, b), size: 0.42}, {pos: R.phg, color: '#4f8cff', k: Math.max(base, c), size: 0.38}]}
-      labels={[{pos: R.ins[0], text: '島皮質', color: '#8fb6ff', k: a, dx: -120, dy: -260}, {pos: R.itg[0], text: '側頭葉の下側', color: '#8fb6ff', k: b, dx: -300, dy: 120}, {pos: R.phg[0], text: '海馬のそば', color: '#8fb6ff', k: c, dx: 300, dy: 160}]} />
+      labels={[{pos: R.ins[0], text: '体の感覚をまとめる場所', note: '島皮質', color: '#8fb6ff', k: a, dx: -120, dy: -260}, {pos: R.itg[0], text: '形を見分ける場所', note: '側頭葉の下側', color: '#8fb6ff', k: b, dx: -300, dy: 40}, {pos: R.phg[0], text: '記憶にかかわる場所', note: '海馬のそば', color: '#8fb6ff', k: c, dx: 320, dy: 60}]} />
   );
 };
 const K5Two: React.FC<SceneProps> = ({f, T}) => {

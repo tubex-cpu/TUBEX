@@ -142,8 +142,7 @@ const K9Fast: React.FC<SceneProps> = ({f, T}) => {
   return (
     <DarkBoard>
       <Pop f={f} at={T('J2')} from="scale" style={{position: 'absolute', left: 0, right: 0, top: 170, textAlign: 'center', fontSize: 120, fontWeight: 900}}>「ドーパミン断食」</Pop>
-      {f >= st && <div style={{position: 'absolute', left: 560, top: 380, transform: `rotate(-6deg) scale(${interpolate(f - st, [0, 6, 10], [2, 0.94, 1], clamp)})`, border: '8px solid #ffd166', borderRadius: 20, padding: '10px 34px', fontSize: 70, fontWeight: 900, color: '#ffd166'}}>確かめた研究は見当たらない</div>}
-      <Pop f={f} at={T('J5')} style={{position: 'absolute', left: 0, right: 0, top: 590, textAlign: 'center', fontSize: 48, fontWeight: 900, color: K.sub}}>ドーパミンは ためておけるものではない</Pop>
+      {f >= st && <div style={{position: 'absolute', left: 560, top: 380, transform: `rotate(-6deg) scale(${interpolate(f - st, [0, 6, 10], [2, 0.94, 1], clamp)})`, border: '8px solid #ffd166', borderRadius: 20, padding: '10px 34px', fontSize: 70, fontWeight: 900, color: '#ffd166'}}>確かめた研究はまだ無い</div>}
     </DarkBoard>
   );
 };
@@ -277,7 +276,7 @@ const K9Tip2: React.FC<SceneProps> = ({f, T}) => {
           {['📞', '💬', '📷', '🗓️', '🎬', '🧮'].map((s, i) => <div key={i} style={{height: 90, borderRadius: 22, background: i === 4 ? '#ff4d6d' : 'rgba(255,255,255,0.15)', fontSize: 56, display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: i === 4 ? 1 - del : 1, transform: i === 4 ? `scale(${1 - 0.5 * del}) rotate(${Math.sin(f / 2) * (del < 0.05 && f > T('J42', 2) - 30 ? 6 : 0)}deg)` : undefined}}>{s}</div>)}
         </div>
       } />
-      <Pop f={f} at={T('J43')} style={{position: 'absolute', left: 1240, top: 420, fontSize: 44, fontWeight: 900, color: '#5fc6b4', fontFamily: FONT}}>電話とメッセージだけ残す</Pop>
+      <Pop f={f} at={T('J42', 2) + 40} style={{position: 'absolute', left: 1240, top: 420, fontSize: 44, fontWeight: 900, color: '#5fc6b4', fontFamily: FONT}}>電話とメッセージだけ残す</Pop>
     </DarkBoard>
   );
 };
@@ -307,10 +306,10 @@ const K10Sum: React.FC<SceneProps> = ({f, T}) => (
     ))}
   </DarkBoard>
 );
-const K10Question: React.FC<SceneProps> = ({f, dur, T}) => (
+const K10Question: React.FC<SceneProps> = ({f, dur, E}) => (
   <AbsoluteFill style={{background: '#000'}}>
     <Still src="bed" f={f} dur={dur} dark={0.55} from={1.05} to={1.15} />
-    <PhonePOV f={f} flick={f < T('K12') ? 30 : 0} x={760} y={60} scale={1.0} glow={f < T('K12') ? 1 : 0.4} thumb={f < T('K12')} />
+    <PhonePOV f={f} flick={f < E('K11') ? 30 : 0} x={760} y={60} scale={1.0} glow={f < E('K11') ? 1 : 0.4} thumb={f < E('K11')} />
     <MascotOverlay f={f} x={1420} y={420} w={360} h={420} rotY={-1.0} />
     <Vignette />
   </AbsoluteFill>
