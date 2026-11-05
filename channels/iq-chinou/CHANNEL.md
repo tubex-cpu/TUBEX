@@ -11,6 +11,8 @@
 
 **2本目（2026-11-02・社長提示）**：テーマ「ドパガキ」。サムネ3パターン・タイトルは社長決定（`channels/iq-chinou/drafts/ep002-dopagaki/00_title_thumb.md`。ゲート0・Aの承認記録ではない）。ep001 と同じ作り方で資料表・競合照合・台本 v1 を作成。ep002 の台本：https://docs.google.com/document/d/1vTH6tWNgcP7u68tvBEri8etqwS6M5eORaVLonZi0okw/edit
 
+**3本目（2026-11-05・社長提示）**：テーマ「夜更かし（睡眠キャンセル）」。サムネ3パターン・タイトルは社長案（`channels/iq-chinou/drafts/ep003-yofukashi/00_title_thumb.md`。ゲート0・Aの承認記録ではない）。サムネ③の実在人物の画像は許可なしに使えないため要確認。ep003 の台本：https://docs.google.com/document/d/1UIhqz9_wxfNgOKdHKxMQtI3wtteLfDBQsHmq_xHCkq4/edit
+
 ここに書いたのは決定事項と、既存の調査で確認済みの数字だけ。未決の項目は「未決」と書き、推測で埋めない。
 
 ## 決まっていること
