@@ -36,7 +36,7 @@
 
 ■ 地図・画像
 - 地図：Natural Earth（パブリックドメイン）
-- 衛星画像：NASA Blue Marble と表示された画像（npm パッケージ three-globe 2.45.6 に同梱の earth-blue-marble.jpg）。NASA の原画像・版・年月は未確定
+- 地球儀と広域の地図も Natural Earth（パブリックドメイン）で描いたもの。衛星画像ではない
 - 写真・絵（v2.1 で使った19点。登場順ではなくファイル番号順）
 - シドニー中心部とシドニー湾の空撮（ファーム・コーブ、オペラハウス）：Arran Bee / CC BY 2.0 https://creativecommons.org/licenses/by/2.0/ / https://commons.wikimedia.org/wiki/File:Sydney_CBD_aerial.jpg （加工：トリミング・ズーム・字幕）
 - キャンベラの国会議事堂を上空から（気球の影が写る）：Malcolm Tredinnick / CC BY 2.0 https://creativecommons.org/licenses/by/2.0/ / https://commons.wikimedia.org/wiki/File:Parliament_House_Canberra_from_above.jpg （加工：トリミング・ズーム・字幕）
@@ -64,6 +64,6 @@ VOICEVOX:雀松朱司
 ※ 章の時刻は書き出した動画で最終確認する。⚠・⏳ の出典（`01_research.md`）は公開前に公式ページで確認する。
 
 ■ 公開前の未解決事項（2026-11-07 時点。公開はしていない）
-- 衛星画像：NASA の原画像・版・年月・使用条件を確定できていない。NASA の公式配布ページの画像への差し替えは、この環境から NASA の配布元に接続できず未実施
-- 出典：現行の ABS の都市圏の対応（ASGS Edition 3 の Allocation files で SA4 102 Central Coast → GCCSA 1GSYD Greater Sydney）は未確認。TANK の元ページは未確認（同じ事実は Sydney Water の公式PDFで確認済み）
+- 出典：シドニー都市圏がセントラルコーストを含むこと（SA4 102 Central Coast → GCCSA 1GSYD Greater Sydney）は、ABS の公式 GIS 公開データ（2024–25 Regional population、ASGS Edition 3）で Fox（Codex側）が確認済み。Allocation files の xlsx 自体は未読（事実の確認とは別）。TANK の元ページは未確認（同じ事実は Sydney Water の公式PDFで確認済み）
+- 衛星画像（原典不明の Blue Marble）は v2.2 で使うのをやめ、Natural Earth の地図に替えた
 - v2 で使っていた CC BY-SA 4.0 の写真（岩の線刻）は v2.1 で使うのをやめた（位置図に置き換え）
