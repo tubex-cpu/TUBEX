@@ -278,8 +278,8 @@ def d_bars(n_show, grow=3.0):
             L = bw * v / 600 * (a if i >= n_show[0] else 1)
             ImageDraw.Draw(img).rounded_rectangle((x0, y + 6, x0 + max(L, 4), y + 64), radius=10, fill=(AMBER if i < 2 else TEAL) + (255,))
             k = a if i >= n_show[0] else 1
-            if k > 0.05:
-                text(img, (x0 + L + 20, y + 34), f"約{int(round(v * k))}万人", 44, anchor="lm")
+            if k > 0.05:   # the label always shows the final value (no count-up), so a short cut never shows a wrong number
+                text(img, (x0 + L + 20, y + 34), f"約{v}万人", 44, anchor="lm")
         note(img, "オーストラリア統計局（ABS）・大都市統計圏（GCCSA）")
     return fn
 
@@ -632,7 +632,7 @@ def shots():
     # S03
     add("S03", 8, "diag", fn=d_bars((0, 1)), why="シドニーの数字を読み上げる間、グラフで示す")
     add("S03", 3, "photo", sent=2, file="real_01_melbourne.jpg", label="メルボルン")
-    add("S03", 1, "diag", fn=d_bars((1, 2)), why="メルボルンの数字をグラフに足す")
+    add("S03", 1, "diag", fn=d_bars((1, 2), grow=0.7), why="メルボルンの数字をグラフに足す")
     add("S03", 13, "map", sent=3, lon=(151.2, 151.1), lat=(-33.87, -33.6), kmpp=(0.45, 0.3), dim=0.1,
         layers=[L_points([(151.21, -33.87, "シドニー中心部", "r"), (151.34, -33.43, "セントラルコースト", "r")], 0.5),
                 L_caption("「市」ではなく、周りまで含めた「都市圏」", 0.3)], why="都市圏が中心部から北のセントラルコーストまで広がることを地図で示す（3文）")
@@ -786,6 +786,7 @@ def shotlist_md():
 TL = None
 SUBS = [(c["start"], c["end"], c["lines"]) for c in json.loads((EP / "subtitles_v2.json").read_text())]
 XF = 0.4
+CHUNK = 10.0
 
 
 def shot_frame(s, t):
@@ -856,6 +857,7 @@ def main():
     ap.add_argument("--mux", action="store_true")
     ap.add_argument("--list", action="store_true")
     ap.add_argument("--shotlist", action="store_true")
+    ap.add_argument("--chunks", help="i/m: render 10 s chunks i, i+m, ... (skips finished chunks; safe to restart)")
     a = ap.parse_args()
     if a.shotlist:
         (EP / "shotlist_v2.md").write_text("# カット表 v2（render_v2.py から自動生成）\n\n実写は1カット3秒以内・1素材1回。地図・図解・資料を長く見せる区間は、読み上げとの対応を「長く見せる根拠」に書く。\n\n" + shotlist_md())
@@ -868,13 +870,24 @@ def main():
         for t in a.still:
             Image.fromarray(frame(t)).save(OUT / f"v2still_{t:07.2f}.jpg", quality=88)
         return
+    if a.chunks:
+        i, m = map(int, a.chunks.split("/"))
+        n = int(math.ceil(TOTAL / CHUNK))
+        for c in range(i - 1, n, m):
+            dst = OUT / f"v2c_{c:03d}.mp4"
+            if dst.exists():
+                continue
+            tmp = OUT / f"v2c_{c:03d}.tmp.mp4"
+            render(c * CHUNK, min(TOTAL, (c + 1) * CHUNK), tmp)
+            tmp.rename(dst)
+        return
     if a.part:
         i, m = map(int, a.part.split("/"))
         L = TOTAL / m
         render(L * (i - 1), L * i, OUT / f"v2part{i}.mp4")
         return
     if a.mux:
-        parts = sorted(OUT.glob("v2part*.mp4"))
+        parts = sorted(OUT.glob("v2c_[0-9][0-9][0-9].mp4")) or sorted(OUT.glob("v2part*.mp4"))
         (OUT / "v2parts.txt").write_text("".join(f"file '{p.name}'\n" for p in parts))
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(OUT / "v2parts.txt"),
                         "-i", str(OUT / "mix.wav"), "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-af", "loudnorm=I=-15:TP=-1.5:LRA=11", "-ar", "48000", "-c:a", "aac", "-b:a", "192k",
