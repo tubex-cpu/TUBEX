@@ -19,16 +19,34 @@ const episodeDir = path.resolve(root, '..', 'episodes', name);
 const inputProps = JSON.parse(fs.readFileSync(path.join(episodeDir, 'script.json'), 'utf8'));
 
 // Use a locally installed Chromium if present, so Remotion does not download one.
-const candidates = [process.env.REMOTION_BROWSER, '/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell'];
+// The pre-installed version changes between environments, so look for any chromium_headless_shell-* (newest first).
+const findHeadlessShell = () => {
+  const base = '/opt/pw-browsers';
+  if (!fs.existsSync(base)) return [];
+  return fs
+    .readdirSync(base)
+    .filter((d) => d.startsWith('chromium_headless_shell-'))
+    .sort((a, b) => Number(b.split('-')[1]) - Number(a.split('-')[1]))
+    .flatMap((d) =>
+      ['chrome-headless-shell-linux64/chrome-headless-shell', 'chrome-linux/headless_shell'].map((f) => path.join(base, d, f)),
+    );
+};
+const candidates = [process.env.REMOTION_BROWSER, ...findHeadlessShell()];
 const browserExecutable = candidates.find((p) => p && fs.existsSync(p)) ?? null;
+console.log('browser:', browserExecutable ?? '(Remotion default)');
 
 const serveUrl = await bundle({entryPoint: path.join(root, 'src/index.ts')});
 fs.mkdirSync(path.join(root, 'out'), {recursive: true});
 
-const thumb = await selectComposition({serveUrl, id: 'Thumbnail', inputProps, browserExecutable});
+// Thumbnails are made by Codex. A full render must not overwrite one that is already in the episode folder.
 const thumbPath = path.join(episodeDir, 'thumbnail.png');
-await renderStill({serveUrl, composition: thumb, inputProps, output: thumbPath, browserExecutable});
-console.log('thumbnail:', thumbPath);
+if (thumbOnly || !fs.existsSync(thumbPath)) {
+  const thumb = await selectComposition({serveUrl, id: 'Thumbnail', inputProps, browserExecutable});
+  await renderStill({serveUrl, composition: thumb, inputProps, output: thumbPath, browserExecutable});
+  console.log('thumbnail:', thumbPath);
+} else {
+  console.log('thumbnail: kept existing', thumbPath);
+}
 
 if (!thumbOnly) {
   const comp = await selectComposition({serveUrl, id: 'Episode', inputProps, browserExecutable});
