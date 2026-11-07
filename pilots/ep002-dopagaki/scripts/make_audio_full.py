@@ -33,7 +33,7 @@ READ = [("腹側線条体", "ふくそくせんじょうたい"), ("線条体", 
         ("44本", "よんじゅうよんほん"), ("23本", "にじゅうさんほん"), ("467人", "よんひゃくろくじゅうななにん"), ("2週間", "にしゅうかん"),
         ("10歳", "じゅっさい"), ("10日以上", "とおかいじょう"), ("一日中", "いちにちじゅう"), ("一日", "いちにち"), ("一章", "いっしょう"),
         ("1本", "いっぽん"), ("1時間", "いちじかん"), ("15分", "じゅうごふん"), ("5分", "ごふん"), ("数十秒", "すうじゅうびょう"),
-        ("一つひとつ", "ひとつひとつ"), ("前借り", "まえがり"), ("怠けて", "なまけて"), ("下へ", "したへ"), ("前と後", "まえとあと"), ("4%", "よんパーセント"), ("ドM", "ドエム"), ("横動画", "よこどうが"), ("実年齢", "じつねんれい")]
+        ("一つひとつ", "ひとつひとつ"), ("前借り", "まえがり"), ("怠けて", "なまけて"), ("下へ", "したへ"), ("前と後", "まえとあと"), ("4%", "よんパーセント"), ("ドM", "ドエム"), ("横動画", "よこどうが"), ("実年齢", "じつねんれい"), ("（カプセルトイ）", ""), ("あと一回", "あといっかい")]
 
 
 def tts_text(s):
@@ -313,18 +313,18 @@ def _drum_track(dur, bpm, bar, pad=None, pad_amp=0.004, roll_every=0):
     return out
 
 
-def drum_tension(dur):   # 76 bpm: kick, brushed snare on 3, rim ghosts, quiet hats; faint D-minor drone
-    bar = [(0, "k", 1.0), (8, "s", 0.9), (8, "b", 0.6), (6, "r", 0.35), (14, "r", 0.3)] + [(i, "h", 0.5 if i % 4 else 0.8) for i in range(0, 16, 2)]
+def drum_tension(dur):   # 76 bpm: no kick (owner 2026-11-07); brushed snare on 3, rim ghosts, quiet hats; faint D-minor drone
+    bar = [(8, "s", 0.9), (8, "b", 0.6), (6, "r", 0.35), (14, "r", 0.3)] + [(i, "h", 0.5 if i % 4 else 0.8) for i in range(0, 16, 2)]
     return _drum_track(dur, 76, bar, pad=[[50, 57, 62], [46, 53, 58]], pad_amp=0.0035, roll_every=8)
 
 
-def drum_pulse(dur):     # 90 bpm: soft snare on 2 and 4, light kick, 16th hats (explanation, brain chapters)
-    bar = [(0, "k", 0.9), (10, "k", 0.6), (4, "s", 0.8), (12, "s", 0.85)] + [(i, "h", 0.35 + 0.35 * (i % 4 == 0)) for i in range(16)] + [(7, "r", 0.25)]
+def drum_pulse(dur):     # 90 bpm: soft snare on 2 and 4 (no kick), 16th hats (explanation, brain chapters)
+    bar = [(4, "s", 0.8), (12, "s", 0.85)] + [(i, "h", 0.35 + 0.35 * (i % 4 == 0)) for i in range(16)] + [(7, "r", 0.25)]
     return _drum_track(dur, 90, bar, pad=None, roll_every=0)
 
 
-def drum_brush(dur):     # 70 bpm: brush sweeps on every beat, soft snare on 4; faint warm F-major pad (way out, ending)
-    bar = [(0, "k", 0.7), (12, "s", 0.7)] + [(i, "b", 0.8 if i % 8 == 0 else 0.55) for i in (0, 4, 8, 12)] + [(i, "h", 0.3) for i in (2, 6, 10, 14)]
+def drum_brush(dur):     # 70 bpm: brush sweeps on every beat, soft snare on 4 (no kick); faint warm F-major pad (way out, ending)
+    bar = [(12, "s", 0.7)] + [(i, "b", 0.8 if i % 8 == 0 else 0.55) for i in (0, 4, 8, 12)] + [(i, "h", 0.3) for i in (2, 6, 10, 14)]
     return _drum_track(dur, 70, bar, pad=[[53, 57, 60, 64], [46, 50, 53, 57]], pad_amp=0.004, roll_every=0)
 
 
@@ -395,8 +395,11 @@ def main():
     ma.place(sfx, click(), 0.3, 0.6, 0.5)
     for k in range(9):
         ma.place(sfx, swipe(), 0.9 + k * 0.42, 0.9, 0.45 + 0.1 * (k % 2))
-    ma.place(sfx, hit(1.2), L["O1"]["chunks"][1]["start"] - 0.05, 0.9, 0.5)
-    for lid in ("O3", "O4", "O5", "O6", "O7"):
+    ma.place(sfx, hit(1.2), L["N1"]["chunks"][2]["start"] - 0.05, 0.9, 0.5)
+    ma.place(sfx, hit(1.0), L["O1"]["chunks"][1]["start"] - 0.05, 0.8, 0.5)
+    for k in range(10):  # capsule-toy handle ratchet
+        ma.place(sfx, click() * 0.5, L["N4"]["start"] + 0.2 + k * 0.32, 0.6, 0.45 + 0.1 * (k % 2))
+    for lid in ("N3", "N4", "N5", "N6"):
         ma.place(sfx, ma.sfx_soft_whoosh(0.6), L[lid]["start"] - 0.45, 0.35, 0.5)
     # every scene change: soft whoosh; "result" scenes and reveals get an accent
     accents = {"k2_result": hit(0.9), "k3_result": ma.sfx_chime(659, 1.4), "k3b_wave": ma.sfx_chime(784, 1.4), "k4_compare": hit(0.9), "k5_gray": hit(0.9),

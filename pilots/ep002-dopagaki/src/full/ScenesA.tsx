@@ -6,9 +6,40 @@ import {K, MascotOverlay, PersonIcon, Pop, clamp, fadeIn} from './ui';
 
 const tint = (c: string, a: number) => <AbsoluteFill style={{background: c, opacity: a, mixBlendMode: 'multiply'}} />;
 
+
+const HomeScreen: React.FC = () => (
+  <div style={{position: 'absolute', inset: 0, background: 'linear-gradient(170deg, #31446b, #141a2b)', padding: '90px 26px', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 22, alignContent: 'start'}}>
+    {['📷', '💬', '🎵', '🛒', '📺', '🗺️', '📧', '🎮', '📰', '☁️', '🗓️', '⚙️'].map((ic, i) => (
+      <div key={i} style={{height: 72, borderRadius: 18, background: 'rgba(255,255,255,0.16)', fontSize: 40, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>{ic}</div>
+    ))}
+  </div>
+);
+// capsule toy machine: the handle keeps turning, capsules keep dropping
+const Gacha: React.FC<{f: number}> = ({f}) => {
+  const turn = (f * 9) % 360;
+  const cols = ['#ff6b6b', '#ffd166', '#5fc6b4', '#6fa8dc', '#c58fff', '#ff9f43'];
+  return (
+    <div style={{position: 'absolute', left: 700, top: 40, width: 600, height: 820, transform: 'scale(0.82)', transformOrigin: '50% 0%'}}>
+      <div style={{position: 'absolute', left: 60, top: 0, width: 480, height: 400, borderRadius: '50% 50% 20px 20px', background: 'radial-gradient(circle at 35% 30%, rgba(255,255,255,0.5), rgba(200,220,255,0.15) 60%)', border: '6px solid rgba(255,255,255,0.5)', overflow: 'hidden'}}>
+        {Array.from({length: 18}, (_, i) => <div key={i} style={{position: 'absolute', left: 30 + ((i * 83) % 380), top: 160 + ((i * 47) % 200) + Math.sin((f + i * 7) / 6) * 3, width: 80, height: 80, borderRadius: '50%', background: `linear-gradient(180deg, ${cols[i % 6]} 50%, #f4f4f4 50%)`}} />)}
+      </div>
+      <div style={{position: 'absolute', left: 40, top: 390, width: 520, height: 380, borderRadius: 24, background: 'linear-gradient(180deg, #e0533d, #b53a2a)'}}>
+        <div style={{position: 'absolute', left: 190, top: 60, width: 140, height: 140, borderRadius: '50%', background: '#f0e6d8', transform: `rotate(${turn}deg)`}}>
+          <div style={{position: 'absolute', left: 58, top: 6, width: 24, height: 128, borderRadius: 12, background: '#9a8f80'}} />
+        </div>
+        <div style={{position: 'absolute', left: 340, top: 250, width: 130, height: 100, borderRadius: 16, background: '#5a1e16'}} />
+      </div>
+      {[0, 1, 2].map((i) => {
+        const t = ((f + i * 30) % 90) / 90;
+        return <div key={i} style={{position: 'absolute', left: 420 + i * 30, top: 650 + t * 120, width: 70, height: 70, borderRadius: '50%', opacity: t < 0.9 ? 1 : 0, background: `linear-gradient(180deg, ${cols[(Math.floor((f + i * 30) / 90) + i) % 6]} 50%, #f4f4f4 50%)`}} />;
+      })}
+    </div>
+  );
+};
+
 // ============ 0. オープニング ============
 const OScroll: React.FC<SceneProps> = ({f, dur, T}) => {
-  const jump = T('O1', 1) - 4;
+  const jump = T('N1', 2) - 4;
   const after = f >= jump;
   const shake = f >= jump && f < jump + 8 ? Math.sin(f * 3.1) * 10 : 0;
   return (
@@ -25,7 +56,7 @@ const OScroll: React.FC<SceneProps> = ({f, dur, T}) => {
 };
 
 const OMontage: React.FC<SceneProps> = ({f, T, dur}) => {
-  const cuts = ['O2', 'O3', 'O4', 'O5', 'O6', 'O7'].map((id) => T(id) - 10);
+  const cuts = ['N2', 'N3', 'N4', 'N5', 'N6'].map((id) => T(id) - 10);
   let k = 0;
   for (let i = 0; i < cuts.length; i++) if (f >= cuts[i]) k = i;
   const lf = f - cuts[k];
@@ -33,31 +64,23 @@ const OMontage: React.FC<SceneProps> = ({f, T, dur}) => {
   const inA = interpolate(lf, [0, 8], [0, 1], clamp);
   const body = (() => {
     switch (k) {
-      case 0: return (
-        <>
-          <Still src="living" f={lf} dur={ld} dark={0.2} />
-          {tint('#ffb070', 0.35)}
-          <Clock text={lf < 40 ? '13:05' : '17:42'} x={150} y={120} size={84} color="#ffd29a" />
-          <PhonePOV f={lf} flick={22} x={1180} y={120} scale={0.78} tilt={-10} />
-        </>
-      );
+      case 0: {
+        const on = Math.floor(lf / 22) % 2 === 0;
+        return (
+          <>
+            <Still src="desk" f={lf} dur={ld} dark={0.35} blur={4} />
+            <PhonePOV f={lf} flick={0} x={760} y={70} scale={1.0} tilt={-4} glow={on ? 1 : 0.2} screen={on ? <HomeScreen /> : <div style={{position: 'absolute', inset: 0, background: '#000'}} />} />
+          </>
+        );
+      }
       case 1: return (
         <>
-          <Still src="desk" f={lf} dur={ld} dark={0.25} blur={3} />
-          <PhonePOV f={lf} flick={20} x={760} y={90} scale={0.92} tilt={6} />
-          <div style={{position: 'absolute', left: 150, top: 140, width: 420, padding: 26, borderRadius: 16, background: 'rgba(245,247,252,0.92)', fontFamily: FONT, color: '#1d2230', fontSize: 30, fontWeight: 800, opacity: fadeIn(lf, 4)}}>
-            今日のタスク
-            {['資料の修正', '見積もりの返信', '会議の準備'].map((s, i) => <div key={i} style={{fontSize: 28, fontWeight: 600, marginTop: 14}}>□ {s}</div>)}
-          </div>
+          <Still src="bed" f={lf} dur={ld} dark={0.6} from={1.1} to={1.16} />
+          <PhonePOV f={lf} flick={16} x={760} y={60} scale={1.0} clock={lf < ld / 2 ? '23:00' : '0:00'} />
+          <Clock text={lf < ld / 2 ? '23:00' : '0:00'} x={160} y={120} size={90} />
         </>
       );
-      case 2: return (
-        <>
-          <Still src="living" f={lf} dur={ld} dark={0.45} blur={4} />
-          <PhonePOV f={lf} flick={24} x={430} y={140} scale={0.8} tilt={-8} />
-          <PhonePOV f={lf + 40} flick={30} x={1090} y={140} scale={0.8} tilt={8} thumb={false} />
-        </>
-      );
+      case 2: return <DarkBoard tint="#2a2230"><Gacha f={lf} /></DarkBoard>;
       case 3: {
         const p = (lf * 2.6) % 100;
         return (
@@ -71,13 +94,6 @@ const OMontage: React.FC<SceneProps> = ({f, T, dur}) => {
           </DarkBoard>
         );
       }
-      case 4: return (
-        <>
-          <Still src="bed" f={lf} dur={ld} dark={0.6} from={1.1} to={1.16} />
-          <PhonePOV f={lf} flick={18} x={760} y={60} scale={1.0} clock={lf < ld / 2 ? '23:10' : '0:10'} />
-          <Clock text={lf < ld / 2 ? '23:10' : '0:10'} x={160} y={120} size={90} />
-        </>
-      );
       default: {
         const wob = Math.sin(lf / 14) * 0.6;
         return (
@@ -104,7 +120,7 @@ const OTired: React.FC<SceneProps> = ({f, dur, T}) => {
     <AbsoluteFill style={{background: '#000'}}>
       <Still src="bed" f={f} dur={dur} dark={0.7} from={1.12} to={1.2} />
       <AbsoluteFill style={{filter: `blur(${melt * 10}px)`, transform: `translateY(${melt * 120}px) scaleY(${1 - melt * 0.35})`, opacity: 1 - melt * 0.6}}>
-        <PhonePOV f={f} flick={f < T('O9') ? 0 : 34} x={760} y={60} scale={1.05 + 0.1 * seg(f, 0, dur)} />
+        <PhonePOV f={f} flick={f < T('O10') ? 0 : 34} x={760} y={60} scale={1.05 + 0.1 * seg(f, 0, dur)} />
       </AbsoluteFill>
       <Vignette />
     </AbsoluteFill>
