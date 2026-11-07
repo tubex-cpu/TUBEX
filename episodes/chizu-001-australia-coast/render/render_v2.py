@@ -264,21 +264,22 @@ def r_diag(t, d, P):
 
 
 # ---------------------------------------------------------------- diagrams
-def d_bars(n_show):
+def d_bars(n_show, grow=3.0):
     def fn(img, t, d):
         text(img, (160, 170), "都市圏の人口（2025年6月末の推計）", 50)
         x0, y0, bw, gap = 420, 280, 1180, 120
         for i, (n, v) in enumerate(POP):
             if i >= n_show[1]:
                 break
-            st = 0 if i < n_show[0] else (i - n_show[0]) * 0.6 + 0.3
-            a = seg(t, st, st + 1.0)
+            st = 0 if i < n_show[0] else (i - n_show[0]) * 0.6 + (0.3 if grow > 1 else 0.05)
+            a = seg(t, st, st + grow)
             y = y0 + i * gap
             text(img, (x0 - 30, y + 34), n, 48, anchor="rm", alpha=max(a, 0.0001) if i >= n_show[0] else 1)
             L = bw * v / 600 * (a if i >= n_show[0] else 1)
             ImageDraw.Draw(img).rounded_rectangle((x0, y + 6, x0 + max(L, 4), y + 64), radius=10, fill=(AMBER if i < 2 else TEAL) + (255,))
-            if (a if i >= n_show[0] else 1) > 0.6:
-                text(img, (x0 + L + 20, y + 34), f"約{v}万人", 44, anchor="lm")
+            k = a if i >= n_show[0] else 1
+            if k > 0.05:
+                text(img, (x0 + L + 20, y + 34), f"約{int(round(v * k))}万人", 44, anchor="lm")
         note(img, "オーストラリア統計局（ABS）・大都市統計圏（GCCSA）")
     return fn
 
@@ -637,7 +638,7 @@ def shots():
                 L_caption("「市」ではなく、周りまで含めた「都市圏」", 0.3)], why="都市圏が中心部から北のセントラルコーストまで広がることを地図で示す（3文）")
     # S04
     add("S04", 3, "photo", file="real_02_brisbane.jpg", label="ブリスベン")
-    add("S04", 1, "diag", fn=d_bars((2, 3)), why="ブリスベンの数字をグラフに足す")
+    add("S04", 1, "diag", fn=d_bars((2, 3), grow=0.7), why="ブリスベンの数字をグラフに足す")
     add("S04", 3, "photo", sent=1, file="real_03_perth.jpg", label="パース")
     add("S04", 3, "map", sent=2, lon=138.4, lat=-34.9, kmpp=0.9, move=False,
         layers=[L_points([(138.60, -34.93, "アデレード", "r")], 0.1), L_caption("アデレード：南のセントビンセント湾に面した都市", 0.3)], why="アデレードの写真の代わりに、南の湾に面した実際の位置を地図で示す")
@@ -797,15 +798,26 @@ def shot_frame(s, t):
     return {"globe": r_globe, "map": r_map, "photo": r_photo, "doc": r_photo, "card": r_card, "diag": r_diag}[k](tt, d, s["P"])
 
 
+def drift(s, img, t):
+    """Slow push-in (1.00 -> 1.04) on shots that would otherwise stand still (diagrams, cards, fixed maps)."""
+    if s["kind"] in ("diag", "card") or (s["kind"] == "map" and not s["P"].get("move", True)):
+        k = (t - s["start"]) / max(1e-6, s["end"] - s["start"])
+        z = 1.0 + 0.04 * min(1.0, max(0.0, k))
+        a = np.array(img)
+        M = np.float32([[z, 0, (1 - z) * W / 2], [0, z, (1 - z) * H / 2]])
+        img = Image.fromarray(cv2.warpAffine(a, M, (W, H), flags=cv2.INTER_LINEAR))
+    return img
+
+
 def frame(t):
     global TL
     TL = TL or timeline()
     cur = [s for s in TL if s["start"] <= t < s["end"]] or [TL[-1]]
     s = cur[0]
-    img = shot_frame(s, t)
+    img = drift(s, shot_frame(s, t), t)
     i = TL.index(s)
     if i + 1 < len(TL) and t > s["end"] - XF:   # crossfade into the next shot
-        nxt = shot_frame(TL[i + 1], TL[i + 1]["start"])
+        nxt = drift(TL[i + 1], shot_frame(TL[i + 1], TL[i + 1]["start"]), TL[i + 1]["start"])
         a = (t - (s["end"] - XF)) / XF
         img = Image.blend(img, nxt, ease(a))
     # chrome: channel name + heading
