@@ -16,3 +16,19 @@ desktop.ini
 # 誤ってリポジトリ内に作ったときの保険
 _素材/
 _competitor_thumbs/
+
+# 長尺回のナレーション音声は make_audio.py で再生成できるため git に入れない
+video/public/episodes/habi-002-mu/
+# パイロット動画の監査用軽量版
+!pilots/*/preview.mp4
+!pilots/*/preview_*.mp4
+!pilots/*/preview_full.mp4
+
+# 地図×雑学：ナレーションの wav は make_narration.py で再生成できる（m4a・timings・readings だけ入れる）
+episodes/chizu-*/audio/*.wav
+episodes/chizu-*/audio/scenes/
+episodes/chizu-*/render/vendor/
+episodes/chizu-*/render/cache/
+episodes/chizu-*/render/out/
+# 地図×雑学：写真素材は git に入れない（出典・ライセンス・URL は 06c_assets.md に記録し、そこから再取得する）
+episodes/chizu-*/assets/
