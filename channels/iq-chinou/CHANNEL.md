@@ -13,6 +13,8 @@
 
 **3本目（2026-11-05・社長提示）**：テーマ「夜更かし（睡眠キャンセル）」。サムネ3パターン・タイトルは社長案（`channels/iq-chinou/drafts/ep003-yofukashi/00_title_thumb.md`。ゲート0・Aの承認記録ではない）。サムネ③の実在人物の画像は許可なしに使えないため要確認。ep003 の台本：https://docs.google.com/document/d/1UIhqz9_wxfNgOKdHKxMQtI3wtteLfDBQsHmq_xHCkq4/edit
 
+**4本目（2026-11-07・社長提示）**：テーマ「ルッキズム」。サムネ3パターン・タイトルは社長案（`channels/iq-chinou/drafts/ep004-lookism/00_title_thumb.md`。ゲート0・Aの承認記録ではない）。ep004 の台本：https://docs.google.com/document/d/1RN_Tn-3L44VKRAotsbjXQTTFPhYxxFVqX-eAx0_rysw/edit
+
 ここに書いたのは決定事項と、既存の調査で確認済みの数字だけ。未決の項目は「未決」と書き、推測で埋めない。
 
 ## 決まっていること
