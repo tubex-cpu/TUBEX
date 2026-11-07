@@ -112,15 +112,39 @@ def segments(sub):
                     hits.append((i, i + len(w), c))
                 i = sub.find(w, i + len(w))
     hits = sorted(hits)[:3]
-    out, pos = [], 0
+    col = ["w"] * len(sub)
     for a, b, c in hits:
-        if a > pos:
-            out.append({"t": sub[pos:a], "c": "w"})
-        out.append({"t": sub[a:b], "c": c})
-        pos = b
-    if pos < len(sub):
-        out.append({"t": sub[pos:], "c": "w"})
+        col[a:b] = [c] * (b - a)
+    out = []
+    for ch, c in zip(sub, col):
+        if out and out[-1]["c"] == c:
+            out[-1]["t"] += ch
+        else:
+            out.append({"t": ch, "c": c})
     return out
+
+
+
+def quote_colors(chunks):
+    """「…」: the brackets and everything inside take one color, also when a quote runs over two subtitle lines
+    (owner 2026-11-07). Red wins when both red and yellow words are inside."""
+    text = "".join(c["sub"] for c in chunks)
+    col = [s_["c"] for c in chunks for s_ in c["seg"] for _ in s_["t"]]
+    for m in re.finditer(r"「[^「」]*」", text):
+        inner = [c for c in col[m.start() + 1:m.end() - 1] if c != "w"]
+        c = "r" if "r" in inner else ("y" if inner else "w")
+        col[m.start():m.end()] = [c] * (m.end() - m.start())
+    pos = 0
+    for c in chunks:
+        segs = []
+        for ch, k in zip(c["sub"], col[pos:pos + len(c["sub"])]):
+            if segs and segs[-1]["c"] == k:
+                segs[-1]["t"] += ch
+            else:
+                segs.append({"t": ch, "c": k})
+        c["seg"] = segs
+        pos += len(c["sub"])
+    return chunks
 
 
 def build():
@@ -135,6 +159,7 @@ def build():
             d = len(x) / SR
             cs.append({"sub": c, "seg": segments(c), "start": round(c0, 3), "end": round(c0 + d, 3), "kana": kana, "_x": x})
             c0 += d + 0.14
+        quote_colors(cs)
         end = cs[-1]["end"]
         lines.append({"id": lid, "start": round(start, 3), "end": end, "scene": ex.get("scene"), "chunks": cs})
         t = end + ex.get("gap", 0.45)
@@ -214,6 +239,93 @@ def mix_tracks(dur, parts, xf=2.5):
         m = min(len(seg), n - i0)
         out[i0:i0 + m] += seg[:m] * env[:m, None]
     return out
+
+
+
+# ---------- quiet drum beds (owner 2026-11-07: three quiet tracks built on a soft snare feel) ----------
+_drng = np.random.default_rng(7)
+
+
+def _noise(m):
+    return _drng.standard_normal(m)
+
+
+def _bp(x, lo, hi):
+    # crude band-pass: difference of two moving averages
+    a = max(1, int(SR / hi)); b = max(a + 1, int(SR / lo))
+    return np.convolve(x, np.ones(a) / a, "same") - np.convolve(x, np.ones(b) / b, "same")
+
+
+def d_snare(vel=1.0, d=0.22):
+    m = int(d * SR); tt = np.arange(m) / SR
+    body = np.sin(2 * np.pi * 185 * tt) * np.exp(-tt / 0.035) * 0.5
+    rattle = _bp(_noise(m), 1500, 7000) * np.exp(-tt / 0.07) * 1.6
+    return (body + rattle) * np.minimum(1, tt / 0.002) * 0.22 * vel
+
+
+def d_brush(vel=1.0, d=0.38):
+    m = int(d * SR); tt = np.arange(m) / SR
+    env = np.sin(np.pi * np.clip(tt / d, 0, 1)) ** 1.5
+    return _bp(_noise(m), 2500, 9000) * env * 0.10 * vel
+
+
+def d_rim(vel=1.0):
+    m = int(0.05 * SR); tt = np.arange(m) / SR
+    return (np.sin(2 * np.pi * 1700 * tt) * np.exp(-tt / 0.006) + _bp(_noise(m), 2000, 8000) * np.exp(-tt / 0.004)) * 0.09 * vel
+
+
+def d_kick(vel=1.0):
+    m = int(0.35 * SR); tt = np.arange(m) / SR
+    f = 95 + 70 * np.exp(-tt / 0.03)
+    return np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-tt / 0.16) * 0.10 * vel
+
+
+def d_hat(vel=1.0):
+    m = int(0.04 * SR); tt = np.arange(m) / SR
+    return _bp(_noise(m), 6000, 14000) * np.exp(-tt / 0.01) * 0.05 * vel
+
+
+def _drum_track(dur, bpm, bar, pad=None, pad_amp=0.004, roll_every=0):
+    """bar: list of (step in 16ths, kind, vel) for one 4/4 bar"""
+    out = np.zeros((int(dur * SR), 2))
+
+    def place_(buf, x, t, g, p):
+        if 0 <= t < dur - 0.05:
+            x = x[: max(0, int((dur - t) * SR) - 2)]
+            if len(x):
+                ma.place(buf, x, t, g, p)
+    st = 60 / bpm / 4
+    fn = {"s": d_snare, "b": d_brush, "r": d_rim, "k": d_kick, "h": d_hat}
+    pan = {"s": 0.5, "b": 0.42, "r": 0.6, "k": 0.5, "h": 0.66}
+    n = 0
+    while n * 16 * st < dur - 0.5:
+        at = n * 16 * st
+        hum = lambda i: (_drng.random() - 0.5) * 0.012
+        for step, kind, vel in bar:
+            v = vel * (0.85 + 0.3 * _drng.random())
+            place_(out, fn[kind](v), at + step * st + hum(step), 1.0, pan[kind])
+        if roll_every and n % roll_every == roll_every - 1:  # a soft snare roll into the next phrase
+            for i in range(8):
+                place_(out, d_snare(0.25 + 0.6 * i / 7, 0.12), at + (8 + i) * st / 2 + 8 * st, 1.0, 0.5)
+        if pad is not None and n % 2 == 0:
+            place_(out, _pad([hz(c) for c in pad[(n // 2) % len(pad)]], min(32 * st + 1.0, dur - at + 0.01), pad_amp), at, 1.0, 0.5)
+        n += 1
+    return out
+
+
+def drum_tension(dur):   # 76 bpm: kick, brushed snare on 3, rim ghosts, quiet hats; faint D-minor drone
+    bar = [(0, "k", 1.0), (8, "s", 0.9), (8, "b", 0.6), (6, "r", 0.35), (14, "r", 0.3)] + [(i, "h", 0.5 if i % 4 else 0.8) for i in range(0, 16, 2)]
+    return _drum_track(dur, 76, bar, pad=[[50, 57, 62], [46, 53, 58]], pad_amp=0.0035, roll_every=8)
+
+
+def drum_pulse(dur):     # 90 bpm: soft snare on 2 and 4, light kick, 16th hats (explanation, brain chapters)
+    bar = [(0, "k", 0.9), (10, "k", 0.6), (4, "s", 0.8), (12, "s", 0.85)] + [(i, "h", 0.35 + 0.35 * (i % 4 == 0)) for i in range(16)] + [(7, "r", 0.25)]
+    return _drum_track(dur, 90, bar, pad=None, roll_every=0)
+
+
+def drum_brush(dur):     # 70 bpm: brush sweeps on every beat, soft snare on 4; faint warm F-major pad (way out, ending)
+    bar = [(0, "k", 0.7), (12, "s", 0.7)] + [(i, "b", 0.8 if i % 8 == 0 else 0.55) for i in (0, 4, 8, 12)] + [(i, "h", 0.3) for i in (2, 6, 10, 14)]
+    return _drum_track(dur, 70, bar, pad=[[53, 57, 60, 64], [46, 50, 53, 57]], pad_amp=0.004, roll_every=0)
 
 
 def main():
@@ -328,11 +440,11 @@ def main():
     tl["off_at"] = round(off_at, 3)
 
     sc_at = {x["id"]: x["start"] for x in scenes}
-    b1 = sc_at["k3_brain"] - 1.0        # opening, the self-test and the shock experiment
-    b2 = sc_at["k6_memo"] - 1.0         # dopamine, receptors, the brain
-    b3 = sc_at["k9_fast"] - 1.0         # memory, sleep, escape
-    music = mix_tracks(DUR, [(0, b1, ma.bgm2), (b1, b2, track_mystery), (b2, b3, track_explain), (b3, DUR, track_warm)])
-    tl["bgm"] = [round(b1, 2), round(b2, 2), round(b3, 2)]
+    # three quiet drum beds (owner 2026-11-07): opening–chapter 3 / chapters 4–7 / chapter 8–end
+    b1 = sc_at["k4_receptor"] - 1.0
+    b2 = sc_at["k8_msg"] - 1.0
+    music = mix_tracks(DUR, [(0, b1, drum_tension), (b1, b2, drum_pulse), (b2, DUR, drum_brush)])
+    tl["bgm"] = [round(b1, 2), round(b2, 2)]
     (ROOT / "data/timeline_full.json").write_text(json.dumps(tl, ensure_ascii=False, indent=1))
     duck = np.ones(n)
     for l in lines:
