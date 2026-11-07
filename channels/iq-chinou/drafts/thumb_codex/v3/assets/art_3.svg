@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720"><defs><radialGradient id="bodyShade" cx="35%" cy="25%" r="80%"><stop stop-color="#eee"/><stop offset=".7" stop-color="#999"/><stop offset="1" stop-color="#555"/></radialGradient>
+ <filter id="crt"><feTurbulence type="fractalNoise" baseFrequency=".45 .7" numOctaves="1" seed="31"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncR type="discrete" tableValues="0 0 .1 .6 1 1"/><feFuncG type="discrete" tableValues="0 0 .1 .6 1 1"/><feFuncB type="discrete" tableValues="0 0 .1 .6 1 1"/></feComponentTransfer></filter></defs><rect width="1280" height="720" fill="#171717"/><defs><mask id="mascotClip"><g transform="translate(963 414)">
+ <g fill="white">
+ <ellipse cx="-36" cy="180" rx="26" ry="39"/><ellipse cx="36" cy="180" rx="26" ry="39"/>
+ <path d="M-25 38 C-68 58 -88 109 -67 145 C-46 176 45 177 67 145 C88 109 68 58 25 38Z"/>
+ <rect x="-99" y="63" width="37" height="91" rx="18" transform="rotate(18 -82 77)"/>
+ <rect x="67" y="58" width="37" height="91" rx="18" transform="rotate(-33 84 76)"/>
+ <ellipse cx="-76" cy="-161" rx="21" ry="25" transform="rotate(-25 -76 -161)"/>
+ <ellipse cx="76" cy="-161" rx="21" ry="25" transform="rotate(25 76 -161)"/>
+ <ellipse cx="0" cy="-75" rx="126" ry="120"/>
+ </g></g></mask></defs><g transform="translate(963 414)">
+ <g fill="url(#bodyShade)">
+ <ellipse cx="-36" cy="180" rx="26" ry="39"/><ellipse cx="36" cy="180" rx="26" ry="39"/>
+ <path d="M-25 38 C-68 58 -88 109 -67 145 C-46 176 45 177 67 145 C88 109 68 58 25 38Z"/>
+ <rect x="-99" y="63" width="37" height="91" rx="18" transform="rotate(18 -82 77)"/>
+ <rect x="67" y="58" width="37" height="91" rx="18" transform="rotate(-33 84 76)"/>
+ <ellipse cx="-76" cy="-161" rx="21" ry="25" transform="rotate(-25 -76 -161)"/>
+ <ellipse cx="76" cy="-161" rx="21" ry="25" transform="rotate(25 76 -161)"/>
+ <ellipse cx="0" cy="-75" rx="126" ry="120"/>
+ </g></g><g mask="url(#mascotClip)"><rect x="800" y="200" width="330" height="450" filter="url(#crt)" opacity=".72"/></g><path d="M722,50 H828 Q850,50 850,72 V135 Q850,157 828,157 H748 L713,192 L724,157 H722 Q700,157 700,135 V72 Q700,50 722,50 Z" fill="#f1eee4"/><path d="M1092,125 H1198 Q1220,125 1220,147 V210 Q1220,232 1198,232 H1155 L1205,267 L1189,232 H1092 Q1070,232 1070,210 V147 Q1070,125 1092,125 Z" fill="#f1eee4"/><circle cx="775" cy="103" r="25" fill="#111111"/><path d="M1145 151 L1174 205 H1116Z" fill="#111111"/></svg>
