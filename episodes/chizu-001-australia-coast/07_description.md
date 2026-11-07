@@ -19,17 +19,19 @@
 
 ■ 出典
 - オーストラリア統計局（ABS）Regional population 2024–25（2025年6月30日の推計人口、大都市統計圏 GCCSA）https://www.abs.gov.au/statistics/people/population/regional-population/latest-release
-- Geoscience Australia「Australia's size compared」https://www.ga.gov.au/scientific-topics/national-location-information/dimensions/australias-size-compared
+- Geoscience Australia「Australia's size compared」https://www.ga.gov.au/scientific-topics/national-location-information/geography/areas-of-australia
 - 国土地理院「全国都道府県市区町村別面積調」https://www.gsi.go.jp/KOKUJYOHO/MENCHO-title.htm
 - 気象局（BOM）Subtropical ridge https://www.bom.gov.au/resources/learn-and-explore/climate-knowledge-centre/climate-factors/subtropical-ridge
 - 気象局（BOM）Australian climate zones https://www.bom.gov.au/resources/learn-and-explore/climate-knowledge-centre/australian-climate-zones
 - Museums of History NSW「Tank Stream – before and after 1788」https://mhnsw.au/learning/tank-stream-before-and-after-1788/
+- Sydney Water「The Tank Stream」（公式PDF）https://www.sydneywater.com.au/content/dam/sydneywater/documents/tank-streamheritage-fact-sheet.pdf
 - National Gallery of Victoria「Colony: Australia 1770–1861」https://www.ngv.vic.gov.au/exhibition/colony-australia-1770-1861/
+- National Gallery of Victoria「Colony: Australia 1770–1861」展示解説（公式PDF）https://www.ngv.vic.gov.au/wp-content/uploads/2018/01/Colony-Australia-1770-1861-Large-Print-Labels.pdf
 - オーストラリア国立博物館（NMA）Evidence of first peoples https://www.nma.gov.au/defining-moments/resources/evidence-of-first-peoples
 - オーストラリア財務省 Andrew Leigh 議員の講演（2025年10月30日）https://ministers.treasury.gov.au/ministers/andrew-leigh-2025/speeches/address-committee-capital-cities-event-future-cities-ambition
 - 首都庁（NCA）The Siting and Naming of Canberra https://www.nca.gov.au/education/canberras-history/siting-and-naming-canberra
 - オーストラリア憲法 第125条 https://www.aph.gov.au/About_Parliament/Senate/Practice_and_Procedure/Constitution/chapter7
-- 議会教育局（PEO）Seat of Government Act 1908 https://peo.gov.au/understand-our-parliament/history-of-parliament/history-milestones/australian-parliament-history-timeline/events/seat-of-government-act-1908/
+- 議会教育局（PEO）Seat of Government Act 1908 https://peo.gov.au/understand-our-parliament/history-of-parliament/history-milestones/australian-parliament-history-timeline/events/seat-of-government-act-1908
 - ABARES Land use of Australia 2020–21 https://www.agriculture.gov.au/abares/aclump/land-use
 
 ■ 地図・画像
@@ -65,4 +67,4 @@ VOICEVOX:雀松朱司
 ■ 公開前の未解決事項（2026-11-07 時点。公開はしていない）
 - 岩の線刻の写真（Sardaka）は CC BY-SA 4.0。動画に入れた場合の継承条件（同じライセンスでの提供）をどう扱うか未決定。代わりの CC BY 素材は見つかっていない
 - 衛星画像（Blue Marble）の撮影年・版は未確認。v3 で使った Blue Marble Next Generation（2004年1月）の高解像度版への差し替えも未実施
-- 出典のうち TANK のページ、憲法 第125条の条文、現行の ABS の都市圏の境界（シドニー都市圏がセントラルコーストを含むこと）は、公式本文で未確認
+- 出典のうち TANK のページ（Museums of History NSW）、憲法 第125条の条文、現行の ABS の都市圏の境界（シドニー都市圏がセントラルコーストを含むこと）は、公式本文で未確認。Sydney Water・NGV（公式PDF）・PEO は 2026-11-07 に Fox（Codex側）が公式本文で確認済み（`01_research.md`）
