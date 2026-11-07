@@ -357,11 +357,11 @@ def d_coast_section(img, t, d):
     dd = ImageDraw.Draw(img)
     gy = 780
     dd.rectangle((1180, gy, W, H), fill=(20, 70, 130, 255))
-    text(img, (1560, gy + 70), "太平洋", 44, anchor="mm", fill=(170, 210, 250))
+    text(img, (1560, gy - 50), "太平洋", 44, anchor="mm", fill=(170, 210, 250))
     mt = [(200, gy), (520, gy - 40), (820, gy - 330), (930, gy - 360), (1040, gy - 260), (1180, gy)]
     dd.polygon(mt + [(1180, H), (200, H)], fill=(90, 110, 80, 255))
     dd.rectangle((0, gy, 200, H), fill=(150, 120, 80, 255))
-    text(img, (300, gy + 70), "内陸", 44, anchor="mm")
+    text(img, (120, gy - 50), "内陸", 44, anchor="mm")
     text(img, (900, gy - 200), "山地", 44, anchor="mm")
     a = seg(t, 0.8, 3.0)
     arrow(img, (1700, gy - 160), (1100, gy - 300), color=(150, 210, 255), width=12, prog=a, alpha=min(1, a * 3))
