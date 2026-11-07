@@ -319,7 +319,7 @@ def d_hadley(img, t, d):
     text(img, (W / 2, 140), "空気が下がると、雨が減る", 60, anchor="mm", alpha=seg(t, 0, 0.5))
     dd = ImageDraw.Draw(img)
     # ground line from equator (left) to 40S (right)
-    gx0, gx1, gy = 260, 1660, 780
+    gx0, gx1, gy = 260, 1660, 740
     dd.line((gx0, gy, gx1, gy), fill=(200, 200, 210, 255), width=4)
     for x, s in [(gx0, "赤道"), (gx0 + (gx1 - gx0) * 0.75, "南緯30度付近"), (gx1, "南緯40度")]:
         text(img, (x, gy + 50), s, 36, anchor="ma", fill=MUTED, weight="500Medium")
@@ -341,6 +341,13 @@ def d_hadley(img, t, d):
         text(img, (xr, gy - 120), "高", 70, anchor="mm", fill=AMBER, alpha=a4)
         text(img, (xr + 110, gy - 140), "高気圧", 44, anchor="lm", alpha=a4, fill=AMBER)
         text(img, (xr + 110, gy - 80), "雲ができにくい", 38, anchor="lm", alpha=a4, weight="500Medium")
+    a5 = seg(t, 12.3, 13.3)
+    if a5 > 0:
+        cx5, cy5 = xr + 220, gy - 360
+        dd.ellipse((cx5 - 90, cy5 - 35, cx5 + 90, cy5 + 35), fill=(200, 205, 215, int(200 * a5)))
+        dd.line((cx5 - 80, cy5 - 45, cx5 + 80, cy5 + 45), fill=(255, 90, 90, int(255 * a5)), width=8)
+        dd.line((cx5 - 80, cy5 + 45, cx5 + 80, cy5 - 45), fill=(255, 90, 90, int(255 * a5)), width=8)
+        text(img, (cx5, cy5 + 80), "雨が降りにくい", 42, anchor="mm", fill=(255, 170, 170), alpha=a5)
     note(img, "仕組みを示す模式図（気象局 BOM「Subtropical ridge」による）")
 
 
@@ -366,6 +373,14 @@ def d_coast_section(img, t, d):
             x = 1010 + i * 24; y = gy - 470 + (i % 3) * 16
             dd.line((x, y, x - 12, y + 60), fill=(150, 200, 255, int(255 * b)), width=4)
         text(img, (1330, gy - 540), "雨が降る", 46, anchor="lm", alpha=b)
+    c2 = seg(t, 6.2, 7.0)
+    if c2 > 0:
+        panel(img, (150, 230, 760, 330), alpha=0.8 * c2)
+        text(img, (180, 280), "場所ごとに、雨と気温が違う", 42, anchor="lm", alpha=c2)
+    c3 = seg(t, 9.6, 10.4)
+    if c3 > 0:
+        panel(img, (150, 350, 760, 450), alpha=0.8 * c3, outline=AMBER)
+        text(img, (180, 400), "→ 都市の分布の土台", 42, anchor="lm", alpha=c3, fill=AMBER)
     note(img, "仕組みを示す模式図（気象局 BOM「Australian climate zones」による）")
 
 
@@ -404,13 +419,20 @@ def d_cycle(img, t, d):
         x = cx + R * math.cos(math.radians(ang)); y = cy
         ImageDraw.Draw(img).ellipse((x - 150, y - 150, x + 150, y + 150), fill=(16, 28, 50, int(240 * a)), outline=(AMBER if i == 0 else TEAL) + (int(255 * a),), width=6)
         text(img, (x, y), s, 84, anchor="mm", alpha=a)
-    b = seg(t, 1.5, 3.0); c = seg(t, 3.0, 4.5)
+    b = seg(t, 0.4, 2.2); c = seg(t, 4.3, 6.0)
     arrow(img, (cx - R + 120, cy - 120), (cx + R - 120, cy - 120), color=AMBER, width=10, prog=b, alpha=min(1, b * 3))
     if b > 0.4:
         text(img, (cx, cy - 190), "働き手を求めて、企業が集まる", 40, anchor="mm", alpha=b)
     arrow(img, (cx + R - 120, cy + 120), (cx - R + 120, cy + 120), color=TEAL, width=10, prog=c, alpha=min(1, c * 3))
     if c > 0.4:
         text(img, (cx, cy + 190), "仕事の選択肢を求めて、人が集まる", 40, anchor="mm", alpha=c)
+    e = seg(t, 9.9, 10.8)
+    if e > 0:
+        ang = (t - 9.9) * 1.6
+        for k in range(2):
+            x = cx + (R - 40) * math.cos(ang + k * math.pi); y = cy + 150 * math.sin(ang + k * math.pi)
+            ImageDraw.Draw(img).ellipse((x - 14, y - 14, x + 14, y + 14), fill=AMBER + (int(255 * e),))
+        text(img, (cx, 255), "互いを引き寄せ合う", 46, anchor="mm", fill=AMBER, alpha=e)
     note(img, "オーストラリア財務省（2025年10月30日の講演）による一般的な仕組み")
 
 
@@ -418,26 +440,26 @@ def d_network(img, t, d):
     text(img, (W / 2, 150), "近くに集まることの強み", 60, anchor="mm", alpha=seg(t, 0, 0.5))
     nodes = [("専門の人", 560, 400), ("取引先", 1360, 400), ("大学・研究機関", 960, 300), ("港・空港・鉄道", 960, 760), ("企業", 960, 540)]
     a = seg(t, 0.3, 1.0)
+    when = {"専門の人": 3.0, "大学・研究機関": 6.0, "取引先": 5.6, "港・空港・鉄道": 9.9}
     for i, (s, x, y) in enumerate(nodes[:-1]):
-        b = seg(t, 0.8 + i * 0.7, 1.4 + i * 0.7)
+        b = seg(t, when[s], when[s] + 0.6)
         polyline(img, [(960, 540), (x, y)], (120, 170, 255), 6, b)
     for i, (s, x, y) in enumerate(nodes):
-        b = a if s == "企業" else seg(t, 0.8 + i * 0.7, 1.4 + i * 0.7)
+        b = a if s == "企業" else seg(t, when[s], when[s] + 0.6)
         w = text_w(s, 44) + 70
         panel(img, (x - w / 2, y - 50, x + w / 2, y + 50), fill=(16, 28, 50), alpha=0.95 * b, outline=AMBER if s == "企業" else TEAL)
         text(img, (x, y), s, 44, anchor="mm", alpha=b)
 
 
 def d_year(img, t, d):
-    a = seg(t, 0.2, 0.9)
-    text(img, (W / 2, 430), "1908年", 160, anchor="mm", fill=AMBER, alpha=a, stroke=6)
-    text(img, (W / 2, 610), "連邦議会が、首都の場所をヤス・キャンベラ地域に決定", 50, anchor="mm", alpha=seg(t, 0.8, 1.5))
-    text(img, (W / 2, 700), "シドニーでもメルボルンでもない場所", 42, anchor="mm", fill=MUTED, alpha=seg(t, 1.5, 2.2), weight="500Medium")
+    text(img, (W / 2, 250), "シドニーでもメルボルンでもない場所", 46, anchor="mm", fill=MUTED, alpha=seg(t, 0.2, 0.9), weight="500Medium")
+    text(img, (W / 2, 450), "1908年", 160, anchor="mm", fill=AMBER, alpha=seg(t, 3.4, 4.1), stroke=6)
+    text(img, (W / 2, 630), "連邦議会が、首都の場所をヤス・キャンベラ地域に決定", 50, anchor="mm", alpha=seg(t, 5.6, 6.3))
     note(img, "Seat of Government Act 1908（オーストラリア議会教育局 PEO・首都庁 NCA による）")
 
 
 def d_summary(img, t, d):
-    d_three(img, t, d, labels=(("空気の流れ", "雨を左右する"), ("港と真水", "街の始まり"), ("人と仕事", "呼び合う力")), title="海の近くに集まる、三つの理由")
+    d_three(img, t * 0.6 / 2.5 if t < 7 else t, d, labels=(("空気の流れ", "雨を左右する"), ("港と真水", "街の始まり"), ("人と仕事", "呼び合う力")), title="海の近くに集まる、三つの理由")
 
 
 # ---------------------------------------------------------------- map layers
@@ -561,7 +583,8 @@ def L_layers(t0=0.4):
         cols = [TEAL, AMBER, (150, 170, 255)]
         labs = ["水と気候", "港", "仕事"]
         for i in range(3):
-            a = seg(t, t0 + i * 1.6, t0 + i * 1.6 + 1.0)
+            st = t0 + (0.0, 2.0, 3.9)[i]
+            a = seg(t, st, st + 0.8)
             caption_box(img, ("× " if i else "") + labs[i], a, y=170 + i * 100, color=cols[i])
             for n in FIVE:
                 x, y = p(*CITIES[n])
@@ -664,7 +687,7 @@ def shots():
     add("S12", 10, "diag", fn=d_network, why="専門の人・取引先・大学がつながる図を読み上げに合わせて出す（3文）")
     add("S12", 2, "photo", sent=3, file="real_17_sydney_airport.jpg", label="空港（シドニー）")
     add("S12", 2, "photo", file="real_18_train.jpg", label="鉄道（メルボルン）")
-    add("S12", 5, "diag", sent=4, fn=d_network, t_off=6.0, why="「近さの強み」をつながりの図で受ける")
+    add("S12", 5, "diag", sent=4, fn=d_network, t_off=10.0, why="「近さの強み」をつながりの図で受ける")
     add("S12", 3, "photo", sent=5, file="real_11_suburbs.jpg", label="住宅費・混雑も、同じ集まりから")
     add("S12", 2, "map", lon=151.05, lat=-33.82, kmpp=0.35, move=False, dim=0.1,
         layers=[L_points([(151.21, -33.87, "シドニー中心部", "r"), (151.00, -33.81, "パラマタ", "l")], 0.0), L_caption("集まりが大きいほど、負担も大きい", 0.2)],
