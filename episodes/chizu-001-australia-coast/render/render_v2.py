@@ -198,7 +198,7 @@ def vector_map(lon0, lat0, kmpp, ss=2):
             d.polygon(list(zip((W / 2 + x / kmpp) * ss, (H / 2 - y / kmpp) * ss)), fill=(122, 112, 86))
     im = im.resize((W, H), Image.LANCZOS)
     note_img = im.convert("RGBA")
-    note(note_img, "地図：Natural Earth（1:1000万）")
+    note(note_img, "地図：Natural Earth（1:1000万・海岸線は簡略化され、湾の細かい形は省略）")
     return note_img
 
 
@@ -678,7 +678,9 @@ def shots():
     add("S09", 3, "photo", sent=6, file="real_09_circular_quay.jpg", label="今のシドニー・コーブ")
     # S10
     add("S10", 10, "diag", fn=d_timeline, why="植民地化よりはるか前からの暮らしを年表で示す（2文）")
-    add("S10", 3, "photo", sent=2, file="real_10_rock_engraving.jpg", label="シドニー北部に残る、先住民の人々の岩の線刻")
+    add("S10", 3, "map", sent=2, lon=151.15, lat=-33.86, kmpp=0.2, move=False,
+        layers=[L_points([(151.265, -33.845, "シドニー湾（ポートジャクソン）", "l")], 0.0), L_caption("シドニー湾のまわりも", 0.1)],
+        why="v2.1：CC BY-SA の写真（岩の線刻）をやめ、シドニー湾のまわりの位置を地図で示す（特定の遺跡は示さない）")
     add("S10", 8, "map", sent=3, **AUSV, move=False, dim=0.35, layers=[L_caption("土地を奪われていった歴史", 0.5)], why="大陸全体の地図で、植民地の拡大と土地の喪失の話を受ける（2文）")
     # S11
     add("S11", 6, "map", **AUSV, move=False, layers=[L_dots(FIVE, 0, 0), L_caption("船の時代が終わっても、大きいまま", 0.3)], why="問い（なぜ大都市は大きいままか）を5都市の地図で示す")

@@ -30,14 +30,14 @@
 - オーストラリア国立博物館（NMA）Evidence of first peoples https://www.nma.gov.au/defining-moments/resources/evidence-of-first-peoples
 - オーストラリア財務省 Andrew Leigh 議員の講演（2025年10月30日）https://ministers.treasury.gov.au/ministers/andrew-leigh-2025/speeches/address-committee-capital-cities-event-future-cities-ambition
 - 首都庁（NCA）The Siting and Naming of Canberra https://www.nca.gov.au/education/canberras-history/siting-and-naming-canberra
-- オーストラリア憲法 第125条 https://www.aph.gov.au/About_Parliament/Senate/Practice_and_Procedure/Constitution/chapter7
+- オーストラリア憲法 第125条（議会教育局 PEO「The Australian Constitution online – Chapter VII」）https://peo.gov.au/understand-our-parliament/how-parliament-works/the-australian-constitution/the-australian-constitution-online/chapter-vii
 - 議会教育局（PEO）Seat of Government Act 1908 https://peo.gov.au/understand-our-parliament/history-of-parliament/history-milestones/australian-parliament-history-timeline/events/seat-of-government-act-1908
 - ABARES Land use of Australia 2020–21 https://www.agriculture.gov.au/abares/aclump/land-use
 
 ■ 地図・画像
 - 地図：Natural Earth（パブリックドメイン）
-- 衛星画像：NASA Blue Marble（NASA の著作物。three-globe 2.45.6 に同梱の画像を使用。撮影年・版は未確認）
-- 写真・絵（v2 で使った20点。登場順ではなくファイル番号順）
+- 衛星画像：NASA Blue Marble と表示された画像（npm パッケージ three-globe 2.45.6 に同梱の earth-blue-marble.jpg）。NASA の原画像・版・年月は未確定
+- 写真・絵（v2.1 で使った19点。登場順ではなくファイル番号順）
 - シドニー中心部とシドニー湾の空撮（ファーム・コーブ、オペラハウス）：Arran Bee / CC BY 2.0 https://creativecommons.org/licenses/by/2.0/ / https://commons.wikimedia.org/wiki/File:Sydney_CBD_aerial.jpg （加工：トリミング・ズーム・字幕）
 - キャンベラの国会議事堂を上空から（気球の影が写る）：Malcolm Tredinnick / CC BY 2.0 https://creativecommons.org/licenses/by/2.0/ / https://commons.wikimedia.org/wiki/File:Parliament_House_Canberra_from_above.jpg （加工：トリミング・ズーム・字幕）
 - メルボルン中心部とヤラ川の空撮（北東向き）：David Wallace / CC BY 2.0 https://creativecommons.org/licenses/by/2.0/ / https://commons.wikimedia.org/wiki/File:Melbourne_skyline_on_14_September_2013.jpg （加工：トリミング・ズーム・字幕）
@@ -47,17 +47,16 @@
 - フォッグ・ダム保護区（ノーザンテリトリー、アデレード川の氾濫原）の雨季の湿地：Stephen Michael Barnett / CC BY 2.0 https://creativecommons.org/licenses/by/2.0/ / https://commons.wikimedia.org/wiki/File:Fogg_Dam_in_January_2008.jpg （加工：トリミング・ズーム・字幕）
 - ビクトリア州コールドストリーム（ヤラ・バレー）のぶどう畑と農地の空撮：Bob Tan / CC BY 4.0 https://creativecommons.org/licenses/by/4.0/ / https://commons.wikimedia.org/wiki/File:Aerial_panorama_of_Coldstream_with_the_St_Hubert_Vineyard_in_the_middle_of_the_frame._March_2023.jpg （加工：トリミング・ズーム・字幕）
 - カマイ・ボタニー湾国立公園のインスクリプション・ポイントから見たボタニー湾（沖に貨物船）：Philip Terry Graham / CC BY 2.0 https://creativecommons.org/licenses/by/2.0/ / https://commons.wikimedia.org/wiki/File:View_across_Botany_Bay_from_Inscription_Point.jpg （加工：トリミング・ズーム・字幕）
-- 水彩画「Sydney Cove, Port Jackson 1788」（ウィリアム・ブラッドリー画）：William Bradley / パブリックドメイン / https://commons.wikimedia.org/wiki/File:Sydney_Cove_Port_Jackson_1788.jpg （加工：トリミング・ズーム・字幕）
+- 水彩画「Sydney Cove, Port Jackson 1788」（ウィリアム・ブラッドリー画）：William Bradley / パブリックドメイン（所蔵：ニューサウスウェールズ州立図書館 ミッチェル図書館）/ https://commons.wikimedia.org/wiki/File:Sydney_Cove_Port_Jackson_1788.jpg （加工：トリミング・ズーム・字幕）
 - 今のシドニー・コーブ（サーキュラー・キー）：Radosław Botev / CC BY 3.0 pl https://creativecommons.org/licenses/by/3.0/pl/ / https://commons.wikimedia.org/wiki/File:Circular_Quay_(4).jpg （加工：トリミング・ズーム・字幕）
-- 先住民の岩の線刻画（ガリガル国立公園の Engravings Track、シドニー北部）：Sardaka / CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/（GFDL との二重ライセンス） / https://commons.wikimedia.org/wiki/File:(1)Engravings_Track008.jpg （加工：トリミング・ズーム・字幕）
 - シドニー西部パラマッタ方面の住宅地と高速道路の空撮：Beau Giles / CC BY 2.0 https://creativecommons.org/licenses/by/2.0/ / https://commons.wikimedia.org/wiki/File:Looking_towards_Parramatta_aerial.jpg （加工：トリミング・ズーム・字幕）
-- キャンベラ設計競技へのグリフィンの応募図：Walter Burley Griffin（ファイル頁の作者欄は空欄、説明文の記載による） / パブリックドメイン / https://commons.wikimedia.org/wiki/File:Canberra_plan-WBG.jpg （加工：トリミング・ズーム・字幕）
+- キャンベラ設計競技へのグリフィンの応募図：Walter Burley Griffin（ファイル頁の作者欄は空欄、説明文の記載による） / パブリックドメイン（所蔵：オーストラリア国立公文書館）/ https://commons.wikimedia.org/wiki/File:Canberra_plan-WBG.jpg （加工：トリミング・ズーム・字幕）
 - マウント・エインズリー展望台から見たキャンベラ：Orion Kahza / CC0 https://creativecommons.org/publicdomain/zero/1.0/ / https://commons.wikimedia.org/wiki/File:Canberra_from_Mount_Ainslie_Lookout.jpg （加工：トリミング・ズーム・字幕）
 - クイーンズランド州タルドラ（Taldora）の牛（赤土の放牧地）：Kerry Raymond / CC BY 4.0 https://creativecommons.org/licenses/by/4.0/ / https://commons.wikimedia.org/wiki/File:Cattle,_Taldora,_Queensland,_June_2019.jpg （加工：トリミング・ズーム・字幕）
 - 西オーストラリア州カリジニ国立公園の滝と赤い岩（デイルズ渓谷のフォーテスキュー滝と見られる）：Phil Whitehouse from London, United Kingdom / CC BY 2.0 https://creativecommons.org/licenses/by/2.0/ / https://commons.wikimedia.org/wiki/File:Karijini_National_Park_(2052476670).jpg （加工：トリミング・ズーム・字幕）
 - シドニー空港（キングスフォード・スミス）とボタニー湾の空撮：Andrew Harvey / CC BY 2.0 https://creativecommons.org/licenses/by/2.0/ / https://commons.wikimedia.org/wiki/File:Sydney_Airport_(Kingsford_Smith)_-_aerial_view.jpg （加工：トリミング・ズーム・字幕）
 - メルボルンの通勤電車（メトロ・トレインズ・メルボルンの X'Trapolis 100）：Esc.Trains / CC BY 4.0 https://creativecommons.org/licenses/by/4.0/ / https://commons.wikimedia.org/wiki/File:Metro_Trains_Melbourne_X%27Trapolis_100_At_Union_Station_Platform_1.jpg （加工：トリミング・ズーム・字幕）
-- シドニー湾（ポートジャクソン）の空撮：Tim Starling / CC BY 2.0 https://creativecommons.org/licenses/by/2.0/ / https://commons.wikimedia.org/wiki/File:Sydney_Harbour_aerial.jpg （加工：トリミング・ズーム・字幕）
+- シドニー湾（ポートジャクソン）の空撮：Tim Starling（2013年 Martin Kraft が色補正・トリミングした版）/ CC BY 2.0 https://creativecommons.org/licenses/by/2.0/ / https://commons.wikimedia.org/wiki/File:Sydney_Harbour_aerial.jpg （加工：トリミング・ズーム・字幕）
 
 ■ 音声
 VOICEVOX:雀松朱司
@@ -65,6 +64,6 @@ VOICEVOX:雀松朱司
 ※ 章の時刻は書き出した動画で最終確認する。⚠・⏳ の出典（`01_research.md`）は公開前に公式ページで確認する。
 
 ■ 公開前の未解決事項（2026-11-07 時点。公開はしていない）
-- 岩の線刻の写真（Sardaka）は CC BY-SA 4.0。動画に入れた場合の継承条件（同じライセンスでの提供）をどう扱うか未決定。代わりの CC BY 素材は見つかっていない
-- 衛星画像（Blue Marble）の撮影年・版は未確認。v3 で使った Blue Marble Next Generation（2004年1月）の高解像度版への差し替えも未実施
-- 出典のうち TANK のページ（Museums of History NSW）、憲法 第125条の条文、現行の ABS の都市圏の境界（シドニー都市圏がセントラルコーストを含むこと）は、公式本文で未確認。Sydney Water・NGV（公式PDF）・PEO は 2026-11-07 に Fox（Codex側）が公式本文で確認済み（`01_research.md`）
+- 衛星画像：NASA の原画像・版・年月・使用条件を確定できていない。NASA の公式配布ページの画像への差し替えは、この環境から NASA の配布元に接続できず未実施
+- 出典：現行の ABS の都市圏の対応（ASGS Edition 3 の Allocation files で SA4 102 Central Coast → GCCSA 1GSYD Greater Sydney）は未確認。TANK の元ページは未確認（同じ事実は Sydney Water の公式PDFで確認済み）
+- v2 で使っていた CC BY-SA 4.0 の写真（岩の線刻）は v2.1 で使うのをやめた（位置図に置き換え）
