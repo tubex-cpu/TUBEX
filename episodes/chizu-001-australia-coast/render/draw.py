@@ -73,7 +73,7 @@ def wrap(s, size, maxw, weight="700Bold"):
 def panel(img, box, fill=(8, 14, 28), alpha=0.72, radius=18, outline=None):
     layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
     ImageDraw.Draw(layer).rounded_rectangle(box, radius=radius, fill=fill + (int(255 * alpha),),
-                                            outline=(outline + (220,)) if outline else None, width=3 if outline else 0)
+                                            outline=(outline + (int(220 * min(1.0, alpha * 1.25)),)) if outline else None, width=3 if outline else 0)
     img.alpha_composite(layer)
 
 
