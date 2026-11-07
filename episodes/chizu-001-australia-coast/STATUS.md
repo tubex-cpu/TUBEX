@@ -54,3 +54,9 @@
 - 記録：`audit_v2.md`（修正ごとの対応・検査・未確認）、`shotlist_v2.md`、`subtitles_v2.json`・`.srt`、`06c_assets.md`、`01_research.md`、`07_description.md`
 - 未確認：通常速度での視聴・試聴、出典3件（TANK のページ・憲法の条文・現行の ABS 境界）、Blue Marble の版、CC BY-SA 写真の扱い
 - サムネイル：Codex 担当（未作成）
+
+## v2.1（2026-11-07、権利・出典・帰属の修正）
+- 状態：**独立の再レビュー待ち**。完成・公開可にはしていない。公開しない
+- 変更：CC BY-SA の写真（岩の線刻）をシドニー湾の位置図に置換、写真21の版と画面クレジット、資料の所蔵館名、拡大地図の海岸線の注記、軽量版は音声を再圧縮しない
+- フル版 sha256 24c85709…（197,975,528 バイト）／軽量版 `preview.mp4` sha256 500c2915…。v2（eb6d1be）のフル版は `render/out/broken/full_v2_eb6d1be.mp4`
+- 残件：Blue Marble の原典（NASA の配布元に 403 で接続できず差し替え未実施）、ABS の xlsx、TANK の元ページ、通常速度での視聴・試聴、サムネイル（Codex）
