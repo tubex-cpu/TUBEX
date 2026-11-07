@@ -67,3 +67,13 @@
   - NASA Blue Marble（衛星合成画像・NASA の著作物のためパブリックドメイン）：npm パッケージ three-globe 2.45.6 の example に同梱の `earth-blue-marble.jpg`（4096×2048）。**撮影年・版はこのファイルからは確認できていない**。v3 で使った Blue Marble Next Generation（2004年1月）の高解像度版は、Wikimedia Commons の利用制限で今回は取得できなかった
 - **フォント**：Noto Sans JP（SIL Open Font License 1.1）
 - **音声**：VOICEVOX:雀松朱司。BGM は書き出しプログラム（`render/mix.py`）で合成したもので、第三者の音源は使っていない
+
+## v2 の追加・変更（2026-11-07、Claude）
+| 番号 | 絵コンテの場面 | ファイル名 | 写っているもの（場所） | 作者 | 撮影・制作年 | ライセンス | 元ページURL | 加工 | 目視確認 |
+|---|---|---|---|---|---|---|---|---|---|
+| 21 | S09（ポートジャクソンへ進む） | real_21_port_jackson_aerial.jpg | シドニー湾（ポートジャクソン）の空撮。中心部・ノースショア・東部郊外 | Tim Starling | 記録なし（Commons の説明：Newcastle〜Melbourne 便の機内から撮影） | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Sydney_Harbour_aerial.jpg | トリミング・ズーム・字幕。1280px の縮小版を使用（元は 1600px） | 済（2026-11-07） |
+
+- **同じ元写真の重複をなくした**：19 `real_19_container_port.jpg`（港）は 17（空港）と同じ1枚からの切り出しのため、v2 では使わない。S08 は地図と図解、S09 のポートジャクソンは 21 に替えた
+- **1素材1回**：v1 で S03 と S11 の2回使った 01 メルボルンは S03 だけにした。S11 は循環図で説明する
+- **確認したが使わない**：Commons「Sydney , Martin Place (24367629656).jpg」（Francis Vallance, CC BY 2.0）＝夜で人がいない広場の写真で「働き手」の説明に合わないため。アデレードの写真はすべて CC BY-SA だったため使わず、S04 は正確な位置図（Natural Earth）に替えた
+- **写真のカットは3秒以内**（`render/render_v2.py` が自動で上限をかける）。当時の水彩画（08）と設計図（12）は「資料」として、読み上げに合わせて長く見せる（根拠は `shotlist_v2.md`）
