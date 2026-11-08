@@ -120,7 +120,7 @@ def segments(sub):
             i = sub.find(w)
             while i >= 0:
                 # skip a match that is the tail of a longer word (e.g. 近い inside 最近いい)
-                inside = i > 0 and "\u4e00" <= sub[i - 1] <= "\u9fff"
+                inside = i > 0 and ("\u4e00" <= sub[i - 1] <= "\u9fff" or sub[i - 1] in "0123456789.０１２３４５６７８９")
                 if not inside and not any(a < i + len(w) and i < b for a, b, _ in hits):
                     hits.append((i, i + len(w), c))
                 i = sub.find(w, i + len(w))

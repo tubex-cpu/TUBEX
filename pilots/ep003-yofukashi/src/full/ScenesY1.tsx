@@ -525,8 +525,8 @@ const S24: React.FC<SceneProps> = ({f, T}) => {
       <AbsoluteFill style={{background: '#000'}}>
         <Still src="bed" f={f - LT(T, 's24', 8)} dur={400} dark={0.65} />
         <PhonePOV f={f} flick={24} x={1180} y={60} scale={0.9} clock="0:30" />
-        <div style={{position: 'absolute', left: 150, top: 150, display: 'flex', alignItems: 'center', gap: 20}}><Clock text="0:00〜2:00" x={0} y={0} size={80} /></div>
-        <Pop f={f} at={LT(T, 's24', 9)} style={{position: 'absolute', left: 150, top: 330, fontFamily: FONT, fontSize: 56, fontWeight: 900, color: '#ff4d3d', width: 860}}>お酒を飲んだ人の頭と 同じくらい鈍っている</Pop>
+        <div style={{position: 'absolute', left: 150, top: 150, width: 900, height: 140}}><div style={{position: 'absolute', left: 0, top: 0, whiteSpace: 'nowrap'}}><Clock text="0:00〜2:00" x={0} y={0} size={72} /></div></div>
+        <Pop f={f} at={LT(T, 's24', 9)} style={{position: 'absolute', left: 150, top: 360, fontFamily: FONT, fontSize: 56, fontWeight: 900, color: '#ff4d3d', width: 860}}>お酒を飲んだ人の頭と 同じくらい鈍っている</Pop>
         <Vignette />
       </AbsoluteFill>
     );
