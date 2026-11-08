@@ -124,7 +124,7 @@ export const JudgeEntrance = () => (
 			<NamePlate />
 		</Beat>
 		<Beat name="今夜の問い" captions={c} from={2} to={3}>
-			<Photo id="PHOTO_JUDGE" move="in" label="巨大な剣は、何のため？" />
+			<Photo id="tomio-zenkei-2" move="in" label="巨大な剣は、何のため？" />
 		</Beat>
 		<Beat name="9の手がかり" captions={c} from={4}>
 			<ClueRow />

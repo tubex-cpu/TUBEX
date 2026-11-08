@@ -1,7 +1,7 @@
 import type React from 'react';
 import {interpolate, useCurrentFrame} from 'remotion';
 import {colors} from '../theme';
-import {easeInOut, easeOut, Reveal, svgGothic, svgMincho} from './Cinema';
+import {easeInOut, Reveal, svgGothic, svgMincho} from './Cinema';
 import {Canvas} from './IzumoKit';
 
 // 富雄丸山古墳判決：図解
@@ -42,8 +42,8 @@ const Person: React.FC<{readonly x: number; readonly y: number; readonly h: numb
 // 冒頭・第3の手がかり：剣と人の背丈（1cm = s ピクセル）
 export const SwordScale: React.FC<{readonly withOld?: boolean}> = ({withOld = true}) => {
 	const frame = useCurrentFrame();
-	const s = 5.4;
-	const ground = 860;
+	const s = 3.7;
+	const ground = 880;
 	const draw = interpolate(frame, [10, 70], [0, 1], easeInOut);
 	return (
 		<Canvas tone="ember">
@@ -83,8 +83,8 @@ export const SwordScale: React.FC<{readonly withOld?: boolean}> = ({withOld = tr
 // 第3の手がかり：剣の各部の長さ（鉄身237・刃216・柄をつけて254・鞘に納めて285）
 export const SwordParts: React.FC = () => {
 	const frame = useCurrentFrame();
-	const s = 5.6;
-	const x0 = 220;
+	const s = 4.6;
+	const x0 = 200;
 	const y = 560;
 	const rows = [
 		{label: '刃', len: 216, from: 21, at: 20, color: '#ffd0a8'},
@@ -122,11 +122,12 @@ export const KofunCompare: React.FC = () => {
 	const frame = useCurrentFrame();
 	const m = 1.45; // 1mあたりのピクセル
 	const cy = 610;
+	// 前方後円墳：後ろの円（直径は長さの約半分）と、前に向かって広がる台形
 	const keyhole = (len: number) => {
-		const r = len * 0.27;
-		const neck = len * 0.16;
-		const front = len * 0.32;
-		return `M 0 ${-r} A ${r} ${r} 0 1 0 0 ${r} L ${len - 2 * r} ${neck} L ${len - r * 0.95} ${front} L ${len - r * 0.95} ${-front} L ${len - 2 * r} ${-neck} Z`;
+		const r = len * 0.25;
+		const neck = r * 0.62;
+		const front = r * 1.25;
+		return `M ${r * 0.8} ${-neck} A ${r} ${r} 0 1 0 ${r * 0.8} ${neck} L ${len - r} ${front} L ${len - r} ${-front} Z`;
 	};
 	return (
 		<Canvas tone="moss">
@@ -149,7 +150,7 @@ export const KofunCompare: React.FC = () => {
 				</text>
 			</Reveal>
 			<g opacity={interpolate(frame, [50, 70], [0, 1], clamp)}>
-				<g transform={`translate(${760 + 486 * 0.27 * m} ${cy}) scale(${m})`}>
+				<g transform={`translate(${760 + 486 * 0.25 * m} ${cy}) scale(${m})`}>
 					<path d={keyhole(486)} fill="#3e5631" stroke="#a8c48a" strokeWidth={2} />
 				</g>
 				<text x={760 + 243 * m} y={cy + 230} textAnchor="middle" {...svgMincho(38, '#e6efd8')}>
@@ -180,10 +181,10 @@ export const DiameterUpdate: React.FC = () => {
 				{Math.round(grow)}m
 			</text>
 			<text x={420} y={330} {...svgGothic(34, '#c9d3e3', 900)}>
-				1972年の報告　約86m
+				{'1972年の報告　約86m'}
 			</text>
 			<text x={1500} y={330} textAnchor="end" {...svgGothic(34, colors.goldSoft, 900)} opacity={interpolate(frame, [100, 120], [0, 1], clamp)}>
-				2018年度の発掘　109m
+				{'2018年度の発掘　109m'}
 			</text>
 		</Canvas>
 	);
@@ -228,10 +229,12 @@ export const KofunPlan: React.FC = () => {
 };
 
 // 第3・5の手がかり：粘土槨の断面（棺を包む粘土の中に、剣と鏡）
-export const ClayCasing: React.FC = () => {
+export const ClayCasing: React.FC<{readonly mirrorFocus?: boolean}> = ({mirrorFocus = false}) => {
 	const frame = useCurrentFrame();
+	const zoom = mirrorFocus ? interpolate(frame, [20, 110], [1, 1.9], easeInOut) : 1;
 	return (
 		<Canvas tone="ember">
+			<g transform={`translate(580 680) scale(${zoom}) translate(-580 -680)`}>
 			<rect x={0} y={760} width={1920} height={320} fill="#3e2f20" />
 			<Reveal at={6}>
 				<path d="M 360 760 L 360 640 Q 960 380 1560 640 L 1560 760 Z" fill="#8a7458" />
@@ -253,9 +256,10 @@ export const ClayCasing: React.FC = () => {
 			</g>
 			<g opacity={interpolate(frame, [76, 92], [0, 1], clamp)}>
 				<path d="M 500 690 L 560 640 L 640 640 L 660 700 Z" fill="#5f8f7c" stroke="#9cc7b1" strokeWidth={3} />
-				<text x={380} y={860} {...svgMincho(40, '#9cc7b1')}>
+				<text x={380} y={840} opacity={mirrorFocus ? 0 : 1} {...svgMincho(40, '#9cc7b1')}>
 					盾形銅鏡（斜めに立てかけ）
 				</text>
+			</g>
 			</g>
 		</Canvas>
 	);
@@ -397,6 +401,47 @@ export const MirrorMatch: React.FC = () => {
 				</text>
 				<text x={0} y={215} textAnchor="middle" {...svgMincho(40, '#fff3d6')} opacity={fit}>
 					ほぼ一致
+				</text>
+			</g>
+		</Canvas>
+	);
+};
+
+// 第5の手がかり：盾形銅鏡（長さ64cm・幅31cm・重さ5.7kg）。形は説明用の模式図
+export const ShieldMirror: React.FC = () => {
+	const frame = useCurrentFrame();
+	const s = 9; // 1cmあたりのピクセル
+	const w = 31 * s;
+	const h = 64 * s;
+	const cx = 760;
+	const top = 260;
+	const shape = `M ${cx - w * 0.42} ${top} L ${cx + w * 0.42} ${top} L ${cx + w / 2} ${top + h * 0.5} L ${cx + w * 0.42} ${top + h} L ${cx - w * 0.42} ${top + h} L ${cx - w / 2} ${top + h * 0.5} Z`;
+	const draw = interpolate(frame, [8, 60], [0, 1], easeInOut);
+	return (
+		<Canvas tone="bronze">
+			<path d={shape} fill="#3d6b5c" stroke="#9cc7b1" strokeWidth={6} pathLength={1} strokeDasharray={`${draw} 1`} fillOpacity={draw} />
+			{[0.28, 0.72].map((k) => (
+				<g key={k} opacity={interpolate(frame, [50, 70], [0, 1], clamp)}>
+					<circle cx={cx} cy={top + h * k} r={w * 0.3} fill="none" stroke="#cfe8dc" strokeWidth={4} />
+					<circle cx={cx} cy={top + h * k} r={w * 0.12} fill="#9cc7b1" />
+				</g>
+			))}
+			<g opacity={interpolate(frame, [70, 90], [0, 1], clamp)}>
+				<line x1={cx + w / 2 + 50} y1={top} x2={cx + w / 2 + 50} y2={top + h} stroke="#fff3d6" strokeWidth={4} />
+				<text x={cx + w / 2 + 80} y={top + h / 2} {...svgMincho(56, '#fff3d6')}>
+					64cm
+				</text>
+				<text x={cx} y={top + h + 70} textAnchor="middle" {...svgMincho(48, '#fff3d6')}>
+					幅31cm
+				</text>
+				<text x={1420} y={460} {...svgMincho(64, colors.goldSoft)}>
+					5.7kg
+				</text>
+				<text x={1420} y={540} {...svgGothic(32, '#cfe8dc', 900)}>
+					日本で初めての盾形の銅鏡
+				</text>
+				<text x={1420} y={600} {...svgGothic(28, '#9fb0c8', 700)}>
+					文様は上下2つの鼉龍文（模式図）
 				</text>
 			</g>
 		</Canvas>

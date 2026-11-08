@@ -146,7 +146,8 @@ export const Figures: React.FC<{readonly figs: readonly Fig[]; readonly tone?: T
 				if (m && !f.value.includes('?')) {
 					const target = parseFloat(m[1]);
 					const v = interpolate(frame, [at, at + 40], [0, target], easeOut);
-					shown = (Number.isInteger(target) ? Math.round(v).toString() : v.toFixed(1)) + m[2];
+					const dec = (m[1].split('.')[1] ?? '').length;
+					shown = v.toFixed(dec) + m[2];
 				}
 				const cx = 100 + cw * (i + 0.5);
 				return (

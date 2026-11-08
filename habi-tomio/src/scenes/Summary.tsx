@@ -29,10 +29,10 @@ export const Summary = () => {
 				</Stage>
 			</Beat>
 			<Beat name="守るための剣" captions={c} from={10} to={11}>
-				<Photo id="PHOTO_SUM1" move="out" label="守るための剣" />
+				<Photo id="tomio-funkyu" move="out" label="守るための剣" />
 			</Beat>
 			<Beat name="4世紀の奈良" captions={c} from={12}>
-				<Photo id="PHOTO_SUM2" move="in" label="土の中の証拠が語ること" />
+				<Photo id="tomio-fukiishi2" move="in" label="土の中の証拠が語ること" />
 			</Beat>
 		</SceneFrame>
 	);

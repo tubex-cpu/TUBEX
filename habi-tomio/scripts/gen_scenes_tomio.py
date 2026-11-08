@@ -69,7 +69,8 @@ for scene, (label, title, beats) in S.items():
         imports.append("import {Beat, captionFrame} from '../components/Beat';")
     else:
         imports.append("import {Beat} from '../components/Beat';")
-    imports.append("import {Stage} from '../components/Cinema';")
+    if any(b[2] == 'a' for b in beats):
+        imports.append("import {Stage} from '../components/Cinema';")
     for m in sorted(imps):
         if imps[m]:
             imports.append(f"import {{{', '.join(sorted(imps[m]))}}} from '../components/{m}';")
