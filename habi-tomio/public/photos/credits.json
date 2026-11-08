@@ -790,5 +790,38 @@
    2400,
    1350
   ]
+ },
+ "tomio-zenkei-2": {
+  "file": "tomio-zenkei-2.jpg",
+  "title": "Tomio Maruyama Kofun, zenkei.jpg",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Tomio_Maruyama_Kofun,_zenkei.jpg",
+  "size": [
+   2400,
+   1593
+  ]
+ },
+ "tomio-funkyu": {
+  "file": "tomio-funkyu.jpg",
+  "title": "Tomio Maruyama Kofun, funkyu.jpg",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Tomio_Maruyama_Kofun,_funkyu.jpg",
+  "size": [
+   2400,
+   1596
+  ]
+ },
+ "tomio-fukiishi2": {
+  "file": "tomio-fukiishi2.jpg",
+  "title": "Tomio Maruyama Kofun, fukiihi-2.jpg",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Tomio_Maruyama_Kofun,_fukiihi-2.jpg",
+  "size": [
+   2400,
+   1596
+  ]
  }
 }
