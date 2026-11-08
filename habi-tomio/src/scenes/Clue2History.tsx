@@ -16,11 +16,11 @@ export const Clue2History = () => {
 			<Beat name="平穏ではなかった歴史" captions={c} from={0} to={1}>
 				<Photo id="tomio-survey-a" move="in" label="平穏ではなかった歴史" />
 			</Beat>
-			<Beat name="持ち出された品" captions={c} from={2} to={2}>
-				<Photo id="kajiya-ishi" move="in" label="持ち出された品" />
+			<Beat name="京都国立博物館の所蔵に" captions={c} from={2} to={2}>
+				<Photo id="knm-3" move="in" label="京都国立博物館の所蔵に" />
 			</Beat>
 			<Beat name="1972年、団地の工事" captions={c} from={3} to={4}>
-				<Photo id="knm-3" move="in" label="1972年、団地の工事" />
+				<Photo id="tomigaoka" move="in" label="1972年、団地の工事" />
 			</Beat>
 			<Beat name="およそ何メートル？" captions={c} from={5} to={6}>
 				<Stage label="およそ何メートル？">
@@ -42,7 +42,7 @@ export const Clue2History = () => {
 				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 13, 14, fps)} />
 			</Beat>
 			<Beat name="あの巨大な剣は？" captions={c} from={16}>
-				<Photo id="tomio-survey-u" move="in" label="あの巨大な剣は？" />
+				<Photo id="yanai-tekken" move="in" label="あの巨大な剣は？" />
 			</Beat>
 		</SceneFrame>
 	);

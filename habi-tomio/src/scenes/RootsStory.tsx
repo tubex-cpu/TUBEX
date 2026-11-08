@@ -14,7 +14,7 @@ export const RootsStory = () => {
 				<Photo id="ishimakura" move="in" label="てっぺんに眠った人物" />
 			</Beat>
 			<Beat name="造り出しに眠った人物" captions={c} from={3} to={5}>
-				<Photo id="ebino-plateau" move="in" label="造り出しに眠った人物" />
+				<Photo id="tomio-nendokaku" move="in" label="造り出しに眠った人物" />
 			</Beat>
 			<Beat name="守るための剣" captions={c} from={6} to={6}>
 				<Photo id="hirata-tekken-w" move="scroll" label="守るための剣" />

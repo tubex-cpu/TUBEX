@@ -30,7 +30,7 @@ export const Clue1Size = () => {
 				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 10, 11, fps)} />
 			</Beat>
 			<Beat name="昔から知られていた？" captions={c} from={13}>
-				<Photo id="tomigaoka" move="in" label="昔から知られていた？" />
+				<Photo id="daisen-balloon" move="in" label="昔から知られていた？" />
 			</Beat>
 		</SceneFrame>
 	);

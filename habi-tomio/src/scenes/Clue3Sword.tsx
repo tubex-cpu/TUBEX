@@ -48,7 +48,7 @@ export const Clue3Sword = () => {
 				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 16, 17, fps)} />
 			</Beat>
 			<Beat name="どこで生まれた？" captions={c} from={19}>
-				<Photo id="yanai-tekken" move="in" label="どこで生まれた？" />
+				<Photo id="ebino-plateau" move="in" label="どこで生まれた？" />
 			</Beat>
 		</SceneFrame>
 	);

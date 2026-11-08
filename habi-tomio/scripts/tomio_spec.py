@@ -4,7 +4,7 @@
 S = {
  'Intro': ('', '', [
   (0, 0, 'p', 'tomio-michinoeki', '住宅街の丘の上', 'in'),
-  (1, 1, 'p', 'tomio-nendokaku', '2023年1月', 'in'),
+  (1, 1, 'p', 'tomio-survey-u', '2023年1月', 'in'),
   (2, 4, 'a', '<SwordScale />', '人の背丈を超える剣？', False),
   (5, 5, 'p', 'daryu-yukino', '盾の形の、銅の鏡', 'in'),
   (6, 6, 'p', 'konda-aerial', '誰が、何のために？', 'in'),
@@ -20,18 +20,18 @@ S = {
   (4, 7, 'a', '<KofunCompare />', '古墳全体で比べると？', False),
   (8, 9, 'p', 'goshiki-aerial', 'とてつもない大きさ', 'in'),
   (10, None, 'v', 'wrong'),
-  (13, None, 'p', 'tomigaoka', '昔から知られていた？', 'in'),
+  (13, None, 'p', 'daisen-balloon', '昔から知られていた？', 'in'),
  ]),
  'Clue2History': ('第2の手がかり', '巨大な古墳だと、昔から知られていた？', [
   (0, 1, 'p', 'tomio-survey-a', '平穏ではなかった歴史', 'in'),
-  (2, 2, 'p', 'kajiya-ishi', '持ち出された品', 'in'),
-  (3, 4, 'p', 'knm-3', '1972年、団地の工事', 'in'),
+  (2, 2, 'p', 'knm-3', '京都国立博物館の所蔵に', 'in'),
+  (3, 4, 'p', 'tomigaoka', '1972年、団地の工事', 'in'),
   (5, 6, 'a', "<Figures figs={[{value: '86', label: 'm', small: '1972年の報告'}]} tone='night' />", 'およそ何メートル？', False),
   (7, 8, 'p', 'lidar-plane', '2017年度、調査が始まる', 'in'),
   (9, 9, 'p', 'halo', '空からレーザーで', 'in'),
   (10, 12, 'a', '<DiameterUpdate />', '本当の大きさは？', False),
   (13, None, 'v', 'wrong'),
-  (16, None, 'p', 'tomio-survey-u', 'あの巨大な剣は？', 'in'),
+  (16, None, 'p', 'yanai-tekken', 'あの巨大な剣は？', 'in'),
  ]),
  'Clue3Sword': ('第3の手がかり', '巨大な剣は、戦いの武器だった？', [
   (0, 1, 'a', '<KofunPlan />', '古墳から張り出した場所', False),
@@ -43,7 +43,7 @@ S = {
   (12, 13, 'p', 'chasuri-dakoken', '何のための剣？', 'in'),
   (14, 15, 'p', 'inariyama-sword', '金属の工芸品の最高傑作？', 'in'),
   (16, None, 'v', 'wrong'),
-  (19, None, 'p', 'yanai-tekken', 'どこで生まれた？', 'in'),
+  (19, None, 'p', 'ebino-plateau', 'どこで生まれた？', 'in'),
  ]),
  'Clue4South': ('第4の手がかり', '蛇行剣は、南九州で生まれた？', [
   (0, 1, 'p', 'chasuri-mirror', 'ほかの古墳からも', 'in'),
@@ -113,7 +113,7 @@ S = {
  'RootsStory': ('', '', [
   (0, 1, 'p', 'nara-basin-w', '手がかりを、つなぐと', 'scroll'),
   (2, 2, 'p', 'ishimakura', 'てっぺんに眠った人物', 'in'),
-  (3, 5, 'p', 'ebino-plateau', '造り出しに眠った人物', 'in'),
+  (3, 5, 'p', 'tomio-nendokaku', '造り出しに眠った人物', 'in'),
   (6, 6, 'p', 'hirata-tekken-w', '守るための剣', 'scroll'),
   (7, 8, 'p', 'nara-city-w', '謎の4世紀', 'scroll'),
   (9, 10, 'p', 'yata-hills', '名もない有力者たち', 'in'),
