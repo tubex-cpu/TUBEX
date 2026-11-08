@@ -17,7 +17,10 @@ sys.path.insert(0, str(EP / "scripts"))
 from make_narration import READ, SPEAKER, VV  # noqa: E402
 
 SIZE, MAXW, MAXLINES = 72, 1640, 2
-SPEED = json.loads((EP / "audio/timings.json").read_text())["speed"]
+import os
+AUD = EP / os.environ.get("SUB_AUDIO_DIR", "audio")          # v2.3: SUB_AUDIO_DIR=audio_v2_3 SUB_OUT=subtitles_v2_3
+SUB_OUT = os.environ.get("SUB_OUT", "subtitles_v2")
+SPEED = json.loads((AUD / "timings.json").read_text())["speed"]
 
 
 def disp(s):
@@ -101,7 +104,7 @@ def layout(phr):
 
 
 def main():
-    tim = json.loads((EP / "audio/timings.json").read_text())
+    tim = json.loads((AUD / "timings.json").read_text())
     out = []
     for sc in tim["scenes"]:
         for se in sc["sentences"]:
@@ -128,12 +131,12 @@ def main():
         else:
             res.append(c)
     out = res
-    (EP / "subtitles_v2.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))
+    (EP / f"{SUB_OUT}.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))
     def ts(x):
         h, r = divmod(x, 3600); m, s = divmod(r, 60)
         return f"{int(h):02d}:{int(m):02d}:{int(s):02d},{int(round((s % 1) * 1000)):03d}"
     srt = "".join(f"{i + 1}\n{ts(c['start'])} --> {ts(c['end'])}\n" + "\n".join(c["lines"]) + "\n\n" for i, c in enumerate(out))
-    (EP / "subtitles_v2.srt").write_text(srt)
+    (EP / f"{SUB_OUT}.srt").write_text(srt)
     print(len(out), "cards; max lines", max(len(c["lines"]) for c in out), "; shortest", min(c["end"] - c["start"] for c in out))
 
 
