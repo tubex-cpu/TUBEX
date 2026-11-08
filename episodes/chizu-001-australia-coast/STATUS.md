@@ -1,6 +1,6 @@
 # STATUS：chizu-001-australia-coast
 
-- チャンネル：地図×雑学（仮称「地図の向こうの理由」、名前は未定）。2026-11-03 に社長の指示で Codex から Claude へ引き継いだ
+- チャンネル：地球の事情（2026-11-08 正式名称。旧仮称「地図の向こうの理由」）。2026-11-03 に社長の指示で Codex から Claude へ引き継いだ
 - 引き継ぎ資料：社長の Google ドライブのフォルダ（https://drive.google.com/drive/folders/1nUSH9gPUnItM4LQzG_9U9m3pv3wtJtPw）。元の台本・素材は変更していない
 
 | 工程 | 状態 | 成果物 |
@@ -67,3 +67,13 @@
 - フル版 `render/out/chizu-001-australia-coast_full_v2_2.mp4`（sha256 06310311…）／軽量版 `preview.mp4`（sha256 6687bf74…）。v2.1 は `…_full_v2_1.mp4`・`render/out/preview_v2_1.mp4`
 - 書き出し：影響する10秒の区切り25個だけ（下地を使う26カット・146.4秒＋クロスフェード）。残り15個は v2.1 の区切り（画素一致を確認）
 - 残件：TANK の元ページ、ABS の xlsx、通常速度での視聴・試聴、サムネイル（Codex）
+
+## v2.3（2026-11-08、正式チャンネル名「地球の事情」）
+- 状態：**社長の確認・独立の再レビュー待ち**。公開していない（YouTube への公開は社長の確認後）
+- フル版 `render/out/chizu-001-australia-coast_full_v2_3.mp4`（sha256 a0dd33e6…、git には入れない）／軽量版 `preview.mp4`（sha256 e639ecc6…）。v2.2 は `…_full_v2_2.mp4` に残す
+- 変更：チャンネル名の表示と S18 のナレーション・字幕だけ。地図・実写・構成は v2.2 のまま（社長「今の形のまま」）
+- 残件：通常速度での視聴・試聴、TANK の元ページ、ABS の xlsx、サムネイル（Codex）
+
+## サムネイル（2026-11-08）
+- 指示書 `06_thumbnail.md`（競合サムネ40枚を Claude が実見した分析・約束・素材の権利・NG）を作成し、Codex に依頼：https://github.com/tubex-cpu/TUBEX/pull/13#issuecomment-6717018606
+- 次：Codex のラフ3案 → Claude の監査 → 社長が方向を選ぶ → 完成版 → 監査
