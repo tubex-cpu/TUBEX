@@ -73,3 +73,7 @@
 - フル版 `render/out/chizu-001-australia-coast_full_v2_3.mp4`（sha256 a0dd33e6…、git には入れない）／軽量版 `preview.mp4`（sha256 e639ecc6…）。v2.2 は `…_full_v2_2.mp4` に残す
 - 変更：チャンネル名の表示と S18 のナレーション・字幕だけ。地図・実写・構成は v2.2 のまま（社長「今の形のまま」）
 - 残件：通常速度での視聴・試聴、TANK の元ページ、ABS の xlsx、サムネイル（Codex）
+
+## サムネイル（2026-11-08）
+- 指示書 `06_thumbnail.md`（競合サムネ40枚を Claude が実見した分析・約束・素材の権利・NG）を作成し、Codex に依頼：https://github.com/tubex-cpu/TUBEX/pull/13#issuecomment-6717018606
+- 次：Codex のラフ3案 → Claude の監査 → 社長が方向を選ぶ → 完成版 → 監査
