@@ -41,11 +41,11 @@ jobs:
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           # 取得した写真を退避し、ブランチの最新に合わせてから足し込む（credits.json は両方を合わせる）
           mkdir -p "$RUNNER_TEMP/new"
-          cp -r --parents habi-*/public/photos "$RUNNER_TEMP/new/"
+          cp -r --parents habi-izumo/public/photos "$RUNNER_TEMP/new/"
           for i in 1 2 3 4 5; do
             git fetch origin "${GITHUB_REF_NAME}"
             git reset -q --hard "origin/${GITHUB_REF_NAME}"
-            for dir in "$RUNNER_TEMP"/new/habi-*/public/photos; do
+            for dir in "$RUNNER_TEMP"/new/habi-izumo/public/photos; do
               dest="${dir#$RUNNER_TEMP/new/}"
               mkdir -p "$dest"
               cp -n "$dir"/*.jpg "$dest"/ 2>/dev/null || true
@@ -60,7 +60,7 @@ jobs:
           json.dump(merged, open(dest, 'w'), ensure_ascii=False, indent=1)
           PY
             done
-            git add habi-*/public/photos
+            git add habi-izumo/public/photos
             if git diff --cached --quiet; then echo "新しい写真はありません"; exit 0; fi
             git commit -q -m "写真を取得（GitHub Actions）"
             git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
