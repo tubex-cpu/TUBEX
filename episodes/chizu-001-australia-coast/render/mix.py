@@ -33,8 +33,13 @@ def pad(dur):
     return out / np.abs(out).max()
 
 
+import os
+NAR = os.environ.get("MIX_AUDIO_DIR", "audio")      # v2.3: MIX_AUDIO_DIR=audio_v2_3 MIX_OUT=mix_v2_3.wav
+MIX_OUT = os.environ.get("MIX_OUT", "mix.wav")
+
+
 def main():
-    nar = read(HERE.parent / "audio/narration.wav")
+    nar = read(HERE.parent / NAR / "narration.wav")
     dur = len(nar) / SR + 2.5
     bgm = pad(dur) * 10 ** (-27 / 20)
     n = np.zeros(int(dur * SR)); n[:len(nar)] = nar
@@ -45,7 +50,7 @@ def main():
     y = n + bgm * duck * fade
     y = y / max(1e-9, np.abs(y).max()) * 0.89
     st = np.stack([y, y], 1)
-    with wave.open(str(HERE / "out/mix.wav"), "wb") as w:
+    with wave.open(str(HERE / "out" / MIX_OUT), "wb") as w:
         w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR)
         w.writeframes((st * 32767).astype("<i2").tobytes())
 

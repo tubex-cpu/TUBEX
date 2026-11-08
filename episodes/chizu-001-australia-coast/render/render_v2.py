@@ -198,7 +198,7 @@ def vector_map(lon0, lat0, kmpp, ss=2):
             d.polygon(list(zip((W / 2 + x / kmpp) * ss, (H / 2 - y / kmpp) * ss)), fill=(122, 112, 86))
     im = im.resize((W, H), Image.LANCZOS)
     note_img = im.convert("RGBA")
-    note(note_img, "地図：Natural Earth（1:1000万）")
+    note(note_img, "地図：Natural Earth（1:1000万・海岸線は簡略化され、湾の細かい形は省略）")
     return note_img
 
 
@@ -357,11 +357,11 @@ def d_coast_section(img, t, d):
     dd = ImageDraw.Draw(img)
     gy = 780
     dd.rectangle((1180, gy, W, H), fill=(20, 70, 130, 255))
-    text(img, (1560, gy + 70), "太平洋", 44, anchor="mm", fill=(170, 210, 250))
+    text(img, (1560, gy - 50), "太平洋", 44, anchor="mm", fill=(170, 210, 250))
     mt = [(200, gy), (520, gy - 40), (820, gy - 330), (930, gy - 360), (1040, gy - 260), (1180, gy)]
     dd.polygon(mt + [(1180, H), (200, H)], fill=(90, 110, 80, 255))
     dd.rectangle((0, gy, 200, H), fill=(150, 120, 80, 255))
-    text(img, (300, gy + 70), "内陸", 44, anchor="mm")
+    text(img, (120, gy - 50), "内陸", 44, anchor="mm")
     text(img, (900, gy - 200), "山地", 44, anchor="mm")
     a = seg(t, 0.8, 3.0)
     arrow(img, (1700, gy - 160), (1100, gy - 300), color=(150, 210, 255), width=12, prog=a, alpha=min(1, a * 3))
@@ -678,7 +678,9 @@ def shots():
     add("S09", 3, "photo", sent=6, file="real_09_circular_quay.jpg", label="今のシドニー・コーブ")
     # S10
     add("S10", 10, "diag", fn=d_timeline, why="植民地化よりはるか前からの暮らしを年表で示す（2文）")
-    add("S10", 3, "photo", sent=2, file="real_10_rock_engraving.jpg", label="シドニー北部に残る、先住民の人々の岩の線刻")
+    add("S10", 3, "map", sent=2, lon=151.15, lat=-33.86, kmpp=0.2, move=False,
+        layers=[L_points([(151.265, -33.845, "シドニー湾（ポートジャクソン）", "l")], 0.0), L_caption("シドニー湾のまわりも", 0.1)],
+        why="v2.1：CC BY-SA の写真（岩の線刻）をやめ、シドニー湾のまわりの位置を地図で示す（特定の遺跡は示さない）")
     add("S10", 8, "map", sent=3, **AUSV, move=False, dim=0.35, layers=[L_caption("土地を奪われていった歴史", 0.5)], why="大陸全体の地図で、植民地の拡大と土地の喪失の話を受ける（2文）")
     # S11
     add("S11", 6, "map", **AUSV, move=False, layers=[L_dots(FIVE, 0, 0), L_caption("船の時代が終わっても、大きいまま", 0.3)], why="問い（なぜ大都市は大きいままか）を5都市の地図で示す")
