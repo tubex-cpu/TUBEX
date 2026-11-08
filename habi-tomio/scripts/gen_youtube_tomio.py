@@ -52,6 +52,7 @@ credits_full = '\n'.join('・' + cred[i].replace(' / Wikimedia Commons', '') for
 import json, collections
 cj = json.loads((ROOT / 'public/photos/credits.json').read_text())
 NAME = {
+    'Nankou Oronain (as36…': 'Nankou Oronain', 'ja:User:Sanjo': 'Sanjo',
     'そらみみ (Soramimi)': 'そらみみ', 'Gary Todd from Xinzheng, China': 'Gary Todd', 'Gary Lee Todd, Ph.D.': 'Gary Todd',
     'Hot cake syrup (talk)': 'Hot cake syrup', 'Original file is made by Ksiom, modified by Pekachu.': 'Ksiom, Pekachu',
     'Korea.net / Korean Culture and Information Service (Jeon Han)': 'Korea.net（Jeon Han）',
@@ -64,7 +65,7 @@ for i in ids:
     v = cj[i]
     lic = v['license']
     if lic in ('Public domain', 'CC0'):
-        if lic == 'CC0':
+        if lic == 'CC0' and v['artist'] != '作者不明':
             pd.append(NAME.get(v['artist'], v['artist']))
         continue
     n = NAME.get(v['artist'], v['artist'])
