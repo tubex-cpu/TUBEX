@@ -77,9 +77,9 @@ export const P = {
 	lima: [-77.043, -12.046],
 	quito: [-78.47, -0.18],
 	titicaca: [-69.4, -15.85],
-	coast: [-79.0, -8.1],
-	amazon: [-74.6, -8.5],
-	highland: [-70.8, -15.0],
+	coast: [-79.6, -7.2],
+	amazon: [-69.5, -9.5],
+	highland: [-76.5, -10.5],
 	otama: [140.358, 37.546],
 	tomioka: [141.006, 37.344],
 } as const satisfies Record<string, LL>;

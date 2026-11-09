@@ -1,4 +1,4 @@
-"""public/photos/credits.json から src/data/photos.ts を作る（富雄丸山古墳判決）。
+"""public/photos/credits.json から src/data/photos.ts を作る（マチュピチュ判決）。
   python3 scripts/gen_photos.py
 説明（desc）は写真リストを作ったときの表（scripts/photo-desc.json）を使う。"""
 import json, re
@@ -8,10 +8,10 @@ ROOT = Path(__file__).resolve().parent.parent
 cr = json.loads((ROOT / 'public/photos/credits.json').read_text())
 desc = json.loads((ROOT / 'scripts/photo-desc.json').read_text())
 # 縦長・極端な横長・地図は全体を見せる（contain）。人物の顔がある写真と地図は、テロップを下に置く
-CONTAIN = {'chikashiki-zu'}
+CONTAIN = {'map-gohring', 'map-1912', 'ng-cover-1913'}
 # 明るい地図は、夜の画面に合うよう色を反転させる
 FILTER = {}
-FACE = {'miko-seya', 'miko-koshikake', 'bujin-kamishiba', 'haniwa-kushitama'}
+FACE = {'pachacuti-brooklyn', 'pachacuti-statue', 'aguas-1', 'bingham-portrait', 'bingham-lc', 'bingham-tent', 'bingham-espiritu', 'guaman-chasqui', 'atahualpa-capture'}
 lines = []
 for pid, c in cr.items():
     w, h = c.get('size', [1, 1])

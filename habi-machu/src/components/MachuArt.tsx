@@ -27,7 +27,7 @@ const Figure: React.FC<{readonly x: number; readonly y: number; readonly h: numb
 export const NamePeaks: React.FC = () => {
 	const frame = useCurrentFrame();
 	const draw = interpolate(frame, [4, 50], [0, 1], easeInOut);
-	const ridge = 'M 0 900 L 180 860 L 420 520 L 520 470 L 640 560 L 860 640 L 1060 650 L 1220 600 L 1330 330 L 1400 300 L 1470 360 L 1600 700 L 1920 860';
+	const ridge = 'M 0 900 L 180 860 L 420 520 L 520 470 L 640 560 L 860 640 L 1060 650 L 1220 600 L 1330 470 L 1400 440 L 1470 490 L 1600 700 L 1920 860';
 	return (
 		<Canvas tone="moss">
 			<path d={`${ridge} L 1920 1080 L 0 1080 Z`} fill="#1f2b20" opacity={draw} />
@@ -50,10 +50,10 @@ export const NamePeaks: React.FC = () => {
 				</text>
 			</g>
 			<g opacity={fade(frame, 80)}>
-				<text x={1400} y={250} textAnchor="middle" {...svgMincho(64, colors.goldSoft)}>
+				<text x={1400} y={400} textAnchor="middle" {...svgMincho(64, colors.goldSoft)}>
 					ワイナピチュ
 				</text>
-				<text x={1400} y={190} textAnchor="middle" {...svgGothic(34, '#e6dcc4', 900)}>
+				<text x={1400} y={340} textAnchor="middle" {...svgGothic(34, '#e6dcc4', 900)}>
 					「若い峰」
 				</text>
 			</g>
@@ -122,10 +122,10 @@ export const SexRatio: React.FC = () => {
 	const n = 20;
 	const row = (y: number, women: number, children: number, at: number, label: string, sub: string, color: string) => (
 		<g opacity={fade(frame, at)}>
-			<text x={200} y={y - 150} {...svgMincho(48, color)}>
+			<text x={200} y={y - 130} {...svgMincho(44, color)}>
 				{label}
 			</text>
-			<text x={200 + label.length * 52} y={y - 150} {...svgGothic(30, '#c9d3e3', 900)}>
+			<text x={200 + label.length * 48} y={y - 130} {...svgGothic(30, '#c9d3e3', 900)}>
 				{sub}
 			</text>
 			{Array.from({length: n}, (_, i) => {
@@ -137,19 +137,19 @@ export const SexRatio: React.FC = () => {
 	);
 	return (
 		<Canvas tone="night">
-			{row(470, 16, 0, 8, '1916年の判定', '　大半が女性', '#f0c3cf')}
-			{row(800, 9, 3, 70, 'のちの再調査', '　男女ほぼ半々・子どもも', colors.goldSoft)}
+			{row(540, 16, 0, 8, '1916年の判定', '　大半が女性', '#f0c3cf')}
+			{row(840, 9, 3, 70, 'のちの再調査', '　男女ほぼ半々・子どもも', colors.goldSoft)}
 			<g opacity={fade(frame, 40)}>
-				<Figure x={1580} y={180} h={50} woman color="#f0a6b8" />
-				<text x={1610} y={176} {...svgGothic(28, '#f0c3cf', 900)}>
+				<Figure x={1580} y={330} h={50} woman color="#f0a6b8" />
+				<text x={1610} y={326} {...svgGothic(28, '#f0c3cf', 900)}>
 					女性
 				</text>
-				<Figure x={1710} y={180} h={50} color="#8fb4e0" />
-				<text x={1740} y={176} {...svgGothic(28, '#bcd3f0', 900)}>
+				<Figure x={1710} y={330} h={50} color="#8fb4e0" />
+				<text x={1740} y={326} {...svgGothic(28, '#bcd3f0', 900)}>
 					男性
 				</text>
 			</g>
-			<text x={960} y={890} textAnchor="middle" {...svgGothic(28, '#8ea2bd', 700)} opacity={fade(frame, 100)}>
+			<text x={1500} y={710} textAnchor="middle" {...svgGothic(26, '#8ea2bd', 700)} opacity={fade(frame, 100)}>
 				割合を示すイメージ
 			</text>
 		</Canvas>
@@ -161,7 +161,7 @@ export const Kinship: React.FC = () => {
 	const frame = useCurrentFrame();
 	const cols = 17;
 	const origin = ['#d8b26a', '#9fb0c8', '#6fbf8a'];
-	const pos = (i: number) => [250 + (i % cols) * 89, 470 + Math.floor(i / cols) * 250] as const;
+	const pos = (i: number) => [250 + (i % cols) * 89, 560 + Math.floor(i / cols) * 230] as const;
 	const a = 5;
 	const b = 26;
 	const [ax, ay] = pos(a);
@@ -172,24 +172,28 @@ export const Kinship: React.FC = () => {
 				const [x, y] = pos(i);
 				const o = fade(frame, 4 + i * 1.5, 10);
 				const c = origin[Math.floor(rand(i + 3) * 3)];
-				return <Figure key={i} x={x} y={y} h={150} woman={rand(i + 11) > 0.5 || i === a || i === b} color={c} />;
+				return (
+					<g key={i} opacity={o}>
+						<Figure x={x} y={y} h={130} woman={rand(i + 11) > 0.5 || i === a || i === b} color={c} />
+					</g>
+				);
 			})}
 			<g opacity={fade(frame, 70)}>
-				<path d={`M ${ax} ${ay - 175} C ${ax} ${ay - 230}, ${bx} ${by - 300}, ${bx} ${by - 175}`} stroke="#ffcf7a" strokeWidth={6} fill="none" />
-				<circle cx={ax} cy={ay - 80} r={92} fill="none" stroke="#ffcf7a" strokeWidth={5} />
-				<circle cx={bx} cy={by - 80} r={92} fill="none" stroke="#ffcf7a" strokeWidth={5} />
+				<path d={`M ${ax} ${ay - 150} C ${ax} ${ay - 200}, ${bx} ${by - 260}, ${bx} ${by - 150}`} stroke="#ffcf7a" strokeWidth={6} fill="none" />
+				<circle cx={ax} cy={ay - 68} r={80} fill="none" stroke="#ffcf7a" strokeWidth={5} />
+				<circle cx={bx} cy={by - 68} r={80} fill="none" stroke="#ffcf7a" strokeWidth={5} />
 			</g>
 			<g opacity={fade(frame, 40)}>
 				{['海岸', '高地', 'アマゾン'].map((t, i) => (
 					<g key={t}>
-						<circle cx={600 + i * 300} cy={230} r={16} fill={origin[i === 0 ? 0 : i === 1 ? 1 : 2]} />
-						<text x={630 + i * 300} y={242} {...svgGothic(34, '#efe6d2', 900)}>
+						<circle cx={600 + i * 300} cy={330} r={16} fill={origin[i === 0 ? 0 : i === 1 ? 1 : 2]} />
+						<text x={630 + i * 300} y={342} {...svgGothic(34, '#efe6d2', 900)}>
 							{t}
 						</text>
 					</g>
 				))}
 			</g>
-			<text x={960} y={880} textAnchor="middle" {...svgMincho(44, '#ffe2a8')} opacity={fade(frame, 90)}>
+			<text x={960} y={900} textAnchor="middle" {...svgMincho(44, '#ffe2a8')} opacity={fade(frame, 90)}>
 				血のつながりは、母と娘の1組だけ
 			</text>
 		</Canvas>
@@ -199,56 +203,67 @@ export const Kinship: React.FC = () => {
 // 第8の手がかり：台形の出入口と、内側に傾いた壁
 export const Doorway: React.FC = () => {
 	const frame = useCurrentFrame();
-	const rows = 9;
+	const rows = 7;
 	const g = 860;
-	const lean = 26;
-	const blocks = [];
+	const rh = 64;
+	const lean = 24;
+	const L = 560;
+	const R = 1360;
+	const C = (L + R) / 2;
+	const doorRows = 5;
+	const half = (r: number) => 120 - r * 8;
+	const blocks: {x: number; y: number; w: number; r: number}[] = [];
 	for (let r = 0; r < rows; r++) {
-		const y = g - (r + 1) * 64;
+		const y = g - (r + 1) * rh;
 		const shift = (lean * (r + 1)) / rows;
-		let x = 420 + shift;
+		const right = R - shift;
+		let x = L + shift;
 		let k = 0;
-		const right = 1500 - shift;
 		while (x < right - 10) {
-			const w = Math.min(90 + rand(r * 31 + k) * 90, right - x);
-			// 出入口の部分は空ける（下が広く、上がせまい台形）
-			const half = 120 - r * 7;
-			const doorL = 960 - half;
-			const doorR = 960 + half;
-			const top = r >= 7;
-			if (!top && x + w > doorL && x < doorR) {
-				if (x < doorL) blocks.push({x, y, w: doorL - x, r, k});
-				x = doorR;
+			const w = Math.min(80 + rand(r * 31 + k) * 80, right - x);
+			const dl = C - half(r);
+			const dr = C + half(r);
+			if (r < doorRows && x + w > dl && x < dr) {
+				if (x < dl) blocks.push({x, y, w: dl - x, r});
+				x = dr;
 				k++;
 				continue;
 			}
-			blocks.push({x, y, w, r, k});
+			blocks.push({x, y, w, r});
 			x += w;
 			k++;
 		}
 	}
+	const top = g - doorRows * rh;
 	return (
 		<Canvas tone="ink">
-			<line x1={300} y1={g} x2={1620} y2={g} stroke="#5a4a3a" strokeWidth={4} />
+			<line x1={420} y1={g} x2={1500} y2={g} stroke="#5a4a3a" strokeWidth={4} />
 			{blocks.map((b, i) => (
-				<rect key={i} x={b.x + 2} y={b.y + 2} width={b.w - 4} height={60} rx={8} fill={STONE} stroke={STONE_DARK} strokeWidth={3} opacity={fade(frame, 2 + b.r * 6, 10)} />
+				<rect key={i} x={b.x + 2} y={b.y + 2} width={b.w - 4} height={rh - 4} rx={8} fill={STONE} stroke={STONE_DARK} strokeWidth={3} opacity={fade(frame, 2 + b.r * 6, 10)} />
 			))}
-			<g opacity={fade(frame, 70)}>
-				<path d={`M 840 ${g} L 891 ${g - 7 * 64} L 1029 ${g - 7 * 64} L 1080 ${g}`} stroke="#ffcf7a" strokeWidth={6} fill="none" strokeDasharray="16 10" />
-				<text x={960} y={g - 7 * 64 - 30} textAnchor="middle" {...svgMincho(44, '#ffe2a8')}>
-					下が広く、上がせまい
+			<g opacity={fade(frame, 60)}>
+				<path d={`M ${C - half(0)} ${g} L ${C - half(doorRows - 1)} ${top} L ${C + half(doorRows - 1)} ${top} L ${C + half(0)} ${g}`} stroke="#ffcf7a" strokeWidth={6} fill="none" strokeDasharray="16 10" />
+				<line x1={C + half(2)} y1={g - 2.5 * rh} x2={1400} y2={g - 2.5 * rh} stroke="#ffcf7a" strokeWidth={3} />
+				<text x={1410} y={g - 2.5 * rh - 10} {...svgMincho(40, '#ffe2a8')}>
+					下が広く
+				</text>
+				<text x={1410} y={g - 2.5 * rh + 44} {...svgMincho(40, '#ffe2a8')}>
+					上がせまい
 				</text>
 			</g>
-			<g opacity={fade(frame, 100)}>
-				<line x1={400} y1={g} x2={400 + lean} y2={g - rows * 64} stroke="#9fd6e6" strokeWidth={5} />
-				<line x1={400} y1={g} x2={400} y2={g - rows * 64} stroke="#9fd6e6" strokeWidth={2} strokeDasharray="8 8" />
-				<text x={380} y={g - rows * 64 - 24} textAnchor="end" {...svgGothic(32, '#bfe6f0', 900)}>
-					壁は内側へ傾く
+			<g opacity={fade(frame, 90)}>
+				<line x1={L - 30} y1={g} x2={L - 30 + lean} y2={g - rows * rh} stroke="#9fd6e6" strokeWidth={5} />
+				<line x1={L - 30} y1={g} x2={L - 30} y2={g - rows * rh} stroke="#9fd6e6" strokeWidth={2} strokeDasharray="8 8" />
+				<text x={L - 50} y={g - rows * rh + 60} textAnchor="end" {...svgGothic(32, '#bfe6f0', 900)}>
+					壁は
 				</text>
-				<text x={1540} y={g - rows * 64 - 24} {...svgGothic(32, '#efe6d2', 900)}>
-					モルタルなし
+				<text x={L - 50} y={g - rows * rh + 104} textAnchor="end" {...svgGothic(32, '#bfe6f0', 900)}>
+					内側へ傾く
 				</text>
 			</g>
+			<text x={C} y={g - rows * rh - 26} textAnchor="middle" {...svgGothic(34, '#efe6d2', 900)} opacity={fade(frame, 110)}>
+				モルタルを使わない石組み
+			</text>
 		</Canvas>
 	);
 };
@@ -350,7 +365,7 @@ export const LidarScan: React.FC = () => {
 				const yy = 860 - Math.max(0, Math.floor((x - 100) / 145)) * 38 - 4;
 				return x < sweep ? <circle key={i} cx={x} cy={yy} r={4} fill="#ffcf7a" opacity={0.9} /> : null;
 			})}
-			<text x={960} y={120} textAnchor="middle" {...svgMincho(46, '#ffe2a8')} opacity={fade(frame, 125)}>
+			<text x={700} y={360} textAnchor="middle" {...svgMincho(46, '#ffe2a8')} opacity={fade(frame, 125)}>
 				木を取り除くと、段々畑が現れる
 			</text>
 		</Canvas>
@@ -360,47 +375,49 @@ export const LidarScan: React.FC = () => {
 // 第10の手がかり：見つかった「遺構の候補」（L字型の壁・三段の段々畑・四角い石材）
 export const Candidates: React.FC = () => {
 	const frame = useCurrentFrame();
-	const g = 820;
-	const s = 110; // 1m = 110ピクセル
+	const g = 840;
+	const s = 150; // 1m = 150ピクセル
 	return (
 		<Canvas tone="moss">
-			<line x1={80} y1={g} x2={1840} y2={g} stroke="#5a4a3a" strokeWidth={4} />
+			<line x1={60} y1={g} x2={1860} y2={g} stroke="#5a4a3a" strokeWidth={4} />
 			{/* L字型の壁（高さ2.7m） */}
 			<g opacity={fade(frame, 6)}>
-				<path d={`M 150 ${g} L 150 ${g - 2.7 * s} L 216 ${g - 2.7 * s} L 216 ${g - 40} L 520 ${g - 40} L 520 ${g} Z`} fill={STONE} stroke={STONE_DARK} strokeWidth={4} />
-				<Figure x={300} y={g - 40} h={1.7 * s} color="#9fb0c8" />
-				<line x1={120} y1={g} x2={120} y2={g - 2.7 * s} stroke="#ffcf7a" strokeWidth={4} />
-				<text x={110} y={g - 1.35 * s} textAnchor="end" {...svgGothic(30, '#ffe2a8', 900)}>
+				<path d={`M 170 ${g} L 170 ${g - 2.7 * s} L 250 ${g - 2.7 * s} L 250 ${g - 50} L 600 ${g - 50} L 600 ${g} Z`} fill={STONE} stroke={STONE_DARK} strokeWidth={4} />
+				<Figure x={400} y={g - 50} h={1.7 * s} color="#9fb0c8" />
+				<line x1={140} y1={g} x2={140} y2={g - 2.7 * s} stroke="#ffcf7a" strokeWidth={4} />
+				<text x={128} y={g - 1.35 * s} textAnchor="end" {...svgGothic(34, '#ffe2a8', 900)}>
 					2.7m
 				</text>
-				<text x={335} y={g + 64} textAnchor="middle" {...svgMincho(40, '#efe6d2')}>
+				<text x={385} y={g + 64} textAnchor="middle" {...svgMincho(44, '#efe6d2')}>
 					L字型の壁
 				</text>
 			</g>
 			{/* 左右対称の三段 */}
 			<g opacity={fade(frame, 40)}>
 				{[0, 1, 2].map((i) => (
-					<rect key={i} x={680 + i * 70} y={g - (i + 1) * 70} width={560 - i * 140} height={70} fill="#7a6a4a" stroke="#c9b48a" strokeWidth={3} />
+					<rect key={i} x={720 + i * 90} y={g - (i + 1) * 90} width={580 - i * 180} height={90} fill="#7a6a4a" stroke="#c9b48a" strokeWidth={3} />
 				))}
-				<text x={960} y={g + 64} textAnchor="middle" {...svgMincho(40, '#efe6d2')}>
+				<text x={1010} y={g + 64} textAnchor="middle" {...svgMincho(44, '#efe6d2')}>
 					左右対称の3段
 				</text>
 			</g>
 			{/* 四角い石材と裏の空洞 */}
 			<g opacity={fade(frame, 75)}>
-				<rect x={1380} y={g - 0.9 * s} width={2 * s} height={0.9 * s} fill={STONE} stroke={STONE_DARK} strokeWidth={4} />
-				<rect x={1400} y={g - 0.9 * s - 90} width={180} height={80} rx={30} fill="#0b120c" stroke="#9fd6e6" strokeWidth={3} strokeDasharray="10 8" opacity={fade(frame, 100)} />
-				<text x={1490} y={g - 0.9 * s - 110} textAnchor="middle" {...svgGothic(28, '#bfe6f0', 900)} opacity={fade(frame, 100)}>
-					裏に空洞
-				</text>
-				<text x={1490} y={g - 0.9 * s / 2 + 12} textAnchor="middle" {...svgGothic(30, '#3a3020', 900)}>
+				<rect x={1420} y={g - 0.9 * s} width={2 * s} height={0.9 * s} fill={STONE} stroke={STONE_DARK} strokeWidth={4} />
+				<text x={1570} y={g - 0.45 * s + 12} textAnchor="middle" {...svgGothic(34, '#3a3020', 900)}>
 					約2m
 				</text>
-				<text x={1490} y={g + 64} textAnchor="middle" {...svgMincho(40, '#efe6d2')}>
+				<g opacity={fade(frame, 100)}>
+					<rect x={1440} y={g - 0.9 * s - 120} width={260} height={100} rx={36} fill="#0b120c" stroke="#9fd6e6" strokeWidth={3} strokeDasharray="10 8" />
+					<text x={1570} y={g - 0.9 * s - 58} textAnchor="middle" {...svgGothic(32, '#bfe6f0', 900)}>
+						裏に空洞
+					</text>
+				</g>
+				<text x={1570} y={g + 64} textAnchor="middle" {...svgMincho(44, '#efe6d2')}>
 					四角い石材
 				</text>
 			</g>
-			<text x={960} y={250} textAnchor="middle" {...svgMincho(54, '#ffe2a8')} opacity={fade(frame, 120)}>
+			<text x={1010} y={360} textAnchor="middle" {...svgMincho(56, '#ffe2a8')} opacity={fade(frame, 120)}>
 				どれも、まだ「候補」
 			</text>
 		</Canvas>

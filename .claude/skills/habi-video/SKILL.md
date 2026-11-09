@@ -63,7 +63,7 @@ python3 scripts/build-voice.py        # 変わった行だけ合成し直す（�
 - テロップは答えを言わない疑問形。人の顔に重ねない（顔が上なら `labelBottom`）。
 - `scripts/gen_video.py` で `Habi*Video.tsx`（BGM前半・中盤・後半の区切り）と `Root.tsx`（720p用ラッパーも含む）を作る。
 - 文字を変えたら `python3 scripts/subset-fonts.py`、最後に `npx tsc --noEmit`。
-- 確認は静止画で：`npx remotion still <場面ID> out.png --frame=N --scale=0.5 --browser-executable=$(ls -d /opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell)`（ふつうの chromium は起動しない）。
+- 確認は静止画で：`npx remotion still <場面ID> out.png --frame=N --scale=0.5 --browser-executable=$(ls -d /opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell /opt/pw-browsers/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell 2>/dev/null | head -1)`（ふつうの chromium は起動しない）。
 
 ## 7. BGM
 `scripts/make-bgm.py`（合成・オリジナル）。前半・中盤・後半の3曲、それぞれ受け持つ区間より長い通し曲（ループしない）。

@@ -11,7 +11,7 @@
 set -e
 P=$(cd "$1" && pwd); COMP=$2
 NAME=$(basename "$P")
-BR=${BR:-$(ls -d /opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell 2>/dev/null | head -1)}
+BR=${BR:-$(ls -d /opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell /opt/pw-browsers/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell 2>/dev/null | head -1)}
 export NODE_OPTIONS=--max-old-space-size=8192
 cd "$P"
 C=out/c1080; mkdir -p $C
