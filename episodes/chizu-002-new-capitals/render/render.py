@@ -23,6 +23,26 @@ base._TEX = cv2.cvtColor(cv2.imread(str(_REL)), cv2.COLOR_BGR2RGB)
 base.TEX_LABEL = "shadedrelief_basemap_data_2_0_0"
 R.NE_NOTE = "地図：地形の陰影図（shadedrelief.com／basemap-data）。衛星画像ではありません"
 
+
+def vector_map(lon0, lat0, kmpp, ss=2):
+    """Zoomed maps (<1 km/px): Natural Earth 1:10m coastline drawn directly, in colours matched to the relief map."""
+    SEA, LAND, EDGE = (126, 170, 206), (178, 196, 170), (150, 165, 140)
+    im = Image.new("RGB", (W * ss, H * ss), SEA); d = ImageDraw.Draw(im)
+    for _, _, polys in R.land():
+        for poly in polys:
+            r = poly[0]
+            x, y = geo.laea(r[:, 0], r[:, 1], lon0, lat0)
+            X, Y = (W / 2 + x / kmpp) * ss, (H / 2 - y / kmpp) * ss
+            if X.max() < -50 or X.min() > W * ss + 50 or Y.max() < -50 or Y.min() > H * ss + 50:
+                continue
+            d.polygon(list(zip(X, Y)), fill=LAND, outline=EDGE)
+    out = im.resize((W, H), Image.LANCZOS).convert("RGBA")
+    R.note(out, "地図：Natural Earth（1:1000万・海岸線は簡略化され、湾の細かい形は省略）")
+    return out
+
+
+R.vector_map = vector_map
+
 OUT = HERE / "out"; OUT.mkdir(exist_ok=True)
 TIM = json.loads((EP / "audio/timings.json").read_text())
 R.EP, R.OUT, R.TIM = EP, OUT, TIM
@@ -198,7 +218,7 @@ def shots():
     add("S03", 6, "diag", sent=3, fn=d_deal, why="首都の場所と借金の肩代わりの取引を図で示す")
     # S04
     add("S04", 3, "photo", file="photo_02_philadelphia.jpg", label="フィラデルフィアの独立記念館")
-    add("S04", 4, "map", **USA, move=False, layers=[L_dots(["フィラデルフィア"], 0, 0, TEAL), L_dots(["ワシントン"], 0.3, 0, AMBER), L_arrow("フィラデルフィア", "ワシントン", 0.6), L_label(-77.4, 38.6, "ポトマック川", 1.2, 36, MUTED)], why="仮の首都から新しい首都への位置関係")
+    add("S04", 4, "map", **USA, move=False, layers=[L_dots(["フィラデルフィア"], 0, 0, TEAL), L_dots(["ワシントン"], 0.3, 0, AMBER), L_arrow("フィラデルフィア", "ワシントン", 0.6), L_label(-77.0, 38.15, "ポトマック川", 1.2, 34, MUTED)], why="仮の首都から新しい首都への位置関係")
     add("S04", 3, "photo", sent=2, file="photo_01_us_capitol.jpg", label="アメリカ合衆国議会議事堂（ワシントン、現在）")
     add("S04", 3, "diag", fn=d_year("1800年11月", "議会がワシントンで初めて開かれた"), why="1800年の移転を年号カードで示す")
     # S05
