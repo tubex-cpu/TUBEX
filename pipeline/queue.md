@@ -12,7 +12,7 @@
 | habi-001-sumer | ① ハビ判事（`channels/habi-judge/`） | 日本人とシュメール判決（社長作の台本あり） | **納品済み・重複制作しない**（2026-10-25 指示）。公開実績は別途URLで確認し、未確認でも再制作しない |
 | habi-002-mu | ① ハビ判事 | ムー大陸（社長選択 2026-10-26）。約60分 | ゲートA 承認済み（2026-10-26）。台本初稿 `episodes/habi-002-mu/05_script.md`（約53分で確定）。一次資料の確認・Codex 監査・タイトル（工程4）が残る |
 | chizu-001-australia-coast | 地図×雑学チャンネル「地球の事情」（2026-11-08 正式名称・`channels/chizu/CHANNEL.md`） | なぜオーストラリアの大都市は、海の近くに集まるのか？（Codex の試作を 2026-11-03 に社長の指示で Claude が引き継ぎ） | 台本 v2 `episodes/chizu-001-australia-coast/05_script_v2.md`・全編絵コンテ v1 `storyboard_v1.md`・出典表 `01_research.md` を作成 → Codex 監査待ち。競合調査 `02_competitors.md`（2026-11-04、既出テーマだが差別化して続行・タイトル変更を提案）。ネタ10案は競合の確認つきの `channels/chizu/ideas_v2.md` で社長の選択待ち。素材の確保・ナレーション・書き出しは未着手 |
-| chizu-002-new-capitals | 地球の事情（`channels/chizu/`） | 首都をゼロから造った国々（ワシントン・ブラジリア・キャンベラ・アブジャ・ヌサンタラ）。ネタ10案 v2 のおすすめ1位 | 企画書 `episodes/chizu-002-new-capitals/03_plan.md`・出典表・競合調査を作成（2026-11-09）→ **ゲートA（社長の承認）待ち**。承認前は台本に進まない |
+| chizu-002-new-capitals | 地球の事情（`channels/chizu/`） | 首都をゼロから造った国々（ワシントン・ブラジリア・キャンベラ・アブジャ・ヌサンタラ）。ネタ10案 v2 のおすすめ1位 | 企画書 `episodes/chizu-002-new-capitals/03_plan.md`・出典表・競合調査を作成（2026-11-09）→ ゲートA 承認（2026-11-09）。台本・ナレーション・素材・書き出しへ |
 | note | note（有料 note・ジャンル：不倫・`pipeline/README.md`「note」） | 不倫ジャンルの切り口・価格帯の方針（ゲートN0）。主案は `channels/furin_atode/CHANNEL.md`（2026-10-25 社長方針）。運用はnoteのみ（他SNSは扱わない）。YouTube とは独立して進める | 工程N0。方針案 `notes/00_strategy.md`（2026-10-25、CHANNEL.md の読者・4テーマで作り直し。PR #14 の草案は書き換えていない）。競合原ページの確認が残件・Codex 監査前。N0承認前のN1以降は禁止 |
 | 001-sleep-without-brain | （試運転） | 脳がない生き物も眠る | **試運転として終了**（2026-10-10 社長判断）。パイプラインの動作確認用サンプル。公開しない |
 

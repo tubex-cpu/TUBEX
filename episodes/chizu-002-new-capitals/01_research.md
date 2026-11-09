@@ -16,3 +16,16 @@
 ## 地図・映像の素材の見込み（企画段階）
 - 地図：Natural Earth（国境10m、ブラジル・アメリカの州は 50m の subunits）。衛星画像は使わない（chizu-001 で決めた方針）
 - 実写：Wikimedia Commons で、ブラジリアの国会・三権広場、アブジャの街並み、ジャカルタの洪水・街、ワシントンの議事堂など。作者・ライセンスは台本の後に確認する（ブラジルの建物の写真はパノラマの自由の扱いも確認）
+
+## 2026-11-09 の追加確認（台本に使う範囲。検索結果の抜粋による。公式サイトにはこの環境から接続できない）
+| 記号 | 事実 | 出典 | 状態 |
+|---|---|---|---|
+| BRA_1891 | 1891年憲法の第3条：国の中央の高原（planalto central）に、未来の首都のための14,400km²の区域を連邦のものとする。首都が移れば、それまでの連邦区（リオ）は州になる | 下院の憲法原文ページ https://www2.camara.leg.br/legin/fed/consti/1824-1899/constituicao-35081-24-fevereiro-1891-532699-publicacaooriginal-15017-pl.html 、Congresso em Foco「Brasília já estava prevista na Constituição de 1891」、Jornal de Brasília | ✅（抜粋の一致。条文本文は未読） |
+| BRA_1960 | 1956年に建設開始、1960年4月21日に開都（クビチェック大統領）。計画はルシオ・コスタ、主な公共建築はオスカー・ニーマイヤー | fodors.com、domusweb、Wikipedia | ✅ |
+| NGA_1975 | 1975年8月、政府がアグダ判事の委員会を設け、ラゴスが首都であり続けられるかを検討。同年12月に報告。1976年2月の政令第6号で、首都をラゴスから移すことを決めた | 連邦首都開発庁 FCDA「The Abuja Story」https://fcda.gov.ng/about/the-abuja-story-historical 、Wikipedia「Abuja」 | ✅（政令の日付は2月3〜5日で資料により違うので、台本は「1976年」だけ） |
+| NGA_1991 | 1991年12月12日、政府の所在地がラゴスからアブジャに移った（ババンギダ政権） | Wikipedia「Abuja」、Abuja Master Plan の解説、legit.ng | ⚠（政府の一次資料は未確認。台本は「1991年12月」まで） |
+| NGA_WHY | アブジャは国の中央にあり、多くの民族・宗教のどれにも偏らない土地として選ばれた | FCDA「Why Abuja?」https://www.fcda.gov.ng/about/why-abuja （抜粋）、dubawa.org | ✅ |
+| USA_1800 | 1800年5月、アダムズ大統領が政府にフィラデルフィアからワシントンへの移転を命じ、1800年11月17日に議会がワシントンの未完成の議事堂で初めて開かれた | 米国議会図書館 Law Library ブログ「On This Day: Congress Moves to Washington, D.C.」https://blogs.loc.gov/law/2015/11/on-this-day-congress-moves-to-washington-d-c/ 、History.com | ✅（台本は「1800年11月、議会がワシントンで初めて開かれた」） |
+| AUS_1927 | 1927年5月9日、キャンベラの仮議事堂で連邦議会が初めて開かれた。1913年3月12日に命名 | 首都庁 NCA「History of the National Capital」https://www.nca.gov.au/history-national-capital （抜粋） | ✅ |
+| IDN_2026 | 2026年5月、憲法裁判所が「大統領令が出るまでジャカルタが首都」とする規定への申し立てを退けた。2026年11月9日時点で、大統領令が出たという報道は見つからない | The Jakarta Post（2026-05-15）、The Star（2026-05-15）、インドネシア国家警察のニュース | ⚠（**公開直前に最新の状況を確認する**） |
+- 台本で使わないこと：ポトマック川が北部と南部の境目だという説明（出典で言い切れない）、アブジャ移転の政治的な思惑（意見記事のみ）、各国の「いちばん人口の多い都市」の順位（今回は確認していない）
