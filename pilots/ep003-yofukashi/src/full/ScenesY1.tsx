@@ -40,27 +40,40 @@ export const PostsScreen: React.FC<{f: number}> = ({f}) => (
 );
 
 // ============ 0. オープニング ============
-const RANK: [string, string][] = [['5位', '歯磨きキャンセル'], ['4位', '着替えキャンセル'], ['3位', '外出キャンセル'], ['2位', 'お仕事キャンセル']];
+// ranking show: each "cancel" gets a red stamp; no phone on screen (owner 2026-11-09: avoid repeating ep002's swiping phone)
+const RANK: [string, string, string][] = [['5位', '歯磨き', '🪥'], ['4位', '着替え', '👕'], ['3位', '外出', '🚪'], ['2位', 'お仕事', '💼']];
+const Stamp: React.FC<{f: number; at: number; size?: number}> = ({f, at, size = 34}) => {
+  if (f < at + 8) return null;
+  const sc = interpolate(f - at - 8, [0, 5, 9], [2.4, 0.92, 1], clamp);
+  return <div style={{position: 'absolute', right: 30, top: '50%', transform: `translateY(-50%) rotate(-12deg) scale(${sc})`, border: `5px solid #ff3b30`, borderRadius: 10, padding: '2px 14px', color: '#ff3b30', fontSize: size, fontWeight: 900, letterSpacing: '0.08em', background: 'rgba(10,10,14,0.4)'}}>キャンセル</div>;
+};
 const S00: React.FC<SceneProps> = ({f, dur, T}) => {
   const one = LT(T, 's00', 5);
   const s = interpolate(f - one, [0, 8, 14], [2.2, 0.94, 1], clamp);
+  const spot = 0.5 + 0.5 * Math.sin(f / 9);
   return (
     <AbsoluteFill style={{background: '#000'}}>
-      <Still src="bed" f={f} dur={dur} dark={0.62} from={1.08} to={1.14} />
-      <PhonePOV f={f} flick={18} x={1260} y={60} scale={0.92} clock="0:48" />
-      <div style={{position: 'absolute', left: 120, top: 90, width: 980, fontFamily: FONT}}>
-        <Pop f={f} at={6} style={{fontSize: 46, fontWeight: 900, color: K.gold, marginBottom: 20}}>キャンセル界隈 ヤバい順</Pop>
-        {RANK.map(([n, t], i) => (
-          <Pop key={i} f={f} at={LT(T, 's00', i + 1)} from="left">
-            <div style={{display: 'flex', alignItems: 'center', gap: 24, padding: '12px 26px', marginBottom: 12, borderRadius: 14, background: 'rgba(12,14,20,0.82)', opacity: f > one ? 0.45 : 1}}>
-              <div style={{fontSize: 40, fontWeight: 900, color: K.sub, width: 90}}>{n}</div><div style={{fontSize: 44, fontWeight: 900, color: K.ink}}>{t}</div>
+      <AbsoluteFill style={{filter: 'blur(6px)'}}><Still src="bed" f={f} dur={dur} dark={0.75} from={1.1} to={1.16} /></AbsoluteFill>
+      <AbsoluteFill style={{background: `radial-gradient(ellipse at 50% -10%, rgba(255,214,120,${0.18 + 0.06 * spot}) 0%, rgba(0,0,0,0) 55%)`}} />
+      <Pop f={f} at={4} from="scale" style={{position: 'absolute', left: 0, right: 0, top: 50, textAlign: 'center', fontFamily: FONT}}>
+        <div style={{display: 'inline-block', padding: '10px 40px', borderRadius: 14, background: K.gold, color: '#141820', fontSize: 52, fontWeight: 900}}>キャンセル界隈 ヤバい順</div>
+      </Pop>
+      <div style={{position: 'absolute', left: 360, top: 170, width: 1200, fontFamily: FONT}}>
+        {RANK.map(([n, t, ic], i) => (
+          <Pop key={i} f={f} at={LT(T, 's00', i + 1)} from="right">
+            <div style={{position: 'relative', display: 'flex', alignItems: 'center', gap: 30, padding: '12px 30px', marginBottom: 14, borderRadius: 16, background: 'rgba(14,16,24,0.88)', border: '2px solid rgba(255,255,255,0.12)', opacity: f > one ? 0.4 : 1}}>
+              <div style={{fontSize: 40, fontWeight: 900, color: K.sub, width: 90}}>{n}</div>
+              <div style={{fontSize: 56}}>{ic}</div>
+              <div style={{fontSize: 48, fontWeight: 900, color: K.ink}}>{t}キャンセル</div>
+              <Stamp f={f} at={LT(T, 's00', i + 1)} />
             </div>
           </Pop>
         ))}
         {f >= one && (
-          <div style={{marginTop: 20, padding: '20px 30px', borderRadius: 18, background: 'rgba(224,83,61,0.2)', border: '4px solid #e0533d', transform: `scale(${s})`, transformOrigin: 'left center'}}>
-            <div style={{fontSize: 44, fontWeight: 900, color: '#ff7a64'}}>1位</div>
-            <div style={{fontSize: 76, fontWeight: 900, color: '#ff3b30'}}>睡眠キャンセル界隈</div>
+          <div style={{position: 'relative', marginTop: 16, padding: '18px 30px', borderRadius: 20, background: 'rgba(224,83,61,0.22)', border: '5px solid #e0533d', transform: `scale(${s})`, transformOrigin: 'center', boxShadow: `0 0 ${40 + 30 * spot}px rgba(255,59,48,0.45)`, display: 'flex', alignItems: 'center', gap: 30}}>
+            <div style={{fontSize: 52, fontWeight: 900, color: '#ff7a64', width: 90}}>1位</div>
+            <div style={{fontSize: 80}}>🛏️</div>
+            <div style={{fontSize: 78, fontWeight: 900, color: '#ff3b30'}}>睡眠キャンセル界隈</div>
           </div>
         )}
       </div>
@@ -68,6 +81,10 @@ const S00: React.FC<SceneProps> = ({f, dur, T}) => {
     </AbsoluteFill>
   );
 };
+// the everyday cuts — still life and clocks only, the phone stays off screen (its blue light shows on the ceiling)
+const PhoneLight: React.FC<{f: number; k?: number}> = ({f, k = 1}) => (
+  <AbsoluteFill style={{background: `radial-gradient(ellipse at 58% 38%, rgba(110,160,255,${(0.22 + 0.05 * Math.sin(f / 5) + 0.04 * Math.sin(f / 2.3)) * k}) 0%, rgba(0,0,0,0) 45%)`, mixBlendMode: 'screen'}} />
+);
 const S01: React.FC<SceneProps> = ({f, T, dur}) => {
   const cuts = [0, 1, 2, 3, 4, 5, 6, 7, 8].map((k) => LT(T, 's01', k) - 10);
   let k = 0;
@@ -76,9 +93,25 @@ const S01: React.FC<SceneProps> = ({f, T, dur}) => {
   const body = (() => {
     switch (k) {
       case 0: return <><Still src="living" f={lf} dur={ld} dark={0.3} />{tint('#ffb070', 0.25)}<Clock text="23:00" x={150} y={120} size={96} color="#ffd29a" /></>;
-      case 1: return <><Still src="living" f={lf} dur={ld} dark={0.45} blur={4} /><PhonePOV f={lf} flick={24} x={760} y={60} scale={1.0} /></>;
-      case 2: return <><Still src="bed" f={lf} dur={ld} dark={0.6} /><PhonePOV f={lf} flick={16} x={760} y={60} scale={1.0} /><Pop f={lf} at={6} from="scale" style={{position: 'absolute', left: 150, top: 160, fontFamily: FONT, fontSize: 70, fontWeight: 900, color: K.gold}}>あと1本</Pop></>;
-      case 3: return <><Still src="bed" f={lf} dur={ld} dark={0.65} /><PhonePOV f={lf} flick={16} x={760} y={60} scale={1.0} clock="1:05" /><Clock text="1:05" x={150} y={120} size={110} /></>;
+      case 1: return (
+        <>
+          <Still src="living" f={lf} dur={ld} dark={0.55} ox={50} oy={70} from={1.05} to={1.15} />
+          <Pop f={lf} at={8} style={{position: 'absolute', left: 0, right: 0, top: 220, textAlign: 'center', fontFamily: FONT, fontSize: 84, fontWeight: 900, color: K.gold, textShadow: '0 4px 20px rgba(0,0,0,0.8)'}}>やっと自分の時間</Pop>
+          <Pop f={lf} at={30} style={{position: 'absolute', left: 0, right: 0, top: 360, textAlign: 'center', fontFamily: FONT, fontSize: 52, fontWeight: 900, color: '#7fa2ff', textShadow: '0 4px 20px rgba(0,0,0,0.8)'}}>寝たら すぐ明日</Pop>
+        </>
+      );
+      case 2: return (
+        <>
+          <Still src="bed" f={lf} dur={ld} dark={0.72} from={1.1} to={1.2} />
+          <PhoneLight f={lf} />
+          <Pop f={lf} at={6} from="scale" style={{position: 'absolute', left: 0, right: 0, top: 260, textAlign: 'center', fontFamily: FONT, fontSize: 120, fontWeight: 900, color: K.gold, textShadow: '0 6px 30px rgba(0,0,0,0.9)'}}>あと1本だけ</Pop>
+        </>
+      );
+      case 3: {
+        const t = Math.min(1, lf / 40);
+        const mm = Math.floor(5 + 55 * t);
+        return <><Still src="bed" f={lf} dur={ld} dark={0.75} /><PhoneLight f={lf} k={0.8} /><div style={{position: 'absolute', left: 0, right: 0, top: 260, display: 'flex', justifyContent: 'center'}}><Clock text={t < 1 ? `0:${String(mm).padStart(2, '0')}` : '1:05'} x={0} y={0} size={170} /></div></>;
+      }
       case 4: {
         const snz = Math.min(3, Math.floor(lf / 22) + 1);
         return (
@@ -108,7 +141,7 @@ const S01: React.FC<SceneProps> = ({f, T, dur}) => {
         </>
       );
       case 7: return <><AbsoluteFill style={{filter: 'blur(2px)'}}><Still src="bedLamp" f={lf} dur={ld} dark={0.0} /></AbsoluteFill><AbsoluteFill style={{background: 'rgba(255,240,210,0.25)'}} /><Clock text="12:30" x={150} y={120} size={100} color="#ff9f43" /></>;
-      default: return <><Still src="bed" f={lf} dur={ld} dark={0.7} from={1.1} to={1.2} /><PhonePOV f={lf} flick={30} x={760} y={60} scale={1.05} /></>;
+      default: return <><Still src="bed" f={lf} dur={ld} dark={0.78} from={1.1} to={1.2} /><PhoneLight f={lf} k={1.2} /></>;
     }
   })();
   return <AbsoluteFill style={{background: '#000'}}><AbsoluteFill style={{opacity: interpolate(lf, [0, 8], [0, 1], clamp)}}>{body}</AbsoluteFill><Vignette /></AbsoluteFill>;

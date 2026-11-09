@@ -405,8 +405,9 @@ def main():
         return x * (tt / d) ** 2 * 0.12
 
     # opening: the ranking (5 → 1) gets ticks and a final impact, then whooshes on the everyday cuts
-    for k in range(1, 5):
+    for k in range(1, 5):  # each rank slides in, then the red "cancel" stamp lands
         ma.place(sfx, pop(), L["s00_%d" % k]["start"] - 0.1, 0.8, 0.5)
+        ma.place(sfx, hit(0.5), L["s00_%d" % k]["start"] + 8 / 30, 0.7, 0.5)
     ma.place(sfx, riser(), L["s00_5"]["start"] - 1.0, 1.0, 0.5)
     ma.place(sfx, hit(1.2), L["s00_5"]["chunks"][0]["start"] - 0.05, 1.0, 0.5)
     for k in range(1, 8):
@@ -417,7 +418,7 @@ def main():
         ma.place(sfx, ma.sfx_soft_whoosh(0.6), sc["start"] - 0.4, 0.35, 0.5)
         if sc["id"] in accents:
             ma.place(sfx, accents[sc["id"]], sc["start"] + 0.25, 0.8, 0.5)
-        if sc["id"] in ("s00", "s08", "s16", "s18", "s38"):
+        if sc["id"] in ("s08", "s16", "s18", "s38"):
             for k in range(6):
                 ma.place(sfx, swipe(), sc["start"] + 0.5 + k * 0.9, 0.8, 0.45 + 0.1 * (k % 2))
         if sc["id"] in ("s11", "s15", "s17", "s21", "s29", "s35"):
