@@ -16,7 +16,7 @@ export const RootsStory = () => {
 				</Stage>
 			</Beat>
 			<Beat name="15世紀のはじめ" captions={c} from={1} to={1}>
-				<Photo id="ollanta-2" move="in" label="15世紀のはじめ" />
+				<Photo id="pachacuti-statue" move="in" label="15世紀のはじめ" />
 			</Beat>
 			<Beat name="尾根の上の離宮" captions={c} from={2} to={3}>
 				<Photo id="intipunku" move="in" label="尾根の上の離宮" />
@@ -29,7 +29,10 @@ export const RootsStory = () => {
 					<TimeBar stops={[{label: '1420年ごろ', sub: '暮らしが\n始まる'}, {label: '1532年', sub: 'スペインの\n征服'}, {label: '16世紀', sub: '書類に\n「ピチュ」'}, {label: '?', sub: '人の姿が\n消える', accent: true}]} tone='moss' />
 				</Stage>
 			</Beat>
-			<Beat name="そして1911年" captions={c} from={10} to={11}>
+			<Beat name="畑を耕し続けた人々" captions={c} from={10} to={10}>
+				<Photo id="ollanta-2" move="in" label="畑を耕し続けた人々" />
+			</Beat>
+			<Beat name="そして1911年" captions={c} from={11} to={11}>
 				<Photo id="bingham-lc" move="in" label="そして1911年" />
 			</Beat>
 			<Beat name="およそ100年後の縁" captions={c} from={12} to={13}>

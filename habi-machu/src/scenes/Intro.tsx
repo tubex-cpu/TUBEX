@@ -1,7 +1,7 @@
 import {Beat} from '../components/Beat';
 import {Stage} from '../components/Cinema';
+import {Cards} from '../components/IzumoKit';
 import {P, ReliefMap} from '../components/IzumoMap';
-import {LidarScan} from '../components/MachuArt';
 import {Photo} from '../components/Photo';
 import {SceneFrame} from '../components/SceneFrame';
 import {introCaptions as c} from '../data/captions';
@@ -38,7 +38,7 @@ export const Intro = () => {
 			</Beat>
 			<Beat name="最新の科学が見通す" captions={c} from={10} to={10}>
 				<Stage label="最新の科学が見通す">
-					<LidarScan />
+					<Cards cards={[{head: '空から', body: 'ドローンに\n積んだ\nレーザー', tone: 'dark'}, {head: '骨から', body: '放射性炭素\nの年代測定', tone: 'dark'}, {head: '遺伝子から', body: 'DNAの\n解析', tone: 'dark'}]} tone='night' />
 				</Stage>
 			</Beat>
 			<Beat name="もうひとつのマチュピチュ" captions={c} from={11}>

@@ -1,6 +1,7 @@
 import {useVideoConfig} from 'remotion';
 import {Beat, captionFrame} from '../components/Beat';
 import {Stage} from '../components/Cinema';
+import {Figures} from '../components/IzumoKit';
 import {P, ReliefMap} from '../components/IzumoMap';
 import {Kinship} from '../components/MachuArt';
 import {GavelVerdict} from '../components/GavelVerdict';
@@ -14,7 +15,9 @@ export const Clue6People = () => {
 	return (
 		<SceneFrame captions={c} voice="Clue6People" label="第6の手がかり" title="マチュピチュの住人は、地元の人々だった？">
 			<Beat name="2023年7月の論文" captions={c} from={0} to={2}>
-				<Photo id="model-3d" move="in" label="2023年7月の論文" />
+				<Stage label="2023年7月の論文">
+					<Figures figs={[{value: '68', label: '人', small: '遺伝子を調べた人数（2023年の論文）'}]} tone='moss' />
+				</Stage>
 			</Beat>
 			<Beat name="帝国のあちこちから" captions={c} from={3} to={5}>
 				<Stage label="帝国のあちこちから" labelBottom>

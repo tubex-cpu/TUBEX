@@ -1,6 +1,7 @@
 import {useVideoConfig} from 'remotion';
 import {Beat, captionFrame} from '../components/Beat';
 import {Stage} from '../components/Cinema';
+import {Figures} from '../components/IzumoKit';
 import {P, ReliefMap} from '../components/IzumoMap';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {Photo} from '../components/Photo';
@@ -23,11 +24,13 @@ export const Clue3Fortress = () => {
 			<Beat name="戦いの跡は？" captions={c} from={5} to={5}>
 				<Photo id="espiritu-pampa" move="in" label="戦いの跡は？" />
 			</Beat>
-			<Beat name="16世紀の文書" captions={c} from={6} to={8}>
-				<Photo id="pachacuti-brooklyn" move="in" label="16世紀の文書" />
+			<Beat name="16世紀の文書" captions={c} from={6} to={7}>
+				<Stage label="16世紀の文書">
+					<Figures figs={[{value: '1990', label: '年', small: 'ジョン・ロウの研究'}, {value: '16', label: '世紀', small: '谷の畑の一覧', accent: true}]} tone='ink' />
+				</Stage>
 			</Beat>
-			<Beat name="帝国を広げた王" captions={c} from={9} to={9}>
-				<Photo id="pachacuti-statue" move="in" label="帝国を広げた王" />
+			<Beat name="インカ王パチャクテク" captions={c} from={8} to={9}>
+				<Photo id="pachacuti-brooklyn" move="in" label="インカ王パチャクテク" />
 			</Beat>
 			<Beat name="ウルバンバ川の谷" captions={c} from={10} to={10}>
 				<Stage label="ウルバンバ川の谷" labelBottom>

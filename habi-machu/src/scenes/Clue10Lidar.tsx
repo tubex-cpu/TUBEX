@@ -2,7 +2,7 @@ import {useVideoConfig} from 'remotion';
 import {Beat, captionFrame} from '../components/Beat';
 import {Stage} from '../components/Cinema';
 import {P, ReliefMap} from '../components/IzumoMap';
-import {Candidates} from '../components/MachuArt';
+import {Candidates, LidarScan} from '../components/MachuArt';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {Photo} from '../components/Photo';
 import {SceneFrame} from '../components/SceneFrame';
@@ -20,7 +20,9 @@ export const Clue10Lidar = () => {
 				<Photo id="terrace-2" move="in" label="森に覆われた斜面" />
 			</Beat>
 			<Beat name="空からレーザーで" captions={c} from={4} to={5}>
-				<Photo id="reconstruct" move="in" label="空からレーザーで" />
+				<Stage label="空からレーザーで">
+					<LidarScan />
+				</Stage>
 			</Beat>
 			<Beat name="北東の段々畑" captions={c} from={6} to={6}>
 				<Photo id="mpmtn-preben" move="in" label="北東の段々畑" />
