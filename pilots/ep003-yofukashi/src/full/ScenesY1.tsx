@@ -301,8 +301,9 @@ const S09: React.FC<SceneProps> = ({f, dur, T}) => {
   return (
     <AbsoluteFill style={{background: '#000'}}>
       <Still src="bed" f={f} dur={dur} dark={0.5} />
-      <Clock text="22:30" x={150} y={120} size={90} color="#9cf0b2" />
-      <PhonePOV f={f - LT(T, 's09', 1)} flick={open ? 22 : 0} x={760} y={60} scale={1.0} screen={open ? undefined : <AlarmScreen label="今日は11時に寝る" time="23:00" />} />
+      {(() => { const t = open ? Math.min(1, (f - LT(T, 's09', 1)) / 150) : 0; const m = 22 * 60 + 30 + Math.round(t * 130); const hh = Math.floor(m / 60) % 24; return <Clock text={open ? `${hh}:${String(m % 60).padStart(2, '0')}` : '22:30'} x={150} y={120} size={90} color={open && m >= 23 * 60 ? '#ff7a64' : '#9cf0b2'} />; })()}
+      <PhonePOV f={0} flick={0} x={760} y={60} scale={1.0} thumb={false} screen={<AlarmScreen label="今日は11時に寝る" time="23:00" />} />
+      {open && <div style={{position: 'absolute', left: 800, top: 380, width: 420, height: 10, background: '#ff4d3d', borderRadius: 5, transform: `rotate(-8deg) scaleX(${interpolate(f - LT(T, 's09', 1), [60, 75], [0, 1], clamp)})`, transformOrigin: 'left center', boxShadow: '0 0 20px rgba(255,77,61,0.7)'}} />}
       {f >= LT(T, 's09', 1) + 20 && <Pop f={f} at={LT(T, 's09', 1) + 20} from="scale" style={{position: 'absolute', left: 140, top: 330, padding: '20px 34px', borderRadius: 18, background: K.gold, color: '#141820', fontSize: 64, fontWeight: 900, fontFamily: FONT}}>就寝の先延ばし</Pop>}
       <Vignette />
     </AbsoluteFill>
@@ -365,7 +366,7 @@ const S13: React.FC<SceneProps> = ({f, T, dur}) => {
           <div style={{position: 'absolute', left: 0, right: 0, top: 520, textAlign: 'center', fontSize: 56, fontWeight: 900, color: K.ink}}>帰ってからは 家事の時間</div>
         </DarkBoard>
       );
-      case 2: return <><Still src="living" f={lf} dur={ld} dark={0.55} /><PhonePOV f={lf} flick={26} x={1180} y={120} scale={0.8} tilt={-8} /><Pop f={lf} at={10} style={{position: 'absolute', left: 150, top: 200, fontFamily: FONT, fontSize: 60, fontWeight: 900, color: K.gold}}>自分の時間は 夜だけ</Pop></>;
+      case 2: return <><Still src="living" f={lf} dur={ld} dark={0.55} />{tint('#6ea0ff', 0.12)}<Clock text="23:30" x={1250} y={160} size={96} color="#9fb7ff" /><Pop f={lf} at={10} style={{position: 'absolute', left: 150, top: 200, fontFamily: FONT, fontSize: 60, fontWeight: 900, color: K.gold}}>自分の時間は 夜だけ</Pop></>;
       default: return (
         <DarkBoard>
           <Pop f={lf} at={4} from="scale" style={{position: 'absolute', left: 0, right: 0, top: 200, textAlign: 'center', fontSize: 120, fontWeight: 900, color: K.gold}}>報復性夜更かし</Pop>
@@ -411,7 +412,9 @@ const S16: React.FC<SceneProps> = ({f, dur, T}) => {
   if (!lab) return (
     <AbsoluteFill style={{background: '#000'}}>
       <Still src="bed" f={f} dur={dur} dark={0.75} from={1.12} to={1.18} />
-      <PhonePOV f={f} flick={22} x={760} y={60} scale={1.05} glow={1.4} />
+      <PhoneLight f={f} k={1.6} />
+      <Pop f={f} at={20} style={{position: 'absolute', left: 0, right: 0, top: 230, textAlign: 'center', fontFamily: FONT, fontSize: 96, fontWeight: 900, color: '#9fb7ff', textShadow: '0 4px 24px rgba(0,0,0,0.9)'}}>布団の中の 画面の光</Pop>
+      <Pop f={f} at={LT(T, 's16', 1)} from="scale" style={{position: 'absolute', left: 0, right: 0, top: 400, textAlign: 'center', fontFamily: FONT, fontSize: 72, fontWeight: 900, color: '#ff4d3d', textShadow: '0 4px 24px rgba(0,0,0,0.9)'}}>眠りが 遠ざかる</Pop>
       <Vignette />
     </AbsoluteFill>
   );
@@ -459,7 +462,8 @@ const S18: React.FC<SceneProps> = ({f, dur, T}) => {
   return (
     <AbsoluteFill style={{background: '#000'}}>
       <Still src="bed" f={f} dur={dur} dark={off ? 0.85 : 0.65} />
-      {!off && <PhonePOV f={f} flick={26} x={760} y={60} scale={1.0} />}
+      {!off && <PhoneLight f={f} k={1.4} />}
+      {!off && <Pop f={f} at={10} style={{position: 'absolute', left: 0, right: 0, top: 300, textAlign: 'center', fontFamily: FONT, fontSize: 84, fontWeight: 900, color: '#9fb7ff', textShadow: '0 4px 24px rgba(0,0,0,0.9)'}}>スマホを置いても…</Pop>}
       {off && <Pop f={f} at={LT(T, 's18', 0) + 74} from="scale" style={{position: 'absolute', left: 0, right: 0, top: 300, textAlign: 'center', fontSize: 140}}>👁️</Pop>}
       <Vignette />
     </AbsoluteFill>
@@ -557,7 +561,7 @@ const S24: React.FC<SceneProps> = ({f, T}) => {
     return (
       <AbsoluteFill style={{background: '#000'}}>
         <Still src="bed" f={f - LT(T, 's24', 8)} dur={400} dark={0.65} />
-        <PhonePOV f={f} flick={24} x={1180} y={60} scale={0.9} clock="0:30" />
+        <PhoneLight f={f} k={1.1} />
         <div style={{position: 'absolute', left: 150, top: 150, width: 900, height: 140}}><div style={{position: 'absolute', left: 0, top: 0, whiteSpace: 'nowrap'}}><Clock text="0:00〜2:00" x={0} y={0} size={72} /></div></div>
         <Pop f={f} at={LT(T, 's24', 9)} style={{position: 'absolute', left: 150, top: 360, fontFamily: FONT, fontSize: 56, fontWeight: 900, color: '#ff4d3d', width: 860}}>お酒を飲んだ人の頭と 同じくらい鈍っている</Pop>
         <Vignette />

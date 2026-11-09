@@ -418,7 +418,7 @@ def main():
         ma.place(sfx, ma.sfx_soft_whoosh(0.6), sc["start"] - 0.4, 0.35, 0.5)
         if sc["id"] in accents:
             ma.place(sfx, accents[sc["id"]], sc["start"] + 0.25, 0.8, 0.5)
-        if sc["id"] in ("s08", "s16", "s18", "s38"):
+        if sc["id"] in ():
             for k in range(6):
                 ma.place(sfx, swipe(), sc["start"] + 0.5 + k * 0.9, 0.8, 0.45 + 0.1 * (k % 2))
         if sc["id"] in ("s11", "s15", "s17", "s21", "s29", "s35"):
