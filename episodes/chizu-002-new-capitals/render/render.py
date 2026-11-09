@@ -124,6 +124,15 @@ def d_four(timing=(0.2, 0.8, 1.4, 2.0), title="首都をゼロから造る、4�
     return fn
 
 
+def d_problems(img, t, d):
+    text(img, (W / 2, 200), "ジャカルタの3つの問題", 60, anchor="mm")
+    for i, s in enumerate(["渋滞", "大気汚染", "地盤沈下"]):
+        a = seg(t, 0.2 + i * 0.7, 0.8 + i * 0.7)
+        x = W / 2 + (i - 1) * 520
+        panel(img, (x - 220, 360, x + 220, 640), fill=(16, 28, 50), alpha=0.92 * a, outline=RED if i == 2 else TEAL)
+        text(img, (x, 500), s, 80, anchor="mm", alpha=a, stroke=5)
+
+
 def d_deal(img, t, d):
     text(img, (W / 2, 180), "1790年の取引", 60, anchor="mm")
     a, b = seg(t, 0.3, 0.9), seg(t, 1.2, 1.8)
@@ -179,9 +188,9 @@ def shots():
     add("S03", 5, "diag", sent=2, fn=d_year("1790年", "首都法：ポトマック川のほとりに新しい首都", "それまでの10年はフィラデルフィアが仮の首都"), why="1790年の首都法を年号カードで示す")
     add("S03", 6, "diag", sent=3, fn=d_deal, why="首都の場所と借金の肩代わりの取引を図で示す")
     # S04
-    add("S04", 3, "photo", file="photo_02_philadelphia.jpg", label="フィラデルフィア（1790〜1800年の仮の首都）")
+    add("S04", 3, "photo", file="photo_02_philadelphia.jpg", label="フィラデルフィアの独立記念館")
     add("S04", 4, "map", **USA, move=False, layers=[L_dots(["フィラデルフィア"], 0, 0, TEAL), L_dots(["ワシントン"], 0.3, 0, AMBER), L_arrow("フィラデルフィア", "ワシントン", 0.6), L_label(-77.4, 38.6, "ポトマック川", 1.2, 36, MUTED)], why="仮の首都から新しい首都への位置関係")
-    add("S04", 3, "photo", sent=2, file="photo_01_us_capitol.jpg", label="アメリカ合衆国議会議事堂（ワシントン）")
+    add("S04", 3, "photo", sent=2, file="photo_01_us_capitol.jpg", label="アメリカ合衆国議会議事堂（ワシントン、現在）")
     add("S04", 3, "diag", fn=d_year("1800年11月", "議会がワシントンで初めて開かれた"), why="1800年の移転を年号カードで示す")
     # S05
     add("S05", 4, "map", **AUSM, move=False, layers=[L_dots(["シドニー", "メルボルン"], 0.1, 0.3, TEAL), L_dots(["キャンベラ"], 0.8, 0, AMBER), L_caption("前回の動画：キャンベラ", 0.2)], why="前回の動画の地図に戻り、キャンベラの位置を示す")
@@ -191,7 +200,7 @@ def shots():
     add("S05", 2, "diag", fn=d_year("1927年", "議会がキャンベラで初めて開かれた"), why="1927年の議会")
     # S06
     add("S06", 3, "card", kicker="型2", title="国の内陸を開く", why="章の扉")
-    add("S06", 3, "photo", sent=1, file="photo_04_rio.jpg", label="リオデジャネイロ（大西洋に面した港町）")
+    add("S06", 3, "photo", sent=1, file="photo_04_rio.jpg", label="リオデジャネイロ（大西洋岸）")
     add("S06", 2, "map", **BRA, move=False, layers=[L_dots(["リオデジャネイロ"], 0, 0, TEAL)], why="リオが海岸にあることを地図で示す")
     add("S06", 8, "map", sent=2, lon=(-46.0, -48.0), lat=(-19.0, -16.0), kmpp=(4.2, 3.0), layers=[L_dots(["リオデジャネイロ"], 0, 0, TEAL), L_label(-48.0, -14.2, "国の中央の高原", 0.8, 48), L_caption("1891年 憲法：国の中央の高原に首都の土地", 0.3)], why="1891年の憲法の条文が示す場所（国の中央の高原）を地図で示す。区域の境界は描かない")
     # S07
@@ -201,23 +210,21 @@ def shots():
     add("S07", 3, "map", lon=-47.88, lat=-15.79, kmpp=0.6, move=False, layers=[L_dots(["ブラジリア"], 0, 0, AMBER), L_caption("計画：ルシオ・コスタ　建物：オスカー・ニーマイヤー", 0.1)], why="計画した人の名前を、首都の位置の地図に添える")
     # S08
     add("S08", 3, "card", kicker="型3", title="どの集団にも偏らない場所", why="章の扉")
-    add("S08", 3, "photo", sent=1, file="photo_05_lagos.jpg", label="ラゴス（南西の海岸の港町）")
+    add("S08", 3, "photo", sent=1, file="photo_05_lagos.jpg", label="ラゴス（マリーナ地区）")
     add("S08", 2, "map", **NGA, move=False, layers=[L_dots(["ラゴス"], 0, 0, TEAL)], why="ラゴスが南西の海岸にあることを地図で示す")
     add("S08", 4, "map", sent=2, **NGA, move=False, layers=[L_dots(["ラゴス"], 0, 0, TEAL), L_caption("多くの民族と宗教", 0.2)], why="多くの民族と宗教がある国だという語りを国の地図で受ける（分布は示さない）")
     add("S08", 7, "diag", sent=3, fn=d_year("1975年", "政府の委員会が首都の場所を見直す", "翌1976年、首都をラゴスから移すことが決まる"), why="1975年の委員会と1976年の決定")
     # S09
     add("S09", 6, "map", **NGA, move=False, layers=[L_dots(["ラゴス"], 0, 0, TEAL), L_dots(["アブジャ"], 0.3, 0, AMBER), L_arrow("ラゴス", "アブジャ", 0.6), L_caption("国の中央、どこにも偏らない土地", 0.3)], why="ラゴスから国の中央のアブジャへ")
-    add("S09", 3, "photo", sent=1, file="photo_06_abuja.jpg", label="アブジャ")
+    add("S09", 3, "photo", sent=1, file="photo_06_abuja.jpg", label="アブジャ（奥はアソ・ロック）")
     add("S09", 3, "diag", fn=d_year("1991年12月", "政府がラゴスからアブジャに移った"), why="1991年の移転")
     # S10
     add("S10", 3, "card", kicker="型4", title="今の首都が限界", why="章の扉")
     add("S10", 4, "map", sent=1, lon=(110.0, 106.8), lat=(-5.0, -6.3), kmpp=(3.0, 0.9), layers=[L_dots(["ジャカルタ"], 0.3, 0, TEAL), L_caption("ジャワ島の北の海岸", 0.3)], why="ジャカルタがジャワ島の北の海岸にあることを地図で示す")
-    add("S10", 3, "photo", sent=2, file="photo_07_jakarta_traffic.jpg", label="ジャカルタの渋滞")
-    add("S10", 3, "photo", sent=3, file="photo_08_jakarta_flood.jpg", label="ジャカルタ北部の海沿い")
-    add("S10", 1, "map", lon=106.8, lat=-6.3, kmpp=0.9, move=False, layers=[L_dots(["ジャカルタ"], 0, 0, TEAL), L_caption("地盤沈下で、街の一部が沈む", 0.1)], why="地盤沈下の語りを位置の地図で受ける（沈下の分布は示さない）")
+    add("S10", 3, "diag", sent=2, fn=d_problems, why="渋滞・大気汚染・地盤沈下の3つを読み上げに合わせて出す（インドネシアの建物の写真は、パノラマの自由がないため使わない）")
+    add("S10", 4, "map", sent=3, lon=106.8, lat=-6.3, kmpp=0.9, move=False, layers=[L_dots(["ジャカルタ"], 0, 0, TEAL), L_caption("地盤沈下で、街の一部が沈む", 0.1)], why="地盤沈下の語りを位置の地図で受ける（沈下の分布は示さない）")
     # S11
     add("S11", 4, "map", **IDN, move=False, layers=[L_dots(["ジャカルタ"], 0, 0, TEAL), L_dots(["ヌサンタラ"], 0.3, 0, RED), L_arrow("ジャカルタ", "ヌサンタラ", 0.6), L_label(114.5, 0.8, "ボルネオ島（カリマンタン）", 1.0, 40, MUTED)], why="ジャカルタからボルネオ島の新首都へ")
-    add("S11", 3, "photo", file="photo_09_nusantara.jpg", label="ヌサンタラ（東カリマンタン、建設中）")
     add("S11", 2, "diag", fn=d_year("2022年", "法律で新しい首都ヌサンタラを決定"), why="2022年の法律")
     add("S11", 6, "diag", sent=1, fn=d_legal, why="法律の上の首都はまだジャカルタであることを示す（2026年5月の憲法裁判所の判断を含む）")
     add("S11", 3, "diag", sent=3, fn=d_year("2026年11月時点", "首都の移転は、まだ終わっていない"), why="移転が終わっていないことを示す（公開直前に確認）")
