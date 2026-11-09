@@ -12,7 +12,36 @@ sys.path.insert(0, str(R1))
 import render_v23 as R                      # sets the Natural Earth base map (ne_base.install) on import
 from render_v23 import (W, H, AMBER, TEAL, RED, INK, MUTED, text, panel, seg, ease, caption_box, note_ne, polyline, arrow)
 import base, geo
+import cv2
 from PIL import Image, ImageDraw
+
+# Relief base map (v2 of this episode): shaded relief image, not a satellite photo. Replaces the flat Natural Earth fill
+# for the globe and the maps at 1 km/px or wider. Zoomed maps (<1 km/px) still draw Natural Earth coastlines directly.
+_REL = HERE / "vendor" / "shadedrelief.jpg"
+assert _REL.exists(), "run render/setup.sh"
+base._TEX = cv2.cvtColor(cv2.imread(str(_REL)), cv2.COLOR_BGR2RGB)
+base.TEX_LABEL = "shadedrelief_basemap_data_2_0_0"
+R.NE_NOTE = "地図：地形の陰影図（shadedrelief.com／basemap-data）。衛星画像ではありません"
+
+
+def vector_map(lon0, lat0, kmpp, ss=2):
+    """Zoomed maps (<1 km/px): Natural Earth 1:10m coastline drawn directly, in colours matched to the relief map."""
+    SEA, LAND, EDGE = (126, 170, 206), (178, 196, 170), (150, 165, 140)
+    im = Image.new("RGB", (W * ss, H * ss), SEA); d = ImageDraw.Draw(im)
+    for _, _, polys in R.land():
+        for poly in polys:
+            r = poly[0]
+            x, y = geo.laea(r[:, 0], r[:, 1], lon0, lat0)
+            X, Y = (W / 2 + x / kmpp) * ss, (H / 2 - y / kmpp) * ss
+            if X.max() < -50 or X.min() > W * ss + 50 or Y.max() < -50 or Y.min() > H * ss + 50:
+                continue
+            d.polygon(list(zip(X, Y)), fill=LAND, outline=EDGE)
+    out = im.resize((W, H), Image.LANCZOS).convert("RGBA")
+    R.note(out, "地図：Natural Earth（1:1000万・海岸線は簡略化され、湾の細かい形は省略）")
+    return out
+
+
+R.vector_map = vector_map
 
 OUT = HERE / "out"; OUT.mkdir(exist_ok=True)
 TIM = json.loads((EP / "audio/timings.json").read_text())
@@ -189,7 +218,7 @@ def shots():
     add("S03", 6, "diag", sent=3, fn=d_deal, why="首都の場所と借金の肩代わりの取引を図で示す")
     # S04
     add("S04", 3, "photo", file="photo_02_philadelphia.jpg", label="フィラデルフィアの独立記念館")
-    add("S04", 4, "map", **USA, move=False, layers=[L_dots(["フィラデルフィア"], 0, 0, TEAL), L_dots(["ワシントン"], 0.3, 0, AMBER), L_arrow("フィラデルフィア", "ワシントン", 0.6), L_label(-77.4, 38.6, "ポトマック川", 1.2, 36, MUTED)], why="仮の首都から新しい首都への位置関係")
+    add("S04", 4, "map", **USA, move=False, layers=[L_dots(["フィラデルフィア"], 0, 0, TEAL), L_dots(["ワシントン"], 0.3, 0, AMBER), L_arrow("フィラデルフィア", "ワシントン", 0.6), L_label(-77.0, 38.15, "ポトマック川", 1.2, 34, MUTED)], why="仮の首都から新しい首都への位置関係")
     add("S04", 3, "photo", sent=2, file="photo_01_us_capitol.jpg", label="アメリカ合衆国議会議事堂（ワシントン、現在）")
     add("S04", 3, "diag", fn=d_year("1800年11月", "議会がワシントンで初めて開かれた"), why="1800年の移転を年号カードで示す")
     # S05
@@ -300,20 +329,20 @@ def main():
         i, m = map(int, a.chunks.split("/"))
         n = int(math.ceil(R.TOTAL / 10.0))
         for c in range(i - 1, n, m):
-            dst = OUT / f"c_{c:03d}.mp4"
+            dst = OUT / f"c2_{c:03d}.mp4"
             if dst.exists():
                 continue
-            tmp = OUT / f"c_{c:03d}.tmp.mp4"
+            tmp = OUT / f"c2_{c:03d}.tmp.mp4"
             render(c * 10.0, min(R.TOTAL, (c + 1) * 10.0), tmp)
             tmp.rename(dst)
         return
     if a.mux:
-        parts = sorted(OUT.glob("c_[0-9][0-9][0-9].mp4"))
+        parts = sorted(OUT.glob("c2_[0-9][0-9][0-9].mp4"))
         assert len(parts) == int(math.ceil(R.TOTAL / 10.0)), len(parts)
         (OUT / "parts.txt").write_text("".join(f"file '{p.name}'\n" for p in parts))
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(OUT / "parts.txt"),
                         "-i", str(OUT / "mix.wav"), "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-af", "loudnorm=I=-15:TP=-1.5:LRA=11",
-                        "-ar", "48000", "-c:a", "aac", "-b:a", "192k", "-shortest", str(OUT / "chizu-002-new-capitals_full_v1.mp4")], check=True)
+                        "-ar", "48000", "-c:a", "aac", "-b:a", "192k", "-shortest", str(OUT / "chizu-002-new-capitals_full_v2.mp4")], check=True)
 
 
 if __name__ == "__main__":
