@@ -43,3 +43,10 @@
   - 10 ワシントンの空撮：使う場面がなかった（素材としては残す）
 - 02 は議会が開かれた Congress Hall ではなく、隣の独立記念館。画面の説明は「フィラデルフィアの独立記念館」とし、議会の建物とは言わない
 - 05（1920×512 のパノラマ）と 11 は拡大して使うため、細部はやや甘い
+
+## 地図の下地（v2、2026-11-09。社長「世界地図はもっとリアルにして欲しい」）
+- 地球儀と縮尺1km/px以上の地図の下地を、Natural Earth の一色塗りから**地形の陰影図**に替えた
+- ファイル：`shadedrelief.jpg`（10800×5400、sha256 e52e46e82d14f7d321a287c9c323603cbe0fe9c25861e191eadfcad4129a39d0）。PyPI のパッケージ basemap-data 2.0.0（matplotlib の Basemap プロジェクト）に同梱。取得は `render/setup.sh`（ファイルは git に入れない）
+- 権利：パッケージの README に「GSHHG のデータと EPSG のファイル以外は MIT ライセンス」と明記（LICENSE.mit）。Basemap のソースコード（`shadedrelief()` の説明）に「原画像は https://www.shadedrelief.com/ 」と明記。shadedrelief.com 側の利用条件の本文は、この環境から接続できず未確認
+- 衛星写真ではなく、標高に合わせた色と陰影で描いた地図。画面には「地図：地形の陰影図（shadedrelief.com／basemap-data）。衛星画像ではありません」と表示
+- 拡大した地図（1km/px 未満：フィラデルフィア〜ワシントン、ジャカルタ、ブラジリア、シドニーの円）は、これまでどおり Natural Earth の海岸線を直接描く

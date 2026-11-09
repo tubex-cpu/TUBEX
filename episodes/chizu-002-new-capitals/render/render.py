@@ -12,7 +12,16 @@ sys.path.insert(0, str(R1))
 import render_v23 as R                      # sets the Natural Earth base map (ne_base.install) on import
 from render_v23 import (W, H, AMBER, TEAL, RED, INK, MUTED, text, panel, seg, ease, caption_box, note_ne, polyline, arrow)
 import base, geo
+import cv2
 from PIL import Image, ImageDraw
+
+# Relief base map (v2 of this episode): shaded relief image, not a satellite photo. Replaces the flat Natural Earth fill
+# for the globe and the maps at 1 km/px or wider. Zoomed maps (<1 km/px) still draw Natural Earth coastlines directly.
+_REL = HERE / "vendor" / "shadedrelief.jpg"
+assert _REL.exists(), "run render/setup.sh"
+base._TEX = cv2.cvtColor(cv2.imread(str(_REL)), cv2.COLOR_BGR2RGB)
+base.TEX_LABEL = "shadedrelief_basemap_data_2_0_0"
+R.NE_NOTE = "地図：地形の陰影図（shadedrelief.com／basemap-data）。衛星画像ではありません"
 
 OUT = HERE / "out"; OUT.mkdir(exist_ok=True)
 TIM = json.loads((EP / "audio/timings.json").read_text())
@@ -300,20 +309,20 @@ def main():
         i, m = map(int, a.chunks.split("/"))
         n = int(math.ceil(R.TOTAL / 10.0))
         for c in range(i - 1, n, m):
-            dst = OUT / f"c_{c:03d}.mp4"
+            dst = OUT / f"c2_{c:03d}.mp4"
             if dst.exists():
                 continue
-            tmp = OUT / f"c_{c:03d}.tmp.mp4"
+            tmp = OUT / f"c2_{c:03d}.tmp.mp4"
             render(c * 10.0, min(R.TOTAL, (c + 1) * 10.0), tmp)
             tmp.rename(dst)
         return
     if a.mux:
-        parts = sorted(OUT.glob("c_[0-9][0-9][0-9].mp4"))
+        parts = sorted(OUT.glob("c2_[0-9][0-9][0-9].mp4"))
         assert len(parts) == int(math.ceil(R.TOTAL / 10.0)), len(parts)
         (OUT / "parts.txt").write_text("".join(f"file '{p.name}'\n" for p in parts))
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(OUT / "parts.txt"),
                         "-i", str(OUT / "mix.wav"), "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-af", "loudnorm=I=-15:TP=-1.5:LRA=11",
-                        "-ar", "48000", "-c:a", "aac", "-b:a", "192k", "-shortest", str(OUT / "chizu-002-new-capitals_full_v1.mp4")], check=True)
+                        "-ar", "48000", "-c:a", "aac", "-b:a", "192k", "-shortest", str(OUT / "chizu-002-new-capitals_full_v2.mp4")], check=True)
 
 
 if __name__ == "__main__":
