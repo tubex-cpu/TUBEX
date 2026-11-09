@@ -482,5 +482,423 @@
    1920,
    1440
   ]
+ },
+ "vitcos": {
+  "file": "vitcos.jpg",
+  "title": "Vitcos Archaeological site.jpg",
+  "artist": "AgainErick",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Vitcos_Archaeological_site.jpg",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "ollanta-2": {
+  "file": "ollanta-2.jpg",
+  "title": "The Inca fortress at Ollantaytambo.jpg",
+  "artist": "Marvin The Paranoid",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:The_Inca_fortress_at_Ollantaytambo.jpg",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "sacsay-1": {
+  "file": "sacsay-1.jpg",
+  "title": "Sacsayhuamán, Cusco, Perú, 2015-07-31, DD 05.JPG",
+  "artist": "Diego Delso",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sacsayhuam%C3%A1n,_Cusco,_Per%C3%BA,_2015-07-31,_DD_05.JPG",
+  "size": [
+   1920,
+   1040
+  ]
+ },
+ "three-windows-1": {
+  "file": "three-windows-1.jpg",
+  "title": "Temple of Three Windows, Machu Picchu, Peru.jpg",
+  "artist": "flowcomm",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Temple_of_Three_Windows,_Machu_Picchu,_Peru.jpg",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "ashlar-1": {
+  "file": "ashlar-1.jpg",
+  "title": "Lascar Detail of the dry-stone (Ashlar) technique used by the Incas (4548730262).jpg",
+  "artist": "Jorge Láscar from Australia",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Lascar_Detail_of_the_dry-stone_(Ashlar)_technique_used_by_the_Incas_(4548730262).jpg",
+  "size": [
+   1920,
+   1275
+  ]
+ },
+ "ashlar-door": {
+  "file": "ashlar-door.jpg",
+  "title": "Lascar Inca architecture - The use of dry-stone walls (Ashlar) - Machu Picchu (4548092393).jpg",
+  "artist": "Jorge Láscar from Australia",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Lascar_Inca_architecture_-_The_use_of_dry-stone_walls_(Ashlar)_-_Machu_Picchu_(4548092393).jpg",
+  "size": [
+   1280,
+   2300
+  ]
+ },
+ "fountain-1": {
+  "file": "fountain-1.jpg",
+  "title": "Lascar Water fountains (4548732166).jpg",
+  "artist": "Jorge Láscar from Australia",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Lascar_Water_fountains_(4548732166).jpg",
+  "size": [
+   1920,
+   1275
+  ]
+ },
+ "water-2": {
+  "file": "water-2.jpg",
+  "title": "232 Water Management Machu Picchu Peru 2500 (15161374531).jpg",
+  "artist": "bobistraveling",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:232_Water_Management_Machu_Picchu_Peru_2500_(15161374531).jpg",
+  "size": [
+   1800,
+   2400
+  ]
+ },
+ "quarry-1": {
+  "file": "quarry-1.jpg",
+  "title": "Rock Quarry, Western Urban Sector & Agricultural Terraces.jpg",
+  "artist": "Steve FUNG",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Rock_Quarry,_Western_Urban_Sector_%26_Agricultural_Terraces.jpg",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "terrace-1": {
+  "file": "terrace-1.jpg",
+  "title": "Andenes at Machu Picchu (cropped).jpg",
+  "artist": "F Delventhal",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Andenes_at_Machu_Picchu_(cropped).jpg",
+  "size": [
+   1920,
+   1243
+  ]
+ },
+ "terrace-2": {
+  "file": "terrace-2.jpg",
+  "title": "Terraces at Machu Picchu WLM 2022 (9).jpg",
+  "artist": "Pierre André Leclercq",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Terraces_at_Machu_Picchu_WLM_2022_(9).jpg",
+  "size": [
+   1920,
+   1343
+  ]
+ },
+ "terrace-south": {
+  "file": "terrace-south.jpg",
+  "title": "Peru - Machu Picchu 156 - looking back at the Southern Agricultural Terraces (8296852781).jpg",
+  "artist": "McKay Savage from London, UK",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Peru_-_Machu_Picchu_156_-_looking_back_at_the_Southern_Agricultural_Terraces_(8296852781).jpg",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "intipunku": {
+  "file": "intipunku.jpg",
+  "title": "Intipunku (Sun Gate).jpg",
+  "artist": "Steve FUNG",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Intipunku_(Sun_Gate).jpg",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "mp-from-intipunku": {
+  "file": "mp-from-intipunku.jpg",
+  "title": "Machu Picchu seen from Intipunku (the Gate of the Sun), Peru.jpg",
+  "artist": "Christoph Strässler",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Machu_Picchu_seen_from_Intipunku_(the_Gate_of_the_Sun),_Peru.jpg",
+  "size": [
+   1920,
+   1080
+  ]
+ },
+ "inca-bridge-2": {
+  "file": "inca-bridge-2.jpg",
+  "title": "Inca Bridge at Machu Picchu.jpg",
+  "artist": "Brian Jeffery Beggerly",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Inca_Bridge_at_Machu_Picchu.jpg",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "qeswachaka": {
+  "file": "qeswachaka.jpg",
+  "title": "Puente Qeswachaka.jpg",
+  "artist": "Ricardo Chirinos Portocarrero",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Puente_Qeswachaka.jpg",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "uru-valley-1": {
+  "file": "uru-valley-1.jpg",
+  "title": "Urubamba river - Machu Picchu and Sacred Valley Peru (4876196508).jpg",
+  "artist": "David Berkowitz from New York, NY, USA",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Urubamba_river_-_Machu_Picchu_and_Sacred_Valley_Peru_(4876196508).jpg",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "uru-pellaea": {
+  "file": "uru-pellaea.jpg",
+  "title": "Urubamba Valley - Flickr - pellaea (2).jpg",
+  "artist": "Jason Hollinger",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Urubamba_Valley_-_Flickr_-_pellaea_(2).jpg",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "cloudforest-1": {
+  "file": "cloudforest-1.jpg",
+  "title": "Cloud forest - Flickr - pellaea.jpg",
+  "artist": "Jason Hollinger",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Cloud_forest_-_Flickr_-_pellaea.jpg",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "reconstruct": {
+  "file": "reconstruct.jpg",
+  "title": "Reconstructive sequence of llaqta of Machu Picchu.png",
+  "artist": "Nicola Masini, Gerardo Romano, Dominika Sieczkowska, Luigi Capozzoli, Daniele Spizzichino, Francesco Gabellone, Jose Bastante, Manuela Scavone, Maria Sileo, Nicodemo Abate, Claudio Margottini &amp; Rosa Lasaponara",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Reconstructive_sequence_of_llaqta_of_Machu_Picchu.png",
+  "size": [
+   1920,
+   1096
+  ]
+ },
+ "moon-temple-1": {
+  "file": "moon-temple-1.jpg",
+  "title": "Templo de la Luna - Huayna Picchu.jpg",
+  "artist": "Mx._Granger",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Templo_de_la_Luna_-_Huayna_Picchu.jpg",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "moon-cavern": {
+  "file": "moon-cavern.jpg",
+  "title": "Gran Caverna - Huayna Picchu.jpg",
+  "artist": "Mx._Granger",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Gran_Caverna_-_Huayna_Picchu.jpg",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "aguas-1": {
+  "file": "aguas-1.jpg",
+  "title": "Aguas Calientes, Cuzco, Perú, 2015-07-30, DD 68.JPG",
+  "artist": "Diego Delso",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Aguas_Calientes,_Cuzco,_Per%C3%BA,_2015-07-30,_DD_68.JPG",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "aguas-2": {
+  "file": "aguas-2.jpg",
+  "title": "Machupicchu pueblo, Peru 2019-10-13.jpg",
+  "artist": "Alexey Komarov",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Machupicchu_pueblo,_Peru_2019-10-13.jpg",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "aguas-station": {
+  "file": "aguas-station.jpg",
+  "title": "Aguas Calientes (Machu Picchu), estación, 2023 (05).jpg",
+  "artist": "Draceane",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Aguas_Calientes_(Machu_Picchu),_estaci%C3%B3n,_2023_(05).jpg",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "perurail-trail": {
+  "file": "perurail-trail.jpg",
+  "title": "Train going to Aguas Calientes (Machu Picchu City) at Inca Trail, Peru.jpg",
+  "artist": "Christoph Strässler",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Train_going_to_Aguas_Calientes_(Machu_Picchu_City)_at_Inca_Trail,_Peru.jpg",
+  "size": [
+   1920,
+   1080
+  ]
+ },
+ "adatara-1": {
+  "file": "adatara-1.jpg",
+  "title": "Mount Adatara.JPG",
+  "artist": "Ski Mania",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Mount_Adatara.JPG",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "otama-office": {
+  "file": "otama-office.jpg",
+  "title": "Otama village office.jpg",
+  "artist": "Altomarina",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Otama_village_office.jpg",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "yonomori": {
+  "file": "yonomori.jpg",
+  "title": "(福島県) 夜ノ森駅近く、夜の森公園。ソメイヨシノの桜並木が2.5kmも続く。まさに桜のトンネルですね。訪れたときには桜は満開。公園も華やかなムードでした。 - panoramio.jpg",
+  "artist": "Shift",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:(%E7%A6%8F%E5%B3%B6%E7%9C%8C)_%E5%A4%9C%E3%83%8E%E6%A3%AE%E9%A7%85%E8%BF%91%E3%81%8F%E3%80%81%E5%A4%9C%E3%81%AE%E6%A3%AE%E5%85%AC%E5%9C%92%E3%80%82%E3%82%BD%E3%83%A1%E3%82%A4%E3%83%A8%E3%82%B7%E3%83%8E%E3%81%AE%E6%A1%9C%E4%B8%A6%E6%9C%A8%E3%81%8C2.5km%E3%82%82%E7%B6%9A%E3%81%8F%E3%80%82%E3%81%BE%E3%81%95%E3%81%AB%E6%A1%9C%E3%81%AE%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB%E3%81%A7%E3%81%99%E3%81%AD%E3%80%82%E8%A8%AA%E3%82%8C%E3%81%9F%E3%81%A8%E3%81%8D%E3%81%AB%E3%81%AF%E6%A1%9C%E3%81%AF%E6%BA%80%E9%96%8B%E3%80%82%E5%85%AC%E5%9C%92%E3%82%82%E8%8F%AF%E3%82%84%E3%81%8B%E3%81%AA%E3%83%A0%E3%83%BC%E3%83%89%E3%81%A7%E3%81%97%E3%81%9F%E3%80%82_-_panoramio.jpg",
+  "size": [
+   1280,
+   960
+  ]
+ },
+ "llama-2": {
+  "file": "llama-2.jpg",
+  "title": "Llama at Machu Picchu 2019-10-13-4.jpg",
+  "artist": "Alexey Komarov",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Llama_at_Machu_Picchu_2019-10-13-4.jpg",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "condor-1": {
+  "file": "condor-1.jpg",
+  "title": "Peru - Colca Canyon - Andean condor (Vultur gryphus) 01.jpg",
+  "artist": "Thomas Fuhrmann",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Peru_-_Colca_Canyon_-_Andean_condor_(Vultur_gryphus)_01.jpg",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "sunset-1": {
+  "file": "sunset-1.jpg",
+  "title": "Sunset over Machu Picchu, Peru (4876264894).jpg",
+  "artist": "David Berkowitz from New York, NY, USA",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sunset_over_Machu_Picchu,_Peru_(4876264894).jpg",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "mp-fog-beatriz": {
+  "file": "mp-fog-beatriz.jpg",
+  "title": "Machu Picchu fog.jpg",
+  "artist": "Beatriz Posada Alonso",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Machu_Picchu_fog.jpg",
+  "size": [
+   1920,
+   1920
+  ]
+ },
+ "mp-wayna-pan-w": {
+  "file": "mp-wayna-pan-w.jpg",
+  "title": "99 - Machu Picchu - Juin 2009.edit3.jpg",
+  "artist": "Martin St-Amant (S23678)",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:99_-_Machu_Picchu_-_Juin_2009.edit3.jpg",
+  "size": [
+   3840,
+   1714
+  ]
+ },
+ "mp-sunset-pan-w": {
+  "file": "mp-sunset-pan-w.jpg",
+  "title": "95 - Machu Picchu - Juin 2009.jpg",
+  "artist": "Martin St-Amant (S23678)",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:95_-_Machu_Picchu_-_Juin_2009.jpg",
+  "size": [
+   3840,
+   904
+  ]
+ },
+ "map-expedition-1912-w": {
+  "file": "map-expedition-1912-w.jpg",
+  "title": "Map of the Peruvian Expedition of 1912.jpg",
+  "artist": "Hiram Bingham III",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Map_of_the_Peruvian_Expedition_of_1912.jpg",
+  "size": [
+   1920,
+   1634
+  ]
+ },
+ "cusco-plaza-w": {
+  "file": "cusco-plaza-w.jpg",
+  "title": "Plaza de Armas, Cusco, Perú, 2015-07-31, DD 53-56 PAN.jpg",
+  "artist": "Diego Delso",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Plaza_de_Armas,_Cusco,_Per%C3%BA,_2015-07-31,_DD_53-56_PAN.jpg",
+  "size": [
+   3840,
+   946
+  ]
+ },
+ "uru-valley-2-w": {
+  "file": "uru-valley-2-w.jpg",
+  "title": "Peru - Machu Picchu 038 - lush, rugged valley (7367125008).jpg",
+  "artist": "McKay Savage from London, UK",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Peru_-_Machu_Picchu_038_-_lush,_rugged_valley_(7367125008).jpg",
+  "size": [
+   3840,
+   1133
+  ]
  }
 }
