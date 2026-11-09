@@ -68,6 +68,20 @@ export const P = {
 	saitobaru: [131.39, 32.12],
 	daisen: [135.4875, 34.5639],
 	kashikoken: [135.79, 34.49],
+	machu: [-72.545, -13.1631],
+	cusco: [-71.9675, -13.532],
+	vilcabamba: [-73.207, -12.914],
+	ollantay: [-72.263, -13.258],
+	aguas: [-72.5254, -13.1547],
+	mandor: [-72.512, -13.148],
+	lima: [-77.043, -12.046],
+	quito: [-78.47, -0.18],
+	titicaca: [-69.4, -15.85],
+	coast: [-79.0, -8.1],
+	amazon: [-74.6, -8.5],
+	highland: [-70.8, -15.0],
+	otama: [140.358, 37.546],
+	tomioka: [141.006, 37.344],
 } as const satisfies Record<string, LL>;
 
 const mercY = (lat: number) => Math.log(Math.tan(Math.PI / 4 + (lat * Math.PI) / 360));

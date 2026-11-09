@@ -18,8 +18,10 @@ URL = 'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'
 OUT_W, OUT_H = 2560, 1440
 # 名前: (中心の経度, 中心の緯度, 横に映す経度の幅, タイルのズーム)
 VIEWS = {
-	'nara': (135.80, 34.62, 0.55, 12),
-	'nishinihon': (133.4, 33.07, 9.5, 9),
+	'sudamerica': (-70.0, -13.0, 44.0, 5),
+	'cusco': (-72.55, -13.25, 2.6, 9, 1900),
+	'machupicchu': (-72.53, -13.165, 0.24, 13, 1500),
+	'fukushima': (140.55, 37.48, 1.5, 10),
 }
 ONLY = set(sys.argv[1:])
 
@@ -33,7 +35,7 @@ def inv_merc(y):
 
 
 def extent(v):
-	lon, lat, wdeg, _ = VIEWS[v]
+	lon, lat, wdeg = VIEWS[v][:3]
 	lon0, lon1 = lon - wdeg / 2, lon + wdeg / 2
 	hy = math.radians(wdeg) * OUT_H / OUT_W / 2
 	y0 = merc_y(lat)
@@ -73,7 +75,7 @@ def render(v):
 	e = np.asarray(Image.fromarray(crop).resize((OUT_W, OUT_H), Image.BICUBIC), np.float32)
 	# 1ピクセルあたりの距離（m）で傾きを出して陰影をつける
 	mpp = (lon1 - lon0) / OUT_W * 111320 * math.cos(math.radians((lat0 + lat1) / 2))
-	ex = 1.6 if VIEWS[v][2] > 3 else 1.25
+	ex = 1.6 if VIEWS[v][2] > 3 else (0.5 if VIEWS[v][2] < 0.3 else 0.9)
 	dzdx = np.gradient(e, axis=1) / mpp * ex
 	dzdy = np.gradient(e, axis=0) / mpp * ex
 	slope = np.arctan(np.hypot(dzdx, dzdy))
@@ -95,9 +97,9 @@ def render(v):
 	water |= np.isin(lab, np.nonzero(size < small * 0.25)[0] + 1)
 	wm = np.asarray(Image.fromarray((water * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(1.0)), np.float32) / 255
 	# 陸：低地はくすんだ緑、山は土色から明るい灰へ
-	stops = [(0, '#2f3b26'), (60, '#3b4630'), (250, '#4d4a33'), (700, '#625a43'), (1300, '#7a7466'), (2500, '#9a968e')]
+	stops = [(0, '#2f3b26'), (60, '#3b4630'), (250, '#4d4a33'), (700, '#625a43'), (1300, '#7a7466'), (2500, '#9a968e'), (4200, '#b4afa5'), (5600, '#e4e2dc')]
 	land = np.zeros(e.shape + (3,), np.float32)
-	el = np.clip(e, 0, None)
+	el = np.clip(e - (VIEWS[v][4] if len(VIEWS[v]) > 4 else 0), 0, None)
 	for (a, ca), (b, cb) in zip(stops, stops[1:]):
 		m = (el >= a) & (el < b)
 		f = ((el - a) / (b - a))[m][:, None]

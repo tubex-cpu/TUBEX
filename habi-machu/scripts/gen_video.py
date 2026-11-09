@@ -1,4 +1,4 @@
-"""富雄丸山古墳判決：本編（src/HabiTomioVideo.tsx）とコンポジション一覧（src/Root.tsx）を作る。
+"""マチュピチュ判決：本編（src/HabiMachuVideo.tsx）とコンポジション一覧（src/Root.tsx）を作る。
   python3 scripts/gen_video.py
 場面の並びは scripts/build-voice.py の IDS、場面名は scripts/script.txt の見出し。"""
 import re
@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parent.parent
 ids = eval(re.search(r'IDS = (\[.*?\])', (ROOT / 'scripts/build-voice.py').read_text(), re.S).group(1))
 heads = [l[5:] for l in (ROOT / 'scripts/script.txt').read_text().splitlines() if l.startswith('0:00 ')]
 assert len(ids) == len(heads), (len(ids), len(heads))
-MID, LATE = 'Clue4South', 'Clue8Owner'
+MID, LATE = 'Clue5Virgins', 'Clue9Japan'
 
 imp = '\n'.join(f"import {{{s}}} from './scenes/{s}';" for s in sorted(ids))
 seq = []
@@ -36,39 +36,39 @@ export const lateStart = {late};
 const fadeVolume = (length: number, fps: number) => (f: number) =>
 	BGM_VOLUME * interpolate(f, [0, 2 * fps, length - 2 * fps, length], [0, 1, 1, 0], {{extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}});
 
-// ハビ判事：富雄丸山古墳判決（本編）。シーンの長さは scripts/build-voice.py がナレーション音声から計算する
-export const HabiTomioVideo = () => {{
+// ハビ判事：マチュピチュ判決（本編）。シーンの長さは scripts/build-voice.py がナレーション音声から計算する
+export const HabiMachuVideo = () => {{
 	const {{fps, durationInFrames}} = useVideoConfig();
 	return (
 		<>
 			<TransitionSeries>
 {chr(10).join(seq)}
 			</TransitionSeries>
-			<Audio name="BGM 前半「丘の上の古墳」" src={{staticFile('bgm/bgm1-oka.mp3')}} durationInFrames={{midStart + fps}} volume={{fadeVolume(midStart + fps, fps)}} premountFor={{fps}} />
-			<Audio name="BGM 中盤「波打つ剣」" src={{staticFile('bgm/bgm2-tsurugi.mp3')}} from={{midStart - fps}} durationInFrames={{lateStart - midStart + 2 * fps}} volume={{fadeVolume(lateStart - midStart + 2 * fps, fps)}} premountFor={{fps}} />
-			<Audio name="BGM 後半「棺の中の宝」" src={{staticFile('bgm/bgm3-hitsugi.mp3')}} from={{lateStart - fps}} durationInFrames={{durationInFrames - lateStart + fps}} volume={{fadeVolume(durationInFrames - lateStart + fps, fps)}} premountFor={{fps}} />
+			<Audio name="BGM 前半「雲の上の都市」" src={{staticFile('bgm/bgm1-kumo.mp3')}} durationInFrames={{midStart + fps}} volume={{fadeVolume(midStart + fps, fps)}} premountFor={{fps}} />
+			<Audio name="BGM 中盤「骨が語る」" src={{staticFile('bgm/bgm2-hone.mp3')}} from={{midStart - fps}} durationInFrames={{lateStart - midStart + 2 * fps}} volume={{fadeVolume(lateStart - midStart + 2 * fps, fps)}} premountFor={{fps}} />
+			<Audio name="BGM 後半「密林の下」" src={{staticFile('bgm/bgm3-mori.mp3')}} from={{lateStart - fps}} durationInFrames={{durationInFrames - lateStart + fps}} volume={{fadeVolume(durationInFrames - lateStart + fps, fps)}} premountFor={{fps}} />
 		</>
 	);
 }};
 """
-(ROOT / 'src/HabiTomioVideo.tsx').write_text(video)
+(ROOT / 'src/HabiMachuVideo.tsx').write_text(video)
 comps = '\n'.join(f'\t\t\t<Composition id="{s}" component={{{s}}} durationInFrames={{d.{s}}} fps={{30}} width={{1920}} height={{1080}} />' for s in ids)
 root = f"""import {{AbsoluteFill, Composition, Folder}} from 'remotion';
-import {{HabiTomioVideo}} from './HabiTomioVideo';
+import {{HabiMachuVideo}} from './HabiMachuVideo';
 import {{sceneDurations as d, TOTAL_FRAMES}} from './data/timeline';
 {imp}
 
 // 確認版用の720p（1920×1080の画面をそのまま縮小）
-const HabiTomio720 = () => (
+const HabiMachu720 = () => (
 	<AbsoluteFill style={{{{width: 1920, height: 1080, transform: 'scale(0.6666667)', transformOrigin: 'top left'}}}}>
-		<HabiTomioVideo />
+		<HabiMachuVideo />
 	</AbsoluteFill>
 );
 
 export const RemotionRoot: React.FC = () => (
 	<>
-		<Composition id="HabiTomio" component={{HabiTomioVideo}} durationInFrames={{TOTAL_FRAMES}} fps={{30}} width={{1920}} height={{1080}} />
-		<Composition id="HabiTomio720" component={{HabiTomio720}} durationInFrames={{TOTAL_FRAMES}} fps={{30}} width={{1280}} height={{720}} />
+		<Composition id="HabiMachu" component={{HabiMachuVideo}} durationInFrames={{TOTAL_FRAMES}} fps={{30}} width={{1920}} height={{1080}} />
+		<Composition id="HabiMachu720" component={{HabiMachu720}} durationInFrames={{TOTAL_FRAMES}} fps={{30}} width={{1280}} height={{720}} />
 		<Folder name="Scenes">
 {comps}
 		</Folder>
