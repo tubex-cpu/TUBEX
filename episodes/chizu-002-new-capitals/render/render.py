@@ -278,7 +278,12 @@ def main():
             print(f"{s['start']:7.2f}–{s['end']:7.2f} {s['scene']} {s['kind']:6s} {s['P'].get('file') or s['P'].get('label') or s['P'].get('title') or ''}")
         return
     if a.shotlist:
-        (EP / "shotlist.md").write_text("# カット表（render/render.py から自動生成）\n\n実写は1カット3秒以内・1素材1回。地図・図解を長く見せる区間は「長く見せる根拠」に書く。地図は Natural Earth（衛星画像ではない）。\n\n" + R.shotlist_md().replace("| globe2 |", "| 地球儀 |"))
+        tl = R.timeline()
+        for s in tl:
+            if s["kind"] == "globe2":
+                s["kind"] = "globe"
+        R.timeline = lambda: tl
+        (EP / "shotlist.md").write_text("# カット表（render/render.py から自動生成）\n\n実写は1カット3秒以内・1素材1回。地図・図解を長く見せる区間は「長く見せる根拠」に書く。地図は Natural Earth（衛星画像ではない）。\n\n" + R.shotlist_md())
         return
     if a.still:
         for t in a.still:
