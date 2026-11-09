@@ -1,109 +1,95 @@
 // scripts/build-voice.py で自動生成。手で編集しないこと。
 import type {Caption} from '@remotion/captions';
 
-// 0:00 謎の先出し（3100フレーム）
+// 0:00 謎の先出し（2708フレーム）
 export const introCaptions: Caption[] = [
   {
-    "text": "奈良市の住宅街。団地に囲まれた丘の上に、ひとつの古墳がある。",
+    "text": "南米ペルー。アンデスの山の上、標高およそ2430メートル。",
     "startMs": 500,
-    "endMs": 5513,
+    "endMs": 5823,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2023年1月。この古墳の土の中から、とんでもないものが現れた。",
-    "startMs": 5993,
-    "endMs": 11508,
+    "text": "深い谷にはさまれた尾根の上に、石の都市が眠っている。",
+    "startMs": 6303,
+    "endMs": 10111,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "長さ2メートル37センチの、鉄の剣。刃は、蛇のように、6回くねって波打っている。",
-    "startMs": 11988,
-    "endMs": 19220,
+    "text": "マチュピチュ。誰もが一度は写真で見たことのある、世界で最も有名な遺跡のひとつだ。",
+    "startMs": 10591,
+    "endMs": 16564,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "鞘に納めた姿に戻すと、その長さは、2メートル85センチ。人の背丈を、はるかに超える。",
-    "startMs": 19700,
-    "endMs": 27327,
+    "text": "だが、この都市について、私たちが知っていると思っていることの多くは、ここ数年で次々に書きかえられている。",
+    "startMs": 17044,
+    "endMs": 24745,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "これまで日本で見つかった、同じ形の剣でいちばん長いものは、84センチあまり。その3倍近い長さだ。",
-    "startMs": 27807,
-    "endMs": 35561,
+    "text": "1911年、アメリカの探検家が「発見した」とされてきたこの遺跡。ところが、その探検家より前に、壁に名前を書き残していた人物がいた。",
+    "startMs": 25225,
+    "endMs": 36745,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "一緒に出てきたのは、盾の形をした、銅の鏡。こんな形の鏡は、日本で、ひとつも見つかっていなかった。",
-    "startMs": 36041,
-    "endMs": 44265,
+    "text": "私たちがずっと呼んできた「マチュピチュ」という名前。それは、この都市の本当の名前ではなかったかもしれない。",
+    "startMs": 37225,
+    "endMs": 45001,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "いったい、誰が、何のために、こんな巨大な剣を作ったのか。",
-    "startMs": 44745,
-    "endMs": 49524,
+    "text": "そして、ここに住んでいた人々。骨に残る遺伝子を調べると、思いもよらない姿が浮かび上がってきた。",
+    "startMs": 45481,
+    "endMs": 52756,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "しかも、不思議なことがある。この剣は、墓の主が眠る棺の中には、入っていなかったのだ。",
-    "startMs": 50004,
-    "endMs": 56863,
+    "text": "さらに、2026年の3月。この遺跡を覆う密林の下を、日本の技術が初めて見通した。",
+    "startMs": 53236,
+    "endMs": 60361,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "棺の中から見つかったのは、竹の櫛と、赤い朱。そして、古墳よりも数百年も古い、中国の鏡だった。",
-    "startMs": 57343,
-    "endMs": 65812,
+    "text": "それを成しとげたのは、福島県の、ある小さな会社だった。",
+    "startMs": 60841,
+    "endMs": 65023,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、この墓の主は、誰なのか。",
-    "startMs": 66292,
-    "endMs": 69257,
+    "text": "なぜ、福島の会社が、地球の裏側の遺跡を調べたのか。そこには、100年以上前から続く、ひとりの日本人との不思議な縁があった。",
+    "startMs": 65503,
+    "endMs": 75657,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして2026年の1月。長いあいだ、この古墳から出たと伝えられてきた、別の鏡の謎にも、新しい光が当てられた。",
-    "startMs": 69737,
-    "endMs": 79103,
+    "text": "ドローンに積んだレーザー。骨の年代を測る放射性炭素。そして、遺伝子の解析。",
+    "startMs": 76137,
+    "endMs": 82495,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "この古墳の名は、富雄丸山古墳。",
-    "startMs": 79583,
-    "endMs": 82185,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "空から地形を測るレーザー。拡大して表面の傷を読み取る顕微鏡。そして、1600年前の木の棺を、未来に残すための科学。",
-    "startMs": 82665,
-    "endMs": 92479,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "研究者たちの地道な調査が導き出したのは、4世紀の日本に、私たちの知らない王たちがいたことを示す、驚くべき証拠だった。",
-    "startMs": 92959,
-    "endMs": 102132,
+    "text": "最新の科学が導き出したのは、私たちの知らなかった、もうひとつのマチュピチュの姿だった。",
+    "startMs": 82975,
+    "endMs": 89055,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 ハビ判事登場（792フレーム）
+// 0:00 ハビ判事登場（850フレーム）
 export const judgeEntranceCaptions: Caption[] = [
   {
     "text": "こんばんは。閉園後の法廷にようこそ。ハビ判事です。",
@@ -113,1193 +99,1540 @@ export const judgeEntranceCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "今夜は、奈良の丘の上から現れた、巨大な剣に挑む。",
+    "text": "今夜は、アンデスの山の上に眠る、天空の都市に挑む。",
     "startMs": 5097,
-    "endMs": 9225,
+    "endMs": 9343,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "今夜の問いは、これだ。",
-    "startMs": 9705,
-    "endMs": 11465,
+    "startMs": 9823,
+    "endMs": 11583,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "巨大な剣は、何のために作られ、誰のために埋められたのか。",
-    "startMs": 11945,
-    "endMs": 16351,
+    "text": "マチュピチュは、誰が、何のために造り、そこには誰が暮らしていたのか。",
+    "startMs": 12063,
+    "endMs": 17204,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "土の中から現れた証拠をもとに、手がかりを、ひとつずつたどっていく。",
-    "startMs": 16831,
-    "endMs": 21865,
+    "text": "新しい証拠をもとに、手がかりを、ひとつずつたどっていく。",
+    "startMs": 17684,
+    "endMs": 21961,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "最初の手がかりは、この古墳の大きさだ。",
-    "startMs": 22345,
-    "endMs": 25193,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第1の手がかり 富雄丸山古墳は、日本最大の古墳？（2847フレーム）
-export const clue1SizeCaptions: Caption[] = [
-  {
-    "text": "富雄丸山古墳は、奈良市の西の、富雄という地区にある。",
-    "startMs": 500,
-    "endMs": 4788,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "古墳が造られたのは、4世紀の後半。今から、およそ1600年前。古墳時代の前半にあたる。",
-    "startMs": 5268,
-    "endMs": 13129,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "形は、まるい円墳だ。その直径は、109メートル。",
-    "startMs": 13609,
-    "endMs": 18089,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "円墳としては、日本で最大だ。それまで最大とされていたのは、埼玉県の丸墓山古墳で、直径は105メートル。それを上回った。",
-    "startMs": 18569,
-    "endMs": 28671,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、日本で最大の古墳と言っていいのか。",
-    "startMs": 29151,
-    "endMs": 32159,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "古墳には、まるい円墳のほかに、鍵穴のような形の前方後円墳がある。",
-    "startMs": 32639,
-    "endMs": 38153,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "日本最大の古墳は、大阪府堺市の、大山古墳。仁徳天皇陵とされる、前方後円墳だ。その長さは、486メートルとされてきた。",
-    "startMs": 38633,
-    "endMs": 50292,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "富雄丸山古墳は、円墳としては最大でも、古墳全体の中で最大というわけではない。",
-    "startMs": 50772,
-    "endMs": 57183,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "それでも、直径109メートルの円墳は、とてつもない大きさだ。墳丘の段の平らな部分の幅は、天皇の墓とされる大きな古墳にも匹敵すると言われている。",
-    "startMs": 57663,
-    "endMs": 69055,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この古墳に葬られたのは、大きな力を持った人物だったはずだ。",
-    "startMs": 69535,
-    "endMs": 73865,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 74345,
-    "endMs": 75775,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "まちがい。",
-    "startMs": 76255,
-    "endMs": 76916,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "富雄丸山古墳は、円墳としては日本最大だ。でも、古墳全体で最大なのは、仁徳天皇陵とされる大山古墳などの前方後円墳だ。",
-    "startMs": 77396,
-    "endMs": 87903,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、これほど大きな古墳のことを、人々は、昔から知っていたのか。",
-    "startMs": 88383,
-    "endMs": 93673,
+    "text": "最初の手がかりは、この遺跡を世界に知らせた、ひとりの探検家だ。",
+    "startMs": 22441,
+    "endMs": 27113,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第2の手がかり 巨大な古墳だと、昔から知られていた？（3633フレーム）
-export const clue2HistoryCaptions: Caption[] = [
+// 0:00 第1の手がかり マチュピチュを発見したのは、ビンガム？（4670フレーム）
+export const clue1BinghamCaptions: Caption[] = [
   {
-    "text": "富雄丸山古墳の歴史は、平穏ではなかった。",
+    "text": "1911年7月24日。アメリカのイエール大学で講師をしていた、ハイラム・ビンガムという人物が、この遺跡にたどり着いた。",
     "startMs": 500,
-    "endMs": 3796,
+    "endMs": 10292,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "明治時代、古墳のてっぺんの埋葬施設が、盗掘にあった。",
-    "startMs": 4276,
-    "endMs": 8799,
+    "text": "ビンガムが探していたのは、マチュピチュではなかった。スペインに追われたインカの人々が、最後に立てこもったとされる都市、ビルカバンバだ。",
+    "startMs": 10772,
+    "endMs": 19679,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そのとき持ち出された品の一部は、のちに京都国立博物館の所蔵となり、1957年に、国の重要文化財に指定された。石で作られた斧や刀子、腕輪などだ。",
-    "startMs": 9279,
-    "endMs": 21844,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして1972年。古墳のまわりで、団地をつくる工事が進んでいた。",
-    "startMs": 22324,
-    "endMs": 28137,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "その工事にともなって、奈良県が、古墳のてっぺんを調べた。長さ7メートルほどの、木の棺の跡と、武器や鏡のかけらが見つかった。",
-    "startMs": 28617,
-    "endMs": 38292,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "このとき、古墳の直径は、およそ86メートルと報告された。",
-    "startMs": 38772,
-    "endMs": 43721,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "86メートル。大きな円墳ではあるが、日本一ではない。多くの人は、そう考えていた。",
-    "startMs": 44201,
-    "endMs": 51263,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "それが変わったのは、2017年度のことだ。",
-    "startMs": 51743,
-    "endMs": 54868,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "奈良市は、国の史跡に指定することを目指して、古墳の調査を始めた。最初に行ったのが、航空レーザー測量だ。",
-    "startMs": 55348,
-    "endMs": 63423,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "飛行機から地面にレーザーを当て、はね返ってくるまでの時間から、地面の高さを細かく測る。木が生い茂っていても、その下の地形を読み取ることができる。",
-    "startMs": 63903,
-    "endMs": 74377,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "その結果、古墳の直径は、およそ110メートルあるかもしれないことが分かった。",
-    "startMs": 74857,
-    "endMs": 80372,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "翌年度、実際に古墳のすそを掘って確かめると、直径は109メートル。日本最大の円墳だと、確かめられた。",
-    "startMs": 80852,
-    "endMs": 89513,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "50年近く、86メートルだと思われていた古墳が、最新の測量で、日本一の円墳に変わったのだ。",
-    "startMs": 89993,
-    "endMs": 97833,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 98313,
-    "endMs": 99743,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "まちがい。",
-    "startMs": 100223,
-    "endMs": 100884,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "富雄丸山古墳は、長いあいだ、直径86メートルほどの古墳だと思われていた。日本最大の円墳だと分かったのは、2017年度からの航空レーザー測量と発掘のおかげだ。",
-    "startMs": 101364,
-    "endMs": 114036,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、この古墳から現れた、あの巨大な剣は、何のための剣だったのか。",
-    "startMs": 114516,
-    "endMs": 119892,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第3の手がかり 巨大な剣は、戦いの武器だった？（4463フレーム）
-export const clue3SwordCaptions: Caption[] = [
-  {
-    "text": "2022年10月。奈良市教育委員会は、古墳の北東側に張り出した、造り出しと呼ばれる部分を掘っていた。",
-    "startMs": 500,
-    "endMs": 8596,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "造り出しは、まるい墳丘から、四角く突き出した台のような部分だ。そこに、もう一つの埋葬施設が眠っていた。",
-    "startMs": 9076,
-    "endMs": 17001,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "木の棺を、分厚い粘土で包んだ、粘土槨と呼ばれる埋葬施設だ。",
-    "startMs": 17481,
-    "endMs": 22367,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "その粘土の中から、長い鉄の剣と、盾の形の鏡が現れた。",
-    "startMs": 22847,
-    "endMs": 27860,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "剣の刃は、蛇のように、くねくねと波打っていた。蛇行剣と呼ばれる剣だ。",
-    "startMs": 28340,
-    "endMs": 33897,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "鉄の部分の長さは、2メートル37センチ。そのうち、刃の部分だけで、2メートル16センチある。",
-    "startMs": 34377,
-    "endMs": 42217,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2024年3月、奈良県立橿原考古学研究所と奈良市教育委員会は、この剣を詳しく調べた結果を発表した。",
-    "startMs": 42697,
-    "endMs": 51273,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "剣には、柄と鞘の跡が残っていた。柄をつけると、長さは2メートル54センチ。さらに鞘に納めると、2メートル85センチになる。",
-    "startMs": 51753,
-    "endMs": 62463,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "刃は、6回くねって波打っていた。そして柄の形には、剣だけでなく、刀の特徴も混ざっていた。剣と刀の特徴を合わせ持つ、これまでにない作りだったのだ。",
-    "startMs": 62943,
-    "endMs": 74655,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、こんな剣を、人が振り回して戦えるのか。",
-    "startMs": 75135,
-    "endMs": 78911,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2メートル85センチといえば、大人の背丈の、1.5倍以上だ。そのうえ、細長い刃が、何度もくねっている。",
-    "startMs": 79391,
-    "endMs": 88095,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "戦いの道具としては、あまりにも扱いにくい。",
-    "startMs": 88575,
-    "endMs": 91807,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "しかも、この剣が置かれていたのは、棺を包んだ粘土の中だった。墓の主が使っていた武器を、手元に置いたのとは、様子が違う。",
-    "startMs": 92287,
-    "endMs": 101631,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "研究者たちは、この剣は、実際の戦いではなく、まつりや儀式のための特別な品だったと考えている。",
-    "startMs": 102111,
-    "endMs": 109556,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "死者を、悪い霊から守る力を高めるために、剣を大きくしたのではないか、という見方も伝えられている。",
-    "startMs": 110036,
-    "endMs": 117481,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "橿原考古学研究所の研究者は、この剣を、同じ時代の金属の工芸品の最高傑作だと評価している。4世紀の日本の鉄の技術は、想像以上の高さだったのだ。",
-    "startMs": 117961,
-    "endMs": 130196,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 130676,
-    "endMs": 132105,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "まちがい。",
-    "startMs": 132585,
-    "endMs": 133247,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "長さ2メートル85センチ、6回くねる刃を持つ剣は、戦いの武器ではなく、まつりや儀式のための特別な品だったと考えられている。",
-    "startMs": 133727,
-    "endMs": 143273,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、この不思議な形の剣は、どこで生まれたのか。",
-    "startMs": 143753,
-    "endMs": 147561,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第4の手がかり 蛇行剣は、南九州で生まれた？（3123フレーム）
-export const clue4SouthCaptions: Caption[] = [
-  {
-    "text": "蛇行剣は、富雄丸山古墳だけの剣ではない。",
-    "startMs": 500,
-    "endMs": 3817,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "日本各地の古墳から、これまでに70本から80本ほどが見つかっている。",
-    "startMs": 4297,
-    "endMs": 9375,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "中でも多いのが、宮崎県だ。宮崎県えびの市の、島内地下式横穴墓群からは、1か所だけで10本の蛇行剣が出ている。",
-    "startMs": 9855,
-    "endMs": 19103,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "地下式横穴墓は、地面に縦の穴を掘り、その底から横に部屋を掘った墓だ。南九州の、独特な墓の形として知られている。",
-    "startMs": 19583,
-    "endMs": 28873,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そのため、蛇行剣は、南九州の人々と深いつながりのある剣だと考えられてきた。",
-    "startMs": 29353,
-    "endMs": 35455,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ところが、富雄丸山古墳の蛇行剣は、4世紀の後半のものだ。",
-    "startMs": 35935,
-    "endMs": 40841,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "南九州の地下式横穴墓から見つかる蛇行剣の多くは、5世紀から6世紀の古墳時代の中ごろから後半のものとされている。",
-    "startMs": 41321,
-    "endMs": 49535,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "つまり、奈良の富雄丸山古墳の蛇行剣のほうが、古いのだ。奈良市は、この剣を、国内で最も古く、最も大きい蛇行剣だとしている。",
-    "startMs": 50015,
-    "endMs": 60532,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "これまでの最長は、奈良県宇陀市の北原古墳から出た、84.6センチの剣だった。富雄丸山古墳の剣は、その3倍近い長さだ。",
-    "startMs": 61012,
-    "endMs": 70943,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "蛇行剣は、どこで生まれ、どのように広がったのか。南九州が始まりだという考えは、この発見で、見直しを迫られている。",
-    "startMs": 71423,
-    "endMs": 80681,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 81161,
-    "endMs": 82591,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "半分正しい。",
-    "startMs": 83071,
-    "endMs": 84137,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "蛇行剣は、南九州から多く見つかっている。でも、いちばん古く、いちばん大きい蛇行剣は、奈良の富雄丸山古墳から出た。どこで生まれたのかは、まだ分かっていない。",
-    "startMs": 84617,
-    "endMs": 97183,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、剣と一緒に見つかった、盾の形の鏡は、どこから来たのか。",
-    "startMs": 97663,
-    "endMs": 102900,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第5の手がかり 盾の形の鏡は、中国から来た？（3042フレーム）
-export const clue5MirrorCaptions: Caption[] = [
-  {
-    "text": "蛇行剣のすぐ下から見つかったのが、盾の形をした銅の鏡だ。",
-    "startMs": 500,
-    "endMs": 4916,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "長さは64センチ。いちばん広いところの幅は31センチ。重さは5.7キロ。",
-    "startMs": 5396,
-    "endMs": 12031,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "鏡は、棺を包んだ、かまぼこのような形の粘土に合わせて、斜めに立てかけるように置かれていた。",
-    "startMs": 12511,
-    "endMs": 19391,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "古代の鏡といえば、まるい形が当たり前だ。盾の形をした銅の鏡は、日本で初めての発見だった。",
-    "startMs": 19871,
-    "endMs": 27337,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "鏡の背中には、細かい文様がびっしりと刻まれていた。鼉龍文と呼ばれる文様だ。",
-    "startMs": 27817,
-    "endMs": 33833,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "鼉龍とは、想像上の生き物で、ワニの一種ともいわれる。",
-    "startMs": 34313,
-    "endMs": 38377,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "古墳時代の日本には、中国から、たくさんの鏡が運ばれてきていた。この鏡も、中国から来たのだろうか。",
-    "startMs": 38857,
-    "endMs": 46911,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "調べてみると、この鏡の文様は、日本で作られた鼉龍鏡の文様を、上と下に2つ並べたものだった。中国の鏡に描かれた神や獣の姿が、崩れて混ざり合った、倭の国、つまり日本独自の文様だ。",
-    "startMs": 47391,
-    "endMs": 62793,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そのため、この鏡は、日本で作られたと考えられている。",
-    "startMs": 63273,
-    "endMs": 67455,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "盾も、鏡も、古代の人々にとっては、身を守るための道具だった。巨大な剣と、盾の形の鏡。どちらも、墓の主を守るために置かれたと考える研究者もいる。",
-    "startMs": 67935,
-    "endMs": 81033,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 81513,
-    "endMs": 82943,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "まちがい。",
-    "startMs": 83423,
-    "endMs": 84084,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "盾の形の鏡は、日本独自の文様を持ち、日本で作られたと考えられている。こんな形の銅の鏡は、日本で初めての発見だった。",
-    "startMs": 84564,
-    "endMs": 94345,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、剣と鏡に守られていた、棺の中には、何が残っていたのか。",
-    "startMs": 94825,
-    "endMs": 100180,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第6の手がかり 1600年前の木の棺は、もう残っていない？（3393フレーム）
-export const clue6CoffinCaptions: Caption[] = [
-  {
-    "text": "剣と鏡が見つかったあと、調査は、粘土に包まれた棺の中へと進んだ。",
-    "startMs": 500,
-    "endMs": 5716,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2023年12月から始まった、7回目の調査だ。",
-    "startMs": 6196,
-    "endMs": 10324,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "現れたのは、丸太を縦に2つに割り、中をくりぬいた、割竹形木棺と呼ばれる棺だった。",
-    "startMs": 10804,
-    "endMs": 17471,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "棺の材は、コウヤマキ。水に強く、腐りにくい木だ。",
-    "startMs": 17951,
-    "endMs": 22324,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "1600年もたてば、木は、ふつう土に返ってしまう。ところが、この棺は、下半分の身が、5メートル54センチも残っていた。もとの長さの、およそ7割だ。",
-    "startMs": 22804,
-    "endMs": 35604,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "本来の長さは、5メートル86センチと考えられている。",
-    "startMs": 36084,
-    "endMs": 40319,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "棺の中は、スギの板で、3つの部屋に仕切られていた。",
-    "startMs": 40799,
-    "endMs": 44596,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "真ん中の部屋が、墓の主が眠る部屋。両側の部屋は、副葬品などを納める部屋だ。",
-    "startMs": 45076,
-    "endMs": 51593,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2026年4月。この棺を、未来に残すための、大きな取り組みが始まった。",
-    "startMs": 52073,
-    "endMs": 58228,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "奈良市教育委員会、元興寺文化財研究所、奈良文化財研究所、奈良県立橿原考古学研究所。奈良の4つの機関が、初めて手を組んで、棺の保存処理と研究を進めることになったのだ。",
-    "startMs": 58708,
-    "endMs": 73129,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "4月から、奈良文化財研究所で、棺を薬の液に漬けて、木の中に染み込ませる処理が始まった。その後、真空の中で凍らせて乾かす装置に入れる予定だ。",
-    "startMs": 73609,
-    "endMs": 85023,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "水を含んだまま乾かすと、古い木は、縮んで、ひび割れてしまう。それを防ぐための、最新の科学だ。",
-    "startMs": 85503,
-    "endMs": 93556,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 94036,
-    "endMs": 95465,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "まちがい。",
-    "startMs": 95945,
-    "endMs": 96607,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "コウヤマキの棺は、およそ7割が残っていた。2026年から、奈良の4つの機関が、初めて手を組んで、棺を未来に残す取り組みを進めている。",
-    "startMs": 97087,
-    "endMs": 107647,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、その棺の中には、何が納められていたのか。",
-    "startMs": 108127,
-    "endMs": 111892,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第7の手がかり 棺の中の鏡は、古墳と同じ時代のもの？（3537フレーム）
-export const clue7MirrorsCaptions: Caption[] = [
-  {
-    "text": "2024年3月。棺の中を調べた結果が発表された。",
-    "startMs": 500,
-    "endMs": 4863,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "片方の副室からは、青銅の鏡が3面。鏡の面を上に向けて、重ねて置かれていた。",
-    "startMs": 5343,
-    "endMs": 12223,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "真ん中の主室からは、竹で作られた櫛が9点。そして、赤い水銀朱がまかれていた。",
-    "startMs": 12703,
-    "endMs": 19167,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "もう片方の副室からは、副葬品は見つからなかった。",
-    "startMs": 19647,
-    "endMs": 23391,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2025年7月、取り出された3面の鏡が、どんな鏡だったのかが発表された。",
-    "startMs": 23871,
-    "endMs": 30057,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "3面とも、中国で作られた、上質で大きな鏡だった。",
-    "startMs": 30537,
-    "endMs": 34900,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "1面目は、三角縁神獣鏡。縁の断面が三角形になった、神や獣の姿を描いた鏡だ。3世紀の中ごろ、中国の魏の時代に作られたと考えられている。",
-    "startMs": 35380,
-    "endMs": 47913,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2面目は、虺龍文鏡。直径19.1センチ。国内で見つかっているこの種類の鏡の中で、最も大きい。紀元前1世紀の終わりごろから、紀元後1世紀の初めにかけての鏡だ。",
-    "startMs": 48393,
-    "endMs": 62591,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "3面目は、画像鏡。2世紀の終わりから3世紀の前半、後漢の時代の鏡とされる。",
-    "startMs": 63071,
-    "endMs": 70015,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "古墳が造られたのは、4世紀の後半。鏡は、それより、100年から400年も前に作られていたのだ。",
-    "startMs": 70495,
-    "endMs": 78431,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "古い鏡は、長いあいだ、大切に受け継がれてきた宝物だったのかもしれない。",
-    "startMs": 78911,
-    "endMs": 84276,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "奈良県立橿原考古学研究所の研究者は、時代の違う鏡が一緒に納められた例は極めて珍しく、墓の主は、ヤマトの王権に重く用いられた有力者だった可能性が高いと見ている。",
-    "startMs": 84756,
-    "endMs": 97897,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 98377,
-    "endMs": 99807,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "まちがい。",
-    "startMs": 100287,
-    "endMs": 100948,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "棺の中の3面の鏡は、すべて中国製で、古墳より100年から400年も古い鏡だった。長く受け継がれてきた宝物だったと考えられている。",
-    "startMs": 101428,
-    "endMs": 111551,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、この宝物と一緒に眠っていたのは、どんな人物だったのか。",
-    "startMs": 112031,
-    "endMs": 116671,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第8の手がかり 墓の主は、女性だった？（3193フレーム）
-export const clue8OwnerCaptions: Caption[] = [
-  {
-    "text": "棺の中に、人の骨は残っていなかった。",
-    "startMs": 500,
-    "endMs": 3391,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ただ、主室の北西側には、水銀朱がまかれていた。そこが、墓の主の頭があった場所だと考えられている。",
-    "startMs": 3871,
-    "endMs": 11924,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "棺の中には、竹の櫛が9点。そして、剣や刀、よろいなどの武器や武具は、棺の中から一つも見つかっていない。",
-    "startMs": 12404,
-    "endMs": 21140,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そこから、こんな見方が出てきた。墓の主は、女性だったのではないか。",
-    "startMs": 21620,
-    "endMs": 26900,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "奈良市埋蔵文化財調査センターの鐘方正樹所長は、造り出しの棺には武器や武具が一切ないことから、女性的な感じがすると話している。",
-    "startMs": 27380,
-    "endMs": 36607,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして、古墳のてっぺんに葬られたのは、政治や軍事を担った男性。造り出しに葬られたのは、まじないやまつりを担った人物ではないか、という考えを示している。",
-    "startMs": 37087,
-    "endMs": 48788,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "一方、大阪大学の福永伸哉さんは、造り出しの墓の主は、てっぺんの墓の主から宝物を分け与えられた、側近のような存在ではないかと見ている。",
-    "startMs": 49268,
-    "endMs": 60319,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、竹の櫛があれば、女性だと言えるのか。",
-    "startMs": 60799,
-    "endMs": 64308,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "古墳時代の竪櫛は、女性の墓だけでなく、男性の墓からも見つかっている。櫛だけで、性別を決めることはできない。",
-    "startMs": 64788,
-    "endMs": 73481,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "人の骨が残っていない以上、墓の主の性別は、分からない。奈良市も、性別については、明らかにしていない。",
-    "startMs": 73961,
-    "endMs": 82783,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 83263,
-    "endMs": 84692,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "半分正しい。",
-    "startMs": 85172,
-    "endMs": 86239,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "棺の中に武器がなく、櫛があることから、女性だと考える研究者もいる。でも、人骨が残っておらず、性別は分かっていない。",
-    "startMs": 86719,
-    "endMs": 96425,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして、最後の手がかり。2026年、長いあいだ謎だった、別の鏡に、新しい光が当たった。",
-    "startMs": 96905,
-    "endMs": 105215,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第9の手がかり 天理の三角縁神獣鏡は、この古墳から出た？（3269フレーム）
-export const clue9TenriCaptions: Caption[] = [
-  {
-    "text": "奈良県天理市の天理参考館には、富雄丸山古墳から出たと伝えられてきた、3面の三角縁神獣鏡がある。",
-    "startMs": 500,
-    "endMs": 8329,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "三角縁神獣鏡は、邪馬台国の女王、卑弥呼が、中国の魏の国からもらった鏡ではないかと考える研究者もいることから、卑弥呼の鏡と呼ばれることもある鏡だ。",
-    "startMs": 8809,
-    "endMs": 20585,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "でも、この3面の鏡が、本当に富雄丸山古墳から出たのかは、はっきりしなかった。名前には、伝えられている、という意味の「伝」の字がつけられ、伝富雄丸山古墳出土とされてきた。",
-    "startMs": 21065,
-    "endMs": 34580,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2026年1月30日。奈良市教育委員会と天理参考館が、共同で、ある発表をした。",
-    "startMs": 35060,
-    "endMs": 42740,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "奈良市の学芸員が、デジタルマイクロスコープという、表面を拡大して観察する顕微鏡で、3面の鏡を調べた。",
-    "startMs": 43220,
-    "endMs": 51316,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "すると、鏡の面を磨いた跡に、赤い物質が伴っていることが分かった。そして、金属の細かい組織が見えるほどの磨き方が、3面とも、とてもよく似ていた。",
-    "startMs": 51796,
-    "endMs": 63839,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "さらに1月13日、京都国立博物館で、明治時代の盗掘のときに持ち出された、富雄丸山古墳の銅の板2点と、鏡を見比べた。",
-    "startMs": 64319,
-    "endMs": 74953,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "すると、鏡の面に残っていた勾玉のような形の跡と、銅の板の形が、ほぼ一致したのだ。",
-    "startMs": 75433,
-    "endMs": 82527,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "奈良市は、この結果を、伝の字が薄まった、と表現している。",
-    "startMs": 83007,
-    "endMs": 87679,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ただし、富雄丸山古墳から出たと、確定したわけではない。",
-    "startMs": 88159,
-    "endMs": 92713,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 93193,
-    "endMs": 94623,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "半分正しい。",
-    "startMs": 95103,
-    "endMs": 96169,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2026年の調査で、天理参考館の3面の鏡が、富雄丸山古墳から出た可能性は、大きく高まった。でも、まだ確定したわけではない。",
-    "startMs": 96649,
-    "endMs": 107753,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 巨大な剣が語る、本当の物語（2763フレーム）
-export const rootsStoryCaptions: Caption[] = [
-  {
-    "text": "では、ここまでの手がかりを、つなぎ合わせてみよう。",
-    "startMs": 500,
-    "endMs": 4137,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "4世紀の後半。奈良盆地の北の丘に、直径109メートルの、日本最大の円墳が造られた。",
-    "startMs": 4617,
-    "endMs": 12020,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "古墳のてっぺんには、政治や軍事を担ったとみられる人物が葬られた。明治時代の盗掘で多くが失われたが、石の飾りや銅の板が残り、もしかすると、3面の三角縁神獣鏡も、そこに納められていたのかもしれない。",
-    "startMs": 12500,
+    "text": "ウルバンバ川の谷を進んでいたビンガムは、メルチョル・アルテアガという地元の農民から、山の上に遺跡があると聞いた。",
+    "startMs": 20159,
     "endMs": 28127,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、古墳から張り出した造り出しにも、もう一人の人物が葬られた。",
+    "text": "ビンガムは、案内のお礼として、1ソルを払ったという。ビンガム自身の本によれば、当時の日当の数倍にあたる額だ。",
     "startMs": 28607,
-    "endMs": 33641,
+    "endMs": 37097,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "その人物の棺の中には、何百年も前に中国で作られた、3面の鏡。竹の櫛と、赤い朱。",
-    "startMs": 34121,
-    "endMs": 41951,
+    "text": "急な斜面を登りきると、そこには、すでに人が住んでいた。リチャルテ家とアルバレス家という、ふたつの農家が、インカの段々畑を耕して暮らしていたのだ。",
+    "startMs": 37577,
+    "endMs": 48169,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "棺を包んだ粘土の中には、人の背丈を超える巨大な蛇行剣と、日本で初めての、盾の形の鏡が置かれた。",
-    "startMs": 42431,
-    "endMs": 50399,
+    "text": "遺跡の中心まで案内したのは、パブリートと呼ばれる、11歳ほどの少年だったと伝えられている。",
+    "startMs": 48649,
+    "endMs": 55337,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "戦うための剣ではない。墓の主を、悪いものから守るための、まつりの剣だったと考えられている。",
-    "startMs": 50879,
-    "endMs": 58047,
+    "text": "そして、遺跡の中の壁には、炭で書かれた文字があった。",
+    "startMs": 55817,
+    "endMs": 59903,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "4世紀は、中国の歴史書から日本の記録が消え、謎の4世紀とも呼ばれる時代だ。",
-    "startMs": 58527,
-    "endMs": 64681,
+    "text": "「リサラガ　1902年」。",
+    "startMs": 60383,
+    "endMs": 62473,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "その時代に、これほどの鉄の技術と、遠い国の宝物を持つ人々が、奈良の北の丘にいた。",
-    "startMs": 65161,
-    "endMs": 71945,
+    "text": "ビンガムより9年も前に、アグスティン・リサラガという地元の農民が、ここを訪れていたのだ。",
+    "startMs": 62953,
+    "endMs": 69620,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "墓の主の名前は、どの歴史書にも書かれていない。",
-    "startMs": 72425,
-    "endMs": 75860,
+    "text": "ビンガム自身も、リサラガがマチュピチュの発見者だという意味のことを、日記に書き残したと伝えられている。",
+    "startMs": 70100,
+    "endMs": 76873,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "それでも、土の中から現れた剣と鏡は、ヤマトの王権を支えた、名もない有力者たちの姿を、確かに語っている。",
-    "startMs": 76340,
-    "endMs": 85087,
+    "text": "さらに古い記録もある。1874年に作られた地図には、すでに、マチュピチュとワイナピチュという、ふたつの山の名前が書きこまれていた。",
+    "startMs": 77353,
+    "endMs": 87039,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "奈良市は、2027年の国の史跡の指定を目指して、準備を進めている。",
-    "startMs": 85567,
-    "endMs": 90868,
+    "text": "では、ビンガムは何をしたのか。",
+    "startMs": 87519,
+    "endMs": 89791,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "1913年4月。アメリカの雑誌、ナショナルジオグラフィックは、1冊まるごとを、この遺跡の特集にあてた。",
+    "startMs": 90271,
+    "endMs": 98793,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "およそ250枚の写真が、雲の上の石の都市を、初めて世界中の人々に見せた。",
+    "startMs": 99273,
+    "endMs": 105535,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ビンガムは、遺跡を見つけたのではない。遺跡を、世界に知らせたのだ。",
+    "startMs": 106015,
+    "endMs": 111135,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ビンガムはこのとき、多くの出土品をアメリカに持ち帰った。ペルーは長いあいだ返還を求め、2010年に、イエール大学との合意が結ばれた。",
+    "startMs": 111615,
+    "endMs": 121652,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ペルー側の数え方では、4万6000点あまり。破片も含めた品々が、2011年から順に、クスコへと帰っていった。",
+    "startMs": 122132,
+    "endMs": 131188,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 131668,
+    "endMs": 133097,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "まちがい。",
+    "startMs": 133577,
+    "endMs": 134239,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "マチュピチュには、ビンガムが来る前から、地元の人々が住み、畑を耕していた。壁には1902年の名前も残っていた。ビンガムは発見者ではなく、世界に知らせた人物だ。",
+    "startMs": 134719,
+    "endMs": 147529,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、ビンガムが聞いた「マチュピチュ」という名前は、この都市の本当の名前だったのか。",
+    "startMs": 148009,
+    "endMs": 154452,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 まだ解けていない謎（1768フレーム）
-export const unsolvedMysteryCaptions: Caption[] = [
+// 0:00 第2の手がかり マチュピチュは、インカ時代からの名前？（3701フレーム）
+export const clue2NameCaptions: Caption[] = [
   {
-    "text": "最後に、今夜の調査で残った、まだ判決を出せない謎を、3つ。",
+    "text": "マチュピチュとは、現地の言葉、ケチュア語で、「年老いた峰」という意味だと言われている。",
     "startMs": 500,
-    "endMs": 5748,
+    "endMs": 6772,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ひとつ目。なぜ、剣と鏡は、棺の中ではなく、棺を包む粘土の中に置かれたのか。",
-    "startMs": 6228,
-    "endMs": 12884,
+    "text": "そして、遺跡の向こうにそびえる、とがった山が、ワイナピチュ。「若い峰」という意味だ。",
+    "startMs": 7252,
+    "endMs": 14143,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "墓の主を守るためなのか。それとも、葬儀の最後に行われた、まつりのためなのか。その答えは、まだ出ていない。",
-    "startMs": 13364,
-    "endMs": 21695,
+    "text": "2022年。ペルー文化省の歴史家、ドナト・アマド・ゴンサレスと、アメリカのイリノイ大学の考古学者、ブライアン・バウアーが、この名前を調べ直した論文を発表した。",
+    "startMs": 14623,
+    "endMs": 28276,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2つ目。造り出しに眠る人物と、古墳のてっぺんに眠る人物は、どんな関係だったのか。",
-    "startMs": 22175,
-    "endMs": 28767,
+    "text": "二人が調べたのは、3種類の史料だ。ビンガムの野帳。19世紀の地図。そして、16世紀から17世紀のスペイン植民地時代の文書。",
+    "startMs": 28756,
+    "endMs": 39263,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "夫婦なのか、きょうだいなのか、それとも、王とその側近なのか。人の骨が残っていない今、その答えを知る手がかりは、限られている。",
-    "startMs": 29247,
-    "endMs": 38943,
+    "text": "まず、ビンガムの野帳。そこには、ビンガムが、この遺跡の名前に確信を持てずにいたことが記されていた。",
+    "startMs": 39743,
+    "endMs": 47391,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして3つ目。この墓の主は、誰なのか。",
-    "startMs": 39423,
+    "text": "マチュピチュという名前は、案内人のアルテアガから聞いたものだった。",
+    "startMs": 47871,
+    "endMs": 52009,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "次に、古い地図。1880年にフランスで出版された探検記の地図には、「ワイナピチュ」という名前が、遺跡のあたりに書かれていた。",
+    "startMs": 52489,
+    "endMs": 62719,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、決め手になったのが、1588年の記録だ。",
+    "startMs": 63199,
+    "endMs": 67593,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そこには、住民たちが、「ワイナピチュの町」に戻って、自分たちの昔からの信仰に戻りたいと願った、と書かれていた。",
+    "startMs": 68073,
+    "endMs": 76799,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "二人の結論は、こうだ。インカの時代、この都市は、「ピチュ」、あるいは、より可能性が高いのは、「ワイナピチュ」と呼ばれていた。",
+    "startMs": 77279,
+    "endMs": 87348,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "マチュピチュは、もともとは、遺跡のそばの山の名前だったと考えられる。",
+    "startMs": 87828,
+    "endMs": 92607,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ただし、バウアーは、名前を変えるべきだとは言っていない。マチュピチュという名前は、すでに世界中で知られているからだ。",
+    "startMs": 93087,
+    "endMs": 101289,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 101769,
+    "endMs": 103199,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "まちがい。",
+    "startMs": 103679,
+    "endMs": 104340,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "「マチュピチュ」は、遺跡のそばの山の名前だった。インカの時代、この都市は「ワイナピチュ」、または「ピチュ」と呼ばれていた可能性が高い。",
+    "startMs": 104820,
+    "endMs": 115711,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、この都市は、何のために造られたのか。ビンガムは、ある答えを信じていた。",
+    "startMs": 116191,
+    "endMs": 122153,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第3の手がかり マチュピチュは、インカ最後の要塞だった？（3505フレーム）
+export const clue3FortressCaptions: Caption[] = [
+  {
+    "text": "ビンガムが探していたのは、インカ最後の拠点、ビルカバンバだった。",
+    "startMs": 500,
+    "endMs": 5119,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "切り立った崖に囲まれた尾根。都市を区切る壁。見張りに適した高い場所。",
+    "startMs": 5599,
+    "endMs": 10516,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ビンガムは、マチュピチュこそが、スペインと戦ったインカの人々が、最後に立てこもった都市だと考えた。そして、その考えを長く持ち続けた。",
+    "startMs": 10996,
+    "endMs": 20713,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "しかし、その後の研究で、見方は大きく変わった。",
+    "startMs": 21193,
+    "endMs": 25044,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ビルカバンバは、マチュピチュよりもずっと西の、密林の奥にある、エスピリトゥ・パンパという遺跡だったと考えられている。",
+    "startMs": 25524,
+    "endMs": 33780,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、マチュピチュで、大きな戦いがあったことを示す証拠は、ほとんど見つかっていない。",
+    "startMs": 34260,
+    "endMs": 40255,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、マチュピチュは何だったのか。",
+    "startMs": 40735,
+    "endMs": 42996,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "手がかりになったのは、1990年に、アメリカの考古学者、ジョン・ロウが発表した研究だ。",
+    "startMs": 43476,
+    "endMs": 51103,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ロウは、16世紀の文書を調べた。そこには、この谷の畑の一覧があり、その一部が、インカ王パチャクテクのものだったと記されていた。",
+    "startMs": 51583,
+    "endMs": 61460,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "パチャクテクは、クスコの小さな国を、南米最大の帝国へと広げた王だ。",
+    "startMs": 61940,
+    "endMs": 67433,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ロウは、山の上の都市も、この王の領地に含まれていたと考えた。",
+    "startMs": 67913,
+    "endMs": 72660,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "つまり、マチュピチュは、パチャクテク王の、離宮だった。",
+    "startMs": 73140,
+    "endMs": 77343,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "王と、その一族が、都クスコを離れて過ごすための、山の上の宮殿。そう考えるのが、いまの研究でもっとも有力な説だ。",
+    "startMs": 77823,
+    "endMs": 87679,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ただし、別の考えもある。イタリアの研究者は、太陽や山をまつる、巡礼の地として計画された、という説を唱えている。",
+    "startMs": 88159,
+    "endMs": 97471,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 97951,
+    "endMs": 99380,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "まちがい。",
+    "startMs": 99860,
+    "endMs": 100521,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "マチュピチュで大きな戦いがあった証拠は、ほとんどない。インカ最後の拠点は、別の場所だった。もっとも有力なのは、パチャクテク王の離宮だったという説だ。",
+    "startMs": 101001,
+    "endMs": 111625,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、その離宮が建てられたのは、いつだったのか。",
+    "startMs": 112105,
+    "endMs": 115625,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第4の手がかり マチュピチュが建てられたのは、パチャクテクが王になったあと？（3246フレーム）
+export const clue4DateCaptions: Caption[] = [
+  {
+    "text": "これまでの教科書的な説明は、こうだった。",
+    "startMs": 500,
+    "endMs": 3561,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "パチャクテクが王になったのは、1438年。そのあと、1440年代以降に、マチュピチュが建てられた。",
+    "startMs": 4041,
+    "endMs": 12585,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この年代は、スペイン人が、征服したあとに書き残した記録をもとにしている。",
+    "startMs": 13065,
+    "endMs": 18281,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "しかし、2021年8月。イエール大学のリチャード・バーガーたちが、別の方法で、この年代を確かめた。",
+    "startMs": 18761,
+    "endMs": 27593,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "使ったのは、マチュピチュの4か所の墓から見つかった、26人の骨と歯だ。",
+    "startMs": 28073,
+    "endMs": 33183,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "これらは、1912年にビンガムが持ち帰り、イエール大学の博物館で保管されていたものだった。",
+    "startMs": 33663,
+    "endMs": 40724,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "研究チームは、加速器質量分析法という、ごくわずかな量の試料から年代を測ることができる、放射性炭素年代測定を使った。",
+    "startMs": 41204,
+    "endMs": 50665,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "結果は、意外なものだった。",
+    "startMs": 51145,
+    "endMs": 53225,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "マチュピチュには、遅くとも1420年ごろから、1530年ごろまで、途切れることなく人が住んでいた。",
+    "startMs": 53705,
+    "endMs": 61460,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "文書が伝える年代よりも、20年以上も早い。",
+    "startMs": 61940,
+    "endMs": 65503,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "これが正しければ、パチャクテクは、1438年よりも前に、すでに力を持ち、まわりの土地を支配し始めていたことになる。",
+    "startMs": 65983,
+    "endMs": 75284,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "スペイン人が書き残したインカの歴史の年代そのものが、問い直されることになったのだ。",
+    "startMs": 75764,
+    "endMs": 81012,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ただし、研究チームも、放射性炭素年代測定には限界があることを認めている。",
+    "startMs": 81492,
+    "endMs": 87540,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 88020,
+    "endMs": 89449,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "半分正しい。",
+    "startMs": 89929,
+    "endMs": 90996,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "マチュピチュがパチャクテク王と結びついていることは変わらない。でも、骨の年代は1420年ごろまでさかのぼり、文書が伝える即位の年よりも早かった。",
+    "startMs": 91476,
+    "endMs": 102079,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、この王の離宮に暮らしていたのは、どんな人々だったのか。",
+    "startMs": 102559,
+    "endMs": 106975,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第5の手がかり マチュピチュは、太陽に仕える女性たちの都市だった？（2546フレーム）
+export const clue5VirginsCaptions: Caption[] = [
+  {
+    "text": "ビンガムの調査隊は、遺跡のまわりの墓から、多くの骨を掘り出した。",
+    "startMs": 500,
+    "endMs": 5289,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "1916年、その骨を調べた研究者は、大半が女性の骨だと判定した。",
+    "startMs": 5769,
+    "endMs": 12020,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "インカには、太陽の神に仕える、選ばれた女性たちがいた。ビンガムは、この骨こそが、その女性たちのものだと考えた。",
+    "startMs": 12500,
+    "endMs": 21407,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "スペインから逃れた「太陽の処女」たちが、最後に隠れ住んだ都市。それが、マチュピチュだ。",
+    "startMs": 21887,
+    "endMs": 28905,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この物語は、長いあいだ、多くの人を引きつけてきた。",
+    "startMs": 29385,
+    "endMs": 33417,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "しかし、時代が下り、アメリカの人類学者、ジョン・ベラノが、イエール大学に残された骨を、改めて調べ直した。",
+    "startMs": 33897,
+    "endMs": 43380,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "すると、男性と女性の数は、ほぼ半々だった。そして、子どもの骨も含まれていた。",
+    "startMs": 43860,
+    "endMs": 50409,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "女性だけが暮らす都市ではなかったのだ。",
+    "startMs": 50889,
+    "endMs": 53140,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "バーガーは、この再調査が、「太陽の処女」の説に、とどめを刺したと語っている。",
+    "startMs": 53620,
+    "endMs": 59860,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、ここに住んでいたのは、どんな人々だったのか。その答えは、骨の中の遺伝子が語ってくれた。",
+    "startMs": 60340,
+    "endMs": 67295,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 67775,
+    "endMs": 69204,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "まちがい。",
+    "startMs": 69684,
+    "endMs": 70345,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "骨を調べ直すと、男性と女性はほぼ半々で、子どももいた。太陽に仕える女性たちだけの都市ではなかった。",
+    "startMs": 70825,
+    "endMs": 78633,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、マチュピチュに住んでいたのは、このあたりの土地の人々だったのか。",
+    "startMs": 79113,
+    "endMs": 83647,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第6の手がかり マチュピチュの住人は、地元の人々だった？（3447フレーム）
+export const clue6PeopleCaptions: Caption[] = [
+  {
+    "text": "2023年7月。アメリカの科学誌、サイエンス・アドバンシズに、マチュピチュの人々の遺伝子を調べた論文が発表された。",
+    "startMs": 500,
+    "endMs": 9908,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "研究したのは、イエール大学のルーシー・サラザールたち。",
+    "startMs": 10388,
+    "endMs": 14612,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "調べたのは、マチュピチュに葬られた34人と、比べるためのクスコの34人。あわせて68人の遺伝子だ。",
+    "startMs": 15092,
+    "endMs": 23508,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その結果は、驚くべきものだった。",
+    "startMs": 23988,
+    "endMs": 26548,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "マチュピチュに葬られた人々は、インカ帝国のあちこちから来ていた。太平洋の海岸。アンデスの高地。そして、アマゾンの密林。",
+    "startMs": 27028,
+    "endMs": 36543,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "およそ3分の1の人々は、アマゾンの人々の祖先を、強く受け継いでいた。",
+    "startMs": 37023,
+    "endMs": 42399,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "さらに不思議なことがある。68人の中で、血のつながりが分かったのは、母と娘の、ただ1組だけだった。",
+    "startMs": 42879,
+    "endMs": 50825,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "家族や村ごと移り住んできたのではない。ひとりひとりが、帝国の各地から、ばらばらに連れてこられたと考えられるのだ。",
+    "startMs": 51305,
+    "endMs": 59380,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "同じ墓の洞窟に葬られた人々でさえ、そのふるさとは、まったく違っていた。",
+    "startMs": 59860,
+    "endMs": 65460,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この人々は、誰だったのか。",
+    "startMs": 65940,
+    "endMs": 68105,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "論文によれば、彼らは、王に仕えるために連れてこられた使用人たちだったと考えられる。インカの言葉で、ヤナコーナと呼ばれる人々だ。",
+    "startMs": 68585,
+    "endMs": 78015,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "帝国の各地から集められた人々が、山の上の離宮で、ともに働き、ともに暮らし、ともに葬られた。",
+    "startMs": 78495,
+    "endMs": 86399,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "バーガーは、マチュピチュを、「さまざまな背景を持つ人々が暮らした、国際的な共同体」と呼んでいる。",
+    "startMs": 86879,
+    "endMs": 94441,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 94921,
+    "endMs": 96351,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "まちがい。",
+    "startMs": 96831,
+    "endMs": 97492,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "マチュピチュの人々は、帝国の海岸、高地、アマゾンなど、各地から一人ずつ集められた、王に仕える人々だった。",
+    "startMs": 97972,
+    "endMs": 106932,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、これほどの都市が、なぜ、400年近くも、世界に知られずに残ったのか。",
+    "startMs": 107412,
+    "endMs": 113684,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第7の手がかり マチュピチュは、スペイン人に知られていなかった？（2645フレーム）
+export const clue7SpainCaptions: Caption[] = [
+  {
+    "text": "1532年。スペインの征服者たちが、インカ帝国にやって来た。",
+    "startMs": 500,
+    "endMs": 5769,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "彼らは、クスコの神殿の黄金をはぎ取り、インカの神殿の上に、教会を建てた。",
+    "startMs": 6249,
+    "endMs": 12297,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "しかし、マチュピチュには、スペイン人が壊した跡が見当たらない。征服者たちの記録にも、この山の上の都市のことは書かれていない。",
+    "startMs": 12777,
+    "endMs": 21865,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "だから、スペイン人に見つからなかったから、マチュピチュは残った。そう語られてきた。",
+    "startMs": 22345,
+    "endMs": 27903,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ところが、植民地時代の文書を調べると、話は違ってくる。",
+    "startMs": 28383,
+    "endMs": 33023,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "第3の手がかりで紹介した、ジョン・ロウの研究。その元になった16世紀の文書には、ピチュという土地の名前が記されていた。",
+    "startMs": 33503,
     "endMs": 42889,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2026年から始まった棺の保存処理と研究で、棺の作り方や、そこに残された小さな痕跡から、新しいことが分かるかもしれない。",
+    "text": "第2の手がかりの、1588年の記録にも、ワイナピチュの町の名前が出てくる。",
     "startMs": 43369,
-    "endMs": 52991,
+    "endMs": 49460,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "新しい発見があったら、ボクはまた、ここで判決を出す。",
-    "startMs": 53471,
-    "endMs": 57705,
+    "text": "スペインの役人たちは、この土地の存在を知っていた。そこに畑があり、人が住んでいたことも、書類に残していたのだ。",
+    "startMs": 49940,
+    "endMs": 58196,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ただ、山の上の石の都市を、彼らが実際に訪れたのかどうかは、分かっていない。",
+    "startMs": 58676,
+    "endMs": 64660,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "少なくとも、遺跡を壊した記録はない。",
+    "startMs": 65140,
+    "endMs": 67967,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 68447,
+    "endMs": 69876,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "半分正しい。",
+    "startMs": 70356,
+    "endMs": 71423,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "スペイン人が、山の上の都市を壊した跡や記録はない。でも、ピチュという土地の名前は、植民地時代の文書にはっきり記録されていた。",
+    "startMs": 71903,
+    "endMs": 81556,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、マチュピチュは、なぜ500年以上も、崩れずに残ったのか。",
+    "startMs": 82036,
+    "endMs": 86943,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 まとめ（2518フレーム）
+// 0:00 第8の手がかり マチュピチュが崩れないのは、石組みの技のおかげ？（3874フレーム）
+export const clue8StoneCaptions: Caption[] = [
+  {
+    "text": "マチュピチュの石組みは、世界中の人々を驚かせてきた。",
+    "startMs": 500,
+    "endMs": 4276,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "石と石の間には、モルタルのような接着剤は使われていない。それでも、石は、すき間なくぴたりと組み合っている。",
+    "startMs": 4756,
+    "endMs": 12884,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "出入口や窓は、下が広く、上がせまい台形をしている。壁も、内側に少しだけ傾いている。",
+    "startMs": 13364,
+    "endMs": 20884,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この形が、地震の多いアンデスで、建物を崩れにくくしていると言われている。",
+    "startMs": 21364,
+    "endMs": 26761,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "しかし、マチュピチュが崩れずに残った理由は、目に見える石組みだけではない。",
+    "startMs": 27241,
+    "endMs": 32340,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "アメリカの水利技術者、ケネス・ライトは、長年、マチュピチュの水の流れを調べてきた。",
+    "startMs": 32820,
+    "endMs": 39519,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "マチュピチュのあたりには、1年に2000ミリ前後もの雨が降る。この雨が、山の斜面を崩す最大の敵だ。",
+    "startMs": 39999,
+    "endMs": 47359,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ライトによれば、インカの技術者たちは、建設の労力の50パーセント、もしかすると60パーセントを、地面の下に費やした。",
+    "startMs": 47839,
+    "endMs": 56713,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "中央の広場の下には、表面の土、砂利、そして砕いた石が、何層にも重ねられていた。降った雨を、すばやく地下にしみこませ、流すための仕組みだ。",
+    "startMs": 57193,
+    "endMs": 68831,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "都市のまわりの段々畑も、ただの畑ではない。畑は、斜面の土をとどめ、水はけをよくし、地すべりを防ぐ役割も果たしていた。",
+    "startMs": 69311,
+    "endMs": 79145,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "石の壁には、雨水を逃がすための、たくさんの排水口が作られている。その数は、130ほどあると言われている。",
+    "startMs": 79625,
+    "endMs": 88063,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "さらに、ブラジルの地質学者は、2019年の学会で、マチュピチュは、断層が交わる場所に、わざわざ建てられたという説を発表した。",
+    "startMs": 88543,
+    "endMs": 98537,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "割れ目の多い岩は、石材として切り出しやすく、水も集まりやすい。ただし、これはまだ、学会で発表された仮説の段階だ。",
+    "startMs": 99017,
+    "endMs": 108372,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 108852,
+    "endMs": 110281,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "半分正しい。",
+    "startMs": 110761,
+    "endMs": 111828,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "石組みの技は、確かにすばらしい。でも、マチュピチュを支えてきたのは、地面の下に隠された、排水の仕組みと段々畑だった。",
+    "startMs": 112308,
+    "endMs": 121695,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、ビンガムのあと、この遺跡の歴史に名を残したのは、どんな人々だったのか。",
+    "startMs": 122175,
+    "endMs": 127913,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第9の手がかり マチュピチュと日本は、何のつながりもない？（4395フレーム）
+export const clue9JapanCaptions: Caption[] = [
+  {
+    "text": "地球の裏側の、ペルーの山の上の遺跡。日本とのつながりなど、なさそうに思える。",
+    "startMs": 500,
+    "endMs": 6783,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "しかし、遺跡のふもとの、マチュピチュ村には、ひとりの日本人の名前が刻まれている。",
+    "startMs": 7263,
+    "endMs": 13225,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "野内与吉。",
+    "startMs": 13705,
+    "endMs": 14548,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "1895年、福島県の大玉村に生まれた野内は、1917年ごろ、海を渡ってペルーへ向かった。",
+    "startMs": 15028,
+    "endMs": 23657,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "やがて、マチュピチュのふもとへ向かう鉄道の建設に関わったことがきっかけで、この谷に住みついた。",
+    "startMs": 24137,
+    "endMs": 30633,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "1935年、野内は、村で初めての本格的な木の建物、ホテル・ノウチを建てた。",
+    "startMs": 31113,
+    "endMs": 38473,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "1階は、交番と郵便局に無料で貸し、のちに2階も、村の役場や裁判所として提供した。",
+    "startMs": 38953,
+    "endMs": 46153,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "水道や電気を引き、村の暮らしの土台を作ったのも、野内だった。",
+    "startMs": 46633,
+    "endMs": 51359,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして1948年。野内は、マチュピチュ村の、初代の村長になった。",
+    "startMs": 51839,
+    "endMs": 57951,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "野内が、ふるさとの大玉村に帰ったのは、1968年。ペルーへ渡ってから、およそ50年ぶりのことだった。",
+    "startMs": 58431,
+    "endMs": 67167,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして翌年の1969年、ペルーで、その生涯を閉じた。",
+    "startMs": 67647,
+    "endMs": 72863,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2015年10月。野内のふるさと、大玉村と、マチュピチュ村は、友好都市になった。マチュピチュ村にとって、初めての友好都市だ。",
+    "startMs": 73343,
+    "endMs": 83700,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、このつながりが、思いがけない形で、もうひとつの縁を生む。",
+    "startMs": 84180,
+    "endMs": 89257,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2011年。東日本大震災と、原発の事故。福島県の富岡町の人々は、町を離れて避難しなければならなかった。",
+    "startMs": 89737,
+    "endMs": 99359,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そのとき、いち早く町民を受け入れたのが、大玉村だった。",
+    "startMs": 99839,
+    "endMs": 104372,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "富岡町に本社のあった測量の会社、ふたば。社長は、そのときの恩を返したいと考えた。",
+    "startMs": 104852,
+    "endMs": 111583,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "大玉村の友好都市、マチュピチュ村のために、自分たちの技術を役立てられないか。",
+    "startMs": 112063,
+    "endMs": 117897,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2019年。ふたばは、JICA、国際協力機構の事業に採択され、マチュピチュでの3次元測量の調査を始めた。",
+    "startMs": 118377,
+    "endMs": 127455,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 127935,
+    "endMs": 129364,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "まちがい。",
+    "startMs": 129844,
+    "endMs": 130505,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "マチュピチュ村の初代村長は、福島県出身の野内与吉だった。そのふるさととの縁が、福島の会社を、マチュピチュの調査へと導いた。",
+    "startMs": 130985,
+    "endMs": 140809,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、その日本の技術は、マチュピチュで何を見つけたのか。",
+    "startMs": 141289,
+    "endMs": 145300,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第10の手がかり マチュピチュの全体像は、もう分かっている？（4940フレーム）
+export const clue10LidarCaptions: Caption[] = [
+  {
+    "text": "マチュピチュは、1983年に世界遺産に登録された。毎日、何千人もの観光客が訪れる。",
+    "startMs": 500,
+    "endMs": 8500,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "すべてが調べ尽くされた遺跡のように見える。",
+    "startMs": 8980,
+    "endMs": 11625,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "しかし、遺跡のまわりの斜面は、深い森に覆われている。木々の下に、何が隠れているのか、人の目では見ることができなかった。",
+    "startMs": 12105,
+    "endMs": 21353,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2026年3月30日。JICAは、ペルー文化省と、福島のふたばによる調査の成果を発表した。",
+    "startMs": 21833,
+    "endMs": 30132,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "使われたのは、ドローンに積んだレーザーだ。空から地面に向かって、無数のレーザーを当て、はね返ってくる光から、地形の形を細かく測る。",
+    "startMs": 30612,
+    "endMs": 40713,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "木の葉のすき間を抜けて、地面まで届いた光だけを取り出せば、森をはぎ取ったあとの、地表の姿が浮かび上がる。遺跡に一切触れずに、調べることができるのだ。",
+    "startMs": 41193,
+    "endMs": 52393,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その結果、遺跡の北東に広がる、アンデネス・オリエンタレスと呼ばれる大きな段々畑の群れの全体像が、初めて明らかになった。",
+    "startMs": 52873,
+    "endMs": 62089,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "さらに、まだ調査されていない遺跡の北側、月の神殿と呼ばれる場所の近くで、いくつもの「遺構の候補」が見つかった。",
+    "startMs": 62569,
+    "endMs": 71572,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "高さおよそ2.7メートルの、L字型の壁のような構造。",
+    "startMs": 72052,
+    "endMs": 76329,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "左右対称に並んだ、3段の段々畑。",
+    "startMs": 76809,
+    "endMs": 79999,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、長さおよそ2メートルの、四角い石材。人の手で加工された可能性があり、その裏側には、空洞があることも確かめられた。",
+    "startMs": 80479,
+    "endMs": 90484,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ただし、これらはまだ、「候補」だ。本当に遺構なのかは、これから確かめる必要がある。",
+    "startMs": 90964,
+    "endMs": 98036,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "発見は、これだけではなかった。",
+    "startMs": 98516,
+    "endMs": 100767,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2026年8月。ペルー文化省は、マチュピチュの東、ウルバンバ川をはさんだ、マンドールの壁と呼ばれる遺跡の周辺で、新たな道が見つかったと発表した。",
+    "startMs": 101247,
+    "endMs": 112873,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ポーランドのワルシャワ大学などのチームが、やはりドローンのレーザーで調べたところ、スペイン人が来る前の道が、あわせて2.5キロメートル以上見つかった。",
+    "startMs": 113353,
+    "endMs": 123316,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そのうち、およそ1.2キロメートルの道は、ジグザグに折れ曲がる道筋など、インカの道の特徴と一致していた。",
+    "startMs": 123796,
+    "endMs": 131657,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "調査を監督したペルー文化省の考古学者は、道の向きから、儀式のための場所へ向かう道だった可能性があると語っている。",
+    "startMs": 132137,
+    "endMs": 140319,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "次の調査は、2027年に予定されていると報じられている。",
+    "startMs": 140799,
+    "endMs": 145215,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 145695,
+    "endMs": 147124,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "まちがい。",
+    "startMs": 147604,
+    "endMs": 148265,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2026年、ドローンのレーザー調査で、密林の下の段々畑の全体像や、新しい遺構の候補、そして2.5キロメートル以上の道が見つかった。マチュピチュの全体像は、いまも明らかになりつつある。",
+    "startMs": 148745,
+    "endMs": 163433,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 本当の物語（3662フレーム）
+export const rootsStoryCaptions: Caption[] = [
+  {
+    "text": "では、手がかりをつないで、マチュピチュの本当の物語をたどってみよう。",
+    "startMs": 500,
+    "endMs": 5439,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "15世紀のはじめ。アンデスのクスコで、ひとりの王が力をつけ始めた。パチャクテクだ。",
+    "startMs": 5919,
+    "endMs": 11903,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "王は、ウルバンバ川の谷を自分の領地とし、そのいちばん奥の尾根の上に、離宮を築かせた。",
+    "startMs": 12383,
+    "endMs": 19337,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "年間2000ミリの雨が降る、急な斜面。技術者たちは、まず地面の下に、排水の仕組みを築いた。その上に、段々畑と、石の建物を積み上げた。",
+    "startMs": 19817,
+    "endMs": 31615,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "都市の名は、おそらく、ワイナピチュ。",
+    "startMs": 32095,
+    "endMs": 34921,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そこには、帝国の海岸から、高地から、そしてアマゾンの密林から、一人ずつ集められた人々が暮らし、王と、その一族に仕えた。",
+    "startMs": 35401,
+    "endMs": 45513,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "1420年ごろから、およそ100年。山の上の離宮には、人の暮らしが続いた。",
+    "startMs": 45993,
+    "endMs": 52436,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "やがて、スペイン人がやって来る。帝国は崩れ、王家の支配も失われた。",
+    "startMs": 52916,
+    "endMs": 58591,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、いつしか、離宮から人の姿が消えた。",
+    "startMs": 59071,
+    "endMs": 62687,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ふもとの役人の書類には、ピチュという名前だけが残った。",
+    "startMs": 63167,
+    "endMs": 66985,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "それから数百年。斜面の段々畑では、地元の農民が、インカの畑を耕し続けた。1902年には、リサラガが、壁に名前を書き残した。",
+    "startMs": 67465,
+    "endMs": 78836,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "1911年。ビンガムがやって来て、この都市を世界に知らせた。",
+    "startMs": 79316,
+    "endMs": 84425,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして20世紀。ふもとの村では、福島から来たひとりの日本人が、ホテルを建て、水道と電気を引き、初代の村長になった。",
+    "startMs": 84905,
+    "endMs": 94452,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "およそ100年後、その縁が、福島の会社を呼び寄せた。日本のレーザーは、密林の下に、まだ誰も知らない姿を見つけ出した。",
+    "startMs": 94932,
+    "endMs": 104212,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "マチュピチュは、ひとりの探検家が見つけた、失われた都市ではない。",
+    "startMs": 104692,
+    "endMs": 109119,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "王と、帝国中から集められた人々と、そこに住み続けた農民と、そしてそれを守り、調べ続ける人々が、500年以上かけて紡いできた都市なのだ。",
+    "startMs": 109599,
+    "endMs": 120852,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 まだ解けていない謎（2821フレーム）
+export const unsolvedMysteryCaptions: Caption[] = [
+  {
+    "text": "それでも、マチュピチュには、まだ解けていない謎が残っている。",
+    "startMs": 500,
+    "endMs": 4607,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "まず、この都市は、なぜ捨てられたのか。",
+    "startMs": 5087,
+    "endMs": 8084,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "骨の年代は、1530年ごろまで人が住んでいたことを示している。しかし、その後、いつ、どのようにして人々が去ったのかは、分かっていない。",
+    "startMs": 8564,
+    "endMs": 19497,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "スペインの征服で、王家の支配が失われたからなのか。それとも、ヨーロッパから持ちこまれた病気が広がったからなのか。いくつもの説があるが、決め手はない。",
+    "startMs": 19977,
+    "endMs": 30591,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、密林の下で見つかった、L字型の壁や、四角い石材の正体。",
+    "startMs": 31071,
+    "endMs": 36809,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "月の神殿の近くで、誰が、何のために、それを造ったのか。それは、これからの調査にかかっている。",
+    "startMs": 37289,
+    "endMs": 44969,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "マンドールの壁の周辺で見つかった道は、どこへ、何のために続いていたのか。",
+    "startMs": 45449,
+    "endMs": 51017,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "もうひとつ、いま問われている謎がある。",
+    "startMs": 51497,
+    "endMs": 54015,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この遺跡を、どうやって未来に残すのか。",
+    "startMs": 54495,
+    "endMs": 57289,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2026年、マチュピチュに入れる人の数は、多い時期で1日5600人までと決められている。",
+    "startMs": 57769,
+    "endMs": 64745,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2025年9月には、遺跡へのバスをめぐる住民の抗議で線路がふさがれ、多くの観光客が足止めされた。",
+    "startMs": 65225,
+    "endMs": 73044,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "新・世界七不思議を選んだ財団は、このままでは、その信頼を失うおそれがあると警告した。",
+    "startMs": 73524,
+    "endMs": 80521,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "世界中の人が見たいと願う遺跡を、どう守り、どう伝えていくのか。",
+    "startMs": 81001,
+    "endMs": 85908,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "日本の技術が残した3次元のデータは、その答えを探すための、新しい手がかりにもなっている。",
+    "startMs": 86388,
+    "endMs": 92831,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 まとめ（2834フレーム）
 export const summaryCaptions: Caption[] = [
   {
     "text": "では、今夜の判決を振り返ろう。",
@@ -1309,86 +1642,93 @@ export const summaryCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "富雄丸山古墳は、円墳としては日本最大だが、古墳全体で最大ではない。まちがい。",
+    "text": "マチュピチュを発見したのは、ビンガムではない。地元の人々が住み、1902年の落書きも残っていた。まちがい。",
     "startMs": 3572,
-    "endMs": 10452,
+    "endMs": 11775,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "日本最大の円墳だと分かったのは、2017年度からのレーザー測量と発掘のおかげだ。まちがい。",
-    "startMs": 10932,
-    "endMs": 17737,
+    "text": "マチュピチュという名前は、もともと山の名前で、都市は「ワイナピチュ」と呼ばれていた可能性が高い。まちがい。",
+    "startMs": 12255,
+    "endMs": 20447,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "巨大な蛇行剣は、戦いの武器ではなく、まつりの品だったと考えられている。まちがい。",
-    "startMs": 18217,
-    "endMs": 24575,
+    "text": "マチュピチュは、要塞ではなく、パチャクテク王の離宮だったと考えられている。まちがい。",
+    "startMs": 20927,
+    "endMs": 26943,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "蛇行剣は南九州に多いが、いちばん古く大きいものは奈良から出た。半分正しい。",
-    "startMs": 25055,
-    "endMs": 31177,
+    "text": "骨の年代は1420年ごろまでさかのぼり、文書が伝える年代より早かった。半分正しい。",
+    "startMs": 27423,
+    "endMs": 34495,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "盾の形の鏡は、日本で作られたと考えられている。まちがい。",
-    "startMs": 31657,
-    "endMs": 36351,
+    "text": "太陽に仕える女性たちの都市ではなく、男性も女性も、子どももいた。まちがい。",
+    "startMs": 34975,
+    "endMs": 41087,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "コウヤマキの棺は、およそ7割が残っていた。まちがい。",
-    "startMs": 36831,
-    "endMs": 40831,
+    "text": "住人は地元の人々ではなく、帝国の各地から集められた人々だった。まちがい。",
+    "startMs": 41567,
+    "endMs": 47380,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "棺の中の鏡は、古墳より100年から400年も古い、中国の鏡だった。まちがい。",
-    "startMs": 41311,
-    "endMs": 47860,
+    "text": "スペイン人が壊した跡はないが、ピチュの名は植民地の文書に残っていた。半分正しい。",
+    "startMs": 47860,
+    "endMs": 53972,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "墓の主は女性だという見方もあるが、性別は分かっていない。半分正しい。",
-    "startMs": 48340,
-    "endMs": 54036,
+    "text": "崩れない理由は、石組みだけでなく、地面の下の排水の仕組みにあった。半分正しい。",
+    "startMs": 54452,
+    "endMs": 60799,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "天理の三角縁神獣鏡が、この古墳から出た可能性は高まった。でも、確定ではない。半分正しい。",
-    "startMs": 54516,
-    "endMs": 62708,
+    "text": "マチュピチュ村の初代村長は、福島出身の野内与吉だった。まちがい。",
+    "startMs": 61279,
+    "endMs": 66377,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "人の背丈を超える剣は、戦うためではなく、守るための剣だった。",
-    "startMs": 63188,
-    "endMs": 68041,
+    "text": "2026年、日本のレーザーが、密林の下の新しい姿を見つけた。全体像は、いまも明らかになりつつある。まちがい。",
+    "startMs": 66857,
+    "endMs": 76276,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、墓の主の名前は分からなくても、土の中の証拠は、4世紀の奈良に、確かに大きな力を持つ人々がいたことを語っている。",
-    "startMs": 68521,
-    "endMs": 78100,
+    "text": "雲の上の石の都市は、伝説の隠れ家ではなかった。",
+    "startMs": 76756,
+    "endMs": 80319,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "王の離宮として造られ、帝国中から集められた人々が暮らし、そして今も、新しい姿を見せ続けている。",
+    "startMs": 80799,
+    "endMs": 88617,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "本当の話は、作り話に負けないくらい、面白い。",
-    "startMs": 78580,
-    "endMs": 82719,
+    "startMs": 89097,
+    "endMs": 93236,
     "timestampMs": null,
     "confidence": null
   }
