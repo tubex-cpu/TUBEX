@@ -55,12 +55,12 @@ const S20: React.FC<SceneProps> = ({f, T}) => {
   return (
     <DarkBoard>
       <div style={{position: 'absolute', left: 260, top: 80, display: 'flex', gap: 120, fontFamily: FONT}}>
-        <Pop f={f} at={LT(T, 's20', 6)} style={{width: 640, padding: 36, borderRadius: 20, background: 'rgba(60,20,20,0.6)', border: '3px solid #ff7a64'}}>
+        <Pop f={f} at={LT(T, 's20', 6)} style={{width: 640, padding: 36, borderRadius: 20, background: WHITE ? '#fff1ee' : 'rgba(60,20,20,0.6)', border: '3px solid #ff7a64', color: WHITE ? '#1d2230' : undefined}}>
           <div style={{fontSize: 44, fontWeight: 900}}>水着を着た女性</div>
           <div style={{fontSize: 40, fontWeight: 900, color: SOFTRED, marginTop: 16}}>恥ずかしさ ↑</div>
           <div style={{fontSize: 56, fontWeight: 900, color: '#ff3b30', marginTop: 8}}>数学の成績 ↓</div>
         </Pop>
-        {f >= LT(T, 's20', 8) && <Pop f={f} at={LT(T, 's20', 8)} style={{width: 520, padding: 36, borderRadius: 20, background: 'rgba(20,24,34,0.8)', border: '3px solid rgba(255,255,255,0.2)'}}>
+        {f >= LT(T, 's20', 8) && <Pop f={f} at={LT(T, 's20', 8)} style={{width: 520, padding: 36, borderRadius: 20, background: WHITE ? '#ffffff' : 'rgba(20,24,34,0.8)', border: WHITE ? '3px solid #d8d4cc' : '3px solid rgba(255,255,255,0.2)', color: WHITE ? '#1d2230' : undefined}}>
           <div style={{fontSize: 44, fontWeight: 900}}>男性</div>
           <div style={{fontSize: 48, fontWeight: 900, color: K.sub, marginTop: 24}}>成績の差 なし</div>
         </Pop>}
@@ -221,7 +221,7 @@ const S27: React.FC<SceneProps> = ({f, T}) => {
       )}
       {tail && (
         <>
-          <Pop f={f} at={LT(T, 's27', 10)} style={TXT({top: 200, fontSize: 64, color: K.ink})}>軽い一言は 何年も残る</Pop>
+          <Pop f={f} at={LT(T, 's27', 10)} style={TXT({top: 200, fontSize: 64, color: '#f2efe9', textShadow: '0 4px 22px rgba(0,0,0,0.85)'})}>軽い一言は 何年も残る</Pop>
           {f >= LT(T, 's27', 12) && <Pop f={f} at={LT(T, 's27', 12)} style={TXT({top: 340, fontSize: 64, color: SOFTRED})}>まだ誰かの中で 鳴り続けている</Pop>}
         </>
       )}
@@ -281,7 +281,7 @@ const S30: React.FC<SceneProps> = ({f, T}) => {
   if (tail) return (
     <AbsoluteFill>
       <Mirror f={f} hand={false} light={0.8} />
-      <Pop f={f} at={LT(T, 's30', 10)} style={TXT({top: 160, fontSize: 60, color: K.gold})}>あなたを知っている人の目には 中身が映る</Pop>
+      <Pop f={f} at={LT(T, 's30', 10)} style={TXT({top: 160, fontSize: 60, color: K.gold, ...(WHITE ? {background: 'rgba(255,255,255,0.92)', padding: '14px 0'} : {})})}>あなたを知っている人の目には 中身が映る</Pop>
       {f >= LT(T, 's30', 11) && <Pop f={f} at={LT(T, 's30', 11)} style={TXT({top: 300, fontSize: 60, color: SOFTRED})}>鏡の点数は あなたを一番知らない人の目</Pop>}
       <Vig />
     </AbsoluteFill>

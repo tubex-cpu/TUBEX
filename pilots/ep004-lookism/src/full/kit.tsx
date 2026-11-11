@@ -185,7 +185,8 @@ export const Bars: React.FC<{f: number; at: number; items: {label: string; v: nu
 };
 
 // numbered step card (experiment procedure)
-export const StepCard: React.FC<{f: number; at: number; n: string; text: string; x?: number; y?: number; w?: number; light?: boolean}> = ({f, at, n, text, x = 120, y = 90, w = 760, light = false}) => {
+export const StepCard: React.FC<{f: number; at: number; n: string; text: string; x?: number; y?: number; w?: number; light?: boolean}> = ({f, at, n, text, x = 120, y = 90, w = 760, light: light0 = false}) => {
+  const light = light0 || WHITE;
   const {fps} = useVideoConfig();
   if (f < at) return null;
   const s = spring({frame: f - at, fps, config: {damping: 16, stiffness: 120}});
