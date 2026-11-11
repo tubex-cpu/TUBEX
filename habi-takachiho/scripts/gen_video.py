@@ -56,6 +56,7 @@ comps = '\n'.join(f'\t\t\t<Composition id="{s}" component={{{s}}} durationInFram
 root = f"""import {{AbsoluteFill, Composition, Folder}} from 'remotion';
 import {{HabiTakachihoVideo}} from './HabiTakachihoVideo';
 import {{sceneDurations as d, TOTAL_FRAMES}} from './data/timeline';
+import {{Thumb1Kagura, Thumb2Iwato, Thumb3Eclipse}} from './thumbnails/Thumbnails';
 {imp}
 
 // 確認版用の720p（1920×1080の画面をそのまま縮小）
@@ -71,6 +72,11 @@ export const RemotionRoot: React.FC = () => (
 		<Composition id="HabiTakachiho720" component={{HabiTakachiho720}} durationInFrames={{TOTAL_FRAMES}} fps={{30}} width={{1280}} height={{720}} />
 		<Folder name="Scenes">
 {comps}
+		</Folder>
+		<Folder name="Thumbnails">
+			<Composition id="Thumb1Kagura" component={{Thumb1Kagura}} durationInFrames={{1}} fps={{30}} width={{1280}} height={{720}} />
+			<Composition id="Thumb2Iwato" component={{Thumb2Iwato}} durationInFrames={{1}} fps={{30}} width={{1280}} height={{720}} />
+			<Composition id="Thumb3Eclipse" component={{Thumb3Eclipse}} durationInFrames={{1}} fps={{30}} width={{1280}} height={{720}} />
 		</Folder>
 	</>
 );
