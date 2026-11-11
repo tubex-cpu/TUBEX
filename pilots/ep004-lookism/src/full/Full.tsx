@@ -5,6 +5,7 @@ import {SceneProps} from './kit';
 import {WHITE} from './mode';
 import {SCENES_L1} from './ScenesL1';
 import {SCENES_L2} from './ScenesL2';
+import {SCENES_W} from './ScenesW';
 
 const FPS = 30;
 const XF = 8;
@@ -14,7 +15,7 @@ type Line = {id: string; start: number; end: number; chunks: Chunk[]};
 const LINES = timeline.lines as Line[];
 const lineById = new Map(LINES.map((l) => [l.id, l]));
 const SCENES = timeline.scenes as {id: string; start: number; line: string}[];
-const ALL: Record<string, React.FC<SceneProps>> = {...SCENES_L1, ...SCENES_L2};
+const ALL: Record<string, React.FC<SceneProps>> = {...SCENES_L1, ...SCENES_L2, ...(WHITE ? SCENES_W : {})};
 // scenes with a bright background: subtitles there get a faint shadow (owner 2026-11-04), elsewhere none
 const LIGHT = new Set(['s01', 's02', 's03', 's05', 's07', 's10', 's14', 's20', 's22', 's28', 's30', 's31', 's37']);
 
