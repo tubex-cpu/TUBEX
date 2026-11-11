@@ -7,16 +7,16 @@ import {SceneFrame} from '../components/SceneFrame';
 import {summaryCaptions as c} from '../data/captions';
 
 const rows = [
-	{q: 'マチュピチュを発見したのは、ビンガム？', v: 'wrong'},
-	{q: 'マチュピチュは、インカ時代からの名前？', v: 'wrong'},
-	{q: 'インカ最後の要塞だった？', v: 'wrong'},
-	{q: '建てられたのは、王の即位のあと？', v: 'half'},
-	{q: '太陽に仕える女性たちの都市？', v: 'wrong'},
-	{q: '住人は、地元の人々だった？', v: 'wrong'},
-	{q: 'スペイン人に知られていなかった？', v: 'half'},
-	{q: '崩れないのは、石組みのおかげ？', v: 'half'},
-	{q: 'マチュピチュと日本は、つながりがない？', v: 'wrong'},
-	{q: '全体像は、もう分かっている？', v: 'wrong'},
+	{q: '夜神楽は、観光客のためのショー？', v: 'wrong'},
+	{q: '夜神楽は、神話の時代から続く？', v: 'wrong'},
+	{q: '天岩戸は、高千穂にある？', v: 'half'},
+	{q: '天岩戸神社の御神体は、洞窟そのもの？', v: 'right'},
+	{q: '天孫降臨の地は、宮崎の高千穂？', v: 'half'},
+	{q: '天岩戸の神話は、日食の記憶？', v: 'half'},
+	{q: '天照大神は卑弥呼だと証明された？', v: 'wrong'},
+	{q: '天宇受売命の舞は、神楽の始まり？', v: 'half'},
+	{q: '夜神楽は、消えかけている？', v: 'half'},
+	{q: '神楽は、もう世界遺産？', v: 'wrong'},
 ] as const;
 
 // まとめ：10の判決を、ナレーションに合わせて1つずつ灯す
@@ -29,11 +29,11 @@ export const Summary = () => {
 					<VerdictBoard rows={rows} startAt={rows.map((_, i) => captionFrame(c, 0, i + 1, fps))} />
 				</Stage>
 			</Beat>
-			<Beat name="伝説の隠れ家ではなかった" captions={c} from={11} to={12}>
-				<Photo id="mp-sunset-pan-w" move="scroll" label="伝説の隠れ家ではなかった" />
+			<Beat name="舞として、生き続ける" captions={c} from={11} to={12}>
+				<Photo id="yk-mask-oldwoman" move="in" label="舞として、生き続ける" />
 			</Beat>
-			<Beat name="新しい姿" captions={c} from={13}>
-				<Photo id="mp-fog-beatriz" move="in" label="いまも、新しい姿を見せる" />
+			<Beat name="今年も" captions={c} from={13}>
+				<Photo id="kunimi-unkai" move="in" label="今年も、岩戸が開かれる" />
 			</Beat>
 		</SceneFrame>
 	);

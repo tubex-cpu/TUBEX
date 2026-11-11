@@ -11,7 +11,7 @@ from scipy.signal import lfilter
 
 ROOT = Path(__file__).resolve().parent.parent
 SR = 44100
-rng = np.random.default_rng(2430)
+rng = np.random.default_rng(33)
 
 NOTE = {'C': 0, 'C#': 1, 'Db': 1, 'D': 2, 'D#': 3, 'Eb': 3, 'E': 4, 'F': 5, 'F#': 6, 'Gb': 6, 'G': 7, 'G#': 8, 'Ab': 8, 'A': 9, 'A#': 10, 'Bb': 10, 'B': 11}
 
@@ -178,17 +178,17 @@ def sections(bars, size):
 out = ROOT / 'public/bgm'
 out.mkdir(parents=True, exist_ok=True)
 
-# 1. 前半「雲の上の都市」：Eマイナーの五音音階（アンデス風）。低い持続音、遠い太鼓、はじく弦の旋律（約15分）
+# 1. 前半「夜の神楽宿」：Dの都節音階。低い持続音、遠い大太鼓、琴の旋律
 tr = Track(58, 900)
-miyako = ['E3', 'G3', 'A3', 'B3', 'D4', 'E4', 'G4', 'A4', 'B4', 'D5', 'E5']
+miyako = ['D3', 'D#3', 'G3', 'A3', 'A#3', 'D4', 'D#4', 'G4', 'A4', 'A#4', 'D5']
 keys = [0, 0, -2, 3, 0, -5, 0, 2, -2, 0, 5, 0]
 for si, (b0, n) in enumerate(sections(tr.bars, 8)):
     key = keys[si % len(keys)]
     drums = si % 3 != 0
     melody = si % 4 != 1
     pos = 5
-    tr.add(b0 * 4, drone(shift('E2', key), n * 4 * tr.beat + 2, 0.1))
-    tr.add(b0 * 4, drone(shift('B2', key), n * 4 * tr.beat + 2, 0.05))
+    tr.add(b0 * 4, drone(shift('D2', key), n * 4 * tr.beat + 2, 0.1))
+    tr.add(b0 * 4, drone(shift('A2', key), n * 4 * tr.beat + 2, 0.05))
     for bar in range(b0, b0 + n):
         if drums:
             tr.add(bar * 4, taiko(0.42 if bar % 2 == 0 else 0.3))
@@ -199,7 +199,7 @@ for si, (b0, n) in enumerate(sections(tr.bars, 8)):
             for k in range(4):
                 if rng.random() < 0.55:
                     pos = int(np.clip(pos + rng.choice([-2, -1, 1, 2, 0]), 0, len(miyako) - 1))
-                    tr.add(bar * 4 + k + rng.choice([0, 0.5]), pluck(shift(miyako[pos], key), 2.0, 0.09, rng.uniform(-0.5, 0.5)))
+                    tr.add(bar * 4 + k + rng.choice([0, 0.5]), koto(shift(miyako[pos], key), 3.0, 0.07, rng.uniform(-0.5, 0.5)))
 tr.render(out / 'bgm1-kumo.mp3', 0.45)
 
 # 2. 中盤「骨が語る」：Aマイナー。刻むベース、大太鼓の連打、琴のトレモロで緊張感（約22分）
@@ -228,7 +228,7 @@ for si, (b0, n) in enumerate(sections(tr.bars, 8)):
             for k in range(8):
                 if rng.random() < 0.75:
                     nn = ch[rng.integers(0, 3)]
-                    tr.add(bar * 4 + k * 0.5, pluck(shift(nn, key) * rng.choice([2, 4]), 0.9, 0.06, 0.4 if k % 2 else -0.4))
+                    tr.add(bar * 4 + k * 0.5, koto(shift(nn, key) * rng.choice([2, 4]), 0.9, 0.05, 0.4 if k % 2 else -0.4))
 tr.render(out / 'bgm2-hone.mp3', 0.3)
 
 # 3. 後半「密林の下」：Cメジャー中心。温かいピアノと持続音（約25分）

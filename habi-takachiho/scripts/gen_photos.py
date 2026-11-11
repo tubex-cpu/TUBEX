@@ -1,4 +1,4 @@
-"""public/photos/credits.json から src/data/photos.ts を作る（マチュピチュ判決）。
+"""public/photos/credits.json から src/data/photos.ts を作る（高千穂判決）。
   python3 scripts/gen_photos.py
 説明（desc）は写真リストを作ったときの表（scripts/photo-desc.json）を使う。"""
 import json, re
@@ -8,10 +8,10 @@ ROOT = Path(__file__).resolve().parent.parent
 cr = json.loads((ROOT / 'public/photos/credits.json').read_text())
 desc = json.loads((ROOT / 'scripts/photo-desc.json').read_text())
 # 縦長・極端な横長・地図は全体を見せる（contain）。人物の顔がある写真と地図は、テロップを下に置く
-CONTAIN = {'map-gohring', 'map-1912', 'ng-cover-1913'}
+CONTAIN = {'kojiki-shinpukuji'}
 # 明るい地図は、夜の画面に合うよう色を反転させる
 FILTER = {}
-FACE = {'pachacuti-brooklyn', 'pachacuti-statue', 'aguas-1', 'bingham-portrait', 'bingham-lc', 'bingham-tent', 'bingham-espiritu', 'guaman-chasqui', 'atahualpa-capture'}
+FACE = {'art-uzume-hokkei', 'yk-1914', 'iwato-tajikarao', 'yk-daidai', 'yk-masked-actor', 'yk-harunobu', 'art-tajikarao-hokkei', 'art-okame', 'yk-iki', 'art-mikagura', 'iwato-uzume', 'yk-mask-kami-pair', 'yk-masks-shelf', 'yk-giant-tajikarao', 'yk-mask-demon', 'art-sarutahiko', 'yk-iwami-orochi', 'art-toshimasa', 'yk-shiiba', 'art-kunisada-w', 'yk-mask-oldwoman', 'kunimi-ninigi', 'art-uzume-rooster', 'yk-iwami-smoke', 'yk-yutate', 'yk-giant-uzume', 'yk-ema', 'yk-tsunoyama', 'tj-carving', 'art-toyokuni-w', 'yk-iwami-shrine', 'art-tenson'}
 lines = []
 for pid, c in cr.items():
     w, h = c.get('size', [1, 1])

@@ -1,95 +1,81 @@
 // scripts/build-voice.py で自動生成。手で編集しないこと。
 import type {Caption} from '@remotion/captions';
 
-// 0:00 謎の先出し（2708フレーム）
+// 0:00 謎の先出し（2278フレーム）
 export const introCaptions: Caption[] = [
   {
-    "text": "南米ペルー。アンデスの山の上、標高およそ2430メートル。",
+    "text": "2026年11月22日と23日。宮崎県の山あいの町、高千穂。",
     "startMs": 500,
-    "endMs": 5823,
+    "endMs": 7188,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "深い谷にはさまれた尾根の上に、石の都市が眠っている。",
-    "startMs": 6303,
-    "endMs": 10111,
+    "text": "町の高千穂神社で、年に一度だけ、2日間をかけて、33番の神楽がすべて舞われる。",
+    "startMs": 7668,
+    "endMs": 14431,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュ。誰もが一度は写真で見たことのある、世界で最も有名な遺跡のひとつだ。",
-    "startMs": 10591,
-    "endMs": 16564,
+    "text": "舞われるのは、日本の神話でもっとも有名な場面のひとつ。太陽の神、天照大神が岩屋に隠れ、世界が闇に包まれた、天岩戸の物語だ。",
+    "startMs": 14911,
+    "endMs": 25961,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "だが、この都市について、私たちが知っていると思っていることの多くは、ここ数年で次々に書きかえられている。",
-    "startMs": 17044,
-    "endMs": 24745,
+    "text": "この町には、その岩戸そのものを御神体とする神社がある。神職でさえ、洞窟のそばには立ち入らないという。",
+    "startMs": 26441,
+    "endMs": 34079,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1911年、アメリカの探検家が「発見した」とされてきたこの遺跡。ところが、その探検家より前に、壁に名前を書き残していた人物がいた。",
-    "startMs": 25225,
-    "endMs": 36745,
+    "text": "だが、不思議なことがある。日本最古の歴史書、古事記と日本書紀は、この出来事を、高千穂の話としては書いていない。",
+    "startMs": 34559,
+    "endMs": 43423,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "私たちがずっと呼んできた「マチュピチュ」という名前。それは、この都市の本当の名前ではなかったかもしれない。",
-    "startMs": 37225,
-    "endMs": 45001,
+    "text": "しかも、天岩戸とされる場所は、日本の各地に、いくつもある。",
+    "startMs": 43903,
+    "endMs": 48713,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、ここに住んでいた人々。骨に残る遺伝子を調べると、思いもよらない姿が浮かび上がってきた。",
-    "startMs": 45481,
-    "endMs": 52756,
+    "text": "では、なぜ高千穂が、天岩戸の里と呼ばれるようになったのか。",
+    "startMs": 49193,
+    "endMs": 53748,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "さらに、2026年の3月。この遺跡を覆う密林の下を、日本の技術が初めて見通した。",
-    "startMs": 53236,
-    "endMs": 60361,
+    "text": "そして、太陽が隠れたという神話の正体は、何だったのか。",
+    "startMs": 54228,
+    "endMs": 58655,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "それを成しとげたのは、福島県の、ある小さな会社だった。",
-    "startMs": 60841,
-    "endMs": 65023,
+    "text": "天文学者たちは、1700年以上前の日食を、地球の自転のわずかな遅れまで計算に入れて、よみがえらせようとしてきた。",
+    "startMs": 59135,
+    "endMs": 67871,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "なぜ、福島の会社が、地球の裏側の遺跡を調べたのか。そこには、100年以上前から続く、ひとりの日本人との不思議な縁があった。",
-    "startMs": 65503,
-    "endMs": 75657,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ドローンに積んだレーザー。骨の年代を測る放射性炭素。そして、遺伝子の解析。",
-    "startMs": 76137,
-    "endMs": 82495,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "最新の科学が導き出したのは、私たちの知らなかった、もうひとつのマチュピチュの姿だった。",
-    "startMs": 82975,
-    "endMs": 89055,
+    "text": "その計算が導き出したのは、卑弥呼の時代の空に起きたかもしれない、驚くべき出来事だった。",
+    "startMs": 68351,
+    "endMs": 74719,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 ハビ判事登場（850フレーム）
+// 0:00 ハビ判事登場（861フレーム）
 export const judgeEntranceCaptions: Caption[] = [
   {
     "text": "こんばんは。閉園後の法廷にようこそ。ハビ判事です。",
@@ -99,1540 +85,1211 @@ export const judgeEntranceCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "今夜は、アンデスの山の上に眠る、天空の都市に挑む。",
+    "text": "今夜は、高千穂の山里で、夜を徹して舞われる神楽に挑む。",
     "startMs": 5097,
-    "endMs": 9343,
+    "endMs": 9695,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "今夜の問いは、これだ。",
-    "startMs": 9823,
-    "endMs": 11583,
+    "startMs": 10175,
+    "endMs": 11935,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュは、誰が、何のために造り、そこには誰が暮らしていたのか。",
-    "startMs": 12063,
-    "endMs": 17204,
+    "text": "天岩戸の神話は、どこで生まれ、何を伝えているのか。",
+    "startMs": 12415,
+    "endMs": 16532,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "新しい証拠をもとに、手がかりを、ひとつずつたどっていく。",
-    "startMs": 17684,
-    "endMs": 21961,
+    "text": "神楽の舞と、記録と、空の計算をもとに、手がかりを、ひとつずつたどっていく。",
+    "startMs": 17012,
+    "endMs": 23444,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "最初の手がかりは、この遺跡を世界に知らせた、ひとりの探検家だ。",
-    "startMs": 22441,
-    "endMs": 27113,
+    "text": "最初の手がかりは、いまも続く、夜の神楽だ。",
+    "startMs": 23924,
+    "endMs": 27497,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第1の手がかり マチュピチュを発見したのは、ビンガム？（4670フレーム）
-export const clue1BinghamCaptions: Caption[] = [
+// 0:00 第1の手がかり 高千穂の夜神楽は、観光客のためのショー？（2938フレーム）
+export const clue1KaguraCaptions: Caption[] = [
   {
-    "text": "1911年7月24日。アメリカのイエール大学で講師をしていた、ハイラム・ビンガムという人物が、この遺跡にたどり着いた。",
+    "text": "高千穂の夜神楽は、毎年11月の中ごろから、翌年の2月の初めにかけて行われる。",
     "startMs": 500,
-    "endMs": 10292,
+    "endMs": 6889,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ビンガムが探していたのは、マチュピチュではなかった。スペインに追われたインカの人々が、最後に立てこもったとされる都市、ビルカバンバだ。",
-    "startMs": 10772,
-    "endMs": 19679,
+    "text": "舞われるのは、町の中のおよそ20の集落。集落の家や公民館が、神楽宿と呼ばれる舞台になる。",
+    "startMs": 7369,
+    "endMs": 14889,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ウルバンバ川の谷を進んでいたビンガムは、メルチョル・アルテアガという地元の農民から、山の上に遺跡があると聞いた。",
-    "startMs": 20159,
-    "endMs": 28127,
+    "text": "日が沈むころに始まり、夜を徹して、翌朝まで舞い続ける。",
+    "startMs": 15369,
+    "endMs": 19881,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ビンガムは、案内のお礼として、1ソルを払ったという。ビンガム自身の本によれば、当時の日当の数倍にあたる額だ。",
-    "startMs": 28607,
-    "endMs": 37097,
+    "text": "舞は、全部で33番。1番の彦舞から始まり、33番の雲下しで終わる。演目の順番や衣装は、集落ごとに少しずつ違う。",
+    "startMs": 20361,
+    "endMs": 31455,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "急な斜面を登りきると、そこには、すでに人が住んでいた。リチャルテ家とアルバレス家という、ふたつの農家が、インカの段々畑を耕して暮らしていたのだ。",
-    "startMs": 37577,
-    "endMs": 48169,
+    "text": "この夜神楽は、1978年、国の重要無形民俗文化財に指定された。",
+    "startMs": 31935,
+    "endMs": 38217,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "遺跡の中心まで案内したのは、パブリートと呼ばれる、11歳ほどの少年だったと伝えられている。",
-    "startMs": 48649,
-    "endMs": 55337,
+    "text": "では、観光客のために見せるショーなのか。",
+    "startMs": 38697,
+    "endMs": 41663,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、遺跡の中の壁には、炭で書かれた文字があった。",
-    "startMs": 55817,
+    "text": "夜神楽の目的は、集落の氏神や、さまざまな神々に、一年の実りを感謝し、次の年の豊作を祈ることだ。",
+    "startMs": 42143,
+    "endMs": 50911,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "集落の人々が神楽宿に神を迎え、夜通し舞をささげる。観光客は、その場に、見せてもらう立場で加わる。",
+    "startMs": 51391,
     "endMs": 59903,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "「リサラガ　1902年」。",
+    "text": "一方で、旅行者が見られる舞もある。高千穂神社の神楽殿では、一年を通して毎晩8時から、およそ1時間、4番の舞が公開されている。",
     "startMs": 60383,
-    "endMs": 62473,
+    "endMs": 71188,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ビンガムより9年も前に、アグスティン・リサラガという地元の農民が、ここを訪れていたのだ。",
-    "startMs": 62953,
-    "endMs": 69620,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ビンガム自身も、リサラガがマチュピチュの発見者だという意味のことを、日記に書き残したと伝えられている。",
-    "startMs": 70100,
-    "endMs": 76873,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "さらに古い記録もある。1874年に作られた地図には、すでに、マチュピチュとワイナピチュという、ふたつの山の名前が書きこまれていた。",
-    "startMs": 77353,
-    "endMs": 87039,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、ビンガムは何をしたのか。",
-    "startMs": 87519,
-    "endMs": 89791,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "1913年4月。アメリカの雑誌、ナショナルジオグラフィックは、1冊まるごとを、この遺跡の特集にあてた。",
-    "startMs": 90271,
-    "endMs": 98793,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "およそ250枚の写真が、雲の上の石の都市を、初めて世界中の人々に見せた。",
-    "startMs": 99273,
-    "endMs": 105535,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ビンガムは、遺跡を見つけたのではない。遺跡を、世界に知らせたのだ。",
-    "startMs": 106015,
-    "endMs": 111135,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ビンガムはこのとき、多くの出土品をアメリカに持ち帰った。ペルーは長いあいだ返還を求め、2010年に、イエール大学との合意が結ばれた。",
-    "startMs": 111615,
-    "endMs": 121652,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ペルー側の数え方では、4万6000点あまり。破片も含めた品々が、2011年から順に、クスコへと帰っていった。",
-    "startMs": 122132,
-    "endMs": 131188,
+    "text": "手力雄の舞、鈿女の舞、戸取の舞、そして御神体の舞だ。",
+    "startMs": 71668,
+    "endMs": 76777,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 131668,
-    "endMs": 133097,
+    "startMs": 77257,
+    "endMs": 78687,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 133577,
-    "endMs": 134239,
+    "startMs": 79167,
+    "endMs": 79828,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュには、ビンガムが来る前から、地元の人々が住み、畑を耕していた。壁には1902年の名前も残っていた。ビンガムは発見者ではなく、世界に知らせた人物だ。",
-    "startMs": 134719,
-    "endMs": 147529,
+    "text": "夜神楽は、集落の神々に実りを感謝し、豊作を祈る神事だ。旅行者が見られるのは、神社の毎晩の公開や、公開を許された集落の夜神楽だ。",
+    "startMs": 80308,
+    "endMs": 91572,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、ビンガムが聞いた「マチュピチュ」という名前は、この都市の本当の名前だったのか。",
-    "startMs": 148009,
-    "endMs": 154452,
+    "text": "では、この神楽は、神話の時代から、ずっと続いてきたのか。",
+    "startMs": 92052,
+    "endMs": 96703,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第2の手がかり マチュピチュは、インカ時代からの名前？（3701フレーム）
-export const clue2NameCaptions: Caption[] = [
+// 0:00 第2の手がかり 夜神楽は、神話の時代から続いている？（2112フレーム）
+export const clue2HistoryCaptions: Caption[] = [
   {
-    "text": "マチュピチュとは、現地の言葉、ケチュア語で、「年老いた峰」という意味だと言われている。",
+    "text": "夜神楽の33番の中には、日本の神話を題材にした舞が、いくつもある。",
     "startMs": 500,
-    "endMs": 6772,
+    "endMs": 5993,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、遺跡の向こうにそびえる、とがった山が、ワイナピチュ。「若い峰」という意味だ。",
-    "startMs": 7252,
-    "endMs": 14143,
+    "text": "とくに有名なのが、天岩戸の物語を演じる舞だ。",
+    "startMs": 6473,
+    "endMs": 10356,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2022年。ペルー文化省の歴史家、ドナト・アマド・ゴンサレスと、アメリカのイリノイ大学の考古学者、ブライアン・バウアーが、この名前を調べ直した論文を発表した。",
-    "startMs": 14623,
-    "endMs": 28276,
+    "text": "では、夜神楽そのものは、いつから舞われてきたのか。",
+    "startMs": 10836,
+    "endMs": 14463,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "二人が調べたのは、3種類の史料だ。ビンガムの野帳。19世紀の地図。そして、16世紀から17世紀のスペイン植民地時代の文書。",
-    "startMs": 28756,
-    "endMs": 39263,
+    "text": "国の観光庁がまとめた解説では、高千穂の夜神楽は、800年以上の歴史を持つとされている。",
+    "startMs": 14943,
+    "endMs": 21695,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "まず、ビンガムの野帳。そこには、ビンガムが、この遺跡の名前に確信を持てずにいたことが記されていた。",
-    "startMs": 39743,
-    "endMs": 47391,
+    "text": "平安時代の終わりから、鎌倉時代の初めごろにさかのぼる計算になる。",
+    "startMs": 22175,
+    "endMs": 26985,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュという名前は、案内人のアルテアガから聞いたものだった。",
-    "startMs": 47871,
-    "endMs": 52009,
+    "text": "800年。それは、とてつもない長さだ。",
+    "startMs": 27465,
+    "endMs": 30761,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "次に、古い地図。1880年にフランスで出版された探検記の地図には、「ワイナピチュ」という名前が、遺跡のあたりに書かれていた。",
-    "startMs": 52489,
-    "endMs": 62719,
+    "text": "だが、神話の時代と呼ぶには、はるかに新しい。",
+    "startMs": 31241,
+    "endMs": 34889,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、決め手になったのが、1588年の記録だ。",
-    "startMs": 63199,
-    "endMs": 67593,
+    "text": "古事記ができたのは712年。日本書紀は720年。神楽の題材になった神話は、それよりも前から語られていた。",
+    "startMs": 35369,
+    "endMs": 44127,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そこには、住民たちが、「ワイナピチュの町」に戻って、自分たちの昔からの信仰に戻りたいと願った、と書かれていた。",
-    "startMs": 68073,
-    "endMs": 76799,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "二人の結論は、こうだ。インカの時代、この都市は、「ピチュ」、あるいは、より可能性が高いのは、「ワイナピチュ」と呼ばれていた。",
-    "startMs": 77279,
-    "endMs": 87348,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "マチュピチュは、もともとは、遺跡のそばの山の名前だったと考えられる。",
-    "startMs": 87828,
-    "endMs": 92607,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ただし、バウアーは、名前を変えるべきだとは言っていない。マチュピチュという名前は、すでに世界中で知られているからだ。",
-    "startMs": 93087,
-    "endMs": 101289,
+    "text": "神楽は、神話そのものではなく、神話をもとに、人々が長い時間をかけて形を作ってきた舞なのだ。",
+    "startMs": 44607,
+    "endMs": 51796,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 101769,
-    "endMs": 103199,
+    "startMs": 52276,
+    "endMs": 53705,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 103679,
-    "endMs": 104340,
+    "startMs": 54185,
+    "endMs": 54847,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "「マチュピチュ」は、遺跡のそばの山の名前だった。インカの時代、この都市は「ワイナピチュ」、または「ピチュ」と呼ばれていた可能性が高い。",
-    "startMs": 104820,
-    "endMs": 115711,
+    "text": "夜神楽は、神話を題材にした舞だ。でも、たどれる歴史は800年ほど。神話の時代から続いてきたわけではない。",
+    "startMs": 55327,
+    "endMs": 63572,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、この都市は、何のために造られたのか。ビンガムは、ある答えを信じていた。",
-    "startMs": 116191,
-    "endMs": 122153,
+    "text": "では、その神話の舞台、天岩戸は、本当に高千穂にあるのか。",
+    "startMs": 64052,
+    "endMs": 69172,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第3の手がかり マチュピチュは、インカ最後の要塞だった？（3505フレーム）
-export const clue3FortressCaptions: Caption[] = [
+// 0:00 第3の手がかり 天岩戸は、高千穂にある？（3354フレーム）
+export const clue3IwatoCaptions: Caption[] = [
   {
-    "text": "ビンガムが探していたのは、インカ最後の拠点、ビルカバンバだった。",
+    "text": "まず、神話の中身を確かめよう。",
     "startMs": 500,
-    "endMs": 5119,
+    "endMs": 2985,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "切り立った崖に囲まれた尾根。都市を区切る壁。見張りに適した高い場所。",
-    "startMs": 5599,
-    "endMs": 10516,
+    "text": "古事記によれば、弟の須佐之男命の乱暴を恐れた天照大神は、天の石屋戸を開いて、その中にこもってしまった。",
+    "startMs": 3465,
+    "endMs": 12159,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ビンガムは、マチュピチュこそが、スペインと戦ったインカの人々が、最後に立てこもった都市だと考えた。そして、その考えを長く持ち続けた。",
-    "startMs": 10996,
-    "endMs": 20713,
+    "text": "すると、世界は闇に包まれ、さまざまな災いが起きた。",
+    "startMs": 12639,
+    "endMs": 16948,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "しかし、その後の研究で、見方は大きく変わった。",
-    "startMs": 21193,
-    "endMs": 25044,
+    "text": "八百万の神々は、天安河原に集まって相談した。知恵の神、思金神が、策を考えた。",
+    "startMs": 17428,
+    "endMs": 25343,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ビルカバンバは、マチュピチュよりもずっと西の、密林の奥にある、エスピリトゥ・パンパという遺跡だったと考えられている。",
-    "startMs": 25524,
-    "endMs": 33780,
+    "text": "長鳴鳥を鳴かせ、鏡を作り、勾玉を作り、榊に飾った。",
+    "startMs": 25823,
+    "endMs": 31188,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、マチュピチュで、大きな戦いがあったことを示す証拠は、ほとんど見つかっていない。",
-    "startMs": 34260,
-    "endMs": 40255,
+    "text": "そして、天宇受売命が、伏せた桶の上で足を踏み鳴らし、神がかりになって舞った。",
+    "startMs": 31668,
+    "endMs": 38036,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、マチュピチュは何だったのか。",
-    "startMs": 40735,
-    "endMs": 42996,
+    "text": "八百万の神々は、どっと笑った。",
+    "startMs": 38516,
+    "endMs": 41161,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "手がかりになったのは、1990年に、アメリカの考古学者、ジョン・ロウが発表した研究だ。",
-    "startMs": 43476,
-    "endMs": 51103,
+    "text": "外の騒ぎを不思議に思った天照大神が、岩戸を少しだけ開けた。その瞬間、戸のそばに隠れていた天手力男神が、天照大神の手を取って、外へ引き出した。",
+    "startMs": 41641,
+    "endMs": 53993,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ロウは、16世紀の文書を調べた。そこには、この谷の畑の一覧があり、その一部が、インカ王パチャクテクのものだったと記されていた。",
-    "startMs": 51583,
-    "endMs": 61460,
+    "text": "世界に、光が戻った。",
+    "startMs": 54473,
+    "endMs": 56468,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "パチャクテクは、クスコの小さな国を、南米最大の帝国へと広げた王だ。",
-    "startMs": 61940,
-    "endMs": 67433,
+    "text": "ここで、大事な点がある。古事記も日本書紀も、この出来事を、神々の世界、高天原での出来事として書いている。高千穂という地名は、この場面には出てこない。",
+    "startMs": 56948,
+    "endMs": 69439,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ロウは、山の上の都市も、この王の領地に含まれていたと考えた。",
-    "startMs": 67913,
-    "endMs": 72660,
+    "text": "そして、天岩戸とされる場所は、日本の各地にある。",
+    "startMs": 69919,
+    "endMs": 73833,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "つまり、マチュピチュは、パチャクテク王の、離宮だった。",
-    "startMs": 73140,
-    "endMs": 77343,
+    "text": "三重県志摩市の、恵利原の水穴。長野県の戸隠神社には、岩戸を開いた神々がまつられ、手力男命が投げた岩戸が戸隠山になったという言い伝えがある。",
+    "startMs": 74313,
+    "endMs": 85695,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "王と、その一族が、都クスコを離れて過ごすための、山の上の宮殿。そう考えるのが、いまの研究でもっとも有力な説だ。",
-    "startMs": 77823,
-    "endMs": 87679,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ただし、別の考えもある。イタリアの研究者は、太陽や山をまつる、巡礼の地として計画された、という説を唱えている。",
-    "startMs": 88159,
-    "endMs": 97471,
+    "text": "沖縄県の伊平屋島には、天岩戸伝説の最も南の地とされる、クマヤ洞窟がある。",
+    "startMs": 86175,
+    "endMs": 92511,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 97951,
-    "endMs": 99380,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "まちがい。",
-    "startMs": 99860,
-    "endMs": 100521,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "マチュピチュで大きな戦いがあった証拠は、ほとんどない。インカ最後の拠点は、別の場所だった。もっとも有力なのは、パチャクテク王の離宮だったという説だ。",
-    "startMs": 101001,
-    "endMs": 111625,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、その離宮が建てられたのは、いつだったのか。",
-    "startMs": 112105,
-    "endMs": 115625,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第4の手がかり マチュピチュが建てられたのは、パチャクテクが王になったあと？（3246フレーム）
-export const clue4DateCaptions: Caption[] = [
-  {
-    "text": "これまでの教科書的な説明は、こうだった。",
-    "startMs": 500,
-    "endMs": 3561,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "パチャクテクが王になったのは、1438年。そのあと、1440年代以降に、マチュピチュが建てられた。",
-    "startMs": 4041,
-    "endMs": 12585,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この年代は、スペイン人が、征服したあとに書き残した記録をもとにしている。",
-    "startMs": 13065,
-    "endMs": 18281,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "しかし、2021年8月。イエール大学のリチャード・バーガーたちが、別の方法で、この年代を確かめた。",
-    "startMs": 18761,
-    "endMs": 27593,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "使ったのは、マチュピチュの4か所の墓から見つかった、26人の骨と歯だ。",
-    "startMs": 28073,
-    "endMs": 33183,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "これらは、1912年にビンガムが持ち帰り、イエール大学の博物館で保管されていたものだった。",
-    "startMs": 33663,
-    "endMs": 40724,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "研究チームは、加速器質量分析法という、ごくわずかな量の試料から年代を測ることができる、放射性炭素年代測定を使った。",
-    "startMs": 41204,
-    "endMs": 50665,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "結果は、意外なものだった。",
-    "startMs": 51145,
-    "endMs": 53225,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "マチュピチュには、遅くとも1420年ごろから、1530年ごろまで、途切れることなく人が住んでいた。",
-    "startMs": 53705,
-    "endMs": 61460,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "文書が伝える年代よりも、20年以上も早い。",
-    "startMs": 61940,
-    "endMs": 65503,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "これが正しければ、パチャクテクは、1438年よりも前に、すでに力を持ち、まわりの土地を支配し始めていたことになる。",
-    "startMs": 65983,
-    "endMs": 75284,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "スペイン人が書き残したインカの歴史の年代そのものが、問い直されることになったのだ。",
-    "startMs": 75764,
-    "endMs": 81012,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ただし、研究チームも、放射性炭素年代測定には限界があることを認めている。",
-    "startMs": 81492,
-    "endMs": 87540,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 88020,
-    "endMs": 89449,
+    "startMs": 92991,
+    "endMs": 94420,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "半分正しい。",
-    "startMs": 89929,
-    "endMs": 90996,
+    "startMs": 94900,
+    "endMs": 95967,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュがパチャクテク王と結びついていることは変わらない。でも、骨の年代は1420年ごろまでさかのぼり、文書が伝える即位の年よりも早かった。",
-    "startMs": 91476,
-    "endMs": 102079,
+    "text": "高千穂には、天岩戸とされる洞窟がある。でも、記紀は高天原の出来事として書いていて、天岩戸とされる場所はほかにもある。",
+    "startMs": 96447,
+    "endMs": 105812,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、この王の離宮に暮らしていたのは、どんな人々だったのか。",
-    "startMs": 102559,
-    "endMs": 106975,
+    "text": "では、高千穂の天岩戸は、どのようにまつられているのか。",
+    "startMs": 106292,
+    "endMs": 110580,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第5の手がかり マチュピチュは、太陽に仕える女性たちの都市だった？（2546フレーム）
-export const clue5VirginsCaptions: Caption[] = [
+// 0:00 第4の手がかり 天岩戸神社の御神体は、洞窟そのもの？（2730フレーム）
+export const clue4ShrineCaptions: Caption[] = [
   {
-    "text": "ビンガムの調査隊は、遺跡のまわりの墓から、多くの骨を掘り出した。",
+    "text": "高千穂の町から、岩戸川の谷をさかのぼったところに、天岩戸神社がある。",
     "startMs": 500,
-    "endMs": 5289,
+    "endMs": 5929,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1916年、その骨を調べた研究者は、大半が女性の骨だと判定した。",
-    "startMs": 5769,
-    "endMs": 12020,
+    "text": "神社は、川をはさんで、西本宮と東本宮に分かれている。もとは別々の神社で、1970年にひとつになった。",
+    "startMs": 6409,
+    "endMs": 15465,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "インカには、太陽の神に仕える、選ばれた女性たちがいた。ビンガムは、この骨こそが、その女性たちのものだと考えた。",
-    "startMs": 12500,
-    "endMs": 21407,
+    "text": "西本宮には、ふつうの神社にあるはずの、ご本殿がない。",
+    "startMs": 15945,
+    "endMs": 20223,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "スペインから逃れた「太陽の処女」たちが、最後に隠れ住んだ都市。それが、マチュピチュだ。",
-    "startMs": 21887,
-    "endMs": 28905,
+    "text": "御神体は、岩戸川の向こう岸、切り立った崖にある洞窟。この洞窟こそが、天照大神が隠れた天岩戸だと伝えられている。",
+    "startMs": 20703,
+    "endMs": 30495,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "この物語は、長いあいだ、多くの人を引きつけてきた。",
-    "startMs": 29385,
-    "endMs": 33417,
+    "text": "洞窟のまわりは、神職さえも立ち入らない、聖なる場所とされている。",
+    "startMs": 30975,
+    "endMs": 35913,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "しかし、時代が下り、アメリカの人類学者、ジョン・ベラノが、イエール大学に残された骨を、改めて調べ直した。",
-    "startMs": 33897,
-    "endMs": 43380,
+    "text": "参拝する人は、社務所に申し出ると、神職の案内で、拝殿の裏の遥拝所から、岩戸を拝むことができる。",
+    "startMs": 36393,
+    "endMs": 44457,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "すると、男性と女性の数は、ほぼ半々だった。そして、子どもの骨も含まれていた。",
-    "startMs": 43860,
-    "endMs": 50409,
+    "text": "一方、東本宮は、岩戸から出た天照大神が、最初に住んだ場所と伝えられている。",
+    "startMs": 44937,
+    "endMs": 51700,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "女性だけが暮らす都市ではなかったのだ。",
-    "startMs": 50889,
-    "endMs": 53140,
+    "text": "そして、西本宮から岩戸川をさかのぼって、歩いておよそ10分。大きな洞窟がある。",
+    "startMs": 52180,
+    "endMs": 58484,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "バーガーは、この再調査が、「太陽の処女」の説に、とどめを刺したと語っている。",
-    "startMs": 53620,
-    "endMs": 59860,
+    "text": "天安河原。八百万の神々が集まって、天照大神を外に出す策を話し合った場所とされる。",
+    "startMs": 58964,
+    "endMs": 65961,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、ここに住んでいたのは、どんな人々だったのか。その答えは、骨の中の遺伝子が語ってくれた。",
-    "startMs": 60340,
-    "endMs": 67295,
+    "text": "洞窟の中には、参拝した人々が願いを込めて積んだ小石が、びっしりと並んでいる。",
+    "startMs": 66441,
+    "endMs": 72244,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 67775,
-    "endMs": 69204,
+    "startMs": 72724,
+    "endMs": 74153,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "まちがい。",
-    "startMs": 69684,
-    "endMs": 70345,
+    "text": "正しい。",
+    "startMs": 74633,
+    "endMs": 75273,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "骨を調べ直すと、男性と女性はほぼ半々で、子どももいた。太陽に仕える女性たちだけの都市ではなかった。",
-    "startMs": 70825,
-    "endMs": 78633,
+    "text": "天岩戸神社の西本宮には本殿がなく、岩戸川の向こうの洞窟そのものを、遥拝所から拝んでいる。",
+    "startMs": 75753,
+    "endMs": 82943,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、マチュピチュに住んでいたのは、このあたりの土地の人々だったのか。",
-    "startMs": 79113,
-    "endMs": 83647,
+    "text": "では、なぜ高千穂が、神話の里と呼ばれるのか。その理由は、もうひとつの神話にある。",
+    "startMs": 83423,
+    "endMs": 89769,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第6の手がかり マチュピチュの住人は、地元の人々だった？（3447フレーム）
-export const clue6PeopleCaptions: Caption[] = [
+// 0:00 第5の手がかり 天孫降臨の地は、宮崎の高千穂？（2901フレーム）
+export const clue5DescentCaptions: Caption[] = [
   {
-    "text": "2023年7月。アメリカの科学誌、サイエンス・アドバンシズに、マチュピチュの人々の遺伝子を調べた論文が発表された。",
+    "text": "天岩戸の物語のあと、天照大神の孫、邇邇芸命が、天から地上へ降りてくる。天孫降臨だ。",
     "startMs": 500,
-    "endMs": 9908,
+    "endMs": 8841,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "研究したのは、イエール大学のルーシー・サラザールたち。",
-    "startMs": 10388,
-    "endMs": 14612,
+    "text": "その場所を、古事記は、こう書いている。筑紫の日向の高千穂の、くしふるたけ。",
+    "startMs": 9321,
+    "endMs": 15423,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "調べたのは、マチュピチュに葬られた34人と、比べるためのクスコの34人。あわせて68人の遺伝子だ。",
-    "startMs": 15092,
-    "endMs": 23508,
+    "text": "日本書紀の本文では、日向の襲の高千穂峯。",
+    "startMs": 15903,
+    "endMs": 19295,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "その結果は、驚くべきものだった。",
-    "startMs": 23988,
-    "endMs": 26548,
+    "text": "高千穂という名前が、確かに出てくる。",
+    "startMs": 19775,
+    "endMs": 22505,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュに葬られた人々は、インカ帝国のあちこちから来ていた。太平洋の海岸。アンデスの高地。そして、アマゾンの密林。",
-    "startMs": 27028,
-    "endMs": 36543,
+    "text": "宮崎県の高千穂町には、くしふる神社と、二上山がある。日本書紀の別の伝えに出てくる、くしふるの峯や、二上の峯と、名前が重なる。",
+    "startMs": 22985,
+    "endMs": 34217,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "およそ3分の1の人々は、アマゾンの人々の祖先を、強く受け継いでいた。",
-    "startMs": 37023,
-    "endMs": 42399,
+    "text": "古い風土記の伝えには、邇邇芸命が、この地で稲の穂をまいたことから、地名が生まれたという話も残る。",
+    "startMs": 34697,
+    "endMs": 42079,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "さらに不思議なことがある。68人の中で、血のつながりが分かったのは、母と娘の、ただ1組だけだった。",
-    "startMs": 42879,
-    "endMs": 50825,
+    "text": "ところが、もうひとつの高千穂がある。",
+    "startMs": 42559,
+    "endMs": 44991,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "家族や村ごと移り住んできたのではない。ひとりひとりが、帝国の各地から、ばらばらに連れてこられたと考えられるのだ。",
-    "startMs": 51305,
-    "endMs": 59380,
+    "text": "宮崎県と鹿児島県の境、霧島連山にそびえる、高千穂峰。標高およそ1574メートル。",
+    "startMs": 45471,
+    "endMs": 53599,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "同じ墓の洞窟に葬られた人々でさえ、そのふるさとは、まったく違っていた。",
-    "startMs": 59860,
-    "endMs": 65460,
+    "text": "その山頂には、邇邇芸命が突き立てたと伝えられる、天の逆鉾が立っている。",
+    "startMs": 54079,
+    "endMs": 59561,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "この人々は、誰だったのか。",
-    "startMs": 65940,
-    "endMs": 68105,
+    "text": "日本書紀の本文にある「襲」は、いまの鹿児島県の大隅地方の地名だと考えられてきた。そうなると、霧島の高千穂峰のほうが、ふさわしいことになる。",
+    "startMs": 60041,
+    "endMs": 70548,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "論文によれば、彼らは、王に仕えるために連れてこられた使用人たちだったと考えられる。インカの言葉で、ヤナコーナと呼ばれる人々だ。",
-    "startMs": 68585,
-    "endMs": 78015,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "帝国の各地から集められた人々が、山の上の離宮で、ともに働き、ともに暮らし、ともに葬られた。",
-    "startMs": 78495,
-    "endMs": 86399,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "バーガーは、マチュピチュを、「さまざまな背景を持つ人々が暮らした、国際的な共同体」と呼んでいる。",
-    "startMs": 86879,
-    "endMs": 94441,
+    "text": "二つの高千穂。どちらが本当の降臨の地なのか。論争は、いまも決着していない。",
+    "startMs": 71028,
+    "endMs": 77204,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 94921,
-    "endMs": 96351,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "まちがい。",
-    "startMs": 96831,
-    "endMs": 97492,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "マチュピチュの人々は、帝国の海岸、高地、アマゾンなど、各地から一人ずつ集められた、王に仕える人々だった。",
-    "startMs": 97972,
-    "endMs": 106932,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、これほどの都市が、なぜ、400年近くも、世界に知られずに残ったのか。",
-    "startMs": 107412,
-    "endMs": 113684,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第7の手がかり マチュピチュは、スペイン人に知られていなかった？（2645フレーム）
-export const clue7SpainCaptions: Caption[] = [
-  {
-    "text": "1532年。スペインの征服者たちが、インカ帝国にやって来た。",
-    "startMs": 500,
-    "endMs": 5769,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "彼らは、クスコの神殿の黄金をはぎ取り、インカの神殿の上に、教会を建てた。",
-    "startMs": 6249,
-    "endMs": 12297,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "しかし、マチュピチュには、スペイン人が壊した跡が見当たらない。征服者たちの記録にも、この山の上の都市のことは書かれていない。",
-    "startMs": 12777,
-    "endMs": 21865,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "だから、スペイン人に見つからなかったから、マチュピチュは残った。そう語られてきた。",
-    "startMs": 22345,
-    "endMs": 27903,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ところが、植民地時代の文書を調べると、話は違ってくる。",
-    "startMs": 28383,
-    "endMs": 33023,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "第3の手がかりで紹介した、ジョン・ロウの研究。その元になった16世紀の文書には、ピチュという土地の名前が記されていた。",
-    "startMs": 33503,
-    "endMs": 42889,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "第2の手がかりの、1588年の記録にも、ワイナピチュの町の名前が出てくる。",
-    "startMs": 43369,
-    "endMs": 49460,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "スペインの役人たちは、この土地の存在を知っていた。そこに畑があり、人が住んでいたことも、書類に残していたのだ。",
-    "startMs": 49940,
-    "endMs": 58196,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ただ、山の上の石の都市を、彼らが実際に訪れたのかどうかは、分かっていない。",
-    "startMs": 58676,
-    "endMs": 64660,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "少なくとも、遺跡を壊した記録はない。",
-    "startMs": 65140,
-    "endMs": 67967,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 68447,
-    "endMs": 69876,
+    "startMs": 77684,
+    "endMs": 79113,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "半分正しい。",
-    "startMs": 70356,
-    "endMs": 71423,
+    "startMs": 79593,
+    "endMs": 80660,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "スペイン人が、山の上の都市を壊した跡や記録はない。でも、ピチュという土地の名前は、植民地時代の文書にはっきり記録されていた。",
-    "startMs": 71903,
-    "endMs": 81556,
+    "text": "宮崎の高千穂町には、記紀の地名と重なる場所がある。でも、霧島の高千穂峰にも強い根拠があり、どちらかに決まってはいない。",
+    "startMs": 81140,
+    "endMs": 90729,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、マチュピチュは、なぜ500年以上も、崩れずに残ったのか。",
-    "startMs": 82036,
-    "endMs": 86943,
+    "text": "では、太陽が隠れたという神話は、何を伝えているのか。",
+    "startMs": 91209,
+    "endMs": 95476,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第8の手がかり マチュピチュが崩れないのは、石組みの技のおかげ？（3874フレーム）
-export const clue8StoneCaptions: Caption[] = [
+// 0:00 第6の手がかり 天岩戸の神話は、日食の記憶？（3275フレーム）
+export const clue6EclipseCaptions: Caption[] = [
   {
-    "text": "マチュピチュの石組みは、世界中の人々を驚かせてきた。",
+    "text": "太陽が隠れ、世界が闇に包まれる。そして、また光が戻る。",
     "startMs": 500,
-    "endMs": 4276,
+    "endMs": 5545,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "石と石の間には、モルタルのような接着剤は使われていない。それでも、石は、すき間なくぴたりと組み合っている。",
-    "startMs": 4756,
-    "endMs": 12884,
+    "text": "この話を聞いて、多くの人が思い浮かべるのが、皆既日食だ。",
+    "startMs": 6025,
+    "endMs": 10676,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "出入口や窓は、下が広く、上がせまい台形をしている。壁も、内側に少しだけ傾いている。",
-    "startMs": 13364,
-    "endMs": 20884,
+    "text": "昼間なのに、空が暗くなり、星が見え、鳥が鳴きやむ。古代の人々にとって、どれほど恐ろしい出来事だったか。",
+    "startMs": 11156,
+    "endMs": 19700,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "この形が、地震の多いアンデスで、建物を崩れにくくしていると言われている。",
-    "startMs": 21364,
-    "endMs": 26761,
+    "text": "天岩戸の神話は、遠い昔に人々が見た日食の記憶ではないか。そう考える研究者は、少なくない。",
+    "startMs": 20180,
+    "endMs": 27860,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "しかし、マチュピチュが崩れずに残った理由は、目に見える石組みだけではない。",
-    "startMs": 27241,
-    "endMs": 32340,
+    "text": "では、いつの日食なのか。",
+    "startMs": 28340,
+    "endMs": 30388,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "アメリカの水利技術者、ケネス・ライトは、長年、マチュピチュの水の流れを調べてきた。",
-    "startMs": 32820,
-    "endMs": 39519,
+    "text": "天文学では、過去の日食がいつ、どこで見えたのかを計算できる。ただし、難しい問題がある。",
+    "startMs": 30868,
+    "endMs": 38260,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュのあたりには、1年に2000ミリ前後もの雨が降る。この雨が、山の斜面を崩す最大の敵だ。",
-    "startMs": 39999,
-    "endMs": 47359,
+    "text": "地球の自転は、潮の満ち引きなどの影響で、ほんのわずかずつ遅くなってきた。1700年前ともなれば、その積み重ねで、日食が見えた場所が、大きくずれてしまう。",
+    "startMs": 38740,
+    "endMs": 50548,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ライトによれば、インカの技術者たちは、建設の労力の50パーセント、もしかすると60パーセントを、地面の下に費やした。",
-    "startMs": 47839,
-    "endMs": 56713,
+    "text": "2010年、国立天文台の研究者が、この自転の遅れを考えに入れて、古代の日食を計算し直した。",
+    "startMs": 51028,
+    "endMs": 59071,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "中央の広場の下には、表面の土、砂利、そして砕いた石が、何層にも重ねられていた。降った雨を、すばやく地下にしみこませ、流すための仕組みだ。",
-    "startMs": 57193,
-    "endMs": 68831,
+    "text": "注目されたのは、247年と248年に起きた、2つの日食だ。",
+    "startMs": 59551,
+    "endMs": 65481,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "都市のまわりの段々畑も、ただの畑ではない。畑は、斜面の土をとどめ、水はけをよくし、地すべりを防ぐ役割も果たしていた。",
-    "startMs": 69311,
-    "endMs": 79145,
+    "text": "計算の結果、この2つの日食は、日本では皆既にはならなかった、と発表された。",
+    "startMs": 65961,
+    "endMs": 72041,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "石の壁には、雨水を逃がすための、たくさんの排水口が作られている。その数は、130ほどあると言われている。",
-    "startMs": 79625,
-    "endMs": 88063,
+    "text": "ところが、2012年。同じ研究者たちは、計算を見直した。",
+    "startMs": 72521,
+    "endMs": 77780,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "さらに、ブラジルの地質学者は、2019年の学会で、マチュピチュは、断層が交わる場所に、わざわざ建てられたという説を発表した。",
-    "startMs": 88543,
-    "endMs": 98537,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "割れ目の多い岩は、石材として切り出しやすく、水も集まりやすい。ただし、これはまだ、学会で発表された仮説の段階だ。",
-    "startMs": 99017,
-    "endMs": 108372,
+    "text": "自転の遅れの値によっては、247年の日食が、北九州で皆既だった可能性もある。結論は、揺れ動いている。",
+    "startMs": 78260,
+    "endMs": 87273,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 108852,
-    "endMs": 110281,
+    "startMs": 87753,
+    "endMs": 89183,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "半分正しい。",
-    "startMs": 110761,
-    "endMs": 111828,
+    "startMs": 89663,
+    "endMs": 90729,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "石組みの技は、確かにすばらしい。でも、マチュピチュを支えてきたのは、地面の下に隠された、排水の仕組みと段々畑だった。",
-    "startMs": 112308,
-    "endMs": 121695,
+    "text": "天岩戸を日食の記憶と考える研究者はいる。でも、どの日食なのかは、地球の自転の遅れの計算によって結論が変わり、まだ決まっていない。",
+    "startMs": 91209,
+    "endMs": 101780,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、ビンガムのあと、この遺跡の歴史に名を残したのは、どんな人々だったのか。",
-    "startMs": 122175,
-    "endMs": 127913,
+    "text": "では、なぜ247年と248年が、これほど注目されるのか。",
+    "startMs": 102260,
+    "endMs": 107956,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第9の手がかり マチュピチュと日本は、何のつながりもない？（4395フレーム）
-export const clue9JapanCaptions: Caption[] = [
+// 0:00 第7の手がかり 天照大神の正体は、卑弥呼だと証明された？（2859フレーム）
+export const clue7HimikoCaptions: Caption[] = [
   {
-    "text": "地球の裏側の、ペルーの山の上の遺跡。日本とのつながりなど、なさそうに思える。",
+    "text": "247年と248年。それは、ある女王が亡くなったとされる時期と重なる。",
     "startMs": 500,
-    "endMs": 6783,
+    "endMs": 6836,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "しかし、遺跡のふもとの、マチュピチュ村には、ひとりの日本人の名前が刻まれている。",
-    "startMs": 7263,
-    "endMs": 13225,
+    "text": "邪馬台国の女王、卑弥呼だ。",
+    "startMs": 7316,
+    "endMs": 9545,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "野内与吉。",
-    "startMs": 13705,
-    "endMs": 14548,
+    "text": "中国の歴史書、魏志倭人伝によれば、卑弥呼は、247年ごろ以降に亡くなったと読み取れる。",
+    "startMs": 10025,
+    "endMs": 17151,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1895年、福島県の大玉村に生まれた野内は、1917年ごろ、海を渡ってペルーへ向かった。",
-    "startMs": 15028,
-    "endMs": 23657,
+    "text": "太陽の女神、天照大神。鬼道で人々を治めた女王、卑弥呼。どちらも、神に仕える女性の支配者だ。",
+    "startMs": 17631,
+    "endMs": 26676,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "やがて、マチュピチュのふもとへ向かう鉄道の建設に関わったことがきっかけで、この谷に住みついた。",
-    "startMs": 24137,
-    "endMs": 30633,
+    "text": "卑弥呼が亡くなったころに、日食が起きた。それが、天照大神が岩戸に隠れた神話になったのではないか。",
+    "startMs": 27156,
+    "endMs": 34527,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1935年、野内は、村で初めての本格的な木の建物、ホテル・ノウチを建てた。",
-    "startMs": 31113,
-    "endMs": 38473,
+    "text": "天照大神と卑弥呼を結びつける考えは、1910年、東洋史学者の白鳥庫吉の論文にさかのぼる。",
+    "startMs": 35007,
+    "endMs": 43092,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1階は、交番と郵便局に無料で貸し、のちに2階も、村の役場や裁判所として提供した。",
-    "startMs": 38953,
-    "endMs": 46153,
+    "text": "その後も、日食の計算と結びつけて、卑弥呼が日食のために力を失った、とする説が唱えられてきた。",
+    "startMs": 43572,
+    "endMs": 50943,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "水道や電気を引き、村の暮らしの土台を作ったのも、野内だった。",
-    "startMs": 46633,
-    "endMs": 51359,
+    "text": "だが、この説には、大きな壁がある。",
+    "startMs": 51423,
+    "endMs": 54505,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして1948年。野内は、マチュピチュ村の、初代の村長になった。",
-    "startMs": 51839,
-    "endMs": 57951,
+    "text": "日本書紀や古事記には、卑弥呼という名前は出てこない。魏志倭人伝には、天照大神という名前は出てこない。",
+    "startMs": 54985,
+    "endMs": 62825,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "野内が、ふるさとの大玉村に帰ったのは、1968年。ペルーへ渡ってから、およそ50年ぶりのことだった。",
-    "startMs": 58431,
-    "endMs": 67167,
+    "text": "二人を結びつけているのは、時期や役割が似ているという、状況証拠だけなのだ。",
+    "startMs": 63305,
+    "endMs": 68809,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして翌年の1969年、ペルーで、その生涯を閉じた。",
-    "startMs": 67647,
-    "endMs": 72863,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2015年10月。野内のふるさと、大玉村と、マチュピチュ村は、友好都市になった。マチュピチュ村にとって、初めての友好都市だ。",
-    "startMs": 73343,
-    "endMs": 83700,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして、このつながりが、思いがけない形で、もうひとつの縁を生む。",
-    "startMs": 84180,
-    "endMs": 89257,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2011年。東日本大震災と、原発の事故。福島県の富岡町の人々は、町を離れて避難しなければならなかった。",
-    "startMs": 89737,
-    "endMs": 99359,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そのとき、いち早く町民を受け入れたのが、大玉村だった。",
-    "startMs": 99839,
-    "endMs": 104372,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "富岡町に本社のあった測量の会社、ふたば。社長は、そのときの恩を返したいと考えた。",
-    "startMs": 104852,
-    "endMs": 111583,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "大玉村の友好都市、マチュピチュ村のために、自分たちの技術を役立てられないか。",
-    "startMs": 112063,
-    "endMs": 117897,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2019年。ふたばは、JICA、国際協力機構の事業に採択され、マチュピチュでの3次元測量の調査を始めた。",
-    "startMs": 118377,
-    "endMs": 127455,
+    "text": "そして、その時期を支える日食の計算そのものが、まだ揺れ動いている。",
+    "startMs": 69289,
+    "endMs": 74345,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 127935,
-    "endMs": 129364,
+    "startMs": 74825,
+    "endMs": 76255,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 129844,
-    "endMs": 130505,
+    "startMs": 76735,
+    "endMs": 77396,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュ村の初代村長は、福島県出身の野内与吉だった。そのふるさととの縁が、福島の会社を、マチュピチュの調査へと導いた。",
-    "startMs": 130985,
-    "endMs": 140809,
+    "text": "天照大神と卑弥呼を結びつける説は、100年以上前からある。でも、二人が同じ人物だと示す直接の証拠はなく、証明はされていない。",
+    "startMs": 77876,
+    "endMs": 88372,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、その日本の技術は、マチュピチュで何を見つけたのか。",
-    "startMs": 141289,
-    "endMs": 145300,
+    "text": "では、岩戸の前で舞った神と、いまの神楽は、どうつながっているのか。",
+    "startMs": 88852,
+    "endMs": 94068,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第10の手がかり マチュピチュの全体像は、もう分かっている？（4940フレーム）
-export const clue10LidarCaptions: Caption[] = [
+// 0:00 第8の手がかり 天宇受売命の舞は、神楽の始まり？（2650フレーム）
+export const clue8UzumeCaptions: Caption[] = [
   {
-    "text": "マチュピチュは、1983年に世界遺産に登録された。毎日、何千人もの観光客が訪れる。",
+    "text": "岩戸の前で、天宇受売命が舞った。日本書紀は、その姿を、たくみに「わざおき」をした、と書いている。わざおきとは、人を楽しませる芸のことだ。",
     "startMs": 500,
-    "endMs": 8500,
+    "endMs": 12671,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "すべてが調べ尽くされた遺跡のように見える。",
-    "startMs": 8980,
-    "endMs": 11625,
+    "text": "この舞こそが、神楽の始まりだと、よく言われる。",
+    "startMs": 13151,
+    "endMs": 16841,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "しかし、遺跡のまわりの斜面は、深い森に覆われている。木々の下に、何が隠れているのか、人の目では見ることができなかった。",
-    "startMs": 12105,
-    "endMs": 21353,
+    "text": "高千穂の夜神楽にも、天宇受売命を演じる、鈿女の舞がある。",
+    "startMs": 17321,
+    "endMs": 22367,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2026年3月30日。JICAは、ペルー文化省と、福島のふたばによる調査の成果を発表した。",
-    "startMs": 21833,
-    "endMs": 30132,
+    "text": "優雅な動きの中に、ときおり、こっけいな仕草が入る。見ている人々から、笑いが起きる。",
+    "startMs": 22847,
+    "endMs": 29748,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "使われたのは、ドローンに積んだレーザーだ。空から地面に向かって、無数のレーザーを当て、はね返ってくる光から、地形の形を細かく測る。",
-    "startMs": 30612,
-    "endMs": 40713,
+    "text": "そして、手力雄の舞。力の神が、鈴と御幣を手に、岩戸の場所を探して、じっと耳を澄ませる。",
+    "startMs": 30228,
+    "endMs": 38100,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "木の葉のすき間を抜けて、地面まで届いた光だけを取り出せば、森をはぎ取ったあとの、地表の姿が浮かび上がる。遺跡に一切触れずに、調べることができるのだ。",
-    "startMs": 41193,
-    "endMs": 52393,
+    "text": "最後に、戸取の舞。手力雄の神が、岩戸をつかんで、力いっぱい取り払う。",
+    "startMs": 38580,
+    "endMs": 44873,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "その結果、遺跡の北東に広がる、アンデネス・オリエンタレスと呼ばれる大きな段々畑の群れの全体像が、初めて明らかになった。",
-    "startMs": 52873,
-    "endMs": 62089,
+    "text": "神話の中で神々が笑い、岩戸が開いたように、神楽宿でも人々が笑い、夜が明けていく。",
+    "startMs": 45353,
+    "endMs": 52329,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "さらに、まだ調査されていない遺跡の北側、月の神殿と呼ばれる場所の近くで、いくつもの「遺構の候補」が見つかった。",
-    "startMs": 62569,
-    "endMs": 71572,
+    "text": "国の観光庁の解説も、天宇受売命の舞を、神楽の起源と伝えている。",
+    "startMs": 52809,
+    "endMs": 58655,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "高さおよそ2.7メートルの、L字型の壁のような構造。",
-    "startMs": 72052,
-    "endMs": 76329,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "左右対称に並んだ、3段の段々畑。",
-    "startMs": 76809,
-    "endMs": 79999,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして、長さおよそ2メートルの、四角い石材。人の手で加工された可能性があり、その裏側には、空洞があることも確かめられた。",
-    "startMs": 80479,
-    "endMs": 90484,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ただし、これらはまだ、「候補」だ。本当に遺構なのかは、これから確かめる必要がある。",
-    "startMs": 90964,
-    "endMs": 98036,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "発見は、これだけではなかった。",
-    "startMs": 98516,
-    "endMs": 100767,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2026年8月。ペルー文化省は、マチュピチュの東、ウルバンバ川をはさんだ、マンドールの壁と呼ばれる遺跡の周辺で、新たな道が見つかったと発表した。",
-    "startMs": 101247,
-    "endMs": 112873,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ポーランドのワルシャワ大学などのチームが、やはりドローンのレーザーで調べたところ、スペイン人が来る前の道が、あわせて2.5キロメートル以上見つかった。",
-    "startMs": 113353,
-    "endMs": 123316,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そのうち、およそ1.2キロメートルの道は、ジグザグに折れ曲がる道筋など、インカの道の特徴と一致していた。",
-    "startMs": 123796,
-    "endMs": 131657,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "調査を監督したペルー文化省の考古学者は、道の向きから、儀式のための場所へ向かう道だった可能性があると語っている。",
-    "startMs": 132137,
-    "endMs": 140319,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "次の調査は、2027年に予定されていると報じられている。",
-    "startMs": 140799,
-    "endMs": 145215,
+    "text": "ただし、これは神話の中の話だ。実際の神楽が、いつ、どのように生まれたのかは、神話だけでは確かめられない。",
+    "startMs": 59135,
+    "endMs": 67732,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 145695,
-    "endMs": 147124,
+    "startMs": 68212,
+    "endMs": 69641,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "まちがい。",
-    "startMs": 147604,
-    "endMs": 148265,
+    "text": "半分正しい。",
+    "startMs": 70121,
+    "endMs": 71188,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2026年、ドローンのレーザー調査で、密林の下の段々畑の全体像や、新しい遺構の候補、そして2.5キロメートル以上の道が見つかった。マチュピチュの全体像は、いまも明らかになりつつある。",
-    "startMs": 148745,
-    "endMs": 163433,
+    "text": "天宇受売命の舞は、神楽の始まりとして語り継がれ、夜神楽でも演じられている。でも、それは神話の伝えで、実際の神楽の起源を示す証拠ではない。",
+    "startMs": 71668,
+    "endMs": 82943,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、この夜神楽は、これからも続いていくのか。",
+    "startMs": 83423,
+    "endMs": 87113,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 本当の物語（3662フレーム）
+// 0:00 第9の手がかり 高千穂の夜神楽は、消えかけている？（2456フレーム）
+export const clue9FutureCaptions: Caption[] = [
+  {
+    "text": "夜神楽を支えてきたのは、集落の人々だ。",
+    "startMs": 500,
+    "endMs": 3689,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "舞い手は、それぞれの集落の保存会に属し、子どものころから舞を覚えてきた。",
+    "startMs": 4169,
+    "endMs": 9641,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "いま、高千穂の夜神楽を守っている保存会は、31団体。舞い手は、およそ500人と報じられている。",
+    "startMs": 10121,
+    "endMs": 18260,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "しかし、過疎と高齢化が進み、舞い手は足りなくなっている。",
+    "startMs": 18740,
+    "endMs": 23049,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "高千穂町によれば、舞い手や村の役目を担う人の都合がつかず、夜通しの夜神楽を開けずに、昼に舞う日神楽に変えた集落もある。",
+    "startMs": 23529,
+    "endMs": 32489,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "それでも、新しい動きも生まれている。",
+    "startMs": 32969,
+    "endMs": 35796,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2022年には、町に移り住んだ女性たちが中心となって、新しい保存会が作られた。長く男性が舞ってきた神楽を、女性も学べるようにした。",
+    "startMs": 36276,
+    "endMs": 46932,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2026年の2月には、高千穂神社で、子どもたちが舞を披露する伝承の集いが開かれ、14の保存会から、およそ100人が参加した。",
+    "startMs": 47412,
+    "endMs": 57695,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "3月には、地元の高校の神楽保存会も、舞を奉納した。",
+    "startMs": 58175,
+    "endMs": 62921,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 63401,
+    "endMs": 64831,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "半分正しい。",
+    "startMs": 65311,
+    "endMs": 66377,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "舞い手は足りなくなり、昼に舞う集落も出てきた。でも、女性や子ども、高校生が加わり、夜神楽は形を変えながら受け継がれている。",
+    "startMs": 66857,
+    "endMs": 76617,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、この神楽を、世界はどう見ているのか。",
+    "startMs": 77097,
+    "endMs": 80639,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第10の手がかり 神楽は、もう世界遺産になった？（2077フレーム）
+export const clue10UnescoCaptions: Caption[] = [
+  {
+    "text": "2025年3月。全国の24の道と県の知事が集まり、神楽を受け継ぎ、盛り上げるための連合を作った。",
+    "startMs": 500,
+    "endMs": 8969,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして2025年11月28日。国の文化審議会は、「神楽」を、ユネスコの無形文化遺産に新しく提案する候補に選んだ。",
+    "startMs": 9449,
+    "endMs": 19892,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "報道によれば、対象は、全国の25の都道県の、40件の神楽だ。",
+    "startMs": 20372,
+    "endMs": 26239,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "提案書は、2026年の3月末までに、ユネスコに提出される予定とされた。",
+    "startMs": 26719,
+    "endMs": 32649,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "審査が行われるのは、2028年になる見込みだ。",
+    "startMs": 33129,
+    "endMs": 36863,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "つまり、神楽はまだ、無形文化遺産に登録されたわけではない。",
+    "startMs": 37343,
+    "endMs": 42079,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2026年10月には、知事たちの連合が、担い手を育てるための支援を、国に求めた。",
+    "startMs": 42559,
+    "endMs": 49471,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "世界に認められるかどうか。その答えが出るのは、2年後だ。",
+    "startMs": 49951,
+    "endMs": 54111,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 54591,
+    "endMs": 56020,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "まちがい。",
+    "startMs": 56500,
+    "endMs": 57161,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "神楽は、2025年にユネスコ無形文化遺産への提案候補に選ばれた。でも、審査は2028年の見込みで、まだ登録されてはいない。",
+    "startMs": 57641,
+    "endMs": 68009,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 本当の物語（2530フレーム）
 export const rootsStoryCaptions: Caption[] = [
   {
-    "text": "では、手がかりをつないで、マチュピチュの本当の物語をたどってみよう。",
+    "text": "では、手がかりをつないで、天岩戸の本当の物語をたどってみよう。",
     "startMs": 500,
-    "endMs": 5439,
+    "endMs": 5556,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "15世紀のはじめ。アンデスのクスコで、ひとりの王が力をつけ始めた。パチャクテクだ。",
-    "startMs": 5919,
-    "endMs": 11903,
+    "text": "古い時代、人々は、太陽が欠け、空が暗くなる恐ろしい出来事を、何度も目にしてきたのかもしれない。",
+    "startMs": 6036,
+    "endMs": 13791,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "王は、ウルバンバ川の谷を自分の領地とし、そのいちばん奥の尾根の上に、離宮を築かせた。",
-    "startMs": 12383,
-    "endMs": 19337,
+    "text": "光が消え、また戻ってくる。その記憶は、太陽の女神が岩屋に隠れ、神々の知恵と笑いによって、再び外へ出てくる物語として語られた。",
+    "startMs": 14271,
+    "endMs": 25097,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "年間2000ミリの雨が降る、急な斜面。技術者たちは、まず地面の下に、排水の仕組みを築いた。その上に、段々畑と、石の建物を積み上げた。",
-    "startMs": 19817,
-    "endMs": 31615,
+    "text": "8世紀、その物語は、古事記と日本書紀に書き記された。舞台は、神々の世界、高天原だった。",
+    "startMs": 25577,
+    "endMs": 33908,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "都市の名は、おそらく、ワイナピチュ。",
-    "startMs": 32095,
-    "endMs": 34921,
+    "text": "やがて人々は、神話の場面を、自分たちの土地に重ねていった。",
+    "startMs": 34388,
+    "endMs": 38943,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そこには、帝国の海岸から、高地から、そしてアマゾンの密林から、一人ずつ集められた人々が暮らし、王と、その一族に仕えた。",
-    "startMs": 35401,
-    "endMs": 45513,
+    "text": "高千穂では、岩戸川の向こうの洞窟が、天岩戸として拝まれるようになった。天孫降臨の伝えも、この山里を神話の里にした。",
+    "startMs": 39423,
+    "endMs": 49001,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1420年ごろから、およそ100年。山の上の離宮には、人の暮らしが続いた。",
-    "startMs": 45993,
-    "endMs": 52436,
+    "text": "そして、およそ800年前には、その神話を題材にした神楽が、集落で舞われていた。",
+    "startMs": 49481,
+    "endMs": 55775,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "やがて、スペイン人がやって来る。帝国は崩れ、王家の支配も失われた。",
-    "startMs": 52916,
-    "endMs": 58591,
+    "text": "冬の夜、神楽宿に神を迎え、一晩中舞い続ける。夜が明けるころ、岩戸が開き、太陽が戻ってくる。",
+    "startMs": 56255,
+    "endMs": 64937,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、いつしか、離宮から人の姿が消えた。",
-    "startMs": 59071,
-    "endMs": 62687,
+    "text": "天岩戸の物語は、文字の中だけではなく、舞として、人々の体の中で受け継がれてきたのだ。",
+    "startMs": 65417,
+    "endMs": 72361,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ふもとの役人の書類には、ピチュという名前だけが残った。",
-    "startMs": 63167,
-    "endMs": 66985,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "それから数百年。斜面の段々畑では、地元の農民が、インカの畑を耕し続けた。1902年には、リサラガが、壁に名前を書き残した。",
-    "startMs": 67465,
-    "endMs": 78836,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "1911年。ビンガムがやって来て、この都市を世界に知らせた。",
-    "startMs": 79316,
-    "endMs": 84425,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして20世紀。ふもとの村では、福島から来たひとりの日本人が、ホテルを建て、水道と電気を引き、初代の村長になった。",
-    "startMs": 84905,
-    "endMs": 94452,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "およそ100年後、その縁が、福島の会社を呼び寄せた。日本のレーザーは、密林の下に、まだ誰も知らない姿を見つけ出した。",
-    "startMs": 94932,
-    "endMs": 104212,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "マチュピチュは、ひとりの探検家が見つけた、失われた都市ではない。",
-    "startMs": 104692,
-    "endMs": 109119,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "王と、帝国中から集められた人々と、そこに住み続けた農民と、そしてそれを守り、調べ続ける人々が、500年以上かけて紡いできた都市なのだ。",
-    "startMs": 109599,
-    "endMs": 120852,
+    "text": "その舞はいま、担い手不足という新しい闇に直面している。それでも、女性や子どもたちが、新しい手力雄となって、岩戸を開け続けている。",
+    "startMs": 72841,
+    "endMs": 83113,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 まだ解けていない謎（2821フレーム）
+// 0:00 まだ解けていない謎（1572フレーム）
 export const unsolvedMysteryCaptions: Caption[] = [
   {
-    "text": "それでも、マチュピチュには、まだ解けていない謎が残っている。",
+    "text": "それでも、天岩戸には、まだ解けていない謎が残っている。",
     "startMs": 500,
-    "endMs": 4607,
+    "endMs": 4767,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "まず、この都市は、なぜ捨てられたのか。",
-    "startMs": 5087,
-    "endMs": 8084,
+    "text": "まず、天岩戸の神話のもとになった出来事は、本当にあったのか。",
+    "startMs": 5247,
+    "endMs": 10015,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "骨の年代は、1530年ごろまで人が住んでいたことを示している。しかし、その後、いつ、どのようにして人々が去ったのかは、分かっていない。",
-    "startMs": 8564,
-    "endMs": 19497,
+    "text": "日食の記憶だとすれば、それはいつの日食なのか。地球の自転の遅れをどう見積もるかで、答えは変わってしまう。",
+    "startMs": 10495,
+    "endMs": 18324,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "スペインの征服で、王家の支配が失われたからなのか。それとも、ヨーロッパから持ちこまれた病気が広がったからなのか。いくつもの説があるが、決め手はない。",
-    "startMs": 19977,
-    "endMs": 30591,
+    "text": "そして、天孫降臨の地は、宮崎の高千穂なのか、霧島の高千穂峰なのか。",
+    "startMs": 18804,
+    "endMs": 24852,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、密林の下で見つかった、L字型の壁や、四角い石材の正体。",
-    "startMs": 31071,
-    "endMs": 36809,
+    "text": "神話の里と呼ばれる二つの土地は、いまも並び立っている。",
+    "startMs": 25332,
+    "endMs": 29065,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "月の神殿の近くで、誰が、何のために、それを造ったのか。それは、これからの調査にかかっている。",
-    "startMs": 37289,
-    "endMs": 44969,
+    "text": "さらに、神楽は、2028年に、ユネスコの無形文化遺産として認められるのか。",
+    "startMs": 29545,
+    "endMs": 35807,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マンドールの壁の周辺で見つかった道は、どこへ、何のために続いていたのか。",
-    "startMs": 45449,
-    "endMs": 51017,
+    "text": "もし認められたとしても、舞い手がいなくなれば、神楽は続かない。",
+    "startMs": 36287,
+    "endMs": 40884,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "もうひとつ、いま問われている謎がある。",
-    "startMs": 51497,
-    "endMs": 54015,
+    "text": "800年以上、夜を徹して舞われてきた神楽を、次の時代へ、どうつないでいくのか。",
+    "startMs": 41364,
+    "endMs": 47615,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "この遺跡を、どうやって未来に残すのか。",
-    "startMs": 54495,
-    "endMs": 57289,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2026年、マチュピチュに入れる人の数は、多い時期で1日5600人までと決められている。",
-    "startMs": 57769,
-    "endMs": 64745,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2025年9月には、遺跡へのバスをめぐる住民の抗議で線路がふさがれ、多くの観光客が足止めされた。",
-    "startMs": 65225,
-    "endMs": 73044,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "新・世界七不思議を選んだ財団は、このままでは、その信頼を失うおそれがあると警告した。",
-    "startMs": 73524,
-    "endMs": 80521,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "世界中の人が見たいと願う遺跡を、どう守り、どう伝えていくのか。",
-    "startMs": 81001,
-    "endMs": 85908,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "日本の技術が残した3次元のデータは、その答えを探すための、新しい手がかりにもなっている。",
-    "startMs": 86388,
-    "endMs": 92831,
+    "text": "その答えは、いまも高千穂の夜の中にある。",
+    "startMs": 48095,
+    "endMs": 51167,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 まとめ（2834フレーム）
+// 0:00 まとめ（2632フレーム）
 export const summaryCaptions: Caption[] = [
   {
     "text": "では、今夜の判決を振り返ろう。",
@@ -1642,93 +1299,93 @@ export const summaryCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "マチュピチュを発見したのは、ビンガムではない。地元の人々が住み、1902年の落書きも残っていた。まちがい。",
+    "text": "夜神楽は観光用のショーではなく、集落の神々にささげる神事だ。まちがい。",
     "startMs": 3572,
-    "endMs": 11775,
+    "endMs": 9172,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュという名前は、もともと山の名前で、都市は「ワイナピチュ」と呼ばれていた可能性が高い。まちがい。",
-    "startMs": 12255,
-    "endMs": 20447,
+    "text": "夜神楽は神話を題材にした舞だが、たどれる歴史は800年ほど。まちがい。",
+    "startMs": 9652,
+    "endMs": 15039,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュは、要塞ではなく、パチャクテク王の離宮だったと考えられている。まちがい。",
-    "startMs": 20927,
-    "endMs": 26943,
+    "text": "高千穂に天岩戸とされる洞窟はあるが、記紀は高天原の話として書き、候補地はほかにもある。半分正しい。",
+    "startMs": 15519,
+    "endMs": 23711,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "骨の年代は1420年ごろまでさかのぼり、文書が伝える年代より早かった。半分正しい。",
-    "startMs": 27423,
-    "endMs": 34495,
+    "text": "天岩戸神社の西本宮は、本殿を持たず、洞窟そのものを拝む。正しい。",
+    "startMs": 24191,
+    "endMs": 30175,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "太陽に仕える女性たちの都市ではなく、男性も女性も、子どももいた。まちがい。",
-    "startMs": 34975,
-    "endMs": 41087,
+    "text": "天孫降臨の地は、宮崎の高千穂と霧島の高千穂峰の両方に根拠がある。半分正しい。",
+    "startMs": 30655,
+    "endMs": 37417,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "住人は地元の人々ではなく、帝国の各地から集められた人々だった。まちがい。",
-    "startMs": 41567,
-    "endMs": 47380,
+    "text": "天岩戸を日食の記憶とする説はあるが、どの日食かは決まっていない。半分正しい。",
+    "startMs": 37897,
+    "endMs": 44041,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "スペイン人が壊した跡はないが、ピチュの名は植民地の文書に残っていた。半分正しい。",
-    "startMs": 47860,
-    "endMs": 53972,
+    "text": "天照大神と卑弥呼が同じ人物だという証明は、ない。まちがい。",
+    "startMs": 44521,
+    "endMs": 49908,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "崩れない理由は、石組みだけでなく、地面の下の排水の仕組みにあった。半分正しい。",
-    "startMs": 54452,
-    "endMs": 60799,
+    "text": "天宇受売命の舞は神楽の始まりとして語り継がれているが、それは神話の伝えだ。半分正しい。",
+    "startMs": 50388,
+    "endMs": 57289,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュ村の初代村長は、福島出身の野内与吉だった。まちがい。",
-    "startMs": 61279,
-    "endMs": 66377,
+    "text": "夜神楽は担い手不足に直面しながらも、形を変えて受け継がれている。半分正しい。",
+    "startMs": 57769,
+    "endMs": 63860,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2026年、日本のレーザーが、密林の下の新しい姿を見つけた。全体像は、いまも明らかになりつつある。まちがい。",
-    "startMs": 66857,
-    "endMs": 76276,
+    "text": "神楽はユネスコ無形文化遺産の提案候補になったが、まだ登録されていない。まちがい。",
+    "startMs": 64340,
+    "endMs": 70505,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "雲の上の石の都市は、伝説の隠れ家ではなかった。",
-    "startMs": 76756,
-    "endMs": 80319,
+    "text": "太陽が隠れた神話は、文字の中だけでなく、舞として、人々の体の中に生き続けてきた。",
+    "startMs": 70985,
+    "endMs": 77599,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "王の離宮として造られ、帝国中から集められた人々が暮らし、そして今も、新しい姿を見せ続けている。",
-    "startMs": 80799,
-    "endMs": 88617,
+    "text": "そして今年も、高千穂の夜に、岩戸が開かれる。",
+    "startMs": 78079,
+    "endMs": 81887,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "本当の話は、作り話に負けないくらい、面白い。",
-    "startMs": 89097,
-    "endMs": 93236,
+    "startMs": 82367,
+    "endMs": 86505,
     "timestampMs": null,
     "confidence": null
   }

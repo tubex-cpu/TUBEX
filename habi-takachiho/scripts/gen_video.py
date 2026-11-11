@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parent.parent
 ids = eval(re.search(r'IDS = (\[.*?\])', (ROOT / 'scripts/build-voice.py').read_text(), re.S).group(1))
 heads = [l[5:] for l in (ROOT / 'scripts/script.txt').read_text().splitlines() if l.startswith('0:00 ')]
 assert len(ids) == len(heads), (len(ids), len(heads))
-MID, LATE = 'Clue5Virgins', 'Clue9Japan'
+MID, LATE = 'Clue5Descent', 'Clue9Future'
 
 imp = '\n'.join(f"import {{{s}}} from './scenes/{s}';" for s in sorted(ids))
 seq = []
@@ -44,9 +44,9 @@ export const HabiTakachihoVideo = () => {{
 			<TransitionSeries>
 {chr(10).join(seq)}
 			</TransitionSeries>
-			<Audio name="BGM 前半「雲の上の都市」" src={{staticFile('bgm/bgm1-kumo.mp3')}} durationInFrames={{midStart + fps}} volume={{fadeVolume(midStart + fps, fps)}} premountFor={{fps}} />
-			<Audio name="BGM 中盤「骨が語る」" src={{staticFile('bgm/bgm2-hone.mp3')}} from={{midStart - fps}} durationInFrames={{lateStart - midStart + 2 * fps}} volume={{fadeVolume(lateStart - midStart + 2 * fps, fps)}} premountFor={{fps}} />
-			<Audio name="BGM 後半「密林の下」" src={{staticFile('bgm/bgm3-mori.mp3')}} from={{lateStart - fps}} durationInFrames={{durationInFrames - lateStart + fps}} volume={{fadeVolume(durationInFrames - lateStart + fps, fps)}} premountFor={{fps}} />
+			<Audio name="BGM 前半「夜の神楽宿」" src={{staticFile('bgm/bgm1-kumo.mp3')}} durationInFrames={{midStart + fps}} volume={{fadeVolume(midStart + fps, fps)}} premountFor={{fps}} />
+			<Audio name="BGM 中盤「隠れた太陽」" src={{staticFile('bgm/bgm2-hone.mp3')}} from={{midStart - fps}} durationInFrames={{lateStart - midStart + 2 * fps}} volume={{fadeVolume(lateStart - midStart + 2 * fps, fps)}} premountFor={{fps}} />
+			<Audio name="BGM 後半「夜明けの舞」" src={{staticFile('bgm/bgm3-mori.mp3')}} from={{lateStart - fps}} durationInFrames={{durationInFrames - lateStart + fps}} volume={{fadeVolume(durationInFrames - lateStart + fps, fps)}} premountFor={{fps}} />
 		</>
 	);
 }};

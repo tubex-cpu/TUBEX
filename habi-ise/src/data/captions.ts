@@ -1,95 +1,81 @@
 // scripts/build-voice.py で自動生成。手で編集しないこと。
 import type {Caption} from '@remotion/captions';
 
-// 0:00 謎の先出し（2708フレーム）
+// 0:00 謎の先出し（2430フレーム）
 export const introCaptions: Caption[] = [
   {
-    "text": "南米ペルー。アンデスの山の上、標高およそ2430メートル。",
+    "text": "2026年12月22日。冬至。一年でいちばん、昼が短い日。",
     "startMs": 500,
-    "endMs": 5823,
+    "endMs": 6900,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "深い谷にはさまれた尾根の上に、石の都市が眠っている。",
-    "startMs": 6303,
-    "endMs": 10111,
+    "text": "朝7時半ごろ。三重県の伊勢神宮、内宮の入り口にかかる宇治橋。その大鳥居の真ん中から、太陽が昇る。",
+    "startMs": 7380,
+    "endMs": 15903,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュ。誰もが一度は写真で見たことのある、世界で最も有名な遺跡のひとつだ。",
-    "startMs": 10591,
-    "endMs": 16564,
+    "text": "この光景を見ようと、冬の夜明け前から、多くの人がこの橋の前に集まる。",
+    "startMs": 16383,
+    "endMs": 21844,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "だが、この都市について、私たちが知っていると思っていることの多くは、ここ数年で次々に書きかえられている。",
-    "startMs": 17044,
-    "endMs": 24745,
+    "text": "伊勢神宮の内宮にまつられているのは、太陽の神、天照大神。そして、その御神体とされるのが、三種の神器のひとつ、八咫鏡だ。",
+    "startMs": 22324,
+    "endMs": 33140,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1911年、アメリカの探検家が「発見した」とされてきたこの遺跡。ところが、その探検家より前に、壁に名前を書き残していた人物がいた。",
-    "startMs": 25225,
-    "endMs": 36745,
+    "text": "その鏡は、天皇でさえ見ることができない、とも言われている。",
+    "startMs": 33620,
+    "endMs": 38089,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "私たちがずっと呼んできた「マチュピチュ」という名前。それは、この都市の本当の名前ではなかったかもしれない。",
-    "startMs": 37225,
-    "endMs": 45001,
+    "text": "三種の神器のもうひとつ、草薙剣。日本書紀には、この剣が、天皇の病の原因として占われた、という記録が残っている。",
+    "startMs": 38569,
+    "endMs": 48500,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、ここに住んでいた人々。骨に残る遺伝子を調べると、思いもよらない姿が浮かび上がってきた。",
-    "startMs": 45481,
-    "endMs": 52756,
+    "text": "そしてもうひとつ、壇ノ浦の海に沈んだとされる剣の謎。",
+    "startMs": 48980,
+    "endMs": 52948,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "さらに、2026年の3月。この遺跡を覆う密林の下を、日本の技術が初めて見通した。",
-    "startMs": 53236,
-    "endMs": 60361,
+    "text": "いま、伊勢では、20年に一度の大事業が動き出している。2025年、木曽の山で、八咫鏡を納める器になる、一本のヒノキが伐り出された。",
+    "startMs": 53428,
+    "endMs": 64745,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "それを成しとげたのは、福島県の、ある小さな会社だった。",
-    "startMs": 60841,
-    "endMs": 65023,
+    "text": "1300年前の歴史書の記録と、国立天文台の暦の計算、そして2026年の遷宮の現場。",
+    "startMs": 65225,
+    "endMs": 73097,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "なぜ、福島の会社が、地球の裏側の遺跡を調べたのか。そこには、100年以上前から続く、ひとりの日本人との不思議な縁があった。",
-    "startMs": 65503,
-    "endMs": 75657,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ドローンに積んだレーザー。骨の年代を測る放射性炭素。そして、遺伝子の解析。",
-    "startMs": 76137,
-    "endMs": 82495,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "最新の科学が導き出したのは、私たちの知らなかった、もうひとつのマチュピチュの姿だった。",
-    "startMs": 82975,
-    "endMs": 89055,
+    "text": "それらが導き出したのは、三種の神器をめぐる、私たちの知らなかった本当の姿だった。",
+    "startMs": 73577,
+    "endMs": 79796,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 ハビ判事登場（850フレーム）
+// 0:00 ハビ判事登場（802フレーム）
 export const judgeEntranceCaptions: Caption[] = [
   {
     "text": "こんばんは。閉園後の法廷にようこそ。ハビ判事です。",
@@ -99,1540 +85,1088 @@ export const judgeEntranceCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "今夜は、アンデスの山の上に眠る、天空の都市に挑む。",
+    "text": "今夜は、冬至の伊勢神宮と、三種の神器の謎に挑む。",
     "startMs": 5097,
-    "endMs": 9343,
+    "endMs": 9492,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "今夜の問いは、これだ。",
-    "startMs": 9823,
-    "endMs": 11583,
+    "startMs": 9972,
+    "endMs": 11732,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュは、誰が、何のために造り、そこには誰が暮らしていたのか。",
-    "startMs": 12063,
-    "endMs": 17204,
+    "text": "三種の神器は、いま、どこにあり、何を守ってきたのか。",
+    "startMs": 12212,
+    "endMs": 16809,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "新しい証拠をもとに、手がかりを、ひとつずつたどっていく。",
-    "startMs": 17684,
-    "endMs": 21961,
+    "text": "記録と証拠をもとに、手がかりを、ひとつずつたどっていく。",
+    "startMs": 17289,
+    "endMs": 21503,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "最初の手がかりは、この遺跡を世界に知らせた、ひとりの探検家だ。",
-    "startMs": 22441,
-    "endMs": 27113,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第1の手がかり マチュピチュを発見したのは、ビンガム？（4670フレーム）
-export const clue1BinghamCaptions: Caption[] = [
-  {
-    "text": "1911年7月24日。アメリカのイエール大学で講師をしていた、ハイラム・ビンガムという人物が、この遺跡にたどり着いた。",
-    "startMs": 500,
-    "endMs": 10292,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ビンガムが探していたのは、マチュピチュではなかった。スペインに追われたインカの人々が、最後に立てこもったとされる都市、ビルカバンバだ。",
-    "startMs": 10772,
-    "endMs": 19679,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ウルバンバ川の谷を進んでいたビンガムは、メルチョル・アルテアガという地元の農民から、山の上に遺跡があると聞いた。",
-    "startMs": 20159,
-    "endMs": 28127,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ビンガムは、案内のお礼として、1ソルを払ったという。ビンガム自身の本によれば、当時の日当の数倍にあたる額だ。",
-    "startMs": 28607,
-    "endMs": 37097,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "急な斜面を登りきると、そこには、すでに人が住んでいた。リチャルテ家とアルバレス家という、ふたつの農家が、インカの段々畑を耕して暮らしていたのだ。",
-    "startMs": 37577,
-    "endMs": 48169,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "遺跡の中心まで案内したのは、パブリートと呼ばれる、11歳ほどの少年だったと伝えられている。",
-    "startMs": 48649,
-    "endMs": 55337,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして、遺跡の中の壁には、炭で書かれた文字があった。",
-    "startMs": 55817,
-    "endMs": 59903,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "「リサラガ　1902年」。",
-    "startMs": 60383,
-    "endMs": 62473,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ビンガムより9年も前に、アグスティン・リサラガという地元の農民が、ここを訪れていたのだ。",
-    "startMs": 62953,
-    "endMs": 69620,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ビンガム自身も、リサラガがマチュピチュの発見者だという意味のことを、日記に書き残したと伝えられている。",
-    "startMs": 70100,
-    "endMs": 76873,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "さらに古い記録もある。1874年に作られた地図には、すでに、マチュピチュとワイナピチュという、ふたつの山の名前が書きこまれていた。",
-    "startMs": 77353,
-    "endMs": 87039,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、ビンガムは何をしたのか。",
-    "startMs": 87519,
-    "endMs": 89791,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "1913年4月。アメリカの雑誌、ナショナルジオグラフィックは、1冊まるごとを、この遺跡の特集にあてた。",
-    "startMs": 90271,
-    "endMs": 98793,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "およそ250枚の写真が、雲の上の石の都市を、初めて世界中の人々に見せた。",
-    "startMs": 99273,
-    "endMs": 105535,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ビンガムは、遺跡を見つけたのではない。遺跡を、世界に知らせたのだ。",
-    "startMs": 106015,
-    "endMs": 111135,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ビンガムはこのとき、多くの出土品をアメリカに持ち帰った。ペルーは長いあいだ返還を求め、2010年に、イエール大学との合意が結ばれた。",
-    "startMs": 111615,
-    "endMs": 121652,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ペルー側の数え方では、4万6000点あまり。破片も含めた品々が、2011年から順に、クスコへと帰っていった。",
-    "startMs": 122132,
-    "endMs": 131188,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 131668,
-    "endMs": 133097,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "まちがい。",
-    "startMs": 133577,
-    "endMs": 134239,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "マチュピチュには、ビンガムが来る前から、地元の人々が住み、畑を耕していた。壁には1902年の名前も残っていた。ビンガムは発見者ではなく、世界に知らせた人物だ。",
-    "startMs": 134719,
-    "endMs": 147529,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、ビンガムが聞いた「マチュピチュ」という名前は、この都市の本当の名前だったのか。",
-    "startMs": 148009,
-    "endMs": 154452,
+    "text": "最初の手がかりは、冬至の朝の、宇治橋だ。",
+    "startMs": 21983,
+    "endMs": 25524,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第2の手がかり マチュピチュは、インカ時代からの名前？（3701フレーム）
-export const clue2NameCaptions: Caption[] = [
+// 0:00 第1の手がかり 冬至の朝日が大鳥居の真ん中から昇るように、宇治橋は作られた？（3249フレーム）
+export const clue1SolsticeCaptions: Caption[] = [
   {
-    "text": "マチュピチュとは、現地の言葉、ケチュア語で、「年老いた峰」という意味だと言われている。",
+    "text": "国立天文台の計算によれば、2026年の冬至は、12月22日。太陽がもっとも南に寄る瞬間は、朝の5時50分だ。",
     "startMs": 500,
-    "endMs": 6772,
+    "endMs": 10868,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、遺跡の向こうにそびえる、とがった山が、ワイナピチュ。「若い峰」という意味だ。",
-    "startMs": 7252,
-    "endMs": 14143,
+    "text": "伊勢の日の出は、7時前。ところが、宇治橋の正面には、島路山という山がある。",
+    "startMs": 11348,
+    "endMs": 17929,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2022年。ペルー文化省の歴史家、ドナト・アマド・ゴンサレスと、アメリカのイリノイ大学の考古学者、ブライアン・バウアーが、この名前を調べ直した論文を発表した。",
-    "startMs": 14623,
-    "endMs": 28276,
+    "text": "山の向こうから朝日が顔を出すのは、7時半ごろになる。",
+    "startMs": 18409,
+    "endMs": 22207,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "二人が調べたのは、3種類の史料だ。ビンガムの野帳。19世紀の地図。そして、16世紀から17世紀のスペイン植民地時代の文書。",
-    "startMs": 28756,
-    "endMs": 39263,
+    "text": "宇治橋は、五十鈴川にかかる、長さおよそ102メートルの木の橋だ。その両端に、高さ7メートルあまりの大鳥居が立っている。",
+    "startMs": 22687,
+    "endMs": 31636,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "まず、ビンガムの野帳。そこには、ビンガムが、この遺跡の名前に確信を持てずにいたことが記されていた。",
-    "startMs": 39743,
-    "endMs": 47391,
+    "text": "冬至の前後のかぎられた時期、朝日は、この大鳥居のほぼ真ん中から昇る。",
+    "startMs": 32116,
+    "endMs": 37300,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュという名前は、案内人のアルテアガから聞いたものだった。",
-    "startMs": 47871,
-    "endMs": 52009,
+    "text": "では、宇治橋は、冬至の朝日に合わせて作られたのか。",
+    "startMs": 37780,
+    "endMs": 41908,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "次に、古い地図。1880年にフランスで出版された探検記の地図には、「ワイナピチュ」という名前が、遺跡のあたりに書かれていた。",
-    "startMs": 52489,
-    "endMs": 62719,
+    "text": "そう紹介する観光の記事もある。だが、設計した人がそれを意図したことを示す記録は、見つかっていない。",
+    "startMs": 42388,
+    "endMs": 49823,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、決め手になったのが、1588年の記録だ。",
-    "startMs": 63199,
-    "endMs": 67593,
+    "text": "宇治橋は、五十鈴川に対して、ほぼ直角にかかっている。橋の向きは、川の流れと地形で決まった、と考えることもできる。",
+    "startMs": 50303,
+    "endMs": 59359,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そこには、住民たちが、「ワイナピチュの町」に戻って、自分たちの昔からの信仰に戻りたいと願った、と書かれていた。",
-    "startMs": 68073,
-    "endMs": 76799,
+    "text": "そして、この大鳥居には、もうひとつの秘密がある。",
+    "startMs": 59839,
+    "endMs": 63487,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "二人の結論は、こうだ。インカの時代、この都市は、「ピチュ」、あるいは、より可能性が高いのは、「ワイナピチュ」と呼ばれていた。",
-    "startMs": 77279,
-    "endMs": 87348,
+    "text": "外側の鳥居は、外宮の正殿の、内側の鳥居は、内宮の正殿の、屋根を支えていた太い柱を削り直して作られる。",
+    "startMs": 63967,
+    "endMs": 73023,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュは、もともとは、遺跡のそばの山の名前だったと考えられる。",
-    "startMs": 87828,
-    "endMs": 92607,
+    "text": "20年に一度、神殿が建て替えられると、その古い柱が、鳥居として、もう一度、参拝者を迎えるのだ。",
+    "startMs": 73503,
+    "endMs": 81876,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ただし、バウアーは、名前を変えるべきだとは言っていない。マチュピチュという名前は、すでに世界中で知られているからだ。",
-    "startMs": 93087,
-    "endMs": 101289,
+    "text": "役目を終えた鳥居は、さらに、桑名の七里の渡しと、亀山市の関の追分へ運ばれて、鳥居として立つ。",
+    "startMs": 82356,
+    "endMs": 90260,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 101769,
-    "endMs": 103199,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "まちがい。",
-    "startMs": 103679,
-    "endMs": 104340,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "「マチュピチュ」は、遺跡のそばの山の名前だった。インカの時代、この都市は「ワイナピチュ」、または「ピチュ」と呼ばれていた可能性が高い。",
-    "startMs": 104820,
-    "endMs": 115711,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、この都市は、何のために造られたのか。ビンガムは、ある答えを信じていた。",
-    "startMs": 116191,
-    "endMs": 122153,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第3の手がかり マチュピチュは、インカ最後の要塞だった？（3505フレーム）
-export const clue3FortressCaptions: Caption[] = [
-  {
-    "text": "ビンガムが探していたのは、インカ最後の拠点、ビルカバンバだった。",
-    "startMs": 500,
-    "endMs": 5119,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "切り立った崖に囲まれた尾根。都市を区切る壁。見張りに適した高い場所。",
-    "startMs": 5599,
-    "endMs": 10516,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ビンガムは、マチュピチュこそが、スペインと戦ったインカの人々が、最後に立てこもった都市だと考えた。そして、その考えを長く持ち続けた。",
-    "startMs": 10996,
-    "endMs": 20713,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "しかし、その後の研究で、見方は大きく変わった。",
-    "startMs": 21193,
-    "endMs": 25044,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ビルカバンバは、マチュピチュよりもずっと西の、密林の奥にある、エスピリトゥ・パンパという遺跡だったと考えられている。",
-    "startMs": 25524,
-    "endMs": 33780,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして、マチュピチュで、大きな戦いがあったことを示す証拠は、ほとんど見つかっていない。",
-    "startMs": 34260,
-    "endMs": 40255,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、マチュピチュは何だったのか。",
-    "startMs": 40735,
-    "endMs": 42996,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "手がかりになったのは、1990年に、アメリカの考古学者、ジョン・ロウが発表した研究だ。",
-    "startMs": 43476,
-    "endMs": 51103,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ロウは、16世紀の文書を調べた。そこには、この谷の畑の一覧があり、その一部が、インカ王パチャクテクのものだったと記されていた。",
-    "startMs": 51583,
-    "endMs": 61460,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "パチャクテクは、クスコの小さな国を、南米最大の帝国へと広げた王だ。",
-    "startMs": 61940,
-    "endMs": 67433,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ロウは、山の上の都市も、この王の領地に含まれていたと考えた。",
-    "startMs": 67913,
-    "endMs": 72660,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "つまり、マチュピチュは、パチャクテク王の、離宮だった。",
-    "startMs": 73140,
-    "endMs": 77343,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "王と、その一族が、都クスコを離れて過ごすための、山の上の宮殿。そう考えるのが、いまの研究でもっとも有力な説だ。",
-    "startMs": 77823,
-    "endMs": 87679,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ただし、別の考えもある。イタリアの研究者は、太陽や山をまつる、巡礼の地として計画された、という説を唱えている。",
-    "startMs": 88159,
-    "endMs": 97471,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 97951,
-    "endMs": 99380,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "まちがい。",
-    "startMs": 99860,
-    "endMs": 100521,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "マチュピチュで大きな戦いがあった証拠は、ほとんどない。インカ最後の拠点は、別の場所だった。もっとも有力なのは、パチャクテク王の離宮だったという説だ。",
-    "startMs": 101001,
-    "endMs": 111625,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、その離宮が建てられたのは、いつだったのか。",
-    "startMs": 112105,
-    "endMs": 115625,
-    "timestampMs": null,
-    "confidence": null
-  }
-];
-
-// 0:00 第4の手がかり マチュピチュが建てられたのは、パチャクテクが王になったあと？（3246フレーム）
-export const clue4DateCaptions: Caption[] = [
-  {
-    "text": "これまでの教科書的な説明は、こうだった。",
-    "startMs": 500,
-    "endMs": 3561,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "パチャクテクが王になったのは、1438年。そのあと、1440年代以降に、マチュピチュが建てられた。",
-    "startMs": 4041,
-    "endMs": 12585,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この年代は、スペイン人が、征服したあとに書き残した記録をもとにしている。",
-    "startMs": 13065,
-    "endMs": 18281,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "しかし、2021年8月。イエール大学のリチャード・バーガーたちが、別の方法で、この年代を確かめた。",
-    "startMs": 18761,
-    "endMs": 27593,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "使ったのは、マチュピチュの4か所の墓から見つかった、26人の骨と歯だ。",
-    "startMs": 28073,
-    "endMs": 33183,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "これらは、1912年にビンガムが持ち帰り、イエール大学の博物館で保管されていたものだった。",
-    "startMs": 33663,
-    "endMs": 40724,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "研究チームは、加速器質量分析法という、ごくわずかな量の試料から年代を測ることができる、放射性炭素年代測定を使った。",
-    "startMs": 41204,
-    "endMs": 50665,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "結果は、意外なものだった。",
-    "startMs": 51145,
-    "endMs": 53225,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "マチュピチュには、遅くとも1420年ごろから、1530年ごろまで、途切れることなく人が住んでいた。",
-    "startMs": 53705,
-    "endMs": 61460,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "文書が伝える年代よりも、20年以上も早い。",
-    "startMs": 61940,
-    "endMs": 65503,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "これが正しければ、パチャクテクは、1438年よりも前に、すでに力を持ち、まわりの土地を支配し始めていたことになる。",
-    "startMs": 65983,
-    "endMs": 75284,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "スペイン人が書き残したインカの歴史の年代そのものが、問い直されることになったのだ。",
-    "startMs": 75764,
-    "endMs": 81012,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ただし、研究チームも、放射性炭素年代測定には限界があることを認めている。",
-    "startMs": 81492,
-    "endMs": 87540,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この手がかりの判決。",
-    "startMs": 88020,
-    "endMs": 89449,
+    "startMs": 90740,
+    "endMs": 92169,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "半分正しい。",
-    "startMs": 89929,
-    "endMs": 90996,
+    "startMs": 92649,
+    "endMs": 93716,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュがパチャクテク王と結びついていることは変わらない。でも、骨の年代は1420年ごろまでさかのぼり、文書が伝える即位の年よりも早かった。",
-    "startMs": 91476,
-    "endMs": 102079,
+    "text": "冬至のころ、朝日は大鳥居のほぼ真ん中から昇る。でも、それに合わせて設計されたことを示す記録はない。",
+    "startMs": 94196,
+    "endMs": 101705,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、この王の離宮に暮らしていたのは、どんな人々だったのか。",
-    "startMs": 102559,
-    "endMs": 106975,
+    "text": "では、太陽の神を迎えるこの神宮は、最初から伊勢にあったのか。",
+    "startMs": 102185,
+    "endMs": 107081,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第5の手がかり マチュピチュは、太陽に仕える女性たちの都市だった？（2546フレーム）
-export const clue5VirginsCaptions: Caption[] = [
+// 0:00 第2の手がかり 伊勢神宮は、最初から伊勢にあった？（2868フレーム）
+export const clue2OriginCaptions: Caption[] = [
   {
-    "text": "ビンガムの調査隊は、遺跡のまわりの墓から、多くの骨を掘り出した。",
+    "text": "日本書紀によれば、天照大神は、もともと天皇の住まいの中で、まつられていた。",
     "startMs": 500,
-    "endMs": 5289,
+    "endMs": 6687,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1916年、その骨を調べた研究者は、大半が女性の骨だと判定した。",
-    "startMs": 5769,
-    "endMs": 12020,
+    "text": "ところが、崇神天皇の時代、国に疫病が広がり、多くの人が亡くなった。",
+    "startMs": 7167,
+    "endMs": 12937,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "インカには、太陽の神に仕える、選ばれた女性たちがいた。ビンガムは、この骨こそが、その女性たちのものだと考えた。",
-    "startMs": 12500,
-    "endMs": 21407,
+    "text": "天皇は、神の力があまりに強く、同じ住まいでまつることを恐れた。そして、天照大神を宮中の外に移し、娘の豊鍬入姫命に託して、大和の笠縫邑にまつらせた。",
+    "startMs": 13417,
+    "endMs": 27049,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "スペインから逃れた「太陽の処女」たちが、最後に隠れ住んだ都市。それが、マチュピチュだ。",
-    "startMs": 21887,
-    "endMs": 28905,
+    "text": "次の垂仁天皇の時代、その役目は、倭姫命に引き継がれた。",
+    "startMs": 27529,
+    "endMs": 32777,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "この物語は、長いあいだ、多くの人を引きつけてきた。",
-    "startMs": 29385,
-    "endMs": 33417,
+    "text": "倭姫命は、天照大神をまつるのにふさわしい場所を求めて、大和の宇陀から、近江、美濃と、各地をめぐった。",
+    "startMs": 33257,
+    "endMs": 42623,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "しかし、時代が下り、アメリカの人類学者、ジョン・ベラノが、イエール大学に残された骨を、改めて調べ直した。",
-    "startMs": 33897,
-    "endMs": 43380,
+    "text": "そして、伊勢の国にたどり着いたとき、天照大神のお告げがあった。",
+    "startMs": 43103,
+    "endMs": 48127,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "すると、男性と女性の数は、ほぼ半々だった。そして、子どもの骨も含まれていた。",
-    "startMs": 43860,
-    "endMs": 50409,
+    "text": "この伊勢の国は、常世の波が寄せては返す国。都から離れた、美しい国だ。この国にいたい。",
+    "startMs": 48607,
+    "endMs": 55753,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "女性だけが暮らす都市ではなかったのだ。",
-    "startMs": 50889,
-    "endMs": 53140,
+    "text": "こうして、伊勢に神宮が開かれた、と日本書紀は伝えている。",
+    "startMs": 56233,
+    "endMs": 60543,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "バーガーは、この再調査が、「太陽の処女」の説に、とどめを刺したと語っている。",
-    "startMs": 53620,
-    "endMs": 59860,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "では、ここに住んでいたのは、どんな人々だったのか。その答えは、骨の中の遺伝子が語ってくれた。",
-    "startMs": 60340,
-    "endMs": 67295,
+    "text": "倭姫命がめぐる途中で、天照大神を一時的にまつったとされる場所は、元伊勢と呼ばれる。その数は、各地の伝承を合わせて、60か所を超えるとも言われる。",
+    "startMs": 61023,
+    "endMs": 73215,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 67775,
-    "endMs": 69204,
+    "startMs": 73695,
+    "endMs": 75124,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 69684,
-    "endMs": 70345,
+    "startMs": 75604,
+    "endMs": 76265,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "骨を調べ直すと、男性と女性はほぼ半々で、子どももいた。太陽に仕える女性たちだけの都市ではなかった。",
-    "startMs": 70825,
-    "endMs": 78633,
+    "text": "日本書紀によれば、天照大神は宮中から笠縫邑へ移され、倭姫命が各地をめぐったすえに、伊勢にまつられた。",
+    "startMs": 76745,
+    "endMs": 85727,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、マチュピチュに住んでいたのは、このあたりの土地の人々だったのか。",
-    "startMs": 79113,
-    "endMs": 83647,
+    "text": "では、天照大神の御神体とされる八咫鏡は、どこにあるのか。三種の神器は、皇居にそろっているのか。",
+    "startMs": 86207,
+    "endMs": 94399,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第6の手がかり マチュピチュの住人は、地元の人々だった？（3447フレーム）
-export const clue6PeopleCaptions: Caption[] = [
+// 0:00 第3の手がかり 三種の神器は、すべて皇居にある？（2702フレーム）
+export const clue3RegaliaCaptions: Caption[] = [
   {
-    "text": "2023年7月。アメリカの科学誌、サイエンス・アドバンシズに、マチュピチュの人々の遺伝子を調べた論文が発表された。",
+    "text": "三種の神器。八咫鏡、草薙剣、八尺瓊勾玉。",
     "startMs": 500,
-    "endMs": 9908,
+    "endMs": 5620,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "研究したのは、イエール大学のルーシー・サラザールたち。",
-    "startMs": 10388,
-    "endMs": 14612,
+    "text": "神話によれば、天照大神が、孫の邇邇芸命を地上に送り出すとき、授けたものだ。",
+    "startMs": 6100,
+    "endMs": 12937,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "調べたのは、マチュピチュに葬られた34人と、比べるためのクスコの34人。あわせて68人の遺伝子だ。",
-    "startMs": 15092,
-    "endMs": 23508,
+    "text": "日本書紀は、そのとき天照大神が鏡について、こう告げたと記している。この鏡を見ることは、まさに私を見るのと同じと思いなさい。",
+    "startMs": 13417,
+    "endMs": 23231,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "その結果は、驚くべきものだった。",
-    "startMs": 23988,
-    "endMs": 26548,
+    "text": "三種の神器は、天皇の位のしるしとして、代々受け継がれてきた。",
+    "startMs": 23711,
+    "endMs": 28703,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュに葬られた人々は、インカ帝国のあちこちから来ていた。太平洋の海岸。アンデスの高地。そして、アマゾンの密林。",
-    "startMs": 27028,
-    "endMs": 36543,
+    "text": "2019年5月1日。天皇陛下が即位されたその日、皇居の宮殿、松の間で、剣璽等承継の儀が行われた。剣と勾玉が、新しい天皇へと受け継がれた。",
+    "startMs": 29183,
+    "endMs": 41961,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "およそ3分の1の人々は、アマゾンの人々の祖先を、強く受け継いでいた。",
-    "startMs": 37023,
-    "endMs": 42399,
+    "text": "では、三種の神器は、すべて皇居にあるのか。",
+    "startMs": 42441,
+    "endMs": 46015,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "さらに不思議なことがある。68人の中で、血のつながりが分かったのは、母と娘の、ただ1組だけだった。",
-    "startMs": 42879,
-    "endMs": 50825,
+    "text": "八尺瓊勾玉は、皇居の剣璽の間にあるとされる。",
+    "startMs": 46495,
+    "endMs": 49919,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "家族や村ごと移り住んできたのではない。ひとりひとりが、帝国の各地から、ばらばらに連れてこられたと考えられるのだ。",
-    "startMs": 51305,
-    "endMs": 59380,
+    "text": "だが、八咫鏡の本体は、伊勢神宮の内宮の御神体とされている。皇居の賢所にまつられているのは、その分身、形代と呼ばれる鏡だ。",
+    "startMs": 50399,
+    "endMs": 61311,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "同じ墓の洞窟に葬られた人々でさえ、そのふるさとは、まったく違っていた。",
-    "startMs": 59860,
-    "endMs": 65460,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "この人々は、誰だったのか。",
-    "startMs": 65940,
-    "endMs": 68105,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "論文によれば、彼らは、王に仕えるために連れてこられた使用人たちだったと考えられる。インカの言葉で、ヤナコーナと呼ばれる人々だ。",
-    "startMs": 68585,
-    "endMs": 78015,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "帝国の各地から集められた人々が、山の上の離宮で、ともに働き、ともに暮らし、ともに葬られた。",
-    "startMs": 78495,
-    "endMs": 86399,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "バーガーは、マチュピチュを、「さまざまな背景を持つ人々が暮らした、国際的な共同体」と呼んでいる。",
-    "startMs": 86879,
-    "endMs": 94441,
+    "text": "草薙剣の本体は、名古屋の熱田神宮にまつられているとされる。皇居にあるのは、やはり、その形代だ。",
+    "startMs": 61791,
+    "endMs": 69897,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 94921,
-    "endMs": 96351,
+    "startMs": 70377,
+    "endMs": 71807,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 96831,
-    "endMs": 97492,
+    "startMs": 72287,
+    "endMs": 72948,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュの人々は、帝国の海岸、高地、アマゾンなど、各地から一人ずつ集められた、王に仕える人々だった。",
-    "startMs": 97972,
-    "endMs": 106932,
+    "text": "皇居にあるとされる本体は、八尺瓊勾玉だけ。八咫鏡は伊勢、草薙剣は熱田にあるとされ、皇居にあるのはその形代だ。",
+    "startMs": 73428,
+    "endMs": 82857,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、これほどの都市が、なぜ、400年近くも、世界に知られずに残ったのか。",
-    "startMs": 107412,
-    "endMs": 113684,
+    "text": "では、伊勢の八咫鏡は、本当に、天皇でさえ見ることができないのか。",
+    "startMs": 83337,
+    "endMs": 88852,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第7の手がかり マチュピチュは、スペイン人に知られていなかった？（2645フレーム）
-export const clue7SpainCaptions: Caption[] = [
+// 0:00 第4の手がかり 八咫鏡は、天皇でさえ見ることができない？（3051フレーム）
+export const clue4MirrorCaptions: Caption[] = [
   {
-    "text": "1532年。スペインの征服者たちが、インカ帝国にやって来た。",
+    "text": "八咫鏡は、天岩戸の神話で、天照大神を外に誘い出すために作られた鏡とされる。",
     "startMs": 500,
-    "endMs": 5769,
+    "endMs": 7284,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "彼らは、クスコの神殿の黄金をはぎ取り、インカの神殿の上に、教会を建てた。",
-    "startMs": 6249,
-    "endMs": 12297,
+    "text": "内宮の正殿の奥深く、何重もの器に納められている、と伝えられている。",
+    "startMs": 7764,
+    "endMs": 13535,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "しかし、マチュピチュには、スペイン人が壊した跡が見当たらない。征服者たちの記録にも、この山の上の都市のことは書かれていない。",
-    "startMs": 12777,
-    "endMs": 21865,
+    "text": "鏡を納める器は、御樋代と呼ばれる。その御樋代を、さらに船の形をした器、御船代が納める。",
+    "startMs": 14015,
+    "endMs": 21801,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "だから、スペイン人に見つからなかったから、マチュピチュは残った。そう語られてきた。",
-    "startMs": 22345,
-    "endMs": 27903,
+    "text": "平安時代の決まりをまとめた延喜式などには、この器の内側の大きさが、一尺六寸三分、およそ49センチと記されている。",
+    "startMs": 22281,
+    "endMs": 31529,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ところが、植民地時代の文書を調べると、話は違ってくる。",
-    "startMs": 28383,
-    "endMs": 33023,
+    "text": "福岡県の平原遺跡からは、直径46.5センチの、日本最大級の銅鏡が見つかっている。八咫鏡と比べられることも多い鏡だ。",
+    "startMs": 32009,
+    "endMs": 42111,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "第3の手がかりで紹介した、ジョン・ロウの研究。その元になった16世紀の文書には、ピチュという土地の名前が記されていた。",
-    "startMs": 33503,
-    "endMs": 42889,
+    "text": "一方、皇居の形代の鏡は、過酷な歴史をたどってきた。",
+    "startMs": 42591,
+    "endMs": 47220,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "第2の手がかりの、1588年の記録にも、ワイナピチュの町の名前が出てくる。",
-    "startMs": 43369,
-    "endMs": 49460,
+    "text": "平安時代、内裏はたびたび火事に見舞われた。960年、1005年と、鏡はたびたび火事にあい、1040年の火事では、粒のようになってしまったと記録されている。",
+    "startMs": 47700,
+    "endMs": 60393,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "スペインの役人たちは、この土地の存在を知っていた。そこに畑があり、人が住んでいたことも、書類に残していたのだ。",
-    "startMs": 49940,
-    "endMs": 58196,
+    "text": "では、伊勢の八咫鏡は、天皇でさえ見られないのか。",
+    "startMs": 60873,
+    "endMs": 65023,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ただ、山の上の石の都市を、彼らが実際に訪れたのかどうかは、分かっていない。",
-    "startMs": 58676,
-    "endMs": 64660,
+    "text": "そう語られることは多い。だが、それをはっきり定めた公式の文書は、見つかっていない。",
+    "startMs": 65503,
+    "endMs": 71977,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "少なくとも、遺跡を壊した記録はない。",
-    "startMs": 65140,
-    "endMs": 67967,
+    "text": "明治天皇が鏡を見たとする記述も、一部にはある。御神体を見た記録が公にされることはなく、確かめる方法がないのだ。",
+    "startMs": 72457,
+    "endMs": 81311,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 68447,
-    "endMs": 69876,
+    "startMs": 81791,
+    "endMs": 83220,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "半分正しい。",
-    "startMs": 70356,
-    "endMs": 71423,
+    "startMs": 83700,
+    "endMs": 84767,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "スペイン人が、山の上の都市を壊した跡や記録はない。でも、ピチュという土地の名前は、植民地時代の文書にはっきり記録されていた。",
-    "startMs": 71903,
-    "endMs": 81556,
+    "text": "八咫鏡は何重もの器に納められ、人の目に触れることはないとされる。でも、天皇でさえ見られないと定めた公式の記録は確かめられない。",
+    "startMs": 85247,
+    "endMs": 95167,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、マチュピチュは、なぜ500年以上も、崩れずに残ったのか。",
-    "startMs": 82036,
-    "endMs": 86943,
+    "text": "では、誰も見ていないはずの鏡について、ある噂がささやかれてきた。",
+    "startMs": 95647,
+    "endMs": 100500,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第8の手がかり マチュピチュが崩れないのは、石組みの技のおかげ？（3874フレーム）
-export const clue8StoneCaptions: Caption[] = [
+// 0:00 第5の手がかり 八咫鏡の裏には、ヘブライ文字が刻まれている？（2328フレーム）
+export const clue5HebrewCaptions: Caption[] = [
   {
-    "text": "マチュピチュの石組みは、世界中の人々を驚かせてきた。",
+    "text": "八咫鏡の裏には、古代イスラエルの言葉、ヘブライ語の文字が刻まれている。",
     "startMs": 500,
-    "endMs": 4276,
+    "endMs": 5855,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "石と石の間には、モルタルのような接着剤は使われていない。それでも、石は、すき間なくぴたりと組み合っている。",
-    "startMs": 4756,
-    "endMs": 12884,
+    "text": "そんな都市伝説がある。",
+    "startMs": 6335,
+    "endMs": 7807,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "出入口や窓は、下が広く、上がせまい台形をしている。壁も、内側に少しだけ傾いている。",
-    "startMs": 13364,
-    "endMs": 20884,
+    "text": "この話は、日本人とユダヤ人の祖先が同じだという、日ユ同祖論と結びついて、広まってきた。",
+    "startMs": 8287,
+    "endMs": 15263,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "この形が、地震の多いアンデスで、建物を崩れにくくしていると言われている。",
-    "startMs": 21364,
-    "endMs": 26761,
+    "text": "では、この話は、どこから来たのか。",
+    "startMs": 15743,
+    "endMs": 18676,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "しかし、マチュピチュが崩れずに残った理由は、目に見える石組みだけではない。",
-    "startMs": 27241,
-    "endMs": 32340,
+    "text": "たどっていくと、1948年、ある牧師が雑誌に書いた随筆に行き着くとされる。",
+    "startMs": 19156,
+    "endMs": 25417,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "アメリカの水利技術者、ケネス・ライトは、長年、マチュピチュの水の流れを調べてきた。",
-    "startMs": 32820,
-    "endMs": 39519,
+    "text": "そこには、ある博士が、鏡に刻まれた文字を読み解き、「我は在りて在る者なり」という、聖書の言葉だった、と書かれていた。",
+    "startMs": 25897,
+    "endMs": 35444,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュのあたりには、1年に2000ミリ前後もの雨が降る。この雨が、山の斜面を崩す最大の敵だ。",
-    "startMs": 39999,
-    "endMs": 47359,
+    "text": "だが、その博士が、自分で鏡を見たわけではない。誰かから聞いた話を、さらに別の人が書いた、伝聞の伝聞だ。",
+    "startMs": 35924,
+    "endMs": 44895,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ライトによれば、インカの技術者たちは、建設の労力の50パーセント、もしかすると60パーセントを、地面の下に費やした。",
-    "startMs": 47839,
-    "endMs": 56713,
+    "text": "鏡の裏を見たという、確かな記録は、ひとつもない。",
+    "startMs": 45375,
+    "endMs": 49300,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "中央の広場の下には、表面の土、砂利、そして砕いた石が、何層にも重ねられていた。降った雨を、すばやく地下にしみこませ、流すための仕組みだ。",
-    "startMs": 57193,
-    "endMs": 68831,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "都市のまわりの段々畑も、ただの畑ではない。畑は、斜面の土をとどめ、水はけをよくし、地すべりを防ぐ役割も果たしていた。",
-    "startMs": 69311,
-    "endMs": 79145,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "石の壁には、雨水を逃がすための、たくさんの排水口が作られている。その数は、130ほどあると言われている。",
-    "startMs": 79625,
-    "endMs": 88063,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "さらに、ブラジルの地質学者は、2019年の学会で、マチュピチュは、断層が交わる場所に、わざわざ建てられたという説を発表した。",
-    "startMs": 88543,
-    "endMs": 98537,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "割れ目の多い岩は、石材として切り出しやすく、水も集まりやすい。ただし、これはまだ、学会で発表された仮説の段階だ。",
-    "startMs": 99017,
-    "endMs": 108372,
+    "text": "そもそも、伊勢の八咫鏡は、器に納められ、誰の目にも触れないとされている。見ていないものに、何が刻まれているかを語ることはできない。",
+    "startMs": 49780,
+    "endMs": 59892,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 108852,
-    "endMs": 110281,
+    "startMs": 60372,
+    "endMs": 61801,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "まちがい。",
+    "startMs": 62281,
+    "endMs": 62943,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ヘブライ文字の話は、戦後の伝聞の伝聞がもとで、鏡の裏を確かめた記録はひとつもない。",
+    "startMs": 63423,
+    "endMs": 69865,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、三種の神器のもうひとつ、草薙剣には、どんな記録が残っているのか。",
+    "startMs": 70345,
+    "endMs": 76383,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 第6の手がかり 草薙剣は、祟る？（2487フレーム）
+export const clue6CurseCaptions: Caption[] = [
+  {
+    "text": "草薙剣は、神話では、須佐之男命がヤマタノオロチを退治したとき、その尾の中から見つけた剣とされる。",
+    "startMs": 500,
+    "endMs": 8180,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "のちに、ヤマトタケルがこの剣を持って東の国へ向かい、妃の宮簀媛命のもとに剣を残した。それが、熱田神宮の始まりと伝えられている。",
+    "startMs": 8660,
+    "endMs": 18783,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "ところが、この剣には、不思議な記録が残っている。",
+    "startMs": 19263,
+    "endMs": 22996,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "日本書紀によれば、668年。道行という僧が、草薙剣を盗み、海を渡って新羅へ逃げようとした。",
+    "startMs": 23476,
+    "endMs": 32361,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "しかし、途中で風雨にあい、道に迷って、帰ってきてしまった。",
+    "startMs": 32841,
+    "endMs": 38004,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして、686年6月。天武天皇が病に倒れた。",
+    "startMs": 38484,
+    "endMs": 43508,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "病の原因を占うと、草薙剣の祟りだと出た。剣はその日のうちに、尾張の熱田の社に送り届けられた。",
+    "startMs": 43988,
+    "endMs": 52137,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "日本書紀には、こう書かれている。天皇の病を占うに、草薙の剣に祟れり。",
+    "startMs": 52617,
+    "endMs": 58815,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "天武天皇は、その年の9月に亡くなった。",
+    "startMs": 59295,
+    "endMs": 62239,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 62719,
+    "endMs": 64148,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "半分正しい。",
-    "startMs": 110761,
-    "endMs": 111828,
+    "startMs": 64628,
+    "endMs": 65695,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "石組みの技は、確かにすばらしい。でも、マチュピチュを支えてきたのは、地面の下に隠された、排水の仕組みと段々畑だった。",
-    "startMs": 112308,
-    "endMs": 121695,
+    "text": "天皇の病が草薙剣の祟りと占われ、剣が熱田へ送られたことは、日本書紀に記録されている。でも、祟りそのものを確かめることはできない。",
+    "startMs": 66175,
+    "endMs": 76713,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、ビンガムのあと、この遺跡の歴史に名を残したのは、どんな人々だったのか。",
-    "startMs": 122175,
-    "endMs": 127913,
+    "text": "では、その草薙剣は、のちに海の底へ消えてしまったのか。",
+    "startMs": 77193,
+    "endMs": 81695,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第9の手がかり マチュピチュと日本は、何のつながりもない？（4395フレーム）
-export const clue9JapanCaptions: Caption[] = [
+// 0:00 第7の手がかり 草薙剣は、壇ノ浦の海に永遠に沈んだ？（2240フレーム）
+export const clue7DannouraCaptions: Caption[] = [
   {
-    "text": "地球の裏側の、ペルーの山の上の遺跡。日本とのつながりなど、なさそうに思える。",
+    "text": "1185年3月。関門海峡の壇ノ浦で、源氏と平家の最後の戦いが行われた。",
     "startMs": 500,
-    "endMs": 6783,
+    "endMs": 7604,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "しかし、遺跡のふもとの、マチュピチュ村には、ひとりの日本人の名前が刻まれている。",
-    "startMs": 7263,
-    "endMs": 13225,
+    "text": "敗れた平家とともに、幼い安徳天皇は、海に身を投げた。そのとき、三種の神器も、ともに海へ沈んだと伝えられている。",
+    "startMs": 8084,
+    "endMs": 17535,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "野内与吉。",
-    "startMs": 13705,
-    "endMs": 14548,
+    "text": "勾玉の箱は浮かび上がり、鏡も取り戻された。しかし、剣は、どれほど探しても見つからなかった。",
+    "startMs": 18015,
+    "endMs": 25471,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1895年、福島県の大玉村に生まれた野内は、1917年ごろ、海を渡ってペルーへ向かった。",
-    "startMs": 15028,
-    "endMs": 23657,
+    "text": "では、草薙剣は、永遠に失われたのか。",
+    "startMs": 25951,
+    "endMs": 29929,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "やがて、マチュピチュのふもとへ向かう鉄道の建設に関わったことがきっかけで、この谷に住みついた。",
-    "startMs": 24137,
-    "endMs": 30633,
+    "text": "このとき海に沈んだのは、宮中にあった剣だ。それは、熱田神宮にある本体の、形代だったとされる。",
+    "startMs": 30409,
+    "endMs": 38121,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1935年、野内は、村で初めての本格的な木の建物、ホテル・ノウチを建てた。",
-    "startMs": 31113,
-    "endMs": 38473,
+    "text": "宮中では、その後、代わりの剣が使われた。そして1210年、順徳天皇が位を継ぐとき、伊勢神宮から送られた剣が、新しい宝剣とされた。",
+    "startMs": 38601,
+    "endMs": 50175,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1階は、交番と郵便局に無料で貸し、のちに2階も、村の役場や裁判所として提供した。",
-    "startMs": 38953,
-    "endMs": 46153,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "水道や電気を引き、村の暮らしの土台を作ったのも、野内だった。",
-    "startMs": 46633,
-    "endMs": 51359,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして1948年。野内は、マチュピチュ村の、初代の村長になった。",
-    "startMs": 51839,
-    "endMs": 57951,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "野内が、ふるさとの大玉村に帰ったのは、1968年。ペルーへ渡ってから、およそ50年ぶりのことだった。",
-    "startMs": 58431,
-    "endMs": 67167,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして翌年の1969年、ペルーで、その生涯を閉じた。",
-    "startMs": 67647,
-    "endMs": 72863,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2015年10月。野内のふるさと、大玉村と、マチュピチュ村は、友好都市になった。マチュピチュ村にとって、初めての友好都市だ。",
-    "startMs": 73343,
-    "endMs": 83700,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして、このつながりが、思いがけない形で、もうひとつの縁を生む。",
-    "startMs": 84180,
-    "endMs": 89257,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2011年。東日本大震災と、原発の事故。福島県の富岡町の人々は、町を離れて避難しなければならなかった。",
-    "startMs": 89737,
-    "endMs": 99359,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そのとき、いち早く町民を受け入れたのが、大玉村だった。",
-    "startMs": 99839,
-    "endMs": 104372,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "富岡町に本社のあった測量の会社、ふたば。社長は、そのときの恩を返したいと考えた。",
-    "startMs": 104852,
-    "endMs": 111583,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "大玉村の友好都市、マチュピチュ村のために、自分たちの技術を役立てられないか。",
-    "startMs": 112063,
-    "endMs": 117897,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2019年。ふたばは、JICA、国際協力機構の事業に採択され、マチュピチュでの3次元測量の調査を始めた。",
-    "startMs": 118377,
-    "endMs": 127455,
+    "text": "熱田神宮の草薙剣は、いまも、熱田の御神体として、まつられているとされる。",
+    "startMs": 50655,
+    "endMs": 56916,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 127935,
-    "endMs": 129364,
+    "startMs": 57396,
+    "endMs": 58825,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "まちがい。",
-    "startMs": 129844,
-    "endMs": 130505,
+    "startMs": 59305,
+    "endMs": 59967,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュ村の初代村長は、福島県出身の野内与吉だった。そのふるさととの縁が、福島の会社を、マチュピチュの調査へと導いた。",
-    "startMs": 130985,
-    "endMs": 140809,
+    "text": "壇ノ浦に沈んだのは、宮中にあった形代の剣だ。本体は熱田にあるとされ、宮中にも新しい剣が定められた。",
+    "startMs": 60447,
+    "endMs": 68660,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "では、その日本の技術は、マチュピチュで何を見つけたのか。",
-    "startMs": 141289,
-    "endMs": 145300,
+    "text": "では、熱田の草薙剣を、実際に見た人はいるのか。",
+    "startMs": 69140,
+    "endMs": 73439,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 第10の手がかり マチュピチュの全体像は、もう分かっている？（4940フレーム）
-export const clue10LidarCaptions: Caption[] = [
+// 0:00 第8の手がかり 草薙剣を、実際に見た人がいる？（2466フレーム）
+export const clue8SeenCaptions: Caption[] = [
   {
-    "text": "マチュピチュは、1983年に世界遺産に登録された。毎日、何千人もの観光客が訪れる。",
+    "text": "江戸時代の神道家、玉木正英。彼が書き残したものの中に、驚くべき記述があると伝えられている。",
     "startMs": 500,
-    "endMs": 8500,
+    "endMs": 7945,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "すべてが調べ尽くされた遺跡のように見える。",
-    "startMs": 8980,
-    "endMs": 11625,
+    "text": "徳川綱吉の時代、熱田神宮の社殿を修理したとき、4人か5人の神職が、ひそかに御神体をのぞき見た、というのだ。",
+    "startMs": 8425,
+    "endMs": 17620,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "しかし、遺跡のまわりの斜面は、深い森に覆われている。木々の下に、何が隠れているのか、人の目では見ることができなかった。",
-    "startMs": 12105,
-    "endMs": 21353,
+    "text": "記述によれば、剣の長さは、およそ85センチ。刃先は、菖蒲の葉のような形をしていて、全体が白っぽく見えたという。",
+    "startMs": 18100,
+    "endMs": 27561,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2026年3月30日。JICAは、ペルー文化省と、福島のふたばによる調査の成果を発表した。",
-    "startMs": 21833,
-    "endMs": 30132,
+    "text": "この話は、明治時代の研究者たちが紹介したことで、世に知られるようになった。",
+    "startMs": 28041,
+    "endMs": 33556,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "使われたのは、ドローンに積んだレーザーだ。空から地面に向かって、無数のレーザーを当て、はね返ってくる光から、地形の形を細かく測る。",
-    "startMs": 30612,
-    "endMs": 40713,
+    "text": "では、これで草薙剣の姿は、確かめられたのか。",
+    "startMs": 34036,
+    "endMs": 38207,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "木の葉のすき間を抜けて、地面まで届いた光だけを取り出せば、森をはぎ取ったあとの、地表の姿が浮かび上がる。遺跡に一切触れずに、調べることができるのだ。",
-    "startMs": 41193,
-    "endMs": 52393,
+    "text": "この記述は、のぞき見た神職から伝え聞いた話を、書き記したものだ。のぞき見たとされる神職たち自身が書いた記録ではない。",
+    "startMs": 38687,
+    "endMs": 47145,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "その結果、遺跡の北東に広がる、アンデネス・オリエンタレスと呼ばれる大きな段々畑の群れの全体像が、初めて明らかになった。",
-    "startMs": 52873,
-    "endMs": 62089,
+    "text": "そして、その後、剣の姿を確かめた公式の記録はない。",
+    "startMs": 47625,
+    "endMs": 51945,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "さらに、まだ調査されていない遺跡の北側、月の神殿と呼ばれる場所の近くで、いくつもの「遺構の候補」が見つかった。",
-    "startMs": 62569,
-    "endMs": 71572,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "高さおよそ2.7メートルの、L字型の壁のような構造。",
-    "startMs": 72052,
-    "endMs": 76329,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "左右対称に並んだ、3段の段々畑。",
-    "startMs": 76809,
-    "endMs": 79999,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして、長さおよそ2メートルの、四角い石材。人の手で加工された可能性があり、その裏側には、空洞があることも確かめられた。",
-    "startMs": 80479,
-    "endMs": 90484,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ただし、これらはまだ、「候補」だ。本当に遺構なのかは、これから確かめる必要がある。",
-    "startMs": 90964,
-    "endMs": 98036,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "発見は、これだけではなかった。",
-    "startMs": 98516,
-    "endMs": 100767,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2026年8月。ペルー文化省は、マチュピチュの東、ウルバンバ川をはさんだ、マンドールの壁と呼ばれる遺跡の周辺で、新たな道が見つかったと発表した。",
-    "startMs": 101247,
-    "endMs": 112873,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "ポーランドのワルシャワ大学などのチームが、やはりドローンのレーザーで調べたところ、スペイン人が来る前の道が、あわせて2.5キロメートル以上見つかった。",
-    "startMs": 113353,
-    "endMs": 123316,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そのうち、およそ1.2キロメートルの道は、ジグザグに折れ曲がる道筋など、インカの道の特徴と一致していた。",
-    "startMs": 123796,
-    "endMs": 131657,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "調査を監督したペルー文化省の考古学者は、道の向きから、儀式のための場所へ向かう道だった可能性があると語っている。",
-    "startMs": 132137,
-    "endMs": 140319,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "次の調査は、2027年に予定されていると報じられている。",
-    "startMs": 140799,
-    "endMs": 145215,
+    "text": "さらに、太平洋戦争が終わった直後の1945年8月から9月にかけて、剣は岐阜県の水無神社に一時移された、と伝えられている。",
+    "startMs": 52425,
+    "endMs": 62943,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "この手がかりの判決。",
-    "startMs": 145695,
-    "endMs": 147124,
+    "startMs": 63423,
+    "endMs": 64852,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "まちがい。",
-    "startMs": 147604,
-    "endMs": 148265,
+    "text": "半分正しい。",
+    "startMs": 65332,
+    "endMs": 66399,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2026年、ドローンのレーザー調査で、密林の下の段々畑の全体像や、新しい遺構の候補、そして2.5キロメートル以上の道が見つかった。マチュピチュの全体像は、いまも明らかになりつつある。",
-    "startMs": 148745,
-    "endMs": 163433,
+    "text": "江戸時代に神職がのぞき見たという記述は残っている。でも、それは伝え聞いた話の記録で、剣の姿が確かめられたわけではない。",
+    "startMs": 66879,
+    "endMs": 76009,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、八咫鏡を守るための、いまの伊勢の動きを見てみよう。",
+    "startMs": 76489,
+    "endMs": 80991,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 本当の物語（3662フレーム）
+// 0:00 第9の手がかり 伊勢神宮の遷宮の木は、伊勢の山から伐り出される？（3522フレーム）
+export const clue9SenguCaptions: Caption[] = [
+  {
+    "text": "伊勢神宮では、20年に一度、すべての社殿を新しく建て替え、神を新しい宮へ移す。式年遷宮だ。",
+    "startMs": 500,
+    "endMs": 8980,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "次の第63回の遷宮は、2033年に予定されている。",
+    "startMs": 9460,
+    "endMs": 14303,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "その準備は、すでに始まっている。2025年5月2日、最初の祭り、山口祭が行われた。遷宮に関わる祭りや行事は、あわせて33にのぼる。",
+    "startMs": 14783,
+    "endMs": 26708,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2025年6月3日。長野県上松町の山で、御杣始祭が行われた。",
+    "startMs": 27188,
+    "endMs": 33375,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "伐り出されたのは、御樋代木。八咫鏡を納める器、御樋代になるヒノキだ。",
+    "startMs": 33855,
+    "endMs": 39497,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2日後には、岐阜県中津川市の山でも、伐採が行われた。",
+    "startMs": 39977,
+    "endMs": 44724,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "そして6月の9日と10日、御樋代木は伊勢へ運び込まれた。",
+    "startMs": 45204,
+    "endMs": 49311,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "2026年の4月、お木曳の始まりの行事が行われ、およそ3000人の市民が参加したと報じられた。",
+    "startMs": 49791,
+    "endMs": 57364,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "5月から6月には、外宮へ向けて、陸の上を木を曳く陸曳。7月から8月には、内宮へ向けて、五十鈴川の流れの中を木を曳く川曳が行われた。",
+    "startMs": 57844,
+    "endMs": 69151,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "8月2日には、愛子さまも川曳の綱を引かれた。",
+    "startMs": 69631,
+    "endMs": 73343,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "では、遷宮の木は、伊勢の山から伐り出されるのか。",
+    "startMs": 73823,
+    "endMs": 77652,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "神宮の背後には、宮域林と呼ばれる広い森がある。1920年代から、遷宮のためのヒノキが植えられてきた。前回の遷宮では、使われた木のおよそ4分の1が、この森から出た。",
+    "startMs": 78132,
+    "endMs": 91913,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "だが、遷宮の木の多くは、江戸時代から、長野県と岐阜県の木曽のヒノキが使われてきた。今回の御樋代木も、木曽の山から伐り出された。",
+    "startMs": 92393,
+    "endMs": 102505,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "この手がかりの判決。",
+    "startMs": 102985,
+    "endMs": 104415,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "半分正しい。",
+    "startMs": 104895,
+    "endMs": 105961,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "神宮の森の木も使われ始めている。でも、遷宮の木の多くは木曽から運ばれ、八咫鏡の器になる木も、木曽の山から伐り出された。",
+    "startMs": 106441,
+    "endMs": 116180,
+    "timestampMs": null,
+    "confidence": null
+  }
+];
+
+// 0:00 本当の物語（2850フレーム）
 export const rootsStoryCaptions: Caption[] = [
   {
-    "text": "では、手がかりをつないで、マチュピチュの本当の物語をたどってみよう。",
+    "text": "では、手がかりをつないで、三種の神器の本当の物語をたどってみよう。",
     "startMs": 500,
-    "endMs": 5439,
+    "endMs": 5759,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "15世紀のはじめ。アンデスのクスコで、ひとりの王が力をつけ始めた。パチャクテクだ。",
-    "startMs": 5919,
-    "endMs": 11903,
+    "text": "はるか昔、天照大神は、天皇の住まいの中でまつられていた。",
+    "startMs": 6239,
+    "endMs": 11295,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "王は、ウルバンバ川の谷を自分の領地とし、そのいちばん奥の尾根の上に、離宮を築かせた。",
-    "startMs": 12383,
-    "endMs": 19337,
+    "text": "だが、その力をおそれた天皇は、神を宮中の外へ移した。倭姫命の長い旅のすえ、天照大神は、伊勢の国に落ち着いた。",
+    "startMs": 11775,
+    "endMs": 22207,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "年間2000ミリの雨が降る、急な斜面。技術者たちは、まず地面の下に、排水の仕組みを築いた。その上に、段々畑と、石の建物を積み上げた。",
-    "startMs": 19817,
-    "endMs": 31615,
+    "text": "宮中には、鏡と剣の形代が残された。本体は、伊勢と熱田へ。三種の神器は、三つの場所に分かれて守られることになった。",
+    "startMs": 22687,
+    "endMs": 32351,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "都市の名は、おそらく、ワイナピチュ。",
-    "startMs": 32095,
-    "endMs": 34921,
+    "text": "宮中の形代の鏡は、火事で焼けた。形代の剣は、壇ノ浦の海に沈んだ。",
+    "startMs": 32831,
+    "endMs": 39071,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そこには、帝国の海岸から、高地から、そしてアマゾンの密林から、一人ずつ集められた人々が暮らし、王と、その一族に仕えた。",
-    "startMs": 35401,
-    "endMs": 45513,
+    "text": "それでも、伊勢と熱田の本体は、人の目に触れることなく、守られてきたとされる。",
+    "startMs": 39551,
+    "endMs": 45332,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1420年ごろから、およそ100年。山の上の離宮には、人の暮らしが続いた。",
-    "startMs": 45993,
-    "endMs": 52436,
+    "text": "その間に、草薙剣は盗まれかけ、天皇の病の原因と占われ、江戸時代にはのぞき見られたとも伝えられた。",
+    "startMs": 45812,
+    "endMs": 54089,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "やがて、スペイン人がやって来る。帝国は崩れ、王家の支配も失われた。",
-    "startMs": 52916,
-    "endMs": 58591,
+    "text": "見えないものだからこそ、人々は、さまざまな物語を語り継いできたのだ。",
+    "startMs": 54569,
+    "endMs": 59700,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、いつしか、離宮から人の姿が消えた。",
-    "startMs": 59071,
-    "endMs": 62687,
+    "text": "そして今も、20年に一度、八咫鏡は、新しい器と新しい宮へ移される。",
+    "startMs": 60180,
+    "endMs": 66569,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ふもとの役人の書類には、ピチュという名前だけが残った。",
-    "startMs": 63167,
-    "endMs": 66985,
+    "text": "2025年、木曽の山で伐られた一本のヒノキが、伊勢へ運ばれた。2026年には、大勢の人々が、その木を曳いた。",
+    "startMs": 67049,
+    "endMs": 76681,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "それから数百年。斜面の段々畑では、地元の農民が、インカの畑を耕し続けた。1902年には、リサラガが、壁に名前を書き残した。",
-    "startMs": 67465,
-    "endMs": 78836,
+    "text": "見えない鏡を守るために、1300年にわたって、人々は、森を育て、木を伐り、綱を引いてきた。",
+    "startMs": 77161,
+    "endMs": 85140,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1911年。ビンガムがやって来て、この都市を世界に知らせた。",
-    "startMs": 79316,
-    "endMs": 84425,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "そして20世紀。ふもとの村では、福島から来たひとりの日本人が、ホテルを建て、水道と電気を引き、初代の村長になった。",
-    "startMs": 84905,
-    "endMs": 94452,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "およそ100年後、その縁が、福島の会社を呼び寄せた。日本のレーザーは、密林の下に、まだ誰も知らない姿を見つけ出した。",
-    "startMs": 94932,
-    "endMs": 104212,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "マチュピチュは、ひとりの探検家が見つけた、失われた都市ではない。",
-    "startMs": 104692,
-    "endMs": 109119,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "王と、帝国中から集められた人々と、そこに住み続けた農民と、そしてそれを守り、調べ続ける人々が、500年以上かけて紡いできた都市なのだ。",
-    "startMs": 109599,
-    "endMs": 120852,
+    "text": "三種の神器の本当の姿は、鏡や剣そのものではなく、それを守り続けてきた人々の営みの中にあるのかもしれない。",
+    "startMs": 85620,
+    "endMs": 93791,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 まだ解けていない謎（2821フレーム）
+// 0:00 まだ解けていない謎（2188フレーム）
 export const unsolvedMysteryCaptions: Caption[] = [
   {
-    "text": "それでも、マチュピチュには、まだ解けていない謎が残っている。",
+    "text": "それでも、三種の神器には、まだ解けていない謎が残っている。",
     "startMs": 500,
-    "endMs": 4607,
+    "endMs": 4969,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "まず、この都市は、なぜ捨てられたのか。",
-    "startMs": 5087,
-    "endMs": 8084,
+    "text": "まず、八咫鏡と草薙剣の本体は、どんな姿をしているのか。",
+    "startMs": 5449,
+    "endMs": 10612,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "骨の年代は、1530年ごろまで人が住んでいたことを示している。しかし、その後、いつ、どのようにして人々が去ったのかは、分かっていない。",
-    "startMs": 8564,
-    "endMs": 19497,
+    "text": "大きさや形を伝える記録はあっても、それを確かめた公式の記録はない。おそらく、これからも確かめられることはないだろう。",
+    "startMs": 11092,
+    "endMs": 19647,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "スペインの征服で、王家の支配が失われたからなのか。それとも、ヨーロッパから持ちこまれた病気が広がったからなのか。いくつもの説があるが、決め手はない。",
-    "startMs": 19977,
-    "endMs": 30591,
+    "text": "そして、冬至と天照大神の関係。",
+    "startMs": 20127,
+    "endMs": 23231,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、密林の下で見つかった、L字型の壁や、四角い石材の正体。",
-    "startMs": 31071,
-    "endMs": 36809,
+    "text": "宮中では、毎年、新嘗祭の前の日に、鎮魂祭という祭りが行われる。冬至のころに弱まる太陽の力を、ふたたび強めるための祭りだと考えられている。",
+    "startMs": 23711,
+    "endMs": 35657,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "月の神殿の近くで、誰が、何のために、それを造ったのか。それは、これからの調査にかかっている。",
-    "startMs": 37289,
-    "endMs": 44969,
+    "text": "平安時代の書物、古語拾遺は、この鎮魂の儀式は、天岩戸の前で舞った天鈿女命に始まる、と記している。",
+    "startMs": 36137,
+    "endMs": 44905,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マンドールの壁の周辺で見つかった道は、どこへ、何のために続いていたのか。",
-    "startMs": 45449,
-    "endMs": 51017,
+    "text": "太陽が最も弱くなる冬至と、岩戸に隠れた太陽の神。古代の人々は、この二つを重ねていたのか。",
+    "startMs": 45385,
+    "endMs": 53044,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "もうひとつ、いま問われている謎がある。",
-    "startMs": 51497,
-    "endMs": 54015,
+    "text": "宇治橋の朝日は、偶然なのか、それとも人々の祈りが形になったものなのか。",
+    "startMs": 53524,
+    "endMs": 59007,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "この遺跡を、どうやって未来に残すのか。",
-    "startMs": 54495,
-    "endMs": 57289,
+    "text": "その答えは、まだ出ていない。",
+    "startMs": 59487,
+    "endMs": 61567,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2026年、マチュピチュに入れる人の数は、多い時期で1日5600人までと決められている。",
-    "startMs": 57769,
-    "endMs": 64745,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "2025年9月には、遺跡へのバスをめぐる住民の抗議で線路がふさがれ、多くの観光客が足止めされた。",
-    "startMs": 65225,
-    "endMs": 73044,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "新・世界七不思議を選んだ財団は、このままでは、その信頼を失うおそれがあると警告した。",
-    "startMs": 73524,
-    "endMs": 80521,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "世界中の人が見たいと願う遺跡を、どう守り、どう伝えていくのか。",
-    "startMs": 81001,
-    "endMs": 85908,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "日本の技術が残した3次元のデータは、その答えを探すための、新しい手がかりにもなっている。",
-    "startMs": 86388,
-    "endMs": 92831,
+    "text": "次の式年遷宮は、2033年。八咫鏡は、木曽のヒノキで作られた新しい器に納められ、新しい宮へと移される。",
+    "startMs": 62047,
+    "endMs": 71732,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 まとめ（2834フレーム）
+// 0:00 まとめ（2401フレーム）
 export const summaryCaptions: Caption[] = [
   {
     "text": "では、今夜の判決を振り返ろう。",
@@ -1642,93 +1176,86 @@ export const summaryCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "マチュピチュを発見したのは、ビンガムではない。地元の人々が住み、1902年の落書きも残っていた。まちがい。",
+    "text": "冬至の朝日は大鳥居のほぼ真ん中から昇るが、それに合わせた設計の記録はない。半分正しい。",
     "startMs": 3572,
-    "endMs": 11775,
+    "endMs": 10271,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュという名前は、もともと山の名前で、都市は「ワイナピチュ」と呼ばれていた可能性が高い。まちがい。",
-    "startMs": 12255,
-    "endMs": 20447,
+    "text": "伊勢神宮は最初から伊勢にあったのではなく、宮中から移された。まちがい。",
+    "startMs": 10751,
+    "endMs": 15924,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュは、要塞ではなく、パチャクテク王の離宮だったと考えられている。まちがい。",
-    "startMs": 20927,
-    "endMs": 26943,
+    "text": "皇居にあるとされる本体は勾玉だけで、鏡と剣は形代だ。まちがい。",
+    "startMs": 16404,
+    "endMs": 21705,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "骨の年代は1420年ごろまでさかのぼり、文書が伝える年代より早かった。半分正しい。",
-    "startMs": 27423,
-    "endMs": 34495,
+    "text": "八咫鏡は人の目に触れないとされるが、天皇でさえ見られないという公式の記録はない。半分正しい。",
+    "startMs": 22185,
+    "endMs": 29311,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "太陽に仕える女性たちの都市ではなく、男性も女性も、子どももいた。まちがい。",
-    "startMs": 34975,
-    "endMs": 41087,
+    "text": "八咫鏡の裏のヘブライ文字は、伝聞の伝聞で、確かめた記録はない。まちがい。",
+    "startMs": 29791,
+    "endMs": 35977,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "住人は地元の人々ではなく、帝国の各地から集められた人々だった。まちがい。",
-    "startMs": 41567,
-    "endMs": 47380,
+    "text": "草薙剣は天武天皇の病の原因と占われたが、祟りそのものは確かめられない。半分正しい。",
+    "startMs": 36457,
+    "endMs": 43796,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "スペイン人が壊した跡はないが、ピチュの名は植民地の文書に残っていた。半分正しい。",
-    "startMs": 47860,
-    "endMs": 53972,
+    "text": "壇ノ浦に沈んだのは形代の剣で、本体は熱田にあるとされる。まちがい。",
+    "startMs": 44276,
+    "endMs": 49620,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "崩れない理由は、石組みだけでなく、地面の下の排水の仕組みにあった。半分正しい。",
-    "startMs": 54452,
-    "endMs": 60799,
+    "text": "江戸時代に剣をのぞき見たという記述はあるが、伝え聞いた話だ。半分正しい。",
+    "startMs": 50100,
+    "endMs": 55839,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュ村の初代村長は、福島出身の野内与吉だった。まちがい。",
-    "startMs": 61279,
-    "endMs": 66377,
+    "text": "遷宮の木の多くは木曽から運ばれ、八咫鏡の器の木も木曽で伐られた。半分正しい。",
+    "startMs": 56319,
+    "endMs": 62473,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2026年、日本のレーザーが、密林の下の新しい姿を見つけた。全体像は、いまも明らかになりつつある。まちがい。",
-    "startMs": 66857,
-    "endMs": 76276,
+    "text": "見えない鏡と剣を、人々は1300年にわたって守り、語り継いできた。",
+    "startMs": 62953,
+    "endMs": 68447,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "雲の上の石の都市は、伝説の隠れ家ではなかった。",
-    "startMs": 76756,
-    "endMs": 80319,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "王の離宮として造られ、帝国中から集められた人々が暮らし、そして今も、新しい姿を見せ続けている。",
-    "startMs": 80799,
-    "endMs": 88617,
+    "text": "そして今年の冬至の朝も、宇治橋の大鳥居の向こうから、太陽が昇る。",
+    "startMs": 68927,
+    "endMs": 74207,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "本当の話は、作り話に負けないくらい、面白い。",
-    "startMs": 89097,
-    "endMs": 93236,
+    "startMs": 74687,
+    "endMs": 78825,
     "timestampMs": null,
     "confidence": null
   }

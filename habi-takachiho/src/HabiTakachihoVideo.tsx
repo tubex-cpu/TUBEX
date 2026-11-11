@@ -4,16 +4,16 @@ import {fade} from '@remotion/transitions/fade';
 import {interpolate, staticFile, useVideoConfig} from 'remotion';
 import {sceneDurations as d, TRANSITION_FRAMES as T} from './data/timeline';
 import {Closing} from './scenes/Closing';
-import {Clue10Lidar} from './scenes/Clue10Lidar';
-import {Clue1Bingham} from './scenes/Clue1Bingham';
-import {Clue2Name} from './scenes/Clue2Name';
-import {Clue3Fortress} from './scenes/Clue3Fortress';
-import {Clue4Date} from './scenes/Clue4Date';
-import {Clue5Virgins} from './scenes/Clue5Virgins';
-import {Clue6People} from './scenes/Clue6People';
-import {Clue7Spain} from './scenes/Clue7Spain';
-import {Clue8Stone} from './scenes/Clue8Stone';
-import {Clue9Japan} from './scenes/Clue9Japan';
+import {Clue10Unesco} from './scenes/Clue10Unesco';
+import {Clue1Kagura} from './scenes/Clue1Kagura';
+import {Clue2History} from './scenes/Clue2History';
+import {Clue3Iwato} from './scenes/Clue3Iwato';
+import {Clue4Shrine} from './scenes/Clue4Shrine';
+import {Clue5Descent} from './scenes/Clue5Descent';
+import {Clue6Eclipse} from './scenes/Clue6Eclipse';
+import {Clue7Himiko} from './scenes/Clue7Himiko';
+import {Clue8Uzume} from './scenes/Clue8Uzume';
+import {Clue9Future} from './scenes/Clue9Future';
 import {Intro} from './scenes/Intro';
 import {JudgeEntrance} from './scenes/JudgeEntrance';
 import {RootsStory} from './scenes/RootsStory';
@@ -23,15 +23,15 @@ import {UnsolvedMystery} from './scenes/UnsolvedMystery';
 const BGM_VOLUME = 0.12;
 
 // BGMの区間：前半（冒頭〜第3の手がかり）、中盤（第4〜第7の手がかり）、後半（第8の手がかり〜締め）。scripts/gen_video.py が作る
-export const midStart = d.Intro + d.JudgeEntrance + d.Clue1Bingham + d.Clue2Name + d.Clue3Fortress + d.Clue4Date - 6 * T;
-export const lateStart = midStart + d.Clue5Virgins + d.Clue6People + d.Clue7Spain + d.Clue8Stone - 4 * T;
+export const midStart = d.Intro + d.JudgeEntrance + d.Clue1Kagura + d.Clue2History + d.Clue3Iwato + d.Clue4Shrine - 6 * T;
+export const lateStart = midStart + d.Clue5Descent + d.Clue6Eclipse + d.Clue7Himiko + d.Clue8Uzume - 4 * T;
 
 // 区間の頭と終わりを2秒でフェード
 const fadeVolume = (length: number, fps: number) => (f: number) =>
 	BGM_VOLUME * interpolate(f, [0, 2 * fps, length - 2 * fps, length], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
 
 // ハビ判事：マチュピチュ判決（本編）。シーンの長さは scripts/build-voice.py がナレーション音声から計算する
-export const HabiMachuVideo = () => {
+export const HabiTakachihoVideo = () => {
 	const {fps, durationInFrames} = useVideoConfig();
 	return (
 		<>
@@ -44,44 +44,44 @@ export const HabiMachuVideo = () => {
 					<JudgeEntrance />
 				</TransitionSeries.Sequence>
 				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
-				<TransitionSeries.Sequence name="第1の手がかり マチュピチュを発見したのは、ビンガム？" durationInFrames={d.Clue1Bingham} premountFor={fps}>
-					<Clue1Bingham />
+				<TransitionSeries.Sequence name="第1の手がかり 高千穂の夜神楽は、観光客のためのショー？" durationInFrames={d.Clue1Kagura} premountFor={fps}>
+					<Clue1Kagura />
 				</TransitionSeries.Sequence>
 				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
-				<TransitionSeries.Sequence name="第2の手がかり マチュピチュは、インカ時代からの名前？" durationInFrames={d.Clue2Name} premountFor={fps}>
-					<Clue2Name />
+				<TransitionSeries.Sequence name="第2の手がかり 夜神楽は、神話の時代から続いている？" durationInFrames={d.Clue2History} premountFor={fps}>
+					<Clue2History />
 				</TransitionSeries.Sequence>
 				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
-				<TransitionSeries.Sequence name="第3の手がかり マチュピチュは、インカ最後の要塞だった？" durationInFrames={d.Clue3Fortress} premountFor={fps}>
-					<Clue3Fortress />
+				<TransitionSeries.Sequence name="第3の手がかり 天岩戸は、高千穂にある？" durationInFrames={d.Clue3Iwato} premountFor={fps}>
+					<Clue3Iwato />
 				</TransitionSeries.Sequence>
 				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
-				<TransitionSeries.Sequence name="第4の手がかり マチュピチュが建てられたのは、パチャクテクが王になったあと？" durationInFrames={d.Clue4Date} premountFor={fps}>
-					<Clue4Date />
+				<TransitionSeries.Sequence name="第4の手がかり 天岩戸神社の御神体は、洞窟そのもの？" durationInFrames={d.Clue4Shrine} premountFor={fps}>
+					<Clue4Shrine />
 				</TransitionSeries.Sequence>
 				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
-				<TransitionSeries.Sequence name="第5の手がかり マチュピチュは、太陽に仕える女性たちの都市だった？" durationInFrames={d.Clue5Virgins} premountFor={fps}>
-					<Clue5Virgins />
+				<TransitionSeries.Sequence name="第5の手がかり 天孫降臨の地は、宮崎の高千穂？" durationInFrames={d.Clue5Descent} premountFor={fps}>
+					<Clue5Descent />
 				</TransitionSeries.Sequence>
 				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
-				<TransitionSeries.Sequence name="第6の手がかり マチュピチュの住人は、地元の人々だった？" durationInFrames={d.Clue6People} premountFor={fps}>
-					<Clue6People />
+				<TransitionSeries.Sequence name="第6の手がかり 天岩戸の神話は、日食の記憶？" durationInFrames={d.Clue6Eclipse} premountFor={fps}>
+					<Clue6Eclipse />
 				</TransitionSeries.Sequence>
 				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
-				<TransitionSeries.Sequence name="第7の手がかり マチュピチュは、スペイン人に知られていなかった？" durationInFrames={d.Clue7Spain} premountFor={fps}>
-					<Clue7Spain />
+				<TransitionSeries.Sequence name="第7の手がかり 天照大神の正体は、卑弥呼だと証明された？" durationInFrames={d.Clue7Himiko} premountFor={fps}>
+					<Clue7Himiko />
 				</TransitionSeries.Sequence>
 				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
-				<TransitionSeries.Sequence name="第8の手がかり マチュピチュが崩れないのは、石組みの技のおかげ？" durationInFrames={d.Clue8Stone} premountFor={fps}>
-					<Clue8Stone />
+				<TransitionSeries.Sequence name="第8の手がかり 天宇受売命の舞は、神楽の始まり？" durationInFrames={d.Clue8Uzume} premountFor={fps}>
+					<Clue8Uzume />
 				</TransitionSeries.Sequence>
 				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
-				<TransitionSeries.Sequence name="第9の手がかり マチュピチュと日本は、何のつながりもない？" durationInFrames={d.Clue9Japan} premountFor={fps}>
-					<Clue9Japan />
+				<TransitionSeries.Sequence name="第9の手がかり 高千穂の夜神楽は、消えかけている？" durationInFrames={d.Clue9Future} premountFor={fps}>
+					<Clue9Future />
 				</TransitionSeries.Sequence>
 				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
-				<TransitionSeries.Sequence name="第10の手がかり マチュピチュの全体像は、もう分かっている？" durationInFrames={d.Clue10Lidar} premountFor={fps}>
-					<Clue10Lidar />
+				<TransitionSeries.Sequence name="第10の手がかり 神楽は、もう世界遺産になった？" durationInFrames={d.Clue10Unesco} premountFor={fps}>
+					<Clue10Unesco />
 				</TransitionSeries.Sequence>
 				<TransitionSeries.Transition presentation={fade()} timing={linearTiming({durationInFrames: T})} />
 				<TransitionSeries.Sequence name="本当の物語" durationInFrames={d.RootsStory} premountFor={fps}>
@@ -100,9 +100,9 @@ export const HabiMachuVideo = () => {
 					<Closing />
 				</TransitionSeries.Sequence>
 			</TransitionSeries>
-			<Audio name="BGM 前半「雲の上の都市」" src={staticFile('bgm/bgm1-kumo.mp3')} durationInFrames={midStart + fps} volume={fadeVolume(midStart + fps, fps)} premountFor={fps} />
-			<Audio name="BGM 中盤「骨が語る」" src={staticFile('bgm/bgm2-hone.mp3')} from={midStart - fps} durationInFrames={lateStart - midStart + 2 * fps} volume={fadeVolume(lateStart - midStart + 2 * fps, fps)} premountFor={fps} />
-			<Audio name="BGM 後半「密林の下」" src={staticFile('bgm/bgm3-mori.mp3')} from={lateStart - fps} durationInFrames={durationInFrames - lateStart + fps} volume={fadeVolume(durationInFrames - lateStart + fps, fps)} premountFor={fps} />
+			<Audio name="BGM 前半「夜の神楽宿」" src={staticFile('bgm/bgm1-kumo.mp3')} durationInFrames={midStart + fps} volume={fadeVolume(midStart + fps, fps)} premountFor={fps} />
+			<Audio name="BGM 中盤「隠れた太陽」" src={staticFile('bgm/bgm2-hone.mp3')} from={midStart - fps} durationInFrames={lateStart - midStart + 2 * fps} volume={fadeVolume(lateStart - midStart + 2 * fps, fps)} premountFor={fps} />
+			<Audio name="BGM 後半「夜明けの舞」" src={staticFile('bgm/bgm3-mori.mp3')} from={lateStart - fps} durationInFrames={durationInFrames - lateStart + fps} volume={fadeVolume(durationInFrames - lateStart + fps, fps)} premountFor={fps} />
 		</>
 	);
 };
