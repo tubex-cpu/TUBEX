@@ -4,10 +4,13 @@ import {AbsoluteFill, Img, interpolate, spring, staticFile, useVideoConfig} from
 import {CameraRig} from '../three/common';
 import {Mascot, Pose} from '../three/Mascot';
 import {FONT} from '../theme';
+import {WHITE} from './mode';
 
 export const clamp = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
 export const fadeIn = (f: number, at: number, d = 10) => interpolate(f, [at, at + d], [0, 1], clamp);
-export const K = {bg: '#0c0f16', ink: '#f2efe9', sub: '#aeb8cc', gold: '#e8c46a', red: '#e0533d', blue: '#6fa8dc', teal: '#5fc6b4', card: '#161b26', line: 'rgba(255,255,255,0.12)'};
+export const K = WHITE
+  ? {bg: '#f3f2ef', ink: '#1d2230', sub: '#4a5468', gold: '#b8860b', red: '#c0392b', blue: '#2f6fb0', teal: '#1f8f7e', card: '#ffffff', line: 'rgba(0,0,0,0.12)'}
+  : {bg: '#0c0f16', ink: '#f2efe9', sub: '#aeb8cc', gold: '#e8c46a', red: '#e0533d', blue: '#6fa8dc', teal: '#5fc6b4', card: '#161b26', line: 'rgba(255,255,255,0.12)'};
 
 // dark "ヒト図鑑" board with soft top light and floor ring
 export const Board: React.FC<{children?: React.ReactNode; tone?: 'dark' | 'light'}> = ({children, tone = 'dark'}) => (

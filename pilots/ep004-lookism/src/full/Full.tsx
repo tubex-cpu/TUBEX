@@ -2,6 +2,7 @@ import {AbsoluteFill, Easing, Sequence, interpolate, staticFile, useCurrentFrame
 import timeline from '../../data/timeline_full.json';
 import {FONT} from '../theme';
 import {SceneProps} from './kit';
+import {WHITE} from './mode';
 import {SCENES_L1} from './ScenesL1';
 import {SCENES_L2} from './ScenesL2';
 
@@ -117,7 +118,7 @@ export const SubCard: React.FC = () => {
   const len = segs.reduce((n, s) => n + [...s.t].length, 0);
   const size = Math.min(74, Math.floor(1700 / Math.max(1, len * 1.04)));
   const col = (k: string) => (k === 'r' ? '#ff3b30' : k === 'y' ? '#ffd60a' : '#ffffff');
-  const light = LIGHT.has(sceneAt((c.start + c.end) / 2));
+  const light = WHITE || LIGHT.has(sceneAt((c.start + c.end) / 2));
   const shadow = light ? '0 2px 8px rgba(0,0,0,0.55), 0 0 3px rgba(0,0,0,0.5)' : 'none';
   return (
     <AbsoluteFill style={{justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 46}}>
