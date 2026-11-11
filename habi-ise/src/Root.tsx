@@ -1,6 +1,7 @@
 import {AbsoluteFill, Composition, Folder} from 'remotion';
 import {HabiIseVideo} from './HabiIseVideo';
 import {sceneDurations as d, TOTAL_FRAMES} from './data/timeline';
+import {Thumb1Hinoki, Thumb2Katashiro, Thumb3Curse} from './thumbnails/Thumbnails';
 import {Closing} from './scenes/Closing';
 import {Clue1Solstice} from './scenes/Clue1Solstice';
 import {Clue2Origin} from './scenes/Clue2Origin';
@@ -44,6 +45,11 @@ export const RemotionRoot: React.FC = () => (
 			<Composition id="UnsolvedMystery" component={UnsolvedMystery} durationInFrames={d.UnsolvedMystery} fps={30} width={1920} height={1080} />
 			<Composition id="Summary" component={Summary} durationInFrames={d.Summary} fps={30} width={1920} height={1080} />
 			<Composition id="Closing" component={Closing} durationInFrames={d.Closing} fps={30} width={1920} height={1080} />
+		</Folder>
+		<Folder name="Thumbnails">
+			<Composition id="Thumb1Hinoki" component={Thumb1Hinoki} durationInFrames={1} fps={30} width={1280} height={720} />
+			<Composition id="Thumb2Katashiro" component={Thumb2Katashiro} durationInFrames={1} fps={30} width={1280} height={720} />
+			<Composition id="Thumb3Curse" component={Thumb3Curse} durationInFrames={1} fps={30} width={1280} height={720} />
 		</Folder>
 	</>
 );
