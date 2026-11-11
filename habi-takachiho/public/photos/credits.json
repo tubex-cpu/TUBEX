@@ -867,5 +867,71 @@
    1920,
    1280
   ]
+ },
+ "miya-country": {
+  "file": "miya-country.jpg",
+  "title": "Miyazaki Countryside (52133213511).jpg",
+  "artist": "Raita Futo from Tokyo, Japan",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Miyazaki_Countryside_(52133213511).jpg",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "miya-town": {
+  "file": "miya-town.jpg",
+  "title": "Takachiho Town Center from Awaji Castle Ruin 20231121.jpg",
+  "artist": "ja:User:Sanjo",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Takachiho_Town_Center_from_Awaji_Castle_Ruin_20231121.jpg",
+  "size": [
+   1920,
+   1048
+  ]
+ },
+ "kojiki-shinpukuji": {
+  "file": "kojiki-shinpukuji.jpg",
+  "title": "Shinpukuji-bon Kojiki (真福寺本古事記).png",
+  "artist": "Ken'yu (賢瑜), Koten Hozonkai (古典保存会)",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Shinpukuji-bon_Kojiki_(%E7%9C%9F%E7%A6%8F%E5%AF%BA%E6%9C%AC%E5%8F%A4%E4%BA%8B%E8%A8%98).png",
+  "size": [
+   960,
+   1616
+  ]
+ },
+ "kiri-pan-w": {
+  "file": "kiri-pan-w.jpg",
+  "title": "Kirishima panorama (52017682012).jpg",
+  "artist": "Raita Futo from Tokyo, Japan",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Kirishima_panorama_(52017682012).jpg",
+  "size": [
+   3840,
+   1523
+  ]
+ },
+ "art-toyokuni-w": {
+  "file": "art-toyokuni-w.jpg",
+  "title": "Origin of Iwato Kagura Dance Amaterasu by Toyokuni III (Kunisada) 1856.png",
+  "artist": "Toyokuni III (Kunisada)",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Origin_of_Iwato_Kagura_Dance_Amaterasu_by_Toyokuni_III_(Kunisada)_1856.png",
+  "size": [
+   1920,
+   916
+  ]
+ },
+ "art-kunisada-w": {
+  "file": "art-kunisada-w.jpg",
+  "title": "NDL-DC 1312564-Utagawa Kunisada-岩戸神楽のはしまり-cmb.jpg",
+  "artist": "Utagawa Kunisada",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:NDL-DC_1312564-Utagawa_Kunisada-%E5%B2%A9%E6%88%B8%E7%A5%9E%E6%A5%BD%E3%81%AE%E3%81%AF%E3%81%97%E3%81%BE%E3%82%8A-cmb.jpg",
+  "size": [
+   3840,
+   1806
+  ]
  }
 }

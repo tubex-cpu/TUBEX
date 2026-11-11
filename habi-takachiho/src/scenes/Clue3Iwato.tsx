@@ -53,7 +53,7 @@ export const Clue3Iwato = () => {
 				<GavelVerdict verdict="half" strikeAt={captionFrame(c, 13, 14, fps)} />
 			</Beat>
 			<Beat name="どのようにまつられている？" captions={c} from={16}>
-				<Photo id="miya-cedar" move="in" label="どのようにまつられている？" />
+				<Photo id="tj-shizume" move="in" label="どのようにまつられている？" />
 			</Beat>
 		</SceneFrame>
 	);

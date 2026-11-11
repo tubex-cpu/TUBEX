@@ -26,7 +26,7 @@ export const Clue10Unesco = () => {
 				</Stage>
 			</Beat>
 			<Beat name="答えが出るのは2年後" captions={c} from={6} to={7}>
-				<Photo id="yk-tsunoyama" move="in" label="答えが出るのは2年後" />
+				<Photo id="yk-masked-actor" move="in" label="答えが出るのは2年後" />
 			</Beat>
 			<Beat name="判決" captions={c} from={8} to={10}>
 				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 8, 9, fps)} />

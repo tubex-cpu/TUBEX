@@ -13,7 +13,7 @@ export const Clue9Future = () => {
 	return (
 		<SceneFrame captions={c} voice="Clue9Future" label="第9の手がかり" title="高千穂の夜神楽は、消えかけている？">
 			<Beat name="集落の人々が支える" captions={c} from={0} to={1}>
-				<Photo id="yk-masked-actor" move="in" label="集落の人々が支える" />
+				<Photo id="yk-iwato-kaguraden" move="in" label="集落の人々が支える" />
 			</Beat>
 			<Beat name="夜神楽を守る人々" captions={c} from={2} to={2}>
 				<Stage label="夜神楽を守る人々">
@@ -24,7 +24,7 @@ export const Clue9Future = () => {
 				<Photo id="miya-country" move="in" label="過疎と高齢化" />
 			</Beat>
 			<Beat name="新しい保存会" captions={c} from={5} to={6}>
-				<Photo id="yk-daidai" move="in" label="新しい保存会" />
+				<Photo id="iwato-uzume" move="in" label="新しい保存会" />
 			</Beat>
 			<Beat name="2026年2月" captions={c} from={7} to={7}>
 				<Stage label="2026年2月">

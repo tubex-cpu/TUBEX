@@ -20,8 +20,8 @@ export const Clue4Shrine = () => {
 			<Beat name="本殿のない神社" captions={c} from={1} to={2}>
 				<Photo id="iwato-west" move="in" label="本殿のない神社" />
 			</Beat>
-			<Beat name="切り立った崖の洞窟" captions={c} from={3} to={4}>
-				<Photo id="gorge-wall" move="in" label="切り立った崖の洞窟" />
+			<Beat name="神職さえ立ち入らない聖域" captions={c} from={3} to={4}>
+				<Photo id="miya-cedar" move="in" label="神職さえ立ち入らない聖域" />
 			</Beat>
 			<Beat name="遥拝所から拝む" captions={c} from={5} to={5}>
 				<Photo id="iwato-ogatama" move="in" label="遥拝所から拝む" />
