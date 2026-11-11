@@ -413,7 +413,7 @@ const S08: React.FC<SceneProps> = ({f, T}) => {
   const vain = c(2), sloth = c(3), envy = c(4);
   const back = f >= LT(T, 's08', 8) ? seg(f, LT(T, 's08', 8), LT(T, 's08', 8) + 30) : 0;
   const total = 8 * 180 + 7 * 32;
-  const showMerge = f >= LT(T, 's08', 1) && f < LT(T, 's08', 6);
+  const showMerge = f >= LT(T, 's08', 1) && f < LT(T, 's08', 5); // v2: 下の赤い大きな文字（s08 の5行目〜）と重ならないよう、そこで消す
   return (
     <AbsoluteFill>
       <CardRow state={(i) => (i === 6 ? {p: 1, crumble: vain} : i === 5 ? {p: 1, crumble: sloth * (1 - back), glow: back} : {p: 1})} y={170} />
