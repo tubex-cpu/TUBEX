@@ -5,6 +5,7 @@ import {Brain3D, ExtraGlow, projectToScreen} from '../three/Brain3D';
 import {CameraRig, ease} from '../three/common';
 import {FONT} from '../theme';
 import {K, clamp} from './ui';
+import {WHITE} from './mode';
 
 export type SceneProps = {f: number; dur: number; T: (id: string, k?: number) => number; E: (id: string) => number};
 export const W = 1920, H = 1080;
@@ -36,7 +37,7 @@ export const WhiteStudio: React.FC<{children?: React.ReactNode}> = ({children}) 
 );
 
 // dark board with a soft key light; content kept above the subtitle band
-export const DarkBoard: React.FC<{children?: React.ReactNode; tint?: string}> = ({children, tint = '#222838'}) => (
+export const DarkBoard: React.FC<{children?: React.ReactNode; tint?: string}> = ({children, tint = '#222838'}) => WHITE ? <WhiteStudio>{children}</WhiteStudio> : (
   <AbsoluteFill style={{fontFamily: FONT, color: K.ink, background: `radial-gradient(ellipse at 50% 18%, ${tint} 0%, #0c0f16 62%, #07080b 100%)`}}>
     <AbsoluteFill style={{background: 'radial-gradient(ellipse at 50% 108%, rgba(232,196,106,0.10) 0%, rgba(0,0,0,0) 45%)'}} />
     {children}
@@ -184,7 +185,8 @@ export const Bars: React.FC<{f: number; at: number; items: {label: string; v: nu
 };
 
 // numbered step card (experiment procedure)
-export const StepCard: React.FC<{f: number; at: number; n: string; text: string; x?: number; y?: number; w?: number; light?: boolean}> = ({f, at, n, text, x = 120, y = 90, w = 760, light = false}) => {
+export const StepCard: React.FC<{f: number; at: number; n: string; text: string; x?: number; y?: number; w?: number; light?: boolean}> = ({f, at, n, text, x = 120, y = 90, w = 760, light: light0 = false}) => {
+  const light = light0 || WHITE;
   const {fps} = useVideoConfig();
   if (f < at) return null;
   const s = spring({frame: f - at, fps, config: {damping: 16, stiffness: 120}});

@@ -2,8 +2,10 @@ import {AbsoluteFill, Easing, Sequence, interpolate, staticFile, useCurrentFrame
 import timeline from '../../data/timeline_full.json';
 import {FONT} from '../theme';
 import {SceneProps} from './kit';
+import {WHITE} from './mode';
 import {SCENES_L1} from './ScenesL1';
 import {SCENES_L2} from './ScenesL2';
+import {SCENES_W} from './ScenesW';
 
 const FPS = 30;
 const XF = 8;
@@ -13,7 +15,7 @@ type Line = {id: string; start: number; end: number; chunks: Chunk[]};
 const LINES = timeline.lines as Line[];
 const lineById = new Map(LINES.map((l) => [l.id, l]));
 const SCENES = timeline.scenes as {id: string; start: number; line: string}[];
-const ALL: Record<string, React.FC<SceneProps>> = {...SCENES_L1, ...SCENES_L2};
+const ALL: Record<string, React.FC<SceneProps>> = {...SCENES_L1, ...SCENES_L2, ...(WHITE ? SCENES_W : {})};
 // scenes with a bright background: subtitles there get a faint shadow (owner 2026-11-04), elsewhere none
 const LIGHT = new Set(['s01', 's02', 's03', 's05', 's07', 's10', 's14', 's20', 's22', 's28', 's30', 's31', 's37']);
 
@@ -117,7 +119,7 @@ export const SubCard: React.FC = () => {
   const len = segs.reduce((n, s) => n + [...s.t].length, 0);
   const size = Math.min(74, Math.floor(1700 / Math.max(1, len * 1.04)));
   const col = (k: string) => (k === 'r' ? '#ff3b30' : k === 'y' ? '#ffd60a' : '#ffffff');
-  const light = LIGHT.has(sceneAt((c.start + c.end) / 2));
+  const light = WHITE || LIGHT.has(sceneAt((c.start + c.end) / 2));
   const shadow = light ? '0 2px 8px rgba(0,0,0,0.55), 0 0 3px rgba(0,0,0,0.5)' : 'none';
   return (
     <AbsoluteFill style={{justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 46}}>
