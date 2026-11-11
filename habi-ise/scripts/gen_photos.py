@@ -1,4 +1,4 @@
-"""public/photos/credits.json から src/data/photos.ts を作る（マチュピチュ判決）。
+"""public/photos/credits.json から src/data/photos.ts を作る（伊勢判決）。
   python3 scripts/gen_photos.py
 説明（desc）は写真リストを作ったときの表（scripts/photo-desc.json）を使う。"""
 import json, re
@@ -8,10 +8,10 @@ ROOT = Path(__file__).resolve().parent.parent
 cr = json.loads((ROOT / 'public/photos/credits.json').read_text())
 desc = json.loads((ROOT / 'scripts/photo-desc.json').read_text())
 # 縦長・極端な横長・地図は全体を見せる（contain）。人物の顔がある写真と地図は、テロップを下に置く
-CONTAIN = {'map-gohring', 'map-1912', 'ng-cover-1913'}
+CONTAIN = {'mirror-hirabaru-drawing', 'shinpo-tachi'}
 # 明るい地図は、夜の画面に合うよう色を反転させる
 FILTER = {}
-FACE = {'pachacuti-brooklyn', 'pachacuti-statue', 'aguas-1', 'bingham-portrait', 'bingham-lc', 'bingham-tent', 'bingham-espiritu', 'guaman-chasqui', 'atahualpa-capture'}
+FACE = {'kenji-2019', 'iwato-kunisada-w', 'antoku-portrait', 'genpei-byobu-w', 'amaterasu-kyosai', 'orochi-chikanobu-w', 'takeru-gekko', 'takeru-yoshitoshi', 'iwato-toshimasa-w', 'orochi-yoshitoshi-w', 'antoku-engi', 'dannoura-sadahide-w', 'sengyo-kuniyoshi', 'tenson-korin', 'meiji-kami-w', 'enthronement-2019'}
 lines = []
 for pid, c in cr.items():
     w, h = c.get('size', [1, 1])

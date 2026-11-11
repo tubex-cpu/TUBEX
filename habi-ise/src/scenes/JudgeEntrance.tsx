@@ -8,9 +8,9 @@ import {SceneFrame} from '../components/SceneFrame';
 import {judgeEntranceCaptions as c} from '../data/captions';
 import {colors, gothicFamily, minchoFamily} from '../theme';
 
-const clues = ['発見者？', '本当の名？', '要塞？', '建てた年？', '女性の都？', '地元の人？', 'スペイン？', '石組み？', '日本と？', '全体像？'];
+const clues = ['冬至の朝日？', '最初から伊勢？', 'すべて皇居？', '見られない？', 'ヘブライ文字？', '剣は祟る？', '壇ノ浦に沈んだ？', '見た人は？', '伊勢の木？'];
 
-// 今夜の10の手がかり
+// 今夜の9の手がかり
 const ClueRow = () => {
 	const frame = useCurrentFrame();
 	return (
@@ -124,9 +124,9 @@ export const JudgeEntrance = () => (
 			<NamePlate />
 		</Beat>
 		<Beat name="今夜の問い" captions={c} from={2} to={3}>
-			<Photo id="mp-classic-dd60" move="in" label="誰が、何のために？" />
+			<Photo id="naiku-ujibashi-snow" move="in" label="三種の神器は、どこに？" />
 		</Beat>
-		<Beat name="10の手がかり" captions={c} from={4}>
+		<Beat name="9の手がかり" captions={c} from={4}>
 			<ClueRow />
 		</Beat>
 	</SceneFrame>

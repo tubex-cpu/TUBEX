@@ -18,12 +18,12 @@ URL = 'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'
 OUT_W, OUT_H = 2560, 1440
 # 名前: (中心の経度, 中心の緯度, 横に映す経度の幅, タイルのズーム)
 VIEWS = {
-	'sudamerica': (-70.0, -13.0, 44.0, 5),
-	'cusco': (-72.55, -13.25, 2.6, 9, 1900),
-	'machupicchu': (-72.53, -13.165, 0.24, 13, 1500),
-	'fukushima': (140.55, 37.48, 1.5, 10),
+	'kinki': (136.3, 34.95, 3.6, 9),
+	'honshu': (135.4, 34.9, 11.0, 7),
 }
 ONLY = set(sys.argv[1:])
+# 海より高い湖：(経度, 緯度, 湖面の標高m)
+LAKES = [(136.08, 35.25, 81.5)]
 
 
 def merc_y(lat):
@@ -92,6 +92,17 @@ def render(v):
 		# 狭い範囲の地図では、画面の端につながる海だけを水面にする（低い田んぼを湖と見まちがえないため）
 		edge_ids = set(np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))) - {0}
 		water &= np.isin(lab, list(edge_ids))
+	# 海より高い湖（琵琶湖など）：湖面の標高に近い、種の点につながる範囲を水面にする
+	for (llon, llat, h) in LAKES:
+		if not (lon0 < llon < lon1 and lat1 < llat < lat0):
+			continue
+		sx = int((llon - lon0) / (lon1 - lon0) * OUT_W)
+		sy = int((merc_y(lat0) - merc_y(llat)) / (merc_y(lat0) - merc_y(lat1)) * OUT_H)
+		band = np.abs(e - h) <= 2.0
+		band = np.asarray(Image.fromarray((band * 255).astype(np.uint8)).filter(ImageFilter.MedianFilter(5))) > 127
+		lb, _ = ndimage.label(band)
+		if lb[sy, sx]:
+			water |= lb == lb[sy, sx]
 	lab, n = ndimage.label(~water)
 	size = ndimage.sum(~water, lab, range(1, n + 1))
 	water |= np.isin(lab, np.nonzero(size < small * 0.25)[0] + 1)
