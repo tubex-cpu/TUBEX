@@ -73,7 +73,7 @@ const S00: React.FC<SceneProps> = ({f, dur, T}) => {
           <div style={{position: 'relative', marginTop: 16, padding: '18px 30px', borderRadius: 20, background: 'rgba(224,83,61,0.22)', border: '5px solid #e0533d', transform: `scale(${s})`, transformOrigin: 'center', boxShadow: `0 0 ${40 + 30 * spot}px rgba(255,59,48,0.45)`, display: 'flex', alignItems: 'center', gap: 30}}>
             <div style={{fontSize: 52, fontWeight: 900, color: '#ff7a64', width: 90}}>1位</div>
             <div style={{fontSize: 80}}>🛏️</div>
-            <div style={{fontSize: 78, fontWeight: 900, color: '#ff3b30'}}>睡眠キャンセル界隈</div>
+            <div style={{fontSize: 78, fontWeight: 900, color: '#ff3b30'}}>睡眠キャンセル</div>
           </div>
         )}
       </div>
