@@ -123,7 +123,7 @@ const S00: React.FC<SceneProps> = ({f, T, dur}) => {
             <div style={{position: 'absolute', left: 760 - p * 1000, top: 60, transform: `rotate(${-p * 28}deg)`, padding: 18, borderRadius: 26, background: '#fff', boxShadow: '0 30px 70px rgba(0,0,0,0.25)'}}>
               <FaceCard w={364} hue={330} light /><div style={{textAlign: 'center', fontSize: 64, color: RED, fontWeight: 900, marginTop: 6}}>✕</div>
             </div>
-            <Ring p={seg(lf, 4, 34)} x={1480} y={300} r={110} label="1秒" />
+            <Ring p={seg(lf, 4, 34)} x={1480} y={300} r={110} label="0.2秒" />
             <Pop f={lf} at={50} style={TX({top: 680, fontSize: 52, color: SUB})}>写真だけで 次へ</Pop>
           </WhiteStudio>
         );
