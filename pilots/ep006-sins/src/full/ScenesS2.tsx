@@ -61,7 +61,7 @@ const S27: React.FC<SceneProps> = ({f, T}) => {
       <Pie v={v} x={180} y={110} r={300} />
       <Pop f={f} at={LT(T, 's27', 1) + 30} style={{position: 'absolute', left: 260, top: 740, fontFamily: FONT, fontSize: 40, fontWeight: 900, color: K.sub}}>灰色＝心がよそに行っていた</Pop>
       <Pop f={f} at={LT(T, 's27', 1, 1)} style={{position: 'absolute', left: 820, top: 120, fontFamily: FONT, fontSize: 110, fontWeight: 900, color: K.ink}}>およそ半分</Pop>
-      <Card f={f} at={LT(T, 's27', 2)} x={820} y={300} w={980} size={38} text="心がよそに行っているときは どんな活動でも 幸せではなかった" />
+      <Card f={f} at={LT(T, 's27', 2)} x={820} y={300} w={980} size={38} text={<>心がよそに行っているときは<br />どんな活動でも 幸せではなかった</>} />
       <Card f={f} at={LT(T, 's27', 3)} x={820} y={460} w={980} size={38} color="#ff7a64" text="心がよそに行った あとに 不幸せな気分が来る" />
       {f >= LT(T, 's27', 4) && <Pop f={f} at={LT(T, 's27', 4, 1)} style={{position: 'absolute', left: 820, top: 630, fontFamily: FONT, fontSize: 46, fontWeight: 900, color: K.gold}}>心がさまよう → 悲しくなる</Pop>}
     </DarkBoard>
@@ -84,7 +84,7 @@ const S28: React.FC<SceneProps> = ({f, T}) => {
         );
       })}
       <StepCard f={f} at={LT(T, 's28', 1)} n="長い期間" text="地域に住む大人たちを 追いかける" x={160} y={50} w={800} />
-      <StepCard f={f} at={LT(T, 's28', 2)} n="最初に" text="嫌な気分を くり返し考える傾向を調べる" x={1000} y={50} w={800} />
+      <StepCard f={f} at={LT(T, 's28', 2)} n="最初に" text="嫌な気分を くり返し考える傾向を調べる" x={960} y={50} w={900} />
       {res && <Card f={f} at={LT(T, 's28', 4)} x={360} y={620} w={1200} color="#ff7a64" text="くり返し考える人ほど あとでうつ病を新しく発症しやすい" />}
     </DarkBoard>
   );
@@ -167,7 +167,7 @@ const S33: React.FC<SceneProps> = ({f, T}) => {
       {res && (
         <>
           {['ゆっくり呼吸する', '体の力を抜く', 'しばらく時間を置く'].map((t, i) => <Card key={i} f={f} at={LT(T, 's33', 2) + i * 12} light x={680} y={160 + i * 120} w={560} size={40} text={t} />)}
-          <Card f={f} at={LT(T, 's33', 2, 2)} light x={1260} y={160} w={560} size={40} color="#2e8a5a" text="怒りも攻撃も下がる 年齢・性別・国を問わず" />
+          <Card f={f} at={LT(T, 's33', 2, 2)} light x={1260} y={160} w={560} size={40} color="#2e8a5a" text={<>怒りも攻撃も下がる<br />年齢・性別・国を問わず</>} />
           {f >= LT(T, 's33', 3) && <Card f={f} at={LT(T, 's33', 3)} light x={680} y={540} w={1140} size={40} color="#c0392b" text="発散を支持する結果は 出なかった" />}
         </>
       )}
@@ -340,10 +340,10 @@ const S43: React.FC<SceneProps> = ({f, T}) => {
   const k = seg(f, LT(T, 's43', 1), LT(T, 's43', 1) + 30);
   return (
     <AbsoluteFill>
-      <BrainBox><BrainShot f={f} x={-300} glows={[{pos: VSTR, color: '#ff4a8a', k: 0.2 + 0.9 * k * pulse, size: 0.5}]} labels={[{pos: VSTR[0], text: 'ごほうびに反応する場所', note: 'いいねが多い写真で 強く働く', color: '#ff7aa8', k, dx: 380, dy: -230}]} /></BrainBox>
-      <Card f={f} at={LT(T, 's43', 1, 2)} x={1160} y={110} w={700} size={38} text="自分の写真でも 他人の写真でも" />
-      {f >= LT(T, 's43', 2) && <Card f={f} at={LT(T, 's43', 2)} x={1160} y={270} w={700} size={38} color="#ff7a64" text="いいねが多いと 本人も押しやすい 危ない行動の写真でも" />}
-      {f >= LT(T, 's43', 3) && <Card f={f} at={LT(T, 's43', 3)} x={1160} y={470} w={700} size={34} text="10代の実験" />}
+      <BrainBox><BrainShot f={f} x={-300} glows={[{pos: VSTR, color: '#ff4a8a', k: 0.2 + 0.9 * k * pulse, size: 0.5}]} labels={[{pos: VSTR[0], text: 'ごほうびに反応する場所', note: 'いいねが多い写真で 強く働く', color: '#ff7aa8', k, dx: 300, dy: -230}]} /></BrainBox>
+      <Card f={f} at={LT(T, 's43', 1, 2)} x={1160} y={360} w={700} size={38} text="自分の写真でも 他人の写真でも" />
+      {f >= LT(T, 's43', 2) && <Card f={f} at={LT(T, 's43', 2)} x={1160} y={500} w={700} size={38} color="#ff7a64" text={<>いいねが多いと 本人も押しやすい<br />危ない行動の写真でも</>} />}
+      {f >= LT(T, 's43', 3) && <Card f={f} at={LT(T, 's43', 3)} x={60} y={50} w={300} size={34} text="10代の実験" />}
       {f >= LT(T, 's43', 4) && <Big f={f} at={LT(T, 's43', 4)} y={700} size={60} color={K.gold} text="あなたも 数を一日に何度も確かめていない？" />}
     </AbsoluteFill>
   );
@@ -442,7 +442,7 @@ const S48: React.FC<SceneProps> = ({f, T}) => (
       </>
     )}
     {f >= LT(T, 's48', 2) && f < LT(T, 's48', 3) && <Big f={f} at={LT(T, 's48', 2)} y={240} size={62} color={K.gold} text="間違いに気づく力が足りないと できていないことにも気づけない" />}
-    {f >= LT(T, 's48', 3) && <Card f={f} at={LT(T, 's48', 3)} x={360} y={250} w={1200} size={38} text="「統計の見かけで出ている部分がある」という反論もあり 議論が続いている" />}
+    {f >= LT(T, 's48', 3) && <Card f={f} at={LT(T, 's48', 3)} x={360} y={250} w={1200} size={38} text={<>「統計の見かけで出ている部分がある」という反論もあり<br />議論が続いている</>} />}
   </DarkBoard>
 );
 const S49: React.FC<SceneProps> = ({f, T}) => (
@@ -451,8 +451,8 @@ const S49: React.FC<SceneProps> = ({f, T}) => (
     <div style={{position: 'absolute', left: 600, top: 300, fontSize: 60, fontWeight: 900, color: '#c0392b'}}>{'こいつ分'.slice(0, Math.min(4, Math.floor(f / 6)))}</div>
     <Hand x={600 + Math.min(4, Math.floor(f / 6)) * 62} y={250} rot={-30} scale={0.8} />
     {f >= LT(T, 's49', 1) && <AbsoluteFill style={{background: `rgba(8,8,6,${0.75 * seg(f, LT(T, 's49', 1), LT(T, 's49', 1) + 15)})`}} />}
-    {f >= LT(T, 's49', 1) && f < LT(T, 's49', 2) && <Big f={f} at={LT(T, 's49', 1)} y={340} size={64} color="#ff7a64" text="そのあいだに 周りの評価は下がっていく" />}
-    {f >= LT(T, 's49', 2) && <Big f={f} at={LT(T, 's49', 2)} y={340} size={70} color="#ffd060" text="傲慢の怖さは 自分では気づけないこと" />}
+    {f >= LT(T, 's49', 1) && f < LT(T, 's49', 2) && <Big f={f} at={LT(T, 's49', 1)} y={600} size={64} color="#ff7a64" text="そのあいだに 周りの評価は下がっていく" />}
+    {f >= LT(T, 's49', 2) && <Big f={f} at={LT(T, 's49', 2)} y={600} size={70} color="#ffd060" text="傲慢の怖さは 自分では気づけないこと" />}
     <Vignette />
   </AbsoluteFill>
 );

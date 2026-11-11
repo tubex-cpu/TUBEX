@@ -548,7 +548,7 @@ const S14: React.FC<SceneProps> = ({f, T}) => {
     <AbsoluteFill>
       <BrainBox><BrainShot f={f} x={-260} glows={[{pos: DLPFC, color: '#3fd6c4', k: 0.15 + 1.0 * k, size: 0.5}, {pos: VSTR, color: '#ffb648', k: 1.1 - 0.85 * k, size: 0.45}]}
         labels={[{pos: DLPFC[0], text: '考えをまとめる場所', note: '働きが上がる', color: '#3fd6c4', k, dx: 300, dy: -200}, {pos: VSTR[0], text: '欲しい気持ちの場所', note: '働きが下がる', color: '#ffb648', k, dx: 380, dy: 160}]} /></BrainBox>
-      {f < LT(T, 's14', 3) && <Card f={f} at={LT(T, 's14', 1)} x={1180} y={560} w={680} size={38} text="長い目で考えると たばこも食べ物も 欲しい気持ちが下がった" />}
+      {f < LT(T, 's14', 3) && <Card f={f} at={LT(T, 's14', 1)} x={1180} y={300} w={680} size={38} text="長い目で考えると たばこも食べ物も 欲しい気持ちが下がった" />}
       {f >= LT(T, 's14', 3) && <Big f={f} at={LT(T, 's14', 3)} y={700} size={66} color={K.gold} text="欲しい気持ちは 考え方で変えられる" />}
     </AbsoluteFill>
   );
@@ -581,7 +581,7 @@ const S17: React.FC<SceneProps> = ({f, T}) => {
       {f >= LT(T, 's17', 2) && f < LT(T, 's17', 3) && <Big f={f} at={LT(T, 's17', 2)} y={260} size={64} text="欲が高まると 判断はどう変わるか" />}
       <StepCard f={f} at={LT(T, 's17', 3)} n="男子大学生" text="二つの状態で 同じ質問に答える" x={560} y={120} w={800} />
       <StepCard f={f} at={LT(T, 's17', 5)} n="1回目" text="ふだんの状態で「こういう場面で こうするか」" x={560} y={290} w={800} />
-      {f >= LT(T, 's17', 5, 2) && <Card f={f} at={LT(T, 's17', 5, 2)} x={560} y={460} w={800} size={34} color="#ff7a64" text="ふだんなら「絶対にしない」危ない選択や だます選択も入っている" />}
+      {f >= LT(T, 's17', 5, 2) && <Card f={f} at={LT(T, 's17', 5, 2)} x={560} y={460} w={800} size={34} color="#ff7a64" text={<>ふだんなら「絶対にしない」<br />危ない選択や だます選択も入っている</>} />}
       <StepCard f={f} at={LT(T, 's17', 6)} n="2回目" text="別の日 気持ちが高まった状態で 同じ質問" x={560} y={640} w={800} />
     </DarkBoard>
   );
@@ -645,7 +645,7 @@ const S22: React.FC<SceneProps> = ({f, T}) => {
   return (
     <AbsoluteFill>
       <BrainBox><BrainShot f={f} x={-280} glows={[{pos: VSTR, color: '#ffd166', k: 0.1 + 1.0 * want * (1 + 0.15 * Math.sin(f / 5)), size: 0.48}, {pos: R.ins, color: '#ff3b30', k: 0.05 + 1.0 * pain, size: 0.45}]}
-        labels={[{pos: VSTR[0], text: 'ごほうびを期待', note: '欲しい商品を見た瞬間', color: '#ffd166', k: want, dx: 360, dy: -220}, {pos: R.ins[0], text: '嫌なことに反応', note: '値段が高すぎる', color: '#ff7a64', k: pain, dx: 420, dy: 140}]} /></BrainBox>
+        labels={[{pos: VSTR[0], text: 'ごほうびを期待', note: '欲しい商品を見た瞬間', color: '#ffd166', k: want, dx: 360, dy: -120}, {pos: R.ins[0], text: '嫌なことに反応', note: '値段が高すぎる', color: '#ff7a64', k: pain, dx: 420, dy: 140}]} /></BrainBox>
       {pred && <Card f={f} at={LT(T, 's22', 3)} x={1160} y={110} w={700} size={38} color={K.gold} text="脳の働きを見るほうが 本人に聞くより正確に「買うか」を予測できた" />}
       {f >= LT(T, 's22', 4) && <Big f={f} at={LT(T, 's22', 4)} y={700} size={62} color="#ff7a64" text="決める前に 綱引きはもう終わっている" />}
     </AbsoluteFill>
@@ -666,7 +666,7 @@ const S23: React.FC<SceneProps> = ({f, T}) => {
       {!res && <Big f={f} at={LT(T, 's23', 0)} y={90} size={66} text="手に入れ続けると 幸せになる？" />}
       {res && (
         <>
-          <Card f={f} at={LT(T, 's23', 3)} x={1100} y={90} w={760} size={38} color="#ff7a64" text="お金や物を大事にする人ほど 幸福感が低い" />
+          <Card f={f} at={LT(T, 's23', 3)} x={1100} y={90} w={760} size={38} color="#ff7a64" text={<>お金や物を大事にする人ほど<br />幸福感が低い</>} />
           <Card f={f} at={LT(T, 's23', 3, 2)} x={1100} y={260} w={760} size={34} text="体に悪い行動・浪費・自分を低く見る気持ちとの結びつきは特に強い" />
           {f >= LT(T, 's23', 4) && <Card f={f} at={LT(T, 's23', 4)} x={1100} y={460} w={760} size={32} color={K.gold} text="結びつき 原因と証明したものではない" />}
         </>
