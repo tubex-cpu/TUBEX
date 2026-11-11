@@ -1,5 +1,5 @@
-"""マチュピチュ判決：youtube.md（タイトル案・概要欄・チャプター・参考資料・クレジット）と時刻入り台本を作る。
-  python3 scripts/gen_youtube_machu.py"""
+"""高千穂判決：youtube.md（タイトル案・概要欄・チャプター・参考資料・クレジット）と時刻入り台本を作る。
+  python3 scripts/gen_youtube_takachiho.py"""
 import re
 from pathlib import Path
 
@@ -22,7 +22,7 @@ def hms(f):
 
 
 # チャプター名：短く、答えを言わずに引っかかる言い方
-CHAP = ['密林の下に、日本のレーザー', 'ハビ判事、開廷', '壁に残された1902年の名前', '本当の名前は？', '要塞か、離宮か', '骨が示した年代', '太陽の処女の伝説', '遺伝子が語る住人たち', 'スペイン人は知っていた？', '地面の下の秘密', '福島とマチュピチュの縁', '密林の下の「候補」', '天空の都市の本当の物語', '残された謎', '10の判決', '閉廷']
+CHAP = ['年に一度、33番すべてを舞う2日間', 'ハビ判事、開廷', '夜神楽はショー？', '800年の歴史', '天岩戸はどこにある？', '本殿のない神社', '二つの高千穂', '太陽が消えた日', '天照大神と卑弥呼', 'アメノウズメの舞', '舞い手たちのいま', '神楽とユネスコ', '天岩戸の本当の物語', '残された謎', '10の判決', '閉廷']
 assert len(CHAP) == len(order)
 chap = '\n'.join(f'{hms(s)} {c}' for s, c in zip(starts, CHAP))
 
@@ -35,7 +35,7 @@ for ln in lines:
     else:
         out.append(ln)
 dur = hms(total)
-(ROOT / '台本_マチュピチュ判決.txt').write_text(f'ハビ判事 台本：マチュピチュ判決\n（ナレーション：VOICEVOX 玄野武宏／動画の長さ {dur}。見出しの時刻は完成動画の実際の位置）\n\n' + '\n'.join(out).lstrip('\n') + '\n')
+(ROOT / '台本_高千穂判決.txt').write_text(f'ハビ判事 台本：高千穂判決\n（ナレーション：VOICEVOX 玄野武宏／動画の長さ {dur}。見出しの時刻は完成動画の実際の位置）\n\n' + '\n'.join(out).lstrip('\n') + '\n')
 
 # 写真の登場順クレジット
 ids = []
@@ -46,7 +46,7 @@ for sc in order:
 ph = (ROOT / 'src/data/photos.ts').read_text()
 cred = {m.group(1): m.group(2) for m in re.finditer(r"\t'([\w-]+)': \{file: '[^']+', credit: '([^']+)'", ph)}
 credits_full = '\n'.join('・' + cred[i].replace(' / Wikimedia Commons', '') for i in ids)
-(ROOT / '写真クレジット一覧.md').write_text('# マチュピチュ判決：写真・資料のクレジット（登場順・すべて Wikimedia Commons ほか）\n\n' + credits_full + '\n')
+(ROOT / '写真クレジット一覧.md').write_text('# 高千穂判決：写真・資料のクレジット（登場順・すべて Wikimedia Commons ほか）\n\n' + credits_full + '\n')
 
 # 概要欄は5000字までなので、写真のクレジットはライセンスごとに撮影者・作者名をまとめる
 import json, collections
@@ -59,7 +59,7 @@ NAME = {
     'Korea.net / Korean Culture and Information Service (Jeon Han)': 'Korea.net（Jeon Han）',
     'ウィキ太郎 (Wiki Taro)': 'ウィキ太郎', 'MODIS Land Rapid Response Team, NASA GSFC': 'NASA',
 }
-PD_WORKS = ('ハイラム・ビンガムの1911〜1912年の調査写真、グアマン・ポマの絵、ナショナル ジオグラフィック1913年4月号 ほか')
+PD_WORKS = ('浮世絵・古典籍・古写真（春斎年昌、歌川国貞、北渓、歌川国芳、鈴木春信、真福寺本古事記 ほか）')
 by = collections.defaultdict(list)
 pd = []
 for i in ids:
@@ -77,36 +77,33 @@ lines = [f'{l}：' + '、'.join(by[l]) for l in ORDER if by[l]]
 lines.append('パブリックドメイン・CC0：' + PD_WORKS + ('、写真：' + '、'.join(dict.fromkeys(pd)) if pd else ''))
 credits = '\n'.join(lines)
 
-md = f'''# YouTube 投稿用テキスト：マチュピチュ判決
+md = f'''# YouTube 投稿用テキスト：高千穂判決
 
 ## タイトル案
 
-- マチュピチュは何のための都市だった？ 日本のレーザーが密林の下に見つけた"もう一つの姿"（推奨）
-- マチュピチュの「発見者」はビンガムではない？ 10の通説をハビ判事が検証
-- マチュピチュの本当の名前と住人――骨と遺伝子、そして福島の会社のレーザーが語ること
+- 天岩戸は本当に高千穂にある？ 年に一度、33番すべてを舞う夜神楽の謎（推奨）
+- 天照大神は卑弥呼だったのか？ 天岩戸神話と「卑弥呼の日食」をハビ判事が検証
+- 太陽が消えた日――高千穂の夜神楽が伝える天岩戸神話の正体
 
 ## 概要欄
 
-南米ペルー、標高およそ2430mの尾根に眠る石の都市・マチュピチュ。1911年にアメリカの探検家ハイラム・ビンガムが「発見した」とされてきたこの遺跡は、本当に失われた都市だったのか。
-ビンガムより前に壁に残されていた「1902年」の名前。インカ時代の本当の名前は「ワイナピチュ」だった可能性。骨の放射性炭素年代が示した1420年ごろという年代。そして2023年の遺伝子の研究が明らかにした、帝国中から集められた住人たち。
-さらに2026年3月、福島県の測量会社ふたばとJICA、ペルー文化省が、ドローンに積んだレーザーで密林の下を調べ、段々畑の全体像と、いくつもの「遺構の候補」を見つけました。なぜ福島の会社だったのか――その裏には、マチュピチュ村の初代村長となった福島出身の日本人、野内与吉との縁がありました。
-論文と公式発表をもとに、10の手がかりを閉園後の法廷でハビ判事がひとつずつ裁きます。「分かったこと」と「まだ候補の段階のこと」を分けて判定します。
+2026年11月22日・23日。宮崎県高千穂町の高千穂神社で、年に一度だけ、2日間をかけて夜神楽の33番がすべて舞われます。
+太陽の神・天照大神が岩屋に隠れた天岩戸神話。その岩戸を御神体とする神社がある一方で、古事記と日本書紀はこの出来事を高千穂の話としては書いていません。天岩戸は本当に高千穂にあるのか。太陽が隠れた神話は、卑弥呼の時代の日食の記憶なのか。
+国立天文台の研究者による古代の日食の計算、2025年にユネスコ無形文化遺産の提案候補に選ばれた「神楽」の最新の動き、担い手不足の中で舞を受け継ぐ人々まで、資料と報道をもとに、10の手がかりを閉園後の法廷でハビ判事がひとつずつ裁きます。
 
 ▼チャプター
 {chap}
 
 ▼参考資料
-・マチュピチュ遺跡でUAV-LiDAR調査、遺構候補を確認（JICA、2026年3月30日）https://prtimes.jp/main/html/rd/p/000000040.000151049.html
-・マチュピチュの周辺で2.5km以上のインカ道を確認（ペルー文化省／Andina、2026年8月）https://andina.pe/ingles/noticia-peru-25-km-of-inca-trail-identified-in-machu-picchu-archaeological-park-1086970.aspx
-・Burger, Salazar, Nesbitt ほか「New AMS dates for Machu Picchu」Antiquity（2021年）https://doi.org/10.15184/aqy.2021.99
-・Salazar ほか「Insights into the genetic histories and lifeways of Machu Picchu's occupants」Science Advances（2023年）https://pmc.ncbi.nlm.nih.gov/articles/PMC11318671
-・Amado Gonzales & Bauer「The Ancient Inca Town Named Huayna Picchu」Ñawpa Pacha（2022年）https://indigo.uic.edu/articles/journal_contribution/The_Ancient_Inca_Town_Named_Huayna_Picchu/22577419
-・Rowe「Machu-Picchu a la luz de documentos del siglo XVI」Histórica（1990年）https://revistas.pucp.edu.pe/index.php/historica/article/view/8813
-・Machu Picchu older than expected（Yale News、2021年）https://news.yale.edu/2021/08/04/machu-picchu-older-expected-study-reveals
-・ビンガムが撮影したリサラガの書き込み（Andina）https://andina.pe/agencia/noticia-fotografia-hiram-bingham-evidencia-escrito-agustin-lizarraga-1902-machu-picchu-370573.aspx
-・Kenneth Wright へのインタビュー（PBS NOVA）https://www.pbs.org/wgbh/nova/machupicchu/wright.html
-・野内与吉（東京大学総合研究博物館）https://www.um.u-tokyo.ac.jp/web_museum/ouroboros/v19n3/v19n3_nouchi.html
-・マチュピチュ村との友好都市（福島県）https://www.pref.fukushima.lg.jp/sec/11055c/ootamavillhost.html
+・高千穂の夜神楽（観光庁 多言語解説文データベース）https://www.mlit.go.jp/tagengo-db/R1-01021.html
+・令和8年度 高千穂の夜神楽日程表（高千穂町）https://www.town-takachiho.jp/top/soshiki/kikakukanko/2/5/1596.html
+・夜神楽について（高千穂町）https://www.town-takachiho.jp/top/kanko_bunka/yokagura/804.html
+・天岩戸神社 公式サイト https://amanoiwato-jinja.jp/
+・谷川清隆・相馬充「七世紀以前の日食記録と地球の自転」ほか（日本天文学会 2010年秋季年会）https://stg.asj.or.jp/nenkai/archive/2010a/pdf/L18a.pdf
+・谷川清隆・相馬充（国立天文台報、2012年）https://www.nao.ac.jp/contents/about/reports/report-naoj/14-34-1.pdf
+・無形文化遺産の新規提案候補「神楽」（文化庁、2025年11月）https://www.bunka.go.jp/koho_hodo_oshirase/pdf/94306301_01.pdf
+・神楽継承・振興知事連合（宮崎県）https://www.pref.miyazaki.lg.jp/miyazaki-bunkashinko/kanko/bunka/20250327155045.html
+・子ども伝承の集い（UMKテレビ宮崎、2026年2月）https://www.umk.co.jp/news/?date=20260223&id=31769
 
 ▼ハビ判事とは
 信じるのは、話の面白さではなく証拠だけ。
@@ -120,7 +117,7 @@ BGM・効果音：オリジナル
 {credits}
 写真ごとの出典の一覧：https://github.com/tubex-cpu/TUBEX/blob/claude/nice-wright-du0dch/habi-takachiho/写真クレジット一覧.md
 
-#マチュピチュ #インカ帝国 #ペルー #世界遺産 #考古学 #ハビ判事
+#高千穂 #夜神楽 #天岩戸 #天照大神 #卑弥呼 #神話 #ハビ判事
 '''
 (ROOT / 'youtube.md').write_text(md)
 print(chap)

@@ -823,5 +823,49 @@
    1920,
    1280
   ]
+ },
+ "miya-tanada": {
+  "file": "miya-tanada.jpg",
+  "title": "坂元棚田 - panoramio.jpg",
+  "artist": "xpoxoqx",
+  "license": "CC BY 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%E5%9D%82%E5%85%83%E6%A3%9A%E7%94%B0_-_panoramio.jpg",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "miya-cape": {
+  "file": "miya-cape.jpg",
+  "title": "Miyazaki-Hyuga Cape and Nippon maru-xl.jpg",
+  "artist": "Shiro_KUROGI",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Miyazaki-Hyuga_Cape_and_Nippon_maru-xl.jpg",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "miya-ridges": {
+  "file": "miya-ridges.jpg",
+  "title": "祖母山山頂からの傾山.jpg",
+  "artist": "Koda6029",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%E7%A5%96%E6%AF%8D%E5%B1%B1%E5%B1%B1%E9%A0%82%E3%81%8B%E3%82%89%E3%81%AE%E5%82%BE%E5%B1%B1.jpg",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "miya-cedar": {
+  "file": "miya-cedar.jpg",
+  "title": "Mount Sobo, one of the 100 Famous Japanese Mountains, Japan; December 2018 (16).jpg",
+  "artist": "雷太",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mount_Sobo,_one_of_the_100_Famous_Japanese_Mountains,_Japan;_December_2018_(16).jpg",
+  "size": [
+   1920,
+   1280
+  ]
  }
 }
