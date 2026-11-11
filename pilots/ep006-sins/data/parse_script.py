@@ -1,4 +1,4 @@
-"""Parses channels/iq-chinou/drafts/ep006-sins/05_script.md (台本 v1.2・Googleドキュメント v1.2 と同じ) into
+"""Parses channels/iq-chinou/drafts/ep006-sins/05_script.md (台本 v1.3) into
 data/blocks.json: one block per [映像] instruction with the narration lines that follow it."""
 import json, re
 from pathlib import Path
@@ -35,7 +35,9 @@ for raw in body.split("\n"):
             continue
         blocks[-1]["lines"].append(l)
         mode = "nar"
+# 台本 v1.3 で1章（あなたで試す・3ブロック）を削除。場面のIDは v1.2 と同じに保つため s03〜s05 を欠番にする
 for i, b in enumerate(blocks):
-    b["id"] = f"s{i:02d}"
+    n = i if b["ch"].startswith("0.") else i + 3
+    b["id"] = f"s{n:02d}"
 (Path(__file__).parent / "blocks.json").write_text(json.dumps(blocks, ensure_ascii=False, indent=1), encoding="utf-8")
 print(len(blocks), "blocks", sum(len(b["lines"]) for b in blocks), "lines", sum(len("".join(b["lines"]).replace(" ", "")) for b in blocks), "chars")

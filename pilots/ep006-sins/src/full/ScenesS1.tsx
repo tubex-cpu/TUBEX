@@ -270,33 +270,32 @@ export const Notebook: React.FC<{x: number; y: number; w: number; h: number; lin
 );
 
 const S02: React.FC<SceneProps> = ({f, T}) => {
+  // 台本 v1.3：「そのリストは…『七つの大罪』です。」の2文を削除（冒頭は八つで固定）
   const list = f >= LT(T, 's02', 1) && f < LT(T, 's02', 3);
-  const seven = f >= LT(T, 's02', 3) && f < LT(T, 's02', 5);
-  const lab = f >= LT(T, 's02', 5) && f < LT(T, 's02', 7);
-  const prom = f >= LT(T, 's02', 7);
+  const lab = f >= LT(T, 's02', 3) && f < LT(T, 's02', 5);
+  const prom = f >= LT(T, 's02', 5);
   if (prom) return (
     <WhiteStudio>
-      <Pop f={f} at={LT(T, 's02', 7)} style={TXT({top: 50, fontSize: 64, color: '#1d2230', textShadow: 'none'})}>八つの枢要罪</Pop>
+      <Pop f={f} at={LT(T, 's02', 5)} style={TXT({top: 50, fontSize: 64, color: '#1d2230', textShadow: 'none'})}>八つの枢要罪</Pop>
       <div style={{position: 'absolute', left: 230, top: 170, width: 1460}}>
-        {['七つの大罪はもともと八つ 消えた罪は何で なぜ消されたのか', '八つの考えが あなたの脳と心に何をしているのか', '我慢が強い人と弱い人は 何が違うのか', '八つの考えに負けないために 今日から何をすればいいのか'].map((t, i) => (
-          <Card key={i} f={f} at={LT(T, 's02', 8 + i)} light x={0} y={i * 150} w={1460} size={42} text={<><span style={{color: '#c0392b'}}>{['一つ目', '二つ目', '三つ目', '四つ目'][i]}</span>　{t}</>} />
+        {['八つの考えはどうやってリストになり なぜ二つが消されたのか', '八つの考えが あなたの脳と心に何をしているのか', '我慢が強い人と弱い人は 何が違うのか', '八つの考えに負けないために 今日から何をすればいいのか'].map((t, i) => (
+          <Card key={i} f={f} at={LT(T, 's02', 6 + i)} light x={0} y={i * 150} w={1460} size={42} text={<><span style={{color: '#c0392b'}}>{['一つ目', '二つ目', '三つ目', '四つ目'][i]}</span>　{t}</>} />
         ))}
       </div>
     </WhiteStudio>
   );
   if (lab) return (
     <DarkBoard>
-      <BrainBox><BrainShot f={f - LT(T, 's02', 5)} x={0} glows={[{pos: VSTR, color: '#ffd166', k: 0.5 + 0.4 * Math.sin(f / 6), size: 0.45}, {pos: AMYG, color: '#ff5a3d', k: 0.5 + 0.4 * Math.sin(f / 7 + 1), size: 0.4}]} /></BrainBox>
-      <Big f={f} at={LT(T, 's02', 6)} y={700} size={64} color="#ff7a64" text="1600年前の人も 今のあなたも" />
+      <BrainBox><BrainShot f={f - LT(T, 's02', 3)} x={0} glows={[{pos: VSTR, color: '#ffd166', k: 0.5 + 0.4 * Math.sin(f / 6), size: 0.45}, {pos: AMYG, color: '#ff5a3d', k: 0.5 + 0.4 * Math.sin(f / 7 + 1), size: 0.4}]} /></BrainBox>
+      <Big f={f} at={LT(T, 's02', 4)} y={700} size={64} color="#ff7a64" text="1600年前の人も 今のあなたも" />
     </DarkBoard>
   );
-  if (list || seven) return (
+  if (list) return (
     <AbsoluteFill>
       <Desert f={f} />
       <AbsoluteFill style={{background: 'rgba(0,0,0,0.35)'}} />
       {list && <Parchment f={f - LT(T, 's02', 1)} x={560} y={150} w={800} h={660} words={NAMES.map((n) => n[0])} wordsAt={LT(T, 's02', 2) - LT(T, 's02', 1)} />}
       {list && <Big f={f} at={LT(T, 's02', 1) + 10} y={40} size={56} color={K.gold} text="1600年以上前" />}
-      {seven && <Big f={f} at={LT(T, 's02', 4)} y={300} size={150} color="#ffd060" text="「七つの大罪」" />}
     </AbsoluteFill>
   );
   return (
