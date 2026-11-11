@@ -21,7 +21,7 @@ RATE = 1.12
 CACHE = ROOT / "tts_cache"; CACHE.mkdir(parents=True, exist_ok=True)
 (ROOT / "out").mkdir(exist_ok=True)
 # readings for ep006 (longest first where one contains another; replaced in this order)
-READ = [("八つの枢要罪", "ヤッツノスウヨウザイ"), ("枢要罪", "スウヨウザイ"), ("七つの大罪", "ナナツノタイザイ"),
+READ = [("空いて", "スイテ"), ("八つの枢要罪", "ヤッツノスウヨウザイ"), ("枢要罪", "スウヨウザイ"), ("七つの大罪", "ナナツノタイザイ"),
         ("暴食", "ボウショク"), ("色欲", "シキヨク"), ("強欲", "ゴウヨク"), ("憂鬱", "ユウウツ"), ("憤怒", "フンヌ"), ("怠惰", "タイダ"), ("虚飾", "キョショク"), ("傲慢", "ゴウマン"), ("嫉妬", "シット"),
         ("アケディア", "アケディア"), ("真昼の悪魔", "マヒルノアクマ"), ("修道士", "シュウドウシ"), ("修道院", "シュウドウイン"), ("教皇", "キョウコウ"),
         ("1,600年以上前", "センロッピャクネンイジョウマエ"), ("1,600年前", "センロッピャクネンマエ"), ("1,600年", "センロッピャクネン"), ("4世紀", "ヨンセイキ"),
@@ -62,6 +62,8 @@ def chunk(text, limit=24):
                     cuts = [c for c in cuts if p[c - 2] not in "「（" and p[c:c + 1] not in "、。」"]
                     # do not cut inside こと / あと / ひと / とき (ep006: 「別のこと|を」「見ていると|きの」)
                     cuts = [c for c in cuts if not (p[c - 1] == "と" and (p[c - 2] in "こあひもま" or p[c:c + 1] == "き"))]
+                    # nor between と and して (v1.3: 「一つと|して書き残した」)
+                    cuts = [c for c in cuts if not (p[c - 1] == "と" and p[c:c + 2] == "して")]
                 if cuts:
                     k = min(cuts, key=lambda i: abs(i - len(p) / 2))
                     if abs(k - len(p) / 2) < len(p) * 0.35:
@@ -423,12 +425,8 @@ def main():
         if sc["id"] in ("s37",):  # the afternoon clock
             for k in range(8):
                 ma.place(sfx, ma.sfx_tick(), sc["start"] + 0.4 + k * 0.5, 0.45, 0.55)
-    # the eight cards of the check turn over one by one
-    for k in range(8):
-        ma.place(sfx, flip(), L["s04_%d" % k]["start"] - 0.2, 0.9, 0.5)
-        ma.place(sfx, pop(), L["s04_%d" % k]["start"] - 0.05, 0.6, 0.5)
-    # names rise on the backs of the cards; two cards crumble and 嫉妬 is laid down
-    ma.place(sfx, sparkle(), L["s04_11"]["start"] - 0.05, 0.9, 0.6)
+    # 台本 v1.3 で1章（チェックのカード8枚と名前が浮かぶ場面）を削除したので、その効果音もなし
+    # two cards crumble and 嫉妬 is laid down
     for k in (2, 3):
         ma.place(sfx, ma.sfx_noise_swell(0.9), L["s08_%d" % k]["start"] + 0.2, 0.5, 0.5)
     ma.place(sfx, flip(), L["s08_4"]["start"], 0.9, 0.5)

@@ -576,9 +576,9 @@ const S55: React.FC<SceneProps> = ({f, T}) => {
   return (
     <AbsoluteFill>
       <CardRow state={(i) => ({p: 1, glow: i === 3 ? g : 0, dim: i === 3 ? 0 : 0.3})} y={320} {...MROW} mascot={{f, x: 1540, y: 330, rotY: -1.0}} />
-      {f >= LT(T, 's55', 1) && f < LT(T, 's55', 3) && <Big f={f} at={LT(T, 's55', 1)} y={90} size={64} color="#1d2230" light text="一番「自分だ」と感じたのは 何番目？" />}
-      {f >= LT(T, 's55', 2) && f < LT(T, 's55', 3) && <Big f={f} at={LT(T, 's55', 2)} y={760} size={56} color="#c0392b" light text="今夜 その考えが来たら 名前を呼ぶ" />}
-      {f >= LT(T, 's55', 3) && <Big f={f} at={LT(T, 's55', 3)} y={90} size={66} color="#c0392b" light text="あなたを一番壊しているのは どれ？" />}
+      {f >= LT(T, 's55', 0) && f < LT(T, 's55', 2) && <Big f={f} at={LT(T, 's55', 0)} y={90} size={64} color="#1d2230" light text="一番「自分のことだ」と感じたのは どれ？" />}
+      {f >= LT(T, 's55', 1) && f < LT(T, 's55', 2) && <Big f={f} at={LT(T, 's55', 1)} y={760} size={56} color="#c0392b" light text="今夜 その考えが来たら 名前を呼ぶ" />}
+      {f >= LT(T, 's55', 2) && <Big f={f} at={LT(T, 's55', 2)} y={90} size={66} color="#c0392b" light text="あなたを一番壊しているのは どれ？" />}
     </AbsoluteFill>
   );
 };
