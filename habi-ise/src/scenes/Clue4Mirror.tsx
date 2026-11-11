@@ -2,6 +2,7 @@ import {useVideoConfig} from 'remotion';
 import {Beat, captionFrame} from '../components/Beat';
 import {Stage} from '../components/Cinema';
 import {MirrorVessel} from '../components/IseArt';
+import {TimeBar} from '../components/IzumoKit';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {Photo} from '../components/Photo';
 import {SceneFrame} from '../components/SceneFrame';
@@ -23,8 +24,10 @@ export const Clue4Mirror = () => {
 					<MirrorVessel />
 				</Stage>
 			</Beat>
-			<Beat name="皇居の形代の鏡" captions={c} from={5} to={6}>
-				<Photo id="kokyo-chowaden" move="in" label="皇居の形代の鏡" />
+			<Beat name="形代の鏡がたどった歴史" captions={c} from={5} to={6}>
+				<Stage label="形代の鏡がたどった歴史">
+					<TimeBar stops={[{label: '960年', sub: '内裏の火事'}, {label: '1005年', sub: '内裏の火事'}, {label: '1040年', sub: '鏡が\n粒のように', accent: true}]} tone='ember' />
+				</Stage>
 			</Beat>
 			<Beat name="天皇でさえ？" captions={c} from={7} to={8}>
 				<Photo id="mirror-large" move="in" label="天皇でさえ？" />

@@ -24,8 +24,8 @@ export const Clue9Sengu = () => {
 			<Beat name="伊勢へ運び込まれる" captions={c} from={6} to={6}>
 				<Photo id="okihiki-hoeisha" move="in" label="伊勢へ運び込まれる" />
 			</Beat>
-			<Beat name="2026年、お木曳" captions={c} from={7} to={8}>
-				<Photo id="okihiki-okabiki" move="in" label="2026年、お木曳" />
+			<Beat name="市民が木を曳く「お木曳」" captions={c} from={7} to={8}>
+				<Photo id="okihiki-okabiki" move="in" label="市民が木を曳く「お木曳」" />
 			</Beat>
 			<Beat name="五十鈴川の川曳" captions={c} from={9} to={9}>
 				<Photo id="okihiki-kawabiki-w" move="scroll" label="五十鈴川の川曳" />
