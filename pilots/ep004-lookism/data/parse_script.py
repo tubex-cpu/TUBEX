@@ -35,7 +35,13 @@ for raw in body.split("\n"):
             continue
         blocks[-1]["lines"].append(l)
         mode = "nar"
-for i, b in enumerate(blocks):
-    b["id"] = f"s{i:02d}"
+# scene ids stay as in v1 (chapter order before the owner moved 「今、日本で起きていること」 to chapter 2, 2026-11-11)
+ORIG = ["オープニング", "あなたで試す", "顔を見ただけで", "先生も", "10分のSNS", "加工するほど", "見られている意識", "ルッキズムは、うつる", "今、日本で起きている", "子どものころ", "「いい見た目」", "今日からできること", "まとめ"]
+def rank(t):
+    t = t.split(". ", 1)[1]
+    return next(i for i, k in enumerate(ORIG) if t.startswith(k))
+order = sorted(range(len(blocks)), key=lambda i: (rank(blocks[i]["ch"]), i))
+for n, i in enumerate(order):
+    blocks[i]["id"] = f"s{n:02d}"
 (Path(__file__).parent / "blocks.json").write_text(json.dumps(blocks, ensure_ascii=False, indent=1), encoding="utf-8")
 print(len(blocks), "blocks", sum(len(b["lines"]) for b in blocks), "lines", sum(len("".join(b["lines"]).replace(" ", "")) for b in blocks), "chars")

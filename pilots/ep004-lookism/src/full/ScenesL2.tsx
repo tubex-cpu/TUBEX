@@ -4,8 +4,11 @@ import {Vignette} from '../ui/Overlay';
 import {Bars, DarkBoard, SceneProps, StepCard, WhiteStudio, seg} from './kit';
 import {K, MascotOverlay, PersonIcon, Pop, clamp} from './ui';
 import {Card, FaceCard, LT, Mirror} from './ScenesL1';
+import {WHITE} from './mode';
+const SOFTRED = WHITE ? '#c0392b' : '#ff7a64', HIP = WHITE ? '#1d2230' : '#e3e6ee', LOP = WHITE ? '#b9c0cc' : '#55607a', PALE = WHITE ? '#4a6a9a' : '#9fb0d0';
+const Vig: React.FC = () => (WHITE ? null : <Vignette />);
 
-const TXT = (s: React.CSSProperties = {}): React.CSSProperties => ({position: 'absolute', left: 0, right: 0, textAlign: 'center', fontFamily: FONT, fontWeight: 900, textShadow: '0 4px 22px rgba(0,0,0,0.85)', ...s});
+const TXT = (s: React.CSSProperties = {}): React.CSSProperties => ({position: 'absolute', left: 0, right: 0, textAlign: 'center', fontFamily: FONT, fontWeight: 900, textShadow: WHITE ? '0 3px 14px rgba(255,255,255,0.9)' : '0 4px 22px rgba(0,0,0,0.85)', ...s});
 
 // ============ 6. 見られている意識 ============
 const S19: React.FC<SceneProps> = ({f}) => (
@@ -16,7 +19,7 @@ const S19: React.FC<SceneProps> = ({f}) => (
       <svg width="560" height="420" viewBox="0 0 560 420"><path d="M 90 420 C 100 300 180 250 280 250 C 380 250 460 300 470 420 Z" fill="rgba(30,36,48,0.8)" /><rect x="200" y="-40" width="160" height="280" rx="80" fill="rgba(30,36,48,0.8)" /></svg>
       <div style={{position: 'absolute', left: 230 + 20 * Math.sin(f / 5), top: 40, fontSize: 90}}>✋</div>
     </div>
-    <Pop f={f} at={30} style={TXT({top: 150, left: 120, right: 'auto', width: 900, fontSize: 76, color: '#ff7a64'})}>話す内容が 飛ぶ</Pop>
+    <Pop f={f} at={30} style={TXT({top: 150, left: 120, right: 'auto', width: 900, fontSize: 76, color: SOFTRED})}>話す内容が 飛ぶ</Pop>
   </DarkBoard>
 );
 const Door: React.FC<{icon: string; label: string; open: number}> = ({icon, label, open}) => (
@@ -35,7 +38,7 @@ const S20: React.FC<SceneProps> = ({f, T}) => {
     <AbsoluteFill>
       <Mirror f={f} hand={false} />
       <Pop f={f} at={LT(T, 's20', 11) + 10} from="scale" style={TXT({top: 200, fontSize: 100, color: K.gold})}>鏡の前で 何分？</Pop>
-      <Vignette />
+      <Vig />
     </AbsoluteFill>
   );
   if (!res) return (
@@ -54,7 +57,7 @@ const S20: React.FC<SceneProps> = ({f, T}) => {
       <div style={{position: 'absolute', left: 260, top: 80, display: 'flex', gap: 120, fontFamily: FONT}}>
         <Pop f={f} at={LT(T, 's20', 6)} style={{width: 640, padding: 36, borderRadius: 20, background: 'rgba(60,20,20,0.6)', border: '3px solid #ff7a64'}}>
           <div style={{fontSize: 44, fontWeight: 900}}>水着を着た女性</div>
-          <div style={{fontSize: 40, fontWeight: 900, color: '#ff7a64', marginTop: 16}}>恥ずかしさ ↑</div>
+          <div style={{fontSize: 40, fontWeight: 900, color: SOFTRED, marginTop: 16}}>恥ずかしさ ↑</div>
           <div style={{fontSize: 56, fontWeight: 900, color: '#ff3b30', marginTop: 8}}>数学の成績 ↓</div>
         </Pop>
         {f >= LT(T, 's20', 8) && <Pop f={f} at={LT(T, 's20', 8)} style={{width: 520, padding: 36, borderRadius: 20, background: 'rgba(20,24,34,0.8)', border: '3px solid rgba(255,255,255,0.2)'}}>
@@ -63,7 +66,7 @@ const S20: React.FC<SceneProps> = ({f, T}) => {
         </Pop>}
       </div>
       {f >= LT(T, 's20', 7) && f < LT(T, 's20', 9) && <Pop f={f} at={LT(T, 's20', 7)} style={TXT({top: 470, fontSize: 56, color: K.gold})}>一人きりの部屋 誰にも見られていない</Pop>}
-      {f >= LT(T, 's20', 9) && <Pop f={f} at={LT(T, 's20', 9)} from="scale" style={TXT({top: 470, fontSize: 72, color: '#ff7a64'})}>考える力を その場で削っている</Pop>}
+      {f >= LT(T, 's20', 9) && <Pop f={f} at={LT(T, 's20', 9)} from="scale" style={TXT({top: 470, fontSize: 72, color: SOFTRED})}>考える力を その場で削っている</Pop>}
     </DarkBoard>
   );
 };
@@ -103,7 +106,7 @@ const S22: React.FC<SceneProps> = ({f, T}) => {
     <DarkBoard>
       <Card f={f} at={LT(T, 's22', 12)} x={260} y={90} w={1400} text="SNSは 10分で気分を変えた" />
       <Card f={f} at={LT(T, 's22', 12, 1)} x={260} y={230} w={1400} text="体型の悪口は その場で不満を強めた" />
-      <Card f={f} at={LT(T, 's22', 14)} x={260} y={370} w={1400} color="#ff7a64" text="悩む人の周りには 同じ悩みの人が集まる" />
+      <Card f={f} at={LT(T, 's22', 14)} x={260} y={370} w={1400} color={SOFTRED} text="悩む人の周りには 同じ悩みの人が集まる" />
       {f >= LT(T, 's22', 15) && <Pop f={f} at={LT(T, 's22', 15)} from="scale" style={TXT({top: 540, fontSize: 70, color: '#ff3b30'})}>抜け出すきっかけが 周りにない</Pop>}
     </DarkBoard>
   );
@@ -136,7 +139,7 @@ const S23: React.FC<SceneProps> = ({f, T}) => (
     <Pop f={f} at={LT(T, 's23', 1)} style={{position: 'absolute', left: 140, top: 90, fontFamily: FONT, fontSize: 44, fontWeight: 900, color: K.sub}}>20代の女性で BMI18.5未満「やせ」</Pop>
     <Pop f={f} at={LT(T, 's23', 1, 9)} from="scale" style={{position: 'absolute', left: 140, top: 160, fontFamily: FONT, fontSize: 200, fontWeight: 900, color: K.gold}}>20.7％</Pop>
     <div style={{position: 'absolute', left: 150, top: 450, display: 'flex', gap: 20}}>
-      {[0, 1, 2, 3, 4].map((i) => <Pop key={i} f={f} at={LT(T, 's23', 2) + i * 5}><PersonIcon size={120} color={i === 0 ? '#ff7a64' : '#55607a'} /></Pop>)}
+      {[0, 1, 2, 3, 4].map((i) => <Pop key={i} f={f} at={LT(T, 's23', 2) + i * 5}><PersonIcon size={120} color={i === 0 ? SOFTRED : LOP} /></Pop>)}
     </div>
     {f >= LT(T, 's23', 4) && <Pop f={f} at={LT(T, 's23', 4)} style={{position: 'absolute', left: 140, top: 650, fontFamily: FONT, fontSize: 44, fontWeight: 900, color: K.ink}}>この10年 ほとんど変わらない</Pop>}
   </DarkBoard>
@@ -154,7 +157,7 @@ const S24: React.FC<SceneProps> = ({f, T}) => {
         ))}
       </div>
       <Card f={f} at={LT(T, 's24', 1, 1)} x={160} y={270} w={1600} size={40} text="日本は 4か国で一番やせていて 標準体重の子が一番多い" />
-      {res && <Card f={f} at={LT(T, 's24', 2)} x={160} y={410} w={1600} size={40} color="#ff7a64" text="なのに 体型への満足は一番低く およそ半数が「太っている」と思う" />}
+      {res && <Card f={f} at={LT(T, 's24', 2)} x={160} y={410} w={1600} size={40} color={SOFTRED} text="なのに 体型への満足は一番低く およそ半数が「太っている」と思う" />}
       {f >= LT(T, 's24', 4) && <Pop f={f} at={LT(T, 's24', 4)} from="scale" style={TXT({top: 580, fontSize: 70, color: '#ff3b30'})}>かなり深刻な状態</Pop>}
     </DarkBoard>
   );
@@ -173,7 +176,7 @@ const S26: React.FC<SceneProps> = ({f, T}) => (
     <Card f={f} at={LT(T, 's26', 0)} x={140} y={90} w={1000} text="体は細いのに 太っていると思う" />
     <Card f={f} at={LT(T, 's26', 1)} x={140} y={230} w={1000} text="素顔では 外に出られない" />
     <Card f={f} at={LT(T, 's26', 2)} x={140} y={370} w={1000} text="変えられるところは お金で変える" />
-    {f >= LT(T, 's26', 3) && <Pop f={f} at={LT(T, 's26', 3)} from="scale" style={{position: 'absolute', left: 140, top: 540, fontFamily: FONT, fontSize: 60, fontWeight: 900, color: '#ff7a64'}}>見た目に点数をつけ続ける社会</Pop>}
+    {f >= LT(T, 's26', 3) && <Pop f={f} at={LT(T, 's26', 3)} from="scale" style={{position: 'absolute', left: 140, top: 540, fontFamily: FONT, fontSize: 60, fontWeight: 900, color: SOFTRED}}>見た目に点数をつけ続ける社会</Pop>}
   </DarkBoard>
 );
 
@@ -195,7 +198,7 @@ const S27: React.FC<SceneProps> = ({f, T}) => {
         ) : (
           <>
             <Pop f={f} at={LT(T, 's27', 8)} style={TXT({top: 70, fontSize: 50, color: K.gold})}>からかわれた子は 実際の体重に関係なく</Pop>
-            <Card f={f} at={LT(T, 's27', 8, 1)} x={300} y={170} w={1320} color="#ff7a64" text="体への満足が低い　自分への評価が低い　落ち込みが強い" />
+            <Card f={f} at={LT(T, 's27', 8, 1)} x={300} y={170} w={1320} color={SOFTRED} text="体への満足が低い　自分への評価が低い　落ち込みが強い" />
             {f >= LT(T, 's27', 9) && <Card f={f} at={LT(T, 's27', 9)} x={300} y={340} w={1320} size={40} text="5年後も 心の状態や食べ方の乱れと結びついていた" />}
           </>
         )}
@@ -219,10 +222,10 @@ const S27: React.FC<SceneProps> = ({f, T}) => {
       {tail && (
         <>
           <Pop f={f} at={LT(T, 's27', 10)} style={TXT({top: 200, fontSize: 64, color: K.ink})}>軽い一言は 何年も残る</Pop>
-          {f >= LT(T, 's27', 12) && <Pop f={f} at={LT(T, 's27', 12)} style={TXT({top: 340, fontSize: 64, color: '#ff7a64'})}>まだ誰かの中で 鳴り続けている</Pop>}
+          {f >= LT(T, 's27', 12) && <Pop f={f} at={LT(T, 's27', 12)} style={TXT({top: 340, fontSize: 64, color: SOFTRED})}>まだ誰かの中で 鳴り続けている</Pop>}
         </>
       )}
-      <Vignette />
+      <Vig />
     </AbsoluteFill>
   );
 };
@@ -248,7 +251,7 @@ const S29: React.FC<SceneProps> = ({f, T}) => {
     <DarkBoard>
       <Pop f={f} at={LT(T, 's29', 8)} style={TXT({top: 90, fontSize: 60, color: K.ink})}>世界26か国 7千人以上</Pop>
       <Card f={f} at={LT(T, 's29', 8, 1)} x={260} y={220} w={1400} text="魅力的とされる女性の体型は 地域によって違う" />
-      <Card f={f} at={LT(T, 's29', 8, 2)} x={260} y={370} w={1400} color="#ff7a64" text="豊かな地域ほど やせを理想とし 自分の体に不満を持つ" />
+      <Card f={f} at={LT(T, 's29', 8, 2)} x={260} y={370} w={1400} color={SOFTRED} text="豊かな地域ほど やせを理想とし 自分の体に不満を持つ" />
       {f >= LT(T, 's29', 9) && <Pop f={f} at={LT(T, 's29', 9)} from="scale" style={TXT({top: 560, fontSize: 64, color: K.gold})}>生まれた場所と時代の ものさし</Pop>}
     </DarkBoard>
   );
@@ -279,8 +282,8 @@ const S30: React.FC<SceneProps> = ({f, T}) => {
     <AbsoluteFill>
       <Mirror f={f} hand={false} light={0.8} />
       <Pop f={f} at={LT(T, 's30', 10)} style={TXT({top: 160, fontSize: 60, color: K.gold})}>あなたを知っている人の目には 中身が映る</Pop>
-      {f >= LT(T, 's30', 11) && <Pop f={f} at={LT(T, 's30', 11)} style={TXT({top: 300, fontSize: 60, color: '#ff7a64'})}>鏡の点数は あなたを一番知らない人の目</Pop>}
-      <Vignette />
+      {f >= LT(T, 's30', 11) && <Pop f={f} at={LT(T, 's30', 11)} style={TXT({top: 300, fontSize: 60, color: SOFTRED})}>鏡の点数は あなたを一番知らない人の目</Pop>}
+      <Vig />
     </AbsoluteFill>
   );
   const liked = [1, 4, 6];
@@ -326,7 +329,7 @@ const S31: React.FC<SceneProps> = ({f, T}) => (
 );
 const SettingsScreen: React.FC<{f: number}> = ({f}) => (
   <div style={{position: 'absolute', left: 1120, top: 40, width: 520, height: 640, borderRadius: 50, background: '#0f1117', border: '12px solid #2a2e38', padding: '70px 30px', fontFamily: FONT, color: '#fff'}}>
-    <div style={{fontSize: 30, color: '#9fb0d0'}}>アプリの使用時間</div>
+    <div style={{fontSize: 30, color: PALE}}>アプリの使用時間</div>
     <div style={{fontSize: 40, fontWeight: 900, marginTop: 20}}>SNS の上限</div>
     <div style={{marginTop: 30, display: 'flex', gap: 14}}>
       {['30分', '1時間', '2時間'].map((t, i) => <div key={t} style={{flex: 1, padding: '20px 0', textAlign: 'center', borderRadius: 16, fontSize: 34, fontWeight: 900, background: i === 1 && f > 40 ? '#e8c46a' : '#2a2f3a', color: i === 1 && f > 40 ? '#141820' : '#fff'}}>{t}</div>)}
@@ -374,7 +377,7 @@ const S35: React.FC<SceneProps> = ({f}) => (
   <DarkBoard tint="#202a30">
     <TipCard f={f} at={0} n={3} big />
     <div style={{position: 'absolute', left: 1080, top: 110, display: 'flex', gap: 60, alignItems: 'flex-end'}}>
-      <PersonIcon size={220} color="#e3e6ee" glow={0} />
+      <PersonIcon size={220} color={HIP} glow={0} />
       <div style={{fontSize: 100, marginBottom: 80}}>💬</div>
       <PersonIcon size={220} color="#e8c46a" />
     </div>
