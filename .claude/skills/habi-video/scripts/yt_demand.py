@@ -27,7 +27,7 @@ def get(path, **q):
 
 def search(q, **extra):
     d = get('search', part='id', type='video', maxResults=extra.pop('n', 20), regionCode='JP', relevanceLanguage='ja', q=q, **extra)
-    return [i['id']['videoId'] for i in d['items']], d['pageInfo']['totalResults']
+    return [i['id']['videoId'] for i in d['items'] if 'videoId' in i['id']], d['pageInfo']['totalResults']
 
 
 def stats(ids):
