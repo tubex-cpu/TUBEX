@@ -3,16 +3,18 @@
 
 S = {
  'Intro': ('', '', [
-  (0, 0, 'a', "<ReliefMap view='sudamerica' focus={P.machu} zoom={1.6} pins={[{at: P.machu, name: 'マチュピチュ', sub: '標高 約2430m', big: true, t: 15}, {at: P.lima, name: 'リマ', t: 35}]} />", '南米ペルー、アンデスの山の上', True),
-  (1, 1, 'p', 'mp-sunrise-allard', '谷の上の尾根に', 'in'),
-  (2, 3, 'p', 'mp-wayna-pan-w', '誰もが知る遺跡', 'scroll'),
-  (4, 4, 'p', 'old-sameplace', '本当に「発見」だった？', 'in'),
-  (5, 5, 'p', 'wayna-tallest', '本当の名前は？', 'in'),
-  (6, 6, 'p', 'mp-houses-dd47', 'ここに住んでいたのは？', 'in'),
-  (7, 7, 'p', 'cloudforest-1', '密林の下に、何が？', 'in'),
-  (8, 9, 'p', 'adatara-1', 'なぜ、福島の会社が？', 'in'),
-  (10, 10, 'a', "<Cards cards={[{head: '空から', body: 'ドローンに\\n積んだ\\nレーザー', tone: 'dark'}, {head: '骨から', body: '放射性炭素\\nの年代測定', tone: 'dark'}, {head: '遺伝子から', body: 'DNAの\\n解析', tone: 'dark'}]} tone='night' />", '最新の科学が見通す', False),
-  (11, None, 'p', 'mp-clouds-unsplash', 'もうひとつのマチュピチュ', 'out'),
+  (0, 0, 'a', "<ReliefMap view='sudamerica' focus={P.machu} zoom={1.6} pins={[{at: P.machu, name: 'マチュピチュ', sub: '標高 約2430m', big: true, t: 15}, {at: P.lima, name: 'リマ', t: 35}]} />", '南米ペルー、雲の上の都市', True),
+  (1, 1, 'p', 'mp-sunrise-allard', '私たちが教わってきたこと', 'in'),
+  (2, 2, 'p', 'old-sameplace', '密林の奥の「発見」？', 'in'),
+  (3, 3, 'p', 'wayna-tallest', '最後の要塞？', 'in'),
+  (4, 4, 'p', 'mp-houses-dd47', '太陽に仕える女性たち？', 'in'),
+  (5, 5, 'p', 'mp-wayna-pan-w', '常識がくつがえる', 'scroll'),
+  (6, 6, 'a', "<Figures figs={[{value: '1902', label: '年', small: '壁に残された農民の名前', accent: true}]} tone='ember' />", '探検家より9年前', False),
+  (7, 7, 'p', 'cloudforest-1', '本当の名前は？', 'in'),
+  (8, 8, 'p', 'mp-clouds-unsplash', '住人の正体は？', 'in'),
+  (9, 9, 'a', "<Cards cards={[{head: '骨から', body: '放射性炭素\\nの年代測定', tone: 'dark'}, {head: '遺伝子から', body: '古代の\\nDNAの解析', tone: 'dark'}]} tone='night' />", '最新の科学が書きかえる', False),
+  (10, 10, 'p', 'adatara-1', '2026年、日本のレーザー', 'in'),
+  (11, None, 'a', "<Cards cards={[{head: '発見者', body: 'ビンガム？'}, {head: '名前', body: 'マチュピチュ？'}, {head: '住人', body: '地元の人々？'}]} tone='night' size={50} height={280} top={400} />", 'どこまで本当？', False),
  ]),
  'Clue1Bingham': ('第1の手がかり', 'マチュピチュを発見したのは、ビンガム？', [
   (0, 0, 'p', 'bingham-portrait', '1911年7月24日', 'in'),
