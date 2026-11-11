@@ -9,7 +9,10 @@
 - **実写**：PD・CC0・CC BY のみ（CC BY-SA・NC・ND 不可）。作者・ライセンス・元ページ URL・撮影地を記録。バミューダのパノラマの自由：Commons の整理では Copyright and Designs Act 2004 第86条により建物などの立体物は可、看板・壁画などの平面の作品は不可（`03_plan.md`「実写候補」）。看板・壁画が主役の写真は使わない
 - **生成**：追加費用0（今の契約の範囲）。実在の特定の家・街・人物・ロゴに見せない。画面に Claude が「AI生成イメージ」と表示。プロンプト全文・ツール・日付を記録
 - 画風（生成）：明るい自然光、やや俯瞰の立体イラスト・断面図（ドキュメンタリーの説明図）。漫画・アニメ調・原色は不可。全点でそろえる
-- 置き場所：`episodes/chizu-005-bermuda-roof-water/gen/`（生成）、実写は `assets/`（git に入れない）＋ `06c_assets.md` に記録。台帳 `06d_generated_assets.md`
+- 置き場所（**動画 v1 のレンダラーがこの名前で読み込む**。2026-11-11 更新）：
+  - 生成：`episodes/chizu-005-bermuda-roof-water/gen/BM-S04.jpg`・`BM-S05b.jpg`・`BM-S06a.jpg`・`BM-S08.jpg`。台帳 `06d_generated_assets.md`
+  - 実写：`episodes/chizu-005-bermuda-roof-water/incoming/BM-S01.jpg`・`BM-S05a.jpg`・`BM-S06b.jpg`（PD・CC0・CC BY でライセンス確認済みのものだけ）。作者・ライセンス・元ページ・クレジット表記を `06c_assets.md` に記録（クレジットは Claude が画面右上に出す）
+  - BM-S11 は v1 では地図で代えたので不要（あれば `incoming/BM-S11.jpg`）
 
 ## 依頼表
 | 場面ID | 目的 | 寸法 | 構図 | ラベル | 出典の条件 | 実写／生成 |

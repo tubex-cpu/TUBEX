@@ -358,6 +358,9 @@ def slot_frame(s, t):
         return None
     d = s["end"] - s["start"]; tt = t - s["start"]
     if "photo" in sl:
+        if not (EP / "assets" / sl["photo"]).exists() and (EP / "incoming" / sl["photo"]).exists():
+            (EP / "assets").mkdir(exist_ok=True)
+            (EP / "assets" / sl["photo"]).write_bytes((EP / "incoming" / sl["photo"]).read_bytes())
         if (EP / "assets" / sl["photo"]).exists():
             return R.r_photo(tt, d, {"file": sl["photo"], "label": sl.get("label", "")})
         return None
