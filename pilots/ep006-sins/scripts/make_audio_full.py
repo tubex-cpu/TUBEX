@@ -457,8 +457,9 @@ def main():
 
     sc_at = {x["id"]: x["start"] for x in scenes}
     # three quiet drum beds (owner 2026-11-07, no kick): opening–chapter 3 / chapters 4–8 / chapter 9–end
-    b1 = sc_at["s17"] - 1.0   # chapter 4 (色欲)
-    b2 = sc_at["s42"] - 1.0   # chapter 9 (虚栄)
+    # v1.5：章の並びをサムネの順に変更。BGM の切り替えは表示の第3章（虚栄）と第8章（悲嘆）の頭のまま
+    b1 = sc_at["s42"] - 1.0   # 第3章 虚栄
+    b2 = sc_at["s26"] - 1.0   # 第8章 悲嘆
     music = mix_tracks(DUR, [(0, b1, drum_tension), (b1, b2, drum_pulse), (b2, DUR, drum_brush)])
     tl["bgm"] = [round(b1, 2), round(b2, 2)]
     (ROOT / "data/timeline_full.json").write_text(json.dumps(tl, ensure_ascii=False, indent=1))
