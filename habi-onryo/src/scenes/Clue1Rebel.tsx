@@ -20,7 +20,7 @@ export const Clue1Rebel = () => {
 			</Beat>
 			<Beat name="国府を次々に" captions={c} from={4} to={6}>
 				<Stage label="国府を次々に" labelBottom>
-					<ReliefMap view='kanto' zoom={1.05} pins={[{at: P.iwai, name: '石井', sub: '将門の本拠', big: true, t: 6}, {at: P.hitachi, name: '常陸国府', t: 20}, {at: P.shimotsuke, name: '下野国府', t: 50}, {at: P.kozuke, name: '上野国府', t: 75}]} lines={[{pts: [P.iwai, P.hitachi], t: 12, len: 20, arrow: true}, {pts: [P.iwai, P.shimotsuke], t: 42, len: 20, arrow: true}, {pts: [P.shimotsuke, P.kozuke], t: 66, len: 22, arrow: true}]} />
+					<ReliefMap view='kanto' zoom={1.05} pins={[{at: P.iwai, name: '石井', sub: '将門の本拠', big: true, t: 6}, {at: P.hitachi, name: '常陸国府', t: 20}, {at: P.shimotsuke, name: '下野国府', t: 50, dy: 70}, {at: P.kozuke, name: '上野国府', t: 75, dy: 70}]} lines={[{pts: [P.iwai, P.hitachi], t: 12, len: 20, arrow: true}, {pts: [P.iwai, P.shimotsuke], t: 42, len: 20, arrow: true}, {pts: [P.shimotsuke, P.kozuke], t: 66, len: 22, arrow: true}]} />
 				</Stage>
 			</Beat>
 			<Beat name="朝廷から見れば" captions={c} from={7} to={7}>

@@ -13,9 +13,9 @@ export const Clue27Olympic = () => {
 	const {fps} = useVideoConfig();
 	return (
 		<SceneFrame captions={c} voice="Clue27Olympic" label="第27の手がかり" title="昭和天皇は、東京オリンピックの成功を祈って崇徳上皇を慰霊した？">
-			<Beat name="同じ年の秋" captions={c} from={0} to={3}>
-				<Stage label="同じ年の秋">
-					<TimeBar stops={[{label: '1964年9月21日', sub: '没後800年の祭り'}, {label: '1964年10月', sub: '東京オリンピック', accent: true}]} tone='night' />
+			<Beat name="1964年、同じ年の秋" captions={c} from={0} to={3}>
+				<Stage label="1964年、同じ年の秋">
+					<TimeBar stops={[{label: '9月21日', sub: '没後800年の祭り'}, {label: '10月', sub: '東京オリンピック', accent: true}]} tone='night' />
 				</Stage>
 			</Beat>
 			<Beat name="本当にそうだったのか" captions={c} from={4} to={6}>

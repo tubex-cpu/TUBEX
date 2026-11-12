@@ -23,7 +23,7 @@ export const Clue20Hogen = () => {
 			</Beat>
 			<Beat name="敵と味方に" captions={c} from={5} to={7}>
 				<Stage label="敵と味方に">
-					<Relations heads={[{x: 520, text: '崇徳上皇の側', red: true}, {x: 1400, text: '後白河天皇の側'}]} nodes={[{id: 's', x: 520, y: 400, name: '崇徳上皇', hot: true}, {id: 'y', x: 520, y: 540, name: '藤原頼長'}, {id: 'ta', x: 520, y: 680, name: '源為義'}, {id: 'tm', x: 520, y: 820, name: '平忠正'}, {id: 'g', x: 1400, y: 400, name: '後白河天皇'}, {id: 'yo', x: 1400, y: 680, name: '源義朝'}, {id: 'k', x: 1400, y: 820, name: '平清盛'}]} edges={[{a: 'ta', b: 'yo', label: '父と子', red: true, at: 60}, {a: 'tm', b: 'k', label: '叔父と甥', red: true, at: 80}]} />
+					<Relations heads={[{x: 520, text: '崇徳上皇の側', red: true}, {x: 1400, text: '後白河天皇の側'}]} nodes={[{id: 's', x: 520, y: 440, name: '崇徳上皇', hot: true}, {id: 'y', x: 520, y: 560, name: '藤原頼長'}, {id: 'ta', x: 520, y: 680, name: '源為義'}, {id: 'tm', x: 520, y: 820, name: '平忠正'}, {id: 'g', x: 1400, y: 440, name: '後白河天皇'}, {id: 'yo', x: 1400, y: 680, name: '源義朝'}, {id: 'k', x: 1400, y: 820, name: '平清盛'}]} edges={[{a: 'ta', b: 'yo', label: '父と子', red: true, at: 60}, {a: 'tm', b: 'k', label: '叔父と甥', red: true, at: 80}]} />
 				</Stage>
 			</Beat>
 			<Beat name="先に動いたのは" captions={c} from={8} to={8}>

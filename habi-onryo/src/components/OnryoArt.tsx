@@ -32,17 +32,17 @@ export const LegendGap: React.FC<{readonly from: number; readonly to: number; re
 				return (
 					<g key={m.label} opacity={fade(frame, at)}>
 						<circle cx={mx} cy={560} r={16} fill={m.story ? '#e0604f' : colors.gold} stroke="#0b0806" strokeWidth={4} />
-						<line x1={mx} x2={mx} y1={up ? 540 : 580} y2={up ? 430 : 720} stroke={m.story ? '#e0604f' : colors.gold} strokeWidth={3} />
-						<text x={mx} y={up ? 330 : 790} textAnchor="middle" {...svgGothic(50, m.story ? '#ffb3a6' : colors.goldSoft, 900)}>
+						<line x1={mx} x2={mx} y1={up ? 540 : 580} y2={up ? 430 : 690} stroke={m.story ? '#e0604f' : colors.gold} strokeWidth={3} />
+						<text x={mx} y={up ? 345 : 740} textAnchor="middle" {...svgGothic(50, m.story ? '#ffb3a6' : colors.goldSoft, 900)}>
 							{m.year}年
 						</text>
 						{lines(m.label).map((ln, k) => (
-							<text key={k} x={mx} y={(up ? 390 : 850) + k * 46} textAnchor="middle" {...svgGothic(38, '#efe6d2', 800)}>
+							<text key={k} x={mx} y={(up ? 398 : 792) + k * 46} textAnchor="middle" {...svgGothic(38, '#efe6d2', 800)}>
 								{ln}
 							</text>
 						))}
 						{m.sub ? (
-							<text x={mx} y={up ? 280 : 960} textAnchor="middle" {...svgGothic(30, 'rgba(239,230,210,0.7)', 700)}>
+							<text x={mx} y={(up ? 398 : 792) + lines(m.label).length * 46} textAnchor="middle" {...svgGothic(30, 'rgba(239,230,210,0.7)', 700)}>
 								{m.sub}
 							</text>
 						) : null}
@@ -62,7 +62,7 @@ export const Relations: React.FC<{readonly nodes: readonly PNode[]; readonly edg
 	return (
 		<Canvas tone={tone}>
 			{heads.map((h) => (
-				<text key={h.text} x={h.x} y={300} textAnchor="middle" {...svgMincho(54, h.red ? '#ff9b8c' : colors.goldSoft)} opacity={fade(frame, 4)}>
+				<text key={h.text} x={h.x} y={350} textAnchor="middle" {...svgMincho(54, h.red ? '#ff9b8c' : colors.goldSoft)} opacity={fade(frame, 4)}>
 					{h.text}
 				</text>
 			))}
@@ -162,19 +162,24 @@ export const Flow: React.FC<{readonly steps: readonly FlowStep[]; readonly note?
 export const Scroll: React.FC<{readonly text: string; readonly source: string; readonly tone?: Tone}> = ({text, source, tone = 'ember'}) => {
 	const frame = useCurrentFrame();
 	const cols = lines(text);
-	const colW = 96;
+	const colW = 84;
+	const step = 58;
 	const paperW = cols.length * colW + 200;
-	const x0 = 960 + paperW / 2 - 140;
+	const x0 = 960 + ((cols.length - 1) * colW) / 2;
 	return (
 		<Canvas tone={tone}>
-			<rect x={960 - paperW / 2} y={170} width={paperW} height={740} rx={6} fill="#e9dcc0" opacity={0.95} />
-			<rect x={960 - paperW / 2 + 20} y={190} width={paperW - 40} height={700} fill="none" stroke="#8a6a40" strokeWidth={2} />
+			<rect x={960 - paperW / 2} y={250} width={paperW} height={690} rx={6} fill="#e9dcc0" opacity={0.95} />
+			<rect x={960 - paperW / 2 + 20} y={268} width={paperW - 40} height={654} fill="none" stroke="#8a6a40" strokeWidth={2} />
 			{cols.map((c, i) => (
-				<text key={i} x={x0 - i * colW} y={250} {...svgMincho(60, '#2a1a10')} style={{writingMode: 'vertical-rl'}} opacity={fade(frame, 10 + i * 26, 30)}>
-					{c}
-				</text>
+				<g key={i} opacity={fade(frame, 10 + i * 26, 30)}>
+					{[...c].map((ch, k) => (
+						<text key={k} x={x0 - i * colW} y={330 + k * step} textAnchor="middle" {...svgMincho(52, '#2a1a10')}>
+							{ch === 'ー' ? '｜' : ch}
+						</text>
+					))}
+				</g>
 			))}
-			<text x={960 - paperW / 2 + 70} y={870} {...svgGothic(34, '#6a4a2a', 800)} opacity={fade(frame, 10 + cols.length * 26)}>
+			<text x={960 - paperW / 2 + 40} y={912} {...svgGothic(28, '#6a4a2a', 800)} opacity={fade(frame, 10 + cols.length * 26)}>
 				{source}
 			</text>
 		</Canvas>
@@ -227,20 +232,20 @@ export const Table: React.FC<{readonly head: readonly string[]; readonly rows: r
 	const frame = useCurrentFrame();
 	const ws = widths ?? head.map(() => 1600 / head.length);
 	const xs = ws.map((_, i) => 160 + ws.slice(0, i).reduce((a, b) => a + b, 0));
-	const rowH = Math.min(120, 560 / rows.length);
+	const rowH = Math.min(110, 500 / rows.length);
 	return (
 		<Canvas tone={tone}>
 			{head.map((h, i) => (
-				<text key={h} x={xs[i] + 20} y={300} {...svgGothic(36, colors.goldSoft, 900)} opacity={fade(frame, 2)}>
+				<text key={h} x={xs[i] + 20} y={372} {...svgGothic(36, colors.goldSoft, 900)} opacity={fade(frame, 2)}>
 					{h}
 				</text>
 			))}
-			<line x1={160} x2={1760} y1={325} y2={325} stroke={colors.gold} strokeWidth={3} opacity={fade(frame, 2)} />
+			<line x1={160} x2={1760} y1={397} y2={397} stroke={colors.gold} strokeWidth={3} opacity={fade(frame, 2)} />
 			{rows.map((r, j) => (
 				<g key={j} opacity={fade(frame, 12 + j * 18)}>
-					{hot === j ? <rect x={150} y={338 + j * rowH} width={1620} height={rowH - 10} rx={10} fill="rgba(200,60,50,0.28)" stroke="#e0604f" strokeWidth={3} /> : null}
+					{hot === j ? <rect x={150} y={410 + j * rowH} width={1620} height={rowH - 10} rx={10} fill="rgba(200,60,50,0.28)" stroke="#e0604f" strokeWidth={3} /> : null}
 					{r.map((c, i) => (
-						<text key={i} x={xs[i] + 20} y={338 + j * rowH + rowH * 0.62} {...(i === 0 ? svgGothic(40, '#ffe2a8', 900) : svgMincho(44, '#fbf6ea'))}>
+						<text key={i} x={xs[i] + 20} y={410 + j * rowH + rowH * 0.62} {...(i === 0 ? svgGothic(40, '#ffe2a8', 900) : svgMincho(44, '#fbf6ea'))}>
 							{c}
 						</text>
 					))}

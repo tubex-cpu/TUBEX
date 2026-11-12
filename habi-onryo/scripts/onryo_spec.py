@@ -20,7 +20,7 @@ S = {
  'Clue1Rebel': ('第1の手がかり', '平将門は、朝廷に逆らった悪人？', [
   (0, 1, 'p', 'masakado-kunisada', '平将門', 'in'),
   (2, 3, 'p', 'iwai-eisho', '坂東市 石井営所跡', 'in'),
-  (4, 6, 'a', "<ReliefMap view='kanto' zoom={1.05} pins={[{at: P.iwai, name: '石井', sub: '将門の本拠', big: true, t: 6}, {at: P.hitachi, name: '常陸国府', t: 20}, {at: P.shimotsuke, name: '下野国府', t: 50}, {at: P.kozuke, name: '上野国府', t: 75}]} lines={[{pts: [P.iwai, P.hitachi], t: 12, len: 20, arrow: true}, {pts: [P.iwai, P.shimotsuke], t: 42, len: 20, arrow: true}, {pts: [P.shimotsuke, P.kozuke], t: 66, len: 22, arrow: true}]} />", '国府を次々に', True),
+  (4, 6, 'a', "<ReliefMap view='kanto' zoom={1.05} pins={[{at: P.iwai, name: '石井', sub: '将門の本拠', big: true, t: 6}, {at: P.hitachi, name: '常陸国府', t: 20}, {at: P.shimotsuke, name: '下野国府', t: 50, dy: 70}, {at: P.kozuke, name: '上野国府', t: 75, dy: 70}]} lines={[{pts: [P.iwai, P.hitachi], t: 12, len: 20, arrow: true}, {pts: [P.iwai, P.shimotsuke], t: 42, len: 20, arrow: true}, {pts: [P.shimotsuke, P.kozuke], t: 66, len: 22, arrow: true}]} />", '国府を次々に', True),
   (7, 7, 'p', 'iwai-eisho-stone', '朝廷から見れば', 'in'),
   (8, 9, 'p', 'kokuo-shrine', '関東で語り継がれた姿', 'in'),
   (10, 11, 'p', 'masakado-geese-moon', '民衆の英雄？', 'in'),
@@ -28,7 +28,7 @@ S = {
   (15, None, 'p', 'masakado-kunisada-katata', 'なぜ「新しい天皇」を？', 'in'),
  ]),
  'Clue2Shinno': ('第2の手がかり', '将門は、神のお告げで「新皇」を名乗った？', [
-  (0, 1, 'a', "<Scroll text={'上野の国府にて\\n巫女、神がかりして\\n八幡大菩薩の使いと名乗る\\n朕の位を授け奉る'} source='『将門記』より（要約）' />", '乱からまもない記録', False),
+  (0, 1, 'a', "<Scroll text={'上野の国府にて\\n巫女、神がかりして\\n八幡大菩薩の\\n使いと名乗る\\n朕の位を\\n授け奉る'} source='『将門記』より（要約）' />", '乱からまもない記録', False),
   (2, 3, 'p', 'engi-miko', '巫女のお告げ', 'in'),
   (4, 5, 'p', 'michizane-pine', '左大臣正二位 菅原朝臣', 'in'),
   (6, 8, 'a', "<Relations nodes={[{id: 'h', x: 480, y: 470, name: '八幡大菩薩', sub: '神'}, {id: 'm', x: 1440, y: 470, name: '菅原道真の霊', sub: '位を授ける書状', hot: true}, {id: 'k', x: 960, y: 760, name: '平将門', sub: '新皇'}]} edges={[{a: 'h', b: 'k', label: '天皇の位'}, {a: 'm', b: 'k', label: '位記', red: true}]} note='三大怨霊の2人が、ひとつの物語に' />", '『将門記』が描く場面', False),
@@ -56,7 +56,7 @@ S = {
   (14, None, 'p', 'mikubi-shrine', '首は空を飛んだ？', 'in'),
  ]),
  'Clue5Flying': ('第5の手がかり', '将門の首は、京から東京まで飛んできた？', [
-  (0, 2, 'a', "<ReliefMap view='honshu' zoom={1.05} pins={[{at: P.kyoto, name: '京', t: 6}, {at: P.ogaki, name: '大垣 御首神社', sub: '首が落ちた伝説', t: 40, dy: 80}, {at: P.tsuka, name: '大手町', sub: '芝崎村', big: true, t: 70}]} lines={[{pts: [P.kyoto, P.tsuka], t: 14, len: 60, arrow: true, dash: true, bend: 0.12}]} />", '首は、どこへ飛んだ？', True),
+  (0, 2, 'a', "<ReliefMap view='honshu' zoom={1.05} pins={[{at: P.kyoto, name: '京', t: 6, dx: -70}, {at: P.ogaki, name: '大垣 御首神社', sub: '首が落ちた伝説', t: 40, dx: 60, dy: -90}, {at: P.tsuka, name: '大手町', sub: '芝崎村', big: true, t: 70}]} lines={[{pts: [P.kyoto, P.tsuka], t: 14, len: 60, arrow: true, dash: true, bend: 0.12}]} />", '首は、どこへ飛んだ？', True),
   (3, 4, 'a', "<LegendGap from={900} to={1750} marks={[{year: 940, label: '将門が討たれる'}, {year: 1370, label: '首が笑う', sub: '『太平記』', story: true}, {year: 1690, label: '首が飛ぶ', sub: '『前太平記』など', story: true}]} gapLabel='およそ700年後の物語' />", '首が飛んだ話は、いつ？', False),
   (5, 7, 'p', 'kubizuka-1920s-front', '首塚は、ひとつではない', 'in'),
   (8, 9, 'p', 'kanda-hiroshige-snow', '1307年、1309年', 'in'),
@@ -207,7 +207,7 @@ S = {
  'Clue20Hogen': ('第20の手がかり', '崇徳上皇は、自ら兵を挙げて、保元の乱を起こした？', [
   (0, 1, 'a', "<TimeBar stops={[{label: '7月2日', sub: '鳥羽法皇が亡くなる'}, {label: '7月8日', sub: '頼長の屋敷を没収'}, {label: '7月9日', sub: '白河北殿へ'}, {label: '7月11日', sub: '夜明け前', accent: true}]} tone='ember' />", '1156年7月', False),
   (2, 4, 'p', 'go-shirakawa', '後白河天皇の側は', 'in'),
-  (5, 7, 'a', "<Relations heads={[{x: 520, text: '崇徳上皇の側', red: true}, {x: 1400, text: '後白河天皇の側'}]} nodes={[{id: 's', x: 520, y: 400, name: '崇徳上皇', hot: true}, {id: 'y', x: 520, y: 540, name: '藤原頼長'}, {id: 'ta', x: 520, y: 680, name: '源為義'}, {id: 'tm', x: 520, y: 820, name: '平忠正'}, {id: 'g', x: 1400, y: 400, name: '後白河天皇'}, {id: 'yo', x: 1400, y: 680, name: '源義朝'}, {id: 'k', x: 1400, y: 820, name: '平清盛'}]} edges={[{a: 'ta', b: 'yo', label: '父と子', red: true, at: 60}, {a: 'tm', b: 'k', label: '叔父と甥', red: true, at: 80}]} />", '敵と味方に', False),
+  (5, 7, 'a', "<Relations heads={[{x: 520, text: '崇徳上皇の側', red: true}, {x: 1400, text: '後白河天皇の側'}]} nodes={[{id: 's', x: 520, y: 440, name: '崇徳上皇', hot: true}, {id: 'y', x: 520, y: 560, name: '藤原頼長'}, {id: 'ta', x: 520, y: 680, name: '源為義'}, {id: 'tm', x: 520, y: 820, name: '平忠正'}, {id: 'g', x: 1400, y: 440, name: '後白河天皇'}, {id: 'yo', x: 1400, y: 680, name: '源義朝'}, {id: 'k', x: 1400, y: 820, name: '平清盛'}]} edges={[{a: 'ta', b: 'yo', label: '父と子', red: true, at: 60}, {a: 'tm', b: 'k', label: '叔父と甥', red: true, at: 80}]} />", '敵と味方に', False),
   (8, 8, 'p', 'hogen-heiji-screen-2', '先に動いたのは', 'in'),
   (9, 10, 'p', 'hogen-screen-detail', '数時間で決着', 'in'),
   (11, None, 'v', 'half'),
@@ -272,7 +272,7 @@ S = {
   (14, None, 'a', "<BigYears value={1964} unit='年' caption='崇徳上皇の没後800年' tone='night' />", 'その後の天皇は', False),
  ]),
  'Clue27Olympic': ('第27の手がかり', '昭和天皇は、東京オリンピックの成功を祈って崇徳上皇を慰霊した？', [
-  (0, 3, 'a', "<TimeBar stops={[{label: '1964年9月21日', sub: '没後800年の祭り'}, {label: '1964年10月', sub: '東京オリンピック', accent: true}]} tone='night' />", '同じ年の秋', False),
+  (0, 3, 'a', "<TimeBar stops={[{label: '9月21日', sub: '没後800年の祭り'}, {label: '10月', sub: '東京オリンピック', accent: true}]} tone='night' />", '1964年、同じ年の秋', False),
   (4, 6, 'a', "<Cards cards={[{head: '式年祭', body: '天皇の墓で\\n100年ごとの祭り'}, {head: '800年目', body: '1164年から\\n1964年'}]} tone='ink' size={48} height={330} top={370} />", '本当にそうだったのか', False),
   (7, 7, 'a', "<Flow steps={[{head: '1164年', body: '崇徳上皇\\n亡くなる'}, {head: '1964年', body: '800年の祭り', hot: true}, {head: '五輪のため？', body: '公式の記録は？', dim: true}]} />", '記録に残っているのは', False),
   (8, None, 'v', 'wrong'),

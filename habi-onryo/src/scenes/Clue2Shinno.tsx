@@ -14,7 +14,7 @@ export const Clue2Shinno = () => {
 		<SceneFrame captions={c} voice="Clue2Shinno" label="第2の手がかり" title="将門は、神のお告げで「新皇」を名乗った？">
 			<Beat name="乱からまもない記録" captions={c} from={0} to={1}>
 				<Stage label="乱からまもない記録">
-					<Scroll text={'上野の国府にて\n巫女、神がかりして\n八幡大菩薩の使いと名乗る\n朕の位を授け奉る'} source='『将門記』より（要約）' />
+					<Scroll text={'上野の国府にて\n巫女、神がかりして\n八幡大菩薩の\n使いと名乗る\n朕の位を\n授け奉る'} source='『将門記』より（要約）' />
 				</Stage>
 			</Beat>
 			<Beat name="巫女のお告げ" captions={c} from={2} to={3}>
