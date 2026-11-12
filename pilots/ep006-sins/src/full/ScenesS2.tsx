@@ -6,7 +6,7 @@ import {Bars, BrainShot, DarkBoard, SceneProps, StepCard, Still, WhiteStudio, se
 import {K, MascotOverlay, PersonIcon, Phone, Pop, clamp} from './ui';
 import {Big, BrainBox, Candle, MROW, Card, CardRow, FlipRoom, Hand, KAN, LT, MriBg, MriMonitor, NAMES, Notebook, Parchment, SinCard, TXT} from './ScenesS1';
 
-// =============== 6. 憂鬱 ===============
+// =============== 6. 悲嘆 ===============
 const Cafe: React.FC<{f: number; dur: number; steam: number}> = ({f, dur, steam}) => (
   <AbsoluteFill style={{background: 'linear-gradient(180deg, #c8d4dc 0%, #a8b8c4 60%, #6a5a4a 60.2%, #4a3c30 100%)', transform: `scale(${interpolate(f, [0, dur], [1, 1.06], clamp)})`}}>
     <div style={{position: 'absolute', left: 160, top: 40, width: 1600, height: 600, border: '22px solid #3a3028', background: 'linear-gradient(180deg, rgba(220,232,240,0.9), rgba(180,200,212,0.85))'}}>
@@ -305,7 +305,7 @@ const S40: React.FC<SceneProps> = ({f, T}) => {
   return <Pocket f={f} kind={k} />;
 };
 
-// =============== 9. 虚飾 ===============
+// =============== 9. 虚栄 ===============
 const LikeGrid: React.FC<{f: number; boost: boolean}> = ({f, boost}) => {
   const likes = [312, 8, 154, 21, 487, 12];
   return (

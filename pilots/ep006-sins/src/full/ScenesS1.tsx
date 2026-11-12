@@ -9,7 +9,7 @@ import {K, MascotOverlay, PersonIcon, Phone, Pop, clamp} from './ui';
 // On-screen text carries no 、。 (owner 2026-11-04).
 export const LT = (T: SceneProps['T'], id: string, k: number, c = 0) => T(`${id}_${k}`, c);
 export const TXT = (s: React.CSSProperties = {}): React.CSSProperties => ({position: 'absolute', left: 0, right: 0, textAlign: 'center', fontFamily: FONT, fontWeight: 900, textShadow: '0 4px 22px rgba(0,0,0,0.85)', ...s});
-export const NAMES: [string, string][] = [['暴食', 'ぼうしょく'], ['色欲', 'しきよく'], ['強欲', 'ごうよく'], ['憂鬱', 'ゆううつ'], ['憤怒', 'ふんぬ'], ['怠惰', 'たいだ'], ['虚飾', 'きょしょく'], ['傲慢', 'ごうまん']];
+export const NAMES: [string, string][] = [['暴食', 'ぼうしょく'], ['色欲', 'しきよく'], ['強欲', 'ごうよく'], ['悲嘆', 'ひたん'], ['憤怒', 'ふんぬ'], ['怠惰', 'たいだ'], ['虚栄', 'きょえい'], ['傲慢', 'ごうまん']];
 export const KAN = ['一', '二', '三', '四', '五', '六', '七', '八'];
 export const SKIN = '#d9a888';
 export const INK = '#5a3a1c';
@@ -417,8 +417,8 @@ const S08: React.FC<SceneProps> = ({f, T}) => {
   return (
     <AbsoluteFill>
       <CardRow state={(i) => (i === 6 ? {p: 1, crumble: vain} : i === 5 ? {p: 1, crumble: sloth * (1 - back), glow: back} : {p: 1})} y={170} />
-      {showMerge && vain > 0.2 && <Pop f={f} at={LT(T, 's08', 2) + 10} style={{position: 'absolute', left: (1920 - total) / 2 + 6 * 212 - 120, top: 640, fontFamily: FONT, fontSize: 40, fontWeight: 900, color: '#1d2230'}}>虚飾 → 傲慢の中へ</Pop>}
-      {showMerge && sloth > 0.2 && <Pop f={f} at={LT(T, 's08', 3) + 10} style={{position: 'absolute', left: (1920 - total) / 2 + 3 * 212 - 60, top: 640, fontFamily: FONT, fontSize: 40, fontWeight: 900, color: '#1d2230'}}>怠惰 → 憂鬱の中へ</Pop>}
+      {showMerge && vain > 0.2 && <Pop f={f} at={LT(T, 's08', 2) + 10} style={{position: 'absolute', left: (1920 - total) / 2 + 6 * 212 - 120, top: 640, fontFamily: FONT, fontSize: 40, fontWeight: 900, color: '#1d2230'}}>虚栄 → 傲慢の中へ</Pop>}
+      {showMerge && sloth > 0.2 && <Pop f={f} at={LT(T, 's08', 3) + 10} style={{position: 'absolute', left: (1920 - total) / 2 + 3 * 212 - 60, top: 640, fontFamily: FONT, fontSize: 40, fontWeight: 900, color: '#1d2230'}}>怠惰 → 悲嘆の中へ</Pop>}
       {envy > 0 && (
         <div style={{position: 'absolute', left: (1920 - total) / 2 + 6 * 212, top: 170 - 60 * (1 - envy), opacity: envy}}>
           <div style={{width: 180, height: 266, borderRadius: 11, background: 'radial-gradient(ellipse at 40% 30%, #f1e6cc 0%, #dcc79c 70%, #c3a978 100%)', boxShadow: '0 0 40px rgba(120,200,140,0.7)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', fontFamily: FONT, color: INK}}>
@@ -428,8 +428,8 @@ const S08: React.FC<SceneProps> = ({f, T}) => {
           </div>
         </div>
       )}
-      {f >= LT(T, 's08', 5) && f < LT(T, 's08', 8) && <Big f={f} at={LT(T, 's08', 5)} y={640} size={72} color="#c0392b" light text={f >= LT(T, 's08', 6) ? '名前ごと消えた 虚飾と怠惰' : '今の「七つの大罪」'} />}
-      {back > 0 && f < LT(T, 's08', 9) && <Big f={f} at={LT(T, 's08', 8)} y={640} size={60} color="#1d2230" light text="怠惰はのちに 憂鬱と入れ替わって戻る" />}
+      {f >= LT(T, 's08', 5) && f < LT(T, 's08', 8) && <Big f={f} at={LT(T, 's08', 5)} y={640} size={72} color="#c0392b" light text={f >= LT(T, 's08', 6) ? '名前ごと消えた 虚栄と怠惰' : '今の「七つの大罪」'} />}
+      {back > 0 && f < LT(T, 's08', 9) && <Big f={f} at={LT(T, 's08', 8)} y={640} size={60} color="#1d2230" light text="怠惰はのちに 悲嘆と入れ替わって戻る" />}
       {f >= LT(T, 's08', 9) && <Big f={f} at={LT(T, 's08', 9)} y={640} size={66} color="#c0392b" light text="消えた二つこそ 今のあなたの毎日に" />}
     </AbsoluteFill>
   );
