@@ -120,7 +120,7 @@ export const R = {
   itg: [[-0.46, -0.36, -0.06], [0.46, -0.36, -0.06]] as [number, number, number][],
   phg: [[-0.22, -0.34, -0.08], [0.22, -0.34, -0.08]] as [number, number, number][],
 };
-export type Label = {pos: [number, number, number]; text: string; note?: string; color: string; k: number; dx?: number; dy?: number};
+export type Label = {pos: [number, number, number]; text: string; note?: string; color: string; k: number; dx?: number; dy?: number; nowrap?: boolean};
 export const BrainShot: React.FC<{f: number; glows: ExtraGlow[]; labels?: Label[]; rot?: number; cam?: typeof BRAIN_CAM; x?: number; bg?: string; dim?: number}> = ({f, glows, labels = [], rot, cam = BRAIN_CAM, x = 0, bg = 'radial-gradient(ellipse at 45% 45%, #1b2133 0%, #07080b 75%)', dim = 0}) => {
   const r = rot ?? 0.25 - 0.35 * seg(f, 0, 420);
   return (
@@ -151,7 +151,7 @@ export const BrainShot: React.FC<{f: number; glows: ExtraGlow[]; labels?: Label[
           const left = dx >= 0;
           return (
             <div key={i} style={{position: 'absolute', left: left ? p[0] + dx + 12 : undefined, right: left ? undefined : W - (p[0] + dx) + 12, top: p[1] + dy - 50, opacity: l.k, fontFamily: FONT, textAlign: left ? 'left' : 'right'}}>
-              <div style={{fontSize: 50, fontWeight: 900, color: l.color, textShadow: '0 2px 10px rgba(0,0,0,0.7)'}}>{l.text}</div>
+              <div style={{fontSize: 50, fontWeight: 900, color: l.color, textShadow: '0 2px 10px rgba(0,0,0,0.7)', whiteSpace: l.nowrap ? 'nowrap' : undefined}}>{l.text}</div>
               {l.note && <div style={{fontSize: 30, color: K.ink, marginTop: 4, textShadow: '0 2px 8px rgba(0,0,0,0.7)'}}>{l.note}</div>}
             </div>
           );

@@ -340,7 +340,7 @@ const S43: React.FC<SceneProps> = ({f, T}) => {
   const k = seg(f, LT(T, 's43', 1), LT(T, 's43', 1) + 30);
   return (
     <AbsoluteFill>
-      <BrainBox><BrainShot f={f} x={-300} glows={[{pos: VSTR, color: '#ff4a8a', k: 0.2 + 0.9 * k * pulse, size: 0.5}]} labels={[{pos: VSTR[0], text: 'ごほうびに反応する場所', note: 'いいねが多い写真で 強く働く', color: '#ff7aa8', k, dx: 300, dy: -230}]} /></BrainBox>
+      <BrainBox><BrainShot f={f} x={-300} glows={[{pos: VSTR, color: '#ff4a8a', k: 0.2 + 0.9 * k * pulse, size: 0.5}]} labels={[{pos: VSTR[0], text: 'ごほうびに反応する場所', note: 'いいねが多い写真で 強く働く', color: '#ff7aa8', k, dx: 300, dy: -230, nowrap: true}]} /></BrainBox>
       <Card f={f} at={LT(T, 's43', 1, 2)} x={1160} y={360} w={700} size={38} text="自分の写真でも 他人の写真でも" />
       {f >= LT(T, 's43', 2) && <Card f={f} at={LT(T, 's43', 2)} x={1160} y={500} w={700} size={38} color="#ff7a64" text={<>いいねが多いと 本人も押しやすい<br />危ない行動の写真でも</>} />}
       {f >= LT(T, 's43', 3) && <Card f={f} at={LT(T, 's43', 3)} x={60} y={50} w={300} size={34} text="10代の実験" />}
