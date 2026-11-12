@@ -575,33 +575,34 @@ const Thermo: React.FC<{v: number; color: string; x: number; label: string}> = (
 );
 const S17: React.FC<SceneProps> = ({f, T}) => {
   if (f < LT(T, 's17', 1)) return <FlipRoom f={f} n={3} />;
-  const hot = seg(f, LT(T, 's17', 6), LT(T, 's17', 6) + 60);
+  const hot = seg(f, LT(T, 's17', 5, 2), LT(T, 's17', 5, 2) + 60);
   return (
     <DarkBoard tint="#2a2230">
-      <Thermo v={0.2} color="#4a8cff" x={240} label="落ち着いた状態" />
-      <Thermo v={0.2 + 0.7 * hot} color="#ff4a3d" x={1480} label="高まった状態" />
+      <Thermo v={0.2} color="#4a8cff" x={240} label="ふつうの映像" />
+      <Thermo v={0.2 + 0.7 * hot} color="#ff4a3d" x={1480} label="高める映像" />
       {f >= LT(T, 's17', 2) && f < LT(T, 's17', 3) && <Big f={f} at={LT(T, 's17', 2)} y={260} size={64} text="欲が高まると 判断はどう変わるか" />}
-      <StepCard f={f} at={LT(T, 's17', 3)} n="男子大学生" text="二つの状態で 同じ質問に答える" x={560} y={120} w={800} />
-      <StepCard f={f} at={LT(T, 's17', 5)} n="1回目" text="ふだんの状態で「こういう場面で こうするか」" x={560} y={290} w={800} />
-      {f >= LT(T, 's17', 5, 2) && <Card f={f} at={LT(T, 's17', 5, 2)} x={560} y={460} w={800} size={34} color="#ff7a64" text={<>ふだんなら「絶対にしない」<br />危ない選択や だます選択も入っている</>} />}
-      <StepCard f={f} at={LT(T, 's17', 6)} n="2回目" text="別の日 気持ちが高まった状態で 同じ質問" x={560} y={640} w={800} />
+      <StepCard f={f} at={LT(T, 's17', 3)} n="大学生の男女" text="二つのグループに分ける" x={560} y={120} w={800} />
+      <StepCard f={f} at={LT(T, 's17', 5, 1)} n="手順1" text="一方は 性的な気持ちを高める映像" x={560} y={290} w={800} />
+      {f >= LT(T, 's17', 5, 3) && <Card f={f} at={LT(T, 's17', 5, 3)} x={560} y={460} w={800} size={36} text="もう一方は 性的な内容のない映像" />}
+      <StepCard f={f} at={LT(T, 's17', 6)} n="手順2" text="ブラックジャックで危ない勝負を記録" x={560} y={640} w={800} />
     </DarkBoard>
   );
 };
-// no bar chart: the study gives no numbers here (owner rule) — two cards instead
+// no bar chart: no numbers are used here (owner rule) — two cards instead
 const S18: React.FC<SceneProps> = ({f, T}) => (
   <DarkBoard tint="#2a2230">
     <div style={{position: 'absolute', left: 200, top: 80, width: 700, padding: 30, borderRadius: 20, background: 'rgba(40,70,140,0.35)', border: '3px solid #4a8cff', fontFamily: FONT}}>
-      <div style={{fontSize: 42, fontWeight: 900, color: '#9fc0ff'}}>落ち着いた状態</div>
-      <div style={{fontSize: 64, fontWeight: 900, color: K.ink, marginTop: 20}}>「しない」</div>
+      <div style={{fontSize: 42, fontWeight: 900, color: '#9fc0ff'}}>性的な内容のない映像</div>
+      <div style={{fontSize: 64, fontWeight: 900, color: K.ink, marginTop: 20}}>危ない勝負 少ない</div>
     </div>
     <Pop f={f} at={LT(T, 's18', 1)} from="right" style={{position: 'absolute', left: 1020, top: 80, width: 700, padding: 30, borderRadius: 20, background: 'rgba(160,40,30,0.35)', border: '3px solid #ff4a3d', fontFamily: FONT}}>
-      <div style={{fontSize: 42, fontWeight: 900, color: '#ff9a8a'}}>高まった状態</div>
-      <div style={{fontSize: 64, fontWeight: 900, color: '#ff4a3d', marginTop: 20}}>「する」が大きく増えた</div>
+      <div style={{fontSize: 42, fontWeight: 900, color: '#ff9a8a'}}>気持ちを高める映像</div>
+      <div style={{fontSize: 64, fontWeight: 900, color: '#ff4a3d', marginTop: 20}}>危ない勝負 多い</div>
     </Pop>
-    {f >= LT(T, 's18', 3) && f < LT(T, 's18', 4) && <Big f={f} at={LT(T, 's18', 3)} y={400} size={66} color={K.gold} text="落ち着いた本人は 予測できなかった" />}
-    {f >= LT(T, 's18', 4) && f < LT(T, 's18', 5) && <Card f={f} at={LT(T, 's18', 4)} x={360} y={400} w={1200} size={38} text="男子学生だけ 質問への答えを比べた研究（実際の行動ではない）" />}
-    {f >= LT(T, 's18', 5) && <Big f={f} at={LT(T, 's18', 5, 1)} y={420} size={72} color="#ff7a64" text="高まったときの自分は 知らない人" />}
+    {f >= LT(T, 's18', 1, 3) && f < LT(T, 's18', 3) && <Big f={f} at={LT(T, 's18', 1, 3)} y={400} size={66} color={K.gold} text="男性でも 女性でも" />}
+    {f >= LT(T, 's18', 3) && f < LT(T, 's18', 4) && <Big f={f} at={LT(T, 's18', 3)} y={400} size={66} color={K.gold} text="性と関係のないゲームでも" />}
+    {f >= LT(T, 's18', 4) && f < LT(T, 's18', 5) && <Card f={f} at={LT(T, 's18', 4)} x={360} y={400} w={1200} size={38} text="別の実験：恋愛の場面の質問でも 危ない選択を「する」" />}
+    {f >= LT(T, 's18', 5) && <Big f={f} at={LT(T, 's18', 5, 1)} y={420} size={72} color="#ff7a64" text="欲と関係のない判断まで 危ない方へ" />}
   </DarkBoard>
 );
 const S19: React.FC<SceneProps> = ({f, T, dur}) => (
