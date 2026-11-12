@@ -1,5 +1,5 @@
-"""伊勢判決：youtube.md（タイトル案・概要欄・チャプター・参考資料・クレジット）と時刻入り台本を作る。
-  python3 scripts/gen_youtube_ise.py"""
+"""日本三大怨霊判決：youtube.md（タイトル案・概要欄・チャプター・参考資料・クレジット）と時刻入り台本を作る。
+  python3 scripts/gen_youtube_onryo.py"""
 import re
 from pathlib import Path
 
@@ -22,7 +22,7 @@ def hms(f):
 
 
 # チャプター名：短く、答えを言わずに引っかかる言い方
-CHAP = ['冬至の朝、大鳥居から昇る太陽', 'ハビ判事、開廷', '宇治橋と冬至の朝日', '倭姫命の旅', '三種の神器はどこに', '見えない八咫鏡', 'ヘブライ文字の噂', '草薙剣の祟り', '壇ノ浦に沈んだ剣', '草薙剣を見た人', '木曽から伊勢へ', '三種の神器の本当の物語', '残された謎', '9の判決', '閉廷']
+CHAP = ['将門塚、2026年夏の夜', 'ハビ判事、開廷', '反逆者か、英雄か', '新皇と道真の霊', '俵藤太と将門の最期', '笑う首', '空を飛ぶ首', '大手町の祟り', 'GHQのブルドーザー', '2026年の書類送検', '神田明神と将門', '成田山の言い伝え', '遣唐使と道真', '道真は無実だったか', '時平の死', '清涼殿の落雷', '国宝の絵巻の地獄', '学問の神の誕生', '動かない牛', '飛梅と124年ぶりの改修', '叔父子の噂', '保元の乱', '血で書いた呪い？', '讃岐での最期', '西行の旅', '天狗になった上皇', '怨霊の始まり', '明治天皇と白峯神宮', '東京五輪の慰霊？', 'スポーツの神の秘密', '三大怨霊は昔から？', '御霊信仰', '祇園祭のはじまり', '怨霊の本当の物語', '残された謎', '31の判決', '閉廷']
 assert len(CHAP) == len(order)
 chap = '\n'.join(f'{hms(s)} {c}' for s, c in zip(starts, CHAP))
 
@@ -35,7 +35,7 @@ for ln in lines:
     else:
         out.append(ln)
 dur = hms(total)
-(ROOT / '台本_伊勢判決.txt').write_text(f'ハビ判事 台本：伊勢判決\n（ナレーション：VOICEVOX 玄野武宏／動画の長さ {dur}。見出しの時刻は完成動画の実際の位置）\n\n' + '\n'.join(out).lstrip('\n') + '\n')
+(ROOT / '台本_日本三大怨霊判決.txt').write_text(f'ハビ判事 台本：日本三大怨霊判決\n（ナレーション：VOICEVOX 玄野武宏／動画の長さ {dur}。見出しの時刻は完成動画の実際の位置）\n\n' + '\n'.join(out).lstrip('\n') + '\n')
 
 # 写真の登場順クレジット
 ids = []
@@ -46,7 +46,7 @@ for sc in order:
 ph = (ROOT / 'src/data/photos.ts').read_text()
 cred = {m.group(1): m.group(2) for m in re.finditer(r"\t'([\w-]+)': \{file: '[^']+', credit: '([^']+)'", ph)}
 credits_full = '\n'.join('・' + cred[i].replace(' / Wikimedia Commons', '') for i in ids)
-(ROOT / '写真クレジット一覧.md').write_text('# 伊勢判決：写真・資料のクレジット（登場順・すべて Wikimedia Commons ほか）\n\n' + credits_full + '\n')
+(ROOT / '写真クレジット一覧.md').write_text('# 日本三大怨霊判決：写真・資料のクレジット（登場順・すべて Wikimedia Commons ほか）\n\n' + credits_full + '\n')
 
 # 概要欄は5000字までなので、写真のクレジットはライセンスごとに撮影者・作者名をまとめる
 import json, collections
@@ -59,7 +59,7 @@ NAME = {
     'Korea.net / Korean Culture and Information Service (Jeon Han)': 'Korea.net（Jeon Han）',
     'ウィキ太郎 (Wiki Taro)': 'ウィキ太郎', 'MODIS Land Rapid Response Team, NASA GSFC': 'NASA',
 }
-PD_WORKS = ('浮世絵・古典籍（春斎年昌、三代豊国、月岡芳年、豊原周延、歌川国芳、歌川貞秀、源平合戦図屏風、日本書紀 田中本・弘安本 ほか）')
+PD_WORKS = ('浮世絵・絵巻・古写真（月岡芳年、歌川国貞、歌川国芳、歌川広重、楊洲周延、北野天神縁起絵巻、保元平治合戦図屏風、年中行事絵巻、土佐光起、俵屋宗達、鳥居龍蔵 ほか）')
 by = collections.defaultdict(list)
 pd = []
 for i in ids:
@@ -79,32 +79,32 @@ lines = [f'{l}：' + '、'.join(by[l]) for l in ORDER if by[l]]
 lines.append('パブリックドメイン・CC0：' + PD_WORKS + ('、写真：' + '、'.join(dict.fromkeys(pd)) if pd else ''))
 credits = '\n'.join(lines)
 
-md = f'''# YouTube 投稿用テキスト：伊勢判決
+md = f'''# YouTube 投稿用テキスト：日本三大怨霊判決
 
 ## タイトル案
 
-- 天皇でさえ見られない？ 三種の神器はいまどこに――冬至の伊勢神宮と八咫鏡の謎（推奨）
-- 草薙剣は壇ノ浦に沈んだのか？ 三種の神器の「本当の居場所」をハビ判事が検証
-- 冬至の朝、伊勢で太陽が鳥居をくぐる――八咫鏡を守る1300年の秘密
+- 将門の首は本当に飛んだのか？ 日本三大怨霊の「祟り」をハビ判事が検証（推奨）
+- 祟ったはずの3人を、なぜ神に？ 平将門・菅原道真・崇徳上皇――日本三大怨霊の真実
+- 2026年、将門塚で何が起きたのか――首塚・天神・白峯 日本三大怨霊31の判決
 
 ## 概要欄
 
-2026年12月22日、冬至。朝7時半ごろ、伊勢神宮・内宮の宇治橋の大鳥居の真ん中から、太陽が昇ります。
-内宮の御神体とされる八咫鏡は、天皇でさえ見られないと言われる三種の神器のひとつ。草薙剣には、天皇の病の原因として占われたという日本書紀の記録が残り、壇ノ浦の海に沈んだとも語られてきました。
-三種の神器は、いま、どこにあるのか。2025年に木曽で伐り出された「八咫鏡を納める器」のヒノキ、2026年のお木曳など、第63回式年遷宮の最新の動きと、日本書紀などの記録をもとに、9の手がかりを閉園後の法廷でハビ判事がひとつずつ裁きます。
+2026年8月、東京・大手町の将門塚で騒ぎを起こした男が、礼拝所不敬などの疑いで書類送検されました。ネットにあふれた「将門の祟り」という言葉。
+平将門、菅原道真、崇徳上皇――「日本三大怨霊」と呼ばれる3人は、本当に祟ったのか。そして日本人は、なぜ恐れたはずの3人を神として手厚く祀ってきたのか。
+1000年前の貴族の日記、2026年に初めて全巻公開された国宝『北野天神縁起絵巻』、124年ぶりの大改修を終えた太宰府天満宮、そして史料を読み直してきた研究者の成果をもとに、31の手がかりを閉園後の法廷でハビ判事がひとつずつ裁きます。
 
 ▼チャプター
 {chap}
 
 ▼参考資料
-・令和8年暦要項（国立天文台）https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html
-・冬至の宇治橋（観光三重）https://www.kankomie.or.jp/topic/1261
-・第63回神宮式年遷宮 行事の資料（伊勢御遷宮委員会）https://isesengu.jp/upload/20250507-190156.pdf
-・御杣始祭・御用材伐採（林野庁 中部森林管理局）https://www.rinya.maff.go.jp/chubu/koho/koho_si/kakutitayori/attach/pdf/070917-1.pdf
-・御木曳行事 2026（観光三重）https://www.kankomie.or.jp/topic/1223
-・剣璽等承継の儀（政府広報オンライン）https://www.gov-online.go.jp/eng/publicity/book/hlj/html/201904/201904_06A_jp.html
-・熱田神宮の由緒（あいち観光ナビ）https://aichinow.pref.aichi.jp/spots/detail/10/
-・熱田と草薙剣（名古屋市 歴史の里）https://www.city.nagoya.jp/kankobunkakoryu/cmsfiles/contents/0000172/172684/rekimachi_2_2.pdf
+・山田雄司『怨霊とは何か 菅原道真・平将門・崇徳院』（中公新書、2014年）
+・山田雄司『崇徳院怨霊の研究』（思文閣出版、2001年）
+・史蹟将門塚保存会・神田明神の由緒
+・国税庁ホームページ「将門塚」の紹介
+・京都国立博物館 特別展「北野天神」（2026年）https://www.kyohaku.go.jp/jp/exhibitions/special/2026_kitano/
+・太宰府天満宮 御本殿の参拝再開（TNC、2026年9月）https://news.tnc.co.jp/news/articles/NID2026092132138
+・白峯神宮の由緒
+・『将門記』『太平記』『日本紀略』『保元物語』『古事談』『雨月物語』ほか
 
 ▼ハビ判事とは
 信じるのは、話の面白さではなく証拠だけ。
@@ -113,13 +113,12 @@ md = f'''# YouTube 投稿用テキスト：伊勢判決
 ▼クレジット
 ナレーション：VOICEVOX:玄野武宏
 BGM・効果音：オリジナル
-再現イラスト：オリジナル（ハビ判事チャンネル制作）
 地図：Mapzen Terrain Tiles（SRTM ほか）の標高データをもとに作成
 写真・資料（Wikimedia Commons ほか）
 {credits}
 写真ごとの出典の一覧：https://github.com/tubex-cpu/TUBEX/blob/claude/nice-wright-du0dch/habi-onryo/写真クレジット一覧.md
 
-#伊勢神宮 #三種の神器 #八咫鏡 #草薙剣 #冬至 #式年遷宮 #ハビ判事
+#日本三大怨霊 #平将門 #菅原道真 #崇徳上皇 #将門塚 #怨霊 #ハビ判事
 '''
 (ROOT / 'youtube.md').write_text(md)
 print(chap)

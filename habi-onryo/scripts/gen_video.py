@@ -1,4 +1,4 @@
-"""マチュピチュ判決：本編（src/HabiOnryoVideo.tsx）とコンポジション一覧（src/Root.tsx）を作る。
+"""日本三大怨霊判決：本編（src/HabiOnryoVideo.tsx）とコンポジション一覧（src/Root.tsx）を作る。
   python3 scripts/gen_video.py
 場面の並びは scripts/build-voice.py の IDS、場面名は scripts/script.txt の見出し。"""
 import re
@@ -25,6 +25,7 @@ import {{fade}} from '@remotion/transitions/fade';
 import {{interpolate, staticFile, useVideoConfig}} from 'remotion';
 import {{sceneDurations as d, TRANSITION_FRAMES as T}} from './data/timeline';
 {imp}
+import {{Thumb1Tsuka, Thumb2Kami, Thumb3Kubi}} from './thumbnails/Thumbnails';
 
 const BGM_VOLUME = 0.12;
 
@@ -36,7 +37,7 @@ export const lateStart = {late};
 const fadeVolume = (length: number, fps: number) => (f: number) =>
 	BGM_VOLUME * interpolate(f, [0, 2 * fps, length - 2 * fps, length], [0, 1, 1, 0], {{extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}});
 
-// ハビ判事：マチュピチュ判決（本編）。シーンの長さは scripts/build-voice.py がナレーション音声から計算する
+// ハビ判事：日本三大怨霊判決（本編）。シーンの長さは scripts/build-voice.py がナレーション音声から計算する
 export const HabiOnryoVideo = () => {{
 	const {{fps, durationInFrames}} = useVideoConfig();
 	return (
@@ -71,6 +72,11 @@ export const RemotionRoot: React.FC = () => (
 		<Composition id="HabiOnryo720" component={{HabiOnryo720}} durationInFrames={{TOTAL_FRAMES}} fps={{30}} width={{1280}} height={{720}} />
 		<Folder name="Scenes">
 {comps}
+		</Folder>
+		<Folder name="Thumbnails">
+			<Composition id="Thumb1Tsuka" component={{Thumb1Tsuka}} durationInFrames={{1}} fps={{30}} width={{1280}} height={{720}} />
+			<Composition id="Thumb2Kami" component={{Thumb2Kami}} durationInFrames={{1}} fps={{30}} width={{1280}} height={{720}} />
+			<Composition id="Thumb3Kubi" component={{Thumb3Kubi}} durationInFrames={{1}} fps={{30}} width={{1280}} height={{720}} />
 		</Folder>
 	</>
 );
