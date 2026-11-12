@@ -39,4 +39,10 @@
 
 ## 長尺版（2026-11-12、社長「これ動画尺は、２０分〜３０分にして」）
 - 3分の v2 は原本として残す。長尺版は別名（台本 `05_script_v3_long.md`、音声 `audio_v3/`、字幕 `subtitles_v3`、動画 `render/out/chizu-005-bermuda-roof-water_full_v3_long.mp4`）
-- 追加リサーチ中（`research_long_A_geo_history.md`・`research_long_B_water_system.md`・`research_long_C_world_future.md`）
+- 追加リサーチ：`research_long_A_geo_history.md`・`research_long_B_water_system.md`・`research_long_C_world_future.md`（✅＝2件以上の出典一致のみ台本に使用。⚠は不使用）
+- 台本 `05_script_v3_long.md`（41場面）→ 音声 `audio_v3/`（VOICEVOX:雀松朱司）→ 字幕 `subtitles_v3.json/.srt`（265枚）→ 絵コンテ `shotlist_v3_long.md` → 描画 `render/render_v3.py`
+- 書き出し済み（2026-11-12）：20分03秒（1203.0秒）。フル画質 `render/out/chizu-005-bermuda-roof-water_full_v3_long.mp4`（git外）、軽量版 `preview_v3_long.mp4`（960×540・45MB）。3分版の `preview.mp4` は残す
+- 検査：デコードエラーなし／−15.0 LUFS／2秒以上の無音なし／15秒以上の静止なし／黒検出4件は暗い問いカード・数字カード（86秒・824秒・1044秒）と終わりのフェードで意図どおり
+- 画面の注釈（チャンネル名・見出し・出典・AI表示）なし。出典・クレジットは概要欄 `07_description_v3_long.md`
+- 写真・生成画像は Codex 待ち（届くまで図解で代替。差し替え対応表は `06e_image_requests.md` 末尾）
+- 次：社長のゲートB（長尺版）・タイトル確認。公開・マージはしない
