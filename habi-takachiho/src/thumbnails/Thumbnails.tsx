@@ -53,3 +53,28 @@ export const Thumb3Eclipse: React.FC = () => (
 		<Three top="天岩戸神話" mid="太陽が消えた日" bottom="卑弥呼の死と日食？" bottomSize={110} />
 	</AbsoluteFill>
 );
+
+// 改訂案：上＝題材／小＝日付／下＝いちばん知りたい謎
+const Small: React.FC<{readonly children: React.ReactNode}> = ({children}) => (
+	<div style={{display: 'inline-block', marginTop: 12, padding: '4px 18px', background: 'rgba(5,9,18,0.85)', border: '3px solid #e2bb63', borderRadius: 10, fontFamily: gothicFamily, fontWeight: 900, fontSize: 40, color: '#fff'}}>{children}</div>
+);
+export const Thumb4Himiko: React.FC = () => (
+	<AbsoluteFill style={{background: '#000', overflow: 'hidden'}}>
+		<Photo id="gen-two-queens" dim={0.9} />
+		<div style={{position: 'absolute', left: 44, top: 36, right: 40}}>
+			<div style={{fontFamily: gothicFamily, fontWeight: 900, fontSize: 92, lineHeight: 1.05, color: '#fff', ...outline(14)}}>太陽が消えた日</div>
+			<Small>11/22・23 高千穂の夜神楽</Small>
+		</div>
+		<div style={{position: 'absolute', left: 36, bottom: 36, right: 30, fontFamily: minchoFamily, fontWeight: 800, fontSize: 116, lineHeight: 1.05, color: '#ff3b2f', ...outline(16, '#fff')}}>天照は卑弥呼だった？</div>
+	</AbsoluteFill>
+);
+export const Thumb5Himiko: React.FC = () => (
+	<AbsoluteFill style={{background: '#000', overflow: 'hidden'}}>
+		<Photo id="gen-sun-hidden" dim={0.9} />
+		<div style={{position: 'absolute', left: 44, top: 36, right: 40}}>
+			<div style={{fontFamily: gothicFamily, fontWeight: 900, fontSize: 92, lineHeight: 1.05, color: '#fff', ...outline(14)}}>卑弥呼の死と天岩戸</div>
+			<Small>11/22・23 高千穂の夜神楽</Small>
+		</div>
+		<div style={{position: 'absolute', left: 36, bottom: 36, right: 30, fontFamily: minchoFamily, fontWeight: 800, fontSize: 132, lineHeight: 1.05, color: '#ff3b2f', ...outline(16, '#fff')}}>太陽はなぜ消えた？</div>
+	</AbsoluteFill>
+);
