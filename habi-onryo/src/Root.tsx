@@ -38,6 +38,7 @@ import {JudgeEntrance} from './scenes/JudgeEntrance';
 import {RootsStory} from './scenes/RootsStory';
 import {Summary} from './scenes/Summary';
 import {UnsolvedMystery} from './scenes/UnsolvedMystery';
+import {Thumb1Tsuka, Thumb2Kami, Thumb3Kubi} from './thumbnails/Thumbnails';
 
 // 確認版用の720p（1920×1080の画面をそのまま縮小）
 const HabiOnryo720 = () => (

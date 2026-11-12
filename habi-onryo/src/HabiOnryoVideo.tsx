@@ -40,7 +40,6 @@ import {JudgeEntrance} from './scenes/JudgeEntrance';
 import {RootsStory} from './scenes/RootsStory';
 import {Summary} from './scenes/Summary';
 import {UnsolvedMystery} from './scenes/UnsolvedMystery';
-import {Thumb1Tsuka, Thumb2Kami, Thumb3Kubi} from './thumbnails/Thumbnails';
 
 const BGM_VOLUME = 0.12;
 

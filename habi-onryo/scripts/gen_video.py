@@ -25,7 +25,6 @@ import {{fade}} from '@remotion/transitions/fade';
 import {{interpolate, staticFile, useVideoConfig}} from 'remotion';
 import {{sceneDurations as d, TRANSITION_FRAMES as T}} from './data/timeline';
 {imp}
-import {{Thumb1Tsuka, Thumb2Kami, Thumb3Kubi}} from './thumbnails/Thumbnails';
 
 const BGM_VOLUME = 0.12;
 
@@ -58,6 +57,7 @@ root = f"""import {{AbsoluteFill, Composition, Folder}} from 'remotion';
 import {{HabiOnryoVideo}} from './HabiOnryoVideo';
 import {{sceneDurations as d, TOTAL_FRAMES}} from './data/timeline';
 {imp}
+import {{Thumb1Tsuka, Thumb2Kami, Thumb3Kubi}} from './thumbnails/Thumbnails';
 
 // 確認版用の720p（1920×1080の画面をそのまま縮小）
 const HabiOnryo720 = () => (
