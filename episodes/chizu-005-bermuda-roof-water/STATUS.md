@@ -36,3 +36,7 @@
 - フル版 `render/out/chizu-005-bermuda-roof-water_full_v2.mp4`：H.264・1920×1080・30fps・5,542フレーム・184.73秒、AAC。39,965,227 バイト、sha256 f713f79d27dc19005505af312892dbe1ab321286d989f3fb50396629af493e85。デコードのエラーなし、統合 −15.1 LUFS、1.5秒以上の無音なし、3秒以上の静止なし。黒の検出は v1 と同じ2か所（暗い問いのカード、締めの文字のフェードイン）
 - 軽量版 `preview.mp4`：960×540・30fps、音声はフル版のコピー。9,357,849 バイト、sha256 8dd81e6a8fed059887e8101d01e28e9fdfeffacb8c3d51f6b08b5a8c3e3d5138
 - 8秒ごとの静止画24枚で、注釈が消えたこと・字幕とラベルの重なりを確認。**通常速度での視聴・試聴は未実施**
+
+## 長尺版（2026-11-12、社長「これ動画尺は、２０分〜３０分にして」）
+- 3分の v2 は原本として残す。長尺版は別名（台本 `05_script_v3_long.md`、音声 `audio_v3/`、字幕 `subtitles_v3`、動画 `render/out/chizu-005-bermuda-roof-water_full_v3_long.mp4`）
+- 追加リサーチ中（`research_long_A_geo_history.md`・`research_long_B_water_system.md`・`research_long_C_world_future.md`）
