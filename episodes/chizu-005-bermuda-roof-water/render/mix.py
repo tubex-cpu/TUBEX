@@ -44,7 +44,10 @@ def main():
     bgm = pad(dur) * 10 ** (-27 / 20)
     n = np.zeros(int(dur * SR)); n[:len(nar)] = nar
     # duck BGM a little under speech
-    env = np.convolve(np.abs(n), np.ones(SR // 5) / (SR // 5), mode="same")
+    k = SR // 5   # moving average via cumulative sum (same result as np.convolve(..., mode="same"), fast for 20-min audio)
+    c = np.concatenate([[0.0], np.cumsum(np.abs(n))])
+    lo = np.clip(np.arange(len(n)) - k // 2, 0, len(n)); hi = np.clip(np.arange(len(n)) - k // 2 + k, 0, len(n))
+    env = (c[hi] - c[lo]) / k
     duck = 1 - 0.35 * np.clip(env / 0.05, 0, 1)
     fade = np.clip((dur - np.arange(len(n)) / SR) / 2.5, 0, 1) * np.clip(np.arange(len(n)) / SR / 1.5, 0, 1)
     y = n + bgm * duck * fade

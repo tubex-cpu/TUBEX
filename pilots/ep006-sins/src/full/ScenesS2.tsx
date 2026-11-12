@@ -6,7 +6,7 @@ import {Bars, BrainShot, DarkBoard, SceneProps, StepCard, Still, WhiteStudio, se
 import {K, MascotOverlay, PersonIcon, Phone, Pop, clamp} from './ui';
 import {Big, BrainBox, Candle, MROW, Card, CardRow, FlipRoom, Hand, KAN, LT, MriBg, MriMonitor, NAMES, Notebook, Parchment, SinCard, TXT} from './ScenesS1';
 
-// =============== 6. 憂鬱 ===============
+// =============== 6. 悲嘆 ===============
 const Cafe: React.FC<{f: number; dur: number; steam: number}> = ({f, dur, steam}) => (
   <AbsoluteFill style={{background: 'linear-gradient(180deg, #c8d4dc 0%, #a8b8c4 60%, #6a5a4a 60.2%, #4a3c30 100%)', transform: `scale(${interpolate(f, [0, dur], [1, 1.06], clamp)})`}}>
     <div style={{position: 'absolute', left: 160, top: 40, width: 1600, height: 600, border: '22px solid #3a3028', background: 'linear-gradient(180deg, rgba(220,232,240,0.9), rgba(180,200,212,0.85))'}}>
@@ -24,7 +24,7 @@ const Cafe: React.FC<{f: number; dur: number; steam: number}> = ({f, dur, steam}
   </AbsoluteFill>
 );
 const S26: React.FC<SceneProps> = ({f, T, dur}) => {
-  if (f < LT(T, 's26', 1)) return <FlipRoom f={f} n={3} />;
+  if (f < LT(T, 's26', 1)) return <FlipRoom f={f} n={6} />;
   const study = f >= LT(T, 's26', 3);
   return (
     <AbsoluteFill>
@@ -118,7 +118,7 @@ const Sandbag: React.FC<{f: number; hit: boolean}> = ({f, hit}) => {
   );
 };
 const S31: React.FC<SceneProps> = ({f, T}) => {
-  if (f < LT(T, 's31', 1)) return <FlipRoom f={f} n={4} />;
+  if (f < LT(T, 's31', 1)) return <FlipRoom f={f} n={5} />;
   const groups = f >= LT(T, 's31', 6);
   return (
     <DarkBoard tint="#302424">
@@ -206,7 +206,7 @@ const Hut: React.FC<{f: number}> = ({f}) => (
   </AbsoluteFill>
 );
 const S36: React.FC<SceneProps> = ({f, T}) => {
-  if (f < LT(T, 's36', 1)) return <FlipRoom f={f} n={5} extra={<Pop f={f} at={30} style={{position: 'absolute', left: 0, right: 0, top: 760, textAlign: 'center', fontFamily: FONT, fontSize: 40, fontWeight: 900, color: '#8a6a3a'}}>元の名前 アケディア</Pop>} />;
+  if (f < LT(T, 's36', 1)) return <FlipRoom f={f} n={7} extra={<Pop f={f} at={30} style={{position: 'absolute', left: 0, right: 0, top: 760, textAlign: 'center', fontFamily: FONT, fontSize: 40, fontWeight: 900, color: '#8a6a3a'}}>元の名前 アケディア</Pop>} />;
   const sym = ['太陽が止まって見える', '一日が50時間あるように感じる', '何度も窓の外を見る', 'ここではないどこかへ行きたい', '今していることが 全部無意味に思える'];
   const symOn = f >= LT(T, 's36', 3) && f < LT(T, 's36', 4);
   return (
@@ -305,7 +305,7 @@ const S40: React.FC<SceneProps> = ({f, T}) => {
   return <Pocket f={f} kind={k} />;
 };
 
-// =============== 9. 虚飾 ===============
+// =============== 9. 虚栄 ===============
 const LikeGrid: React.FC<{f: number; boost: boolean}> = ({f, boost}) => {
   const likes = [312, 8, 154, 21, 487, 12];
   return (
@@ -323,7 +323,7 @@ const LikeGrid: React.FC<{f: number; boost: boolean}> = ({f, boost}) => {
   );
 };
 const S42: React.FC<SceneProps> = ({f, T, dur}) => {
-  if (f < LT(T, 's42', 1)) return <FlipRoom f={f} n={6} />;
+  if (f < LT(T, 's42', 1)) return <FlipRoom f={f} n={1} />;
   return (
     <AbsoluteFill>
       <MriBg f={f} dur={dur} />
@@ -386,15 +386,15 @@ const S44: React.FC<SceneProps> = ({f, T}) => {
   );
 };
 
-// =============== 10. 傲慢 ===============
+// =============== 傲慢（v1.5 では2章・1枚目） ===============
 const S45: React.FC<SceneProps> = ({f, T}) => {
   const lift = seg(f, LT(T, 's45', 1), LT(T, 's45', 1) + 40);
-  if (f < LT(T, 's45', 1)) return <FlipRoom f={f} n={7} />;
+  if (f < LT(T, 's45', 1)) return <FlipRoom f={f} n={0} />;
   return (
     <AbsoluteFill>
-      <CardRow state={(i) => (i === 7 ? {p: 1, glow: 0.8, lift: 140 * lift} : {p: 1, dim: 0.25 * lift})} y={330} />
+      <CardRow state={(i) => (i === 0 ? {p: 1, glow: 0.8, lift: 140 * lift} : {p: 1, dim: 0.25 * lift})} y={330} />
       <svg width={1920} height={1080} style={{position: 'absolute', inset: 0, opacity: seg(f, LT(T, 's45', 1, 2), LT(T, 's45', 1, 2) + 30)}}>
-        {Array.from({length: 7}, (_, i) => <path key={i} d={`M ${1574 + 90} ${330 - 140 + 266} C ${1500} ${700}, ${300 + i * 212} ${760}, ${328 + i * 212} ${600}`} stroke="rgba(160,57,43,0.5)" strokeWidth={4} fill="none" />)}
+        {Array.from({length: 7}, (_, i) => <path key={i} d={`M ${1574 + 90 - 7 * 212} ${330 - 140 + 266} C ${420} ${720}, ${300 + (i + 1) * 212} ${700}, ${328 + (i + 1) * 212} ${600}`} stroke="rgba(160,57,43,0.5)" strokeWidth={4} fill="none" />)}
       </svg>
       {f >= LT(T, 's45', 1, 2) && <Big f={f} at={LT(T, 's45', 1, 2)} y={720 - 640} size={60} color="#c0392b" light text="他のすべての考えの 根っこ" />}
     </AbsoluteFill>
@@ -561,8 +561,8 @@ const S54: React.FC<SceneProps> = ({f, T}) => {
       {(recap || watch) && <AbsoluteFill style={{background: 'rgba(8,6,4,0.9)'}} />}
       {recap && (
         <div style={{position: 'absolute', left: 140, top: 60, width: 1640, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18}}>
-          {['見ただけで始まる「食べたい」', '勢いがつくと別人になる判断', '買う前に決まっている欲', '心がよそに行って生まれる悲しみ', '発散するほど育つ怒り', '何もない15分に耐えられない', 'いいねに反応する脳', '自分では気づけない傲慢'].map((t, i) => (
-            <Pop key={i} f={f} at={LT(T, 's54', 4, Math.min(i, 7))} from="up" style={{padding: '16px 24px', borderRadius: 14, background: 'rgba(16,20,30,0.9)', border: '2px solid rgba(232,196,106,0.5)', fontFamily: FONT, fontSize: 36, fontWeight: 900, color: K.ink}}><span style={{color: K.gold}}>{names[i]}</span>　{t}</Pop>
+          {['自分では気づけない傲慢', 'いいねに反応する脳', '買う前に決まっている欲', '勢いがつくと別人になる判断', '見ただけで始まる「食べたい」', '発散するほど育つ怒り', '心がよそに行って生まれる悲しみ', '何もない15分に耐えられない'].map((t, i) => (
+            <Pop key={i} f={f} at={LT(T, 's54', 4, [0, 0, 1, 2, 3, 4, 5, 6][i]) + (i === 1 ? 24 : 0)} from="up" style={{padding: '16px 24px', borderRadius: 14, background: 'rgba(16,20,30,0.9)', border: '2px solid rgba(232,196,106,0.5)', fontFamily: FONT, fontSize: 36, fontWeight: 900, color: K.ink}}><span style={{color: K.gold}}>{names[i]}</span>　{t}</Pop>
           ))}
         </div>
       )}

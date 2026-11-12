@@ -7,13 +7,13 @@ Usage: python3 scripts/make_narration.py [--speed 1.05] [--only S01,S02]
 Writes audio/scenes/Sxx.wav, audio/narration.wav (48 kHz mono), audio/narration.m4a, audio/timings.json,
 audio/readings.md (the engine's katakana reading of every sentence, for the reading check).
 """
-import argparse, json, re, subprocess, tempfile, urllib.parse, urllib.request, wave
+import argparse, json, os, re, subprocess, tempfile, urllib.parse, urllib.request, wave
 from pathlib import Path
 import numpy as np
 
 EP = Path(__file__).resolve().parents[1]
 VV, SPEAKER, SR = "http://127.0.0.1:50021", 52, 48000
-SENT_GAP, SCENE_GAP = 0.35, 0.9
+SENT_GAP = float(os.environ.get("NAR_SENT_GAP", "0.35")); SCENE_GAP = float(os.environ.get("NAR_SCENE_GAP", "0.9"))
 
 # Display text → text for the engine (numbers and words the engine misreads). The script file is not changed.
 READ = [
@@ -24,10 +24,35 @@ READ = [
     ("地元", "じもと"), ("石造り", "いしづくり"), ("逆浸透", "ぎゃくしんとう"), ("受け皿", "うけざら"),
     ("家々", "いえいえ"), ("東南東", "とうなんとう"), ("日照り", "ひでり"), ("家の水", "いえのみず"), ("家の下", "いえのした"), ("家の横", "いえのよこ"), ("家のタンク", "いえのタンク"), ("家に", "いえに"), ("家ほど", "いえほど"),
 ]
+READ2 = [
+    ("垂木の上", "たるきのうえ"), ("石灰窯", "せっかいがま"), ("水利権", "スイリケン"), ("岩礁", "がんしょう"), ("一滴", "いってき"),
+    ("綱渡り", "つなわたり"), ("二・五メートル", "にいてんごメートル"), ("十平方フィート", "じゅっへいほうフィート"),
+    ("淡水化", "たんすいか"), ("漂白剤", "ひょうはくざい"), ("縦の管", "たてのくだ"), ("あふれ管", "あふれかん"),
+    ("一、二週間分", "いち、にしゅうかんぶん"), ("約三十九トン", "ヤク、サンジュウキュウトン"), ("約千トン", "ヤク、セントン"),
+    ("約十エーカー", "ヤク、ジュウエーカー"), ("三十四エーカー", "サンジュウヨンエーカー"), ("家族", "かぞく"), ("通り道", "とおりみち"),
+    ("上の端", "うえのはし"), ("一ミリ", "いちミリ"), ("十ミリ", "じゅうミリ"), ("一平方メートル", "イチヘイホウメートル"), ("一トン", "いっトン"), ("赤十字", "せきじゅうじ"), ("弓", "ゆみ"), ("下の端", "したのはし"), ("北と南", "きたとみなみ"), ("一センチ", "いっセンチ"), ("四十センチ", "よんじゅっセンチ"),
+]
+
+
+_D = "〇一二三四五六七八九"
+
+
+def _kanji_num(n):
+    out = ""
+    for v, u in ((1000, "千"), (100, "百"), (10, "十")):
+        q, n = divmod(n, v)
+        if q:
+            out += ("" if q == 1 else _D[q]) + u
+    return out + (_D[n] if n else "")
+
+
+def years(t):
+    """一六〇九年 → 千六百九年 (digit-by-digit kanji years are read as numbers)."""
+    return re.sub(r"([〇一二三四五六七八九]{4})年", lambda m: _kanji_num(int("".join(str(_D.index(c)) for c in m.group(1)))) + "年", t)
 
 
 def scenes():
-    t = (EP / "05_script.md").read_text()
+    t = (EP / os.environ.get("NAR_SCRIPT", "05_script.md")).read_text()
     out = []
     for m in re.finditer(r"\n## (S\d\d) ([^\n]+)\n([^\n]+)\n", t):
         out.append((m.group(1), m.group(2), m.group(3).strip()))
@@ -66,13 +91,16 @@ def main():
     ap.add_argument("--speed", type=float, default=1.05)
     ap.add_argument("--only")
     a = ap.parse_args()
-    out = EP / "audio"; (out / "scenes").mkdir(parents=True, exist_ok=True)
+    out = EP / os.environ.get("NAR_OUT", "audio"); (out / "scenes").mkdir(parents=True, exist_ok=True)
     timings, readings, full, t0 = [], ["# 読みの確認（エンジンのカタカナ読み）\n"], [], 0.0
     for sid, title, text in scenes():
         if a.only and sid not in a.only.split(","):
             continue
         spoken = text
         for k, v in READ:
+            spoken = spoken.replace(k, v)
+        spoken = years(spoken)
+        for k, v in READ2:
             spoken = spoken.replace(k, v)
         sents = [s + "。" for s in spoken.split("。") if s.strip()]
         disp = [s + "。" for s in text.split("。") if s.strip()]

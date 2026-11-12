@@ -4,7 +4,7 @@ data (timings, subtitles, shots, credits, output paths).
 
 Images: photos and generated images are made by Codex (社長 2026-11-11). Each such shot is a "slot":
 - photo slot: ../assets/<file> (real photo, credit in credits.json) — shown when the file exists, max 3 s
-- gen slot:   ../gen/<key>.jpg (Codex-generated, shown with 「AI生成イメージ」)
+- gen slot:   ../gen/<key>.jpg (Codex-generated; no on-screen label since 2026-11-12)
 When the file is missing, Claude's own diagram (fallback) is shown. Re-render after the files arrive.
 Usage: python3 render.py --list | --shotlist | --still SEC ... | --chunks i/m | --mux
 """
@@ -83,7 +83,7 @@ def L_dist(a, b, t0=1.6):
 
 
 def L_caption(s, t0=0.2):
-    return R.L_caption(s, t0)
+    return lambda img, p, t, d: None   # caption boxes removed (社長 2026-11-12)
 
 
 # ---------------------------------------------------------------- drawing helpers (Claude's diagrams)
@@ -188,7 +188,7 @@ def d_lens(img, t, d):
     dr.rectangle([0, 960, W, H], fill=(22, 60, 104, 255))
     rain(dr, t, 340, 1580, 120, 440, 60, 0.9)
     put(img, L, seg(t, 0.0, 0.5))
-    label(img, (960, 470), "石灰岩", seg(t, 0.4, 1.0), color=(60, 46, 30))
+    label(img, (960, 470), "石灰岩", seg(t, 0.4, 1.0))
     label(img, (960, ys + 60), "淡水", seg(t, 1.6, 2.2))
     label(img, (300, 760), "海水", seg(t, 2.0, 2.6))
     diagram_note(img, "模式図（縮尺・厚さは正確ではありません）")
@@ -370,7 +370,7 @@ def slot_frame(s, t):
     img = g.copy()
     for xy, txt, t0 in sl.get("labels", []):
         label(img, (xy[0] * W, xy[1] * H), txt, seg(tt, t0, t0 + 0.6))
-    text(img, (W - 40, 40), "AI生成イメージ", 28, fill=(235, 238, 244), anchor="ra", weight="700Bold", stroke=4, shadow=False)
+    # no 「AI生成イメージ」 label on screen (社長 2026-11-12「残さないでください」); recorded in the ledger and description
     return img
 
 
@@ -442,8 +442,31 @@ def shot_frame(s, t):
 R.shot_frame = shot_frame
 
 
+# 社長 2026-11-12「右上や左上の注釈は不要です」: no channel name / scene heading (top left), no source or
+# diagram notes and no photo credits (top right), no caption boxes. Sources and credits go to the description.
+R.note = lambda *a, **k: None
+R.note_ne = lambda *a, **k: None
+R.CREDITS = {}
+R.L_caption = lambda *a, **k: (lambda img, p, t, d: None)
+
+
 def frame(t):
-    return R.frame(t)
+    R.TL = R.TL or R.timeline()
+    TL = R.TL
+    s = ([x for x in TL if x["start"] <= t < x["end"]] or [TL[-1]])[0]
+    img = R.drift(s, shot_frame(s, t), t)
+    i = TL.index(s)
+    if i + 1 < len(TL) and t > s["end"] - R.XF:
+        nxt = R.drift(TL[i + 1], shot_frame(TL[i + 1], TL[i + 1]["start"]), TL[i + 1]["start"])
+        img = Image.blend(img, nxt, ease((t - (s["end"] - R.XF)) / R.XF))
+    img.alpha_composite(R._SUBBG)
+    for a, b, lines in R.SUBS:
+        if a - 0.05 <= t < b + 0.05:
+            y = H - 62 - (len(lines) - 1) * 88
+            for j, ln in enumerate(lines):
+                text(img, (W / 2, y + j * 88), ln, 72, anchor="ms", stroke=6)
+            break
+    return np.array(img.convert("RGB"))
 
 
 def render(t0, t1, path):
@@ -478,20 +501,20 @@ def main():
         i, m = map(int, a.chunks.split("/"))
         n = int(math.ceil(R.TOTAL / 10.0))
         for c in range(i - 1, n, m):
-            dst = OUT / f"c5_{c:03d}.mp4"
+            dst = OUT / f"c5v2_{c:03d}.mp4"
             if dst.exists():
                 continue
-            tmp = OUT / f"c5_{c:03d}.tmp.mp4"
+            tmp = OUT / f"c5v2_{c:03d}.tmp.mp4"
             render(c * 10.0, min(R.TOTAL, (c + 1) * 10.0), tmp)
             tmp.rename(dst)
         return
     if a.mux:
-        parts = sorted(OUT.glob("c5_[0-9][0-9][0-9].mp4"))
+        parts = sorted(OUT.glob("c5v2_[0-9][0-9][0-9].mp4"))
         assert len(parts) == int(math.ceil(R.TOTAL / 10.0)), len(parts)
         (OUT / "parts.txt").write_text("".join(f"file '{p.name}'\n" for p in parts))
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(OUT / "parts.txt"),
                         "-i", str(OUT / "mix.wav"), "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-af", "loudnorm=I=-15:TP=-1.5:LRA=11",
-                        "-ar", "48000", "-c:a", "aac", "-b:a", "192k", "-shortest", str(OUT / "chizu-005-bermuda-roof-water_full_v1.mp4")], check=True)
+                        "-ar", "48000", "-c:a", "aac", "-b:a", "192k", "-shortest", str(OUT / "chizu-005-bermuda-roof-water_full_v2.mp4")], check=True)
 
 
 if __name__ == "__main__":
