@@ -152,6 +152,27 @@ for _m in (B, V3):
     _m.d_slate = d_slate
     _m.d_steps = d_steps
 
+def d_bars(head, rows, unit=""):
+    """v3 d_bars with the label column sized to the longest label (the rounded font is wider; no label runs off the left edge)."""
+    lx = max(560, 140 + max(draw.text_w(k, 44) for k, _ in rows))
+    x0 = lx + 40
+    span = min(900, W - 260 - x0)
+
+    def fn(img, t, d):
+        V3.title(img, head, t, y=170)
+        mx = max(v for _, v in rows)
+        for i, (k, v) in enumerate(rows):
+            a = B.seg(t, 0.4 + i * 0.7, 1.4 + i * 0.7)
+            y = 320 + i * 130
+            text(img, (lx, y), k, 44, anchor="rm", alpha=min(1, a * 2))
+            panel(img, (x0, y - 38, x0 + span * v / mx * a, y + 38), fill=NEW["TEAL"] if i else NEW["AMBER"], alpha=0.9, radius=8)
+            if a > 0.05:
+                text(img, (x0 + 20 + span * v / mx * a, y), f"{v:g}{unit}", 44, anchor="lm", alpha=min(1, a * 2))
+    return fn
+
+
+V3.d_bars = d_bars
+
 # ---------------------------------------------------------------- background
 _BG = {}
 
