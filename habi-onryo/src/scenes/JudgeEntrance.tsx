@@ -8,27 +8,27 @@ import {SceneFrame} from '../components/SceneFrame';
 import {judgeEntranceCaptions as c} from '../data/captions';
 import {colors, gothicFamily, minchoFamily} from '../theme';
 
-const clues = ['冬至の朝日？', '最初から伊勢？', 'すべて皇居？', '見られない？', 'ヘブライ文字？', '剣は祟る？', '壇ノ浦に沈んだ？', '見た人は？', '伊勢の木？'];
+const clues = ['反逆者', '新皇', '俵藤太', '笑う首', '飛ぶ首', '塚の祟り', 'GHQ', '2026年', '神田明神', '成田山', '遣唐使', '無実', '時平の死', '清涼殿', '絵巻', '学問の神', '牛', '飛梅', '叔父子', '保元の乱', '血の経', '暗殺', '西行', '天狗', '怨霊の始まり', '白峯神宮', '五輪', 'スポーツ', '三大怨霊', '御霊', '祇園祭'];
 
 // 今夜の9の手がかり
 const ClueRow = () => {
 	const frame = useCurrentFrame();
 	return (
-		<div style={{position: 'absolute', left: 80, right: 80, top: 150, display: 'flex', flexWrap: 'wrap', gap: 14, justifyContent: 'center'}}>
+		<div style={{position: 'absolute', left: 80, right: 80, top: 170, display: 'flex', flexWrap: 'wrap', gap: 14, justifyContent: 'center'}}>
 			{clues.map((cl, i) => (
 				<div
 					key={cl}
 					style={{
-						width: 158,
+						width: 160,
 						padding: '14px 0',
 						borderRadius: 16,
 						background: colors.paper,
 						textAlign: 'center',
-						opacity: interpolate(frame, [i * 4, i * 4 + 10], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
+						opacity: interpolate(frame, [i * 3, i * 3 + 10], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
 					}}
 				>
 					<div style={{fontFamily: gothicFamily, fontWeight: 900, fontSize: 24, color: colors.clayDark}}>手がかり {i + 1}</div>
-					<div style={{margin: '8px 10px 4px', fontFamily: minchoFamily, fontWeight: 800, fontSize: 56, lineHeight: 1, color: colors.clay}}>？</div>
+					<div style={{margin: '8px 10px 4px', fontFamily: minchoFamily, fontWeight: 800, fontSize: 40, lineHeight: 1, color: colors.clay}}>？</div>
 					<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 21, whiteSpace: 'nowrap', color: colors.ink}}>{cl}</div>
 				</div>
 			))}
@@ -124,9 +124,9 @@ export const JudgeEntrance = () => (
 			<NamePlate />
 		</Beat>
 		<Beat name="今夜の問い" captions={c} from={2} to={3}>
-			<Photo id="naiku-ujibashi-snow" move="in" label="三種の神器は、どこに？" />
+			<Photo id="fujin-raijin-sotatsu" move="in" label="祟りは、本当にあったのか？" />
 		</Beat>
-		<Beat name="9の手がかり" captions={c} from={4}>
+		<Beat name="31の手がかり" captions={c} from={4}>
 			<ClueRow />
 		</Beat>
 	</SceneFrame>

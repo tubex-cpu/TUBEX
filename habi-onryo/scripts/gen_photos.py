@@ -8,10 +8,10 @@ ROOT = Path(__file__).resolve().parent.parent
 cr = json.loads((ROOT / 'public/photos/credits.json').read_text())
 desc = json.loads((ROOT / 'scripts/photo-desc.json').read_text())
 # 縦長・極端な横長・地図は全体を見せる（contain）。人物の顔がある写真と地図は、テロップを下に置く
-CONTAIN = {'mirror-hirabaru-drawing', 'shinpo-tachi'}
+CONTAIN = {'michizane-masanobu', 'hogen-screen-detail', 'totou-tenjin', 'tenjin-sesshu-kitano', 'tenjin-kakejiku', 'emperor-daigo', 'sutoku-mausoleum-kyoto', 'shiramine-pagoda', 'kubizuka-new-stone'}
 # 明るい地図は、夜の画面に合うよう色を反転させる
-FILTER = {k: 'sepia(0.55) brightness(0.82) contrast(1.1)' for k in ('real-shoki-iwato', 'real-shoki-open-cave', 'real-shoki-descent', 'real-kogo-sakaki', 'real-kogo-uzume', 'real-shoki-sujin', 'real-shoki-suinin', 'real-shoki-regalia', 'real-kogo-chinkon', 'real-shinki-sword-account')}
-FACE = {'orochi-yoshitoshi-w', 'real-okihiki-geku-2006', 'gen-toji-crowd', 'gen-yamatohime-journey', 'kenji-2019', 'gen-vessel', 'dannoura-sadahide-w', 'iwato-kunisada-w', 'gen-tenmu-illness', 'amaterasu-kyosai', 'genpei-byobu-w', 'gen-hebrew-rumor', 'real-okihiki-carriage', 'takeru-gekko', 'meiji-kami-w', 'gen-toji-future', 'gen-okihiki-2026', 'gen-munamochi', 'gen-dogyo', 'gen-plague', 'antoku-engi', 'sengyo-kuniyoshi', 'gen-kawabiki', 'gen-tokoyo-nami', 'real-daijoe-old', 'real-okihiki-naiku-2006', 'gen-sword-to-atsuta', 'gen-palace-fire', 'orochi-chikanobu-w', 'gen-1945-move', 'iwato-toshimasa-w', 'gen-dannoura-sea', 'gen-toji-sunrise', 'gen-chinkon', 'antoku-portrait', 'gen-kiso-felling', 'enthronement-2019', 'gen-peek', 'takeru-yoshitoshi', 'tenson-korin', 'gen-tenson-regalia'}
+FILTER = {}
+FACE = {'sutoku-yoshitsuya', 'sutoku-miei', 'sutoku-thunder', 'tenjin-sesshu-kitano', 'emperor-daigo', 'hidesato-dragon', 'michizane-moon', 'raijin-statue', 'sutoku-yoshitoshi-exile', 'michizane-masanobu', 'foxfire-chikanobu', 'totou-tenjin', 'takiyasha-katata', 'heiji-abduction', 'masakado-kunisada-katata', 'tenjin-kakejiku', 'sawara-zue', 'michizane-kunisada-thunder', 'takiyasha-seiu', 'michizane-pine', 'takiyasha-kuniyoshi', 'hidesato-audience', 'tenjin-egara', 'emperor-toba', 'sanukiin-tengu', 'masakado-hidesato-kamahige', 'tokihira-kunisada', 'takiyasha-kunisada', 'michizane-tenpai-met', 'masakado-kunisada', 'sutoku-portrait', 'hidesato-yoshitoshi', 'sutoku-hyakunin', 'masakado-geese-moon', 'masakado-yoshitoshi-horse', 'michizane-kuniyoshi-farewell', 'tofuro-onigawara', 'fujin-raijin-sotatsu', 'michizane-tenpai', 'engi-raijin', 'matsuyama-tengu', 'tadamichi-miei', 'go-shirakawa', 'michizane-storm-drawing'}
 lines = []
 for pid, c in cr.items():
     w, h = c.get('size', [1, 1])
