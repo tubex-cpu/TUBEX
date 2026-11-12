@@ -2,7 +2,7 @@
 v2.3 from 0:00 to the start of S14 (4:58.38), with
 - the relief base map (basemap-data 2.0.0 shadedrelief.jpg, same as chizu-002 v2) instead of the flat Natural Earth fill,
 - Codex-made explanatory images (../gen_trial/G01..G09.jpg, ledger ../06d_generated_assets_trial.md) behind the
-  diagram / chapter-card shots, labelled 「AI生成イメージ」. A missing image falls back to the v2.3 diagram.
+  diagram / chapter-card shots, with no on-screen label (社長 2026-11-12). A missing image falls back to the v2.3 diagram.
 Narration, subtitles, photos and shot timing are v2.3 unchanged. render_v23.py and its outputs are not modified.
 Usage: python3 render_trial5.py --list | --still SEC ... | --chunks i/m | --mux
 """
@@ -81,7 +81,7 @@ def gen_img(key):
 
 
 def ai_label(img):
-    text(img, (W - 40, 40), "AI生成イメージ", 28, fill=(235, 238, 244), anchor="ra", weight="700Bold", stroke=4, shadow=False)
+    pass   # no on-screen label (社長 2026-11-12「残さないでください」)
 
 
 def label(img, xy, s, a, size=56, color=INK):

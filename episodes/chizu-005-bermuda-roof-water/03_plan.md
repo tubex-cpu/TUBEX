@@ -56,7 +56,7 @@
 | P7 | David Broad の panoramio 写真（例 https://commons.wikimedia.org/wiki/File:Bermuda_-_House_on_Riddell%27s_Bay_-_panoramio.jpg ） | David Broad（2009〜2010） | CC BY 3.0 | 入り江沿いの家 | 予備 |
 - 見つからなかったもの：給水トラック・タインズ・ベイのプラント・地下タンク内部の自由ライセンスの写真（カテゴリ「Water supply in Bermuda」は空）。S08・S09 は自作の図とアイコンで描く
 - **パノラマの自由（Bermuda）**：Commons の「Copyright rules by territory/Bermuda」によれば、Copyright and Designs Act 2004 第86条で、公共の場所に恒久的に置かれた**建物・彫刻・工芸品（3D）**は写真・映像にしてよい（英国と同様）。**絵画・看板・ポスターなどの2D作品は対象外**。屋根・家並みの写真は可、看板や壁画が主役の写真は使わない
-- 生成素材を使う場合は、画面に「AI生成イメージ」と表示し、実写と偽らない（`CHANNEL.md`）。断面図・地図は自作の図解として示す
+- 生成素材を使う場合は、実写と偽らない（画面の「AI生成イメージ」表示はしない＝社長 2026-11-12。概要欄に書く）（`CHANNEL.md`）。断面図・地図は自作の図解として示す
 
 ## 地図・図解
 - 地図：Natural Earth（10m）で北大西洋・北米東岸。島の拡大図は Natural Earth では粗いため、OpenStreetMap（ODbL、出典表示が必要）を使うかを素材の段階で判断する。衛星画像は使わない（chizu-001 の方針）

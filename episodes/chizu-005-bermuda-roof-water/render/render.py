@@ -4,7 +4,7 @@ data (timings, subtitles, shots, credits, output paths).
 
 Images: photos and generated images are made by Codex (社長 2026-11-11). Each such shot is a "slot":
 - photo slot: ../assets/<file> (real photo, credit in credits.json) — shown when the file exists, max 3 s
-- gen slot:   ../gen/<key>.jpg (Codex-generated, shown with 「AI生成イメージ」)
+- gen slot:   ../gen/<key>.jpg (Codex-generated; no on-screen label since 2026-11-12)
 When the file is missing, Claude's own diagram (fallback) is shown. Re-render after the files arrive.
 Usage: python3 render.py --list | --shotlist | --still SEC ... | --chunks i/m | --mux
 """
@@ -370,7 +370,7 @@ def slot_frame(s, t):
     img = g.copy()
     for xy, txt, t0 in sl.get("labels", []):
         label(img, (xy[0] * W, xy[1] * H), txt, seg(tt, t0, t0 + 0.6))
-    text(img, (W - 40, 40), "AI生成イメージ", 28, fill=(235, 238, 244), anchor="ra", weight="700Bold", stroke=4, shadow=False)
+    # no 「AI生成イメージ」 label on screen (社長 2026-11-12「残さないでください」); recorded in the ledger and description
     return img
 
 
