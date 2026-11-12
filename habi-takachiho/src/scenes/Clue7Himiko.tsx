@@ -23,8 +23,8 @@ export const Clue7Himiko = () => {
 					<Cards cards={[{head: '天照大神', body: '太陽の女神\n記紀の神話', tone: 'gold'}, {head: '卑弥呼', body: '鬼道の女王\n魏志倭人伝', tone: 'dark'}]} tone='ember' />
 				</Stage>
 			</Beat>
-			<Beat name="1910年からの説" captions={c} from={5} to={6}>
-				<Photo id="mirror-kambara" move="in" label="1910年からの説" />
+			<Beat name="白鳥庫吉（1910年の論文）" captions={c} from={5} to={6}>
+				<Photo id="real-shiratori-portrait" move="in" label="白鳥庫吉（1910年の論文）" />
 			</Beat>
 			<Beat name="大きな壁" captions={c} from={7} to={9}>
 				<Stage label="大きな壁">

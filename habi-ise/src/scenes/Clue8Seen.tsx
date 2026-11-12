@@ -20,14 +20,14 @@ export const Clue8Seen = () => {
 					<Figures figs={[{value: '85', label: 'cm', small: '記述された長さ'}]} tone='ink' note='刃先は菖蒲の葉のよう、全体は白っぽい（記述より）' />
 				</Stage>
 			</Beat>
-			<Beat name="明治に知られた話" captions={c} from={3} to={4}>
-				<Photo id="atsuta-kusu" move="in" label="明治に知られた話" />
+			<Beat name="『神器考証』（1898年）が引く記述" captions={c} from={3} to={4}>
+				<Photo id="real-shinki-sword-account" move="in" label="『神器考証』（1898年）が引く記述" />
 			</Beat>
 			<Beat name="伝え聞いた話" captions={c} from={5} to={6}>
 				<Photo id="sword-bronze" move="in" label="伝え聞いた話" />
 			</Beat>
-			<Beat name="1945年" captions={c} from={7} to={7}>
-				<Photo id="atsuta-kusanagi-hiroba" move="in" label="1945年" />
+			<Beat name="岐阜・高山の水無神社" captions={c} from={7} to={7}>
+				<Photo id="real-minashi-haiden" move="in" label="岐阜・高山の水無神社" />
 			</Beat>
 			<Beat name="判決" captions={c} from={8} to={10}>
 				<GavelVerdict verdict="half" strikeAt={captionFrame(c, 8, 9, fps)} />

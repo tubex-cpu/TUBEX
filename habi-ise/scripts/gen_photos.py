@@ -10,8 +10,8 @@ desc = json.loads((ROOT / 'scripts/photo-desc.json').read_text())
 # 縦長・極端な横長・地図は全体を見せる（contain）。人物の顔がある写真と地図は、テロップを下に置く
 CONTAIN = {'mirror-hirabaru-drawing', 'shinpo-tachi'}
 # 明るい地図は、夜の画面に合うよう色を反転させる
-FILTER = {}
-FACE = {'kenji-2019', 'iwato-kunisada-w', 'antoku-portrait', 'genpei-byobu-w', 'amaterasu-kyosai', 'orochi-chikanobu-w', 'takeru-gekko', 'takeru-yoshitoshi', 'iwato-toshimasa-w', 'orochi-yoshitoshi-w', 'antoku-engi', 'dannoura-sadahide-w', 'sengyo-kuniyoshi', 'tenson-korin', 'meiji-kami-w', 'enthronement-2019'}
+FILTER = {k: 'sepia(0.55) brightness(0.82) contrast(1.1)' for k in ('real-shoki-iwato', 'real-shoki-open-cave', 'real-shoki-descent', 'real-kogo-sakaki', 'real-kogo-uzume', 'real-shoki-sujin', 'real-shoki-suinin', 'real-shoki-regalia', 'real-kogo-chinkon', 'real-shinki-sword-account')}
+FACE = {'genpei-byobu-w', 'takeru-yoshitoshi', 'real-okihiki-geku-2006', 'amaterasu-kyosai', 'dannoura-sadahide-w', 'orochi-yoshitoshi-w', 'iwato-toshimasa-w', 'enthronement-2019', 'real-okihiki-carriage', 'real-daijoe-old', 'kenji-2019', 'antoku-portrait', 'antoku-engi', 'tenson-korin', 'sengyo-kuniyoshi', 'orochi-chikanobu-w', 'real-okihiki-naiku-2006', 'meiji-kami-w', 'takeru-gekko', 'iwato-kunisada-w'}
 lines = []
 for pid, c in cr.items():
     w, h = c.get('size', [1, 1])

@@ -28,15 +28,15 @@ export const Clue1Kagura = () => {
 				<Photo id="tj-sando" move="in" label="1978年、国の文化財に" />
 			</Beat>
 			<Beat name="観光客のためのショー？" captions={c} from={5} to={5}>
-				<Photo id="yk-bonfire" move="in" label="観光客のためのショー？" />
+				<Photo id="yk-tsunoyama" move="in" label="観光客のためのショー？" />
 			</Beat>
 			<Beat name="神々に、実りを感謝する" captions={c} from={6} to={7}>
 				<Stage label="神々に、実りを感謝する">
 					<KaguraNight />
 				</Stage>
 			</Beat>
-			<Beat name="毎晩8時から" captions={c} from={8} to={8}>
-				<Photo id="tj-haiden" move="in" label="毎晩8時から" />
+			<Beat name="高千穂神社の神楽殿で、毎晩8時から" captions={c} from={8} to={8}>
+				<Photo id="real-kagura-2023" move="in" label="高千穂神社の神楽殿で、毎晩8時から" />
 			</Beat>
 			<Beat name="旅行者が見られる4番" captions={c} from={9} to={9}>
 				<Stage label="旅行者が見られる4番">

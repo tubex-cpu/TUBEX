@@ -22,11 +22,11 @@ export const Clue3Iwato = () => {
 					<IwatoStory phase='close' />
 				</Stage>
 			</Beat>
-			<Beat name="長鳴鳥と鏡" captions={c} from={3} to={4}>
-				<Photo id="art-uzume-rooster" move="in" label="長鳴鳥と鏡" />
+			<Beat name="榊に玉と鏡をかける（古語拾遺）" captions={c} from={3} to={4}>
+				<Photo id="real-kogo-sakaki" move="in" label="榊に玉と鏡をかける（古語拾遺）" />
 			</Beat>
 			<Beat name="天宇受売命の舞" captions={c} from={5} to={6}>
-				<Photo id="art-uzume-hokkei" move="in" label="天宇受売命の舞" />
+				<Photo id="real-iwato-loc" move="in" label="天宇受売命の舞" />
 			</Beat>
 			<Beat name="光が戻った" captions={c} from={7} to={8}>
 				<Stage label="光が戻った">
@@ -43,8 +43,8 @@ export const Clue3Iwato = () => {
 					<ReliefMap view='nihon' focus={P.erihara} zoom={1.08} pins={[{at: P.takachihoTown, name: '高千穂', big: true, t: 10}, {at: P.erihara, name: '恵利原の水穴', sub: '三重・志摩', t: 30}, {at: P.togakushi, name: '戸隠神社', sub: '長野', t: 50}]} />
 				</Stage>
 			</Beat>
-			<Beat name="岩戸を開いた神々をまつる" captions={c} from={11} to={11}>
-				<Photo id="toga-snow" move="in" label="岩戸を開いた神々をまつる" />
+			<Beat name="恵利原の水穴（三重・志摩）" captions={c} from={11} to={11}>
+				<Photo id="real-erihara-cave" move="in" label="恵利原の水穴（三重・志摩）" />
 			</Beat>
 			<Beat name="最も南の天岩戸" captions={c} from={12} to={12}>
 				<Photo id="kumaya-inner" move="in" label="最も南の天岩戸" />

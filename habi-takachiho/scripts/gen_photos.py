@@ -10,8 +10,8 @@ desc = json.loads((ROOT / 'scripts/photo-desc.json').read_text())
 # 縦長・極端な横長・地図は全体を見せる（contain）。人物の顔がある写真と地図は、テロップを下に置く
 CONTAIN = {'kojiki-shinpukuji'}
 # 明るい地図は、夜の画面に合うよう色を反転させる
-FILTER = {}
-FACE = {'art-uzume-hokkei', 'yk-1914', 'iwato-tajikarao', 'yk-daidai', 'yk-masked-actor', 'yk-harunobu', 'art-tajikarao-hokkei', 'art-okame', 'yk-iki', 'art-mikagura', 'iwato-uzume', 'yk-mask-kami-pair', 'yk-masks-shelf', 'yk-giant-tajikarao', 'yk-mask-demon', 'art-sarutahiko', 'yk-iwami-orochi', 'art-toshimasa', 'yk-shiiba', 'art-kunisada-w', 'yk-mask-oldwoman', 'kunimi-ninigi', 'art-uzume-rooster', 'yk-iwami-smoke', 'yk-yutate', 'yk-giant-uzume', 'yk-ema', 'yk-tsunoyama', 'tj-carving', 'art-toyokuni-w', 'yk-iwami-shrine', 'art-tenson'}
+FILTER = {k: 'sepia(0.55) brightness(0.82) contrast(1.1)' for k in ('real-shoki-iwato', 'real-shoki-open-cave', 'real-shoki-descent', 'real-kogo-sakaki', 'real-kogo-uzume', 'real-shoki-sujin', 'real-shoki-suinin', 'real-shoki-regalia', 'real-kogo-chinkon', 'real-shinki-sword-account')}
+FACE = {'yk-1914', 'art-toshimasa', 'real-iwato-loc', 'real-kagura-2023', 'yk-mask-oldwoman', 'iwato-uzume', 'yk-shiiba', 'yk-iwami-orochi', 'yk-yutate', 'yk-masks-shelf', 'art-sarutahiko', 'yk-iwami-shrine', 'yk-tsunoyama', 'yk-ema', 'tj-carving', 'real-shiratori-portrait', 'art-kunisada-w', 'art-tenson', 'art-uzume-hokkei', 'yk-iwami-smoke', 'yk-iki', 'art-uzume-rooster', 'yk-harunobu', 'yk-giant-uzume', 'art-toyokuni-w', 'yk-mask-kami-pair', 'art-okame', 'yk-masked-actor', 'art-mikagura', 'iwato-tajikarao', 'art-tajikarao-hokkei', 'kunimi-ninigi', 'yk-mask-demon', 'yk-daidai', 'yk-giant-tajikarao'}
 lines = []
 for pid, c in cr.items():
     w, h = c.get('size', [1, 1])

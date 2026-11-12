@@ -16,13 +16,19 @@ export const Clue5Descent = () => {
 			<Beat name="天孫降臨" captions={c} from={0} to={0}>
 				<Photo id="art-tenson" move="in" label="天孫降臨" />
 			</Beat>
-			<Beat name="記紀が記す場所" captions={c} from={1} to={3}>
+			<Beat name="記紀が記す場所" captions={c} from={1} to={1}>
 				<Stage label="記紀が記す場所">
 					<Cards cards={[{head: '古事記', body: '筑紫の日向の\n高千穂の\nくしふるたけ', tone: 'dark'}, {head: '日本書紀', body: '日向の襲の\n高千穂峯', tone: 'dark'}]} tone='night' />
 				</Stage>
 			</Beat>
-			<Beat name="宮崎の高千穂町" captions={c} from={4} to={5}>
-				<Photo id="gorge-boats" move="in" label="宮崎の高千穂町" />
+			<Beat name="日本書紀「日向の襲の高千穂峯」" captions={c} from={2} to={3}>
+				<Photo id="real-shoki-descent" move="in" label="日本書紀「日向の襲の高千穂峯」" />
+			</Beat>
+			<Beat name="高千穂町のくしふる神社" captions={c} from={4} to={4}>
+				<Photo id="real-kushifuru-torii" move="in" label="高千穂町のくしふる神社" />
+			</Beat>
+			<Beat name="稲穂をまいた伝え" captions={c} from={5} to={5}>
+				<Photo id="real-kushifuru-haiden" move="in" label="稲穂をまいた伝え" />
 			</Beat>
 			<Beat name="もうひとつの高千穂" captions={c} from={6} to={6}>
 				<Stage label="もうひとつの高千穂" labelBottom>
@@ -45,7 +51,7 @@ export const Clue5Descent = () => {
 				<GavelVerdict verdict="half" strikeAt={captionFrame(c, 11, 12, fps)} />
 			</Beat>
 			<Beat name="太陽が隠れた神話は？" captions={c} from={14}>
-				<Photo id="sun-rise-mtn" move="in" label="太陽が隠れた神話は？" />
+				<Photo id="art-uzume-hokkei" move="in" label="太陽が隠れた神話は？" />
 			</Beat>
 		</SceneFrame>
 	);

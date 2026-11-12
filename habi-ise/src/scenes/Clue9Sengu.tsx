@@ -21,14 +21,14 @@ export const Clue9Sengu = () => {
 			<Beat name="木曽の山で" captions={c} from={3} to={5}>
 				<Photo id="hinoki-goshinboku" move="in" label="木曽の山で" />
 			</Beat>
-			<Beat name="伊勢へ運び込まれる" captions={c} from={6} to={6}>
-				<Photo id="okihiki-hoeisha" move="in" label="伊勢へ運び込まれる" />
+			<Beat name="御用材を運ぶ奉曳車（2007年）" captions={c} from={6} to={6}>
+				<Photo id="real-okihiki-carriage" move="in" label="御用材を運ぶ奉曳車（2007年）" />
 			</Beat>
-			<Beat name="市民が木を曳く「お木曳」" captions={c} from={7} to={8}>
-				<Photo id="okihiki-okabiki" move="in" label="市民が木を曳く「お木曳」" />
+			<Beat name="市民が木を曳く（2006年のお木曳）" captions={c} from={7} to={8}>
+				<Photo id="real-okihiki-geku-2006" move="in" label="市民が木を曳く（2006年のお木曳）" />
 			</Beat>
-			<Beat name="五十鈴川の川曳" captions={c} from={9} to={9}>
-				<Photo id="okihiki-kawabiki-w" move="scroll" label="五十鈴川の川曳" />
+			<Beat name="五十鈴川の川曳（2006年）" captions={c} from={9} to={9}>
+				<Photo id="real-okihiki-naiku-2006" move="in" label="五十鈴川の川曳（2006年）" />
 			</Beat>
 			<Beat name="伊勢の森の木は？" captions={c} from={10} to={11}>
 				<Photo id="aramatsuri-old-new" move="in" label="伊勢の森の木は？" />

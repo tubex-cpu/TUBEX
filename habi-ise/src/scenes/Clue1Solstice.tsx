@@ -29,10 +29,13 @@ export const Clue1Solstice = () => {
 			<Beat name="川に直角にかかる橋" captions={c} from={7} to={7}>
 				<Photo id="naiku-isuzu" move="in" label="川に直角にかかる橋" />
 			</Beat>
-			<Beat name="大鳥居の秘密" captions={c} from={8} to={11}>
+			<Beat name="大鳥居の秘密" captions={c} from={8} to={10}>
 				<Stage label="大鳥居の秘密">
 					<ToriiRecycle />
 				</Stage>
+			</Beat>
+			<Beat name="桑名・七里の渡しの鳥居（2006年撮影）" captions={c} from={11} to={11}>
+				<Photo id="real-kuwana-torii" move="in" label="桑名・七里の渡しの鳥居（2006年撮影）" />
 			</Beat>
 			<Beat name="判決" captions={c} from={12} to={14}>
 				<GavelVerdict verdict="half" strikeAt={captionFrame(c, 12, 13, fps)} />

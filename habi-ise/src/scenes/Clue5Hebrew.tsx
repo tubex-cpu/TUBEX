@@ -12,8 +12,8 @@ export const Clue5Hebrew = () => {
 	const {fps} = useVideoConfig();
 	return (
 		<SceneFrame captions={c} voice="Clue5Hebrew" label="第5の手がかり" title="八咫鏡の裏には、ヘブライ文字が刻まれている？">
-			<Beat name="鏡の裏の都市伝説" captions={c} from={0} to={1}>
-				<Photo id="milky-way" move="in" label="鏡の裏の都市伝説" />
+			<Beat name="刻まれた文字の都市伝説" captions={c} from={0} to={1}>
+				<Photo id="sword-inariyama" move="in" label="刻まれた文字の都市伝説" />
 			</Beat>
 			<Beat name="どこから来た話？" captions={c} from={2} to={3}>
 				<Photo id="mirror-hirabaru-drawing" move="in" label="どこから来た話？" />

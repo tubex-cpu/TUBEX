@@ -13,8 +13,8 @@ export const RootsStory = () => {
 			<Beat name="光が消え、また戻る" captions={c} from={1} to={2}>
 				<Photo id="art-mikagura" move="in" label="光が消え、また戻る" />
 			</Beat>
-			<Beat name="8世紀、記紀に" captions={c} from={3} to={3}>
-				<Photo id="tj-carving" move="in" label="8世紀、記紀に" />
+			<Beat name="8世紀、日本書紀に" captions={c} from={3} to={3}>
+				<Photo id="real-shoki-open-cave" move="in" label="8世紀、日本書紀に" />
 			</Beat>
 			<Beat name="神話を、この土地に" captions={c} from={4} to={5}>
 				<Photo id="gorge-columnar" move="in" label="神話を、この土地に" />

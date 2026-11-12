@@ -13,8 +13,11 @@ export const UnsolvedMystery = () => {
 			<Beat name="冬至と天照大神" captions={c} from={3} to={3}>
 				<Photo id="winter-sunset-w" move="scroll" label="冬至と天照大神" />
 			</Beat>
-			<Beat name="宮中の祭り" captions={c} from={4} to={5}>
-				<Photo id="daijokyu-sukiden" move="in" label="宮中の祭り" />
+			<Beat name="宮中の祭り（大嘗会の古図）" captions={c} from={4} to={4}>
+				<Photo id="real-daijoe-old" move="in" label="宮中の祭り（大嘗会の古図）" />
+			</Beat>
+			<Beat name="鎮魂は天鈿女命に始まる（古語拾遺）" captions={c} from={5} to={5}>
+				<Photo id="real-kogo-chinkon" move="in" label="鎮魂は天鈿女命に始まる（古語拾遺）" />
 			</Beat>
 			<Beat name="弱くなる太陽" captions={c} from={6} to={6}>
 				<Photo id="solar-eclipse" move="in" label="弱くなる太陽" />

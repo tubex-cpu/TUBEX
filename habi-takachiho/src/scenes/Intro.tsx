@@ -21,8 +21,8 @@ export const Intro = () => {
 			<Beat name="岩戸そのものが御神体" captions={c} from={3} to={3}>
 				<Photo id="gorge-light" move="in" label="岩戸そのものが御神体" />
 			</Beat>
-			<Beat name="記紀には、高千穂の名が？" captions={c} from={4} to={4}>
-				<Photo id="kojiki-shinpukuji" move="in" label="記紀には、高千穂の名が？" />
+			<Beat name="日本書紀の天岩戸の段には？" captions={c} from={4} to={4}>
+				<Photo id="real-shoki-iwato" move="in" label="日本書紀の天岩戸の段には？" />
 			</Beat>
 			<Beat name="天岩戸は、いくつもある" captions={c} from={5} to={5}>
 				<Stage label="天岩戸は、いくつもある" labelBottom>

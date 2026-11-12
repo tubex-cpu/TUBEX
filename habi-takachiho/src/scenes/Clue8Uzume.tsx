@@ -29,8 +29,8 @@ export const Clue8Uzume = () => {
 					<KaguraNight dancers={3} />
 				</Stage>
 			</Beat>
-			<Beat name="神楽の起源？" captions={c} from={7} to={8}>
-				<Photo id="yk-harunobu" move="in" label="神楽の起源？" />
+			<Beat name="岩戸の前の歌と舞（古語拾遺）" captions={c} from={7} to={8}>
+				<Photo id="real-kogo-uzume" move="in" label="岩戸の前の歌と舞（古語拾遺）" />
 			</Beat>
 			<Beat name="判決" captions={c} from={9} to={11}>
 				<GavelVerdict verdict="half" strikeAt={captionFrame(c, 9, 10, fps)} />

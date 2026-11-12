@@ -16,8 +16,8 @@ export const Clue4Mirror = () => {
 			<Beat name="天岩戸で作られた鏡" captions={c} from={0} to={0}>
 				<Photo id="iwato-toshimasa-w" move="scroll" label="天岩戸で作られた鏡" />
 			</Beat>
-			<Beat name="正殿の奥深く" captions={c} from={1} to={1}>
-				<Photo id="naiku-cedar-sando" move="in" label="正殿の奥深く" />
+			<Beat name="太陽の神、天照大神" captions={c} from={1} to={1}>
+				<Photo id="amaterasu-kyosai" move="in" label="太陽の神、天照大神" />
 			</Beat>
 			<Beat name="鏡を納める器" captions={c} from={2} to={4}>
 				<Stage label="鏡を納める器">
