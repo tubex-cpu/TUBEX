@@ -4,7 +4,7 @@
 S = {
  'Intro': ('', '', [
   (0, 0, 'p', 'kubizuka-new-front', '2026年8月19日、夜', 'in'),
-  (1, 1, 'p', 'kubizuka-new', '東京・大手町 将門塚', 'in'),
+  (1, 1, 'p', 'kubizuka-new-stone', '東京・大手町 将門塚', 'in'),
   (2, 3, 'a', "<Flow steps={[{head: '8月19日', body: '塚で騒ぎ\\n生配信'}, {head: '8月21日', body: '警察に相談'}, {head: '10月23日', body: '書類送検', hot: true}]} />", 'その夜、何が起きたのか', False),
   (4, 5, 'p', 'quake-whirlwind', '「将門の祟りが起きる」', 'in'),
   (6, 7, 'a', "<Cards cards={[{head: '平将門', body: '940年没\\n関東'}, {head: '菅原道真', body: '903年没\\n大宰府'}, {head: '崇徳上皇', body: '1164年没\\n讃岐', tone: 'red'}]} tone='shrine' size={54} height={340} top={360} />", '日本三大怨霊', False),
@@ -82,7 +82,7 @@ S = {
   (14, None, 'a', "<BigYears value={2026} unit='年' caption='夏の将門塚' tone='shrine' />", '2026年の出来事', False),
  ]),
  'Clue8Incident': ('第8の手がかり', '2026年、将門塚で騒いだ男に、罰が下った？', [
-  (0, 2, 'p', 'kubizuka-new-stone', '2026年8月19日 夜', 'in'),
+  (0, 2, 'p', 'kubizuka-new', '2026年8月19日 夜', 'in'),
   (3, 5, 'a', "<TimeBar stops={[{label: '8月19日', sub: '騒ぎと配信'}, {label: '8月21日', sub: '警察に相談'}, {label: '10月23日', sub: '書類送検', accent: true}, {label: '11月6日', sub: '報道'}]} tone='ink' />", 'その後の経過', False),
   (6, 7, 'a', "<Cards cards={[{head: '礼拝所不敬罪', body: '神社・寺・墓などで\\n人前で敬いを欠く行い'}, {head: '将門塚', body: '東京都の旧跡\\n人々が手を合わせる場所', tone: 'gold'}]} tone='ink' size={44} height={340} top={360} />", '刑法の決まり', False),
   (8, 10, 'a', "<Flow steps={[{head: '警察', body: '捜査'}, {head: '書類送検', body: 'いまここ', hot: true}, {head: '検察', body: '罪に問うか\\n判断'}, {head: '裁判', body: '罰が決まる', dim: true}]} />", '罰は、決まったのか？', False),

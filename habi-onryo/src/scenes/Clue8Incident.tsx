@@ -14,7 +14,7 @@ export const Clue8Incident = () => {
 	return (
 		<SceneFrame captions={c} voice="Clue8Incident" label="第8の手がかり" title="2026年、将門塚で騒いだ男に、罰が下った？">
 			<Beat name="2026年8月19日 夜" captions={c} from={0} to={2}>
-				<Photo id="kubizuka-new-stone" move="in" label="2026年8月19日 夜" />
+				<Photo id="kubizuka-new" move="in" label="2026年8月19日 夜" />
 			</Beat>
 			<Beat name="その後の経過" captions={c} from={3} to={5}>
 				<Stage label="その後の経過">

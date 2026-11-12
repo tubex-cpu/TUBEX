@@ -14,7 +14,7 @@ export const Intro = () => {
 				<Photo id="kubizuka-new-front" move="in" label="2026年8月19日、夜" />
 			</Beat>
 			<Beat name="東京・大手町 将門塚" captions={c} from={1} to={1}>
-				<Photo id="kubizuka-new" move="in" label="東京・大手町 将門塚" />
+				<Photo id="kubizuka-new-stone" move="in" label="東京・大手町 将門塚" />
 			</Beat>
 			<Beat name="その夜、何が起きたのか" captions={c} from={2} to={3}>
 				<Stage label="その夜、何が起きたのか">
