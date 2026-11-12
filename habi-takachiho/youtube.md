@@ -48,15 +48,16 @@
 ▼クレジット
 ナレーション：VOICEVOX:玄野武宏
 BGM・効果音：オリジナル
+再現イラスト：オリジナル（ハビ判事チャンネル制作）
 地図：Mapzen Terrain Tiles（SRTM ほか）の標高データをもとに作成
 写真・資料（Wikimedia Commons ほか）
-CC BY-SA 4.0：Naokijp、Ka23 13、Sanjo、Zunkir、Komoro no kaze、Kugel~commonswiki、Koda6029、MaedaAkihiko、そらみみ、Motokoka、スティーブ・ミズキ、ブルーノ・プラス、Hiroi_Yamaguchi、Yoshi Canopus
-CC BY-SA 3.0：Duarna、Hirase、sk01、STA3816、Yanajin、pattio (投稿者編集/Myself) , Japanese、pattio(投稿者編集) , Japanese、さかおり (talk)
+CC BY-SA 4.0：Ka23 13、Zunkir、N yotarou、Kugel~commonswiki、Naokijp、MaedaAkihiko、そらみみ、スティーブ・ミズキ、ブルーノ・プラス、Hiroi_Yamaguchi、Yoshi Canopus
+CC BY-SA 3.0：sk01、Yanajin、pattio (投稿者編集/Myself) , Japanese、pattio(投稿者編集) , Japanese、さかおり (talk)
 CC BY-SA 2.0：jpg、Big Ben in Japan、Kikuko Nakayama、tsuda、pelican
-CC BY 4.0：Shiro_KUROGI、Sanjo、Luc Viatour、P. Horálek (http://www.astronom.cz/horalek/), Z. Hoder, M. Druckmüller (http://www.zam.fme.vutbr.cz/~druck/), P. Aniol, S. Habbal / Solar Wind Sherpas (http://project.ifa.hawaii.edu/solarwindsherpas/) / ESO
-CC BY 3.0：690 Noda、Ippukucho
-CC BY 2.0：TANAKA Juuyoh (田中十洋) from Japan、t-mizo from Japan、Raita Futo from Tokyo, Japan、雷太、dani、A.Davey from Portland, Oregon, EE UU
-パブリックドメイン・CC0：浮世絵・古典籍・古写真（春斎年昌、歌川国貞、北渓、歌川国芳、鈴木春信、真福寺本古事記 ほか）、写真：鶉野隆央、Caldwbr、Saigen Jiro、Suzuki Harunobu (鈴木春信)、ウィキ太郎(Wiki Taro)、Daderot
+CC BY 4.0：Shiro_KUROGI、Luc Viatour、P. Horálek (http://www.astronom.cz/horalek/), Z. Hoder, M. Druckmüller (http://www.zam.fme.vutbr.cz/~druck/), P. Aniol, S. Habbal / Solar Wind Sherpas (http://project.ifa.hawaii.edu/solarwindsherpas/) / ESO
+CC BY 3.0：Ippukucho
+CC BY 2.0：TANAKA Juuyoh (田中十洋) from Japan、Raita Futo from Tokyo, Japan、dani、A.Davey from Portland, Oregon, EE UU
+パブリックドメイン・CC0：浮世絵・古典籍・古写真（春斎年昌、歌川国貞、北渓、歌川国芳、鈴木春信、真福寺本古事記 ほか）、写真：鶉野隆央、Saigen Jiro、ウィキ太郎(Wiki Taro)、Daderot
 写真ごとの出典の一覧：https://github.com/tubex-cpu/TUBEX/blob/claude/nice-wright-du0dch/habi-takachiho/写真クレジット一覧.md
 
 #高千穂 #夜神楽 #天岩戸 #天照大神 #卑弥呼 #神話 #ハビ判事
