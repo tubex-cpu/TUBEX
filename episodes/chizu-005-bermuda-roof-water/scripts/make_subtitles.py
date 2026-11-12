@@ -15,7 +15,7 @@ R1 = EP.parent / "chizu-001-australia-coast"   # shared fonts/drawing helpers
 sys.path.insert(0, str(R1 / "render"))
 from draw import text_w  # noqa: E402
 sys.path.insert(0, str(EP / "scripts"))
-from make_narration import READ, SPEAKER, VV  # noqa: E402
+from make_narration import READ, READ2, years, SPEAKER, VV  # noqa: E402
 
 SIZE, MAXW, MAXLINES = 72, 1640, 2
 import os
@@ -34,6 +34,9 @@ def fits(s):
 
 def phrase_secs(p):
     for k, v in READ:
+        p = p.replace(k, v)
+    p = years(p)
+    for k, v in READ2:
         p = p.replace(k, v)
     q = json.loads(urllib.request.urlopen(urllib.request.Request(
         f"{VV}/audio_query?speaker={SPEAKER}&text={urllib.parse.quote(p)}", method="POST"), timeout=60).read())
