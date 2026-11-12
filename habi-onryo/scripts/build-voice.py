@@ -27,7 +27,7 @@ HEAD_MS = 500
 GAP_MS = 480
 TAIL_MS = 1200
 
-IDS = ['Intro', 'JudgeEntrance', 'Clue1Solstice', 'Clue2Origin', 'Clue3Regalia', 'Clue4Mirror', 'Clue5Hebrew', 'Clue6Curse', 'Clue7Dannoura', 'Clue8Seen', 'Clue9Sengu', 'RootsStory', 'UnsolvedMystery', 'Summary', 'Closing']
+IDS = ['Intro', 'JudgeEntrance', 'Clue1Rebel', 'Clue2Shinno', 'Clue3Hidesato', 'Clue4Laugh', 'Clue5Flying', 'Clue6Tsuka', 'Clue7Ghq', 'Clue8Incident', 'Clue9Kanda', 'Clue10Naritasan', 'Clue11Kentoshi', 'Clue12Innocent', 'Clue13Tokihira', 'Clue14Seiryoden', 'Clue15Emaki', 'Clue16Gakumon', 'Clue17Ushi', 'Clue18Tobiume', 'Clue19Ojigo', 'Clue20Hogen', 'Clue21Bloodsutra', 'Clue22Murder', 'Clue23Saigyo', 'Clue24Tengu', 'Clue25Feared', 'Clue26Shiramine', 'Clue27Olympic', 'Clue28Sports', 'Clue29Sandai', 'Clue30Goryo', 'Clue31Gion', 'RootsStory', 'UnsolvedMystery', 'Summary', 'Closing']
 
 # 読み上げ用の置き換え（字幕はそのまま）。長いものから先に置き換える
 READING = [('○', ''), ('△', ''), ('×', ''), ('日本', 'ニホン'), ('八咫鏡', 'ヤタノカガミ'), ('草薙の剣', 'クサナギノツルギ'), ('草薙剣', 'クサナギノツルギ'), ('島路山', 'シマジヤマ'), ('七里の渡し', 'シチリノワタシ'), ('豊鍬入姫命', 'トヨスキイリビメノミコト'), ('笠縫邑', 'カサヌイノムラ'), ('倭姫命', 'ヤマトヒメノミコト'), ('邇邇芸命', 'ニニギノミコト'), ('剣璽等承継の儀', 'ケンジトウショウケイノギ'), ('松の間', 'マツノマ'), ('剣璽の間', 'ケンジノマ'), ('御樋代木', 'ミヒシロギ'), ('御樋代', 'ミヒシロ'), ('御船代', 'ミフナシロ'), ('平原遺跡', 'ヒラバルイセキ'), ('宮簀媛命', 'ミヤズヒメノミコト'), ('道行という僧', 'ドウギョウというソウ'), ('御杣始祭', 'ミソマハジメサイ'), ('お木曳', 'オキヒキ'), ('陸曳', 'オカビキ'), ('川曳', 'カワビキ'), ('宮域林', 'キュウイキリン'), ('天鈿女命', 'アメノウズメノミコト'), ('一尺六寸三分', 'イッシャクロクスンサンブ')]
