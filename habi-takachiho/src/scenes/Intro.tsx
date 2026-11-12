@@ -10,16 +10,16 @@ export const Intro = () => {
 	return (
 		<SceneFrame captions={c} voice="Intro" >
 			<Beat name="2026年11月22日・23日" captions={c} from={0} to={0}>
-				<Photo id="yk-kaguraden-night" move="in" label="2026年11月22日・23日" />
+				<Photo id="gen-yokagura-night" move="in" label="2026年11月22日・23日" />
 			</Beat>
 			<Beat name="年に一度だけ" captions={c} from={1} to={1}>
-				<Photo id="tj-honden" move="in" label="年に一度だけ" />
+				<Photo id="gen-kagura-33" move="in" label="年に一度だけ" />
 			</Beat>
 			<Beat name="天岩戸の物語" captions={c} from={2} to={2}>
 				<Photo id="art-kunisada-w" move="scroll" label="天岩戸の物語" />
 			</Beat>
 			<Beat name="岩戸そのものが御神体" captions={c} from={3} to={3}>
-				<Photo id="gorge-light" move="in" label="岩戸そのものが御神体" />
+				<Photo id="gen-iwato-cave" move="in" label="岩戸そのものが御神体" />
 			</Beat>
 			<Beat name="日本書紀の天岩戸の段には？" captions={c} from={4} to={4}>
 				<Photo id="real-shoki-iwato" move="in" label="日本書紀の天岩戸の段には？" />
@@ -33,7 +33,7 @@ export const Intro = () => {
 				<Photo id="gorge-manai" move="in" label="なぜ高千穂が？" />
 			</Beat>
 			<Beat name="太陽が隠れた神話の正体は？" captions={c} from={7} to={7}>
-				<Photo id="ecl-annular" move="in" label="太陽が隠れた神話の正体は？" />
+				<Photo id="gen-sun-hidden" move="in" label="太陽が隠れた神話の正体は？" />
 			</Beat>
 			<Beat name="1700年前の空を計算する" captions={c} from={8} to={8}>
 				<Photo id="kiri-pan-w" move="scroll" label="1700年前の空を計算する" />

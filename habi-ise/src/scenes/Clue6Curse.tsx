@@ -18,11 +18,17 @@ export const Clue6Curse = () => {
 			<Beat name="ヤマトタケルと熱田" captions={c} from={1} to={1}>
 				<Photo id="takeru-yoshitoshi" move="in" label="ヤマトタケルと熱田" />
 			</Beat>
-			<Beat name="668年、盗まれた剣" captions={c} from={2} to={4}>
-				<Photo id="sword-kanto" move="in" label="668年、盗まれた剣" />
+			<Beat name="ふしぎな記録" captions={c} from={2} to={2}>
+				<Photo id="sword-kanto" move="in" label="ふしぎな記録" />
 			</Beat>
-			<Beat name="686年6月" captions={c} from={5} to={6}>
-				<Photo id="atsuta-forest" move="in" label="686年6月" />
+			<Beat name="668年、盗まれた剣" captions={c} from={3} to={4}>
+				<Photo id="gen-dogyo" move="in" label="668年、盗まれた剣" />
+			</Beat>
+			<Beat name="686年6月" captions={c} from={5} to={5}>
+				<Photo id="gen-tenmu-illness" move="in" label="686年6月" />
+			</Beat>
+			<Beat name="その日のうちに熱田へ" captions={c} from={6} to={6}>
+				<Photo id="gen-sword-to-atsuta" move="in" label="その日のうちに熱田へ" />
 			</Beat>
 			<Beat name="記録された祟り" captions={c} from={7} to={8}>
 				<Stage label="記録された祟り">
@@ -33,7 +39,7 @@ export const Clue6Curse = () => {
 				<GavelVerdict verdict="half" strikeAt={captionFrame(c, 9, 10, fps)} />
 			</Beat>
 			<Beat name="海の底へ？" captions={c} from={12}>
-				<Photo id="kanmon-straits" move="in" label="海の底へ？" />
+				<Photo id="gen-dannoura-sea" move="in" label="海の底へ？" />
 			</Beat>
 		</SceneFrame>
 	);

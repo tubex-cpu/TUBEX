@@ -21,7 +21,7 @@ export const UnsolvedMystery = () => {
 				<Photo id="yk-yutate" move="in" label="2028年" />
 			</Beat>
 			<Beat name="次の時代へ" captions={c} from={7}>
-				<Photo id="gorge-bridge" move="in" label="次の時代へ" />
+				<Photo id="gen-kagura-future" move="in" label="次の時代へ" />
 			</Beat>
 		</SceneFrame>
 	);

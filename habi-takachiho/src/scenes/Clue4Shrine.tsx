@@ -21,13 +21,13 @@ export const Clue4Shrine = () => {
 				<Photo id="iwato-west" move="in" label="本殿のない神社" />
 			</Beat>
 			<Beat name="神職さえ立ち入らない聖域" captions={c} from={3} to={4}>
-				<Photo id="miya-cedar" move="in" label="神職さえ立ち入らない聖域" />
+				<Photo id="gen-yohaisho" move="in" label="神職さえ立ち入らない聖域" />
 			</Beat>
 			<Beat name="遥拝所から拝む" captions={c} from={5} to={5}>
 				<Photo id="iwato-ogatama" move="in" label="遥拝所から拝む" />
 			</Beat>
 			<Beat name="最初に住んだ場所" captions={c} from={6} to={6}>
-				<Photo id="miya-ridges" move="in" label="最初に住んだ場所" />
+				<Photo id="gen-higashi-hongu" move="in" label="最初に住んだ場所" />
 			</Beat>
 			<Beat name="神々が集まった河原" captions={c} from={7} to={8}>
 				<Photo id="yasu-cave" move="in" label="神々が集まった河原" />
@@ -39,7 +39,7 @@ export const Clue4Shrine = () => {
 				<GavelVerdict verdict="correct" strikeAt={captionFrame(c, 10, 11, fps)} />
 			</Beat>
 			<Beat name="もうひとつの神話" captions={c} from={13}>
-				<Photo id="kunimi-ninigi" move="in" label="もうひとつの神話" />
+				<Photo id="gen-ninigi-descent" move="in" label="もうひとつの神話" />
 			</Beat>
 		</SceneFrame>
 	);

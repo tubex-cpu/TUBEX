@@ -15,23 +15,32 @@ export const Clue3Iwato = () => {
 	return (
 		<SceneFrame captions={c} voice="Clue3Iwato" label="第3の手がかり" title="天岩戸は、高千穂にある？">
 			<Beat name="神話の中身" captions={c} from={0} to={0}>
-				<Photo id="art-toshimasa" move="in" label="神話の中身" />
+				<Photo id="gen-takamagahara" move="in" label="神話の中身" />
 			</Beat>
 			<Beat name="太陽の神が隠れる" captions={c} from={1} to={2}>
 				<Stage label="太陽の神が隠れる">
 					<IwatoStory phase='close' />
 				</Stage>
 			</Beat>
-			<Beat name="榊に玉と鏡をかける（古語拾遺）" captions={c} from={3} to={4}>
+			<Beat name="天安河原に集まる神々" captions={c} from={3} to={3}>
+				<Photo id="gen-amanoyasu" move="in" label="天安河原に集まる神々" />
+			</Beat>
+			<Beat name="榊に玉と鏡をかける（古語拾遺）" captions={c} from={4} to={4}>
 				<Photo id="real-kogo-sakaki" move="in" label="榊に玉と鏡をかける（古語拾遺）" />
 			</Beat>
-			<Beat name="天宇受売命の舞" captions={c} from={5} to={6}>
-				<Photo id="real-iwato-loc" move="in" label="天宇受売命の舞" />
+			<Beat name="天宇受売命の舞" captions={c} from={5} to={5}>
+				<Photo id="gen-uzume-dance" move="in" label="天宇受売命の舞" />
 			</Beat>
-			<Beat name="光が戻った" captions={c} from={7} to={8}>
-				<Stage label="光が戻った">
+			<Beat name="どっと笑う神々" captions={c} from={6} to={6}>
+				<Photo id="real-iwato-loc" move="in" label="どっと笑う神々" />
+			</Beat>
+			<Beat name="岩戸が開く" captions={c} from={7} to={7}>
+				<Stage label="岩戸が開く">
 					<IwatoStory phase='open' />
 				</Stage>
+			</Beat>
+			<Beat name="光が戻った" captions={c} from={8} to={8}>
+				<Photo id="gen-iwato-open" move="in" label="光が戻った" />
 			</Beat>
 			<Beat name="舞台は、どこ？" captions={c} from={9} to={9}>
 				<Stage label="舞台は、どこ？">

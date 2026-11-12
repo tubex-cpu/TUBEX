@@ -17,10 +17,10 @@ export const Clue6Eclipse = () => {
 				<Photo id="ecl-total" move="in" label="皆既日食" />
 			</Beat>
 			<Beat name="古代の人々の恐れ" captions={c} from={2} to={3}>
-				<Photo id="ecl-diamond" move="in" label="古代の人々の恐れ" />
+				<Photo id="gen-ancient-eclipse" move="in" label="古代の人々の恐れ" />
 			</Beat>
 			<Beat name="いつの日食？" captions={c} from={4} to={4}>
-				<Photo id="gorge-above" move="in" label="いつの日食？" />
+				<Photo id="gen-eclipse-calc" move="in" label="いつの日食？" />
 			</Beat>
 			<Beat name="自転のわずかな遅れ" captions={c} from={5} to={6}>
 				<Stage label="自転のわずかな遅れ">

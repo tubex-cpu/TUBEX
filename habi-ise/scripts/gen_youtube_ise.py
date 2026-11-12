@@ -65,6 +65,8 @@ pd = []
 for i in ids:
     v = cj[i]
     lic = v['license']
+    if lic == 'オリジナル':
+        continue
     if lic in ('Public domain', 'CC0'):
         if lic == 'CC0' and v['artist'] != '作者不明':
             pd.append(NAME.get(v['artist'], v['artist']))
@@ -111,6 +113,7 @@ md = f'''# YouTube 投稿用テキスト：伊勢判決
 ▼クレジット
 ナレーション：VOICEVOX:玄野武宏
 BGM・効果音：オリジナル
+再現イラスト：オリジナル（ハビ判事チャンネル制作）
 地図：Mapzen Terrain Tiles（SRTM ほか）の標高データをもとに作成
 写真・資料（Wikimedia Commons ほか）
 {credits}

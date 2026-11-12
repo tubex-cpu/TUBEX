@@ -32,7 +32,7 @@ export const Clue2History = () => {
 				<GavelVerdict verdict="wrong" strikeAt={captionFrame(c, 9, 10, fps)} />
 			</Beat>
 			<Beat name="天岩戸は、高千穂に？" captions={c} from={12}>
-				<Photo id="art-tajikarao-hokkei" move="in" label="天岩戸は、高千穂に？" />
+				<Photo id="art-toshimasa" move="in" label="天岩戸は、高千穂に？" />
 			</Beat>
 		</SceneFrame>
 	);

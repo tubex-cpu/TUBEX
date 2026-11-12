@@ -11,10 +11,10 @@ export const Intro = () => {
 				<Photo id="naiku-night-sando" move="in" label="2026年12月22日、冬至" />
 			</Beat>
 			<Beat name="朝7時半ごろ" captions={c} from={1} to={1}>
-				<Photo id="naiku-ujibashi-backlit" move="in" label="朝7時半ごろ" />
+				<Photo id="gen-toji-sunrise" move="in" label="朝7時半ごろ" />
 			</Beat>
 			<Beat name="夜明け前から" captions={c} from={2} to={2}>
-				<Photo id="naiku-torii-mist" move="in" label="夜明け前から" />
+				<Photo id="gen-toji-crowd" move="in" label="夜明け前から" />
 			</Beat>
 			<Beat name="太陽の神と、八咫鏡" captions={c} from={3} to={3}>
 				<Photo id="naiku-gomon" move="in" label="太陽の神と、八咫鏡" />
@@ -29,7 +29,7 @@ export const Intro = () => {
 				<Photo id="genpei-byobu-w" move="scroll" label="壇ノ浦に沈んだ剣" />
 			</Beat>
 			<Beat name="20年に一度の大事業" captions={c} from={7} to={7}>
-				<Photo id="hinoki-akasawa" move="in" label="20年に一度の大事業" />
+				<Photo id="gen-kiso-felling" move="in" label="20年に一度の大事業" />
 			</Beat>
 			<Beat name="1300年前の記録" captions={c} from={8} to={8}>
 				<Photo id="shoki-tanaka-w" move="scroll" label="1300年前の記録" />

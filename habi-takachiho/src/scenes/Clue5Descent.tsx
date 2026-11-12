@@ -28,7 +28,7 @@ export const Clue5Descent = () => {
 				<Photo id="real-kushifuru-torii" move="in" label="高千穂町のくしふる神社" />
 			</Beat>
 			<Beat name="稲穂をまいた伝え" captions={c} from={5} to={5}>
-				<Photo id="real-kushifuru-haiden" move="in" label="稲穂をまいた伝え" />
+				<Photo id="gen-rice-seeds" move="in" label="稲穂をまいた伝え" />
 			</Beat>
 			<Beat name="もうひとつの高千穂" captions={c} from={6} to={6}>
 				<Stage label="もうひとつの高千穂" labelBottom>

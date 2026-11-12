@@ -16,15 +16,18 @@ export const Clue4Mirror = () => {
 			<Beat name="天岩戸で作られた鏡" captions={c} from={0} to={0}>
 				<Photo id="iwato-toshimasa-w" move="scroll" label="天岩戸で作られた鏡" />
 			</Beat>
-			<Beat name="太陽の神、天照大神" captions={c} from={1} to={1}>
-				<Photo id="amaterasu-kyosai" move="in" label="太陽の神、天照大神" />
+			<Beat name="正殿の奥、何重もの器" captions={c} from={1} to={1}>
+				<Photo id="gen-vessel" move="in" label="正殿の奥、何重もの器" />
 			</Beat>
 			<Beat name="鏡を納める器" captions={c} from={2} to={4}>
 				<Stage label="鏡を納める器">
 					<MirrorVessel />
 				</Stage>
 			</Beat>
-			<Beat name="形代の鏡がたどった歴史" captions={c} from={5} to={6}>
+			<Beat name="内裏の火事" captions={c} from={5} to={5}>
+				<Photo id="gen-palace-fire" move="in" label="内裏の火事" />
+			</Beat>
+			<Beat name="形代の鏡がたどった歴史" captions={c} from={6} to={6}>
 				<Stage label="形代の鏡がたどった歴史">
 					<TimeBar stops={[{label: '960年', sub: '内裏の火事'}, {label: '1005年', sub: '内裏の火事'}, {label: '1040年', sub: '鏡が\n粒のように', accent: true}]} tone='ember' />
 				</Stage>

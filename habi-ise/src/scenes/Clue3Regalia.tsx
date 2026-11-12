@@ -18,7 +18,10 @@ export const Clue3Regalia = () => {
 					<Cards cards={[{head: '鏡', body: '八咫鏡'}, {head: '剣', body: '草薙剣'}, {head: '勾玉', body: '八尺瓊勾玉'}]} tone='ink' size={52} height={300} top={400} />
 				</Stage>
 			</Beat>
-			<Beat name="「三種の宝物」と鏡の神勅（日本書紀）" captions={c} from={1} to={2}>
+			<Beat name="孫に授けた神器" captions={c} from={1} to={1}>
+				<Photo id="gen-tenson-regalia" move="in" label="孫に授けた神器" />
+			</Beat>
+			<Beat name="「三種の宝物」と鏡の神勅（日本書紀）" captions={c} from={2} to={2}>
 				<Photo id="real-shoki-regalia" move="in" label="「三種の宝物」と鏡の神勅（日本書紀）" />
 			</Beat>
 			<Beat name="天皇の位のしるし" captions={c} from={3} to={3}>

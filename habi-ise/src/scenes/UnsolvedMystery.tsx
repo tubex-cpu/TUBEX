@@ -13,8 +13,8 @@ export const UnsolvedMystery = () => {
 			<Beat name="冬至と天照大神" captions={c} from={3} to={3}>
 				<Photo id="winter-sunset-w" move="scroll" label="冬至と天照大神" />
 			</Beat>
-			<Beat name="宮中の祭り（大嘗会の古図）" captions={c} from={4} to={4}>
-				<Photo id="real-daijoe-old" move="in" label="宮中の祭り（大嘗会の古図）" />
+			<Beat name="鎮魂祭" captions={c} from={4} to={4}>
+				<Photo id="gen-chinkon" move="in" label="鎮魂祭" />
 			</Beat>
 			<Beat name="鎮魂は天鈿女命に始まる（古語拾遺）" captions={c} from={5} to={5}>
 				<Photo id="real-kogo-chinkon" move="in" label="鎮魂は天鈿女命に始まる（古語拾遺）" />
@@ -26,7 +26,7 @@ export const UnsolvedMystery = () => {
 				<Photo id="sun-torii-dawn" move="in" label="偶然か、祈りか" />
 			</Beat>
 			<Beat name="2033年" captions={c} from={9}>
-				<Photo id="geku-goshoden-kodenchi" move="in" label="2033年" />
+				<Photo id="gen-toji-future" move="in" label="2033年" />
 			</Beat>
 		</SceneFrame>
 	);

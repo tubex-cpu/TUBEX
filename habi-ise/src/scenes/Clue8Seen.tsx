@@ -13,7 +13,7 @@ export const Clue8Seen = () => {
 	return (
 		<SceneFrame captions={c} voice="Clue8Seen" label="第8の手がかり" title="草薙剣を、実際に見た人がいる？">
 			<Beat name="江戸時代の記述" captions={c} from={0} to={1}>
-				<Photo id="atsuta-nobunaga-wall" move="in" label="江戸時代の記述" />
+				<Photo id="gen-peek" move="in" label="江戸時代の記述" />
 			</Beat>
 			<Beat name="記述された剣の姿" captions={c} from={2} to={2}>
 				<Stage label="記述された剣の姿">
@@ -26,8 +26,8 @@ export const Clue8Seen = () => {
 			<Beat name="伝え聞いた話" captions={c} from={5} to={6}>
 				<Photo id="sword-bronze" move="in" label="伝え聞いた話" />
 			</Beat>
-			<Beat name="岐阜・高山の水無神社" captions={c} from={7} to={7}>
-				<Photo id="real-minashi-haiden" move="in" label="岐阜・高山の水無神社" />
+			<Beat name="岐阜・高山の水無神社へ" captions={c} from={7} to={7}>
+				<Photo id="gen-1945-move" move="in" label="岐阜・高山の水無神社へ" />
 			</Beat>
 			<Beat name="判決" captions={c} from={8} to={10}>
 				<GavelVerdict verdict="half" strikeAt={captionFrame(c, 8, 9, fps)} />

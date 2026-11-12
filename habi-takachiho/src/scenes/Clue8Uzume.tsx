@@ -16,13 +16,13 @@ export const Clue8Uzume = () => {
 				<Photo id="art-sarutahiko" move="in" label="人を楽しませる芸" />
 			</Beat>
 			<Beat name="鈿女の舞" captions={c} from={2} to={3}>
-				<Photo id="yk-giant-uzume" move="in" label="鈿女の舞" />
+				<Photo id="gen-uzume-kagura" move="in" label="鈿女の舞" />
 			</Beat>
 			<Beat name="手力雄の舞" captions={c} from={4} to={4}>
 				<Photo id="yk-giant-tajikarao" move="in" label="手力雄の舞" />
 			</Beat>
 			<Beat name="戸取の舞" captions={c} from={5} to={5}>
-				<Photo id="iwato-tajikarao" move="in" label="戸取の舞" />
+				<Photo id="gen-todori" move="in" label="戸取の舞" />
 			</Beat>
 			<Beat name="夜が明けていく" captions={c} from={6} to={6}>
 				<Stage label="夜が明けていく">

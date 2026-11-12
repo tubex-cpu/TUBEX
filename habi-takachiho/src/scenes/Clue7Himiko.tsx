@@ -13,15 +13,13 @@ export const Clue7Himiko = () => {
 	return (
 		<SceneFrame captions={c} voice="Clue7Himiko" label="第7の手がかり" title="天照大神の正体は、卑弥呼だと証明された？">
 			<Beat name="邪馬台国の女王" captions={c} from={0} to={1}>
-				<Photo id="yoshi-south" move="in" label="邪馬台国の女王" />
+				<Photo id="gen-himiko" move="in" label="邪馬台国の女王" />
 			</Beat>
 			<Beat name="魏志倭人伝によれば" captions={c} from={2} to={2}>
 				<Photo id="hashihaka" move="in" label="魏志倭人伝によれば" />
 			</Beat>
 			<Beat name="似ている二人？" captions={c} from={3} to={4}>
-				<Stage label="似ている二人？">
-					<Cards cards={[{head: '天照大神', body: '太陽の女神\n記紀の神話', tone: 'gold'}, {head: '卑弥呼', body: '鬼道の女王\n魏志倭人伝', tone: 'dark'}]} tone='ember' />
-				</Stage>
+				<Photo id="gen-two-queens" move="in" label="似ている二人？" />
 			</Beat>
 			<Beat name="白鳥庫吉（1910年の論文）" captions={c} from={5} to={6}>
 				<Photo id="real-shiratori-portrait" move="in" label="白鳥庫吉（1910年の論文）" />

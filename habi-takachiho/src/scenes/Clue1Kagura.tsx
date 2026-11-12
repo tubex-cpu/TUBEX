@@ -14,7 +14,7 @@ export const Clue1Kagura = () => {
 	return (
 		<SceneFrame captions={c} voice="Clue1Kagura" label="第1の手がかり" title="高千穂の夜神楽は、観光客のためのショー？">
 			<Beat name="11月から2月まで" captions={c} from={0} to={0}>
-				<Photo id="miya-town" move="in" label="11月から2月まで" />
+				<Photo id="gen-kagura-yado" move="in" label="11月から2月まで" />
 			</Beat>
 			<Beat name="集落の神楽宿で" captions={c} from={1} to={1}>
 				<Photo id="yk-shiiba" move="in" label="集落の神楽宿で" />
@@ -25,7 +25,7 @@ export const Clue1Kagura = () => {
 				</Stage>
 			</Beat>
 			<Beat name="1978年、国の文化財に" captions={c} from={4} to={4}>
-				<Photo id="tj-sando" move="in" label="1978年、国の文化財に" />
+				<Photo id="gen-kagura-dawn" move="in" label="1978年、国の文化財に" />
 			</Beat>
 			<Beat name="観光客のためのショー？" captions={c} from={5} to={5}>
 				<Photo id="yk-tsunoyama" move="in" label="観光客のためのショー？" />

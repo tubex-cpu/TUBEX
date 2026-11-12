@@ -32,7 +32,7 @@ export const Clue9Future = () => {
 				</Stage>
 			</Beat>
 			<Beat name="高校生も舞を奉納" captions={c} from={8} to={8}>
-				<Photo id="yk-suzu" move="in" label="高校生も舞を奉納" />
+				<Photo id="gen-kagura-children" move="in" label="高校生も舞を奉納" />
 			</Beat>
 			<Beat name="判決" captions={c} from={9} to={11}>
 				<GavelVerdict verdict="half" strikeAt={captionFrame(c, 9, 10, fps)} />
