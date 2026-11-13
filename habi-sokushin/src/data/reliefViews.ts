@@ -1,8 +1,7 @@
 // 地図の下絵（public/maps/*.jpg）が映している範囲（ウェブメルカトル）。scripts/gen_relief.py が作る
 export const reliefViews = {
-	kanto: {lon0: 138.35000, lon1: 140.95000, lat0: 36.58937, lat1: 35.40619},
-	west: {lon0: 129.90000, lon1: 136.70000, lat0: 35.66874, lat1: 32.50163},
-	honshu: {lon0: 129.90000, lon1: 140.90000, lat0: 37.39775, lat1: 32.32392},
+	shonai: {lon0: 138.80000, lon1: 141.20000, lat0: 38.90720, lat1: 37.84893},
+	japan: {lon0: 135.15000, lon1: 142.95000, lat0: 38.78055, lat1: 35.27908},
 } as const;
 
 export type ReliefView = keyof typeof reliefViews;
