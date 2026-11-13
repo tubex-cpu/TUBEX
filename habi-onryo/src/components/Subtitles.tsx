@@ -18,14 +18,14 @@ export const Subtitles: React.FC<Props> = ({captions}) => {
 	}
 
 	const local = frame - (current.startMs / 1000) * fps;
-	const size = Math.min(54, Math.floor(1380 / current.text.length));
+	const size = Math.min(62, Math.floor(1560 / current.text.length));
 
 	return (
 		<div
 			style={{
 				position: 'absolute',
-				left: 120,
-				right: 120,
+				left: 80,
+				right: 80,
 				bottom: 50,
 				display: 'flex',
 				justifyContent: 'center',
@@ -43,7 +43,7 @@ export const Subtitles: React.FC<Props> = ({captions}) => {
 				lang="ja"
 				style={{
 					fontFamily: gothicFamily,
-					fontWeight: 700,
+					fontWeight: 900,
 					fontSize: size,
 					lineHeight: 1.3,
 					whiteSpace: 'nowrap',
@@ -51,7 +51,7 @@ export const Subtitles: React.FC<Props> = ({captions}) => {
 					textAlign: 'center',
 					padding: '18px 40px',
 					// 枠は付けず、黒いフチ取りで写真の上でも読めるようにする
-					WebkitTextStroke: '12px rgba(5, 9, 18, 0.96)',
+					WebkitTextStroke: '14px rgba(5, 9, 18, 0.96)',
 					paintOrder: 'stroke fill',
 					textShadow: '0 4px 14px rgba(0,0,0,0.85)',
 				}}
