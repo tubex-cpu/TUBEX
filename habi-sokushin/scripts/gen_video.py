@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parent.parent
 ids = eval(re.search(r'IDS = (\[.*?\])', (ROOT / 'scripts/build-voice.py').read_text(), re.S).group(1))
 heads = [l[5:] for l in (ROOT / 'scripts/script.txt').read_text().splitlines() if l.startswith('0:00 ')]
 assert len(ids) == len(heads), (len(ids), len(heads))
-MID, LATE = 'Clue11Kentoshi', 'Clue19Ojigo'
+MID, LATE = 'Clue12Eye', 'Clue23Meiji'
 
 imp = '\n'.join(f"import {{{s}}} from './scenes/{s}';" for s in sorted(ids))
 seq = []
@@ -44,9 +44,9 @@ export const HabiSokushinVideo = () => {{
 			<TransitionSeries>
 {chr(10).join(seq)}
 			</TransitionSeries>
-			<Audio name="BGM 前半「将門」" src={{staticFile('bgm/bgm1-masakado.mp3')}} durationInFrames={{midStart + fps}} volume={{fadeVolume(midStart + fps, fps)}} premountFor={{fps}} />
-			<Audio name="BGM 中盤「天神」" src={{staticFile('bgm/bgm2-michizane.mp3')}} from={{midStart - fps}} durationInFrames={{lateStart - midStart + 2 * fps}} volume={{fadeVolume(lateStart - midStart + 2 * fps, fps)}} premountFor={{fps}} />
-			<Audio name="BGM 後半「白峯」" src={{staticFile('bgm/bgm3-sutoku.mp3')}} from={{lateStart - fps}} durationInFrames={{durationInFrames - lateStart + fps}} volume={{fadeVolume(durationInFrames - lateStart + fps, fps)}} premountFor={{fps}} />
+			<Audio name="BGM 前半「湯殿山」" src={{staticFile('bgm/bgm1-yudono.mp3')}} durationInFrames={{midStart + fps}} volume={{fadeVolume(midStart + fps, fps)}} premountFor={{fps}} />
+			<Audio name="BGM 中盤「行者」" src={{staticFile('bgm/bgm2-gyoja.mp3')}} from={{midStart - fps}} durationInFrames={{lateStart - midStart + 2 * fps}} volume={{fadeVolume(lateStart - midStart + 2 * fps, fps)}} premountFor={{fps}} />
+			<Audio name="BGM 後半「祈り」" src={{staticFile('bgm/bgm3-inori.mp3')}} from={{lateStart - fps}} durationInFrames={{durationInFrames - lateStart + fps}} volume={{fadeVolume(durationInFrames - lateStart + fps, fps)}} premountFor={{fps}} />
 		</>
 	);
 }};
@@ -57,7 +57,6 @@ root = f"""import {{AbsoluteFill, Composition, Folder}} from 'remotion';
 import {{HabiSokushinVideo}} from './HabiSokushinVideo';
 import {{sceneDurations as d, TOTAL_FRAMES}} from './data/timeline';
 {imp}
-import {{Thumb1Tsuka, Thumb2Kami, Thumb3Kubi}} from './thumbnails/Thumbnails';
 
 // 確認版用の720p（1920×1080の画面をそのまま縮小）
 const HabiSokushin720 = () => (
@@ -72,11 +71,6 @@ export const RemotionRoot: React.FC = () => (
 		<Composition id="HabiSokushin720" component={{HabiSokushin720}} durationInFrames={{TOTAL_FRAMES}} fps={{30}} width={{1280}} height={{720}} />
 		<Folder name="Scenes">
 {comps}
-		</Folder>
-		<Folder name="Thumbnails">
-			<Composition id="Thumb1Tsuka" component={{Thumb1Tsuka}} durationInFrames={{1}} fps={{30}} width={{1280}} height={{720}} />
-			<Composition id="Thumb2Kami" component={{Thumb2Kami}} durationInFrames={{1}} fps={{30}} width={{1280}} height={{720}} />
-			<Composition id="Thumb3Kubi" component={{Thumb3Kubi}} durationInFrames={{1}} fps={{30}} width={{1280}} height={{720}} />
 		</Folder>
 	</>
 );

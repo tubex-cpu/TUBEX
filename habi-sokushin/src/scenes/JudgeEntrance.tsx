@@ -8,7 +8,7 @@ import {SceneFrame} from '../components/SceneFrame';
 import {judgeEntranceCaptions as c} from '../data/captions';
 import {colors, gothicFamily, minchoFamily} from '../theme';
 
-const clues = ['反逆者', '新皇', '俵藤太', '笑う首', '飛ぶ首', '塚の祟り', 'GHQ', '2026年', '神田明神', '成田山', '遣唐使', '無実', '時平の死', '清涼殿', '絵巻', '学問の神', '牛', '飛梅', '叔父子', '保元の乱', '血の経', '暗殺', '西行', '天狗', '怨霊の始まり', '白峯神宮', '五輪', 'スポーツ', '三大怨霊', '御霊', '祇園祭'];
+const clues = ['数', '湯殿山', '御神体', '羽黒山', '行者', '木食行', '漆', '鉦', '埋めない', '本明海', '真如海', '左目', '鉄門海', '藩士の日記', '鉄竜海', '忠海', '円明海', 'ハエの殻', '死後の加工', '弘智法印', '宥貞法印', '指紋', '明治', '仏海', '発掘', '土中入定', '石頭希遷', '章公祖師', 'タイの僧', '失われた仏', '明海', '衣替え', '明治以降'];
 
 // 今夜の9の手がかり
 const ClueRow = () => {
@@ -124,9 +124,9 @@ export const JudgeEntrance = () => (
 			<NamePlate />
 		</Beat>
 		<Beat name="今夜の問い" captions={c} from={2} to={3}>
-			<Photo id="fujin-raijin-sotatsu" move="in" label="祟りは、本当にあったのか？" />
+			<Photo id="sojiji-sanmon" move="in" label="本当に生きたまま土に入ったのか？" />
 		</Beat>
-		<Beat name="31の手がかり" captions={c} from={4}>
+		<Beat name="33の手がかり" captions={c} from={4}>
 			<ClueRow />
 		</Beat>
 	</SceneFrame>

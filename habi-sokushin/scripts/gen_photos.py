@@ -8,10 +8,10 @@ ROOT = Path(__file__).resolve().parent.parent
 cr = json.loads((ROOT / 'public/photos/credits.json').read_text())
 desc = json.loads((ROOT / 'scripts/photo-desc.json').read_text())
 # 縦長・極端な横長・地図は全体を見せる（contain）。人物の顔がある写真と地図は、テロップを下に置く
-CONTAIN = {'michizane-masanobu', 'hogen-screen-detail', 'totou-tenjin', 'tenjin-sesshu-kitano', 'tenjin-kakejiku', 'emperor-daigo', 'sutoku-mausoleum-kyoto', 'shiramine-pagoda', 'kubizuka-new-stone'}
+CONTAIN = {'kouchi-brooklyn', 'kouchi-hokuetsu', 'shitou-print', 'churenji-hondo', 'sojiji-sanmon', 'luangphodaeng'}
 # 明るい地図は、夜の画面に合うよう色を反転させる
 FILTER = {}
-FACE = {'sutoku-yoshitsuya', 'sutoku-miei', 'sutoku-thunder', 'tenjin-sesshu-kitano', 'emperor-daigo', 'hidesato-dragon', 'michizane-moon', 'raijin-statue', 'sutoku-yoshitoshi-exile', 'michizane-masanobu', 'foxfire-chikanobu', 'totou-tenjin', 'takiyasha-katata', 'heiji-abduction', 'masakado-kunisada-katata', 'tenjin-kakejiku', 'sawara-zue', 'michizane-kunisada-thunder', 'takiyasha-seiu', 'michizane-pine', 'takiyasha-kuniyoshi', 'hidesato-audience', 'tenjin-egara', 'emperor-toba', 'sanukiin-tengu', 'masakado-hidesato-kamahige', 'tokihira-kunisada', 'takiyasha-kunisada', 'michizane-tenpai-met', 'masakado-kunisada', 'sutoku-portrait', 'hidesato-yoshitoshi', 'sutoku-hyakunin', 'masakado-geese-moon', 'masakado-yoshitoshi-horse', 'michizane-kuniyoshi-farewell', 'tofuro-onigawara', 'fujin-raijin-sotatsu', 'michizane-tenpai', 'engi-raijin', 'matsuyama-tengu', 'tadamichi-miei', 'go-shirakawa', 'michizane-storm-drawing'}
+FACE = {'shitou-print', 'sensoji-incense', 'haguro-shoreisai', '★luangphodaeng', 'haguro-yamabushi', 'kukai-patriarch', 'miroku-met', 'meiji-emperor', 'dokyo-hoyo', 'ishiyamadera-dainichi', 'lacquer-buddha-met', '★shitou-print', 'mokujiki-self', 'mokujiki-fudo', 'luangphodaeng', 'dainichi-met', 'hiroshige-enoshima-kaicho-w', 'shunsho-kaicho'}
 lines = []
 for pid, c in cr.items():
     w, h = c.get('size', [1, 1])
