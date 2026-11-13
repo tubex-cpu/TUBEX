@@ -18,5 +18,5 @@
 | 追加リサーチ（長尺） | 済（2026-11-13。✅のみ台本に使用。CMHC 2026年秋の必要着工数はB・Cの両方で確認し ✅） | `research_long_A_geo.md`・`research_long_B_supply.md`・`research_long_C_demand_world.md` |
 | 台本 | 済（2026-11-13、63場面・✅の事実のみ・言い切り） | `05_script.md` |
 | ナレーション・字幕 | 済（VOICEVOX、1296.6秒・字幕288枚） | `audio/`・`subtitles.json`・`subtitles.srt` |
-| 動画 | **ゲートB 承認（2026-11-14 社長「ゲートB承認します」）**。承認対象は commit ae6a615 の版（2026-11-13、21分39秒、1920×1080、−15.1 LUFS、無音・静止・黒画面なし。Codex 画像3枚は下書き版を配置。最終版への差し替えは映像の変更になるため、差し替えたら社長に再確認する）。公開・マージはしない | 確認用 `preview.mp4`（960×540）／フル版 `render/out/chizu-003-canada-housing_full.mp4`（git 外） |
+| 動画 | **ゲートB 承認（2026-11-14 社長「ゲートB承認します」）**。承認対象は commit ae6a615 の版（2026-11-13、21分39秒、1920×1080、−15.1 LUFS、無音・静止・黒画面なし。Codex 画像3枚は下書き版を配置。2026-11-14 社長「下書きのままで確定でOK」により、この版で映像を確定。画像の差し替えはしない）。公開・マージはしない | 確認用 `preview.mp4`（960×540）／フル版 `render/out/chizu-003-canada-housing_full.mp4`（git 外） |
 | 概要欄 | 下書き済み | `07_description.md` |
