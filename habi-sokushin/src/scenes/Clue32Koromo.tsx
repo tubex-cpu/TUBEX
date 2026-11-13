@@ -12,8 +12,8 @@ export const Clue32Koromo = () => {
 	const {fps} = useVideoConfig();
 	return (
 		<SceneFrame captions={c} voice="Clue32Koromo" label="第32の手がかり" title="即身仏は、いまも衣を替えて祀られている？">
-			<Beat name="鶴岡市 大日坊" captions={c} from={0} to={0}>
-				<Photo id="shonai-plain" move="in" label="鶴岡市 大日坊" />
+			<Beat name="大日坊の衣替え" captions={c} from={0} to={0}>
+				<Photo id="shonai-plain" move="in" label="大日坊の衣替え" />
 			</Beat>
 			<Beat name="真如海上人の衣替え" captions={c} from={1} to={2}>
 				<Stage label="真如海上人の衣替え">

@@ -15,7 +15,7 @@ export const Clue1Count = () => {
 		<SceneFrame captions={c} voice="Clue1Count" label="第1の手がかり" title="即身仏は、日本に十数体しかない？">
 			<Beat name="全国で16〜18体" captions={c} from={0} to={2}>
 				<Stage label="全国で16〜18体" labelBottom>
-					<ReliefMap view='japan' zoom={1.04} pins={[{at: P.tsuruoka, name: '庄内', sub: '6体', big: true, t: 6, dy: 90}, {at: P.yonezawa, name: '置賜', sub: '2体', t: 24, dy: 70}, {at: P.murakami, name: '新潟', sub: '4体', t: 40, dx: -80}, {at: P.asakawa, name: '福島', t: 56}, {at: P.sakuragawa, name: '茨城', t: 66}, {at: P.anan, name: '長野', t: 76}, {at: P.sojiji, name: '神奈川', t: 86, dy: 60}]} />
+					<ReliefMap view='japan' zoom={1.04} pins={[{at: P.tsuruoka, name: '庄内', sub: '6体', big: true, t: 6, dy: 90}, {at: P.yonezawa, name: '置賜', sub: '2体', t: 24, dy: 70}, {at: P.murakami, name: '新潟', sub: '4体', t: 40, dx: -80}, {at: P.asakawa, name: '福島', t: 56}]} />
 				</Stage>
 			</Beat>
 			<Beat name="資料によって違う数" captions={c} from={3} to={3}>

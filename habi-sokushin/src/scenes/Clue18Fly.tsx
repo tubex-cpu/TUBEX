@@ -1,7 +1,8 @@
 import {useVideoConfig} from 'remotion';
 import {Beat, captionFrame} from '../components/Beat';
 import {Stage} from '../components/Cinema';
-import {BigYears, Flow, LegendGap} from '../components/SokushinArt';
+import {TimeBar} from '../components/IzumoKit';
+import {BigYears, Flow} from '../components/SokushinArt';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {Photo} from '../components/Photo';
 import {SceneFrame} from '../components/SceneFrame';
@@ -25,7 +26,7 @@ export const Clue18Fly = () => {
 			</Beat>
 			<Beat name="冬に土に入ったはずなのに" captions={c} from={3} to={4}>
 				<Stage label="冬に土に入ったはずなのに">
-					<LegendGap from={0} to={12} marks={[{year: 1, label: '1月・2月\n入定と伝わる'}, {year: 6, label: 'ハエが\n育つ季節', story: true}]} gapLabel='合わない季節' />
+					<TimeBar stops={[{label: '1月・2月', sub: '入定と伝わる'}, {label: '暖かい季節', sub: 'ハエが育つ', accent: true}]} tone='night' />
 				</Stage>
 			</Beat>
 			<Beat name="小片保氏の推測" captions={c} from={5} to={5}>

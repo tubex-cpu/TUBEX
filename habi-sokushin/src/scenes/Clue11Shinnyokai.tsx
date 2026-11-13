@@ -12,8 +12,8 @@ export const Clue11Shinnyokai = () => {
 	const {fps} = useVideoConfig();
 	return (
 		<SceneFrame captions={c} voice="Clue11Shinnyokai" label="第11の手がかり" title="真如海上人は、大飢饉の年に入定した？">
-			<Beat name="鶴岡市大網 大日坊" captions={c} from={0} to={0}>
-				<Photo id="yudono-uba-gassan" move="in" label="鶴岡市大網 大日坊" />
+			<Beat name="大日坊の真如海上人" captions={c} from={0} to={0}>
+				<Photo id="yudono-uba-gassan" move="in" label="大日坊の真如海上人" />
 			</Beat>
 			<Beat name="天明の大飢饉の年" captions={c} from={1} to={2}>
 				<Stage label="天明の大飢饉の年">

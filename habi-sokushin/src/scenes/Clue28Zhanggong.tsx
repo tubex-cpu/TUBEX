@@ -29,7 +29,7 @@ export const Clue28Zhanggong = () => {
 			</Beat>
 			<Beat name="返還を求める裁判" captions={c} from={4} to={5}>
 				<Stage label="返還を求める裁判">
-					<TimeBar stops={[{label: '1995年', sub: '盗まれる'}, {label: '2015年', sub: '展示で見つかる'}, {label: '2022年7月19日', sub: '返還を命じる判決', accent: true}]} tone='shrine' />
+					<TimeBar stops={[{label: '1995年', sub: '盗まれる'}, {label: '2015年', sub: '展示で見つかる'}, {label: '2022年', sub: '返還を命じる判決', accent: true}]} tone='shrine' />
 				</Stage>
 			</Beat>
 			<Beat name="いまどこに" captions={c} from={6} to={7}>

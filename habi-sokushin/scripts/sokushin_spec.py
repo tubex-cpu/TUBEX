@@ -16,7 +16,7 @@ S = {
   (12, None, 'p', 'ct-schematic', 'X線、CT、指紋', 'in'),
  ]),
  'Clue1Count': ('第1の手がかり', '即身仏は、日本に十数体しかない？', [
-  (0, 2, 'a', "<ReliefMap view='japan' zoom={1.04} pins={[{at: P.tsuruoka, name: '庄内', sub: '6体', big: true, t: 6, dy: 90}, {at: P.yonezawa, name: '置賜', sub: '2体', t: 24, dy: 70}, {at: P.murakami, name: '新潟', sub: '4体', t: 40, dx: -80}, {at: P.asakawa, name: '福島', t: 56}, {at: P.sakuragawa, name: '茨城', t: 66}, {at: P.anan, name: '長野', t: 76}, {at: P.sojiji, name: '神奈川', t: 86, dy: 60}]} />", '全国で16〜18体', True),
+  (0, 2, 'a', "<ReliefMap view='japan' zoom={1.04} pins={[{at: P.tsuruoka, name: '庄内', sub: '6体', big: true, t: 6, dy: 90}, {at: P.yonezawa, name: '置賜', sub: '2体', t: 24, dy: 70}, {at: P.murakami, name: '新潟', sub: '4体', t: 40, dx: -80}, {at: P.asakawa, name: '福島', t: 56}]} />", '全国で16〜18体', True),
   (3, 3, 'a', "<Cards cards={[{head: '山形大学 岩鼻通明氏', body: '全国 18体'}, {head: '新潟県観光協会', body: '全国 17体'}, {head: '数え方で', body: '16〜18体', tone: 'red'}]} tone='ink' size={46} height={330} top={360} />", '資料によって違う数', False),
   (4, 4, 'p', 'kaikoji-sokushindo', '拝観はできるが、撮影は', 'in'),
   (5, 5, 'p', 'kaikoji-hondo', '文化財に指定できない？', 'in'),
@@ -104,7 +104,7 @@ S = {
   (10, None, 'p', 'tsuruoka-akagawa', '一人一人の即身仏へ', 'in'),
  ]),
  'Clue10Honmyokai': ('第10の手がかり', '本明海上人は、藩主の身代わりになった？', [
-  (0, 0, 'a', "<ReliefMap view='shonai' zoom={1.1} pins={[{at: P.honmyoji, name: '本明寺', sub: '本明海上人', big: true, t: 6}, {at: P.tsuruoka, name: '鶴岡', t: 30, dy: 70}, {at: P.yudono, name: '湯殿山', t: 50}]} />", '鶴岡市東岩本', True),
+  (0, 0, 'a', "<ReliefMap view='shonai' zoom={1.1} pins={[{at: P.honmyoji, name: '本明寺', sub: '本明海上人', big: true, t: 6}, {at: P.yudono, name: '湯殿山', t: 50}]} />", '鶴岡市東岩本', True),
   (1, 1, 'p', 'tsurugaoka-moat', '庄内藩の武士', 'in'),
   (2, 3, 'a', "<Cards cards={[{head: 'よく言われる話', body: '藩主の\\n身代わり'}, {head: '日本人名大辞典', body: '病気平癒を\\n祈る使い', tone: 'gold'}]} tone='ink' size={48} height={320} top={370} />", '1661年 藩主・酒井忠当の病', False),
   (4, 4, 'p', 'gassan-hiking', '数千日の修行', 'in'),
@@ -113,7 +113,7 @@ S = {
   (9, None, 'p', 'asama-yorubun', '飢饉の年の即身仏', 'in'),
  ]),
  'Clue11Shinnyokai': ('第11の手がかり', '真如海上人は、大飢饉の年に入定した？', [
-  (0, 0, 'p', 'yudono-uba-gassan', '鶴岡市大網 大日坊', 'in'),
+  (0, 0, 'p', 'yudono-uba-gassan', '大日坊の真如海上人', 'in'),
   (1, 2, 'a', "<BigYears value={1783} unit='年' caption='天明3年 96歳で入定（寺の説明）' tone='ember' />", '天明の大飢饉の年', False),
   (3, 3, 'p', 'gassan-green', '千日後に掘り起こしたら', 'in'),
   (4, 4, 'p', 'kiyochika-after-fire', '明治8年の大火で2体が', 'in'),
@@ -124,7 +124,7 @@ S = {
  ]),
 
  'Clue12Eye': ('第12の手がかり', '鉄門海上人は、自分の目をくりぬいた？', [
-  (0, 0, 'p', 'gassan', '鶴岡市大網 注連寺', 'in'),
+  (0, 0, 'p', 'gassan', '注連寺の鉄門海上人', 'in'),
   (1, 1, 'a', "<TimeBar stops={[{label: '1759年', sub: '鶴岡に生まれる'}, {label: '21歳', sub: '注連寺に入る'}, {label: '二千日', sub: '仙人沢で木食修行', accent: true}]} tone='moss' />", '寺の公式の説明', False),
   (2, 3, 'p', 'tsuruoka-park-sakura', '数多くの伝説', 'in'),
   (4, 4, 'p', 'hiroshige-nihonbashi', '江戸で目の病が流行', 'in'),
@@ -184,7 +184,7 @@ S = {
   (0, 0, 'p', 'housefly-snodgrass', '1962年の報告', 'in'),
   (1, 1, 'a', "<BigYears value={6} unit='体' caption='体の中からハエのさなぎの抜け殻' tone='night' />", '小さな発見', False),
   (2, 2, 'p', 'calliphora-side', 'ハエが育つ条件', 'in'),
-  (3, 4, 'a', "<LegendGap from={0} to={12} marks={[{year: 1, label: '1月・2月\\n入定と伝わる'}, {year: 6, label: 'ハエが\\n育つ季節', story: true}]} gapLabel='合わない季節' />", '冬に土に入ったはずなのに', False),
+  (3, 4, 'a', "<TimeBar stops={[{label: '1月・2月', sub: '入定と伝わる'}, {label: '暖かい季節', sub: 'ハエが育つ', accent: true}]} tone='night' />", '冬に土に入ったはずなのに', False),
   (5, 5, 'a', "<Flow steps={[{head: '亡くなる'}, {head: '地上に置かれる', body: '体がまだ\\n湿っている', hot: true}, {head: 'ハエが育つ'}, {head: '乾燥・処置'}]} />", '小片保氏の推測', False),
   (6, 6, 'p', 'dewa-basho-spot', '伝説とは違う過程', 'in'),
   (7, None, 'v', 'right'),
@@ -201,7 +201,7 @@ S = {
   (0, 0, 'p', 'hokuetsu-cover', '新潟県長岡市 西生寺', 'in'),
   (1, 1, 'a', "<BigYears value={1363} unit='年' caption='南北朝時代に亡くなった僧' tone='night' />", '現存最古とされる僧のミイラ', False),
   (2, 2, 'p', 'kouchi-hokuetsu', '鈴木牧之『北越雪譜』', 'in'),
-  (3, 3, 'p', 'teradomari-street', '江戸での開帳', 'in'),
+  (3, 3, 'p', 'teradomari-street', '長岡市寺泊', 'in'),
   (4, 4, 'p', 'british-museum-court', '大英博物館で見つかった台本', 'in'),
   (5, 6, 'a', "<Cards cards={[{head: '1959年の調査', body: 'ニセモノ疑惑が\\nきっかけ'}, {head: '亡くなった年齢', body: '82歳？\\n60歳前後？', tone: 'red'}]} tone='ink' size={46} height={330} top={360} />", '寺が示す調査の結果', False),
   (7, None, 'v', 'right'),
@@ -254,7 +254,7 @@ S = {
   (12, None, 'p', 'akagawa-green', '土中入定と即身仏', 'in'),
  ]),
  'Clue26Dochu': ('第26の手がかり', '土中入定と即身仏は、同じ信仰だった？', [
-  (0, 1, 'a', "<ReliefMap view='japan' zoom={1.25} focus={P.inagi} pins={[{at: P.inagi, name: '稲城の入定塚', sub: '1536年 長信上人', big: true, t: 6}, {at: P.shirataka, name: '白鷹町 光明海', sub: '1854年', t: 40}]} />", '各地の入定塚', True),
+  (0, 1, 'a', "<ReliefMap view='japan' zoom={1.25} focus={P.shirataka} pins={[{at: P.shirataka, name: '白鷹町 光明海', sub: '1854年に入定と伝わる', big: true, t: 6, dy: 80}]} />", '各地の入定塚', True),
   (2, 4, 'a', "<LegendGap from={1840} to={1990} marks={[{year: 1854, label: '光明海が\\n入定と伝わる'}, {year: 1978, label: '掘り出すと\\n白骨', story: true}]} gapLabel='124年後' />", '塚を掘ると', False),
   (5, 6, 'a', "<Relations nodes={[{id: 'd', x: 520, y: 560, name: '土中入定', sub: '土の中で亡くなる伝説'}, {id: 's', x: 1400, y: 560, name: '即身仏', sub: '体を残して祀る', hot: true}]} edges={[{a: 'd', b: 's', label: 'もともと別の信仰', red: true, dash: true}]} />", '内藤正敏氏の指摘', False),
   (7, 7, 'a', "<Scroll text={'土中入定を\\n明記した\\n古文書は\\n見つかっていない'} source='岩鼻通明（2021年）より要約' tone='moss' />", '寺に伝わる伝承', False),
@@ -275,7 +275,7 @@ S = {
   (1, 1, 'a', "<BigYears value={1995} unit='年' caption='12月 仏像が盗まれる' tone='ember' />", '村のお堂から', False),
   (2, 2, 'p', 'hnhm-entrance', '2015年3月 ハンガリーの博物館', 'in'),
   (3, 3, 'p', 'hnhm-snow', '仏像の中に', 'in'),
-  (4, 5, 'a', "<TimeBar stops={[{label: '1995年', sub: '盗まれる'}, {label: '2015年', sub: '展示で見つかる'}, {label: '2022年7月19日', sub: '返還を命じる判決', accent: true}]} tone='shrine' />", '返還を求める裁判', False),
+  (4, 5, 'a', "<TimeBar stops={[{label: '1995年', sub: '盗まれる'}, {label: '2015年', sub: '展示で見つかる'}, {label: '2022年', sub: '返還を命じる判決', accent: true}]} tone='shrine' />", '返還を求める裁判', False),
   (6, 7, 'a', "<Cards cards={[{head: '収集家', body: 'すでに\\n人手に渡った'}, {head: '像の行方', body: '分かっていない', tone: 'red'}]} tone='ink' size={48} height={320} top={370} />", 'いまどこに', False),
   (8, None, 'v', 'right'),
   (11, None, 'p', 'samui-temple', 'ほかの国にも', 'in'),
@@ -290,7 +290,7 @@ S = {
  ]),
  'Clue30Lost': ('第30の手がかり', '即身仏の中には、失われたものがある？', [
   (0, 0, 'p', 'dokyo-hoyo', '守り抜かれたのか', 'in'),
-  (1, 3, 'a', "<TimeBar stops={[{label: '1875年', sub: '大日坊の大火 2体'}, {label: '1880年', sub: '津川の大火'}, {label: '1921年ごろ', sub: '博覧会へ・行方不明', accent: true}]} tone='ember' />", '火事と博覧会', False),
+  (1, 3, 'a', "<TimeBar stops={[{label: '1875年', sub: '大日坊の大火 2体'}, {label: '1880年', sub: '津川の大火'}, {label: '1921年', sub: '博覧会へ・行方不明', accent: true}]} tone='ember' />", '火事と博覧会', False),
   (4, 4, 'p', 'quake-2011-iwaki', '2011年 東日本大震災', 'in'),
   (5, 6, 'p', 'quake-2011-shinkansen', '自然の力、人の欲', 'in'),
   (7, None, 'v', 'right'),
@@ -298,14 +298,14 @@ S = {
  ]),
  'Clue31Myokai': ('第31の手がかり', '即身仏は、すべて寺が守っている？', [
   (0, 1, 'p', 'sensoji-incense', '寺と檀家', 'in'),
-  (2, 2, 'a', "<ReliefMap view='shonai' zoom={1.0} pins={[{at: P.yonezawa, name: '米沢', sub: '明海上人', big: true, t: 6}, {at: P.yudono, name: '湯殿山', t: 40}, {at: P.tsuruoka, name: '鶴岡', t: 60}]} />", '山形県米沢市', True),
+  (2, 2, 'a', "<ReliefMap view='shonai' zoom={1.0} pins={[{at: P.yonezawa, name: '米沢', sub: '明海上人', big: true, t: 6, dy: -40}, {at: P.yudono, name: '湯殿山', t: 40}]} />", '山形県米沢市', False),
   (3, 3, 'p', 'komenoko-taki', '目を治すために', 'in'),
   (4, 6, 'a', "<Cards cards={[{head: '多くの即身仏', body: '寺が守る'}, {head: '明海上人', body: '個人の家が守る', tone: 'gold'}]} tone='moss' size={48} height={320} top={370} />", '国内でただひとつ', False),
   (7, None, 'v', 'wrong'),
   (10, None, 'p', 'mokugyo-met-w', '衣を替えて', 'scroll'),
  ]),
  'Clue32Koromo': ('第32の手がかり', '即身仏は、いまも衣を替えて祀られている？', [
-  (0, 0, 'p', 'shonai-plain', '鶴岡市 大日坊', 'in'),
+  (0, 0, 'p', 'shonai-plain', '大日坊の衣替え', 'in'),
   (1, 2, 'a', "<Cards cards={[{head: '大日坊', body: '6年に一度\\n丑年と未年'}, {head: '前回', body: '2021年10月14日', tone: 'gold'}]} tone='shrine' size={48} height={320} top={370} />", '真如海上人の衣替え', False),
   (3, 3, 'a', "<Cards cards={[{head: '西生寺', body: '12年に一度\\n子年'}, {head: '前回', body: '2020年3月', tone: 'gold'}]} tone='shrine' size={48} height={320} top={370} />", '弘智法印の衣替え', False),
   (4, 4, 'p', 'haguro-shukubo', 'お守りと予約制の拝観', 'in'),
@@ -333,7 +333,7 @@ S = {
   (0, 2, 'a', "<Cards cards={[{head: '本明海上人', body: '亡くなり方は？'}, {head: '真如海上人', body: '亡くなり方は？'}, {head: '宥貞法印', body: 'CTの結果は？', tone: 'red'}]} tone='ink' size={44} height={330} top={360} />", 'まだ解けていない謎', False),
   (3, 3, 'p', 'kahaku-snow', '2019年の画像', 'in'),
   (4, 4, 'a', "<Cards cards={[{head: 'カビ', body: '大部分で\\n除去が必要', tone: 'red'}, {head: '記録', body: 'CT・年代測定\\nDNA'}]} tone='ink' size={46} height={330} top={360} />", '即身仏の危機', False),
-  (5, 6, 'a', "<TimeBar stops={[{label: '1960年代', sub: '学術調査'}, {label: '2022年', sub: '国立科学博物館の目録'}, {label: '2025年7月', sub: '内藤正敏氏が亡くなる'}, {label: '2025年12月', sub: '新しい研究の本', accent: true}]} tone='ink' />", '研究は続く', False),
+  (5, 6, 'a', "<TimeBar stops={[{label: '1960年代', sub: '学術調査'}, {label: '2022年', sub: '国立科学博物館の目録'}, {label: '2025年', sub: '内藤氏が亡くなる・新刊', accent: true}]} tone='ink' />", '研究は続く', False),
   (7, None, 'p', 'haguro-torii-mist', '伝承と科学のあいだ', 'in'),
  ]),
 }

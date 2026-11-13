@@ -17,8 +17,8 @@ export const Clue31Myokai = () => {
 				<Photo id="sensoji-incense" move="in" label="寺と檀家" />
 			</Beat>
 			<Beat name="山形県米沢市" captions={c} from={2} to={2}>
-				<Stage label="山形県米沢市" labelBottom>
-					<ReliefMap view='shonai' zoom={1.0} pins={[{at: P.yonezawa, name: '米沢', sub: '明海上人', big: true, t: 6}, {at: P.yudono, name: '湯殿山', t: 40}, {at: P.tsuruoka, name: '鶴岡', t: 60}]} />
+				<Stage label="山形県米沢市">
+					<ReliefMap view='shonai' zoom={1.0} pins={[{at: P.yonezawa, name: '米沢', sub: '明海上人', big: true, t: 6, dy: -40}, {at: P.yudono, name: '湯殿山', t: 40}]} />
 				</Stage>
 			</Beat>
 			<Beat name="目を治すために" captions={c} from={3} to={3}>

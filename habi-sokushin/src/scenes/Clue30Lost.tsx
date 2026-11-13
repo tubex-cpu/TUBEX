@@ -17,7 +17,7 @@ export const Clue30Lost = () => {
 			</Beat>
 			<Beat name="火事と博覧会" captions={c} from={1} to={3}>
 				<Stage label="火事と博覧会">
-					<TimeBar stops={[{label: '1875年', sub: '大日坊の大火 2体'}, {label: '1880年', sub: '津川の大火'}, {label: '1921年ごろ', sub: '博覧会へ・行方不明', accent: true}]} tone='ember' />
+					<TimeBar stops={[{label: '1875年', sub: '大日坊の大火 2体'}, {label: '1880年', sub: '津川の大火'}, {label: '1921年', sub: '博覧会へ・行方不明', accent: true}]} tone='ember' />
 				</Stage>
 			</Beat>
 			<Beat name="2011年 東日本大震災" captions={c} from={4} to={4}>

@@ -24,7 +24,7 @@ export const UnsolvedMystery = () => {
 			</Beat>
 			<Beat name="研究は続く" captions={c} from={5} to={6}>
 				<Stage label="研究は続く">
-					<TimeBar stops={[{label: '1960年代', sub: '学術調査'}, {label: '2022年', sub: '国立科学博物館の目録'}, {label: '2025年7月', sub: '内藤正敏氏が亡くなる'}, {label: '2025年12月', sub: '新しい研究の本', accent: true}]} tone='ink' />
+					<TimeBar stops={[{label: '1960年代', sub: '学術調査'}, {label: '2022年', sub: '国立科学博物館の目録'}, {label: '2025年', sub: '内藤氏が亡くなる・新刊', accent: true}]} tone='ink' />
 				</Stage>
 			</Beat>
 			<Beat name="伝承と科学のあいだ" captions={c} from={7}>

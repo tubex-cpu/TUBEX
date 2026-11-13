@@ -24,8 +24,8 @@ export const Clue20Kouchi = () => {
 			<Beat name="鈴木牧之『北越雪譜』" captions={c} from={2} to={2}>
 				<Photo id="kouchi-hokuetsu" move="in" label="鈴木牧之『北越雪譜』" />
 			</Beat>
-			<Beat name="江戸での開帳" captions={c} from={3} to={3}>
-				<Photo id="teradomari-street" move="in" label="江戸での開帳" />
+			<Beat name="長岡市寺泊" captions={c} from={3} to={3}>
+				<Photo id="teradomari-street" move="in" label="長岡市寺泊" />
 			</Beat>
 			<Beat name="大英博物館で見つかった台本" captions={c} from={4} to={4}>
 				<Photo id="british-museum-court" move="in" label="大英博物館で見つかった台本" />

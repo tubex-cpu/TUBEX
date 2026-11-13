@@ -15,7 +15,7 @@ export const Clue26Dochu = () => {
 		<SceneFrame captions={c} voice="Clue26Dochu" label="第26の手がかり" title="土中入定と即身仏は、同じ信仰だった？">
 			<Beat name="各地の入定塚" captions={c} from={0} to={1}>
 				<Stage label="各地の入定塚" labelBottom>
-					<ReliefMap view='japan' zoom={1.25} focus={P.inagi} pins={[{at: P.inagi, name: '稲城の入定塚', sub: '1536年 長信上人', big: true, t: 6}, {at: P.shirataka, name: '白鷹町 光明海', sub: '1854年', t: 40}]} />
+					<ReliefMap view='japan' zoom={1.25} focus={P.shirataka} pins={[{at: P.shirataka, name: '白鷹町 光明海', sub: '1854年に入定と伝わる', big: true, t: 6, dy: 80}]} />
 				</Stage>
 			</Beat>
 			<Beat name="塚を掘ると" captions={c} from={2} to={4}>

@@ -15,7 +15,7 @@ export const Clue10Honmyokai = () => {
 		<SceneFrame captions={c} voice="Clue10Honmyokai" label="第10の手がかり" title="本明海上人は、藩主の身代わりになった？">
 			<Beat name="鶴岡市東岩本" captions={c} from={0} to={0}>
 				<Stage label="鶴岡市東岩本" labelBottom>
-					<ReliefMap view='shonai' zoom={1.1} pins={[{at: P.honmyoji, name: '本明寺', sub: '本明海上人', big: true, t: 6}, {at: P.tsuruoka, name: '鶴岡', t: 30, dy: 70}, {at: P.yudono, name: '湯殿山', t: 50}]} />
+					<ReliefMap view='shonai' zoom={1.1} pins={[{at: P.honmyoji, name: '本明寺', sub: '本明海上人', big: true, t: 6}, {at: P.yudono, name: '湯殿山', t: 50}]} />
 				</Stage>
 			</Beat>
 			<Beat name="庄内藩の武士" captions={c} from={1} to={1}>

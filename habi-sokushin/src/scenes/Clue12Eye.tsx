@@ -12,8 +12,8 @@ export const Clue12Eye = () => {
 	const {fps} = useVideoConfig();
 	return (
 		<SceneFrame captions={c} voice="Clue12Eye" label="第12の手がかり" title="鉄門海上人は、自分の目をくりぬいた？">
-			<Beat name="鶴岡市大網 注連寺" captions={c} from={0} to={0}>
-				<Photo id="gassan" move="in" label="鶴岡市大網 注連寺" />
+			<Beat name="注連寺の鉄門海上人" captions={c} from={0} to={0}>
+				<Photo id="gassan" move="in" label="注連寺の鉄門海上人" />
 			</Beat>
 			<Beat name="寺の公式の説明" captions={c} from={1} to={1}>
 				<Stage label="寺の公式の説明">
