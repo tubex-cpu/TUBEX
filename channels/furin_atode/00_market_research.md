@@ -18,6 +18,8 @@
 4. 2026-11 の「登録者1,000人・4,000時間で収益化」という目標には、この第1枠は**間に合わない**（今日が 2026-11-13 で、チャンネル名も未決）。期限の見直しは社長の判断（8）。
 
 ## 2. YouTube の需要（検索語別、直近2年の上位25本、取得日 2026-11-13）
+**元データ**：検索語ごとの全25本（動画 URL・再生数・チャンネル・公開日）は [`data/yt_search_2026-11-13.md`](data/yt_search_2026-11-13.md)。最大・10位・25位はその表の再生数を大きい順に並べた値。対象読者の違う動画（された側の修羅場・名言ショートなど）やショートも、除かずに含む。
+
 | 検索語 | 最大 | 10位 | 25位 | 上位の中身（タイトル・チャンネルから） |
 |---|---|---|---|---|
 | 男性心理 恋愛 | 13,702,510 | 1,316,030 | 509,107 | 男性心理・男女の違い。ショートが多い |
@@ -61,6 +63,25 @@
 | ジャックポット | 900,000 | 563,074,156 | 2021-07-08 | 不倫の突撃・証拠公開（された側） |
 | なっちゃんねる🌺 | 28,000 | 56,163,038 | 2026-04-22 | 恋愛・不倫のあるある寸劇（「全てフィクション」と明記）。開設7か月で 28,000人 |
 
+**チャンネルの URL**（channels API で取得した ID から作成、取得日 2026-11-13）
+| チャンネル | URL |
+|---|---|
+| プラス7%の恋愛法則 | https://www.youtube.com/channel/UCM0bzxknH_7xs1XNatzyK0A |
+| さな【辛口恋愛心理】 | **未取得**（検索結果の表示名・登録者・開設日だけで、ID は取得していない。総再生・本数も未取得） |
+| 傷つきやすい女性の為の恋愛教室 | https://www.youtube.com/channel/UCgK-6OmGB2_goDwJqn4lZ7Q |
+| よしお【男性心理×恋愛心理】 | https://www.youtube.com/channel/UCXBqBvVcPOvchirZS1fWGYQ |
+| こじらせオトナ女子のための激辛恋愛相談【鬼塚アゲハ】 | https://www.youtube.com/channel/UCHcSqAneDxQJ2czvm-Jzb_Q |
+| れん愛サプリ【彼の気持ちがわかる場所】 | https://www.youtube.com/channel/UCzy61r4H3w4DaRsPnOIrVSg |
+| 小川健次@大人の恋愛講座 | https://www.youtube.com/channel/UC5vZCshMw43JN8L1KIGF6pg |
+| ふーりん🔮不倫・複雑恋愛タロット占い | https://www.youtube.com/channel/UCFmhQUU5fZbWipVmKa_pA_g |
+| 不倫専門占い師 そら | https://www.youtube.com/channel/UCvvEhDWX6r6DwogykxaxErA |
+| 不倫の背徳を癒す占い師ロキ･ノワール | https://www.youtube.com/channel/UCiI5hAo15b9rQkWb_6kCJ2A |
+| 自分軸でツラい不倫恋愛から卒業する方法 | https://www.youtube.com/channel/UCSmjr40DNLy5OPGioA_hZ0A |
+| ジャックポット | https://www.youtube.com/channel/UCQgtvEFaIW150UlAyBzMkXg |
+| なっちゃんねる🌺 | https://www.youtube.com/channel/UCbUDLYKGBzdCWLdNmicxoPQ |
+| 大人のブラック恋愛心理学（10） | https://www.youtube.com/channel/UC3Q2mEFdbGF8GyVIQCRVXng |
+| オトナの恋愛心理学ch（10） | https://www.youtube.com/channel/UCHLaNfUVnQZtAR2N5i0uYqg |
+
 **競合から読み取れること**
 - 不倫の女性側の専門チャンネル（3B）は、小川健次を除いて登録者が数百人以下で、多くが**占い・鑑定**の形。
 - 女性向けの恋愛・男性心理（3A）には、開設から約1年半〜2年半で登録者1万〜7万人のチャンネルがある。プラス7%の恋愛法則は、**VOICEVOX の音声**で 74,700人（このリポジトリと同じ音声の作り方）。
@@ -96,7 +117,9 @@
 - 「有料情報商材」の形は、今の決定（単品 ¥500）を基本に、反応のあるテーマで単品がたまったら**まとめマガジン**、その先に note の**会員プラン**（競合 2A #1 が併用）を候補にする。価格・特典は未決。
 
 ### 6B. 流れ（案）
-1. YouTube の動画（ショートと長尺）→ 概要欄・固定コメントに、その動画の悩みに合う **note の無料記事**のリンク
+1. YouTube から note の無料記事へ。**ショートと長尺で経路を分ける**
+   - **長尺**：概要欄・固定コメントに、その動画の悩みに合う **note の無料記事**のリンク。ただし外部リンクを押せるようにするには、チャンネルの上級者向け機能の有効化が前提（[YouTube 公式ヘルプ](https://support.google.com/youtube/answer/13748639?hl=ja)、PR #13 のレビュー r4564674800 による。この環境から原文は開けず、Claude は未実見）
+   - **ショート**：説明欄・コメントの URL は押せない（同ヘルプ）。ショートからは、チャンネルのプロフィールのリンク、または関連する長尺動画へ案内し、そこから note へ
 2. note の無料記事 → 同じテーマの **¥500 の有料記事**
 3. 条件を満たしたら、YouTube の**メンバーシップ**を足す（動画内・コミュニティ投稿で案内）
 - 競合の主流は**公式LINE**への誘導だが、公式LINE は 2026-10-25 に「扱わない」と決まっていて、2026-11-13 の方針にも含まれない。使うかは社長の判断（8）。
