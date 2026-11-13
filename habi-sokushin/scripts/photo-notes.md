@@ -10,7 +10,7 @@
 - 「顔（上半分）」が「あり」の写真は、人物（像・絵・肖像を含む）の顔が画面の上半分にあるので、テロップは下（labelBottom）に置く。
 - 保存名の末尾が `-w` のものは横に長い画像（photo-desc.json のキーは `-w` なし）。
 - 即身仏そのものの写真は、権利者の条件が確かめられるものが見つからず不採用（研究メモ9章どおり）。湯殿山の御神体は撮影禁止のため探していない。
-- 合計 128 枚（引き継ぎ20枚＋新規108枚）。
+- 合計 128 枚（引き継ぎ20枚＋新規108枚）。2026-11-13 に30枚を追加し、合計 158 枚（「追加分」の表）。
 
 ## 謎の先出し（6枚）
 
@@ -315,6 +315,44 @@
 | mokujiki-fudo | 木喰上人の不動明王像 | CC0 | Creator:Mokujiki Shōnin 木喰上人 | 2326×4000 | あり | 本編可／サムネ可 | 可 | 木喰上人の不動明王像（メトロポリタン美術館） |
 | ★ivolginsky | イチゲロフを安置するイヴォルギンスキー・ダツァン | BY-SA（CC BY-SA 4.0） | Mayyskiyysergeyy | 2592×1944 | なし | 本編可／サムネ可（BY-SA） | 可 | 台本に該当場面なし（予備として引き継ぎ） |
 
+## 追加分（30枚）
+
+- 2026-11-13 追加。既存128枚と同じファイルは選んでいない（Commonsのファイル名で照合）。選定基準・確認方法は冒頭と同じ（extmetadataで作者・ライセンス・出典を1枚ずつ確認、PD／CC0／CC BY／CC BY-SAのみ、長辺1200px以上、縮小版を目視）。
+- 題材：村上の町並み・寺町・三面川／庄内平野・鳥海山・赤川／出羽三山（霧・雪・宿坊・松例祭）／月山・湯殿山方面の夏の山と滝／米沢の雪の町／国立科学博物館／木棺・石棺／法要・線香・灯明／江戸の開帳の浮世絵／明治初期の東京と新聞／生薬の木の皮／木魚。
+
+| 保存名 | 内容 | ライセンス | 作者 | 縦横(px) | 顔（上半分） | 本編/サムネ | 加工 | メモ |
+|---|---|---|---|---|---|---|---|---|
+| murakami-anzen-koji | 村上の城下町・安善小路（黒塀通り） | CC BY 4.0 | Drph17 | 2508×1672 | なし | 本編可／サムネ可 | 可 | 村上の町並み |
+| murakami-kyoouji-gate | 村上の寺町・経王寺の山門 | CC BY 4.0 | ブルーノ・プラス | 4896×3672 | なし | 本編可／サムネ可 | 可 | 村上の寺町（2026年4月撮影） |
+| miomote-river | 村上市を流れる三面川 | BY-SA（CC BY-SA 3.0） | Triglav | 1632×1224 | なし | 本編可／サムネ可（BY-SA） | 可 | 三面川中州公園から下流を見た眺め |
+| shonai-plain | 高台から見渡す庄内平野と鳥海山 | BY-SA（CC BY-SA 3.0） | purivve | 2272×1704 | なし | 本編可／サムネ可（BY-SA） | 可 | 2006年4月撮影。Panoramio からの転載（作者 purivve） |
+| chokai-paddies | 水を張った田んぼと鳥海山 | BY-SA（CC BY-SA 2.0） | kyohei ito | 3840×2160 | なし | 本編可／サムネ可（BY-SA） | 可 | 鳥海山の南西側。田植え前後の水田に山が映る |
+| chokai-sakata-fields | 実った稲と鳥海山（酒田） | CC BY 3.0 | くろふね | 4770×3178 | なし | 本編可／サムネ可 | 可 | 2009年9月。Panoramio からの転載（作者 くろふね） |
+| akagawa-green | 鶴岡市の赤川の河川緑地 | BY-SA（CC BY-SA 4.0） | Ebiebi2 | 5184×3888 | なし | 本編可／サムネ可（BY-SA） | 可 | 遠くに鳥海山。既存の tsuruoka-akagawa とは別の場所・季節 |
+| haguro-torii-mist | 霧に包まれた羽黒山の杉林と鳥居 | BY-SA（CC BY-SA 3.0） | Japanexperterna.se | 5184×3456 | なし | 本編可／サムネ可（BY-SA） | 可 | 2014年6月撮影（v3） |
+| haguro-stone-snow | 雪に埋もれた羽黒山杉並木の石碑 | BY-SA（CC BY-SA 4.0） | さかおり | 6000×4000 | なし | 本編可／サムネ可（BY-SA） | 可 | 既存の雪の杉並木A・Bとは別の構図（石碑の寄り） |
+| haguro-shoreisai | 羽黒山の松例祭（大晦日の山伏の火の行事） | BY-SA（CC BY-SA 4.0） | Mimissu | 3098×2074 | あり | 本編可／サムネ可（BY-SA） | 可 | 人物は小さく炎の中。テロップは下に |
+| haguro-shukubo | 羽黒山・手向の宿坊（大進坊） | BY-SA（CC BY-SA 3.0） | Crown of Lenten rose | 1200×750 | なし | 本編可／サムネ可（BY-SA） | 可 | 作者名は Crown of Lenten rose（Commons上は機械可読の作者欄なし、本人撮影と明記）。長辺ちょうど1200px |
+| haguro-ohtorii-snow | 雪の羽黒山大鳥居 | BY-SA（CC BY-SA 3.0） | purivve | 2272×1704 | なし | 本編可／サムネ可（BY-SA） | 可 | 2006年1月。Panoramio からの転載（作者 purivve） |
+| gassan-summer-snow | 夏の月山の残雪と霧の登山道 | CC BY 2.0 | Raita Futo from Tokyo, Japan | 5830×3887 | なし | 本編可／サムネ可 | 可 | 既存の gassan-green・gassan-hiking とは別の写真（残雪と霧） |
+| komenoko-taki | 米の粉の滝（鶴岡市、湯殿山へ向かう梵字川） | BY-SA（CC BY-SA 4.0） | Tail furry | 3024×4032 | なし | 本編可／サムネ可（BY-SA） | 可 | 2022年7月の夏の滝 |
+| nanatsu-taki | 七ツ滝（鶴岡市田麦俣、湯殿山への道沿い） | BY-SA（CC BY-SA 4.0） | アラツク | 2736×3648 | なし | 本編可／サムネ可（BY-SA） | 可 | 2010年9月 |
+| yonezawa-snow-house | 雪囲いをした米沢の古い家並み | CC0 | Syced | 4080×3072 | なし | 本編可／サムネ可 | 可 | 2024年1月 |
+| yonezawa-shinpukuji | 雪の米沢・寺町（真福寺と墓地） | CC0 | Syced | 4080×3072 | なし | 本編可／サムネ可 | 可 | 米沢市相生町。2024年1月 |
+| kahaku-snow | 雪の日の国立科学博物館・日本館 | BY-SA（CC BY-SA 3.0） | Momotarou2012 | 3412×2560 | なし | 本編可／サムネ可（BY-SA） | 可 | 既存の kahaku-exterior とは別（雪の日） |
+| kahaku-japan-gallery | 国立科学博物館・日本館の吹き抜けとステンドグラス | BY-SA（CC BY-SA 4.0） | Kestrel | 3456×4608 | なし | 本編可／サムネ可（BY-SA） | 可 | 日本館の内部 |
+| funagata-mokkan | 平手町遺跡の方形周溝墓と舟形木棺の跡（名古屋市） | BY-SA（CC BY-SA 3.0） | KAMUI | 2210×1436 | なし | 本編可／サムネ可（BY-SA） | 可 | 木棺の発掘現場 |
+| iegata-sekkan | 御年代古墳の家形石棺（石室の中） | CC0 | Saigen Jiro | 3844×5916 | なし | 本編可／サムネ可 | 可 | 縦長 |
+| dokyo-hoyo | 仏壇の前で読経する住職（年忌法要） | BY-SA（CC BY-SA 4.0） | Gpwitteveen | 2048×1536 | あり | 本編可／サムネ可（BY-SA） | 可 | 福井県の浄土宗の住職が檀家の家で読経。顔が上半分 |
+| sensoji-incense | 浅草寺の常香炉の線香の煙 | CC BY 2.0 | Ajay Suresh from New York, NY, USA | 4608×3456 | あり | 本編可／サムネ可 | 可 | 参拝者の顔が上半分にあり |
+| manto-hasedera | 長谷寺（鎌倉）の万灯祈願会の灯明 | BY-SA（CC BY-SA 4.0） | KQuhen | 2736×1824 | なし | 本編可／サムネ可（BY-SA） | 可 | 大晦日の灯明 |
+| shunsho-kaicho | 勝川春章「不忍弁天開帳」（江戸の開帳） | CC0 | Katsukawa Shunshō | 3929×2858 | あり | 本編可／サムネ可 | 可 | メトロポリタン美術館（CC0）。人物は上部の橋の上 |
+| hiroshige-enoshima-kaicho-w | 歌川広重の三枚続「江の島弁財天の開帳」 | Public domain | Utagawa Hiroshige | 2100×1062 | あり | 本編可／サムネ可 | 可 | ロサンゼルス・カウンティ美術館（英題 Ceremony Unveiling the Icon at Benzaiten, Enoshima、1850年ごろ）。横長 |
+| nichinichi-first | 『東京日日新聞』創刊号（1872年） | Public domain | Mainichi Shimbun | 1564×1077 | なし | 本編可／サムネ可 | 可 | 明治5年の新聞（PD・発行元 東京日日新聞＝毎日新聞） |
+| hiroshige3-daiichi-bank | 三代広重「東京開化三十六景 第一国立銀行」 | Public domain | Hiroshige III | 3925×5642 | なし | 本編可／サムネ可 | 可 | 明治初期の東京の洋風建築。国立国会図書館デジタルコレクション |
+| kihada-bark | キハダ（黄檗、生薬になる木の皮） | BY-SA（CC BY-SA 3.0） | Bostonian13 | 3872×2592 | なし | 本編可／サムネ可（BY-SA） | 可 | アーノルド樹木園で撮影 |
+| mokugyo-met-w | 木魚と撥（1800年ごろ） | CC0 | 作者不詳（メトロポリタン美術館蔵） | 3900×1926 | なし | 本編可／サムネ可 | 可 | メトロポリタン美術館（CC0）。作者欄なし＝所蔵館の公開画像 |
+
 ## 見つからなかった題材・使わなかったもの
 
 | 題材 | 結果 | 代わり |
@@ -332,7 +370,7 @@
 | 大日坊の明治8年の大火・津川の明治13年の大火の図 | 見つからず | 小林清親の明治14年の両国大火の図 |
 | 1914年の東京大正博覧会 | 見つからず | 使わない（Remotionの年表で） |
 | 明治の旧刑法（1880年）の文書 | 見つからず | 大審院の庁舎写真 |
-| 江戸の出開帳の浮世絵（即身仏の開帳そのもの） | 見つからず | 回向院（開帳の会場）、版本『多田院開帳』 |
+| 江戸の出開帳の浮世絵（即身仏の開帳そのもの） | 見つからず | 回向院（開帳の会場）、版本『多田院開帳』、追加分の開帳の浮世絵2点 |
 | 福建省の章公祖師像・陽春村 | 見つからず（報道写真は不可） | 大田県の町と寺、ハンガリー自然科学博物館 |
 | ワット・クナラム（サムイ島） | 寺の外観の自由ライセンス写真は見つからず | サムイ島の別の寺 |
 | ガスパル・ヴィレラ | 肖像など見つからず | 使わない |
@@ -348,3 +386,4 @@
 - Niigata Medical School-old1.jpg：説明が新潟医大と岡山大の前身で食い違うため不採用。
 - Torii in the mist v1.JPG（羽黒山の鳥居）：縮小版の取得がアクセス制限で失敗し目視できなかったため今回は外した（CC BY-SA 3.0、5184×3456。必要なら目視後に追加可）。
 - 研究メモ9章の不採用分（Chu-ren-ji.jpg、Huineng.jpg、Itigelov.jpg、Untitled - panoramio - Nick Steemans.jpg、Bunko-sekihi.jpg）もそのまま不採用。
+- 追加分で外したもの：Buddhist objects with candles 2.jpg（題名と違い、写っているのは屋外の石仏）／弁財天滝.jpg（「越沢コース」とだけあり、月山・湯殿山の滝か確かめられず）／Making Prayer Beads (Juzu) in Japan (1914 by Elstner Hilton).jpg（CC BY 2.0 だが、ライセンスを付けた投稿者が撮影者本人ではないため）／Yonezawa Castle.jpg（既存の uesugi-shrine と同じ上杉神社）／Gassan Midagahara 2006.jpg（10月の枯れ草で「夏の月山」に合わない）／Cedar trees on Mt. Haguro covered in snow. January 2022. C.jpg・Snow scene of Haguro-san Five-story Pagoda January 2022 B〜G（既存の雪の杉並木・五重塔と似た写真）。
