@@ -14,7 +14,7 @@
 | 企画 | ゲートA 承認（2026-11-13）。尺は約5分→20〜30分に変更 | `03_plan.md` |
 | タイトル | 決定（2026-11-14 社長「タイトルは推奨案でOK」）：日本の26倍の国で、なぜ家が建たないのか？ 地図を3段で拡大して解く | `04_titles.md` |
 | サムネ | Codex に依頼文を用意（`06_thumbnail.md`、ラフ3案から。競合分析あり） | — |
-| 画像素材 | Codex に依頼文を用意（`06e_image_requests.md`、場面IDは企画書に合わせ済み） | — |
+| 画像素材 | 下書き版3枚で確定（2026-11-14 社長）。最終版の制作は不要（依頼文 `06e_image_requests.md`） | — |
 | 追加リサーチ（長尺） | 済（2026-11-13。✅のみ台本に使用。CMHC 2026年秋の必要着工数はB・Cの両方で確認し ✅） | `research_long_A_geo.md`・`research_long_B_supply.md`・`research_long_C_demand_world.md` |
 | 台本 | 済（2026-11-13、63場面・✅の事実のみ・言い切り） | `05_script.md` |
 | ナレーション・字幕 | 済（VOICEVOX、1296.6秒・字幕288枚） | `audio/`・`subtitles.json`・`subtitles.srt` |
