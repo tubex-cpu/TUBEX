@@ -68,9 +68,21 @@ export const Envelope: React.FC<{w?: number; label?: string; color?: string}> = 
 
 export const Chip: React.FC<{k: string; size?: number}> = ({k, size = 30}) => {
   const t = TAG[k] ?? TAG['推論'];
-  return <span style={{display: 'inline-block', background: t.bg, color: t.fg, fontFamily: FONT, fontWeight: 900, fontSize: size, padding: `${size * 0.18}px ${size * 0.55}px`, borderRadius: size * 0.3, marginRight: size * 0.3, letterSpacing: '0.06em'}}>{k}</span>;
+  return <span style={{display: 'inline-block', background: t.bg, color: t.fg, fontFamily: FONT, fontWeight: 900, fontSize: size, padding: `${size * 0.18}px ${size * 0.55}px`, borderRadius: size * 0.3, marginRight: size * 0.3, letterSpacing: '0.06em', whiteSpace: 'nowrap', flexShrink: 0}}>{k}</span>;
 };
 
 export const Big: React.FC<{children: React.ReactNode; size?: number; color?: string; style?: React.CSSProperties}> = ({children, size = 90, color = C.white, style}) => (
   <div style={{fontFamily: FONT, fontWeight: 900, fontSize: size, color, lineHeight: 1.15, textShadow: '0 6px 24px rgba(0,0,0,0.5)', WebkitTextStroke: `${Math.round(size * 0.02)}px rgba(15,27,45,0.9)`, paintOrder: 'stroke fill', ...style}}>{children}</div>
 );
+
+// wait for the Japanese web font (all glyphs used on canvas textures) before drawing anything
+import {continueRender, delayRender} from 'remotion';
+import {useEffect, useState} from 'react';
+export const useFont = (text: string) => {
+  const [ready, setReady] = useState(false);
+  const [h] = useState(() => delayRender('font'));
+  useEffect(() => {
+    Promise.all([document.fonts.load(`900 100px "Noto Sans JP"`, text)]).then(() => document.fonts.ready).then(() => { setReady(true); continueRender(h); });
+  }, []);
+  return ready;
+};

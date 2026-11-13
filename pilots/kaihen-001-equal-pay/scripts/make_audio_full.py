@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location("ma", ROOT / "scripts/make_audio.py")
 ma = importlib.util.module_from_spec(spec); spec.loader.exec_module(ma)
 sys.path.insert(0, str(ROOT / "data"))
+sys.path.insert(0, str(ROOT / "scripts"))
 from script_full import LINES, CHAPTERS, TAGS  # noqa: E402
 if os.environ.get('UPTO'):
     _k = [i for i, (lid, _, _) in enumerate(LINES) if lid == os.environ['UPTO']][0]
@@ -422,9 +423,12 @@ def main():
     # scene changes: soft whoosh; the stamp (改) and the reveal lines get a hit
     for sc in scenes[1:]:
         ma.place(sfx, ma.sfx_soft_whoosh(0.6), sc["start"] - 0.4, 0.35, 0.5)
-    stamp_lines = [lid for lid in ("s01_0",) if lid in L]
-    for lid in stamp_lines:  # the red seal comes down on the rule sheet
-        ma.place(sfx, hit(1.1), L[lid]["start"] - 0.25, 1.0, 0.5)
+    IMPACT = 3.55  # the seal hits the road (Opening3D.tsx `impact`)
+    if "s01_0" in L:
+        ma.place(sfx, riser(0.75), IMPACT - 0.75, 0.9, 0.5)
+        m_ = int(1.2 * SR); tt_ = np.arange(m_) / SR
+        thud = np.sin(2 * np.pi * np.cumsum(55 + 60 * np.exp(-tt_ / 0.05)) / SR) * np.exp(-tt_ / 0.35) * 0.9
+        ma.place(sfx, thud, IMPACT, 1.0, 0.5)
     for lid in ("s02_1", "s02_2", "s02_3"):  # the three prediction cards
         if lid in L:
             ma.place(sfx, flip(), L[lid]["start"] - 0.2, 1.0, 0.5)
@@ -453,21 +457,32 @@ def main():
     tl["off_at"] = round(off_at, 3)
 
     sc_at = {x["id"]: x["start"] for x in scenes}
-    # three quiet drum beds (no kick, as ヒト図鑑): opening–chapter 3 / chapters 4–8 / chapter 9–end
-    b1 = sc_at.get("s18", DUR) - 1.0
-    b2 = sc_at.get("s33", DUR) - 1.0
-    parts = [(0, min(b1, DUR), drum_tension)] + ([(b1, min(b2, DUR), drum_pulse)] if b1 < DUR else []) + ([(b2, DUR, drum_brush)] if b2 < DUR else [])
-    music = mix_tracks(DUR, parts)
-    tl["bgm"] = [round(b1, 2), round(b2, 2)]
+    # BGM (owner 2026-11-13「BGMは大きく変えてほしい」): composed cues played with FluidSynth + FluidR3_GM (scripts/bgm.py)
+    import bgm
+    secs = []
+    if "s01_0" in L:
+        q = L["s01_3"]["start"] if "s01_3" in L else DUR
+        secs += [(0.0, IMPACT, "intro", {}), (IMPACT, q, "groove", {"bright_at": (L["s01_2"]["start"] - IMPACT) if "s01_2" in L else None})]
+        if "s02" in sc_at:
+            secs.append((q, sc_at["s02"], "question", {}))
+    if "s02" in sc_at:
+        end = sc_at.get("s03", DUR)
+        secs.append((sc_at["s02"], end, "cards", {"hits": tuple(L[k]["start"] - 0.25 - sc_at["s02"] for k in ("s02_1", "s02_2", "s02_3") if k in L)}))
+    if "s03" in sc_at:
+        secs.append((sc_at["s03"], sc_at.get("s04", DUR), "calm", {}))
+    if not secs or secs[-1][1] < DUR - 0.5:
+        secs.append((secs[-1][1] if secs else 0.0, DUR, "calm", {}))
+    music = bgm.render(secs, DUR, SR)
+    tl["bgm"] = [[round(a_, 2), k_] for a_, _, k_, _ in secs]
     (ROOT / "data/timeline_full.json").write_text(json.dumps(tl, ensure_ascii=False, indent=1))
     duck = np.ones(n)
     for l in lines:
         a, b = int((l["start"] - 0.3) * SR), int((l["end"] + 0.3) * SR)
-        duck[max(0, a):b] = 0.35
+        duck[max(0, a):b] = 0.32
     duck = np.convolve(duck, np.ones(SR // 5) / (SR // 5), "same")
     t_ = np.arange(n) / SR
     fade = np.minimum(1, np.minimum(t_ / 1.0, np.clip((off_at - t_) / 0.15, 0, 1)))
-    bed = sfx + music * 0.33 * (duck * fade)[:, None]
+    bed = sfx + music * 0.45 * (duck * fade)[:, None]
     import tempfile
     with tempfile.TemporaryDirectory() as td:
         a_, b_ = Path(td) / "a.wav", Path(td) / "b.wav"
@@ -479,7 +494,11 @@ def main():
         with wave.open(str(b_)) as w:
             bedh = np.frombuffer(w.readframes(w.getnframes()), "<i2").astype(np.float64).reshape(-1, 2) / 32768
         bedh = bedh[:n] * (peak / 0.9)
-    mix = voice + bedh * 0.9
+    # narration polish: low cut, a little presence, gentle compression
+    from pedalboard import Pedalboard, HighpassFilter, PeakFilter, Compressor, LowShelfFilter
+    vb = Pedalboard([HighpassFilter(75), LowShelfFilter(cutoff_frequency_hz=160, gain_db=1.0), PeakFilter(cutoff_frequency_hz=3200, gain_db=2.5, q=0.9), PeakFilter(cutoff_frequency_hz=7000, gain_db=-1.5, q=1.2), Compressor(threshold_db=-20, ratio=2.5, attack_ms=6, release_ms=120)])
+    voice = vb(voice.T.astype(np.float32), SR).T.astype(np.float64)
+    mix = voice / max(np.abs(voice).max(), 1e-9) * 0.9 + bedh * 0.9
     mix = mix / max(np.abs(mix).max(), 1e-9) * 0.89
     out = ROOT / "out/full.wav"
     with wave.open(str(out), "wb") as w:

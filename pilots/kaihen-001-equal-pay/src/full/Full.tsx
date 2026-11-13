@@ -2,7 +2,7 @@ import {AbsoluteFill, Easing, Sequence, interpolate, staticFile, useCurrentFrame
 import timeline from '../../data/timeline_full.json';
 import {FONT} from '../theme';
 import {SceneProps} from './kit';
-import {SCENES_OPEN} from './ScenesOpen';
+import {SCENES_OPEN3D as SCENES_OPEN} from './Opening3D';
 import {SCENES_MAIN} from './ScenesMain';
 import {C} from '../theme';
 import {Chip} from './kit';

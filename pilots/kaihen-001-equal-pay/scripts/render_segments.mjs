@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const SEG = 1800;
+const SEG = Number(process.env.SEG || 1800);
 const out = path.join(root, 'out/seg');
 fs.mkdirSync(out, {recursive: true});
 const shell = fs.readdirSync('/opt/pw-browsers').filter((d) => d.startsWith('chromium_headless_shell-')).sort().reverse()
