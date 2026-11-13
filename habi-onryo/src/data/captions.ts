@@ -1,117 +1,103 @@
 // scripts/build-voice.py で自動生成。手で編集しないこと。
 import type {Caption} from '@remotion/captions';
 
-// 0:00 謎の先出し（3277フレーム）
+// 0:00 謎の先出し（3020フレーム）
 export const introCaptions: Caption[] = [
   {
-    "text": "2026年8月19日、夜10時ごろ。東京・大手町。",
+    "text": "2026年8月19日、夜10時ごろ。東京・大手町。一人の男が禁忌を犯した。",
     "startMs": 500,
-    "endMs": 6175,
+    "endMs": 8425,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "高層ビルのあいだに、木々に囲まれた小さな塚がある。将門塚。平安時代の武将、平将門の首を葬ったと伝えられる場所だ。",
-    "startMs": 6655,
-    "endMs": 16511,
+    "text": "それは、日本三大怨霊のうちの一人、平将門の塚でのことだった。",
+    "startMs": 8905,
+    "endMs": 14207,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "その夜、ひとりの男が塚の石碑にしがみつき、奇声を上げ、その様子をインターネットで生配信した。",
-    "startMs": 16991,
-    "endMs": 24233,
+    "text": "平将門。菅原道真。崇徳上皇。この3人には、恐ろしい言い伝えが残されている。",
+    "startMs": 14687,
+    "endMs": 22249,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "2か月後、男は、礼拝所不敬などの疑いで書類送検された。",
-    "startMs": 24713,
-    "endMs": 29855,
+    "text": "将門の首は、討ち取られたあと、空を飛んで東京まで帰ってきた。",
+    "startMs": 22729,
+    "endMs": 27529,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ネット上では、こんな声があふれた。将門の祟りが起きる。",
-    "startMs": 30335,
-    "endMs": 34495,
+    "text": "道真の霊は、恨みを抱いて雷となり、天皇の住まいを襲った。",
+    "startMs": 28009,
+    "endMs": 32959,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "この塚には、移そうとすると祟りが起きる、という話が、100年近く語り継がれてきた。",
-    "startMs": 34975,
-    "endMs": 41407,
+    "text": "崇徳上皇は、流された地で自分の血で呪いの言葉を書き、日本を滅ぼす魔物になると誓った。",
+    "startMs": 33439,
+    "endMs": 39871,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "平将門。菅原道真。崇徳上皇。",
-    "startMs": 41887,
-    "endMs": 45727,
+    "text": "だが、記録をたどっていくと、奇妙なことが次々に見えてくる。",
+    "startMs": 40351,
+    "endMs": 45076,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "この3人は、日本三大怨霊と呼ばれている。",
-    "startMs": 46207,
-    "endMs": 49417,
+    "text": "天皇の住まいに雷が落ちた日。当時の記録には、道真の名前がどこにも出てこない。",
+    "startMs": 45556,
+    "endMs": 51497,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "討ち取られた首が、空を飛んで東京まで帰ってきた。",
-    "startMs": 49897,
-    "endMs": 53353,
+    "text": "将門を祀る東京の神社は、明治時代、将門を神の座から外したことがある。",
+    "startMs": 51977,
+    "endMs": 57833,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "恨みを抱いた学者の霊が、雷となって天皇の住まいを襲った。",
-    "startMs": 53833,
-    "endMs": 58185,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "流された上皇が、自分の血で呪いの言葉を書き、日本を滅ぼす魔物になると誓った。",
-    "startMs": 58665,
-    "endMs": 64628,
-    "timestampMs": null,
-    "confidence": null
-  },
-  {
-    "text": "だが、不思議なことがある。日本人は、自分たちを祟ったはずのこの3人を、神として手厚く祀ってきた。",
-    "startMs": 65108,
-    "endMs": 72788,
+    "text": "そして日本人は、自分たちを祟ったはずのこの3人を、神として手厚く祀ってきた。",
+    "startMs": 58313,
+    "endMs": 64212,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "道真は、いまや学問の神。将門は、東京の大社の神。崇徳上皇を祀る神社には、明治天皇みずからが参拝した。",
-    "startMs": 73268,
-    "endMs": 83060,
+    "startMs": 64692,
+    "endMs": 74484,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "祟りは、本当にあったのか。そして、なぜ人々は、怨霊を神にしたのか。",
-    "startMs": 83540,
-    "endMs": 89364,
+    "startMs": 74964,
+    "endMs": 80788,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "1000年以上前の貴族の日記。2026年、史上初めて全巻が公開された国宝の絵巻。そして、史料を読み直してきた研究者たちの成果。",
-    "startMs": 89844,
-    "endMs": 100575,
+    "startMs": 81268,
+    "endMs": 91999,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "それらが導き出したのは、私たちが知っている「祟り」の物語の、意外な正体だった。",
-    "startMs": 101055,
-    "endMs": 108020,
+    "startMs": 92479,
+    "endMs": 99444,
     "timestampMs": null,
     "confidence": null
   }

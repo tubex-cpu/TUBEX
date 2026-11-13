@@ -2,7 +2,7 @@
 export const TRANSITION_FRAMES = 20;
 
 export const sceneDurations = {
-	Intro: 3277,
+	Intro: 3020,
 	JudgeEntrance: 870,
 	Clue1Rebel: 3155,
 	Clue2Shinno: 2941,
@@ -41,4 +41,4 @@ export const sceneDurations = {
 	Closing: 449,
 } as const;
 
-export const TOTAL_FRAMES = 110243;
+export const TOTAL_FRAMES = 109986;
