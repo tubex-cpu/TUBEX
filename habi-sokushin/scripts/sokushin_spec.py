@@ -225,7 +225,7 @@ S = {
   (10, None, 'p', 'meiji-emperor', '明治の世に', 'in'),
  ]),
  'Clue23Meiji': ('第23の手がかり', '明治天皇が、即身仏を禁じた？', [
-  (0, 1, 'a', "<Cards cards={[{head: '明治10年？'}, {head: '明治11年？'}, {head: '明治12年？'}]} tone='ink' size={54} height={260} top={400} />", 'ばらばらの年', False),
+  (0, 1, 'a', "<Cards cards={[{body: '明治10年？'}, {body: '明治11年？'}, {body: '明治12年？'}]} tone='ink' size={54} height={260} top={400} />", 'ばらばらの年', False),
   (2, 3, 'a', "<Cards cards={[{head: '天皇の命令', body: '一次資料\\n見つからず', tone: 'red'}, {head: '明治元年の禁止令', body: '名前・番号を\\n示す資料なし', tone: 'red'}]} tone='ink' size={46} height={330} top={360} />", '命令は記録に？', False),
   (4, 5, 'p', 'daishinin', '新しい刑法', 'in'),
   (6, 6, 'a', "<TimeBar stops={[{label: '1880年', sub: '旧刑法を公布'}, {label: '1882年', sub: '施行', accent: true}]} tone='ink' />", '自殺の手助け、墓をあばく罪', False),
@@ -323,7 +323,7 @@ S = {
  ]),
  'RootsStory': ('', '', [
   (0, 2, 'p', 'chokai-sakata-fields', '即身仏の本当の物語', 'in'),
-  (3, 4, 'a', "<Cards cards={[{head: 'いぶす'}, {head: '柿渋を塗る'}, {head: '内臓を取り石灰'}, {head: 'ひもで縛る'}]} tone='ember' size={44} height={260} top={400} />", '弟子と信者の手', False),
+  (3, 4, 'a', "<Cards cards={[{body: 'いぶす'}, {body: '柿渋を塗る'}, {body: '内臓を取り石灰'}, {body: 'ひもで縛る'}]} tone='ember' size={44} height={260} top={400} />", '弟子と信者の手', False),
   (5, 5, 'p', 'kahaku-japan-gallery', '調査が明かしたこと', 'in'),
   (6, 7, 'a', "<TimeBar stops={[{label: '1829年', sub: '鉄門海 病死'}, {label: '1832年', sub: '掘り出して開帳'}, {label: '1903年', sub: '仏海 土に入るのを止められる'}, {label: '1961年', sub: '仏海の墓を発掘', accent: true}]} tone='shrine' />", '記録が語ること', False),
   (8, 9, 'p', 'nanatsu-taki', '語り継がれた信仰の物語', 'in'),
