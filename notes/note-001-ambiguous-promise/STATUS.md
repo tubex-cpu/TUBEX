@@ -4,9 +4,11 @@
 |---|---|---|
 | N0 方針 | **N0 全体は未承認**。販売導線は 2026-11-14 の設計決定（`channels/furin_atode/03_marketing_funnel.md`） | PR #14 |
 | N1 ネタ | 作成（2026-11-14） | `01_plan.md` |
-| N2 無料 note | **草稿**（2026-11-14、Claude）。Codex のレビュー待ち | `02_free.md` |
-| N3 有料 note | **草稿**（2026-11-14、Claude）。Codex のレビュー待ち | `03_paid.md`・`03_price.md` |
-| N4 見出し画像 | 未着手（Codex） | — |
-| N5 公開 | **しない**（ゲートC 未承認。リンク・URL は未作成） | — |
+| N2 無料 note | **本文監査に合格**（Codex、対象 commit d645c79、https://github.com/tubex-cpu/TUBEX/pull/13#issuecomment-6872173849） | `02_free.md` |
+| N3 有料 note | **本文監査に合格**（同上）。入稿画面での有料ライン・¥500 の確認は未実施 | `03_paid.md`・`03_price.md` |
+| N4 見出し画像 | 未実施（Codex） | — |
+| N5 公開 | **未実施・今回はしない**（ゲートC 未承認。入稿画面の確認・リンク・URL・認証も未実施） | — |
+
+- 名前：共通の正式表示名「彼のことば、ほどきます」（重複確認は 2026-11-14 に完了、`channels/furin_atode/02_note_name.md` 0）。実アカウントの表示名は未変更。
 
 - 本文作成の根拠：社長「Claude Codeと相談しながら、正式名称の重複確認と初週の無料・有料noteの本文作成まで進めて…」（2026-11-14）。
