@@ -27,6 +27,7 @@ class Song:
         self.bpm = bpm
         self.ev = []  # (tick, msg)
         self.ch_prog = {}
+        self.tr = 0  # transpose (semitones) applied to every channel but drums when saved
 
     def beat(self, b):
         return int(round(b * TPB))
@@ -54,6 +55,8 @@ class Song:
             tr.append(mido.Message("control_change", channel=ch, control=91, value=40, time=0))  # reverb send
         last = 0
         for t, m in sorted(self.ev, key=lambda x: (x[0], x[1].type == "note_on")):
+            if self.tr and m.type in ("note_on", "note_off") and m.channel != 9:
+                m = m.copy(note=max(0, min(127, m.note + self.tr)))
             tr.append(m.copy(time=t - last)); last = t
         mid.save(path)
 
@@ -213,7 +216,9 @@ def render(sections, dur, sr, xf=0.35):
     out = np.zeros((n, 2))
     for i, (a, b, kind, kw) in enumerate(sections):
         tail = 2.5 if i + 1 < len(sections) else 0.0  # let the reverb ring under the next piece
+        kw = dict(kw); trn = kw.pop("tr", 0)
         song, _ = KINDS[kind](b - a + tail, **kw)
+        song.tr = trn
         x = play(song, b - a + tail, sr)
         tt = np.arange(len(x)) / sr
         env = np.ones(len(x))

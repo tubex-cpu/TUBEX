@@ -468,8 +468,20 @@ def main():
     if "s02" in sc_at:
         end = sc_at.get("s03", sc_at.get("s04", DUR))
         secs.append((sc_at["s02"], end, "cards", {"hits": tuple(L[k]["start"] - 0.25 - sc_at["s02"] for k in ("s02_1", "s02_2", "s02_3") if k in L)}))
-    if "s03" in sc_at:
-        secs.append((sc_at["s03"], sc_at.get("s04", DUR), "calm", {}))
+    # chapters 1-12 (台本 v0.5): one cue per chapter, a different key each time so long parts do not feel like one loop
+    CH_MUSIC = {"第1章": ("question", {"tr": 0}), "第2章": ("groove", {"bright_at": 0.0, "tr": 2}), "第3章": ("cards", {"tr": 0}),
+                "第4章": ("question", {"tr": -2}), "第5章": ("groove", {"tr": -2}), "第6章": ("calm", {"tr": 0}),
+                "第7章": ("calm", {"tr": -3}), "第8章": ("groove", {"bright_at": 0.0, "tr": 1}), "第9章": ("calm", {"tr": 2}),
+                "第10章": ("question", {"tr": 0}), "第11章": ("calm", {"tr": -1}), "第12章": ("groove", {"bright_at": 0.0, "tr": 0})}
+    chs = sorted(chapters, key=lambda c: c["at"])
+    for i, c in enumerate(chs):
+        if c["num"] in CH_MUSIC:
+            a_ = c["at"] - 1.0
+            b_ = chs[i + 1]["at"] - 1.0 if i + 1 < len(chs) else DUR
+            if secs and secs[-1][1] > a_:
+                secs[-1] = (secs[-1][0], a_, secs[-1][2], secs[-1][3])
+            k_, kw_ = CH_MUSIC[c["num"]]
+            secs.append((a_, b_, k_, kw_))
     if not secs or secs[-1][1] < DUR - 0.5:
         secs.append((secs[-1][1] if secs else 0.0, DUR, "calm", {}))
     music = bgm.render(secs, DUR, SR)
