@@ -145,7 +145,7 @@ const S03: React.FC<SceneProps> = ({f, dur, T}) => (
     )}
     {f > T('s03_2') - 2 && (
       <div style={{position: 'absolute', left: 360, right: 360, top: 300, ...pop(f, T('s03_2'))}}>
-        <Card style={{textAlign: 'center'}}><Small>日本の平均（2024年・1年を通じて働いた人）</Small><Big2 size={140}>478万円</Big2><div style={{fontSize: 46, color: '#5b6577', opacity: appear(f, T('s03_2', 4), 10)}}>月に直すと　およそ40万円</div></Card>
+        <Card style={{textAlign: 'center'}}><Small>民間で1年を通じて働いた人の平均（2024年）</Small><Big2 size={140}>478万円</Big2><div style={{fontSize: 46, color: '#5b6577', opacity: appear(f, T('s03_2', 4), 10)}}>月に直すと　およそ40万円</div></Card>
       </div>
     )}
   </>
