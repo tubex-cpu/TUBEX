@@ -11,6 +11,14 @@
 | 4 | ねらい・無料と有料の分担・出典 | [`01_plan.md`](01_plan.md) |
 | 5 | 価格 | [`03_price.md`](03_price.md) |
 | 6 | 工程の状態 | [`STATUS.md`](STATUS.md) |
+| 7 | 見出し画像（無料・有料）と監査 | [`04_header_free.jpg`](04_header_free.jpg)・[`04_header_paid.jpg`](04_header_paid.jpg)・[`04_header_assets.md`](04_header_assets.md)（Claude の監査に合格） |
+| 8 | 入稿用の HTML（本文は d645c79 のまま） | [`05_draft_free.html`](05_draft_free.html)・[`05_draft_paid.html`](05_draft_paid.html) |
+
+**入稿用の HTML について**
+- 02_free.md・03_paid.md から pandoc で作った（本文の文言は変えていない）。編集用のメモ・HTML コメント・【編集用：有料ライン】の行を除いた。タイトルは本文に入れず、note のタイトル欄に入れる。表・見出し・コードブロック・改行は残した。
+- **有料ラインの位置**：`05_draft_paid.html` の「読み終えたときに、あなたの手元に…目指しています。」の段落の直後（その次の区切り線と「1. 8つの欄」の前）。note の機能で設定する。
+- **無料記事の有料への案内**：有料記事の URL は未発行なので、「【公開前に差し替え：有料記事の URL は未発行・リンクは未検証…】」という1行を下書きに残している。公開前に実際の URL に差し替えて、リンクが開くか確かめる。下書きのプレビュー用の URL は入れない。
+- note のエディタで表が保たれるかは未確認。崩れる場合の扱いは、下書きの画面で確かめてから決める（本文の文言は変えない）。
 
 ## 関係する資料
 - 販売導線の決定版：[`channels/furin_atode/03_marketing_funnel.md`](../../channels/furin_atode/03_marketing_funnel.md)（c2b9854）
