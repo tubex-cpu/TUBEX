@@ -14,7 +14,7 @@
 
 ## 関係する資料
 - 販売導線の決定版：[`channels/furin_atode/03_marketing_funnel.md`](../../channels/furin_atode/03_marketing_funnel.md)（c2b9854）
-- 名前（作業名「彼のことば、ほどきます」）：[`channels/furin_atode/02_note_name.md`](../../channels/furin_atode/02_note_name.md)。**正式名の重複確認は Codex が実施中で、結果待ち**（note・YouTube）。本文には名前を入れていない
+- 名前：共通の正式表示名「**彼のことば、ほどきます**」（2026-11-14 決定。社長の自走指示（2026-11-14「正式名称の重複確認と初週の無料・有料noteの本文作成まで進めて…自走して」）に基づく Codex／Claude の決定。社長が個別に承認したものではない）。重複の確認（Codex、2026-11-14 13:56〜14:00）：note のクリエイター検索0件、YouTube のチャンネル検索20件に同名なし。限界と似た名前は [`channels/furin_atode/02_note_name.md`](../../channels/furin_atode/02_note_name.md) 0。本文には名前を入れていない。略称「恋のほどき方」は使わない
 - 競合の比較：[`channels/furin_atode/00_market_research.md`](../../channels/furin_atode/00_market_research.md) 12
 - 監査の記録
   - 販売導線：PR [tubex-cpu/TUBEX#13](https://github.com/tubex-cpu/TUBEX/pull/13)（Codex の実質監査は完了）
@@ -34,6 +34,6 @@
 ## 公開前の実務の残件
 | 担当 | 残件 |
 |---|---|
-| Codex | 本文のレビュー（修正の往復）、正式名の重複確認、見出し画像（N4） |
-| 社長 | 正式名の決定、note のメール認証、売上画面の再認証（計測の確認用）、N0 全体の承認、ゲートC（公開の承認）、公開の方法（手作業か PC 操作か） |
+| Codex | 本文のレビュー（修正の往復）、見出し画像（N4）。※ 正式名の重複確認は 2026-11-14 に完了 |
+| 社長 | 実アカウントの表示名を「彼のことば、ほどきます」に変える作業（公開前。社長の PC で）、note のメール認証、売上画面の再認証（計測の確認用）、N0 全体の承認、ゲートC（公開の承認）、公開の方法（手作業か PC 操作か） |
 | 公開作業のとき | 有料記事を先に公開 → 無料記事の【編集欄】を実際の URL に差し替え → リンクが開くか確かめる → 有料ラインの位置と ¥500 を画面で確かめる → 【編集用】のメモと HTML コメントを削除（03 の 6） |
