@@ -19,7 +19,7 @@
 - 監査の記録
   - 販売導線：PR [tubex-cpu/TUBEX#13](https://github.com/tubex-cpu/TUBEX/pull/13)（Codex の実質監査は完了）
   - N0 案：PR [tubex-cpu/TUBEX#14](https://github.com/tubex-cpu/TUBEX/pull/14)（N0 全体は未承認）
-  - この本文：Codex のレビュー待ち（結果はこのファイルに追記する）
+  - この本文：Codex の本文監査（ed66c64）の7点を f6657fd で修正済み。**Codex の最終確認待ち**（結果を受けて、最後にこのファイルを更新する）
 
 ## 書き方で守ったこと（レビューの観点）
 - 記入例・記入見本は架空と明記。日付・日数は例で、推奨する待機日数ではないと明記
