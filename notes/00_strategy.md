@@ -446,7 +446,7 @@ C4 と2A #10 の公開された約束と並べると、推奨案のうち「チ�
 | 12 | 差別化（3.2.1）の成立は未検証。C4・2A の有料部分は未読のまま「競合にない」とは言わない | Claude（設計）、社長（N0 で型を選ぶ） |
 
 ## 10. 販売導線の設計決定（2026-11-14）と、この文書との優先関係
-- **正**：`codex/weekly-operations-20261025` の `channels/furin_atode/03_marketing_funnel.md`（commit b768d01。Codex の実ファイル監査を反映した最終版は commit 4850e2f）。
+- **正**：`codex/weekly-operations-20261025` の `channels/furin_atode/03_marketing_funnel.md`（commit b768d01。Codex の実ファイル監査を反映した版は commit 4850e2f、体裁・参照を直した最終版は commit c2b9854。Codex の実質監査は完了）。
 - **根拠**：社長の指示「Claude Codeと相談しながら作業を進めて本日中にマーケ販売導線まで決定させるところまで自走して」（2026-11-14）。Claude の推奨と Codex の修正で合意した、**社長の自走指示に基づく Codex／Claude の設計決定**。社長が個別に承認したものではない。
 - **決めたこと**（03 の各節）
   - 対象読者と約束（1）
