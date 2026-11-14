@@ -95,7 +95,7 @@ const Bumpers: React.FC = () => {
 };
 
 // labels of the current scene at the top left (事実 / 前提 / 推論 …; 03_plan.md)
-const Tags: React.FC = () => {
+export const Tags: React.FC = () => {
   const t = useCurrentFrame() / FPS;
   let k = 0;
   for (let i = 0; i < SCENES.length; i++) if (SCENES[i].start <= t) k = i;
@@ -192,7 +192,7 @@ export const Full: React.FC<{withSubs?: boolean; grain?: boolean}> = ({withSubs 
       </Punch>
       {grain && <Grain />}
       <Bumpers />
-      <Tags />
+      {/* labels (事実/前提/推論) are not shown: owner comment 2026-11-14 */}
       {withSubs && <Subs />}
       <EndFade at={off} />
       <AbsoluteFill style={{pointerEvents: 'none'}} data-frames={durationInFrames} />

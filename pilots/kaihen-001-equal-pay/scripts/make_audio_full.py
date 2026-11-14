@@ -466,7 +466,7 @@ def main():
         if "s02" in sc_at:
             secs.append((q, sc_at["s02"], "question", {}))
     if "s02" in sc_at:
-        end = sc_at.get("s03", DUR)
+        end = sc_at.get("s03", sc_at.get("s04", DUR))
         secs.append((sc_at["s02"], end, "cards", {"hits": tuple(L[k]["start"] - 0.25 - sc_at["s02"] for k in ("s02_1", "s02_2", "s02_3") if k in L)}))
     if "s03" in sc_at:
         secs.append((sc_at["s03"], sc_at.get("s04", DUR), "calm", {}))

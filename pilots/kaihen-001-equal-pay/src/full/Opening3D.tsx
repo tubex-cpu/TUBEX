@@ -238,4 +238,6 @@ const S03: React.FC<SceneProps> = ({f, T}) => {
   );
 };
 
-export const SCENES_OPEN3D: Record<string, React.FC<SceneProps>> = {s01: S01, s02: S02, s03: S03};
+// S03 (how to read the labels) was removed from the script (v0.4, owner comment 2026-11-14); kept here unused
+void S03;
+export const SCENES_OPEN3D: Record<string, React.FC<SceneProps>> = {s01: S01, s02: S02};
