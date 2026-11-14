@@ -244,7 +244,7 @@ const S12: React.FC<SceneProps> = ({f, dur, T}) => (
 const S13: React.FC<SceneProps> = ({f, dur, T}) => (
   <>
     <Bg id="hospital" f={f} dur={dur} />
-    <Kicker f={f} at={T('s13_0', 1)} text="いちばん大きく減る仕事" color="#ffb3ae" />
+    <Kicker f={f} at={T('s13_0', 1)} text="今回比べた中で、いちばん減る仕事" color="#ffb3ae" />
     <Swap f={f} at={T('s13_1')} label="雇われて働く医師の平均（国の調査をもとにした計算）" before={1338} up={false} delta="約 −860万円　給料は3分の1ほど" top={240} />
     {f > T('s13_2') && <Chips f={f} top={720} items={[{t: '医学部で6年', at: T('s13_2')}, {t: '国家試験', at: T('s13_2') + 10}, {t: 'その先の給料が、みんなと同じ', at: T('s13_2', 2), color: '#ffb3ae'}]} />}
   </>
@@ -257,7 +257,7 @@ const S14: React.FC<SceneProps> = ({f, dur, T}) => (
         <Card style={{textAlign: 'center'}}>
           <Small>介護職員の平均給与（月・手当など込み）</Small>
           <Big2 size={96}>{f < T('s14_1') ? '33万8,200円' : '約39万8,000円'}</Big2>
-          <div style={{fontSize: 36, color: '#5b6577'}}>{f < T('s14_1') ? 'うち基本給 25万3,810円' : '月に約 +6万円'}</div>
+          <div style={{fontSize: 36, color: '#5b6577'}}>{f < T('s14_1') ? '処遇改善加算を取る事業所の調査' : '月に約 +6万円'}</div>
         </Card>
       </div>
     )}
@@ -265,7 +265,7 @@ const S14: React.FC<SceneProps> = ({f, dur, T}) => (
     {f > T('s14_3', 2) && <Chips f={f} top={700} items={[{t: '求人倍率は、全職業より高い水準', at: T('s14_3', 2)}, {t: '後半の伏線', at: T('s14_3', 4), color: GOLD}]} />}
   </>
 );
-const MAPROWS: [string, string, string][] = [['大きく増えた', 'パートなど・20代前半・居酒屋やホテル', '#9fe3b8'], ['少し増えた', '介護', '#d8f2c8'], ['減った', '平均的な正社員・50代後半の男性・電気ガス水道', '#ffd0cc'], ['いちばん減った', '医師', '#ff8f87']];
+const MAPROWS: [string, string, string][] = [['大きく増えた', 'パートなど・20代前半・居酒屋やホテル', '#9fe3b8'], ['少し増えた', '介護', '#d8f2c8'], ['減った', '平均的な正社員・50代後半の男性・電気ガス水道', '#ffd0cc'], ['この中で最も減った', '医師', '#ff8f87']];
 const S15: React.FC<SceneProps> = ({f, dur, T}) => (
   <>
     <Bg id="map_wide" f={f} dur={dur} dim={0.4} />
@@ -380,11 +380,11 @@ const S27: React.FC<SceneProps> = ({f, dur, T}) => (
     <Bg id="snow_town" f={f} dur={dur} dim={0.3} />
     <Kicker f={f} at={T('s27_0')} text="フィンランド　2017〜2018年" color="#ffffff" />
     {f < T('s27_2') && <Two f={f} at={[T('s27_1'), T('s27_1', 2)]} top={240}
-      left={<><Small>仕事のない人 約17万5,000人から</Small><Big2 size={90}>くじで2,000人</Big2><Small>およそ88人に1人</Small></>}
+      left={<><Small>失業給付を受けていた25〜58歳 約17万5,000人から</Small><Big2 size={90}>くじで2,000人</Big2><Small>およそ88人に1人</Small></>}
       right={<><Small>毎月</Small><Big2 size={110} color="#3d6fb6">560ユーロ</Big2><Small>働いても減らない</Small></>} />}
     {f >= T('s27_2') && <Two f={f} at={[T('s27_2', 1), T('s27_3')]} top={240}
-      left={<><Small>1年目　働いた日数</Small><Big2 size={90}>差なし</Big2><Small>満足度は高いと答えた</Small></>}
-      right={<><Small>2年目　働いた日数</Small><Big2 size={90}>約6日多い</Big2><Small>ただし同じ年に手当の制度も変わった</Small></>} />}
+      left={<><Small>1年目　仕事に就いていた日数</Small><Big2 size={76}>はっきりした差は出ず</Big2><Small>終わり近くのアンケートで満足度は高い</Small></>}
+      right={<><Small>2年目　仕事に就いていた日数</Small><Big2 size={90}>約6日多い</Big2><Small>ただし同じ年に手当の制度も変わった</Small></>} />}
   </>
 );
 const S28: React.FC<SceneProps> = ({f, dur, T}) => (
@@ -405,7 +405,7 @@ const S29: React.FC<SceneProps> = ({f, dur, T}) => (
     <Two f={f} at={[T('s29_0', 2), T('s29_1')]} top={240}
       left={<><Small>フィンランド・宝くじ</Small><Big2>働けば、働いた分増える</Big2></>}
       right={<><Small>全員同じ給料の世界</Small><Big2 color={RED} size={54}>どれだけ働いても478万円</Big2></>} />
-    <Question f={f} at={T('s29_2')} top={640} size={80}>予想C：弱まった。でも、まだ安心できない</Question>
+    <Question f={f} at={T('s29_2')} top={640} size={80}>予想C：裏づけは見つからず。ただし直接の検証ではない</Question>
   </>
 );
 const S30: React.FC<SceneProps> = ({f, dur, T}) => (
@@ -564,7 +564,7 @@ const S45: React.FC<SceneProps> = ({f, dur, T}) => (
     <Question f={f} at={T('s45_1', 2)} top={560} size={80}>それは、今の日本に近い形</Question>
   </>
 );
-const VERD: [string, string, string, string][] = [['A', 'ほとんど何も変わらない', '—', '#ffffff'], ['B', 'きつい仕事から人が消えていく', '手がかり　多数', GOLD], ['C', '誰も働かなくなる', '弱い', RED]];
+const VERD: [string, string, string, string][] = [['A', 'ほとんど何も変わらない', '—', '#ffffff'], ['B', 'きつい仕事から人が消えていく', '手がかり　多数', GOLD], ['C', '誰も働かなくなる', '裏づけなし', RED]];
 const S46: React.FC<SceneProps> = ({f, dur, T}) => (
   <>
     <Bg id="sunrise_end" f={f} dur={dur} dim={0.45} />
