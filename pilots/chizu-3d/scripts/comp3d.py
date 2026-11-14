@@ -12,7 +12,7 @@ Everything is computed here with numpy / OpenCV (plane homographies + analytic d
   python3 scripts/comp3d.py <ca|bm> --chunks i/m                 (10 s chunks, restart-safe)
   python3 scripts/comp3d.py <ca|bm> --mux                        (joins chunks + mix → full mp4)
 """
-import importlib.util, json, math, subprocess, sys
+import importlib.util, json, math, os, subprocess, sys
 from pathlib import Path
 import cv2
 import numpy as np
@@ -647,7 +647,7 @@ def frame(n):
 
 def render(n0, n1, path):
     p = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-                          "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-pix_fmt", "yuv420p", str(path)], stdin=subprocess.PIPE)
+                          "-c:v", "libx264", "-preset", "medium", "-crf", os.environ.get("CRF", "17"), "-pix_fmt", "yuv420p", str(path)], stdin=subprocess.PIPE)
     for n in range(n0, n1):
         p.stdin.write(frame(n).tobytes())
     p.stdin.close(); p.wait()
@@ -677,4 +677,4 @@ if __name__ == "__main__":
         mix = OUT / "mix.wav"
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(OUT / "parts.txt"), "-i", str(mix),
                         "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-af", "loudnorm=I=-15:TP=-1.5:LRA=11", "-ar", "48000", "-c:a", "aac",
-                        "-b:a", "192k", "-shortest", "-movflags", "+faststart", str(OUT / f"{EPN}_full_3d.mp4")], check=True)
+                        "-b:a", "192k", "-shortest", str(OUT / f"{EPN}_full_3d.mp4")], check=True)
