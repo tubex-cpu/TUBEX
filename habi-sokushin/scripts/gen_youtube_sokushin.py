@@ -72,6 +72,12 @@ for i in ids:
             pd.append(NAME.get(v['artist'], v['artist']))
         continue
     n = NAME.get(v['artist'], v['artist'])
+    n = re.sub(r'^No machine-readable author provided\. (.+?)(~commonswiki)? assumed.*$', r'\1', n)
+    n = re.sub(r'^(User:|ja:User:)', '', n).replace(' at en.wikipedia', '')
+    n = n.replace('Unknown authorUnknown author', '作者不明（所蔵館の公開画像）').replace('内閣府 (防災担当) , Cabinet Office of Japan, disaster prevention charge.', '内閣府（防災担当）')
+    n = re.sub(r'^\s*\(WT-shared\) (\S+) at wts wikivoyage.*$', r'\1', n)
+    if n == '作者不明':
+        n = '作者不明（所蔵館の公開画像）'
     if n not in by[lic]:
         by[lic].append(n)
 ORDER = ['CC BY-SA 4.0', 'CC BY-SA 3.0', 'CC BY-SA 2.0', 'CC BY 4.0', 'CC BY 3.0', 'CC BY 2.0']

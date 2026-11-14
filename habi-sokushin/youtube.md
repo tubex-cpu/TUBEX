@@ -76,10 +76,10 @@ BGM・効果音：オリジナル
 地図：Mapzen Terrain Tiles（SRTM ほか）の標高データをもとに作成
 写真・資料（Wikimedia Commons ほか）
 CC BY-SA 4.0：NevinThompson、さかおり、Семен Воловник、Yauchi、掬茶、Koda6029、東京都下おじさん、Tail furry、Noah0812、Furudanuki、Pekachu、小石川人晃、些細な日常、Zairon、Leiem、Zeynel Cebeci、Frank Schulenburg、漱石の猫、Kakidai、KQuhen、Bosancica by MK、Ebiebi2、Suikotei、Elekes Andor、kallerna、Mayyskiyysergeyy、Gpwitteveen、Mimissu、Kestrel、アラツク
-CC BY-SA 3.0：No machine-readable author provided. Geomr~commonswiki assumed (based on copyright claims).、katorisi、Hide-sp、User:Chinchilla、Tomofumi Sato、掬茶、Rei at en.wikipedia、Qwert1234、ReijiYamashina、User: (WT-shared) FreakRob at wts wikivoyage 02:36, 13. Dezember 2008 (EST)、Triglav、Cjp24、KAMUI、Per Meistrup、Cp9asngf、purivve、No machine-readable author provided. Crown of Lenten rose assumed (based on copyright claims).、Momotarou2012、Japanexperterna.se
+CC BY-SA 3.0：Geomr、katorisi、Hide-sp、Chinchilla、Tomofumi Sato、掬茶、Rei、Qwert1234、ReijiYamashina、FreakRob、Triglav、Cjp24、KAMUI、Per Meistrup、Cp9asngf、purivve、Crown of Lenten rose、Momotarou2012、Japanexperterna.se
 CC BY-SA 2.0：Hideyuki KAMON、harum.koh from Kobe city, Japan、Adam Jones from Kelowna, BC, Canada、kyohei ito
-CC BY 4.0：Drph17、Unknown authorUnknown author、YedidyaPopper、小池 隆、作者不明、Makoto_Lab、内閣府 (防災担当) , Cabinet Office of Japan, disaster prevention charge.、ブルーノ・プラス、Sir Morosus
-CC BY 3.0：Ippukucho、Crown of Lenten rose、katorisi、くろふね、rheins、Roma Neus、ja:User:Hitomi
+CC BY 4.0：Drph17、作者不明（所蔵館の公開画像）、YedidyaPopper、小池 隆、Makoto_Lab、内閣府（防災担当）、ブルーノ・プラス、Sir Morosus
+CC BY 3.0：Ippukucho、Crown of Lenten rose、katorisi、くろふね、rheins、Roma Neus、Hitomi
 CC BY 2.0：Raita Futo from Tokyo, Japan、Raita Futo、Paul McMahon、Ajay Suresh from New York, NY, USA
 パブリックドメイン・CC0：浮世絵・古典籍・美術品（鈴木牧之『北越雪譜』、歌川広重、勝川春章、小林清親、与謝蕪村、杉山杉風、『江戸名所図会』、メトロポリタン美術館・ブルックリン美術館 ほか）、写真：Creator:Japanese、Creator:Mokujiki Shōnin 木喰上人、Daderot、Kinori、Utagawa Hiroshige、Syced、dcland2、Yosa Buson、Andy Li、Uchida Kuichi、Saigen Jiro、Katsukawa Shunshō
 写真ごとの出典の一覧：https://github.com/tubex-cpu/TUBEX/blob/claude/nice-wright-du0dch/habi-onryo/写真クレジット一覧.md
