@@ -2,15 +2,18 @@
 
 ## タイトル案
 
-- 将門の首は本当に飛んだのか？ 日本三大怨霊の「祟り」をハビ判事が検証（推奨）
-- 祟ったはずの3人を、なぜ神に？ 平将門・菅原道真・崇徳上皇――日本三大怨霊の真実
-- 2026年、将門塚で何が起きたのか――首塚・天神・白峯 日本三大怨霊31の判決
+- 【日本三大怨霊】将門の首は飛んだ？ 道真の雷は祟り？ 崇徳の血の呪いは？ 伝説と記録をハビ判事が検証（推奨）
+- 平将門・菅原道真・崇徳上皇 首は飛んだ？雷は祟り？血の呪いは？ 日本三大怨霊31の判決【1時間】
+- 討ち死に・左遷・流罪――怨霊と恐れられた3人の伝説を、史料でひとつずつ裁く【日本三大怨霊】
+
+（サムネ：怨霊と恐れられた3人／平将門「討ち死に」菅原道真「左遷」崇徳上皇「流罪」／なぜ敗者を神にした？ と役割を分ける。サムネは「なぜ神に」、タイトルは3人それぞれの伝説と人名）
 
 ## 概要欄
 
-2026年8月、東京・大手町の将門塚で騒ぎを起こした男が、礼拝所不敬などの疑いで書類送検されました。ネットにあふれた「将門の祟り」という言葉。
-平将門、菅原道真、崇徳上皇――「日本三大怨霊」と呼ばれる3人は、本当に祟ったのか。そして日本人は、なぜ恐れたはずの3人を神として手厚く祀ってきたのか。
-1000年前の貴族の日記、2026年に初めて全巻公開された国宝『北野天神縁起絵巻』、124年ぶりの大改修を終えた太宰府天満宮、そして史料を読み直してきた研究者の成果をもとに、31の手がかりを閉園後の法廷でハビ判事がひとつずつ裁きます。
+戦いで討たれた平将門。大宰府へ左遷された菅原道真。讃岐へ流された崇徳上皇。
+争いに敗れた3人は「怨霊」と恐れられ、首が空を飛んだ、雷となって天皇の住まいを襲った、血で呪いの言葉を書いた――と語り継がれてきました。
+それなのに日本人は、恐れたはずの3人を、神田明神、北野天満宮・太宰府天満宮、白峯神宮の神として手厚く祀ってきました。なぜ敗者は神になったのか。
+平安時代の貴族の日記、2026年に初めて全巻が公開された国宝『北野天神縁起絵巻』、124年ぶりの大改修を終えた太宰府天満宮、そして史料を読み直してきた研究者の成果をもとに、伝説と記録を分けながら、31の手がかりを閉園後の法廷でハビ判事がひとつずつ裁きます。
 
 ▼チャプター
 0:00 将門塚、2026年夏の夜
@@ -70,8 +73,8 @@
 BGM・効果音：オリジナル
 地図：Mapzen Terrain Tiles（SRTM ほか）の標高データをもとに作成
 写真・資料（Wikimedia Commons ほか）
-CC BY-SA 4.0：Fukumoto、名古屋太郎、C2revenge、先従隗始、菊竹若狭、江戸村のとくぞう、Hyppolyte de Saint-Rambert、Zairon、Ismoon (talk) 16:56, 12 May 2021 (UTC)、Tmv、そらみみ、Suicasmo、Jakub Hałun、Yanajin33、Dokudami、犬プードル、Naokijp、Fumimonjo、NevinThompson
-CC BY-SA 3.0：Dennis Boller、Sailko、myself、Kakidai、Heartoftheworld、Reggaeman、Sakurai Midori、Jason Zhang
+CC BY-SA 4.0：Fukumoto、名古屋太郎、C2revenge、先従隗始、菊竹若狭、江戸村のとくぞう、Hyppolyte de Saint-Rambert、Zairon、Ismoon、Tmv、そらみみ、Suicasmo、Jakub Hałun、Yanajin33、Dokudami、犬プードル、Naokijp、Fumimonjo、NevinThompson
+CC BY-SA 3.0：Dennis Boller、Sailko、Ryuch、Kakidai、Heartoftheworld、Reggaeman、Sakurai Midori、Jason Zhang
 CC BY-SA 2.0：bryan...
 CC BY 4.0：Nori Norisa、Rollingskyphoto、くろふね、Immanuelle、Hyppolyte de Saint-Rambert、Jakub Hałun
 CC BY 3.0：Σ64、KATSURA Roen、josef knecht、mariemon、KENPEI、Takanuka
