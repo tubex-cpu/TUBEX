@@ -18,7 +18,7 @@
 | 企画 | 下書き・ゲートA 待ち | `03_plan.md` |
 | タイトル | 3案＋推奨（2026-11-13） | `04_titles.md` |
 | 台本 | **v0.5（2026-11-14、本文 9,061字、ナレーション実測 25分19秒）**。社長「事実の羅列がずっと続く感じがするので、エンタメ性を強化して欲しい」で、時間の流れを追う物語に全面改稿。旧版 `05_script_v0.4.md`。Google ドキュメント（同じリンク）：https://docs.google.com/document/d/13sqyY5iRv8BhryI6u7FCf13Ia0h1nljY91ZkYh7l3pM/edit | `05_script.md` |
-| サムネ | Codex への指示書（競合9本の実見分析・ラフ3案）。Codex の画像待ち | `06_thumbnail.md` |
+| サムネ | Codex への指示書（競合9本の実見分析・ラフ3案）。2026-11-14 社長「PRを作ってCodexにサムネを依頼して」で、ブランチ `claude/kaihen-001-equal-pay` の PR に `@codex` で依頼。Codex の画像待ち | `06_thumbnail.md` |
 | ナレーション・動画 | **本編 v2 完成（2026-11-14、25分25秒、台本 v0.6・S03/S04 修正済み）**。チャットに添付で提出、ゲートB 待ち。v1 は S03/S04 修正前 | `pilots/kaihen-001-equal-pay/preview_full.mp4`／フル `out/kaihen-001-full_v1.mp4`（git 外） |
 
 ## 公開前に必要なこと
