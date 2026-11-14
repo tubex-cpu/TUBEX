@@ -23,7 +23,7 @@
 ## B. 今、人が足りない仕事（事実）
 | 記号 | 台本で使う事実 | 一次資料 | 確認元 | 状態 |
 |---|---|---|---|---|
-| JOB_RATIO | 2025年度の有効求人倍率（職業大分類、常用・パート含む）：職業計 1.10倍、保安職業従事者 6.41倍、建設・採掘従事者 5.02倍、サービス職業従事者 2.73倍 | 厚生労働省「一般職業紹介状況」（e-Stat） | JILPT の解説 https://www.jil.go.jp/kokunai/statistics/shuyo/0208.html 等（検索の抜粋） | ✅（倍率の定義・年度は一次資料で要確認） |
+| JOB_RATIO | 2025年度の有効求人倍率（職業大分類、常用・パート含む）：職業計 1.10倍、保安職業従事者 6.41倍、建設・採掘従事者 5.02倍、サービス職業従事者 2.73倍。中分類で最も高いのは建設躯体工事従事者 7.72倍（土木作業従事者 6.21倍） | 厚生労働省「一般職業紹介状況」（e-Stat） | JILPT の解説 https://www.jil.go.jp/kokunai/statistics/shuyo/0208.html 等（検索の抜粋） | ✅（倍率の定義・年度は一次資料で要確認） |
 | QUIT | 2025年に転職した男性が前職を辞めた理由：「その他の個人的理由」16.8%、「その他の理由（出向等を含む）」12.1%を除くと「定年・契約期間の満了」16.1%が最多、次いで「給料等収入が少なかった」9.9% | 厚生労働省「令和7年 雇用動向調査結果の概要」 https://www.mhlw.go.jp/toukei/itiran/roudou/koyou/doukou/26-2/dl/kekka_gaiyo-03.pdf | 検索の抜粋（同 PDF） | ✅（女性・全体の割合は未確認で使わない） |
 | JOB_LIMIT | **注意**：求人倍率は「今、求人が求職者より多い」ことを示すだけ。給料を同じにしたときに誰が辞めるか、辞める順番、因果は**このデータでは決まらない** | — | — | 台本の【推論】の扱いを決める注意書き |
 
@@ -43,7 +43,7 @@
 ## C2. 反例（お金が入っても働き続けた例。条件が違う）
 | 記号 | 台本で使う事実 | 一次資料 | 確認元 | 状態 |
 |---|---|---|---|---|
-| FIN | フィンランドのベーシックインカム実験：2017〜2018年、失業者からくじで選んだ2,000人に月560ユーロ（働いても減らない）。1年目の就労には統計的に意味のある差がない。受給者は暮らしの満足度が高く、精神的な負担が少ないと答えた | Kela・VATT の最終報告（2020年5月6日）、フィンランド社会保健省の発表 https://stm.fi/en/-/perustulokokeilun-tulokset-tyollisyysvaikutukset-vahaisia-toimeentulo-ja-psyykkinen-terveys-koettiin-paremmaksi | 検索の抜粋（ヘルシンキ大学・VATT・社会保健省） | ✅（満足度は終了直前の1回の調査のみ） |
+| FIN | フィンランドのベーシックインカム実験：2017〜2018年、失業者（約17万5,000人）からくじで選んだ2,000人に月560ユーロ（働いても減らない）。1年目の就労には統計的に意味のある差がない。受給者は暮らしの満足度が高く、精神的な負担が少ないと答えた | Kela・VATT の最終報告（2020年5月6日）、フィンランド社会保健省の発表 https://stm.fi/en/-/perustulokokeilun-tulokset-tyollisyysvaikutukset-vahaisia-toimeentulo-ja-psyykkinen-terveys-koettiin-paremmaksi | 検索の抜粋（ヘルシンキ大学・VATT・社会保健省） | ✅（満足度は終了直前の1回の調査のみ） |
 | FIN2 | 2年目（2017年11月〜2018年10月）は受給者の就労日数が約6日多い（VATT 推計 6.6日）。ただし2018年の失業給付の制度変更（アクティベーションモデル）と重なり、研究チームは実験だけの効果と解釈できないとしている | VATT Working Papers 142 https://www.doria.fi/bitstream/10024/180639/1/vatt-working-papers-142-removing-welfare-traps--employment-responses-in-the-finnish-basic-income-experiment.pdf | 検索の抜粋 | ✅（子どものいる世帯の13.7日などは二次資料のみ ⚠ で使わない） |
 | LOT | スウェーデンの宝くじ当選者（21〜64歳、約25万人、1991〜2010年）の研究：当選で働いて得る収入は小さく減り、減少はすぐ始まり、その後も続く。年齢・学歴・性別で似ている。当選した本人の減少は配偶者より大きい | Cesarini, Lindqvist, Notowidigdo & Östling (2017) "The Effect of Wealth on Individual and Household Labor Supply: Evidence from Swedish Lotteries", *American Economic Review* 107(12) | 2015年の作業論文の要旨・J-PAL の要約（検索の抜粋） | ✅（2017年掲載版の数字は未確認。台本では割合の数字を使わない） |
 

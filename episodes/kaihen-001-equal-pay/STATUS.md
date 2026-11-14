@@ -17,7 +17,7 @@
 | 競合調査 | 済（既存調査を参照、新規の取得なし） | `02_competitors.md` |
 | 企画 | 下書き・ゲートA 待ち | `03_plan.md` |
 | タイトル | 3案＋推奨（2026-11-13） | `04_titles.md` |
-| 台本 | **v0.3（2026-11-14、本文 9,110字）**。社長に Google ドキュメントで提出：https://docs.google.com/document/d/13sqyY5iRv8BhryI6u7FCf13Ia0h1nljY91ZkYh7l3pM/edit 。リポジトリの Markdown が元データ。旧案 v0.1 は `05_script_v0.1_short.md` | `05_script.md` |
+| 台本 | **v0.4（2026-11-14、本文 8,989字、ナレーション実測 25分08秒）**。社長コメントで事実・前提・推論のラベル説明と画面表示をやめた。社長に Google ドキュメントで提出：https://docs.google.com/document/d/13sqyY5iRv8BhryI6u7FCf13Ia0h1nljY91ZkYh7l3pM/edit 。リポジトリの Markdown が元データ。旧案 v0.1 は `05_script_v0.1_short.md` | `05_script.md` |
 | サムネ | Codex への指示書（競合9本の実見分析・ラフ3案）。Codex の画像待ち | `06_thumbnail.md` |
 | ナレーション・動画 | 制作中（`pilots/kaihen-001-equal-pay/`）。冒頭1分版を先に提出 | `pilots/kaihen-001-equal-pay/` |
 
