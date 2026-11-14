@@ -12,7 +12,15 @@
 | 5 | 価格 | [`03_price.md`](03_price.md) |
 | 6 | 工程の状態 | [`STATUS.md`](STATUS.md) |
 | 7 | 見出し画像（無料・有料）と監査 | [`04_header_free.jpg`](04_header_free.jpg)・[`04_header_paid.jpg`](04_header_paid.jpg)・[`04_header_assets.md`](04_header_assets.md)（Claude の監査に合格） |
-| 8 | 入稿用の HTML（本文は d645c79 のまま） | [`05_draft_free.html`](05_draft_free.html)・[`05_draft_paid.html`](05_draft_paid.html) |
+| 8 | 入稿用の HTML（本文は d645c79 のまま） | [`05_draft_free.html`](05_draft_free.html)・[`05_draft_paid.html`](05_draft_paid.html)（表あり） |
+| 9 | **note 貼り付け用の HTML**（表を段落に展開。本文は d645c79 のまま） | [`06_note_free.html`](06_note_free.html)・[`06_note_paid.html`](06_note_paid.html) |
+
+**note 貼り付け用の HTML（06）について**（2026-11-14）
+- Codex が実画面で、HTML の表は note に貼ると1つの段落に平たくなることを確かめた（無料記事の下書き ID nc1c0e4101834）。そのため、各表を「列見出しをラベルにした段落」に展開した（例：「**欄**：① 彼の発言／**書くこと**：…」）。見出しのない表（「この記入セットについて」）は、1列目をラベルにした。
+- 文言は変えていない。照合（Claude、機械的に確認）：表のセル（無料20・有料35）と、表以外の本文の全行が出力に残っている。表は0個、コードブロックは有料の6つを保持。
+- UTF-8 の meta つきの完全な HTML。タイトルは `<title>` だけに入れ、本文には入れていない（note のタイトル欄に入れる）。
+- 有料ラインの位置は変わらない：「読み終えたときに…目指しています。」の段落の直後。
+- 無料記事の有料への案内は、【公開前に差し替え：…未検証…】の1行のまま。
 
 **入稿用の HTML について**
 - 02_free.md・03_paid.md から pandoc で作った（本文の文言は変えていない）。編集用のメモ・HTML コメント・【編集用：有料ライン】の行を除いた。タイトルは本文に入れず、note のタイトル欄に入れる。表・見出し・コードブロック・改行は残した。
