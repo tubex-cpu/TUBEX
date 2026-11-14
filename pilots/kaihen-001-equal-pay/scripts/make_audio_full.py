@@ -23,7 +23,7 @@ if os.environ.get('UPTO'):
 
 SR = ma.SR
 VV = "http://127.0.0.1:50021"
-SPK = 11   # 玄野武宏 ノーマル
+SPK = int(os.environ.get("VV_SPEAKER", "11"))   # 11 = 玄野武宏 ノーマル (ルール改変ニッポン). Other channels: set VV_SPEAKER
 RATE = 1.0
 CACHE = ROOT / "tts_cache"; CACHE.mkdir(parents=True, exist_ok=True)
 (ROOT / "out").mkdir(exist_ok=True)
