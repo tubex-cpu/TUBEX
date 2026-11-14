@@ -10,5 +10,5 @@ ls out/seg/seg[0-9][0-9][0-9].mp4 | sed "s#^#file '$PWD/#;s#\$#'#" > out/seg/lis
 T=(); [ -n "$DUR" ] && T=(-t "$DUR")
 ffmpeg -v error -y -f concat -safe 0 -i out/seg/list.txt -framerate 30 -i out/subtrack/%05d.png -i out/full.wav \
   -filter_complex "[1:v]format=rgba[s];[0:v][s]overlay=0:0:format=auto,format=yuv420p[v]" -map "[v]" -map 2:a "${T[@]}" \
-  -c:v libx264 -preset medium -crf 18 -af "loudnorm=I=-16:TP=-1.5:LRA=11" -c:a aac -b:a 192k -ar 48000 -shortest -movflags +faststart "$OUT"
+  -c:v libx264 -preset medium -crf 20 -af "loudnorm=I=-16:TP=-1.5:LRA=11" -c:a aac -b:a 192k -ar 48000 -shortest -movflags +faststart "$OUT"
 echo "ASSEMBLED $(date -u +%H:%M:%S) $OUT"
