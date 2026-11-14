@@ -564,14 +564,16 @@ def globe_shot(s, tt):
         y = math.cos(la0) * math.sin(la_) - math.sin(la0) * math.cos(la_) * math.cos(lo_ - lo0)
         vis = math.sin(la0) * math.sin(la_) + math.cos(la0) * math.cos(la_) * math.cos(lo_ - lo0) > 0
         return cx + x * r, cy - y * r, vis
-    if "北緯" in (P.get("why") or ""):
+    import re
+    mlat = re.search(r"北緯約?(\d+(?:\.\d+)?)", P.get("why") or "")
+    if mlat:
         a = sm((tt - 0.8) / 0.8)
-        pts = [gp(lo, P["lat"][1]) for lo in np.linspace(lon0 - 90, lon0 + 90, 120)]
+        pts = [gp(lo, float(mlat.group(1))) for lo in np.linspace(lon0 - 179, lon0 + 179, 240)]
         pts = [(x, y) for x, y, vv in pts if vv]
         if a > 0 and len(pts) > 2:
             dr.line(pts, fill=AMBER + (int(255 * a),), width=5, joint="curve")
     rgb = np.array(img.convert("RGB")).astype(np.float32)
-    dest = next(((n, c) for n, c in DATA["cities"].items() if abs(c[0] - P["lon"][1]) < 0.4 and abs(c[1] - P["lat"][1]) < 0.4), None)
+    dest = next(((n, c) for k in (1, 0) for n, c in DATA["cities"].items() if abs(c[0] - P["lon"][k]) < 0.4 and abs(c[1] - P["lat"][k]) < 0.4), None)
     if dest:
         x, y, vis = gp(*dest[1])
         tl = tt - d * 0.55
