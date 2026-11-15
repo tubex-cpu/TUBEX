@@ -101,3 +101,14 @@
 
 - 実写・資料（`assets/real_*.jpg`）は v2.3 と同じ。画面のクレジット表示はやめ、概要欄に作者・ライセンス・元ページを書く（CC BY 2.0 などの表示義務は概要欄で満たす）
 - 面積の比較（日本と同じ縮尺）は正積図法（Lambert 正積方位）で描いている。正距円筒図法の画像を面積比較に使っていない
+
+## v3geo2 の地図データ（2026-11-15、社長の追加引き継ぎを受けて差し替え）
+社長：「別途採用した陰影図については、ファイル名・配布ページ・利用条件の本文を確認してください。『第2作と同じ扱い』を確認根拠にはせず、未確認の素材は公開版への採用を保留してください」。
+
+| 素材 | ファイル・配布元 | 利用条件の確認（2026-11-15、Claude が本文を読んだか） | v3geo2 での扱い |
+|---|---|---|---|
+| 陰影図 shadedrelief.jpg | basemap-data 2.0.0（PyPI）同梱、原画像は shadedrelief.com とされる | **未確認**。https://www.shadedrelief.com/ はこの環境から接続できない（curl の応答なし）。Codex 側も 403 | **使わない（公開版への採用を保留）**。v3geo（この陰影図を使った版）は公開候補にしない |
+| 標高・海の深さ | AWS Open Data「Terrain Tiles」terrarium（https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png）。z4（広域）・z6（大陸）・z8（南東部）・z10（アデレード）・z11（シドニー周辺）・z12（シドニー中心部） | **確認済み**：登録情報 https://raw.githubusercontent.com/awslabs/open-data-registry/main/datasets/terrain-tiles.yaml の License 欄が https://github.com/tilezen/joerd/blob/master/docs/attribution.md を指す。その本文（`render/licenses/terrain_attribution_tilezen_joerd.md` に保存（取得日 2026-11-15））に「Required attribution」の一覧と、オーストラリアは Geoscience Australia の DEM（CC BY 4.0、表示「© Commonwealth of Australia (Geoscience Australia) 2017」）とある | 平面の地図すべて（色・陰影・海の深さ・寄りの海岸線）。概要欄に必須の表示を全文載せる |
+| 地球儀 | NASA Blue Marble Next Generation（world.topo.bathy.200401、5400×2700）。Codex 提供（Drive の個別素材 earth.jpg、sha256 1684c4f8f51970dcb4a7451302bf3be17bed657aed9fece6f80d7b191e8afa3d、`assets-sha256.json` と一致）。原配布 https://assets.science.nasa.gov/…/world.topo.bathy.200401.3x5400x2700.jpg | **Claude は本文未確認**：NASA のページ（https://www.nasa.gov/nasa-brand-center/images-and-media/ ）と原配布 URL はこの環境から接続できない。Codex が 2026-11-15 に本文を確認（情報提供目的の利用・出典明記・NASA の推奨を示唆しない）。その確認に基づいて使う | 地球儀（冒頭・亜熱帯高圧帯・締め）。Codex の atlas 配色（彩度0.58・2色の着色を25%重ね）で加工。概要欄に「NASA Blue Marble」 |
+| 国の形（Codex の demo 用） | Natural Earth 1:50m admin 0（GitHub nvkelso/natural-earth-vector、sha256 3e458fc0… が一致） | Natural Earth の利用条件ページはこの環境から接続できない。リポジトリの LICENSE.md（GitHub、取得できた）でパブリックドメインを確認 | demo の再現にだけ使用。本編の陸地は従来どおり Natural Earth 1:10m（world-atlas 2.0.2） |
+| フォント（Codex の demo 用） | Zen Kaku Gothic New Black（font.ttf、OFL.txt sha256 一致） | OFL 1.1（同梱 OFL.txt を確認） | demo の再現にだけ使用。本編はチャンネルの字幕フォント M PLUS Rounded 1c（OFL 1.1） |

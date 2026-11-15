@@ -20,6 +20,8 @@ AREAS = [
     ("sydney", 11, 150.55, 151.85, -34.35, -33.15),
     ("adelaide", 10, 137.3, 139.6, -35.6, -34.1),
     ("se", 8, 140.5, 154.5, -39.5, -28.5),
+    ("aus6", 6, 108.0, 158.0, -46.0, -6.0),
+    ("wide", 4, 70.0, 179.0, -60.0, 20.0),
 ]
 
 
@@ -56,14 +58,18 @@ def mosaic(name):
             row.append(im[..., 0] * 256 + im[..., 1] + im[..., 2] / 256 - 32768)
         rows.append(np.hstack(row))
     dem = np.vstack(rows).astype(np.float32)
-    dem = cv2.medianBlur(np.clip(dem, -60, 2250), 3)   # Australia's highest point is 2,228 m; drop tile spikes
+    dem = cv2.medianBlur(np.clip(dem, -11000, 9000), 3)   # drop single-pixel tile spikes (sea depths kept for the sea tint)
     _M[name] = (z, X0, Y0, dem, (lo0, lo1, la0, la1))
     return _M[name]
 
 
-def elevation(lon, lat):
+def elevation(lon, lat, kmpp=None):
+    """kmpp (km per screen pixel): mosaics more than 4x finer than the screen are skipped, so one view never mixes
+    a fine and a coarse mosaic (that shows as a square seam)."""
     out = np.full(lon.shape, np.nan, np.float32)
-    for name, *_ in AREAS:            # finest first
+    for name, zz, *_ in AREAS:        # finest first
+        if kmpp is not None and 40075 * 0.83 / (256 * 2 ** zz) < kmpp / 4:
+            continue
         z, X0, Y0, dem, (lo0, lo1, la0, la1) = mosaic(name)
         sel = np.isnan(out) & (lon >= lo0) & (lon <= lo1) & (lat >= la0) & (lat <= la1)
         if not sel.any():
