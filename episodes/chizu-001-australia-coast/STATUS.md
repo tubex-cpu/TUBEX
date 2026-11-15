@@ -110,4 +110,5 @@
 - 作り方：`render/render_v3geo2.py`（v3geo の地図の素材だけを差し替え。平面の地図はすべて標高データから色と陰影を計算、海は深さで色分け、地球儀は NASA Blue Marble を Codex の atlas 配色で加工）。`render/terrain.py` に広域（z4・z6）を追加し、画面の縮尺より4倍以上細かいタイルは使わない（細かいタイルとの境目が四角く見えたため）
 - 台本：語りは v2.3 と同じ（`05_script_v3geo.md`）。全編絵コンテ：`shotlist_v3geo2.md`。概要欄：`07_description_v3geo2.md`（標高データの必須の表示を全文）。素材：`06c_assets.md`「v3geo2 の地図データ」
 - 冒頭60秒：`render/out/v3geo2/chizu-001-australia-coast_opening_v3geo2_60s.mp4`（git 外、−15.2 LUFS、黒画面・静止なし）、確認用 `preview_opening_v3geo2.mp4`
-- 状態：全編を書き出し中
+- 全編：`render/out/v3geo2/chizu-001-australia-coast_full_v3geo2.mp4`（git 外、6分36秒・1920×1080・30fps、−15.2 LUFS、2秒以上の無音・黒画面・4秒以上の静止の検出なし、映像と音声の長さ一致）、確認用 `preview_v3geo2.mp4`（960×540）、10秒ごとの静止画40枚 `review/v3geo2_contact_sheet.jpg`（地名の位置・文字の見切れ・字幕との重なり・写真と説明の一致を目で確認）
+- 状態：**完成・ゲートB待ち**（v3geo2 を公開候補とする。v3geo は陰影図の条件が未確認のため公開候補にしない）。公開・マージはしない
