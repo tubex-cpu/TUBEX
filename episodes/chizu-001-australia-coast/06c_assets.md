@@ -89,3 +89,15 @@
 - **Blue Marble（three-globe 同梱 `earth-blue-marble.jpg`、原典不明）は本番の地球儀・広域図から外した**。v2.2 の書き出し（`render/render_v22.py`）は起動時に `render/ne_base.py` の Natural Earth の下地を設定し、旧画像の読み込み先を存在しないパスに替えて、読み込めないことを確認（assert）してから動く。静止画の書き出しをファイルの読み込みの記録（strace）で調べ、開いた下地は `cache/v22_ne_tex_16384.png` だけで、`bluemarble.jpg` は一度も開いていない。旧画像のファイル（`render/vendor/bluemarble.jpg`）と v2.1 までの成果物は削除せずに残した
 - **v2.2 の下地**：Natural Earth 1:1000万の陸地（npm パッケージ world-atlas 2.0.2 に入っている TopoJSON。Natural Earth はパブリックドメイン https://www.naturalearthdata.com/about/terms-of-use/ ）を、陸一色・海一色・10度ごとの経緯線で描いたもの。画面には「地図：Natural Earth（衛星画像ではありません）」と表示。拡大図（Natural Earth 1:1000万の海岸線を直接描いたもの）の「海岸線は簡略化され、湾の細かい形は省略」の注記はそのまま
 - 試作の `render/ne_alt.py` で足した川の中心線（1:5000万）は本番では使っていない
+
+## v3geo の地図データ（2026-11-15 追加）
+画面には出さず、概要欄に書く（チャンネルの現行ルール：画面の隅に出典・注記・クレジットを出さない）。
+| 用途 | データ | 権利・表示 | 置き場所 |
+|---|---|---|---|
+| 広い範囲の地形の陰影・地球儀 | `shadedrelief.jpg`（10800×5400）。PyPI basemap-data 2.0.0 同梱（第2作 chizu-002 と同じファイル、sha256 e52e46e8…） | パッケージは MIT（GSHHG・EPSG 以外）。原画像は shadedrelief.com（利用条件の本文はこの環境から未確認、chizu-002 `06c_assets.md` と同じ扱い） | `render/vendor/`（git 外） |
+| 寄りの地形（シドニー周辺・アデレード周辺・南東部） | AWS Open Data「Terrain Tiles」（terrarium 形式、https://registry.opendata.aws/terrain-tiles/ 、無料・キー不要）。シドニー中心部 z12、シドニー周辺 z11、アデレード z10、南東部 z8 | オーストラリアの部分は Geoscience Australia の DEM（© Commonwealth of Australia (Geoscience Australia)、CC BY 4.0）。ほかに SRTM（パブリックドメイン）・GMTED2010・ETOPO1。概要欄に「地形：AWS Terrain Tiles（Geoscience Australia DEM, CC BY 4.0 ほか）」と書く | `render/cache/terrain/`（git 外、`render/terrain.py` で再取得できる） |
+| 陸地の形・国・州 | Natural Earth 1:10m（world-atlas 2.0.2）・1:50m 下位区分（sane-topojson 4.0.0） | パブリックドメイン | `render/vendor/`（v2.2 から同じ） |
+| 寄りの海岸線（0.5 km/画素より細かい範囲） | 上の標高データで「0.5 m より高い所＝陸」として描く（1:10m の海岸線ではシドニー湾・ボタニー湾の形が出ないため） | 同上 | — |
+
+- 実写・資料（`assets/real_*.jpg`）は v2.3 と同じ。画面のクレジット表示はやめ、概要欄に作者・ライセンス・元ページを書く（CC BY 2.0 などの表示義務は概要欄で満たす）
+- 面積の比較（日本と同じ縮尺）は正積図法（Lambert 正積方位）で描いている。正距円筒図法の画像を面積比較に使っていない

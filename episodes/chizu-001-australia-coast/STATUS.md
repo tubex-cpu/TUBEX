@@ -81,3 +81,12 @@
 ## 5分の試作版（2026-11-10、社長「まずは5分の試作版から素材Codexに作ってもらって制作してみて」）
 - 範囲：v2.3 の 0:00〜4:58（S01〜S13）。地図を地形の陰影図に替え、図解・章の扉の9場面に Codex の説明用生成素材（「AI生成イメージ」表示）を入れる。台本・音声・字幕は v2.3 のまま
 - Codex に素材9点を依頼済み（`codex_assets_trial_5min.md`）。素材待ち。v2.3 の原本・既存の書き出しは残す
+
+## v3geo（2026-11-15、社長「『地球の事情』のオーストラリア動画の制作を再開してください」）
+- 依頼：Codex の映像部品（geo-video-kit：render.py・demo.json・README・参考動画の分析、Drive「2026-11-15_映像表現コードとデモ」）の表現を取り入れて全編を作り直す。旧版は上書きしない
+- 読めた資料：引き継ぎ文 `00_Claude制作再開指示_2026-11-15.txt`、README.md、REFERENCE_ANALYSIS.md、render.py、demo.json、静止画一覧（文字の読み取りのみ）、既存 HANDOFF.md（2026-11-03 にも確認済み）
+- **取得できなかった資料**：一式 ZIP `geo-video-kit-claude.zip`（9,262,141 バイト）。直接のダウンロードはプロキシが拒否（`curl: (56) CONNECT tunnel failed, response 403`）、Drive の読み取りは base64 を会話に返す方式で9MBは扱えない。54秒のデモ動画（demo-v2.mp4）も同じ理由で再生していない。v3_frame・pilot_scene の静止画は Drive の読み取りで画像の中身が返らない（2026-11-04 と同じ）。ZIP の assets（地球画像・国境・フォント）は使わず、リポジトリにある同等の素材（Natural Earth、shadedrelief.jpg、M PLUS Rounded 1c）で代えた
+- 作り方：`render/render_v3geo.py`（v2.3 の描画を読み込み、地図・見た目・カット割りを差し替え）、`render/terrain.py`（寄りの地形。AWS Terrain Tiles）
+- 台本：`05_script_v3geo.md`（**語りは v2.3 と同じ**。音声 `audio_v2_3/`・字幕 `subtitles_v2_3.json` をそのまま使う）。全編絵コンテ：`shotlist_v3geo.md`。概要欄：`07_description_v3geo.md`（地図の出典を更新）。素材：`06c_assets.md`「v3geo の地図データ」
+- 冒頭60秒：`render/out/v3geo/chizu-001-australia-coast_opening_v3geo_60s.mp4`（git 外、1920×1080・30fps、−15.2 LUFS、黒画面・静止なし）、確認用 `preview_opening_v3geo.mp4`（960×540）
+- 状態：全編を書き出し中
