@@ -18,7 +18,7 @@
 | 企画 | 下書き・ゲートA 待ち | `03_plan.md` |
 | タイトル | **台本 v0.8 用の3パターン（B 推薦「会社は何で／引き止める？」、D、E）**（2026-11-15）。旧 A 推薦は撤回、v0.7 用と初版は履歴 | `04_titles.md` |
 | 台本 | **v0.8.1（2026-11-15、Codex 差し戻し1回目の6項目を修正、語りの本文 約9,200字、想定 約26分）**。v0.8 は全面改稿、Codex 経由のユーザーの明示依頼「この構成でClaude Codeに台本を書き直してもらってください。『休みを増やせばいい』で終わらず、その先の問題と意外な展開まで見たくなるようにしてください。」で、サムネ B の問い中心に。Codex の再監査待ち。旧版 v0.7 は `05_script_v0.7.md`。Google ドキュメント（同じリンクを v0.8 に更新）：https://docs.google.com/document/d/13sqyY5iRv8BhryI6u7FCf13Ia0h1nljY91ZkYh7l3pM/edit 、v0.7 の履歴コピー：https://docs.google.com/document/d/1I58MiFOLiefVmJCIw20BUuYnzDC_xV0MDLfPPsVq46U/edit | `05_script.md` |
-| サムネ | B「会社は何で／引き止める？」の画像 v7-B（PR #20 ブランチ `claude/kaihen-001-equal-pay`、Claude 監査合格）。D・E の画像は未作成（Codex 担当）。v7-A・v7-C は v0.8 では使わない | `06_thumbnail.md`・`04_titles.md` |
+| サムネ | **差し戻し（3回目）で停止・社長の判断待ち**（2026-11-15）：v7 の文言が生成文字で OFL フォントの組版になっていない（AGENTS.md 77行目）。Claude の v7 合格は取り消し。B「会社は何で／引き止める？」の画像 v7-B（PR #20 ブランチ `claude/kaihen-001-equal-pay`）。D・E の画像は未作成（Codex 担当）。v7-A・v7-C は v0.8 では使わない | `06_thumbnail.md`・`04_titles.md` |
 | ナレーション・動画 | **v0.8 の動画は未作成**（今回は台本まで。ユーザーの依頼による）。本編 v3（台本 v0.7、25分48秒）は履歴：`pilots/kaihen-001-equal-pay/preview_full.mp4`（v3 の軽量版）／フル `pilots/kaihen-001-equal-pay/out/kaihen-001-full_v3.mp4`（git 外） | `pilots/kaihen-001-equal-pay/` |
 
 ## 公開前に必要なこと
