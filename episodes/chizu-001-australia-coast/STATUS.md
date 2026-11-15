@@ -89,4 +89,7 @@
 - 作り方：`render/render_v3geo.py`（v2.3 の描画を読み込み、地図・見た目・カット割りを差し替え）、`render/terrain.py`（寄りの地形。AWS Terrain Tiles）
 - 台本：`05_script_v3geo.md`（**語りは v2.3 と同じ**。音声 `audio_v2_3/`・字幕 `subtitles_v2_3.json` をそのまま使う）。全編絵コンテ：`shotlist_v3geo.md`。概要欄：`07_description_v3geo.md`（地図の出典を更新）。素材：`06c_assets.md`「v3geo の地図データ」
 - 冒頭60秒：`render/out/v3geo/chizu-001-australia-coast_opening_v3geo_60s.mp4`（git 外、1920×1080・30fps、−15.2 LUFS、黒画面・静止なし）、確認用 `preview_opening_v3geo.mp4`（960×540）
-- 状態：全編を書き出し中
+- 全編：`render/out/v3geo/chizu-001-australia-coast_full_v3geo.mp4`（git 外、6分36秒・1920×1080・30fps、−15.2 LUFS、2秒以上の無音・黒画面・静止の検出なし）、確認用 `preview_v3geo.mp4`（960×540）、10秒ごとの静止画一覧 `review/v3geo_contact_sheet.jpg`
+- 自己点検で直したこと：シドニー周辺の寄りで 1:10m の海岸線にシドニー湾・ボタニー湾が出ない → 標高データから海岸線を描き、湾が読める倍率まで寄せた／広い範囲の陰影図を寄りで引き伸ばすとぼやける → 寄りは標高データから陰影を計算／左右比較の注記が字幕に重なる → 上へ移動
+- 未確認・残件：通常速度での通し視聴と試聴（静止画と機械の検査のみ）、demo-v2.mp4 と ZIP の中身（取得できず）、shadedrelief.com の利用条件の本文（chizu-002 と同じ扱い）、サムネ（Codex）
+- 状態：**完成・ゲートB待ち**（v3geo）。v2.3 とその書き出しは残す。公開・マージはしない
