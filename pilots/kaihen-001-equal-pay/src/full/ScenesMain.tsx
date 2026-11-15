@@ -380,10 +380,10 @@ const S27: React.FC<SceneProps> = ({f, dur, T}) => (
     <Bg id="snow_town" f={f} dur={dur} dim={0.3} />
     <Kicker f={f} at={T('s27_0')} text="フィンランド　2017〜2018年" color="#ffffff" />
     {f < T('s27_2') && <Two f={f} at={[T('s27_1'), T('s27_1', 2)]} top={240}
-      left={<><Small>失業給付を受けていた25〜58歳 約17万5,000人から</Small><Big2 size={90}>くじで2,000人</Big2><Small>およそ88人に1人</Small></>}
+      left={<><Small>失業給付の受給者 約17万5,000人から</Small><Big2 size={90}>くじで2,000人</Big2><Small>およそ88人に1人</Small></>}
       right={<><Small>毎月</Small><Big2 size={110} color="#3d6fb6">560ユーロ</Big2><Small>働いても減らない</Small></>} />}
     {f >= T('s27_2') && <Two f={f} at={[T('s27_2', 1), T('s27_3')]} top={240}
-      left={<><Small>1年目　仕事に就いていた日数</Small><Big2 size={76}>はっきりした差は出ず</Big2><Small>終わり近くのアンケートで満足度は高い</Small></>}
+      left={<><Small>1年目　仕事に就いていた日数</Small><Big2 size={62}>はっきりした差は出ず</Big2><Small>アンケートでは満足度が高い</Small></>}
       right={<><Small>2年目　仕事に就いていた日数</Small><Big2 size={90}>約6日多い</Big2><Small>ただし同じ年に手当の制度も変わった</Small></>} />}
   </>
 );
@@ -405,7 +405,7 @@ const S29: React.FC<SceneProps> = ({f, dur, T}) => (
     <Two f={f} at={[T('s29_0', 2), T('s29_1')]} top={240}
       left={<><Small>フィンランド・宝くじ</Small><Big2>働けば、働いた分増える</Big2></>}
       right={<><Small>全員同じ給料の世界</Small><Big2 color={RED} size={54}>どれだけ働いても478万円</Big2></>} />
-    <Question f={f} at={T('s29_2')} top={640} size={80}>予想C：裏づけは見つからず。ただし直接の検証ではない</Question>
+    <Question f={f} at={T('s29_2')} top={640} size={60}>予想C：裏づけは見つからず。ただし直接の検証ではない</Question>
   </>
 );
 const S30: React.FC<SceneProps> = ({f, dur, T}) => (
