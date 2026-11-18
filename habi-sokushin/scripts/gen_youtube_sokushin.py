@@ -1,5 +1,6 @@
 """即身仏判決：youtube.md（タイトル案・概要欄・チャプター・参考資料・クレジット）と時刻入り台本を作る。
-  python3 scripts/gen_youtube_onryo.py"""
+  python3 scripts/gen_youtube_sokushin.py"""
+import json
 import re
 from pathlib import Path
 
@@ -45,8 +46,78 @@ for sc in order:
             ids.append(x)
 ph = (ROOT / 'src/data/photos.ts').read_text()
 cred = {m.group(1): m.group(2) for m in re.finditer(r"\t'([\w-]+)': \{file: '[^']+', credit: '([^']+)'", ph)}
-credits_full = '\n'.join('・' + cred[i].replace(' / Wikimedia Commons', '') for i in ids)
-(ROOT / '写真クレジット一覧.md').write_text('# 即身仏判決：写真・資料のクレジット（登場順・すべて Wikimedia Commons ほか）\n\n' + credits_full + '\n')
+# 写真ごとの出典一覧：Commons の記載（scripts/commons-meta.json。2026-11-18 に API で取得）をもとに、
+# 作者・ライセンスとその URL・出典ページ・改変の有無を1件ずつ書く
+import html as _html
+meta = json.loads((ROOT / 'scripts/commons-meta.json').read_text())['meta'] if (ROOT / 'scripts/commons-meta.json').exists() else {}
+cj0 = json.loads((ROOT / 'public/photos/credits.json').read_text())
+desc0 = json.loads((ROOT / 'scripts/photo-desc.json').read_text())
+LIC_URL = {
+    'CC BY-SA 4.0': 'https://creativecommons.org/licenses/by-sa/4.0/', 'CC BY-SA 3.0': 'https://creativecommons.org/licenses/by-sa/3.0/',
+    'CC BY-SA 2.5': 'https://creativecommons.org/licenses/by-sa/2.5/', 'CC BY-SA 2.0': 'https://creativecommons.org/licenses/by-sa/2.0/',
+    'CC BY 4.0': 'https://creativecommons.org/licenses/by/4.0/', 'CC BY 3.0': 'https://creativecommons.org/licenses/by/3.0/',
+    'CC BY 2.5': 'https://creativecommons.org/licenses/by/2.5/', 'CC BY 2.0': 'https://creativecommons.org/licenses/by/2.0/',
+    'CC0': 'https://creativecommons.org/publicdomain/zero/1.0/',
+}
+
+
+def plain(x):
+    x = re.sub(r'<[^>]+>', ' ', x or '')
+    return re.sub(r'\s+', ' ', _html.unescape(x)).strip()
+
+
+# Commons に作者名がなく、所蔵館が出典・表示先になっているもの（説明ページの Credit／Attribution による）
+OVR = {'walnut-wellcome': 'Wellcome Collection', 'kukai-patriarch': 'ColBase（国立博物館所蔵品統合検索システム）・奈良国立博物館'}
+
+
+def author(pid):
+    if pid in OVR:
+        return OVR[pid]
+    m = meta.get(pid, {})
+    a = plain(m.get('Attribution')) or plain(m.get('Artist')) or cj0[pid]['artist']
+    a = re.sub(r'^No machine-readable author provided\. (.+?)(~commonswiki)? assumed.*$', r'\1', a)
+    a = re.sub(r'^(User:|ja:User:)', '', a).replace('Unknown authorUnknown author', '作者不明').replace('Unknown author', '作者不明')
+    a = re.sub(r'^Creator:', '', a).replace('Unknown author Unknown author', '作者不明')
+    a = re.sub(r'^\s*\(WT-shared\) (\S+) at wts wikivoyage.*$', r'\1', a)
+    a = re.sub(r'^User: ?', '', a).replace('作者不明 作者不明', '作者不明').replace('著： ', '著：').replace(' （', '（')
+    a = re.sub(r'\s*:$', '', a).replace(' , ', ', ')
+    a = {'Japanese': '作者不明（日本）', '不明': '作者不明'}.get(a, a)
+    return a.strip() or '作者不明'
+
+
+rows = []
+for n, pid in enumerate(ids, 1):
+    v = cj0[pid]
+    m = meta.get(pid, {})
+    lic = plain(m.get('LicenseShortName')) or v['license']
+    licn = {'Public domain': 'パブリックドメイン', 'PD': 'パブリックドメイン', 'No restrictions': '既知の著作権の制限なし（No known copyright restrictions）'}.get(lic, lic)
+    lurl = plain(m.get('LicenseUrl')) or LIC_URL.get(lic, '')
+    d = desc0.get(pid) or desc0.get(re.sub(r'-w$', '', pid)) or v['title']
+    page = m.get('page') or v['page']
+    needs = lic.startswith('CC BY')
+    r = [f'{n}. {d}', f'   - 作者：{author(pid)}', f'   - ライセンス：{licn}' + (f'（{lurl}）' if lurl else ''), f'   - 出典：{page}']
+    r.append('   - 改変：あり（上の「改変について」のとおり）' if needs else '   - 改変：あり（パブリックドメイン／CC0 のため表示義務なし）')
+    if needs and lic.startswith('CC BY-SA'):
+        r.append('   - 条件：表示（作者・ライセンス・出典）、改変の明示、継承（改変した素材は同じライセンス）')
+    elif needs:
+        r.append('   - 条件：表示（作者・ライセンス・出典）、改変の明示')
+    rows.append('\n'.join(r))
+HEAD = """# 即身仏判決：写真・資料のクレジット（登場順）
+
+動画「即身仏判決」で使った写真・資料 {n} 点の、作者・ライセンス・出典の一覧です。作者名・ライセンスは、Wikimedia Commons ほか各ファイルの説明ページの記載（2026年11月18日に確認）によります。
+
+## 改変について
+動画では、すべての写真・資料に次の改変を加えています。
+- 縮小、画面の比率に合わせたトリミング（縦長の資料は左右にぼかした同じ画像を敷いて全体を表示）
+- 色調の調整（コントラスト・彩度・明るさ）
+- ゆっくりしたズーム・パン、画面の上下を暗くするグラデーション、字幕・テロップの重ね合わせ
+
+CC BY-SA の素材を改変したものは、元と同じライセンス（CC BY-SA の各版）で提供します。
+地図：Mapzen Terrain Tiles（SRTM ほか）の標高データをもとに作成。
+
+## 一覧
+"""
+(ROOT / '写真クレジット一覧.md').write_text(HEAD.format(n=len(ids)) + '\n'.join(rows) + '\n')
 
 # 概要欄は5000字までなので、写真のクレジットはライセンスごとに撮影者・作者名をまとめる
 import json, collections
@@ -57,7 +128,7 @@ NAME = {
     'そらみみ (Soramimi)': 'そらみみ', 'Gary Todd from Xinzheng, China': 'Gary Todd', 'Gary Lee Todd, Ph.D.': 'Gary Todd',
     'Hot cake syrup (talk)': 'Hot cake syrup', 'Original file is made by Ksiom, modified by Pekachu.': 'Ksiom, Pekachu',
     'Korea.net / Korean Culture and Information Service (Jeon Han)': 'Korea.net（Jeon Han）',
-    'ウィキ太郎 (Wiki Taro)': 'ウィキ太郎', 'MODIS Land Rapid Response Team, NASA GSFC': 'NASA',
+    'ウィキ太郎 (Wiki Taro)': 'ウィキ太郎', 'MODIS Land Rapid Response Team, NASA GSFC': 'NASA', 'Raita Futo from Tokyo, Japan': 'Raita Futo',
 }
 PD_WORKS = ('浮世絵・古典籍・美術品（鈴木牧之『北越雪譜』、歌川広重、勝川春章、小林清親、与謝蕪村、杉山杉風、『江戸名所図会』、メトロポリタン美術館・ブルックリン美術館 ほか）')
 by = collections.defaultdict(list)
@@ -67,20 +138,27 @@ for i in ids:
     lic = v['license']
     if lic == 'オリジナル':
         continue
-    if lic in ('Public domain', 'CC0'):
+    if i in OVR:
+        if OVR[i] not in by[lic]:
+            by[lic].append(OVR[i])
+        continue
+    if lic in ('Public domain', 'CC0', 'No restrictions'):
         if lic == 'CC0' and v['artist'] != '作者不明':
-            pd.append(NAME.get(v['artist'], v['artist']))
+            a = re.sub(r'^Creator:', '', NAME.get(v['artist'], v['artist']))
+            if a != 'Japanese':
+                pd.append(a)
         continue
     n = NAME.get(v['artist'], v['artist'])
     n = re.sub(r'^No machine-readable author provided\. (.+?)(~commonswiki)? assumed.*$', r'\1', n)
-    n = re.sub(r'^(User:|ja:User:)', '', n).replace(' at en.wikipedia', '')
+    n = re.sub(r'^(User:|ja:User:)', '', n)
     n = n.replace('Unknown authorUnknown author', '作者不明（所蔵館の公開画像）').replace('内閣府 (防災担当) , Cabinet Office of Japan, disaster prevention charge.', '内閣府（防災担当）')
     n = re.sub(r'^\s*\(WT-shared\) (\S+) at wts wikivoyage.*$', r'\1', n)
     if n == '作者不明':
         n = '作者不明（所蔵館の公開画像）'
     if n not in by[lic]:
         by[lic].append(n)
-ORDER = ['CC BY-SA 4.0', 'CC BY-SA 3.0', 'CC BY-SA 2.0', 'CC BY 4.0', 'CC BY 3.0', 'CC BY 2.0']
+ORDER = ['CC BY-SA 4.0', 'CC BY-SA 3.0', 'CC BY-SA 2.0', 'CC BY 4.0', 'CC BY 3.0', 'CC BY 2.5', 'CC BY 2.0']
+assert not set(by) - set(ORDER), set(by) - set(ORDER)
 lines = [f'{l}：' + '、'.join(by[l]) for l in ORDER if by[l]]
 lines.append('パブリックドメイン・CC0：' + PD_WORKS + ('、写真：' + '、'.join(dict.fromkeys(pd)) if pd else ''))
 credits = '\n'.join(lines)
@@ -93,7 +171,7 @@ md = f'''# YouTube 投稿用テキスト：即身仏判決
 - 【即身仏】僧はなぜミイラになったのか 伝説の裏に残された記録
 - 【即身仏】鉦の音が止まるまで…土に入った僧の伝説は本当か
 
-（サムネ「58年、土の中にいた僧／伝説では「生きたまま入った」／本当に生きていた？」と役割を分ける。「ハビ判事が検証」は入れない）
+（サムネ「死後58年、土の中にいた僧／伝説では「生きたまま入った」／本当に生きて入った？」と役割を分ける。「ハビ判事が検証」は入れない）
 
 ## 概要欄
 
@@ -125,7 +203,8 @@ BGM・効果音：オリジナル
 地図：Mapzen Terrain Tiles（SRTM ほか）の標高データをもとに作成
 写真・資料（Wikimedia Commons ほか）
 {credits}
-写真ごとの出典の一覧：https://github.com/tubex-cpu/TUBEX/blob/claude/nice-wright-du0dch/habi-onryo/写真クレジット一覧.md
+写真はいずれも縮小・トリミング・色調の調整・ズームなどの改変を加えて使用しています。
+写真ごとの作者・ライセンス・出典の一覧：https://github.com/tubex-cpu/TUBEX/blob/claude/nice-wright-du0dch/habi-sokushin/写真クレジット一覧.md
 
 #即身仏 #湯殿山 #出羽三山 #ミイラ #鉄門海 #仏海上人 #ハビ判事
 '''
