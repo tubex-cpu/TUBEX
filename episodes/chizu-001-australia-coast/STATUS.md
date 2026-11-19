@@ -81,3 +81,34 @@
 ## 5分の試作版（2026-11-10、社長「まずは5分の試作版から素材Codexに作ってもらって制作してみて」）
 - 範囲：v2.3 の 0:00〜4:58（S01〜S13）。地図を地形の陰影図に替え、図解・章の扉の9場面に Codex の説明用生成素材（「AI生成イメージ」表示）を入れる。台本・音声・字幕は v2.3 のまま
 - Codex に素材9点を依頼済み（`codex_assets_trial_5min.md`）。素材待ち。v2.3 の原本・既存の書き出しは残す
+
+## v3geo（2026-11-15、社長「『地球の事情』のオーストラリア動画の制作を再開してください」）
+- 依頼：Codex の映像部品（geo-video-kit：render.py・demo.json・README・参考動画の分析、Drive「2026-11-15_映像表現コードとデモ」）の表現を取り入れて全編を作り直す。旧版は上書きしない
+- 読めた資料：引き継ぎ文 `00_Claude制作再開指示_2026-11-15.txt`、README.md、REFERENCE_ANALYSIS.md、render.py、demo.json、静止画一覧（文字の読み取りのみ）、既存 HANDOFF.md（2026-11-03 にも確認済み）
+- **取得できなかった資料**：一式 ZIP `geo-video-kit-claude.zip`（9,262,141 バイト）。直接のダウンロードはプロキシが拒否（`curl: (56) CONNECT tunnel failed, response 403`）、Drive の読み取りは base64 を会話に返す方式で9MBは扱えない。54秒のデモ動画（demo-v2.mp4）も同じ理由で再生していない。v3_frame・pilot_scene の静止画は Drive の読み取りで画像の中身が返らない（2026-11-04 と同じ）。ZIP の assets（地球画像・国境・フォント）は使わず、リポジトリにある同等の素材（Natural Earth、shadedrelief.jpg、M PLUS Rounded 1c）で代えた
+- 作り方：`render/render_v3geo.py`（v2.3 の描画を読み込み、地図・見た目・カット割りを差し替え）、`render/terrain.py`（寄りの地形。AWS Terrain Tiles）
+- 台本：`05_script_v3geo.md`（**語りは v2.3 と同じ**。音声 `audio_v2_3/`・字幕 `subtitles_v2_3.json` をそのまま使う）。全編絵コンテ：`shotlist_v3geo.md`。概要欄：`07_description_v3geo.md`（地図の出典を更新）。素材：`06c_assets.md`「v3geo の地図データ」
+- 冒頭60秒：`render/out/v3geo/chizu-001-australia-coast_opening_v3geo_60s.mp4`（git 外、1920×1080・30fps、−15.2 LUFS、黒画面・静止なし）、確認用 `preview_opening_v3geo.mp4`（960×540）
+- 全編：`render/out/v3geo/chizu-001-australia-coast_full_v3geo.mp4`（git 外、6分36秒・1920×1080・30fps、−15.2 LUFS、2秒以上の無音・黒画面・静止の検出なし）、確認用 `preview_v3geo.mp4`（960×540）、10秒ごとの静止画一覧 `review/v3geo_contact_sheet.jpg`
+- 自己点検で直したこと：シドニー周辺の寄りで 1:10m の海岸線にシドニー湾・ボタニー湾が出ない → 標高データから海岸線を描き、湾が読める倍率まで寄せた／広い範囲の陰影図を寄りで引き伸ばすとぼやける → 寄りは標高データから陰影を計算／左右比較の注記が字幕に重なる → 上へ移動
+- 未確認・残件：通常速度での通し視聴と試聴（静止画と機械の検査のみ）、demo-v2.mp4 と ZIP の中身（取得できず）、shadedrelief.com の利用条件の本文（chizu-002 と同じ扱い）、サムネ（Codex）
+- 状態：**完成・ゲートB待ち**（v3geo）。v2.3 とその書き出しは残す。公開・マージはしない
+
+## v3geo2（2026-11-15、社長の追加引き継ぎ「ZIP不要_追加引き継ぎ.txt」）
+- 社長の指示：主要場面の PNG を実際に開いて確認、個別素材から再生成、Codex の地図画像は NASA Blue Marble（shadedrelief.com とは別物）、採用した陰影図はファイル名・配布ページ・利用条件の本文を確認し、未確認なら公開版への採用を保留、確認できたものと未確認のものを分けて報告
+- **実際に確認できたこと**
+  - preview-04・11・28・34・44・50.png を Drive から取得して画像として開いた（Codex の demo の地図・問い・地名・資料枠・図解・左右比較）
+  - 54秒の軽量デモ demo-v2-small.mp4（480×270・24fps・54.0秒）を取得
+  - 個別素材 earth.jpg・font.ttf・OFL.txt を Drive から、countries.geojson を GitHub の原配布から取得し、`assets-sha256.json` の4つの sha256 と一致
+  - Codex の render.py・demo.json・test_render.py で `python3 -m unittest test_render.py` が5件とも合格、`render.py demo.json --width 960` で54秒を再生成。Codex のデモと7場面を並べて目で比べ、同じ（画素の差は平均1.7〜3.6、圧縮の差）：`review/codex_demo_reproduced_compare.jpg`
+  - 標高データ（AWS Terrain Tiles）の利用条件の本文（登録情報 YAML → Tilezen の attribution.md）を読み、`render/licenses/terrain_attribution_tilezen_joerd.md` に保存
+- **未確認のこと**
+  - shadedrelief.com の利用条件（サイトに接続できない）→ **陰影図 shadedrelief.jpg を使った v3geo は公開候補にしない**。v3geo2 では使っていない
+  - NASA の画像利用ガイドラインと Blue Marble の原配布ページ（この環境から接続できない）→ Codex が本文を確認したという記録に基づいて地球儀に使用
+  - Natural Earth の利用条件ページ（接続できない。GitHub の LICENSE.md でパブリックドメインを確認）
+  - デモ動画・本編の動きは静止画と機械の検査で見たのみで、通常速度での通し視聴・試聴はしていない
+- 作り方：`render/render_v3geo2.py`（v3geo の地図の素材だけを差し替え。平面の地図はすべて標高データから色と陰影を計算、海は深さで色分け、地球儀は NASA Blue Marble を Codex の atlas 配色で加工）。`render/terrain.py` に広域（z4・z6）を追加し、画面の縮尺より4倍以上細かいタイルは使わない（細かいタイルとの境目が四角く見えたため）
+- 台本：語りは v2.3 と同じ（`05_script_v3geo.md`）。全編絵コンテ：`shotlist_v3geo2.md`。概要欄：`07_description_v3geo2.md`（標高データの必須の表示を全文）。素材：`06c_assets.md`「v3geo2 の地図データ」
+- 冒頭60秒：`render/out/v3geo2/chizu-001-australia-coast_opening_v3geo2_60s.mp4`（git 外、−15.2 LUFS、黒画面・静止なし）、確認用 `preview_opening_v3geo2.mp4`
+- 全編：`render/out/v3geo2/chizu-001-australia-coast_full_v3geo2.mp4`（git 外、6分36秒・1920×1080・30fps、−15.2 LUFS、2秒以上の無音・黒画面・4秒以上の静止の検出なし、映像と音声の長さ一致）、確認用 `preview_v3geo2.mp4`（960×540）、10秒ごとの静止画40枚 `review/v3geo2_contact_sheet.jpg`（地名の位置・文字の見切れ・字幕との重なり・写真と説明の一致を目で確認）
+- 状態：**完成・ゲートB待ち**（v3geo2 を公開候補とする。v3geo は陰影図の条件が未確認のため公開候補にしない）。公開・マージはしない
