@@ -93,9 +93,12 @@ def seg(name):
     row = [r for r in table if r['shot'] == name][0]
     ch = [c for c in tl['chapters'] if c['no'] == row['chapter']][0]
     f0, n = row['f0'], row['n']
+    if os.environ.get('TEST_N'):
+        n = int(os.environ['TEST_N'])
     frames = sorted(glob.glob(f'{OUT}/frames/{name}/*.png'))
     ghosts = sorted(glob.glob(f'{OUT}/frames/{name}_ghost/*.png'))
     assert len(frames) >= n, (name, len(frames), n)
+    tag = '_test' if os.environ.get('TEST_N') else ''
     os.makedirs(f'{OUT}/seg', exist_ok=True)
     vig = vignette()
     # この章の字幕（全編の時刻）
@@ -106,7 +109,7 @@ def seg(name):
     first_line = ch['lines'][0]['start'] if ch['lines'] else ch['start'] + 3
     is_first_shot = abs(row['start'] - ch['start']) < 1e-6
     ff = subprocess.Popen(['ffmpeg', '-v', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
-                           '-c:v', 'libx264', '-preset', 'medium', '-crf', '19', '-pix_fmt', 'yuv420p', f'{OUT}/seg/{name}.mp4'], stdin=subprocess.PIPE)
+                           '-c:v', 'libx264', '-preset', 'medium', '-crf', '19', '-pix_fmt', 'yuv420p', f'{OUT}/seg/{name}{tag}.mp4'], stdin=subprocess.PIPE)
     for i in range(n):
         t = (f0 + i) / FPS
         img = cv2.imread(frames[i], cv2.IMREAD_COLOR)[:, :, ::-1]

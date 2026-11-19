@@ -274,7 +274,7 @@ def person(loc, shirt, pants=None, skin=None, hair=None, rot_z=0, pose='stand', 
         P.append(cyl((0, 0, 0.75), 0.2, 0.6, shirt, verts=16, r2=0.17))
         hz = 1.2
         for sx in (-0.24, 0.24):
-            P.append(cyl((sx, -0.08, 0.8), 0.055, 0.42, shirt, verts=10, rot=(0.45, 0, 0)))
+            P.append(cyl((sx, -0.1, 0.8), 0.055, 0.42, shirt, verts=10, rot=(-0.5, 0, 0)))
             P.append(sphere((sx * 0.9, -0.22, 0.6), 0.05, skin, seg=10))
     else:  # lie（仰向け、頭は -y）
         P.append(box((0, 0.35, 0.14), (0.42, 1.2, 0.22), pants))

@@ -221,11 +221,15 @@ def mix():
         return x
     nar = fit(nar); sfx_ = fit(sfx_); b = fit(b)
     # ナレーション中は BGM を下げる
-    env = np.abs(nar)
-    k = int(0.25 * SR); env = np.convolve(env, np.ones(k) / k, mode='same')
+    def movavg(x, k):
+        c = np.cumsum(np.concatenate([np.zeros(k // 2 + 1), x, np.zeros(k // 2)]).astype(np.float64))
+        return ((c[k:] - c[:-k]) / k)[:len(x)].astype(np.float32)
+    k = int(0.25 * SR)
+    env = movavg(np.abs(nar), k)
     duck = 1 - 0.55 * np.clip(env / 0.05, 0, 1)
-    duck = np.convolve(duck, np.ones(k) / k, mode='same')
-    bg = b * 0.55 * duck[:, None]
+    duck = movavg(duck, k)
+    bg = b * 0.8 * duck[:, None]
+    sduck = (1 - 0.4 * np.clip(env / 0.05, 0, 1))[:, None]
     # 鳴きやむ瞬間（14章 30日後の午後3時）以降しばらくは BGM も切る
     ch14 = [c for c in tl['chapters'] if c['no'] == 14][0]
     m14 = json.load(open(f'{OUT}/meta/s14a.json'))
@@ -234,7 +238,7 @@ def mix():
     g = np.ones(N, np.float32); g[a:z] = 0
     fade = int(3 * SR); g[z:z + fade] = np.linspace(0, 1, fade)[:max(0, min(fade, N - z))]
     bg *= g[:, None]
-    out = nar[:, None] * 1.0 + sfx_ * 0.9 + bg
+    out = nar[:, None] * 1.0 + sfx_ * 0.36 * sduck + bg
     write(f'{OUT}/mix_raw.wav', out.reshape(-1), ch=2)
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', f'{OUT}/mix_raw.wav', '-af', 'loudnorm=I=-16:TP=-1.5:LRA=11', '-ar', str(SR), f'{OUT}/mix.wav'], check=True)
     print('mix ok')
