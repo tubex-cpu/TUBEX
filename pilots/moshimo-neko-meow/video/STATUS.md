@@ -7,7 +7,7 @@
    - 第1版・第2版は Open JTalk（nitech m001）だった
 2. `render_all.sh`：`shots.py` の全カット（第4稿は86カット）を Blender Workbench で 1280×720・24fps に描く（3並列、再開可）。各カットの鳴くタイミングを `meta/*.json` に書く
 3. `audio.py <out>`：猫の鳴き声（numpy 合成）・遠くの鳴き声の層・環境音・BGM（mido → FluidSynth、FluidR3_GM）を作り、ナレーションとミックス（−16 LUFS）
-4. `compose.py seg <shot...>` → `compose.py final`：字幕（第3版から Noto Serif CJK JP Black 76px・字間+3px・縁7px の1行）・章の見出し・時計・テロップを重ね、1920×1080 の mp4 にして音と合わせる。2〜4 は `NEKO_OUT=<out> bash render_all.sh && NEKO_OUT=<out> bash post_render.sh` で通しで動く
+4. `compose.py seg <shot...>` → `compose.py final`：字幕（第3版は Noto Serif CJK JP Black 76px・字間+3px・縁7px の1行。2026-11-20 の社長指示で次の版から Noto Sans CJK JP Black 76px・字間+3px・縁取りと影なしの1行）・章の見出し・時計・テロップを重ね、1920×1080 の mp4 にして音と合わせる。2〜4 は `NEKO_OUT=<out> bash render_all.sh && NEKO_OUT=<out> bash post_render.sh` で通しで動く
 
 素材の権利：映像はすべて手続き生成。地球の陸地は Natural Earth（パブリックドメイン）。フォントは Noto（SIL OFL）。音声合成は第3版から VOICEVOX（玄野武宏。商用・非商用とも「VOICEVOX:玄野武宏」のクレジット表記で利用可。公開時は概要欄に必ず入れる）。第1・2版は Open JTalk（nitech_jp_atr503_m001、CC BY 3.0 名古屋工業大学）。字幕フォント Noto Serif CJK JP Black（SIL OFL、notofonts/noto-cjk）。音源は FluidR3_GM（MIT）。猫の鳴き声は合成で、録音素材は使っていない。
 
@@ -15,6 +15,10 @@
 - このセッションには Mac のフォルダー（第4版の Blender 素材）がつながらなかったため、クラウドの環境で新規に作った。EEVEE はこの環境で1コマ約50秒のため使えず、Workbench（ミニチュア風の陰影）で描く
 - 3D は 1280×720 で描き、合成時に 1920×1080 へ拡大。字幕は 1080p で直接描く
 - ナレーション 185 行、全体 16分34秒（エンドカード込み）
+
+## 次の版：保留中（2026-11-20）
+- 社長指示（2026-11-20）「黒い縁取りと影は消して下さい」「フォントはゴシック体にして」「台本を再修正したいのでそれまで動画制作は待って」
+- `compose.py` の字幕を極太ゴシック（Noto Sans CJK JP Black）・縁取りと影なしに変更済み。描画・書き出しは、社長の台本の再修正を受け取るまで行わない
 
 ## 第3版（台本 第4稿へ差し替え）完成（2026-11-20 15:32 UTC）
 - 社長指示（2026-11-20）「台本差し替え」「字幕のフォントはかなり太字にしてほしい ただし文字も大きくしてつぶれて見えないようにして」「音声はボイスボックスの男性の誰かにして」

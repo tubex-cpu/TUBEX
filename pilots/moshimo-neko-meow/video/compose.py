@@ -16,7 +16,7 @@ W, H, FPS = 1920, 1080, 24
 
 # 字幕：社長指示（2026-11-20）「字幕のフォントはかなり太字にしてほしい ただし文字も大きくしてつぶれて見えないようにして」
 # → 明朝の極太（Noto Serif CJK JP Black, SIL OFL）を 76px・縁 7px・字間 +3px で1行に出す
-SUB_FONT, SUB_SIZE, SUB_STROKE, SUB_TRACK, SUB_MAXC = 'NotoSerifCJKjp-Black.otf', 76, 7, 3, 20
+SUB_FONT, SUB_SIZE, SUB_TRACK, SUB_MAXC = 'NotoSansCJKjp-Black.otf', 76, 3, 20  # 社長指示 2026-11-20：極太ゴシック、縁取り・影なし
 
 _fc = {}
 def font(size, w='Bold'):
@@ -99,7 +99,7 @@ def sfont(size):
 
 
 def sub_layer(text):
-    """字幕1行（極太明朝・字間を少し空けて、太い縁と影でつぶれないようにする）"""
+    """字幕1行（極太ゴシック・字間を少し空ける。縁取りと影は付けない＝社長指示 2026-11-20）"""
     k = ('sub', text)
     if k in _cache:
         return _cache[k]
@@ -108,13 +108,9 @@ def sub_layer(text):
     w = int(sum(adv) + SUB_TRACK * (len(text) - 1)) + 80; h = int(SUB_SIZE * 1.6)
     im = Image.new('RGBA', (w, h), (0, 0, 0, 0))
     y0 = int(SUB_SIZE * 0.2)
-    sh = Image.new('RGBA', im.size, (0, 0, 0, 0)); ds = ImageDraw.Draw(sh); x = 40
-    for c, a in zip(text, adv):
-        ds.text((x + 4, y0 + 5), c, font=f, fill=(0, 0, 0, 190), stroke_width=SUB_STROKE + 3, stroke_fill=(0, 0, 0, 190)); x += a + SUB_TRACK
-    im.alpha_composite(sh.filter(ImageFilter.GaussianBlur(7)))
     d = ImageDraw.Draw(im); x = 40
     for c, a in zip(text, adv):
-        d.text((x, y0), c, font=f, fill=(255, 255, 255, 255), stroke_width=SUB_STROKE, stroke_fill=(15, 16, 20, 255)); x += a + SUB_TRACK
+        d.text((x, y0), c, font=f, fill=(255, 255, 255, 255)); x += a + SUB_TRACK
     _cache[k] = im
     return im
 
