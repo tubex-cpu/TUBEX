@@ -33,6 +33,8 @@ def main():
     n = row['n']
     reset(res)
     meta = getattr(S, name)(n)
+    if '--still' not in args:
+        animate_life(n, seed=sum(map(ord, name)))
     meta.update(row)
     os.makedirs(f'{OUT}/meta', exist_ok=True)
     json.dump(meta, open(f'{OUT}/meta/{name}.json', 'w'), ensure_ascii=False)

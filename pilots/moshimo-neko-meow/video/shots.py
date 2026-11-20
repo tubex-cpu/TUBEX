@@ -91,7 +91,8 @@ def s00b(n):
 
 def s00c(n):
     env_town(nx=9, ny=9)
-    cats = [cat((-0.5, -21.0, 0), 'tora', s=0.62)]
+    cats = [cat((-0.5, -21.6, 0), 'tora', s=0.62, pose='walk')]
+    move(cats[0], [(1, (-0.5, -21.6, 0)), (n, (-0.5, -19.6, 0))])
     ev = add_meows(cats, n, gain=0.5)
     cam = camera(28)
     cam_path(cam, [(0, (2, -30, 2.5), (0, -18, 2)), (1, (40, -110, 95), (0, 0, 0))], n)
@@ -226,9 +227,16 @@ def s01d(n):  # イスタンブール：朝の坂道
         row = rnd.choice([0, 1, 2]); y = row * 7 + 0.5; z = row * 2.2
         cats.append(cat((x, y, z), rnd.choice(['tora', 'saba', 'kuro', 'shiro', 'mike', 'hachi']), s=0.62, rot_z=rnd.uniform(-0.6, 0.6)))
     for i in range(6):
-        cats.append(cat((-28 + i * 3.2, -5.5, 0.1), rnd.choice(['tora', 'saba', 'shiro']), s=0.62, rot_z=rnd.uniform(-1, 1)))
+        walker = i % 2 == 0
+        c = cat((-28 + i * 3.2, -5.5, 0.1), rnd.choice(['tora', 'saba', 'shiro']), s=0.62, rot_z=rnd.uniform(-1, 1), pose='walk' if walker else 'sit')
+        if walker:
+            x0 = c.location.x; d = rnd.choice([-1, 1]) * rnd.uniform(4, 7)
+            move(c, [(1, (x0, -5.5, 0.1)), (n, (x0 + d, -5.5 + rnd.uniform(-0.6, 0.6), 0.1))])
+        cats.append(c)
     for i in range(5):
-        person((-26 + i * 4.5, -4.2, 0.1), rnd.choice([hexc('#3d5a80'), hexc('#7a4f3a'), hexc('#4a6b4a'), hexc('#8a8a8a')]), rot_z=rnd.uniform(-0.5, 0.5))
+        pp = person((-26 + i * 4.5, -4.2, 0.1), rnd.choice([hexc('#3d5a80'), hexc('#7a4f3a'), hexc('#4a6b4a'), hexc('#8a8a8a')]), rot_z=rnd.uniform(-0.5, 0.5))
+        x0 = pp.location.x; d = rnd.choice([-1, 1]) * rnd.uniform(12, 18)
+        move(pp, [(1, (x0, -4.2 + rnd.uniform(-0.8, 0.8), 0.1)), (n, (x0 + d, -4.2 + rnd.uniform(-0.8, 0.8), 0.1))])
     ev = add_meows(cats, n, every=(35, 70), gain=0.6)
     cam = camera(35)
     cam_path(cam, [(0, (-40, -40, 22), (0, 25, 8)), (1, (-15, -30, 6), (-18, -2, 2))], n)
@@ -321,7 +329,9 @@ def s02b(n):  # ごはん・水・ドア・抱き上げ
     b1 = bowl((0.2, 0.6, 0.02)); b2 = bowl((0.45, 0.6, 0.02), c=hexc('#4f86c6'))
     box((-2.0, 2.44, 1.05), (0.9, 0.06, 2.1), hexc('#a48663'))  # ドア
     p = person((0.4, 1.2, 0), hexc('#d6d9de'), rot_z=math.pi)
-    c = cat((0.3, 0.3, 0), 'tora', s=0.62, rot_z=math.pi * 0.9, name='basecat')
+    move(p, [(1, (1.5, 1.55, 0)), (55, (0.4, 1.2, 0))])
+    c = cat((0.3, 0.3, 0), 'tora', s=0.62, rot_z=math.pi * 0.9, name='basecat', pose='walk')
+    move(c, [(1, (1.1, -0.5, 0)), (75, (0.3, 0.3, 0))])
     ev = add_meows([c], n, every=(40, 60))
     cam = camera(35, dof=2.0, fstop=2.4)
     cam_path(cam, [(0, (1.8, -1.6, 1.3), (0.3, 0.7, 0.6)), (0.5, (1.3, -1.4, 1.0), (0.2, 0.7, 0.5)),
@@ -412,8 +422,16 @@ def s03a(n):  # 病院の入り口の外まで行列
     rnd = random.Random(3)
     for i in range(14):
         x = -6.2 + i * 0.85; y = -25.2 - (i % 2) * 0.2
-        p = person((x, y, 0), rnd.choice([hexc('#3d5a80'), hexc('#c46a4a'), hexc('#4a6b4a'), hexc('#8a8a8a'), hexc('#d8c9a8')]), rot_z=math.pi / 2)
-        carrier((x - 0.35, y - 0.3, 0.55), rot_z=math.pi / 2)
+        p = person((x, y, 0), rnd.choice([hexc('#3d5a80'), hexc('#c46a4a'), hexc('#4a6b4a'), hexc('#8a8a8a'), hexc('#d8c9a8')]), rot_z=-math.pi / 2)
+        cr = carrier((x - 0.35, y - 0.3, 0.55), rot_z=math.pi / 2)
+        # 数秒ごとに、前の人について少し進む
+        keys_p, keys_c = [(1, (x, y, 0))], [(1, (x - 0.35, y - 0.3, 0.55))]
+        step = 0
+        for f0 in range(40 + i * 2, n - 20, 90):
+            keys_p.append((f0, (x - step, y, 0))); keys_c.append((f0, (x - 0.35 - step, y - 0.3, 0.55)))
+            step += 0.42
+            keys_p.append((f0 + 22, (x - step, y, 0))); keys_c.append((f0 + 22, (x - 0.35 - step, y - 0.3, 0.55)))
+        move(p, keys_p); move(cr, keys_c)
     cam = camera(35)
     cam_path(cam, [(0, (-14, -32, 2.5), (-5, -24.5, 1.3)), (1, (-2, -33, 3.0), (0, -25, 1.0))], n)
     ev = [(f, 0.35, R.uniform(0.9, 1.2)) for f in range(10, n, 23)]
@@ -637,7 +655,7 @@ def s07b(n):  # オンライン会議
     box((0, 0.98, 1.02), (0.62, 0.02, 0.4), hexc('#2a2a2a'), rot=(-0.2, 0, 0))
     bpy.ops.mesh.primitive_plane_add(location=(0, 0.965, 1.02), rotation=(math.pi / 2 - 0.2, 0, 0))
     o = bpy.context.object; o.scale = (0.29, 0.17, 1); o.data.materials.append(m)
-    p = person((0, 0.0, 0), hexc('#8aa0b8'), pose='sit', rot_z=math.pi)
+    p = person((0, 0.0, 0), hexc('#8aa0b8'), pose='sit', rot_z=math.pi, act='type')
     c = cat((0.9, 0.3, 0), 'saba', s=0.62, rot_z=math.pi * 1.2)
     ev = add_meows([c], n, every=(45, 70), gain=0.7)
     cam = camera(40, dof=1.4, fstop=2.0)
@@ -647,7 +665,7 @@ def s07b(n):  # オンライン会議
 def s07c(n):  # スマホを猫に向ける人々（街の俯瞰の窓辺）
     living_room()
     c = cat((0.2, 1.0, 0), 'tora', s=0.62, rot_z=math.pi, name='basecat')
-    p = person((-0.4, 0.2, 0), hexc('#c7d3e0'), rot_z=-0.6)
+    p = person((-0.4, 0.2, 0), hexc('#c7d3e0'), rot_z=-0.6, act='phone')
     box((-0.15, 0.55, 1.2), (0.08, 0.015, 0.16), hexc('#1d1d1d'), rot=(0.4, 0, -0.6))
     ev = add_meows([c], n, every=(45, 70))
     cam = camera(35, dof=1.8, fstop=2.0)
@@ -668,7 +686,8 @@ def s08a(n):  # 朝の駐車場：ボンネットの中の子猫
     kit = cat((4, -31.4, 0.62), 'tora', s=0.38, rot_z=0, pose='crouch')
     kit.scale = (0, 0, 0); kit.keyframe_insert('scale', frame=f_open - 15)
     kit.scale = (0.38, 0.38, 0.38); kit.keyframe_insert('scale', frame=f_open - 14)
-    p = person((4.0, -33.6, 0), hexc('#3d5a80'), rot_z=0)
+    p = person((4.0, -33.6, 0), hexc('#3d5a80'), rot_z=-1.3)
+    move(p, [(1, (8.5, -34.8, 0)), (f_open - 250, (8.5, -34.8, 0)), (f_open - 60, (4.1, -33.7, 0)), (f_open - 40, (4.0, -33.35, 0))])
     fr = meow_times(n, every=(30, 50)); meow(kit, fr)
     cam = camera(35, dof=4.5, fstop=2.4)
     cam_path(cam, [(0, (8, -38, 2.2), (4, -31, 1.0)), (1, (6, -35.5, 1.8), (4, -31.3, 0.8))], n)
@@ -713,9 +732,11 @@ def s09b(n):  # 夜明け、店主が餌を置く
     box((-24, -1.5, 1.6), (6, 3, 3.2), hexc('#d9b48a'))
     box((-24, -3.05, 3.0), (6.4, 0.6, 0.1), hexc('#b5553a'))  # ひさし
     p = person((-23.2, -3.6, 0.1), hexc('#6a5040'), rot_z=0.3)
+    move(p, [(1, (-21.6, -2.9, 0.1)), (70, (-23.2, -3.6, 0.1))])
     b = bowl((-24.3, -3.8, 0.12))
     c = cat((-24.3, -4.1, 0.1), 'tora', s=0.62, rot_z=0.2)
-    c2 = cat((-25.4, -4.4, 0.1), 'saba', s=0.62, rot_z=-0.5)
+    c2 = cat((-25.4, -4.4, 0.1), 'saba', s=0.62, rot_z=-0.5, pose='walk')
+    move(c2, [(1, (-27.6, -5.6, 0.1)), (110, (-25.0, -4.2, 0.1))])
     ev = add_meows([c, c2], n, every=(45, 75))
     cam = camera(40, dof=3.0, fstop=2.2)
     cam_path(cam, [(0, (-21.5, -7.5, 1.3), (-24, -3.8, 0.6)), (1, (-22.5, -6.6, 1.0), (-24.2, -3.9, 0.5))], n)
@@ -876,7 +897,8 @@ def s12a(n):
     env_alley()
     rat = make_rat((-1.0, 1.4, 0), rot_z=math.pi * 0.5)
     peek(rat, n, int(n * 0.3))
-    cats = [cat((0.3, 9, 0), 'saba', s=0.62, rot_z=math.pi), cat((-0.8, 14, 0), 'kuro', s=0.62, rot_z=math.pi)]
+    cats = [cat((0.3, 9, 0), 'saba', s=0.62, rot_z=math.pi, pose='walk'), cat((-0.8, 14, 0), 'kuro', s=0.62, rot_z=math.pi, pose='walk')]
+    move(cats[0], [(1, (0.3, 9, 0)), (n, (0.0, 5.5, 0))]); move(cats[1], [(1, (-0.8, 14, 0)), (n, (-0.4, 10.5, 0))])
     ev = add_meows(cats, n, every=(40, 60), gain=0.5)
     cam = camera(32, dof=1.5, fstop=2.0)
     cam_path(cam, [(0, (0.6, -1.0, 0.3), (-1.0, 1.5, 0.1)), (1, (0.3, -0.6, 0.25), (-1.0, 1.5, 0.1))], n)
@@ -885,7 +907,8 @@ def s12a(n):
 def s12b(n):  # 誰もいない夜の路地・裏口・線路
     env_alley()
     box((0, 18, 0.1), (6, 0.2, 0.2), hexc('#5a5a5a'))
-    cats = [cat((0.6, 8, 0), 'tora', s=0.62, rot_z=math.pi)]
+    cats = [cat((0.6, 8, 0), 'tora', s=0.62, rot_z=math.pi, pose='walk')]
+    move(cats[0], [(1, (0.6, 7, 0)), (n, (0.2, 13, 0))])
     ev = add_meows(cats, n, every=(50, 80), gain=0.6)
     cam = camera(26)
     cam_path(cam, [(0, (0, -4, 1.6), (0, 10, 1.0)), (1, (0, 2, 1.4), (0, 14, 1.0))], n)
@@ -909,13 +932,12 @@ def s13a(n):
     living_room()
     table((0.5, 1.4, 0), 1.2, 0.6, 0.72)
     laptop((0.5, 1.45, 0.75), rot_z=math.pi)
-    p = person((0.5, 0.75, 0), hexc('#8aa0b8'), pose='sit', rot_z=math.pi)
+    p = person((0.5, 0.75, 0), hexc('#8aa0b8'), pose='sit', rot_z=math.pi, act='type')
     h = bpy.data.objects[p['head']]
     for sx in (-0.14, 0.14):
         link(sphere((sx, 0, 0), 0.04, hexc('#f2f2f2')), h)
-    c = cat((-0.4, 0.4, 0), 'tora', s=0.62, rot_z=-2.3, name='basecat')
-    c.keyframe_insert('location', frame=int(n * 0.5))
-    c.location = (-0.2, 0.2, 0); c.keyframe_insert('location', frame=int(n * 0.5) + 30)
+    c = cat((-0.4, 0.4, 0), 'tora', s=0.62, rot_z=-2.3, name='basecat', pose='walk')
+    move(c, [(1, (-1.3, -0.4, 0)), (int(n * 0.35), (-0.3, 0.35, 0)), (int(n * 0.6), (-0.3, 0.35, 0)), (int(n * 0.6) + 40, (0.0, 0.25, 0))])
     ev = add_meows([c], n, every=(50, 75))
     cam = camera(35, dof=2.0, fstop=2.2)
     cam_path(cam, [(0, (-1.6, -1.2, 1.2), (0.2, 0.9, 0.7)), (1, (-1.0, -0.8, 1.0), (0.2, 0.9, 0.7))], n)
@@ -925,7 +947,7 @@ def s13b(n):  # キーボードに座る・ついて回る・見つめる
     living_room()
     table((0.5, 1.4, 0), 1.2, 0.6, 0.72)
     laptop((0.5, 1.45, 0.75), rot_z=math.pi)
-    p = person((0.5, 0.75, 0), hexc('#8aa0b8'), pose='sit', rot_z=math.pi)
+    p = person((0.5, 0.75, 0), hexc('#8aa0b8'), pose='sit', rot_z=math.pi, act='type')
     h = bpy.data.objects[p['head']]
     for sx in (-0.14, 0.14):
         link(sphere((sx, 0, 0), 0.04, hexc('#f2f2f2')), h)
@@ -982,8 +1004,9 @@ def s14d(n):
 
 def s14e(n):  # 人が猫に話しかける
     living_room()
-    p = person((-0.2, 1.2, 0), hexc('#c7d3e0'), pose='sit', rot_z=math.pi)
-    c = cat((0.1, 0.5, 0), 'tora', s=0.62, rot_z=math.pi * 0.0, name='basecat')
+    p = person((-0.2, 1.2, 0), hexc('#c7d3e0'), pose='sit', rot_z=math.pi, act='talk')
+    c = cat((0.1, 0.5, 0), 'tora', s=0.62, rot_z=math.pi * 0.0, name='basecat', pose='walk')
+    move(c, [(1, (1.0, -0.3, 0)), (80, (0.1, 0.5, 0))])
     h = bpy.data.objects[p['head']]
     h.rotation_euler = (0.35, 0, 0); h.keyframe_insert('rotation_euler', frame=1)
     cam = camera(40, dof=1.8, fstop=2.0)
@@ -1011,7 +1034,8 @@ def s15a(n):  # 9,500年前のキプロス島
 def s15b(n):  # 冒頭の部屋：一度だけ鳴き、飼い主が振り向く
     living_room()
     p = person((-1.2, 2.0, 0.0), hexc('#c7d3e0'), pose='sit', rot_z=math.pi)
-    c = cat((-0.4, 1.0, 0), 'tora', s=0.62, rot_z=math.pi * 0.85, name='basecat')
+    c = cat((-0.4, 1.0, 0), 'tora', s=0.62, rot_z=math.pi * 0.85, name='basecat', pose='walk')
+    move(c, [(1, (0.6, 0.0, 0)), (int(n * 0.35), (-0.4, 1.0, 0))])
     f = int(n * 0.55)
     meow(c, [f], dur=18)
     h = bpy.data.objects[p['head']]

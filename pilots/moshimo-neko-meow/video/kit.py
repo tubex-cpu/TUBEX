@@ -166,6 +166,14 @@ def cam_path(cam, keys, nframes, lens_keys=None):
                     cam.data.lens = a[1] + (b[1] - a[1]) * u
                     cam.data.keyframe_insert('lens', frame=f + 1)
 
+# ---------- 関節つきの部品 ----------
+def joint(loc, parent, name='jnt', rot=(0, 0, 0)):
+    j = empty(loc, name); j.rotation_euler = rot; link(j, parent); return j
+
+def seg_cyl(parent, r, L, rgb, verts=10, r2=None):
+    """関節（parent）から -z 方向へ伸びる円柱"""
+    return link(cyl((0, 0, -L / 2), r, L, rgb, verts=verts, r2=r2), parent)
+
 # ---------- 猫 ----------
 COATS = {
     'tora':  {'base': hexc('#d98b3a'), 'belly': hexc('#f3e2c8'), 'stripe': hexc('#a85a22')},
@@ -177,44 +185,72 @@ COATS = {
 }
 
 def cat(loc, coat='tora', s=1.0, rot_z=0.0, pose='sit', name='cat'):
-    """座り/伏せの猫。root（床に接地）> head > mouth。鳴くときは head を少し上げ mouth を開く。"""
+    """猫。root（床に接地）> rig > 体・脚（関節）・しっぽ（関節）・neck > head > mouth。
+    pose: sit（座る）/ crouch（伏せ・忍び寄り）/ walk（立って歩く）。前は -y。
+    動き（呼吸・しっぽ・首・まばたき・歩き）は animate_life() がまとめて付ける。"""
     C = COATS[coat]
     root = empty(loc, name); root.rotation_euler = (0, 0, rot_z); root.scale = (s, s, s)
-    parts = []
+    rig = joint((0, 0, 0), root, 'jnt_rig')
+    legs = []
+    light_leg = coat in ('hachi', 'shiro', 'mike')
     if pose == 'sit':
-        body = sphere((0, -0.02, 0.16), 0.14, C['base'], scale=(0.95, 1.1, 1.25)); parts.append(body)
-        chest = sphere((0, -0.11, 0.17), 0.085, C['belly'], scale=(1, 0.7, 1.3)); parts.append(chest)
-        for sx in (-0.06, 0.06):
-            parts.append(cyl((sx, -0.12, 0.07), 0.028, 0.15, C['belly'] if coat in ('hachi', 'shiro', 'mike') else C['base']))
-            parts.append(sphere((sx, -0.135, 0.008), 0.032, C['belly'], scale=(1, 1.3, 0.55)))
+        body = link(sphere((0, -0.02, 0.16), 0.14, C['base'], scale=(0.95, 1.1, 1.25)), rig)
+        link(sphere((0, -0.11, 0.17), 0.085, C['belly'], scale=(1, 0.7, 1.3)), rig)
+        for k, sx in enumerate((-0.06, 0.06)):
+            j = joint((sx, -0.12, 0.145), rig, 'jnt_leg'); j['phase'] = k * 0.5
+            seg_cyl(j, 0.028, 0.15, C['belly'] if light_leg else C['base'])
+            link(sphere((0, -0.015, -0.137), 0.032, C['belly'], scale=(1, 1.3, 0.55)), j)
+            legs.append(j)
         hy, hz = -0.07, 0.36
-        tail = cyl((0.12, 0.08, 0.04), 0.022, 0.26, C['stripe'] if coat == 'tora' else C['base'], rot=(math.pi / 2, 0, -0.6)); parts.append(tail)
-    else:  # crouch / lie
-        body = sphere((0, 0.02, 0.1), 0.13, C['base'], scale=(0.9, 1.75, 0.75)); parts.append(body)
-        for sx in (-0.06, 0.06):
-            parts.append(sphere((sx, -0.2, 0.025), 0.03, C['belly'], scale=(1, 1.4, 0.6)))
+        tail = joint((0.1, 0.08, 0.03), rig, 'jnt_tail', rot=(math.pi / 2, 0, 0.24))
+        link(cyl((0, 0, 0.13), 0.022, 0.26, C['stripe'] if coat == 'tora' else C['base']), tail)
+        stripe_z = 0.31
+    elif pose == 'walk':
+        body = link(sphere((0, 0.0, 0.21), 0.13, C['base'], scale=(0.85, 1.7, 0.8)), rig)
+        link(sphere((0, -0.12, 0.19), 0.08, C['belly'], scale=(0.9, 1.0, 0.9)), rig)
+        for k, (sx, sy) in enumerate([(-0.06, -0.15), (0.06, -0.15), (-0.06, 0.15), (0.06, 0.15)]):
+            j = joint((sx, sy, 0.19), rig, 'jnt_leg'); j['phase'] = [0.0, 0.5, 0.5, 0.0][k]
+            seg_cyl(j, 0.026, 0.18, C['belly'] if light_leg and sy < 0 else C['base'])
+            link(sphere((0, -0.012, -0.178), 0.03, C['belly'], scale=(1, 1.3, 0.55)), j)
+            legs.append(j)
+        hy, hz = -0.27, 0.31
+        tail = joint((0, 0.22, 0.24), rig, 'jnt_tail', rot=(-0.55, 0, 0))
+        link(cyl((0, 0, 0.14), 0.022, 0.28, C['stripe'] if coat == 'tora' else C['base']), tail)
+        stripe_z = 0.29
+    else:  # crouch（伏せ）
+        body = link(sphere((0, 0.02, 0.1), 0.13, C['base'], scale=(0.9, 1.75, 0.75)), rig)
+        for k, sx in enumerate((-0.06, 0.06)):
+            j = joint((sx, -0.17, 0.06), rig, 'jnt_leg'); j['phase'] = k * 0.5; j['crouch'] = 1
+            link(sphere((0, -0.03, -0.035), 0.03, C['belly'], scale=(1, 1.4, 0.6)), j)
+            legs.append(j)
         hy, hz = -0.22, 0.2
-        tail = cyl((0.0, 0.3, 0.04), 0.022, 0.3, C['base'], rot=(math.pi / 2, 0, 0.2)); parts.append(tail)
-    for p in parts:
-        link(p, root)
+        tail = joint((0.0, 0.2, 0.05), rig, 'jnt_tail', rot=(math.pi / 2, 0, -0.2))
+        link(cyl((0, 0, 0.15), 0.022, 0.3, C['base']), tail)
+        stripe_z = 0.17
     if coat == 'mike':
-        link(sphere((0.06, 0.02, 0.24), 0.07, C['stripe'], scale=(1, 1, 0.8)), root)
-        link(sphere((-0.07, 0.06, 0.18), 0.06, C['patch2'], scale=(1, 1, 0.8)), root)
+        link(sphere((0.06, 0.02, stripe_z - 0.07), 0.07, C['stripe'], scale=(1, 1, 0.8)), rig)
+        link(sphere((-0.07, 0.06, stripe_z - 0.13), 0.06, C['patch2'], scale=(1, 1, 0.8)), rig)
     if coat == 'tora':
         for k in range(3):
-            st = box((0, 0.0 + k * 0.05, 0.31 if pose == 'sit' else 0.17), (0.2, 0.018, 0.02), C['stripe']); link(st, root)
-    head = empty((0, hy, hz), 'head'); link(head, root)
+            link(box((0, 0.0 + k * 0.05, stripe_z), (0.2, 0.018, 0.02), C['stripe']), rig)
+    neck = joint((0, hy, hz), rig, 'jnt_neck')
+    head = empty((0, 0, 0), 'head'); link(head, neck)
     hd = sphere((0, 0, 0), 0.105, C['base'], scale=(1.1, 0.95, 0.92)); link(hd, head)
     muz = sphere((0, -0.08, -0.03), 0.05, C['belly'], scale=(1.15, 0.8, 0.75)); link(muz, head)
     if coat == 'mike':
         link(sphere((0.05, -0.02, 0.05), 0.06, C['stripe'], scale=(1, 0.9, 0.7)), head)
+    eyes = []
     for sx in (-1, 1):
         e = cone((sx * 0.062, 0.0, 0.088), 0.042, 0.075, C['base'], rot=(0, sx * 0.25, 0), verts=4); e.rotation_euler = (0.1, sx * 0.3, math.pi / 4); link(e, head)
         eye = sphere((sx * 0.042, -0.09, 0.022), 0.017, hexc('#c9b23a') if coat in ('kuro', 'hachi') else hexc('#5b7a3a'), scale=(1, 0.5, 1.1)); link(eye, head)
         pu = sphere((sx * 0.042, -0.099, 0.022), 0.008, hexc('#111111'), scale=(0.6, 0.4, 1.4)); link(pu, head)
+        eyes += [eye, pu]
     nose = sphere((0, -0.122, -0.005), 0.011, hexc('#d98a8a'), scale=(1.2, 0.7, 0.8)); link(nose, head)
     mouth = sphere((0, -0.112, -0.05), 0.024, hexc('#7a2c2c'), scale=(1.1, 0.5, 0.15)); mouth.name = 'mouth'; link(mouth, head)
-    root['head'] = head.name; root['mouth'] = mouth.name
+    root['kind'] = 'cat'; root['pose'] = pose
+    root['head'] = head.name; root['mouth'] = mouth.name; root['neck'] = neck.name; root['rig'] = rig.name
+    root['body'] = body.name; root['tail'] = tail.name
+    root['legs'] = [j.name for j in legs]; root['eyes'] = [e.name for e in eyes]
     return root
 
 def meow(root, frames, dur=14, lift=0.18, turn=None):
@@ -228,6 +264,7 @@ def meow(root, frames, dur=14, lift=0.18, turn=None):
             head.rotation_euler = (base_r.x - lift * a, base_r.y, base_r.z + (turn or 0) * a)
             mouth.scale = (base_s.x * (1 + 0.2 * a), base_s.y, base_s.z * (1 + 5.0 * a))
             head.keyframe_insert('rotation_euler', frame=f); mouth.keyframe_insert('scale', frame=f)
+    root['meows'] = list(root.get('meows', [])) + list(frames)
 
 def meow_times(nframes, every=(40, 70), start=(1, 30), rng=None):
     rng = rng or random
@@ -253,40 +290,213 @@ def rings(loc, frames, rgb=(1, 1, 1), size=0.35, n=2):
 
 # ---------- 人 ----------
 SKIN = [hexc('#e9c3a0'), hexc('#d8a982'), hexc('#b98563'), hexc('#8a5a3c')]
-def person(loc, shirt, pants=None, skin=None, hair=None, rot_z=0, pose='stand', s=1.0, name='p'):
-    """簡略人体。root は足元（接地）。pose: stand / sit / lie"""
+def person(loc, shirt, pants=None, skin=None, hair=None, rot_z=0, pose='stand', s=1.0, name='p', act=None):
+    """簡略人体。root は足元（接地）。pose: stand / sit / lie。前は -y。
+    act: None / 'type'（キーボードを打つ）/ 'phone'（スマホを持つ）/ 'talk'（身ぶりで話す）"""
     skin = skin or SKIN[0]; pants = pants or hexc('#3b4252'); hair = hair or hexc('#2b2420')
     root = empty(loc, name); root.rotation_euler = (0, 0, rot_z); root.scale = (s, s, s)
-    P = []
+    rig = joint((0, 0, 0), root, 'jnt_rig')
+    legs, arms = [], []
     if pose == 'stand':
-        for sx in (-0.09, 0.09):
-            P.append(cyl((sx, 0, 0.42), 0.065, 0.84, pants, verts=12))
-            P.append(box((sx, -0.04, 0.03), (0.1, 0.24, 0.06), hexc('#222222')))
-        P.append(cyl((0, 0, 1.12), 0.2, 0.6, shirt, verts=16, r2=0.17))
+        for k, sx in enumerate((-0.09, 0.09)):
+            j = joint((sx, 0, 0.84), rig, 'jnt_leg'); j['phase'] = k * 0.5
+            seg_cyl(j, 0.065, 0.84, pants, verts=12)
+            link(box((0, -0.04, -0.81), (0.1, 0.24, 0.06), hexc('#222222')), j)
+            legs.append(j)
+        torso = link(cyl((0, 0, 1.12), 0.2, 0.6, shirt, verts=16, r2=0.17), rig)
         hz = 1.58
-        for sx in (-0.25, 0.25):
-            P.append(cyl((sx, 0, 1.13), 0.055, 0.56, shirt, verts=10, rot=(0, sx * 0.12, 0)))
-            P.append(sphere((sx * 1.06, 0, 0.82), 0.05, skin, seg=10))
+        for k, sx in enumerate((-0.25, 0.25)):
+            j = joint((sx, 0, 1.41), rig, 'jnt_arm', rot=(0, -sx * 0.1, 0)); j['phase'] = 0.5 - k * 0.5
+            seg_cyl(j, 0.055, 0.56, shirt)
+            link(sphere((0, 0, -0.6), 0.05, skin, seg=10), j)
+            arms.append(j)
     elif pose == 'sit':
         for sx in (-0.09, 0.09):
-            P.append(cyl((sx, -0.22, 0.45), 0.068, 0.42, pants, verts=12, rot=(math.pi / 2, 0, 0)))
-            P.append(cyl((sx, -0.43, 0.22), 0.06, 0.44, pants, verts=12))
-        P.append(cyl((0, 0, 0.75), 0.2, 0.6, shirt, verts=16, r2=0.17))
+            link(cyl((sx, -0.22, 0.45), 0.068, 0.42, pants, verts=12, rot=(math.pi / 2, 0, 0)), rig)
+            link(cyl((sx, -0.43, 0.22), 0.06, 0.44, pants, verts=12), rig)
+        torso = link(cyl((0, 0, 0.75), 0.2, 0.6, shirt, verts=16, r2=0.17), rig)
         hz = 1.2
-        for sx in (-0.24, 0.24):
-            P.append(cyl((sx, -0.1, 0.8), 0.055, 0.42, shirt, verts=10, rot=(-0.5, 0, 0)))
-            P.append(sphere((sx * 0.9, -0.22, 0.6), 0.05, skin, seg=10))
+        for k, sx in enumerate((-0.24, 0.24)):
+            j = joint((sx, 0.0, 0.98), rig, 'jnt_arm', rot=(-0.5, 0, 0)); j['phase'] = k * 0.5
+            seg_cyl(j, 0.055, 0.42, shirt)
+            link(sphere((0, 0, -0.44), 0.05, skin, seg=10), j)
+            arms.append(j)
     else:  # lie（仰向け、頭は -y）
-        P.append(box((0, 0.35, 0.14), (0.42, 1.2, 0.22), pants))
-        P.append(box((0, -0.4, 0.15), (0.44, 0.5, 0.24), shirt))
+        link(box((0, 0.35, 0.14), (0.42, 1.2, 0.22), pants), rig)
+        torso = link(box((0, -0.4, 0.15), (0.44, 0.5, 0.24), shirt), rig)
         hz = None
-    for p in P:
-        link(p, root)
-    head = empty((0, 0, hz) if hz else (0, -0.78, 0.2), 'phead'); link(head, root)
+    neck = joint((0, 0, hz) if hz else (0, -0.78, 0.2), rig, 'jnt_neck')
+    head = empty((0, 0, 0), 'phead'); link(head, neck)
     link(sphere((0, 0, 0), 0.13, skin, scale=(0.9, 1, 1.05)), head)
     link(sphere((0, 0.03, 0.05), 0.135, hair, scale=(0.95, 1.0, 0.85)), head)
-    root['head'] = head.name
+    root['kind'] = 'person'; root['pose'] = pose; root['act'] = act or ''
+    root['head'] = head.name; root['neck'] = neck.name; root['rig'] = rig.name; root['body'] = torso.name
+    root['legs'] = [j.name for j in legs]; root['arms'] = [j.name for j in arms]
     return root
+
+def move(root, keys):
+    """keys: [(frame, (x, y, z)), ...]。root をその位置へ動かす（歩く足どり・向きは animate_life が付ける）"""
+    for f, p in keys:
+        root.location = p; root.keyframe_insert('location', frame=f)
+
+def show_between(root, f_in=None, f_out=None):
+    """root を f_in から f_out まで表示（それ以外は大きさ 0）。姿勢の入れ替えに使う"""
+    s = root.scale.copy()
+    pr = bpy.context.preferences.edit; old = pr.keyframe_new_interpolation_type
+    pr.keyframe_new_interpolation_type = 'CONSTANT'
+    root.scale = (0, 0, 0) if f_in else s; root.keyframe_insert('scale', frame=1)
+    if f_in:
+        root.scale = s; root.keyframe_insert('scale', frame=f_in)
+    if f_out:
+        root.scale = (0, 0, 0); root.keyframe_insert('scale', frame=f_out)
+    pr.keyframe_new_interpolation_type = old
+
+# ---------- 生きている動き ----------
+def _osc(o, path, idx, base, amp, period, n, rnd, f0=1, f1=None):
+    """極値ごとにキーを打つゆるやかな往復（ベジェ補間で正弦波に近くなる）"""
+    f1 = f1 or n
+    ph = rnd.random()
+    f = f0 - int(ph * period / 2)
+    sign = 1
+    while f <= f1 + period:
+        v = list(getattr(o, path)); v[idx] = base + sign * amp * rnd.uniform(0.7, 1.0)
+        setattr(o, path, v); o.keyframe_insert(path, index=idx, frame=f)
+        f += max(4, int(period / 2 * rnd.uniform(0.8, 1.2))); sign = -sign
+    v = list(getattr(o, path)); v[idx] = base; setattr(o, path, v)
+
+def _glances(o, n, rnd, every, yaw, pitch, f0=1, f1=None):
+    """首を時々ほかの方向へ向ける（向けて、しばらく止まる）"""
+    f1 = f1 or n
+    base = o.rotation_euler.copy()
+    o.keyframe_insert('rotation_euler', frame=f0)
+    f = f0 + rnd.randint(*every)
+    while f < f1:
+        o.keyframe_insert('rotation_euler', frame=f)
+        o.rotation_euler = (base.x + rnd.uniform(-pitch, pitch), base.y + rnd.uniform(-0.08, 0.08), base.z + rnd.uniform(-yaw, yaw))
+        o.keyframe_insert('rotation_euler', frame=f + rnd.randint(7, 12))
+        f += rnd.randint(*every)
+    o.rotation_euler = base
+
+def _blinks(objs, n, rnd):
+    pr = bpy.context.preferences.edit; old = pr.keyframe_new_interpolation_type
+    pr.keyframe_new_interpolation_type = 'CONSTANT'
+    base = [o.scale.copy() for o in objs]
+    for o in objs:
+        o.keyframe_insert('scale', frame=1)
+    f = rnd.randint(20, 90)
+    while f < n:
+        for o, b in zip(objs, base):
+            o.scale = (b.x, b.y, b.z * 0.12); o.keyframe_insert('scale', frame=f)
+            o.scale = b; o.keyframe_insert('scale', frame=f + 3)
+        f += rnd.randint(60, 150)
+    pr.keyframe_new_interpolation_type = old
+
+def _path(roots, n):
+    """各 root の毎フレームの位置・向き（シーンを評価して読む）"""
+    s = bpy.context.scene
+    pos = {r.name: [] for r in roots}; rot = {r.name: [] for r in roots}
+    for f in range(1, n + 1):
+        s.frame_set(f)
+        for r in roots:
+            pos[r.name].append(r.location.copy()); rot[r.name].append(r.rotation_euler.z)
+    s.frame_set(1)
+    return pos, rot
+
+def animate_life(n, seed=5):
+    """場面の猫と人すべてに、呼吸・しっぽ・首・まばたき・腕の小さな動きを付け、
+    動かされている（location にキーがある）猫と人には、歩く足どり・上下動・進む向きを付ける"""
+    rnd = random.Random(seed)
+    roots = [o for o in bpy.data.objects if o.get('kind') in ('cat', 'person')]
+    if not roots:
+        return
+    animated = [r for r in roots if r.animation_data and r.animation_data.action]
+    pos, rot = _path(animated, n) if animated else ({}, {})
+    O = bpy.data.objects
+    for r in roots:
+        cat_ = r['kind'] == 'cat'
+        rig = O[r['rig']]; body = O[r['body']]; neck = O[r['neck']]
+        legs = [O[x] for x in r.get('legs', [])]; arms = [O[x] for x in r.get('arms', [])]
+        # 歩いている区間
+        P = pos.get(r.name); moving = [False] * n; speed = [0.0] * n
+        if P:
+            for i in range(1, n):
+                d = (P[i] - P[i - 1]).length / max(1e-6, r.scale.x if r.scale.x > 0 else 1)
+                speed[i] = d
+            # 3フレーム平均で判定
+            for i in range(n):
+                w = speed[max(0, i - 2):i + 3]
+                moving[i] = sum(w) / len(w) > (0.004 if cat_ else 0.006)
+        walking = any(moving)
+        # 呼吸（体）
+        bs = body.scale.copy()
+        _osc(body, 'scale', 2, bs.z, bs.z * (0.025 if cat_ else 0.015), rnd.randint(40, 60), n, rnd)
+        # 首
+        if cat_:
+            _glances(neck, n, rnd, (45, 110), yaw=0.45, pitch=0.12)
+            _blinks([O[x] for x in r['eyes']], n, rnd)
+            tail = O[r['tail']]
+            ax = 0 if r['pose'] == 'walk' else 2
+            amp = 0.35 if r['pose'] != 'walk' else 0.25
+            _osc(tail, 'rotation_euler', ax, tail.rotation_euler[ax], amp, rnd.randint(36, 70), n, rnd)
+            if r['pose'] == 'walk':
+                _osc(tail, 'rotation_euler', 2, tail.rotation_euler.z, 0.3, rnd.randint(30, 50), n, rnd)
+        else:
+            if r['pose'] != 'lie':
+                _glances(neck, n, rnd, (60, 140), yaw=0.35, pitch=0.1)
+            else:
+                _glances(neck, n, rnd, (90, 180), yaw=0.5, pitch=0.05)
+        # 腕（人）
+        act = r.get('act', '') if not cat_ else ''
+        if arms and not walking:
+            for k, a in enumerate(arms):
+                b = a.rotation_euler.copy()
+                if act == 'type':
+                    a.rotation_euler = (b.x - 0.75, b.y, b.z); b = a.rotation_euler.copy()
+                    _osc(a, 'rotation_euler', 0, b.x, 0.05, rnd.randint(5, 8), n, rnd)
+                elif act == 'phone':
+                    if k == 1:
+                        a.rotation_euler = (b.x - 1.25, b.y, b.z + 0.3); b = a.rotation_euler.copy()
+                    _osc(a, 'rotation_euler', 0, b.x, 0.04, rnd.randint(40, 70), n, rnd)
+                elif act == 'talk':
+                    _osc(a, 'rotation_euler', 0, b.x - 0.35, 0.3, rnd.randint(18, 30), n, rnd)
+                else:
+                    _osc(a, 'rotation_euler', 0, b.x, 0.06, rnd.randint(50, 90), n, rnd)
+        if not walking:
+            continue
+        # 歩く：足どり（脚の振り）・上下動・向き
+        stride = 0.42 if cat_ else 1.3          # 1周期で進む距離（root の大きさ 1 のとき）
+        amp_leg = 0.55 if cat_ else 0.45
+        if r.get('pose') == 'crouch':
+            stride, amp_leg = 0.3, 0.0
+        phase = 0.0
+        legb = [l.rotation_euler.copy() for l in legs]; armb = [a.rotation_euler.copy() for a in arms]
+        rb = rig.location.copy()
+        R0 = rot[r.name]; heading = R0[0]
+        rot_anim = max(R0) - min(R0) > 1e-4
+        for i in range(n):
+            f = i + 1
+            phase += speed[i] / stride
+            w = 1.0 if moving[i] else 0.0
+            for l, b in zip(legs, legb):
+                a_ = 0.5 if l.get('crouch') else amp_leg
+                l.rotation_euler = (b.x + w * a_ * math.sin(2 * math.pi * (phase + l['phase'])), b.y, b.z)
+                l.keyframe_insert('rotation_euler', frame=f)
+            for a, b in zip(arms, armb):
+                a.rotation_euler = (b.x + w * 0.4 * math.sin(2 * math.pi * (phase + a['phase'])), b.y, b.z)
+                a.keyframe_insert('rotation_euler', frame=f)
+            rig.location = (rb.x, rb.y, rb.z + w * (0.012 if cat_ else 0.025) * abs(math.sin(2 * math.pi * phase)))
+            rig.keyframe_insert('location', frame=f)
+            if not rot_anim:
+                j0 = max(0, i - 4); j1 = min(n - 1, i + 4)
+                d = P[j1] - P[j0]
+                if d.length > 0.02 * r.scale.x:
+                    target = math.atan2(d.x, -d.y)
+                    while target - heading > math.pi: target -= 2 * math.pi
+                    while target - heading < -math.pi: target += 2 * math.pi
+                    heading += (target - heading) * 0.25
+                r.rotation_euler.z = heading
+                r.keyframe_insert('rotation_euler', index=2, frame=f)
+        rig.location = rb
 
 # ---------- 建物・街 ----------
 WALLS = [hexc(h) for h in ['#efe6d6', '#e6dccb', '#d9d2c5', '#f4efe6', '#cfd6d8', '#e8d9c2', '#d6c7b0', '#f1e4d0']]

@@ -1,12 +1,10 @@
 #!/bin/bash
-# 全カットの描画が終わったら、s15b（腕の修正前に描画）を描き直し、字幕などを重ねて完成版を書き出す
+# 全カットの描画が終わったら、字幕などを重ねて完成版を書き出す
 OUT=/home/user/work_neko/out
 V=/home/user/TUBEX/pilots/moshimo-neko-meow/video
 PY=/home/user/work_neko/venv/bin/python
 while ! grep -q ALLDONE $OUT/render_all.log; do sleep 60; done
 echo "render done $(date +%T)"
-rm -rf $OUT/frames/s15b
-$PY $V/render_shot.py s15b > $OUT/logs/s15b_redo.log 2>&1; grep -h DONE $OUT/logs/s15b_redo.log
 cd $V
 $PY - <<'P' > $OUT/seglist.txt
 import sys; sys.path.insert(0, '/home/user/TUBEX/pilots/moshimo-neko-meow/video')
