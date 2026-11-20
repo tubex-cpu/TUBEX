@@ -1046,22 +1046,615 @@ def s15b(n):  # 冒頭の部屋：一度だけ鳴き、飼い主が振り向く
     return M([(f, 0.9, 1.05)], bed=0.0, amb='room')
 
 
-# カット表：章番号 -> [(その章で何行目から, 関数)]
+
+# ======================================================================
+# 第4稿（2026-11-20 社長指示「台本差し替え」）で足したカット
+# ======================================================================
+import json as _json, os as _os
+
+def _tl():
+    return _json.load(open(_os.environ.get('NEKO_OUT', '/home/user/work_neko/out') + '/timeline.json'))
+
+def tex_plane(name, fn, loc, w, h, rot=(math.pi / 2, 0, 0), size=(1920, 1080)):
+    """PIL で描いた絵を貼った板（画面・紙・ボード）"""
+    path = make_tex(name, fn, size)
+    m = bpy.data.materials.new('tx_' + name); m.use_nodes = True
+    t = m.node_tree.nodes.new('ShaderNodeTexImage'); t.image = bpy.data.images.load(path)
+    m.node_tree.links.new(t.outputs['Color'], m.node_tree.nodes['Principled BSDF'].inputs['Base Color'])
+    bpy.ops.mesh.primitive_plane_add(location=loc, rotation=rot)
+    o = bpy.context.object; o.scale = (w / 2, h / 2, 1); o.data.materials.append(m)
+    return o
+
+def wall_clock(loc, n, h0=15.0, h1=15.0, r=0.22):
+    """奥の壁（-y を向く）の時計。h0 時から h1 時まで針が回る"""
+    cyl(loc, r, 0.04, hexc('#f6f4ee'), rot=(math.pi / 2, 0, 0))
+    cyl((loc[0], loc[1] + 0.01, loc[2]), r + 0.02, 0.03, hexc('#3a3a3a'), rot=(math.pi / 2, 0, 0))
+    hands = []
+    for L, wdt, per in ((r * 0.55, 0.025, 12.0), (r * 0.85, 0.016, 1.0)):
+        e = empty((loc[0], loc[1] - 0.04, loc[2]), 'hand')
+        link(box((0, 0, L / 2), (wdt, 0.01, L), hexc('#222222')), e)
+        hands.append((e, per))
+    for e, per in hands:
+        for f, hh in ((1, h0), (n, h1)):
+            a = -2 * math.pi * ((hh % per) / per)
+            e.rotation_euler = (0, a, 0); e.keyframe_insert('rotation_euler', frame=f)
+        for fc in (e.animation_data.action.fcurves if hasattr(e.animation_data.action, 'fcurves') else []):
+            for k in fc.keyframe_points:
+                k.interpolation = 'LINEAR'
+
+def home_office(night=False, earphones=False, mom_act='type', cat_walk=True, kid=False, seed=1):
+    """冒頭からくり返す家：集合住宅のリビング、在宅勤務の母親、茶トラ"""
+    living_room(night=night)
+    table((0.5, 1.4, 0), 1.2, 0.6, 0.72)
+    laptop((0.5, 1.45, 0.75), rot_z=math.pi)
+    mom = person((0.5, 0.75, 0), hexc('#c98f7a'), pants=hexc('#4a4f5c'), pose='sit', rot_z=math.pi, act=mom_act, name='mom')
+    if earphones:
+        h = bpy.data.objects[mom['head']]
+        for sx in (-0.14, 0.14):
+            link(sphere((sx, 0, 0), 0.04, hexc('#f2f2f2')), h)
+    box((-2.2, 1.9, 0.5), (0.5, 0.4, 0.06), hexc('#e8e4dc'))  # たたみかけの洗濯物
+    k = None
+    if kid:
+        k = person((-1.4, 0.2, 0), hexc('#e8a33d'), pants=hexc('#4a6aa0'), pose='sit', rot_z=0.4, s=0.62, name='kid')
+    return mom, k
+
+# ---------------- 00 ----------------
+def x00a(n):  # 集合住宅のリビング：母親・子ども・茶トラ。15:00 に一声
+    mom, kid = home_office(kid=True)
+    c = cat((-0.6, 0.2, 0), 'tora', s=0.62, rot_z=-2.6, name='basecat', pose='crouch')
+    wall_clock((-1.8, 2.43, 1.9), n, 14 + 59.95 / 60, 15 + 1 / 60)
+    f0 = int(3.3 * FPS)
+    fr = [f0] + meow_times(n - f0, every=(45, 65), rng=random.Random(2))
+    fr = [f0] + [f0 + f for f in fr[1:]]
+    meow(c, fr)
+    cam = camera(32, dof=2.6, fstop=2.2)
+    cam_path(cam, [(0, (2.4, -2.2, 1.7), (-0.2, 0.8, 0.6)), (1, (1.6, -1.6, 1.3), (-0.3, 0.6, 0.5))], n)
+    return M([(f, 1.0, 1.0) for f in fr], bed=0.5, amb='room', silent_until=f0)
+
+# ---------------- 01 ----------------
+def kid_room(n, quiet=False, parent=True, night=True):
+    sky(hexc('#0b1020')); s = bpy.context.scene; s.view_settings.exposure = -0.25
+    s.display.shading.shadow_intensity = 0.35
+    light_dir((-0.4, 0.6, 0.6))
+    room(4.5, 4.5, 2.5, floor=hexc('#7a6650'), wall=hexc('#a7b0c4'), night=True)
+    bed((0.4, 0.8, 0), rot_z=0, quilt=hexc('#e8b06a'))
+    kid = person((0.4, 0.95, 0.5), hexc('#f0c98a'), pants=hexc('#f0c98a'), pose='lie', rot_z=math.pi, s=0.62, name='kid')
+    box((-1.6, 2.0, 0.6), (0.8, 0.4, 1.2), hexc('#c9a27a'))  # 本棚
+    cyl((-1.5, 1.9, 1.35), 0.08, 0.2, hexc('#ffd98a'))  # 小さな明かり
+    c = cat((1.35, 0.2, 0), 'tora', s=0.62, rot_z=2.4, pose='crouch', name='basecat')
+    ev = []
+    if not quiet:
+        ev = add_meows([c], n, every=(55, 85), gain=0.9)
+    if parent:
+        p = person((-0.4, 0.2, 0), hexc('#c98f7a'), pants=hexc('#4a4f5c'), rot_z=-1.9, name='mom')
+        move(p, [(1, (-1.6, -1.8, 0)), (int(n * 0.35), (-0.4, 0.1, 0))])
+    return ev
+
+def x01h(n):  # ニューヨーク：真夜中、子どもが目を開け、親が戻る
+    ev = kid_room(n)
+    cam = camera(30, dof=2.4, fstop=2.0)
+    cam_path(cam, [(0, (2.3, -2.0, 1.9), (0.2, 0.7, 0.5)), (1, (1.7, -1.5, 1.5), (0.2, 0.7, 0.5))], n)
+    return M(ev, bed=0.3, amb='night')
+
+# ---------------- 02 ----------------
+def x02b(n):  # メールを一行書いて振り返る
+    mom, _ = home_office()
+    c = cat((-0.3, 0.35, 0), 'tora', s=0.62, rot_z=-2.3, name='basecat', pose='walk')
+    move(c, [(1, (-1.4, -0.5, 0)), (int(n * 0.3), (-0.2, 0.3, 0))])
+    h = bpy.data.objects[mom['head']]
+    for f0 in range(int(n * 0.3), n - 30, 110):
+        h.rotation_euler = (0, 0, 0); h.keyframe_insert('rotation_euler', frame=f0)
+        h.rotation_euler = (0, 0, -1.0); h.keyframe_insert('rotation_euler', frame=f0 + 12)
+        h.keyframe_insert('rotation_euler', frame=f0 + 40)
+        h.rotation_euler = (0, 0, 0); h.keyframe_insert('rotation_euler', frame=f0 + 55)
+    ev = add_meows([c], n, every=(45, 65))
+    cam = camera(35, dof=2.0, fstop=2.2)
+    cam_path(cam, [(0, (-1.6, -1.2, 1.2), (0.2, 0.9, 0.7)), (1, (-1.0, -0.8, 1.0), (0.2, 0.9, 0.7))], n)
+    return M(ev, bed=0.2, amb='room')
+
+def genkan(n, who=True):
+    sky(hexc('#d8d0c2')); s = bpy.context.scene; s.view_settings.exposure = 0.45
+    light_dir((0.3, -0.4, 0.8))
+    box((0, 0, -0.05), (4, 5, 0.1), hexc('#b9a88e'))
+    box((0, -1.6, -0.2), (1.6, 1.0, 0.1), hexc('#8d8a84'))
+    box((0, -2.15, 1.1), (1.0, 0.08, 2.2), hexc('#5a4636'))
+    box((0.36, -2.08, 1.05), (0.05, 0.08, 0.05), hexc('#c0b080'))
+    box((-0.95, 0, 1.3), (0.1, 5, 2.6), hexc('#efe8dc')); box((0.95, 0, 1.3), (0.1, 5, 2.6), hexc('#efe8dc'))
+    box((0.7, -1.2, 0.5), (0.4, 0.6, 1.0), hexc('#a4825f'))
+    c = cat((0.1, 0.2, 0), 'tora', s=0.62, rot_z=0.2, name='basecat')
+    if who:
+        p = person((-0.2, -1.55, -0.15), hexc('#c98f7a'), pants=hexc('#4a4f5c'), rot_z=math.pi, name='mom')
+        h = bpy.data.objects[p['head']]
+        h.keyframe_insert('rotation_euler', frame=int(n * 0.3))
+        h.rotation_euler = (0.25, 0, 0); h.keyframe_insert('rotation_euler', frame=int(n * 0.3) + 14)
+    return c
+
+def x02c(n):  # 外出する人が玄関で立ち止まる
+    c = genkan(n)
+    ev = add_meows([c], n, every=(45, 65))
+    cam = camera(30, dof=2.0, fstop=2.0)
+    cam_path(cam, [(0, (0.6, 1.9, 1.45), (-0.1, -1.6, 0.95)), (1, (0.4, 1.3, 1.3), (-0.1, -1.6, 0.9))], n)
+    return M(ev, bed=0.2, amb='room')
+
+def x02e(n):  # 留守番カメラ：誰もいない部屋の猫
+    living_room()
+    c = cat((0.3, 0.8, 0), 'tora', s=0.62, rot_z=math.pi * 0.8, name='basecat', pose='walk')
+    move(c, [(1, (1.4, 0.0, 0)), (int(n * 0.4), (0.0, 0.9, 0)), (int(n * 0.75), (0.0, 0.9, 0)), (n, (-0.8, 0.4, 0))])
+    ev = add_meows([c], n, every=(50, 75), gain=0.6)
+    cam = camera(18)
+    cam_path(cam, [(0, (3.2, -2.7, 2.45), (-0.4, 1.0, 0.2)), (1, (3.2, -2.7, 2.45), (-0.4, 1.0, 0.2))], n)
+    return M(ev, bed=0.1, amb='room')
+
+def draw_video_wall(im, d):
+    rnd = random.Random(7)
+    d.rectangle((0, 0, 1920, 1080), fill=(236, 239, 243))
+    cols = [(217, 139, 58), (60, 60, 64), (141, 141, 136), (240, 238, 232), (190, 120, 70)]
+    for i in range(12):
+        x = (i % 4) * 476 + 18; y = (i // 4) * 352 + 18
+        d.rounded_rectangle((x, y, x + 456, y + 330), 18, fill=(255, 255, 255), outline=(205, 210, 216), width=2)
+        d.rounded_rectangle((x + 14, y + 14, x + 442, y + 254), 12, fill=rnd.choice([(214, 200, 180), (196, 205, 214), (210, 196, 196)]))
+        cx, cy = x + 228 + rnd.randint(-60, 60), y + 170; col = rnd.choice(cols)
+        d.ellipse((cx - 55, cy - 20, cx + 55, cy + 80), fill=col); d.ellipse((cx - 42, cy - 85, cx + 42, cy - 5), fill=col)
+        d.polygon([(cx - 40, cy - 62), (cx - 32, cy - 110), (cx - 10, cy - 78)], fill=col)
+        d.polygon([(cx + 40, cy - 62), (cx + 32, cy - 110), (cx + 10, cy - 78)], fill=col)
+        d.ellipse((cx - 10, cy - 40, cx + 10, cy - 24), fill=(120, 40, 40))
+        d.polygon([(x + 205, y + 105), (x + 205, y + 165), (x + 255, y + 135)], fill=(255, 255, 255))
+        d.rounded_rectangle((x + 14, y + 270, x + 300, y + 286), 6, fill=(200, 204, 210))
+        d.rounded_rectangle((x + 14, y + 298, x + 200, y + 312), 6, fill=(222, 225, 230))
+
+def x02d(n):  # SNS に同じ動画が並ぶ
+    sky(hexc('#2a2f3a')); s = bpy.context.scene; s.view_settings.exposure = 0.2
+    s.display.shading.light = 'FLAT'; s.display.shading.show_shadows = False
+    tex_plane('vwall', draw_video_wall, (0, 0, 0), 16, 9)
+    cam = camera(50)
+    cam_path(cam, [(0, (0, -14, 0.5), (0, 0, 0.5)), (1, (0, -9, 0), (0, 0, 0))], n)
+    return M([], bed=0.6, amb='room')
+
+# ---------------- 03 ----------------
+def x03w(n):  # 待合室：キャリー、待つ人、時計
+    env_clinic()
+    rnd = random.Random(8)
+    for k in range(4):
+        x = -3.4 + k * 1.3
+        person((x, 2.75, 0), rnd.choice([hexc('#3d5a80'), hexc('#c46a4a'), hexc('#4a6b4a'), hexc('#8a8a8a')]), pose='sit', rot_z=0)
+        carrier((x + 0.45, 2.3, 0), rot_z=rnd.uniform(-0.3, 0.3))
+    for i in range(6):
+        carrier((-3.8 + i * 0.8, 1.2, 0), rot_z=rnd.uniform(-0.4, 0.4))
+    wall_clock((-1.5, 3.43, 2.1), n, 12.0, 17.0, r=0.26)
+    ev = [(f, 0.55, rnd.uniform(0.85, 1.3)) for f in range(8, n, 14)]
+    cam = camera(30)
+    cam_path(cam, [(0, (1.5, -2.8, 1.8), (-1.6, 2.6, 1.2)), (1, (0.4, -2.2, 1.7), (-1.6, 3.0, 1.8))], n)
+    return M(ev, bed=0.7, amb='room')
+
+# ---------------- 04 ----------------
+def x04d(n):  # 間取りのちがい：ひと部屋の家と、寝室を分けられる家
+    sky(hexc('#d9d2c4')); s = bpy.context.scene; s.view_settings.exposure = 0.45
+    light_dir((0.3, -0.3, 0.9))
+    for X, two in ((-3.2, False), (3.2, True)):
+        box((X, 0, -0.05), (5, 4, 0.1), hexc('#b48a63'))
+        for sx in (-2.5, 2.5):
+            box((X + sx, 0, 0.6), (0.12, 4, 1.2), hexc('#efe8dc'))
+        for sy in (-2, 2):
+            box((X, sy, 0.6), (5, 0.12, 1.2), hexc('#efe8dc'))
+        if two:
+            box((X, 0, 0.6), (0.12, 4, 1.2), hexc('#e2dacd'))
+            bed((X + 1.3, 0.4, 0)); person((X + 1.3, 0.55, 0.5), hexc('#8fa3b8'), pants=hexc('#8fa3b8'), pose='lie', rot_z=math.pi)
+            c = cat((X - 1.3, -0.5, 0), 'tora', s=0.62, rot_z=0.4)
+            fr = meow_times(n, every=(45, 70)); meow(c, fr)
+            rings((X - 1.3, -0.5, 0.35), fr, rgb=(1, 0.9, 0.6), size=0.9, n=1)
+        else:
+            bed((X + 1.0, 0.4, 0)); person((X + 1.0, 0.55, 0.5), hexc('#8fa3b8'), pants=hexc('#8fa3b8'), pose='lie', rot_z=math.pi)
+            c = cat((X + 0.1, -0.3, 0), 'saba', s=0.62, rot_z=-0.4)
+            fr = meow_times(n, every=(40, 65)); meow(c, fr)
+            rings((X + 0.1, -0.3, 0.35), fr, rgb=(1, 0.9, 0.6), size=1.6, n=2)
+    cam = camera(35)
+    cam_path(cam, [(0, (0, -11, 9), (0, 0, 0)), (1, (0, -9.5, 7.5), (0, 0.3, 0))], n)
+    return M([(f, 0.7, 1.0) for f in range(30, n, 50)], bed=0.2, amb='room')
+
+# ---------------- 05 ----------------
+def x05b(n):  # 夜9時、子どもの寝かしつけ
+    ev = kid_room(n)
+    cam = camera(30, dof=2.4, fstop=2.0)
+    cam_path(cam, [(0, (-1.9, -2.1, 1.8), (0.3, 0.7, 0.5)), (1, (-1.3, -1.6, 1.4), (0.3, 0.7, 0.5))], n)
+    return M(ev, bed=0.3, amb='night')
+
+def x05e(n):  # 午前2時、午前4時：寝室の時計が進む
+    c = env_bedroom(n)
+    wall_clock((-1.0, 2.43, 1.7), n, 2.0, 4.0)
+    ev = add_meows([c], n, every=(50, 80), gain=0.8)
+    cam = camera(32, dof=2.6, fstop=2.0)
+    cam_path(cam, [(0, (1.4, -2.0, 1.4), (-0.6, 1.6, 1.2)), (1, (1.0, -1.6, 1.3), (-0.8, 2.0, 1.6))], n)
+    return M(ev, bed=0.3, amb='night')
+
+def x05f(n):  # 朝：弁当、子どもを起こし、忘れ物を探す
+    sky(hexc('#e9e2d4')); s = bpy.context.scene; s.view_settings.exposure = 0.5
+    light_dir((0.6, -0.4, 0.7))
+    room(6, 5, 2.6)
+    box((1.6, 2.1, 0.45), (2.6, 0.6, 0.9), hexc('#e8e2d8')); box((1.6, 2.1, 0.92), (2.6, 0.62, 0.04), hexc('#9a9a9a'))
+    box((1.2, 2.0, 0.97), (0.3, 0.2, 0.06), hexc('#d24b3e'))  # 弁当箱
+    p = person((1.4, 1.5, 0), hexc('#c98f7a'), pants=hexc('#4a4f5c'), rot_z=math.pi, act='type', name='mom')
+    kid = person((-2.0, 0.2, 0), hexc('#e8a33d'), pants=hexc('#4a6aa0'), rot_z=-1.4, s=0.62, name='kid')
+    move(kid, [(1, (-2.2, 0.6, 0)), (int(n * 0.5), (0.2, -0.3, 0)), (n, (-1.2, -0.9, 0))])
+    box((-1.6, -1.2, 0.15), (0.35, 0.2, 0.3), hexc('#3d6aa0'))  # ランドセル
+    c = cat((0.3, 0.8, 0), 'tora', s=0.62, rot_z=2.6, name='basecat')
+    ev = add_meows([c], n, every=(45, 70))
+    cam = camera(30)
+    cam_path(cam, [(0, (2.6, -2.6, 1.9), (0.0, 0.8, 0.7)), (1, (1.8, -2.4, 1.7), (-0.4, 0.6, 0.6))], n)
+    return M(ev, bed=0.2, amb='room')
+
+# ---------------- 06 ----------------
+def x06n(n):  # 猫を飼っていない隣人の寝室
+    sky(hexc('#0b1020')); s = bpy.context.scene; s.view_settings.exposure = -0.3
+    s.display.shading.shadow_intensity = 0.35; light_dir((-0.4, 0.6, 0.6))
+    room(5, 5, 2.5, floor=hexc('#6f6a62'), wall=hexc('#b5aca0'), night=True)
+    bed((0, 0.6, 0)); person((0, 0.75, 0.5), hexc('#9aa88f'), pants=hexc('#9aa88f'), pose='lie', rot_z=math.pi, name='nb')
+    box((1.6, 2.3, 0.6), (1.2, 0.3, 0.7), hexc('#3a3a3a'))  # テレビ台
+    tv = box((1.6, 2.3, 1.2), (1.0, 0.06, 0.6), hexc('#9cc3e0'))
+    tv.keyframe_insert('scale', frame=int(n * 0.2)); tv.scale = (1, 1, 0.0); tv.keyframe_insert('scale', frame=int(n * 0.2) + 3)
+    box((1.6, 2.33, 1.2), (1.02, 0.04, 0.62), hexc('#15171c'))
+    # 壁の向こうから届く輪
+    fr = meow_times(n, every=(50, 75))
+    rings((-2.6, 0.8, 1.0), fr, rgb=(1, 0.9, 0.6), size=0.8, n=1)
+    cam = camera(30, dof=2.6, fstop=2.0)
+    cam_path(cam, [(0, (2.2, -2.4, 2.0), (0, 0.6, 0.6)), (1, (1.6, -1.9, 1.6), (-0.4, 0.6, 0.6))], n)
+    return M([(f, 0.35, 1.0) for f in fr], bed=0.15, amb='night')
+
+# ---------------- 07 ----------------
+def draw_waves(im, d):
+    rnd = random.Random(4)
+    d.rectangle((0, 0, 1920, 1080), fill=(30, 33, 40))
+    for k in range(6):
+        y = 90 + k * 165
+        d.rounded_rectangle((60, y - 60, 1860, y + 60), 10, fill=(44, 48, 58))
+        xs = range(80, 1840, 6)
+        for x in xs:
+            a = abs(math.sin(x * 0.013 + k)) * 40 * rnd.uniform(0.4, 1.0)
+            d.line((x, y - a, x, y + a), fill=(120, 200, 160), width=3)
+        if k < 5:
+            xe = rnd.randint(1300, 1700)
+            d.rectangle((xe, y - 60, 1840, y + 60), fill=(150, 40, 40))
+            d.text((xe + 20, y - 30), 'NG', font=_font(50), fill=(255, 255, 255))
+
+def x07r(n):  # 家でナレーションを録る人
+    sky(hexc('#d6d1c8')); s = bpy.context.scene; s.view_settings.exposure = 0.4
+    room(5, 4, 2.6, wall=hexc('#d9d3c9'))
+    table((0, 0.9, 0), 1.6, 0.7, 0.72)
+    tex_plane('waves', draw_waves, (0, 1.2, 1.12), 0.9, 0.5, rot=(math.pi / 2 - 0.15, 0, 0))
+    box((0, 1.23, 1.12), (0.94, 0.03, 0.54), hexc('#1d1d1d'), rot=(-0.15, 0, 0))
+    cyl((0.0, 0.55, 0.9), 0.012, 0.35, hexc('#3a3a3a'))
+    cyl((0.0, 0.5, 1.12), 0.05, 0.14, hexc('#2a2a2a'), rot=(math.pi / 2 - 0.4, 0, 0))
+    p = person((0, 0.1, 0), hexc('#6a7f9a'), pose='sit', rot_z=math.pi, name='rec')
+    box((1.8, 1.7, 0.9), (0.9, 0.4, 1.8), hexc('#8c6a4c'))
+    c = cat((1.75, 1.6, 1.82), 'tora', s=0.62, rot_z=math.pi * 1.1)
+    ev = add_meows([c], n, every=(55, 80), gain=0.8)
+    cam = camera(35, dof=2.0, fstop=2.2)
+    cam_path(cam, [(0, (1.4, -1.6, 1.5), (0.2, 1.0, 1.0)), (1, (0.7, -1.2, 1.35), (0.2, 1.1, 1.05))], n)
+    return M(ev, bed=0.15, amb='room')
+
+def x07s(n):  # 受験生が同じ行を読み直す
+    sky(hexc('#d6d1c8')); s = bpy.context.scene; s.view_settings.exposure = 0.4
+    room(4.5, 4, 2.5, wall=hexc('#e6e0d4'))
+    table((0, 1.2, 0), 1.1, 0.6, 0.72)
+    box((0, 1.1, 0.76), (0.42, 0.3, 0.02), hexc('#f7f5ef'))
+    box((0, 1.1, 0.775), (0.01, 0.3, 0.01), hexc('#cfcac0'))
+    p = person((0, 0.55, 0), hexc('#3d4f7a'), pose='sit', rot_z=math.pi, act='type', s=0.9)
+    h = bpy.data.objects[p['head']]; h.rotation_euler = (0.35, 0, 0); h.keyframe_insert('rotation_euler', frame=1)
+    c = cat((-1.2, 0.2, 0), 'tora', s=0.62, rot_z=-2.4)
+    ev = add_meows([c], n, every=(50, 75), gain=0.7)
+    cam = camera(40, dof=1.8, fstop=2.0)
+    cam_path(cam, [(0, (1.9, -1.3, 1.7), (-0.2, 0.9, 0.7)), (1, (1.5, -0.9, 1.55), (-0.2, 0.9, 0.7))], n)
+    return M(ev, bed=0.15, amb='room')
+
+def x07q(n):  # 猫の声が聞こえない、借りた仕事部屋
+    sky(hexc('#dcdcd8')); s = bpy.context.scene; s.view_settings.exposure = 0.5
+    room(4, 3.5, 2.5, floor=hexc('#9a9a96'), wall=hexc('#f2f2ee'))
+    table((0, 1.1, 0), 1.2, 0.6, 0.72); laptop((0, 1.15, 0.75), rot_z=math.pi)
+    p = person((0, 0.5, 0), hexc('#c98f7a'), pants=hexc('#4a4f5c'), rot_z=math.pi, name='mom')
+    move(p, [(1, (1.5, -1.6, 0)), (int(n * 0.45), (0.0, 0.45, 0))])
+    cam = camera(28)
+    cam_path(cam, [(0, (-1.6, -1.6, 1.7), (0.3, 0.8, 0.8)), (1, (-1.2, -1.4, 1.6), (0.2, 0.8, 0.8))], n)
+    return M([], bed=0.0, amb='silent')
+
+# ---------------- 08 ----------------
+def x08a(n):  # 耳栓売り場に人が集まる
+    m = s07a(n)
+    rnd = random.Random(5)
+    for (x1, y1), (x2, y2) in (((-4.6, -1.6), (-2.7, 0.7)), ((4.6, -1.6), (2.6, 0.7)), ((4.8, -0.4), (3.5, 0.3))):
+        p = person((x2, y2, 0), rnd.choice([hexc('#3d5a80'), hexc('#c46a4a'), hexc('#4a6b4a'), hexc('#8a8a8a')]), rot_z=math.pi)
+        move(p, [(1, (x1, y1, 0)), (int(n * 0.5), (x2, y2, 0))])
+    return m
+
+def x08b(n):  # 家族で相談する
+    living_room(night=True)
+    table((-1.2, 0.6, 0), 1.2, 0.8, 0.72)
+    a = person((-1.8, 0.6, 0), hexc('#c98f7a'), pants=hexc('#4a4f5c'), pose='sit', rot_z=-math.pi / 2, act='talk', name='mom')
+    b = person((-0.6, 0.6, 0), hexc('#5a6f8a'), pose='sit', rot_z=math.pi / 2, name='dad')
+    k = person((-1.2, -0.2, 0), hexc('#e8a33d'), pants=hexc('#4a6aa0'), pose='sit', rot_z=0, s=0.62, name='kid')
+    c = cat((0.6, 1.0, 0), 'tora', s=0.62, rot_z=2.4, name='basecat')
+    ev = add_meows([c], n, every=(45, 70))
+    cam = camera(32, dof=2.4, fstop=2.2)
+    cam_path(cam, [(0, (1.6, -2.0, 1.7), (-1.2, 0.6, 0.8)), (1, (1.1, -1.6, 1.5), (-1.2, 0.6, 0.8))], n)
+    return M(ev, bed=0.2, amb='room')
+
+def x08c(n):  # 静かな場所を探して移動する車
+    env_town(nx=6, ny=6, seed=4)
+    cr = car((-30, -7, 0), rot_z=math.pi / 2)
+    cr.keyframe_insert('location', frame=1)
+    cr.location = (30, -7, 0); cr.keyframe_insert('location', frame=n)
+    if cr.animation_data and cr.animation_data.action and hasattr(cr.animation_data.action, 'fcurves'):
+        for fc in cr.animation_data.action.fcurves:
+            for k in fc.keyframe_points:
+                k.interpolation = 'LINEAR'
+    cam = camera(35)
+    cam_path(cam, [(0, (-25, -32, 14), (-15, -7, 0)), (1, (15, -32, 14), (20, -7, 0))], n)
+    return M([], bed=0.6)
+
+# ---------------- 09 ----------------
+def x09b(n):  # 迷子の猫を探す人：植え込みの下から返ってくる声
+    env_town(nx=4, ny=4, seed=16, skip=lambda x, y: abs(x + 7) < 1 and abs(y + 21) < 1)
+    for i in range(6):
+        sphere((-6 + i * 1.1, -26.4, 0.45), 0.6, hexc('#5f7f45'), scale=(1, 0.8, 0.8), seg=12)
+    c = cat((-2.6, -26.3, 0.02), 'saba', s=0.62, rot_z=0.2, pose='crouch')
+    ev = add_meows([c], n, every=(45, 70), gain=0.7)
+    p = person((-2.8, -27.6, 0), hexc('#7a8aa0'), rot_z=0.3, name='seeker')
+    move(p, [(1, (-9, -27.6, 0)), (int(n * 0.45), (-3.0, -27.7, 0))])
+    cyl((-0.5, -27.3, 4), 0.15, 8, hexc('#9a9690'))
+    box((-0.5, -27.47, 1.6), (0.6, 0.02, 0.8), hexc('#fffef6'))
+    text3d('迷子の猫を', (-0.5, -27.49, 1.85), 0.1, hexc('#222222'))
+    text3d('探しています', (-0.5, -27.49, 1.72), 0.1, hexc('#222222'))
+    box((-0.5, -27.49, 1.45), (0.36, 0.01, 0.28), hexc('#6d7680'))  # 写真
+    cam = camera(32, dof=4.0, fstop=2.4)
+    cam_path(cam, [(0, (-7, -32, 1.6), (-4, -27, 0.8)), (1, (-1.0, -30.6, 1.0), (-2.7, -26.6, 0.4))], n)
+    return M(ev, bed=0.5)
+
+# ---------------- 10 ----------------
+def cafe_room(open_=True):
+    sky(hexc('#e2d6c2')); s = bpy.context.scene; s.view_settings.exposure = 0.45
+    light_dir((0.3, -0.5, 0.8))
+    room(8, 6, 2.7, floor=hexc('#c9a27a'), wall=hexc('#f4ead8'))
+    for k in range(3):
+        table((-2.4 + k * 2.4, 0.6, 0), 0.8, 0.8, 0.6, c=hexc('#8a5a3a'))
+    box((3.2, 2.4, 0.9), (1.2, 0.5, 1.8), hexc('#b9875c'))  # キャットタワー
+    box((3.2, 2.4, 1.85), (1.3, 0.6, 0.06), hexc('#d9c2a0'))
+
+def x10a(n):  # 猫カフェ：顔を寄せて話す客、別の猫が鳴く
+    cafe_room()
+    rnd = random.Random(6)
+    a = person((-0.35, 0.6, 0), hexc('#c46a4a'), pose='sit', rot_z=-math.pi / 2, act='talk')
+    b = person((0.35, 0.6, 0), hexc('#3d5a80'), pose='sit', rot_z=math.pi / 2)
+    for x in (-0.12, 0.12):
+        cyl((x, 0.6, 0.66), 0.04, 0.09, hexc('#f4f4f2'))
+    cats = []
+    for i in range(8):
+        cats.append(cat((rnd.uniform(-3.4, 3.4), rnd.uniform(-1.6, 2.0), 0), rnd.choice(['tora', 'kuro', 'shiro', 'mike', 'saba', 'hachi']), s=0.62, rot_z=rnd.uniform(-3, 3)))
+    cats.append(cat((3.2, 2.4, 1.9), 'shiro', s=0.62, rot_z=math.pi))
+    ev = add_meows(cats, n, every=(30, 50), gain=0.5)
+    cam = camera(32, dof=2.6, fstop=2.2)
+    cam_path(cam, [(0, (1.6, -2.4, 1.6), (0, 0.6, 0.9)), (1, (1.0, -1.8, 1.3), (0, 0.6, 0.9))], n)
+    return M(ev, bed=0.4, amb='room')
+
+def draw_booking(im, d):
+    d.rectangle((0, 0, 1080, 1920), fill=(246, 246, 248))
+    d.rectangle((0, 0, 1080, 160), fill=(120, 86, 60))
+    d.text((60, 45), '予約一覧', font=_font(64), fill=(255, 255, 255))
+    rnd = random.Random(2)
+    times = ['10:00', '10:30', '11:00', '11:30', '13:00', '13:30', '14:00', '15:00', '15:30', '16:00', '17:00']
+    for i, t in enumerate(times):
+        y = 210 + i * 150
+        d.rounded_rectangle((40, y, 1040, y + 120), 18, fill=(255, 255, 255), outline=(220, 220, 226), width=2)
+        d.text((80, y + 30), t, font=_font(54), fill=(40, 44, 52))
+        d.text((330, y + 30), '2名', font=_font(54), fill=(40, 44, 52))
+        if i != 4:
+            d.line((70, y + 62, 760, y + 62), fill=(200, 50, 50), width=7)
+            d.rounded_rectangle((790, y + 26, 1010, y + 96), 14, fill=(200, 50, 50))
+            d.text((815, y + 32), 'キャンセル', font=_font(36), fill=(255, 255, 255))
+
+def x10p(n):  # 予約の画面にキャンセルが並ぶ
+    sky(hexc('#2a2f3a')); s = bpy.context.scene; s.view_settings.exposure = 0.2
+    s.display.shading.light = 'FLAT'; s.display.shading.show_shadows = False
+    tex_plane('booking', draw_booking, (0, 0, 0), 4.5, 8, size=(1080, 1920))
+    cam = camera(50)
+    cam_path(cam, [(0, (0, -9.5, 2.2), (0, 0, 2.0)), (1, (0, -8.5, -1.8), (0, 0, -1.6))], n)
+    return M([], bed=0.3, amb='room')
+
+def x10c(n):  # 閉めた店でも、フードと掃除は毎日
+    cafe_room()
+    s = bpy.context.scene; s.view_settings.exposure = 0.25
+    p = person((1.0, -0.4, 0), hexc('#5a7a5a'), rot_z=0.5, name='owner')
+    move(p, [(1, (-2.5, 1.8, 0)), (int(n * 0.5), (1.0, -0.4, 0)), (n, (2.2, 1.6, 0))])
+    rnd = random.Random(3); cats = []
+    for i in range(5):
+        x = -1.5 + i * 0.6
+        bowl((x, -1.2, 0.02))
+        cats.append(cat((x, -1.45, 0), rnd.choice(['tora', 'kuro', 'shiro', 'mike', 'saba']), s=0.62, rot_z=0.0))
+    box((-3.2, -2.0, 0.08), (0.7, 0.5, 0.16), hexc('#7a8a9a'))  # 猫砂のトイレ
+    ev = add_meows(cats, n, every=(35, 60), gain=0.45)
+    cam = camera(30)
+    cam_path(cam, [(0, (-1.0, -4.2, 2.2), (0.0, 0.0, 0.5)), (1, (0.4, -3.8, 2.0), (0.4, 0.0, 0.5))], n)
+    return M(ev, bed=0.3, amb='room')
+
+def x10s(n):  # 保護施設：担当をボードへ書き、済んだ作業に印
+    sky(hexc('#d6d1c8')); s = bpy.context.scene; s.view_settings.exposure = 0.45
+    room(6, 5, 2.7, floor=hexc('#cfcbc2'), wall=hexc('#f1efea'), window=False)
+    box((0, 2.42, 1.5), (2.2, 0.05, 1.2), hexc('#fafafa'))
+    rows = [('ごはん', '済'), ('くすり', '担当　佐藤'), ('ケージそうじ', '済'), ('爪切り', '担当　中村')]
+    for i, (a, b) in enumerate(rows):
+        z = 1.9 - i * 0.26
+        text3d(a, (-0.5, 2.39, z), 0.19, hexc('#2a5a9a'))
+        o = text3d(b, (0.55, 2.39, z), 0.19, hexc('#c0392b') if b == '済' else hexc('#2a5a9a'))
+        if b == '済':
+            f = int(n * (0.3 + i * 0.2))
+            o.keyframe_insert('scale', frame=1); o.scale = (0, 0, 0); o.keyframe_insert('scale', frame=1)
+            o.keyframe_insert('scale', frame=f); o.scale = (1, 1, 1); o.keyframe_insert('scale', frame=f + 4)
+    p = person((1.7, 1.7, 0), hexc('#7aa07a'), rot_z=math.pi * 0.8, act='talk')
+    rnd = random.Random(5); cats = []
+    for i in range(4):
+        x = -2.6 + i * 0.5
+        box((x, 1.9, 0.45), (0.45, 0.45, 0.04), hexc('#b0aca3'))
+        cats.append(cat((x, 1.9, 0.48), rnd.choice(['tora', 'kuro', 'shiro', 'mike']), s=0.62, rot_z=math.pi))
+    ev = add_meows(cats, n, every=(40, 65), gain=0.4)
+    cam = camera(35, dof=2.6, fstop=2.2)
+    cam_path(cam, [(0, (0.0, -0.4, 1.5), (0.1, 2.4, 1.5)), (1, (0.0, 0.2, 1.5), (0.1, 2.4, 1.5))], n)
+    return M(ev, bed=0.4, amb='room')
+
+# ---------------- 11 ----------------
+def x11c(n):  # 狩りがうまくいかない外の猫
+    env_alley()
+    sky(hexc('#c9d6e2')); bpy.context.scene.view_settings.exposure = 0.3
+    for i in range(3):
+        sphere((-1.7, 6 + i * 0.6, 0.25), 0.3, hexc('#3a3a3a'), scale=(1, 1, 0.8), seg=10)
+    c = cat((0.2, 9, 0), 'saba', s=0.55, rot_z=math.pi, pose='walk')
+    move(c, [(1, (0.4, 10.5, 0)), (int(n * 0.6), (-1.0, 6.8, 0)), (n, (-1.1, 6.4, 0))])
+    ev = add_meows([c], n, every=(55, 80), gain=0.6)
+    cam = camera(32, dof=4.0, fstop=2.2)
+    cam_path(cam, [(0, (0.8, 2.0, 0.6), (-0.6, 7.5, 0.3)), (1, (0.5, 3.2, 0.5), (-0.9, 6.8, 0.3))], n)
+    return M(ev, bed=0.4, amb='morning')
+
+def x11e(n):  # 飲食店の主人が裏口でほっとする
+    env_alley()
+    p = person((1.1, 3.0, 0), hexc('#f2f2f2'), rot_z=-math.pi / 2, name='chef')
+    h = bpy.data.objects[p['head']]
+    for f, yaw in ((1, 0), (int(n * 0.3), 0.6), (int(n * 0.6), -0.6), (int(n * 0.85), 0)):
+        h.rotation_euler = (0, 0, yaw); h.keyframe_insert('rotation_euler', frame=f)
+    c = cat((-0.5, 10, 0), 'kuro', s=0.62, rot_z=math.pi)
+    ev = add_meows([c], n, every=(55, 85), gain=0.4)
+    cam = camera(35, dof=2.6, fstop=2.2)
+    cam_path(cam, [(0, (-0.6, -0.4, 1.3), (1.1, 3.0, 1.2)), (1, (-0.4, 0.4, 1.3), (1.1, 3.0, 1.3))], n)
+    return M(ev, bed=0.4, amb='night')
+
+def x11w(n):  # 別の通り：猫の声のない路地を走るネズミ
+    env_alley(); bpy.context.scene.view_settings.exposure = 0.4
+    rat = make_rat((-1.0, 4.0, 0), rot_z=math.pi)
+    move(rat, [(1, (-1.0, 2.0, 0)), (n, (-1.0, 9.0, 0))])
+    r2 = make_rat((1.6, 6.0, 0), rot_z=math.pi)
+    move(r2, [(1, (1.6, 5.0, 0)), (int(n * 0.6), (1.6, 8.5, 0))])
+    cam = camera(30, dof=2.0, fstop=2.0)
+    cam_path(cam, [(0, (0.2, -0.5, 0.35), (-0.8, 4.0, 0.1)), (1, (0.0, 1.5, 0.35), (-0.8, 7.0, 0.1))], n)
+    return M([], bed=0.2, amb='night')
+
+# ---------------- 12 ----------------
+def x12c(n):  # 世話を確かめる時間：餌・水・トイレ
+    sky(hexc('#d8d0c2')); s = bpy.context.scene; s.view_settings.exposure = 0.45
+    light_dir((0.3, -0.3, 0.8))
+    room(6, 5, 2.6)
+    bowl((0.2, 0.6, 0.02)); bowl((0.45, 0.6, 0.02), c=hexc('#4f86c6'))
+    box((-1.2, 1.8, 0.1), (0.7, 0.5, 0.2), hexc('#7a8a9a'))
+    p = person((0.3, 1.25, 0), hexc('#c98f7a'), pants=hexc('#4a4f5c'), rot_z=math.pi * 0.95, name='mom')
+    h = bpy.data.objects[p['head']]; h.rotation_euler = (0.55, 0, 0); h.keyframe_insert('rotation_euler', frame=1)
+    k = person((-0.9, 1.2, 0), hexc('#e8a33d'), pants=hexc('#4a6aa0'), rot_z=math.pi * 1.1, s=0.62, name='kid')
+    hk = bpy.data.objects[k['head']]; hk.rotation_euler = (0.5, 0, 0); hk.keyframe_insert('rotation_euler', frame=1)
+    c = cat((0.3, 0.3, 0), 'tora', s=0.62, rot_z=math.pi * 0.9, name='basecat')
+    ev = add_meows([c], n, every=(55, 80), gain=0.8)
+    cam = camera(35, dof=2.0, fstop=2.4)
+    cam_path(cam, [(0, (2.6, -2.4, 1.9), (-0.3, 0.9, 0.6)), (1, (2.1, -2.0, 1.7), (-0.3, 1.0, 0.6))], n)
+    return M(ev, bed=0.2, amb='room')
+
+# ---------------- 13 ----------------
+def x13a(n):  # 30日後、午後3時。「鳴き声が、止まります」で一斉に止まる
+    tl = _tl(); ch = [c for c in tl['chapters'] if c['no'] == 13][0]
+    f_stop = int((ch['lines'][2]['start'] - ch['start']) * FPS)
+    env_town()
+    cats = [cat((0.6, -32.9, 1.1), 'kuro', s=0.62, rot_z=0.1), cat((-1.4, -34.6, 0), 'tora', s=0.62, rot_z=-0.5),
+            cat((1.9, -35.4, 0), 'mike', s=0.62, rot_z=0.5, pose='crouch')]
+    ev = []
+    for c in cats:
+        fr = [f for f in meow_times(f_stop - 6, every=(30, 50))]
+        meow(c, fr); ev += [(f, 0.8, R.uniform(0.9, 1.2)) for f in fr]
+    cam = camera(26)
+    t = min(0.9, f_stop / n + 0.15)
+    cam_path(cam, [(0, (1.0, -37.0, 0.45), (-0.8, -33.9, 0.4)), (t, (1.0, -37.0, 0.45), (-0.8, -33.9, 0.4)), (1, (12, -55, 14), (0, -30, 0))], n)
+    return M(ev, bed=1.0, silent_from=f_stop)
+
+def x13b(n):  # 母親が顔を上げる
+    mom, _ = home_office(mom_act=None)
+    c = cat((-0.6, 0.2, 0), 'tora', s=0.62, rot_z=-2.6, name='basecat', pose='crouch')
+    h = bpy.data.objects[mom['head']]
+    h.rotation_euler = (0.3, 0, 0); h.keyframe_insert('rotation_euler', frame=1); h.keyframe_insert('rotation_euler', frame=int(n * 0.25))
+    h.rotation_euler = (-0.1, 0, -0.5); h.keyframe_insert('rotation_euler', frame=int(n * 0.25) + 18)
+    cam = camera(35, dof=2.0, fstop=2.0)
+    cam_path(cam, [(0, (-1.6, -1.0, 1.25), (0.5, 0.9, 1.0)), (1, (-1.1, -0.6, 1.15), (0.5, 0.9, 1.0))], n)
+    return M([], bed=0.0, amb='room')
+
+def x13k(n):  # その夜、寝かしつけをやり直さずに済む
+    kid_room(n, quiet=True, parent=False)
+    cam = camera(30, dof=2.4, fstop=2.0)
+    cam_path(cam, [(0, (2.0, -1.8, 1.7), (0.3, 0.8, 0.5)), (1, (1.5, -1.3, 1.4), (0.3, 0.8, 0.5))], n)
+    return M([], bed=0.0, amb='silent')
+
+def draw_memo(im, d):
+    d.rectangle((0, 0, 1920, 1080), fill=(250, 248, 240))
+    for y in range(140, 1080, 90):
+        d.line((60, y, 1860, y), fill=(200, 210, 225), width=2)
+    d.text((80, 40), 'この30日のメモ', font=_font(64), fill=(40, 44, 52))
+    items = [('仕事部屋の代金', '支払い済'), ('猫カフェの予約', '取り消し・返金'), ('ナレーションの録音', '延期'),
+             ('管理会社への相談', '済'), ('家事', 'あとまわし')]
+    for i, (a, b) in enumerate(items):
+        y = 160 + i * 180
+        d.text((100, y), '・' + a, font=_font(66), fill=(40, 44, 52))
+        d.text((1250, y), b, font=_font(60), fill=(170, 60, 50))
+
+def x13c(n):  # 残ったもの：テーブルのメモ
+    living_room()
+    s = bpy.context.scene; s.display.shading.light = 'STUDIO'
+    table((0, 0.6, 0), 1.6, 0.9, 0.72)
+    tex_plane('memo', draw_memo, (0, 0.6, 0.752), 1.2, 0.675, rot=(0, 0, 0))
+    cyl((0.65, 0.95, 0.8), 0.04, 0.1, hexc('#f4f4f2'))
+    cam = camera(40)
+    cam_path(cam, [(0, (0.0, -0.4, 1.75), (0, 0.62, 0.75)), (1, (0.0, -0.1, 1.55), (0, 0.62, 0.75))], n)
+    return M([], bed=0.0, amb='room')
+
+def x13d(n):  # 猫カフェがまた扉を開ける。空いた椅子
+    cafe_room()
+    p = person((-3.2, -1.8, 0), hexc('#5a7a5a'), rot_z=-0.3, name='owner')
+    rnd = random.Random(9)
+    for i in range(3):
+        cat((rnd.uniform(-2, 2), rnd.uniform(-1.2, 1.6), 0), rnd.choice(['tora', 'kuro', 'shiro']), s=0.62, rot_z=rnd.uniform(-3, 3))
+    for k in range(3):
+        for sx in (-0.55, 0.55):
+            box((-2.4 + k * 2.4 + sx, 0.6, 0.23), (0.4, 0.4, 0.46), hexc('#6a4a32'))
+    cam = camera(30)
+    cam_path(cam, [(0, (-3.4, -3.0, 1.6), (0.0, 0.8, 0.6)), (1, (-2.6, -2.6, 1.5), (0.6, 0.8, 0.6))], n)
+    return M([], bed=0.0, amb='room')
+
+def x13t(n):  # 静かになった街
+    env_town()
+    cam = camera(32)
+    cam_path(cam, [(0, (35, -70, 42), (0, -18, 0)), (1, (55, -90, 62), (0, -10, 0))], n)
+    return M([], bed=0.0)
+
+# ---------------- 14 ----------------
+def x14a(n):  # エンドカード：同じ猫と飼い主
+    living_room()
+    person((-1.2, 2.0, 0.0), hexc('#c98f7a'), pants=hexc('#4a4f5c'), pose='sit', rot_z=math.pi, name='mom')
+    cat((-0.5, 1.2, 0), 'tora', s=0.62, rot_z=math.pi * 0.85, name='basecat', pose='crouch')
+    cam = camera(35, dof=3.0, fstop=2.4)
+    cam_path(cam, [(0, (1.4, -1.2, 1.2), (-0.9, 1.5, 0.6)), (1, (2.6, -2.6, 1.8), (-0.9, 1.5, 0.6))], n)
+    return M([], bed=0.0, amb='room')
+
+# ---------------- 既存カットの使い回し（名前を変えて別カットにする） ----------------
+def A(fn, name, **ov):
+    def f(n):
+        m = fn(n); m.update(ov); m['silent_until'] = None; m['silent_from'] = None
+        return m
+    f.__name__ = name
+    globals()[name] = f
+    return f
+
+# カット表：章番号 -> [(その章で何行目から, 関数)]（第4稿）
 SHOTS = {
-    0: [(-1, s00a), (2, s00b), (3, s00c), (4, s00d), (5, s00e), (6, s00f)],
-    1: [(-1, s01a), (2, s01b), (5, s01c), (8, s01d), (12, s01e), (14, s01f), (16, s01g)],
-    2: [(-1, s02a), (4, s02b), (12, s02c)],
-    3: [(-1, s03a), (2, s03b), (7, s03c)],
-    4: [(-1, s04a), (5, s04b), (6, s04c)],
-    5: [(-1, s05a), (1, s05b), (5, s05c), (7, s05d)],
-    6: [(-1, s06a), (5, s06b), (9, s06c)],
-    7: [(-1, s07a), (2, s07b), (7, s07c)],
-    8: [(-1, s08a), (7, s08b)],
-    9: [(-1, s09a), (5, s09b)],
-    10: [(-1, s10a), (6, s10b), (7, s10c)],
-    11: [(-1, s11a), (5, s11b)],
-    12: [(-1, s12a), (4, s12b), (7, s12c)],
-    13: [(-1, s13a), (7, s13b)],
-    14: [(-1, s14a), (5, s14b), (10, s14c), (12, s14d), (14, s14e)],
-    15: [(-1, s15a), (1, s15b)],
+    0: [(-1, x00a), (1, A(s00a, 'r00a')), (2, A(s02b, 'r00b')), (4, A(s00d, 'r00d')), (5, A(s06a, 'r00e')), (6, A(s00c, 'r00c')), (7, A(s00f, 'r00f'))],
+    1: [(-1, s01a), (1, A(s07b, 'r01m')), (2, s01c), (3, s01d), (4, A(s09b, 'r01s')), (5, s01e), (6, s01f), (7, s01g), (8, x01h), (9, A(s05c, 'r01z'))],
+    2: [(-1, s02b), (4, x02b), (6, x02c), (8, x02e), (9, x02d), (11, A(s00f, 'r02f'))],
+    3: [(-1, A(s07c, 'r03p')), (2, s03b), (4, s03c), (7, x03w), (9, s03a)],
+    4: [(-1, s04a), (4, x04d), (6, s04b), (7, s04c)],
+    5: [(-1, s05a), (1, x05b), (5, s05b), (7, s05d), (8, x05e), (9, x05f), (12, A(s00f, 'r05f'))],
+    6: [(-1, x06n), (3, s06a), (5, s06b), (7, s06c)],
+    7: [(-1, A(s07b, 'r07m')), (5, x07r), (9, x07s), (10, x07q)],
+    8: [(-1, x08a), (3, x08b), (5, x08c), (6, A(x04d, 'r08d')), (8, A(x05b, 'r08k')), (10, A(s05c, 'r08n'))],
+    9: [(-1, s08a), (4, x09b), (7, s08b), (9, A(s00b, 'r09t'))],
+    10: [(-1, x10a), (3, x10p), (4, s11a), (6, x10c), (8, s11b), (10, x10s)],
+    11: [(-1, s10a), (5, x11c), (8, s12a), (9, s12b), (10, x11e), (12, x11w), (14, A(s05c, 'r11n'))],
+    12: [(-1, s13a), (4, A(s06a, 'r12a')), (5, x12c), (8, s13b), (11, A(s00f, 'r12f'))],
+    13: [(-1, x13a), (3, x13b), (4, x13k), (6, x13c), (7, x13d), (8, A(s06c, 'r13e')), (10, A(s08b, 'r13p')), (11, A(s14e, 'r13t')), (12, x13t), (14, s15b)],
+    14: [(-1, x14a)],
 }

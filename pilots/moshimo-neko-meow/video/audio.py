@@ -143,6 +143,16 @@ def sfx():
     print('sfx ok', np.abs(st).max())
 
 
+def stop_time(tl):
+    """一斉に鳴きやむ時刻：silent_from を持つカットのメタから"""
+    import glob
+    for p in glob.glob(f'{OUT}/meta/*.json'):
+        m = json.load(open(p))
+        if m.get('silent_from'):
+            return m['start'] + m['silent_from'] / FPS
+    raise SystemExit('silent_from のカットがない')
+
+
 # ---------------- BGM ----------------
 def bgm():
     import mido
@@ -153,8 +163,8 @@ def bgm():
         return int(s / spb * 480)
     # 章ごとの雰囲気
     MOOD = {0: ('myst', 'D'), 1: ('wide', 'D'), 2: ('light', 'G'), 3: ('tense', 'E'), 4: ('light', 'G'), 5: ('night', 'A'),
-            6: ('night', 'A'), 7: ('light', 'C'), 8: ('warm', 'F'), 9: ('night', 'D'), 10: ('wide', 'G'), 11: ('light', 'C'),
-            12: ('tense', 'E'), 13: ('sad', 'A'), 14: ('silence', 'D'), 15: ('warm', 'D')}
+            6: ('night', 'A'), 7: ('light', 'C'), 8: ('tense', 'F'), 9: ('warm', 'D'), 10: ('sad', 'G'), 11: ('wide', 'C'),
+            12: ('sad', 'E'), 13: ('silence', 'D'), 14: ('warm', 'D')}
     ROOT = {'C': 48, 'D': 50, 'E': 52, 'F': 53, 'G': 55, 'A': 57}
     PROG = {'myst': [(0, 'm'), (8, 'M'), (5, 'M'), (10, 'M')], 'wide': [(0, 'M'), (7, 'M'), (9, 'm'), (5, 'M')],
             'light': [(0, 'M'), (5, 'M'), (7, 'M'), (0, 'M')], 'tense': [(0, 'm'), (5, 'm'), (8, 'M'), (7, 'M')],
@@ -169,6 +179,7 @@ def bgm():
     def note(name, start, dur, pitch, vel):
         tracks[name][2].append((sec2tick(start), 1, pitch, vel)); tracks[name][2].append((sec2tick(start + dur), 0, pitch, 0))
     r = np.random.default_rng(3)
+    t_stop = stop_time(tl)
     for c in tl['chapters']:
         mood, key = MOOD[c['no']]; root = ROOT[key]
         t = c['start']; end = c['end']
@@ -178,7 +189,7 @@ def bgm():
             deg, q = PROG[mood][i % 4]
             chord = [root + deg, root + deg + (3 if q == 'm' else 4), root + deg + 7]
             d = min(bar, end - t)
-            if mood == 'silence' and c['no'] == 14 and t < c['start'] + 12:
+            if mood == 'silence' and t < t_stop + 9:
                 t += d; i += 1; continue
             for p in chord:
                 note('pad', t, d, p + 12, 34 if mood != 'tense' else 40)
@@ -230,10 +241,8 @@ def mix():
     duck = movavg(duck, k)
     bg = b * 0.8 * duck[:, None]
     sduck = (1 - 0.4 * np.clip(env / 0.05, 0, 1))[:, None]
-    # 鳴きやむ瞬間（14章 30日後の午後3時）以降しばらくは BGM も切る
-    ch14 = [c for c in tl['chapters'] if c['no'] == 14][0]
-    m14 = json.load(open(f'{OUT}/meta/s14a.json'))
-    t_stop = m14['start'] + m14['silent_from'] / FPS
+    # 鳴きやむ瞬間（30日後の午後3時）以降しばらくは BGM も切る
+    t_stop = stop_time(tl)
     a, z = int(t_stop * SR), int((t_stop + 9.0) * SR)
     g = np.ones(N, np.float32); g[a:z] = 0
     fade = int(3 * SR); g[z:z + fade] = np.linspace(0, 1, fade)[:max(0, min(fade, N - z))]

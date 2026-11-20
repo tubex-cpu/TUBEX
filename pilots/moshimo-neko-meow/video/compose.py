@@ -14,8 +14,9 @@ OUT = os.environ.get('NEKO_OUT', '/home/user/work_neko/out')
 FONTS = '/home/user/work_neko/fonts'
 W, H, FPS = 1920, 1080, 24
 
-CITY = {'s01b': ('東京', '午後3時'), 's01c': ('北京', '午後2時'), 's01d': ('イスタンブール', '午前9時'),
-        's01e': ('モスクワ', '午前9時'), 's01f': ('ロンドン', '午前6時'), 's01g': ('ニューヨーク', '午前1時')}
+# 字幕：社長指示（2026-11-20）「字幕のフォントはかなり太字にしてほしい ただし文字も大きくしてつぶれて見えないようにして」
+# → 明朝の極太（Noto Serif CJK JP Black, SIL OFL）を 76px・縁 7px・字間 +3px で1行に出す
+SUB_FONT, SUB_SIZE, SUB_STROKE, SUB_TRACK, SUB_MAXC = 'NotoSerifCJKjp-Black.otf', 76, 7, 3, 20
 
 _fc = {}
 def font(size, w='Bold'):
@@ -97,7 +98,28 @@ def sfont(size):
     return _sf[size]
 
 
-def split_sub(text, t0, t1, maxc=26):
+def sub_layer(text):
+    """字幕1行（極太明朝・字間を少し空けて、太い縁と影でつぶれないようにする）"""
+    k = ('sub', text)
+    if k in _cache:
+        return _cache[k]
+    f = ImageFont.truetype(f'{FONTS}/{SUB_FONT}', SUB_SIZE)
+    adv = [f.getlength(c) for c in text]
+    w = int(sum(adv) + SUB_TRACK * (len(text) - 1)) + 80; h = int(SUB_SIZE * 1.6)
+    im = Image.new('RGBA', (w, h), (0, 0, 0, 0))
+    y0 = int(SUB_SIZE * 0.2)
+    sh = Image.new('RGBA', im.size, (0, 0, 0, 0)); ds = ImageDraw.Draw(sh); x = 40
+    for c, a in zip(text, adv):
+        ds.text((x + 4, y0 + 5), c, font=f, fill=(0, 0, 0, 190), stroke_width=SUB_STROKE + 3, stroke_fill=(0, 0, 0, 190)); x += a + SUB_TRACK
+    im.alpha_composite(sh.filter(ImageFilter.GaussianBlur(7)))
+    d = ImageDraw.Draw(im); x = 40
+    for c, a in zip(text, adv):
+        d.text((x, y0), c, font=f, fill=(255, 255, 255, 255), stroke_width=SUB_STROKE, stroke_fill=(15, 16, 20, 255)); x += a + SUB_TRACK
+    _cache[k] = im
+    return im
+
+
+def split_sub(text, t0, t1, maxc=SUB_MAXC):
     """字幕は1行だけ。長い行は句読点で区切り、文字数に比例した時間で順に出す"""
     if len(text) <= maxc:
         return [(t0, t1, text)]
@@ -117,8 +139,10 @@ def split_sub(text, t0, t1, maxc=26):
         chunks.append(cur)
     out = []
     for c in chunks:  # それでも長いものは半分に
-        while len(c) > maxc:
-            k = len(c) // 2; out.append(c[:k]); c = c[k:]
+        while len(c) > maxc:  # 句読点がない長い部分は、真ん中に近い助詞のあとで切る
+            cand = [i + 1 for i, x in enumerate(c[:-2]) if x in 'てをにはがでへとも' and 4 <= i + 1 <= maxc]
+            k = min(cand, key=lambda i: abs(i - len(c) / 2)) if cand else len(c) // 2
+            out.append(c[:k]); c = c[k:]
         out.append(c)
     total = sum(len(c) for c in out); t = t0; res = []
     for c in out:
@@ -208,7 +232,7 @@ def progress(ch_no):
     for i, x in enumerate(xs):
         r = 5 if i != cur else 11
         d.ellipse((x - r, y - r, x + r, y + r), fill=(ACCENT if i <= cur else (150, 155, 165)) + (255,))
-    f = sfont(28); lab = T.STEPS[cur] + '後' if cur < n - 1 else '30日後'
+    f = sfont(28); lab = T.STEPS[cur]
     tw = d.textlength(lab, font=f); lx = min(max(xs[cur] - tw / 2, 6), w - tw - 6)
     d.text((lx, y + 18), lab, font=f, fill=(255, 255, 255, 255))
     if cur != 0:
@@ -247,7 +271,9 @@ def seg(name):
         cards[i][1] = min(cards[i][1], cards[i + 1][0] - 0.05)
     first_line = ch['lines'][0]['start'] if ch['lines'] else ch['start'] + 3
     is_first_shot = abs(row['start'] - ch['start']) < 1e-6
-    label = ch['label'] or ('終章' if ch['no'] == 15 else '')
+    label = ch['label']
+    last_ch = max(c['no'] for c in tl['chapters'])  # エンドカード（見出し・パネルなし）
+    titled = 0 < ch['no'] < last_ch
     t_title0, t_title1 = ch['start'] + 0.4, first_line - 0.2
     info = T.SHOT_INFO.get(name, '')
     ff = subprocess.Popen(['ffmpeg', '-v', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
@@ -276,34 +302,34 @@ def seg(name):
         if i >= n - 8 and row['end'] >= ch['end'] - 1e-6:
             big *= (n - i) / 9
         base = Image.fromarray(np.clip(big, 0, 255).astype(np.uint8)).convert('RGBA')
-        in_title = ch['no'] > 0 and t_title0 <= t <= t_title1 + 0.6
+        in_title = titled and t_title0 <= t <= t_title1 + 0.6
         # 章の見出し＋「この世界で起きたこと」
         if in_title:
             a = min(1, (t - t_title0) / 0.6, (t_title1 + 0.6 - t) / 0.6)
             sub = ch['title'].split(' ― ')[-1]
             paste(base, text_layer([label], 120, stroke=6), W / 2, H / 2 - 50, a)
             paste(base, text_layer([sub], 54, stroke=4, w='Regular'), W / 2, H / 2 + 70, a)
-            if 2 <= ch['no'] <= 14:
+            if 2 <= ch['no'] < last_ch:
                 rc = recap(ch['no'])
                 paste(base, rc, 70, H / 2 - rc.height / 2 - 20, a, anchor='tl')
         # 左上：いつ・どこで・何が
-        clock_on = ch['no'] in (0, 14) and is_first_shot and t - ch['start'] < 6.5
+        # 時計：冒頭は章の頭から3秒で 15:00:00、30日後は「鳴き声が、止まります」の行で 15:00:00
+        clock_t0 = ch['start'] + 3.0 if ch['no'] == 0 else (ch['lines'][2]['start'] if ch['no'] == last_ch - 1 else None)
+        clock_on = clock_t0 is not None and is_first_shot and t < clock_t0 + 3.5
         if not in_title and info:
-            a = min(1, i / 10, (n - i) / 8) if not (ch['no'] > 0 and t < t_title1 + 1.2) else min(1, (t - t_title1 - 0.6) / 0.6, (n - i) / 8)
+            a = min(1, i / 10, (n - i) / 8) if not (titled and t < t_title1 + 1.2) else min(1, (t - t_title1 - 0.6) / 0.6, (n - i) / 8)
             when = label if ch['no'] > 0 else '日本時間　午後3時'
-            if ch['no'] == 15:
-                when = '終章'
             paste(base, panel([when, info], [36, 46]), 50, 40, a, anchor='tl')
         # 右上：経過バー
-        if 1 <= ch['no'] <= 14 and not in_title and not clock_on:
+        if titled and not in_title and not clock_on:
             a = min(1, (t - t_title1 - 0.6) / 0.6) if t < t_title1 + 1.2 else 1.0
             pg = progress(ch['no'])
             paste(base, pg, W - pg.width - 50, 40, a * 0.95, anchor='tl')
         # 冒頭・30日後の時計
         if clock_on:
-            tt = 14 * 3600 + 59 * 60 + 57 + (t - ch['start'])
+            tt = 15 * 3600 + (t - clock_t0)
             hh_, mm, ss = int(tt // 3600) % 24, int(tt // 60) % 60, int(tt) % 60
-            a = min(1, (t - ch['start']) / 0.5, (6.5 - (t - ch['start'])) / 0.6)
+            a = min(1, (t - ch['start']) / 0.5, (clock_t0 + 3.5 - t) / 0.6)
             paste(base, text_layer([f'{hh_:02d}:{mm:02d}:{ss:02d}'], 64, stroke=4, w='Regular'), W - 330, 50, a, anchor='tl')
         # 要点カード（ぽんと出る）
         if card and not in_title:
@@ -318,7 +344,7 @@ def seg(name):
         for s0, s1, txt in subs:
             if s0 <= t < s1:
                 a = min(1, (t - s0) / 0.12, (s1 - t) / 0.12)
-                paste(base, text_layer([txt], 56, stroke=5), W / 2, H - 140, a)
+                paste(base, sub_layer(txt), W / 2, H - 135, a)
         ff.stdin.write(np.asarray(base.convert('RGB')).tobytes())
     ff.stdin.close(); ff.wait()
     print('seg', name, n)

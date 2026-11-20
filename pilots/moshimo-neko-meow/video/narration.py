@@ -1,5 +1,6 @@
 """台本（03_script.md）からナレーション音声と全体の時間割（timeline.json）を作る。
-Open JTalk（無料・ローカル）。音声: nitech_jp_atr503_m001（CC BY 3.0, 名古屋工業大学）。
+VOICEVOX CORE（無料・ローカル）。音声: 玄野武宏 ノーマル（style 11）。クレジット「VOICEVOX:玄野武宏」が必要。
+社長指示 2026-11-20「音声はボイスボックスの男性の誰かにして」。
 使い方: python narration.py <out_dir>
 """
 import json, re, subprocess, sys, wave, tempfile
@@ -9,13 +10,18 @@ import numpy as np
 HERE = Path(__file__).resolve().parent
 SCRIPT = HERE.parent / "03_script.md"
 OUT = Path(sys.argv[1] if len(sys.argv) > 1 else "/home/user/work_neko/out")
-DIC = "/var/lib/mecab/dic/open-jtalk/naist-jdic"
-VOICE = "/usr/share/hts-voice/nitech-jp-atr503-m001/nitech_jp_atr503_m001.htsvoice"
+VV = Path("/home/user/voicevox")
+ORT = VV / "dl/voicevox_onnxruntime-linux-x64-1.23.2/lib/libvoicevox_onnxruntime.so.1.23.2"
+DIC = VV / "dl/open_jtalk_dic_utf_8-1.11"
+VVM = VV / "vvm_repo/vvms/4.vvm"  # 玄野武宏・剣崎雌雄
+STYLE = 11  # 玄野武宏 ノーマル
+SPEED = 0.9
 SR = 48000
-RATE = "0.97"
-GAP_LINE, GAP_PARA = 0.45, 0.85
+_SYN = None
+GAP_LINE, GAP_PARA = 0.6, 0.85
 # 読み替え（字幕は元の表記のまま）
-READ = [("JAF", "ジャフ"), ("SNS", "エスエヌエス"), ("7,000万", "7000万"), ("9,500年", "きゅうせんごひゃくねん"),
+READ = [("日本時間", "にほんじかん"), ("ボンネットの下", "ボンネットのした"), ("録る人", "とる人"), ("録り直した", "とりなおした"),
+        ("同じ行", "おなじぎょう"), ("一声", "ひとこえ"), ("同じ人", "おなじひと"), ("JAF", "ジャフ"), ("SNS", "エスエヌエス"), ("7,000万", "7000万"), ("9,500年", "きゅうせんごひゃくねん"),
         ("1LDK", "ワンエルディーケー"), ("「", ""), ("」", ""), ("…", "")]
 # 章ごとの頭の間（秒）：時刻表示や映像だけを見せる
 LEAD = {0: 3.2}
@@ -44,9 +50,19 @@ def tts(text, dst):
     r = text
     for a, b in READ:
         r = r.replace(a, b)
+    global _SYN
+    if _SYN is None:
+        from voicevox_core.blocking import Onnxruntime, OpenJtalk, Synthesizer, VoiceModelFile
+        _SYN = Synthesizer(Onnxruntime.load_once(filename=str(ORT)), OpenJtalk(str(DIC)))
+        with VoiceModelFile.open(str(VVM)) as m:
+            _SYN.load_voice_model(m)
+    q = _SYN.create_audio_query(r, STYLE)
+    q.speed_scale = SPEED
+    q.pre_phoneme_length = 0.05
+    q.post_phoneme_length = 0.05
     with tempfile.TemporaryDirectory() as tmp:
         w = Path(tmp) / "a.wav"
-        subprocess.run(["open_jtalk", "-x", DIC, "-m", VOICE, "-r", RATE, "-ow", str(w)], input=r, text=True, check=True)
+        w.write_bytes(_SYN.synthesis(q, STYLE))
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(w), "-ar", str(SR), "-ac", "1", str(dst)], check=True)
     with wave.open(str(dst)) as f:
         return f.getnframes() / SR
@@ -76,7 +92,7 @@ def main():
         label = c["title"].split(" ― ")[0] if " ― " in c["title"] else ""
         timeline["chapters"].append({"no": c["no"], "title": c["title"], "label": label,
                                      "start": round(start, 3), "end": round(t, 3), "lines": lines})
-    timeline["duration"] = round(t + 10.0, 3)  # エンドカード10秒
+    timeline["duration"] = round(t + 4.0, 3)  # 最後の余韻
     # ナレーションを1本に
     n = int(timeline["duration"] * SR) + SR
     mix = np.zeros(n, np.float32)

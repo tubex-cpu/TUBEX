@@ -1,16 +1,17 @@
 #!/bin/bash
-# 全カットの描画が終わったら、字幕などを重ねて完成版を書き出す
-OUT=/home/user/work_neko/out
-V=/home/user/TUBEX/pilots/moshimo-neko-meow/video
+# 全カットを描いたあと、音（効果音・BGM・ミックス）→ 字幕・テロップの合成 → 完成版の書き出しまで行う
+# 使い方: NEKO_OUT=/home/user/work_neko/out_v4 bash render_all.sh && NEKO_OUT=... bash post_render.sh
+OUT=${NEKO_OUT:-/home/user/work_neko/out}
+V=$(cd "$(dirname "$0")" && pwd)
 PY=/home/user/work_neko/venv/bin/python
-while ! grep -q ALLDONE $OUT/render_all.log; do sleep 60; done
-echo "render done $(date +%T)"
+export NEKO_OUT=$OUT
 cd $V
-$PY - <<'P' > $OUT/seglist.txt
-import sys; sys.path.insert(0, '/home/user/TUBEX/pilots/moshimo-neko-meow/video')
+$PY audio.py $OUT > $OUT/logs/audio.log 2>&1 || { echo "AUDIO FAIL"; exit 1; }
+echo "audio done $(date +%T)"
+$PY - <<'Q' > $OUT/seglist.txt
 import render_shot as R
 for r in R.shot_table(): print(r['shot'])
-P
+Q
 cat $OUT/seglist.txt | xargs -P 3 -n 1 $PY compose.py seg > $OUT/logs/compose.log 2>&1
 echo "segs $(ls $OUT/seg/*.mp4 | grep -v _test | wc -l) $(date +%T)"
 $PY compose.py final >> $OUT/logs/compose.log 2>&1
