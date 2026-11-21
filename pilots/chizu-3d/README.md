@@ -21,4 +21,4 @@
 4. `scripts/bgm_chizu.py <ca|bm>`：BGM を作曲（MIDI → FluidSynth + FluidR3_GM〈Frank Wen、MIT ライセンス〉。ルール改変ニッポン v2 と同じ方法）。冒頭の盛り上がり、章の扉ごとの短い盛り上がり、章の間は旅・歴史・緊張・探索の曲を約75秒ごとに切り替える。効果音（ピンが刺さる音・数字が立つ低い音）は numpy で合成。ナレーションの下で BGM を下げる
 5. `scripts/pipeline.sh`：プレートと見せ場の書き出しを待ち → JSON → BGM・ミックス → 10秒ごとの合成（4並列、途中から再開できる）→ 結合（−15 LUFS）
 
-素材の権利：地図・地球儀は Natural Earth（パブリックドメイン）、フォントは M PLUS Rounded 1c（SIL OFL 1.1）、音源は FluidR3_GM（MIT）。第三者の映像・音源・有料素材は使っていない（追加費用0）。
+素材の権利（2026-11-21 訂正）：国境・海岸線・湖などは Natural Earth（パブリックドメイン）。**地球儀の画像と地図の下地の陰影は、陰影図 shadedrelief.jpg（basemap-data 2.0.0 同梱、原典は shadedrelief.com）**。以前「地図・地球儀は Natural Earth」と書いたのは誤り。shadedrelief.com の利用条件の本文は未確認のため、チャンネルのルール（2026-11-15）により、条件を確認するか確認済みの素材に差し替えるまで3D版は公開しない。フォントは M PLUS Rounded 1c（SIL OFL 1.1）、音源は FluidR3_GM（Frank Wen、MIT。/usr/share/doc/fluid-soundfont-gm/copyright で本文を確認）。有料素材は使っていない（追加費用0）。

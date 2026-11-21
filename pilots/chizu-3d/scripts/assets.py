@@ -1,5 +1,6 @@
-"""Static textures for the 3D compositor (all from Natural Earth, public domain):
-globe.jpg  : equirectangular shaded relief (Natural Earth SR), 4096x2048, slightly brightened (v4 bright look)
+"""Static textures for the 3D compositor.
+globe.jpg  : equirectangular shaded relief from shadedrelief.jpg (basemap-data 2.0.0; source shadedrelief.com — NOT Natural
+             Earth; terms unconfirmed as of 2026-11-21, see README), 4096x2048, slightly brightened (v4 bright look)
 hl_ca.png  : equirectangular overlay, Canada outline + light fill (for the globe)"""
 import sys
 from pathlib import Path
