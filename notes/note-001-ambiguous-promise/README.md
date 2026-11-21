@@ -12,8 +12,8 @@
 | 5 | 価格 | [`03_price.md`](03_price.md) |
 | 6 | 工程の状態 | [`STATUS.md`](STATUS.md) |
 | 7 | 見出し画像（無料・有料）と監査 | [`04_header_free.jpg`](04_header_free.jpg)・[`04_header_paid.jpg`](04_header_paid.jpg)・[`04_header_assets.md`](04_header_assets.md)（Claude の監査に合格） |
-| 8 | 入稿用の HTML（本文は d645c79 のまま） | [`05_draft_free.html`](05_draft_free.html)・[`05_draft_paid.html`](05_draft_paid.html)（表あり） |
-| 9 | **note 貼り付け用の HTML**（表を段落に展開。本文は d645c79 のまま） | [`06_note_free.html`](06_note_free.html)・[`06_note_paid.html`](06_note_paid.html) |
+| 8 | 入稿用の HTML（本文は d645c79 ＋ 2026-11-21 の「購入と返金」の1行） | [`05_draft_free.html`](05_draft_free.html)・[`05_draft_paid.html`](05_draft_paid.html)（表あり） |
+| 9 | **note 貼り付け用の HTML**（表を段落に展開。本文は d645c79 ＋ 2026-11-21 の「購入と返金」の1行） | [`06_note_free.html`](06_note_free.html)・[`06_note_paid.html`](06_note_paid.html) |
 | 10 | **公開前の最終監査** | [`07_prepublication_review.md`](07_prepublication_review.md) |
 | 11 | **プロフィール文（草案）・販売導線の確認・公開後の作業の順番・社長の確認項目** | [`08_profile_and_launch_review.md`](08_profile_and_launch_review.md) |
 | 12 | **販売者の表示と note の規約のレビュー**（事実・推論・未確認を分けた） | [`09_seller_terms_review.md`](09_seller_terms_review.md) |
@@ -39,7 +39,8 @@
 - 監査の記録
   - 販売導線：PR [tubex-cpu/TUBEX#13](https://github.com/tubex-cpu/TUBEX/pull/13)（Codex の実質監査は完了）
   - N0 案：PR [tubex-cpu/TUBEX#14](https://github.com/tubex-cpu/TUBEX/pull/14)（N0 全体は未承認）
-  - この本文：**Codex の本文監査に合格**（対象 commit d645c79、両本文の全文を再読。監査記録：https://github.com/tubex-cpu/TUBEX/pull/13#issuecomment-6872173849）。経緯：ed66c64 の7点を f6657fd で修正 → 心理の一般化の2回目の差し戻しを d645c79 で修正
+  - **2026-11-21 の変更：`03_paid.md` の「この記入セットについて」の表の「価格」の行の直後に、「購入と返金」の1行を追加（社長の決定、2026-11-21）。05・06 の有料版にも同じ1行を反映。有料ラインの位置（「読み終えたときに…目指しています。」の直後）は変えていない。無料記事は変更なし**。この1行は**Codex の監査待ち**。
+  - この本文（追加の1行を除く）：**Codex の本文監査に合格**（対象 commit d645c79、両本文の全文を再読。監査記録：https://github.com/tubex-cpu/TUBEX/pull/13#issuecomment-6872173849）。経緯：ed66c64 の7点を f6657fd で修正 → 心理の一般化の2回目の差し戻しを d645c79 で修正
 
 ## 書き方で守ったこと（レビューの観点）
 - 記入例・記入見本は架空と明記。日付・日数は例で、推奨する待機日数ではないと明記
@@ -65,7 +66,7 @@
   - 解消したブロック：メール認証、初回販売の本人情報、拡張の権限
 - **公開時の作業**：価格 ¥500 は下書きに残らない（開き直すと 300）ので、公開時に入力し直す。無料→有料のリンクは未設定・未検証で、有料の公開後に差し替える
 - **公開を止める項目**：N0 全体・ゲートC 未承認
-- **R3**：文献の調査は完了。返金の受付はオンのまま・自動翻訳と AI 学習はオフに決定（社長、2026-11-21）。**R3 全体は未解消**：販売の主体と開示（社長本人の確認）、翻訳と AI 学習をオフにする設定の変更（未実施）、販売の条件と返金の案内を本文に入れるか（未決・未適用）が残る。済むまで公開の作業に進まない
+- **R3**：文献の調査は完了。返金の受付はオン・自動翻訳と AI 学習の対価還元はオフに決定（社長、2026-11-21）。「購入と返金」の案内は有料記事の本文（03・05・06）に反映済みで、Codex の監査待ち。**R3 全体は未解消**：販売の主体・登録情報の一致・開示の体制（社長本人の確認、未確認）、note の下書きへの案内の反映と、翻訳・AI 学習をオフにする設定の変更（Codex、実測は未受領）が残る。済むまで公開の作業に進まない
 - **R7**：提案（未承認）：最後の「公開する」は社長本人が押す
 - **プロフィール文**：草案（`08_profile_and_launch_review.md` 1）。note にはまだ適用しない（プロフィール本文は空欄のまま）
 - **表示名**：2026-11-14 に「彼のことば、ほどきます」へ変更済み（Codex が保存の成功を確認。ID・URL は変えていない）
