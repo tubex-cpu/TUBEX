@@ -8,7 +8,10 @@ from pathlib import Path
 import numpy as np
 
 HERE = Path(__file__).resolve().parent
-SCRIPT = HERE.parent / "03_script.md"
+import os
+VER = os.environ.get("NEKO_VER", "v3")
+# v5：社長コメント 2026-11-21 を受けた改稿（言い切り・21場面）
+SCRIPT = HERE.parent / ("03_script_v5.md" if VER == "v5" else "03_script.md")
 OUT = Path(sys.argv[1] if len(sys.argv) > 1 else "/home/user/work_neko/out")
 VV = Path("/home/user/voicevox")
 ORT = VV / "dl/voicevox_onnxruntime-linux-x64-1.23.2/lib/libvoicevox_onnxruntime.so.1.23.2"
@@ -22,7 +25,8 @@ GAP_LINE, GAP_PARA = 0.6, 0.85
 # 読み替え（字幕は元の表記のまま）
 READ = [("日本時間", "にほんじかん"), ("ボンネットの下", "ボンネットのした"), ("録る人", "とる人"), ("録り直した", "とりなおした"),
         ("同じ行", "おなじぎょう"), ("一声", "ひとこえ"), ("同じ人", "おなじひと"), ("JAF", "ジャフ"), ("SNS", "エスエヌエス"), ("7,000万", "7000万"), ("9,500年", "きゅうせんごひゃくねん"),
-        ("1LDK", "ワンエルディーケー"), ("「", ""), ("」", ""), ("…", "")]
+        ("1LDK", "ワンエルディーケー"), ("河原", "かわら"), ("一部屋", "ひとへや"), ("十日後", "とおかご"), ("十二日後", "じゅうににちご"),
+        ("一言", "ひとこと"), ("6億匹", "ろくおくひき"), ("900万匹", "きゅうひゃくまんびき"), ("60匹", "ろくじゅっぴき"), ("「", ""), ("」", ""), ("…", "")]
 # 章ごとの頭の間（秒）：時刻表示や映像だけを見せる
 LEAD = {0: 3.2}
 LEAD_DEFAULT = 3.0
@@ -33,6 +37,11 @@ def parse():
     chs, cur = [], None
     for line in SCRIPT.read_text().splitlines():
         m = re.match(r"^## (\d\d) (.*?)（", line)
+        m5 = re.match(r"^## SCENE (\d\d)\u3000(.*?)\u3000【(.*?)】", line)
+        if m5:
+            cur = {"no": int(m5.group(1)) - 1, "title": m5.group(2), "label": m5.group(3), "lines": [], "pause": 0.0}
+            chs.append(cur)
+            continue
         if m:
             cur = {"no": int(m.group(1)), "title": m.group(2), "lines": []}
             chs.append(cur)
@@ -40,9 +49,14 @@ def parse():
         if line.startswith("## "):
             cur = None
             continue
+        if cur is not None and "【音・間】" in line:
+            # v5：「映像の間N秒」を場面の終わりに足す
+            cur["pause"] = sum(float(x) for x in re.findall(r"映像の間(\d+(?:\.\d+)?)秒", line))
         if cur is not None and line.startswith(">"):
             t = re.sub(r"［[^］]*］", "", line[1:]).strip()
             cur["lines"].append(t)  # '' = 段落の区切り
+    if VER == "v5":
+        chs.append({"no": chs[-1]["no"] + 1, "title": "エンドカード", "label": "", "lines": [], "pause": 3.0})
     return chs
 
 
@@ -88,8 +102,8 @@ def main():
             lines.append({"text": s, "start": round(t, 3), "end": round(t + d, 3), "wav": str(wav)})
             t += d
             pend = GAP_LINE
-        t += TAIL_DEFAULT
-        label = c["title"].split(" ― ")[0] if " ― " in c["title"] else ""
+        t += TAIL_DEFAULT + c.get("pause", 0.0)
+        label = c["label"] if "label" in c else (c["title"].split(" ― ")[0] if " ― " in c["title"] else "")
         timeline["chapters"].append({"no": c["no"], "title": c["title"], "label": label,
                                      "start": round(start, 3), "end": round(t, 3), "lines": lines})
     timeline["duration"] = round(t + 4.0, 3)  # 最後の余韻

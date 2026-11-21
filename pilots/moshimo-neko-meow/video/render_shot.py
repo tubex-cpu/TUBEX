@@ -5,7 +5,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 OUT = os.environ.get('NEKO_OUT', '/home/user/work_neko/out')
 import kit
 from kit import *
-import shots as S
+if os.environ.get('NEKO_VER') == 'v5':
+    import shots_v5 as S  # 改稿（2026-11-21）のカット表
+else:
+    import shots as S
 
 def shot_table():
     tl = json.load(open(f'{OUT}/timeline.json'))

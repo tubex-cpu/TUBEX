@@ -8,6 +8,7 @@ import numpy as np
 OUT = sys.argv[1] if len(sys.argv) > 1 else '/home/user/work_neko/out'
 SR = 48000
 FPS = 24
+VER = os.environ.get('NEKO_VER', 'v3')
 rng = np.random.default_rng(7)
 
 
@@ -59,6 +60,39 @@ def read(path):
     return a
 
 
+def caw():
+    """カラスのかすれた一声（倍音の多い低めの声＋ノイズ）"""
+    d = rng.uniform(0.28, 0.42); t = np.arange(int(d * SR)) / SR
+    f = rng.uniform(520, 640) * (1 - 0.18 * t / d)
+    ph = 2 * np.pi * np.cumsum(f) / SR
+    x = sum(np.sign(np.sin(k * ph)) / k for k in (1, 2, 3)) * 0.5 + rng.standard_normal(len(t)) * 0.35
+    x = np.convolve(x, np.ones(6) / 6, mode='same')
+    env = np.minimum(1, t / 0.03) * np.exp(-2.2 * t / d)
+    return (x * env).astype(np.float32)
+
+
+def bark():
+    """犬の短い一声"""
+    d = rng.uniform(0.16, 0.22); t = np.arange(int(d * SR)) / SR
+    f = rng.uniform(330, 420) * (1 + 0.5 * np.exp(-t / 0.03))
+    ph = 2 * np.pi * np.cumsum(f) / SR
+    x = np.sin(ph) + 0.6 * np.sin(2 * ph) + 0.3 * np.sin(3 * ph) + rng.standard_normal(len(t)) * 0.4
+    env = np.minimum(1, t / 0.008) * np.exp(-t / (d * 0.45))
+    return (x * env * 0.8).astype(np.float32)
+
+
+def insects(n):
+    """草むらの虫（高い音の細かい震え）"""
+    t = np.arange(n) / SR
+    out = np.zeros(n, np.float32)
+    for k in range(3):
+        fc = 4200 + 500 * k; rate = 28 + 6 * k
+        gate = (np.sin(2 * np.pi * rate * t + k) > 0.3).astype(np.float32)
+        slow = (np.sin(2 * np.pi * (0.5 + 0.2 * k) * t + 2 * k) > -0.2).astype(np.float32)
+        out += np.sin(2 * np.pi * fc * t).astype(np.float32) * gate * slow
+    return out / 3
+
+
 def bank(nv=24):
     """鳴き声の素材を前もって作る（高さ違い）"""
     out = []
@@ -97,7 +131,7 @@ def sfx():
     N = int(tl['duration'] * SR) + SR
     L = np.zeros(N, np.float32); Rr = np.zeros(N, np.float32)
     B = bank()
-    metas = sorted(glob.glob(f'{OUT}/meta/s*.json'))
+    metas = sorted(glob.glob(f'{OUT}/meta/*.json'))  # 第4稿までは s* だけを読んでいた（x・r のカットの鳴き声が入っていなかった）
     for mp in metas:
         m = json.load(open(mp))
         s0 = int(m['start'] * SR); s1 = int(m['end'] * SR)
@@ -132,6 +166,19 @@ def sfx():
                 e = min(N, pos + len(v)); v = v[:e - pos]
                 pan = rng.uniform(-0.9, 0.9)
                 L[pos:e] += v * (1 - pan) * 0.7; Rr[pos:e] += v * (1 + pan) * 0.7
+        # 改稿で足した生き物の音（合成）：カラス・犬・虫
+        for key, fn, gain in (('crows', caw, 0.30), ('barks', bark, 0.32)):
+            for f, g in m.get(key, []):
+                pos = s0 + int((f - 1) / FPS * SR)
+                if pos >= N:
+                    continue
+                v = reverb(fn(), 0.2, 0.05) * gain * g
+                pan = rng.uniform(-0.5, 0.5); e = min(N, pos + len(v)); v = v[:e - pos]
+                L[pos:e] += v * (1 - pan) * 0.7; Rr[pos:e] += v * (1 + pan) * 0.7
+        ins = m.get('insects', 0)
+        if ins > 0:
+            b = insects(n) * 0.05 * ins
+            L[s0:s1] += b; Rr[s0:s1] += np.roll(b, 331)
         # 環境音
         amb = m.get('amb', 'day'); g = AMB_GAIN.get(amb, 0.03)
         if g > 0:
@@ -150,6 +197,8 @@ def stop_time(tl):
         m = json.load(open(p))
         if m.get('silent_from'):
             return m['start'] + m['silent_from'] / FPS
+    if VER == 'v5':
+        return None  # 改稿は鳴きやまない
     raise SystemExit('silent_from のカットがない')
 
 
@@ -165,6 +214,12 @@ def bgm():
     MOOD = {0: ('myst', 'D'), 1: ('wide', 'D'), 2: ('light', 'G'), 3: ('tense', 'E'), 4: ('light', 'G'), 5: ('night', 'A'),
             6: ('night', 'A'), 7: ('light', 'C'), 8: ('tense', 'F'), 9: ('warm', 'D'), 10: ('sad', 'G'), 11: ('wide', 'C'),
             12: ('sad', 'E'), 13: ('silence', 'D'), 14: ('warm', 'D')}
+    if VER == 'v5':
+        # 改稿：鳴きやまない。ピアノは SCENE 19（章18）で初めて入る（台本の【音・間】）
+        MOOD = {0: ('myst', 'D'), 1: ('light', 'G'), 2: ('wide', 'D'), 3: ('tense', 'E'), 4: ('light', 'G'), 5: ('wide', 'C'),
+                6: ('night', 'A'), 7: ('night', 'A'), 8: ('tense', 'F'), 9: ('light', 'C'), 10: ('light', 'G'), 11: ('tense', 'E'),
+                12: ('sad', 'G'), 13: ('wide', 'C'), 14: ('night', 'A'), 15: ('tense', 'F'), 16: ('wide', 'D'), 17: ('sad', 'E'),
+                18: ('warm', 'D'), 19: ('warm', 'G'), 20: ('warm', 'D'), 21: ('warm', 'D')}
     ROOT = {'C': 48, 'D': 50, 'E': 52, 'F': 53, 'G': 55, 'A': 57}
     PROG = {'myst': [(0, 'm'), (8, 'M'), (5, 'M'), (10, 'M')], 'wide': [(0, 'M'), (7, 'M'), (9, 'm'), (5, 'M')],
             'light': [(0, 'M'), (5, 'M'), (7, 'M'), (0, 'M')], 'tense': [(0, 'm'), (5, 'm'), (8, 'M'), (7, 'M')],
@@ -189,7 +244,7 @@ def bgm():
             deg, q = PROG[mood][i % 4]
             chord = [root + deg, root + deg + (3 if q == 'm' else 4), root + deg + 7]
             d = min(bar, end - t)
-            if mood == 'silence' and t < t_stop + 9:
+            if mood == 'silence' and t_stop is not None and t < t_stop + 9:
                 t += d; i += 1; continue
             for p in chord:
                 note('pad', t, d, p + 12, 34 if mood != 'tense' else 40)
@@ -197,7 +252,8 @@ def bgm():
             # ピアノの分散和音
             step = bar / 8
             arp = [chord[0] + 12, chord[1] + 12, chord[2] + 12, chord[1] + 24, chord[2] + 12, chord[1] + 12, chord[0] + 24, chord[2] + 12]
-            if mood in ('light', 'warm', 'wide', 'myst', 'sad', 'night', 'tense'):
+            piano_ok = VER != 'v5' or c['no'] >= 18
+            if piano_ok and mood in ('light', 'warm', 'wide', 'myst', 'sad', 'night', 'tense'):
                 for k in range(8):
                     if mood in ('night', 'sad') and k % 2:
                         continue
@@ -243,10 +299,11 @@ def mix():
     sduck = (1 - 0.4 * np.clip(env / 0.05, 0, 1))[:, None]
     # 鳴きやむ瞬間（30日後の午後3時）以降しばらくは BGM も切る
     t_stop = stop_time(tl)
-    a, z = int(t_stop * SR), int((t_stop + 9.0) * SR)
-    g = np.ones(N, np.float32); g[a:z] = 0
-    fade = int(3 * SR); g[z:z + fade] = np.linspace(0, 1, fade)[:max(0, min(fade, N - z))]
-    bg *= g[:, None]
+    if t_stop is not None:
+        a, z = int(t_stop * SR), int((t_stop + 9.0) * SR)
+        g = np.ones(N, np.float32); g[a:z] = 0
+        fade = int(3 * SR); g[z:z + fade] = np.linspace(0, 1, fade)[:max(0, min(fade, N - z))]
+        bg *= g[:, None]
     out = nar[:, None] * 1.0 + sfx_ * 0.36 * sduck + bg
     write(f'{OUT}/mix_raw.wav', out.reshape(-1), ch=2)
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', f'{OUT}/mix_raw.wav', '-af', 'loudnorm=I=-16:TP=-1.5:LRA=11', '-ar', str(SR), f'{OUT}/mix.wav'], check=True)

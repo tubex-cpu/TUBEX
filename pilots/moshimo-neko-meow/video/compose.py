@@ -13,12 +13,20 @@ sys.path.insert(0, HERE)
 OUT = os.environ.get('NEKO_OUT', '/home/user/work_neko/out')
 FONTS = '/home/user/work_neko/fonts'
 W, H, FPS = 1920, 1080, 24
+VER = os.environ.get('NEKO_VER', 'v3')
 
 # 字幕：社長指示（2026-11-20）「字幕のフォントはかなり太字にしてほしい ただし文字も大きくしてつぶれて見えないようにして」
 # → 明朝の極太（Noto Serif CJK JP Black, SIL OFL）を 76px・縁 7px・字間 +3px で1行に出す
 SUB_FONT, SUB_SIZE, SUB_TRACK, SUB_MAXC = 'NotoSansCJKjp-Black.otf', 76, 3, 20  # 社長指示 2026-11-20：極太ゴシック、縁取り・影なし
 
 _fc = {}
+def _telops():
+    if VER == 'v5':
+        import telops_v5 as T
+    else:
+        import telops as T
+    return T
+
 def font(size, w='Bold'):
     k = (size, w)
     if k not in _fc:
@@ -190,7 +198,7 @@ def recap(ch_no):
     k = ('recap', ch_no)
     if k in _cache:
         return _cache[k]
-    import telops as T
+    T = _telops()
     prev = [T.EVENTS[c] for c in range(max(1, ch_no - 4), ch_no)]
     lines = ['この世界で起きたこと'] + ['✓ ' + e for e in prev] + ['▶ ' + T.EVENTS[ch_no]]
     f = sfont(34); fh = sfont(28)
@@ -217,7 +225,7 @@ def progress(ch_no):
     k = ('prog', ch_no)
     if k in _cache:
         return _cache[k]
-    import telops as T
+    T = _telops()
     w, h = 700, 100; x0, x1, y = 40, w - 40, 30
     im = Image.new('RGBA', (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
     d.rounded_rectangle((0, 0, w - 1, h - 1), 14, fill=(16, 20, 28, 140))
@@ -238,7 +246,7 @@ def progress(ch_no):
 
 
 def seg(name):
-    import telops as T
+    T = _telops()
     tl, table = tl_info()
     row = [r for r in table if r['shot'] == name][0]
     ch = [c for c in tl['chapters'] if c['no'] == row['chapter']][0]
@@ -303,6 +311,8 @@ def seg(name):
         if in_title:
             a = min(1, (t - t_title0) / 0.6, (t_title1 + 0.6 - t) / 0.6)
             sub = ch['title'].split(' ― ')[-1]
+            if sub == label:
+                sub = ''
             paste(base, text_layer([label], 120, stroke=6), W / 2, H / 2 - 50, a)
             paste(base, text_layer([sub], 54, stroke=4, w='Regular'), W / 2, H / 2 + 70, a)
             if 2 <= ch['no'] < last_ch:
@@ -310,7 +320,7 @@ def seg(name):
                 paste(base, rc, 70, H / 2 - rc.height / 2 - 20, a, anchor='tl')
         # 左上：いつ・どこで・何が
         # 時計：冒頭は章の頭から3秒で 15:00:00、30日後は「鳴き声が、止まります」の行で 15:00:00
-        clock_t0 = ch['start'] + 3.0 if ch['no'] == 0 else (ch['lines'][2]['start'] if ch['no'] == last_ch - 1 else None)
+        clock_t0 = ch['start'] + 3.0 if ch['no'] == 0 else (ch['lines'][2]['start'] if ch['no'] == last_ch - 1 and VER != 'v5' else None)
         clock_on = clock_t0 is not None and is_first_shot and t < clock_t0 + 3.5
         if not in_title and info:
             a = min(1, i / 10, (n - i) / 8) if not (titled and t < t_title1 + 1.2) else min(1, (t - t_title1 - 0.6) / 0.6, (n - i) / 8)
