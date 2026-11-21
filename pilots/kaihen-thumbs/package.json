@@ -1,0 +1,8 @@
+{
+  "name": "kaihen-thumbs",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "ルール改変ニッポンのサムネ（3D の主役素材を Remotion+three で描き、文字は別工程で OFL の Noto Serif JP を組む）。node_modules は ../kaihen-001-equal-pay のものを使う",
+  "scripts": {"render": "node scripts/render.mjs", "typecheck": "tsc --noEmit"}
+}
