@@ -1,95 +1,95 @@
 // scripts/build-voice.py で自動生成。手で編集しないこと。
 import type {Caption} from '@remotion/captions';
 
-// 0:00 謎の先出し（2708フレーム）
+// 0:00 謎の先出し（2340フレーム）
 export const introCaptions: Caption[] = [
   {
-    "text": "南米ペルー。アンデスの山の上、標高およそ2430メートル。",
+    "text": "南米ペルー、標高およそ2430メートル。雲の上にそびえる石の都市、マチュピチュ。",
     "startMs": 500,
-    "endMs": 5823,
+    "endMs": 7476,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "深い谷にはさまれた尾根の上に、石の都市が眠っている。",
-    "startMs": 6303,
-    "endMs": 10111,
+    "text": "教科書や旅の本で、私たちはこの遺跡について、こう教わってきた。",
+    "startMs": 7956,
+    "endMs": 12873,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "マチュピチュ。誰もが一度は写真で見たことのある、世界で最も有名な遺跡のひとつだ。",
-    "startMs": 10591,
-    "endMs": 16564,
+    "text": "1911年、アメリカの探検家ビンガムが、密林の奥で見つけた、失われた都市。",
+    "startMs": 13353,
+    "endMs": 20137,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "だが、この都市について、私たちが知っていると思っていることの多くは、ここ数年で次々に書きかえられている。",
-    "startMs": 17044,
-    "endMs": 24745,
+    "text": "スペインと戦ったインカの人々が、最後に立てこもった要塞。",
+    "startMs": 20617,
+    "endMs": 24703,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "1911年、アメリカの探検家が「発見した」とされてきたこの遺跡。ところが、その探検家より前に、壁に名前を書き残していた人物がいた。",
-    "startMs": 25225,
-    "endMs": 36745,
+    "text": "太陽に仕える女性たちが、隠れ住んだ聖なる都市。",
+    "startMs": 25183,
+    "endMs": 28873,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "私たちがずっと呼んできた「マチュピチュ」という名前。それは、この都市の本当の名前ではなかったかもしれない。",
-    "startMs": 37225,
-    "endMs": 45001,
+    "text": "ところが、ここ数年の研究で、その常識が、次々とくつがえっている。",
+    "startMs": 29353,
+    "endMs": 34889,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "そして、ここに住んでいた人々。骨に残る遺伝子を調べると、思いもよらない姿が浮かび上がってきた。",
-    "startMs": 45481,
-    "endMs": 52756,
+    "text": "ビンガムより9年も前に、遺跡の壁には、地元の農民が名前を書き残していた。",
+    "startMs": 35369,
+    "endMs": 41119,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "さらに、2026年の3月。この遺跡を覆う密林の下を、日本の技術が初めて見通した。",
-    "startMs": 53236,
-    "endMs": 60361,
+    "text": "「マチュピチュ」という名前さえ、この都市の本当の名前ではなかったかもしれない。",
+    "startMs": 41599,
+    "endMs": 46889,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "それを成しとげたのは、福島県の、ある小さな会社だった。",
-    "startMs": 60841,
-    "endMs": 65023,
+    "text": "そして、骨に残る遺伝子が明かした住人たちの姿は、教科書には書かれていないものだった。",
+    "startMs": 47369,
+    "endMs": 53492,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "なぜ、福島の会社が、地球の裏側の遺跡を調べたのか。そこには、100年以上前から続く、ひとりの日本人との不思議な縁があった。",
-    "startMs": 65503,
-    "endMs": 75657,
+    "text": "骨の年代を測る放射性炭素。古代の人々の遺伝子の解析。最新の科学が、教科書のマチュピチュを、ひとつずつ書きかえている。",
+    "startMs": 53972,
+    "endMs": 63487,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "ドローンに積んだレーザー。骨の年代を測る放射性炭素。そして、遺伝子の解析。",
-    "startMs": 76137,
-    "endMs": 82495,
+    "text": "さらに2026年。日本のレーザーが密林の下を見通すと、この有名な遺跡には、まだ誰も調べていない部分が残っていた。",
+    "startMs": 63967,
+    "endMs": 72980,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "最新の科学が導き出したのは、私たちの知らなかった、もうひとつのマチュピチュの姿だった。",
-    "startMs": 82975,
-    "endMs": 89055,
+    "text": "あなたの知っているマチュピチュは、どこまで本当なのか。",
+    "startMs": 73460,
+    "endMs": 76799,
     "timestampMs": null,
     "confidence": null
   }
 ];
 
-// 0:00 ハビ判事登場（850フレーム）
+// 0:00 ハビ判事登場（851フレーム）
 export const judgeEntranceCaptions: Caption[] = [
   {
     "text": "こんばんは。閉園後の法廷にようこそ。ハビ判事です。",
@@ -113,23 +113,23 @@ export const judgeEntranceCaptions: Caption[] = [
     "confidence": null
   },
   {
-    "text": "マチュピチュは、誰が、何のために造り、そこには誰が暮らしていたのか。",
+    "text": "私たちが教わってきたマチュピチュは、どこまで本当なのか。",
     "startMs": 12063,
-    "endMs": 17204,
+    "endMs": 15849,
     "timestampMs": null,
     "confidence": null
   },
   {
-    "text": "新しい証拠をもとに、手がかりを、ひとつずつたどっていく。",
-    "startMs": 17684,
-    "endMs": 21961,
+    "text": "記録と、骨と、遺伝子をもとに、手がかりを、ひとつずつたどっていく。",
+    "startMs": 16329,
+    "endMs": 21983,
     "timestampMs": null,
     "confidence": null
   },
   {
     "text": "最初の手がかりは、この遺跡を世界に知らせた、ひとりの探検家だ。",
-    "startMs": 22441,
-    "endMs": 27113,
+    "startMs": 22463,
+    "endMs": 27135,
     "timestampMs": null,
     "confidence": null
   }

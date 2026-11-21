@@ -2,8 +2,8 @@
 export const TRANSITION_FRAMES = 20;
 
 export const sceneDurations = {
-	Intro: 2708,
-	JudgeEntrance: 850,
+	Intro: 2340,
+	JudgeEntrance: 851,
 	Clue1Bingham: 4670,
 	Clue2Name: 3701,
 	Clue3Fortress: 3505,
@@ -20,4 +20,4 @@ export const sceneDurations = {
 	Closing: 449,
 } as const;
 
-export const TOTAL_FRAMES = 49993;
+export const TOTAL_FRAMES = 49626;
