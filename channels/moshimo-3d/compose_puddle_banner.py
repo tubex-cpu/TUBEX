@@ -28,17 +28,21 @@ ang=np.arctan2(yy-cy,xx-cx); rays=0.10*np.exp(-(r/120)**2)*(0.5+0.5*np.cos(ang*1
 g=np.clip(glow+rays,0,1.4)[...,None]
 C=np.asarray(canvas).astype(float); C=C+g*np.array([255,250,235])*0.75; C=np.clip(C,0,255)
 canvas=Image.fromarray(C.astype('uint8'))
-F='/home/user/work_neko/fonts/MPLUSRounded1c-Black-merged.ttf'
-def draw(base,text,size,x,y,sw):
+import os, sys
+F=os.environ.get('BANNER_FONT','/home/user/work_neko/fonts/MPLUSRounded1c-Black-merged.ttf'); TAG=os.environ.get('BANNER_TAG','')
+def draw(base,text,size,x,y,sw,maxw=None):
     f=ImageFont.truetype(F,size); l,t,r,b=f.getbbox(text)
+    while maxw and r-l>maxw and size>20:
+        size-=2; f=ImageFont.truetype(F,size); l,t,r,b=f.getbbox(text)
+    sw=max(4,int(size*sw/140)) if sw>8 else max(3,int(size*sw/58))
     sh=Image.new('RGBA',(W,H),(0,0,0,0)); ImageDraw.Draw(sh).text((x-l+6,y-t+9),text,font=f,fill=(0,0,0,170),stroke_width=sw,stroke_fill=(0,0,0,170))
     base.alpha_composite(sh.filter(ImageFilter.GaussianBlur(5)))
     ImageDraw.Draw(base).text((x-l,y-t),text,font=f,fill=(255,255,255,255),stroke_width=sw,stroke_fill=(16,16,16,255))
     return r-l,b-t
 base=canvas.convert('RGBA'); tx=bx0+40
-w1,h1=draw(base,'世界をズラす',140,tx,by0+95,12)
-w2,h2=draw(base,'いつもの世界。何かが違う。',58,tx+4,by0+95+h1+30,7)
+w1,h1=draw(base,'世界をズラす',170,tx,by0+95,12,maxw=740)
+w2,h2=draw(base,'いつもの世界。何かが違う。',70,tx+4,by0+95+h1+30,7,maxw=w1)
 print('text right',tx+max(w1,w2),'puddle',px,px+pud2.width,py,py+pud2.height,'band',bx0,bx1,by0,by1)
-out=base.convert('RGB'); out.save('banner_puddle_2560.png')
-out.crop((bx0,by0,bx1,by1)).save('banner_puddle_safe.png')
-out.resize((1280,720),Image.LANCZOS).save('banner_puddle_preview.png')
+out=base.convert('RGB'); out.save(f'banner_puddle_2560{TAG}.png')
+out.crop((bx0,by0,bx1,by1)).save(f'banner_puddle_safe{TAG}.png')
+out.resize((1280,720),Image.LANCZOS).save(f'banner_puddle_preview{TAG}.png')
