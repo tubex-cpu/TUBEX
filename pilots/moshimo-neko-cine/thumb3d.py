@@ -62,8 +62,8 @@ def scene_A(res, spp):
     front = cat((0.62, -12.75, 0), 'tora', s=0.62, rot_z=0.35, name='front'); meow(front, [1], dur=30, lift=0.45)
     lanterns((-12, -6, 0, 6, 12))
     finish(res, spp)
-    cam = camera(32, dof=0.62, fstop=1.4)
-    look(cam, (1.0, -13.35, 0.26), (-0.55, -6.0, 1.15))
+    cam = camera(30, dof=0.75, fstop=2.8)
+    look(cam, (0.05, -13.5, 0.3), (-0.9, -6.0, 1.2))
 
 
 def scene_B(res, spp):
