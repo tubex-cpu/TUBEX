@@ -60,11 +60,10 @@ def scene_A(res, spp):
     rnd = random.Random(5)
     crowd(rnd, 96, -11.0, 0.75)
     front = cat((0.62, -12.75, 0), 'tora', s=0.62, rot_z=0.35, name='front'); meow(front, [1], dur=30, lift=0.45)
-    lanterns((-12, -6, 0, 6, 12)); hydrangeas(2.0, (-12.5, -9, -5, -1), rnd)
+    lanterns((-12, -6, 0, 6, 12))
     finish(res, spp)
-    L.backdrop((0, 30, 5), 30, 14)
-    cam = camera(30, dof=0.85, fstop=1.4)
-    look(cam, (1.05, -13.55, 0.28), (-0.35, -6.0, 1.05))
+    cam = camera(32, dof=0.62, fstop=1.4)
+    look(cam, (1.0, -13.35, 0.26), (-0.55, -6.0, 1.15))
 
 
 def scene_B(res, spp):
@@ -78,7 +77,7 @@ def scene_B(res, spp):
         c = cat((x, y, 0), rnd.choice(COATS_MIX), s=0.62, rot_z=-math.atan2(x, y + 0.9))
         meow(c, [1], dur=30, lift=0.6)
     front = cat((0.45, -0.25, 0), 'tora', s=0.62, rot_z=-0.4, name='front'); meow(front, [1], dur=30, lift=0.7)
-    lanterns((-2, 4), xs=(2.0,)); hydrangeas(2.0, (1, 3), rnd)
+    lanterns((-2, 4), xs=(2.0,))
     finish(res, spp)
     cam = camera(26, dof=1.5, fstop=2.0)
     look(cam, (0.0, -1.35, 1.55), (0.1, 0.55, 0.05))
@@ -93,9 +92,8 @@ def scene_C(res, spp):
         c = cat((side * rnd.uniform(0.45, 1.25), y, 0), rnd.choice(COATS_MIX), s=0.62, rot_z=rnd.uniform(-0.25, 0.25))
         meow(c, [1], dur=30, lift=0.4)
     front = cat((0.9, -12.6, 0), 'tora', s=0.62, rot_z=0.15, name='front'); meow(front, [1], dur=30, lift=0.4)
-    lanterns((-12, -7, -2, 3, 8, 13)); hydrangeas(2.0, (-12, -8, -4), rnd)
+    lanterns((-12, -7, -2, 3, 8, 13))
     finish(res, spp)
-    L.backdrop((0, 30, 4), 30, 12)
     cam = camera(24, dof=1.4, fstop=2.0)
     look(cam, (0.25, -14.2, 0.45), (0.0, -2.0, 1.2))
 

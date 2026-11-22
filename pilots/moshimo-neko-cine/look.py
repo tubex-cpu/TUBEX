@@ -109,7 +109,8 @@ def sky_gradient(strength=1.0, night=False):
     tc = nt.nodes.new('ShaderNodeTexCoord'); sep = nt.nodes.new('ShaderNodeSeparateXYZ'); ramp = nt.nodes.new('ShaderNodeValToRGB')
     nt.links.new(tc.outputs['Generated'], sep.inputs['Vector']); nt.links.new(sep.outputs['Z'], ramp.inputs['Fac'])
     cr = ramp.color_ramp
-    cols = [(0.0, (0.25, 0.12, 0.10)), (0.5, (1.0, 0.45, 0.22)), (0.56, (0.95, 0.42, 0.38)), (0.7, (0.42, 0.22, 0.45)), (1.0, (0.10, 0.08, 0.25))]
+    # Generated の Z は -1〜1。0（地平線）から上へ：橙 → 桃 → 紫 → 深い紺
+    cols = [(0.0, (1.0, 0.45, 0.20)), (0.08, (1.0, 0.38, 0.30)), (0.22, (0.70, 0.25, 0.45)), (0.5, (0.22, 0.12, 0.38)), (1.0, (0.04, 0.04, 0.14))]
     if night:
         cols = [(0.0, (0.02, 0.02, 0.04)), (0.5, (0.10, 0.08, 0.16)), (1.0, (0.02, 0.03, 0.08))]
     cr.elements[0].position, cr.elements[0].color = cols[0][0], (*cols[0][1], 1)
