@@ -8,6 +8,19 @@ from kit import COATS
 
 R5 = random.Random(21)
 
+# 寝室：第4稿までの配置では、眠る猫が枕にめり込んでいた（社長指摘 2026-11-22「絵が被っている」6:43）。
+# 枕を左へずらし、猫を右へ寄せる。shots.py の既存カット（s00d・s05d・x05e）にも効くよう差し替える。
+import shots as _S
+_env_bedroom_orig = _S.env_bedroom
+def env_bedroom(n, ghost=False):
+    c = _env_bedroom_orig(n, ghost=ghost)
+    for o in bpy.data.objects:
+        if o.type == 'MESH' and o.parent is not None and o.parent.name.startswith('bed') and abs(o.dimensions.x - 0.6) < 0.02 and abs(o.dimensions.y - 0.3) < 0.02:
+            o.location.x -= 0.22  # 枕
+    c.location = (0.38, -0.15, 0.5)
+    return c
+_S.env_bedroom = env_bedroom
+
 # ---------------- 共通の部品 ----------------
 COATS['dog_brown'] = {'base': hexc('#b07a48'), 'belly': hexc('#ecd8b8'), 'stripe': hexc('#b07a48')}
 COATS['dog_white'] = {'base': hexc('#f1ece2'), 'belly': hexc('#ffffff'), 'stripe': hexc('#f1ece2')}

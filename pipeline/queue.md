@@ -21,6 +21,10 @@
 | kaihen-001-equal-pay | ルール改変ニッポン（`channels/if-okane/`） | 全員同じ給料／誰が働く？（`episodes/kaihen-001-equal-pay/`） | 2026-11-13 社長「Claude Codeに台本制作も進めて」「尺は２５〜４０分尺で進めて」を受け、確認用の長尺 v0.2（推定約26分）まで作成。企画 `03_plan.md` はゲートA の社長確認待ち。出典は一次資料の本文が未確認 |
 | note | note（有料 note・ジャンル：不倫・`pipeline/README.md`「note」） | 不倫ジャンルの切り口・価格帯の方針（ゲートN0）。主案は `channels/furin_atode/CHANNEL.md`（2026-10-25 社長方針）。運用は note＋YouTube（無料＋メンバーシップ、2026-11-13 社長方針。形・価格・名前は未決）。YouTube とは独立して進める | 工程N0。方針案 `notes/00_strategy.md`（2026-10-25、CHANNEL.md の読者・4テーマで作り直し。PR #14 の草案は書き換えていない）。競合原ページの確認が残件・Codex 監査前。N0承認前のN1以降は禁止。2026-11-13：note＋YouTube 第1枠の競合調査と導線・企画の方向性の案 `channels/furin_atode/00_market_research.md`。2026-11-13 社長回答：案A・期限は年内・LINE なし・恋愛に寄せる。2026-11-14：チャンネル名・コンセプト案 `channels/furin_atode/01_youtube_concept.md` を作成、ゲート0（社長の選択）待ち。2026-11-14：note の表示名に「不倫」を使わない（旧名取り下げ）、候補 `channels/furin_atode/02_note_name.md`（社長の選択待ち）。2026-11-14：販売導線の決定版 `channels/furin_atode/03_marketing_funnel.md`（設計決定。N0 全体・公開は未承認） |
 | note-001-ambiguous-promise | note（1週目「曖昧な約束を待つ」） | 無料「「落ち着いたら会おう」を待つ前に。…」／有料 ¥500「既婚の彼の曖昧な約束を待つ前に｜…記入セット」 | **本文監査に合格**（Codex、対象 commit d645c79、2026-11-14）。2026-11-14：見出し画像の作成と下書き入稿を許可（Codex 担当、Claude が画像を監査）。認証・公開は未実施、公開しない。`notes/note-001-ambiguous-promise/README.md` |
+| moshimo-neko-meow | 3D「もしも」動画（`pilots/moshimo-neko-meow/`） | もしも世界中の猫が一斉に鳴き始めたら？ | 動画 第4版（改稿21場面・19分39秒、`outputs/neko_v4_preview_720p.mp4`）完成。2026-11-22 読み（言って）と寝室の重なりを修正。サムネのラフ3パターン（`06_thumbnail.md`）は社長の方向選択待ち |
+| moshimo-ame-30days | 3D「もしも」動画（`pilots/moshimo-ame-30days/`） | もしも雨が30日間、激しく降り続いたら？ | 台本 第1稿（約15分半）。社長の台本確認待ち |
+| moshimo-nemurenai | 3D「もしも」動画（`pilots/moshimo-nemurenai/`） | もしも人類が、眠れなくなったら？ | 台本 第1稿（約15分半）。社長の台本確認待ち |
+| moshimo-strike | 3D「もしも」動画（`pilots/moshimo-strike/`） | もし日本でパリやスペインのようなストライキが起こったら？ | 台本 第2稿（約16分）。社長の台本確認待ち |
 | 001-sleep-without-brain | （試運転） | 脳がない生き物も眠る | **試運転として終了**（2026-10-10 社長判断）。パイプラインの動作確認用サンプル。公開しない |
 
 ## 週次確認一覧
