@@ -2,7 +2,7 @@
 「視聴者がえっ気になると感情が動けばいい」。
 - 書体：M PLUS Rounded 1c Black（SIL OFL 1.1）。白文字に黒の太フチと影。強調したい語（数字など）だけ黄色
 - 2行。2行目を大きく。右下（再生時間の表示）は空ける
-使い方: python compose_q.py <base.png> <1行目> <2行目> <out.png> [強調する語] [left|right] [上端(高さ比)]
+使い方: python compose_q.py <base.png> <1行目> <2行目> <out.png> [強調する語] [left|right] [上端(高さ比)] [最大の幅(幅比)]
 """
 import sys
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
@@ -51,8 +51,9 @@ def main():
     for y in range(H):
         d.line((0, y, W, y), fill=int(max(0, 1 - y / (H * 0.6)) * 110))
     im = Image.composite(Image.new('RGBA', (W, H), (0, 0, 0, 255)), im, shade)
-    f1 = fit(l1, int(W * 0.80), int(H * 0.17))
-    f2 = fit(l2, int(W * 0.92), int(H * 0.27))
+    mw = float(sys.argv[8]) if len(sys.argv) > 8 else 0.92
+    f1 = fit(l1, int(W * min(0.80, mw)), int(H * 0.17))
+    f2 = fit(l2, int(W * mw), int(H * 0.27))
     lay = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     w1 = f1.getbbox(l1); w2 = f2.getbbox(l2)
     x1 = 46 if side == 'left' else W - 46 - (w1[2] - w1[0])
