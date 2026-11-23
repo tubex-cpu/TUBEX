@@ -22,7 +22,8 @@ shade = Image.new('L', (W, H), 0); sd = ImageDraw.Draw(shade)
 for x in range(W):
     sd.line((x, 0, x, H), fill=int(max(0.0, 1 - x / (W * 0.72)) ** 1.3 * 150))
 base = Image.composite(Image.new('RGBA', (W, H), (8, 10, 18, 255)), base, shade)
-F = '/home/user/work_neko/fonts/NotoSansCJKjp-Black.otf'
+import os
+F = os.environ.get('THUMB_FONT', '/home/user/work_neko/fonts/NotoSansCJKjp-Black.otf')
 YELLOW = (255, 214, 48, 255); WHITE = (255, 255, 255, 255); INK = (16, 16, 16, 255)
 def fit(text, w, h):
     s = 500
