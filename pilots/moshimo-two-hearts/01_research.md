@@ -44,6 +44,9 @@
 | F28 | 刺胞動物（クラゲ・イソギンチャク・サンゴ）は消化・循環の器官を持たず、呼吸器官もない。体の細胞の層がまわりの水から直接酸素を取り込む | https://en.wikipedia.org/wiki/Cnidaria （"Digestive and circulatory organs: No" "There are no respiratory organs"） | Wikipedia で確認（2026-11-24）・一次未確認 |
 | F29 | カイメンは循環・呼吸・消化の専用の仕組みを持たず、体を通る水の流れでえさと酸素を得る | https://en.wikipedia.org/wiki/Sponge （"Sponges do not have distinct circulatory, respiratory, digestive, and excretory systems – instead, the water flow system supports all these functions"） | Wikipedia で確認（2026-11-24）・一次未確認 |
 | F30 | 扁形動物（プラナリアなど）は循環・呼吸の専用の器官を持たず、平たい体で酸素がしみ込む | https://en.wikipedia.org/wiki/Flatworm （"having no specialised circulatory and respiratory organs ... by diffusion"） | Wikipedia で確認（2026-11-24）・一次未確認 |
+| F31 | 日本の食品ロスは2023年度で約464万トン。国民1人あたり毎日おにぎり1個分（約102g） | https://ja.wikipedia.org/wiki/フードロス （環境省「我が国の食品ロスの発生量の推計値（令和5年度）」の転載） | Wikipedia で確認（2026-11-24）・環境省の原文未確認 | 供給の見通し（社長への回答） |
+| F32 | 2025年に世界で6億800万〜6億9,600万人（人口の7.4〜8.5%）が飢餓 | https://en.wikipedia.org/wiki/Hunger （FAO 2026 の転載） | Wikipedia で確認（2026-11-24）・FAO 原文未確認 | 供給の見通し（社長への回答） |
+| F33 | 日本のカロリーベース総合食料自給率は2025年度38% | https://ja.wikipedia.org/wiki/食料自給率 （農林水産省の転載） | Wikipedia で確認（2026-11-24）・農水省の原文未確認 | 供給の見通し（社長への回答） |
 
 ## 2. 場面ごとの「事実・この世界の仮定・推論」
 
