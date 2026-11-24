@@ -22,6 +22,8 @@ def get(url):
         except urllib.error.HTTPError as e:
             if e.code != 429:
                 raise
+            if 'upload.wikimedia.org' in url:  # 原寸の配信は429が長く続くので、待たずに後回しにする
+                raise
             wait = int(e.headers.get('retry-after', '60')) + 5
             print(f'  429 {wait}s {url[:40]}', flush=True)
             time.sleep(wait)
