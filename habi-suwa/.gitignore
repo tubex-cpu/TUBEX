@@ -8,3 +8,4 @@ out
 fonts-src/
 scripts/.voice-cache/
 public/bgm/*.wav
+__pycache__/

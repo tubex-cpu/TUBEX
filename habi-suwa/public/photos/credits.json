@@ -97,5 +97,60 @@
    1920,
    1285
   ]
+ },
+ "judge-lake-dusk": {
+  "file": "judge-lake-dusk.jpg",
+  "title": "Lake Suwa, Nagano Prefecture; May 2019 (04).jpg",
+  "artist": "Sei F",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Lake_Suwa,_Nagano_Prefecture;_May_2019_(04).jpg",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "c01-izumo-honden": {
+  "file": "c01-izumo-honden.jpg",
+  "title": "The main shrine, Izumo-taisha (35933485350).jpg",
+  "artist": "Big Ben in Japan from Kawasaki, Japan",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:The_main_shrine,_Izumo-taisha_(35933485350).jpg",
+  "size": [
+   1920,
+   1281
+  ]
+ },
+ "c01-inasa-beach": {
+  "file": "c01-inasa-beach.jpg",
+  "title": "Inasa Beach at low tide with Bentenjima in the background.jpg",
+  "artist": "kajikawa",
+  "license": "CC BY 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Inasa_Beach_at_low_tide_with_Bentenjima_in_the_background.jpg",
+  "size": [
+   1920,
+   1440
+  ]
+ },
+ "c01-takemikazuchi": {
+  "file": "c01-takemikazuchi.jpg",
+  "title": "武甕槌太神 Takemikazuchi by 八島岳亭 Yashima Gakutei.jpg",
+  "artist": "Yashima Gakutei",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:%E6%AD%A6%E7%94%95%E6%A7%8C%E5%A4%AA%E7%A5%9E_Takemikazuchi_by_%E5%85%AB%E5%B3%B6%E5%B2%B3%E4%BA%AD_Yashima_Gakutei.jpg",
+  "size": [
+   1920,
+   2196
+  ]
+ },
+ "c01-lake-from-amida": {
+  "file": "c01-lake-from-amida.jpg",
+  "title": "Lake Suwa from Mount Amida.jpg",
+  "artist": "Alpsdake",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Lake_Suwa_from_Mount_Amida.jpg",
+  "size": [
+   1920,
+   1280
+  ]
  }
 }
