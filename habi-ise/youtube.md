@@ -2,14 +2,16 @@
 
 ## タイトル案
 
-- 天皇でさえ見られない？ 三種の神器はいまどこに――冬至の伊勢神宮と八咫鏡の謎（推奨）
-- 草薙剣は壇ノ浦に沈んだのか？ 三種の神器の「本当の居場所」をハビ判事が検証
-- 冬至の朝、伊勢で太陽が鳥居をくぐる――八咫鏡を守る1300年の秘密
+- 【三種の神器】天皇でさえ見られない鏡と剣は、いまどこにあるのか（推奨）
+- 【禁域】草薙剣を「見た」者がいた？ 三種の神器と冬至の伊勢神宮
+- 【伊勢神宮】冬至の朝、太陽が鳥居をくぐる 八咫鏡を守る1300年の記録
+
+（推奨サムネ「江戸時代 御神体をのぞいた神職／草薙剣を見た者がいた？」と役割を分ける。サムネは剣の1点、タイトルは神器全体の居場所。「ハビ判事が検証」「最新AI」は入れない）
 
 ## 概要欄
 
 2026年12月22日、冬至。朝7時半ごろ、伊勢神宮・内宮の宇治橋の大鳥居の真ん中から、太陽が昇ります。
-内宮の御神体とされる八咫鏡は、天皇でさえ見られないと言われる三種の神器のひとつ。草薙剣には、天皇の病の原因として占われたという日本書紀の記録が残り、壇ノ浦の海に沈んだとも語られてきました。
+内宮の御神体とされる八咫鏡は、天皇でさえ見られないと言われる三種の神器のひとつ。ところが江戸時代、熱田神宮で御神体の草薙剣をひそかにのぞき見た神職たちがいた――そんな記述が伝えられています。草薙剣には、天皇の病の原因として占われたという日本書紀の記録も残り、壇ノ浦の海に沈んだとも語られてきました。
 三種の神器は、いま、どこにあるのか。2025年に木曽で伐り出された「八咫鏡を納める器」のヒノキ、2026年のお木曳など、第63回式年遷宮の最新の動きと、日本書紀などの記録をもとに、9の手がかりを閉園後の法廷でハビ判事がひとつずつ裁きます。
 
 ▼チャプター
@@ -46,15 +48,15 @@
 ▼クレジット
 ナレーション：VOICEVOX:玄野武宏
 BGM・効果音：オリジナル
+再現イラスト・サムネイル：画像生成AI（OpenAI）で制作
 地図：Mapzen Terrain Tiles（SRTM ほか）の標高データをもとに作成
 写真・資料（Wikimedia Commons ほか）
-CC BY-SA 4.0：Alpsdake、Peka、N yotarou、KKPCW（Kyu3）、Bariston、Suicasmo、Hanabi123、Lviatour
-CC BY-SA 3.0：天火明命、R2d2ki、Ocdp、Tawashi2006、Tawashi、As6022014
+CC BY-SA 4.0：Alpsdake、Peka、N yotarou、KKPCW（Kyu3）、Suicasmo、Hanabi123、Lviatour
+CC BY-SA 3.0：Tawashi、天火明命、Ocdp、As6022014
 CC BY-SA 2.0：Big Ben in Japan from Kawasaki, Japan、suri、t.kunikuni
-CC BY 4.0：首相官邸、Kouij Ohnishi/IAU OAE、Hyppolyte de Saint-Rambert、Ka23 13、Nesnad
-CC BY 3.0：z tanuki
-CC BY 2.0：nobu3withfoxy from Iga,Mie, Japan、雷太、Haruhiko Okumura uit Tsu
-パブリックドメイン・CC0：浮世絵・古典籍（春斎年昌、三代豊国、月岡芳年、豊原周延、歌川国芳、歌川貞秀、源平合戦図屏風、日本書紀 田中本・弘安本 ほか）、写真：Ocdp、Saigen Jiro、MaedaAkihiko、Brakeet、Daderot、DimiTalen、Utagawa Kunisada
+CC BY 4.0：首相官邸、Nesnad
+CC BY 2.0：nobu3withfoxy from Iga,Mie, Japan
+パブリックドメイン・CC0：浮世絵・古典籍（春斎年昌、三代豊国、月岡芳年、豊原周延、歌川国芳、歌川貞秀、源平合戦図屏風、日本書紀 田中本・弘安本 ほか）、写真：Ocdp、MaedaAkihiko、Saigen Jiro、Daderot、DimiTalen、Utagawa Kunisada
 写真ごとの出典の一覧：https://github.com/tubex-cpu/TUBEX/blob/claude/nice-wright-du0dch/habi-ise/写真クレジット一覧.md
 
 #伊勢神宮 #三種の神器 #八咫鏡 #草薙剣 #冬至 #式年遷宮 #ハビ判事
