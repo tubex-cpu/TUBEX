@@ -12,7 +12,7 @@
 - `03_script.md`：台本 第1稿（22場面、制作メモ、尺の見積もり：237行・4,546字・本編1,085秒）
 
 ## 未作成
-- Google ドキュメント版（CLAUDE.md「台本は必ず Google ドキュメントでも出す」）は未作成。
+- Google ドキュメント版：作成済み（下の「Google ドキュメント」）。
 
 ## Google ドキュメント（企画書・台本 第1稿、2026-11-24）
 https://docs.google.com/document/d/1p3Wvfer30ea89dTggZlnKArEnpRJ0KKGJJQHgMLIKzg/edit
