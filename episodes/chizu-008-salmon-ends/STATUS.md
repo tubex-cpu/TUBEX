@@ -8,5 +8,5 @@
 | 競合調査 | 済（2026-11-24、タイトル・再生数まで。サムネ・字幕・X/TikTok は未確認） | `02_competitors.md` |
 | リサーチ | 確認済み（2026-11-24 追加確認 G01〜G28：JICA 一次資料・e-Stat・ノルウェー水産物審議会・回転寿司3社の産地表。コストコ・ロピア・スシローの産地は未確認） | `01_research.md` |
 | 企画書 | **ゲートA 承認**（2026-11-24 社長「サーモンの企画進めて」） | `03_plan.md`、`04_titles.md` |
-| 台本 | **v1 作成済み（2026-11-24）**、Codex 監査待ち。語り約3,100字・約10〜11分 | `05_script.md`、Google ドキュメント https://docs.google.com/document/d/1y3gadRL6BZEGPnMDNTei2wO36C7qTovA-bsGjOBBcKg/edit |
+| 台本 | **v1 作成済み（2026-11-24）**、Codex 監査待ち。語り約2,650字・約9分（社長の S01・S02 修正後） | `05_script.md`、Google ドキュメント https://docs.google.com/document/d/1y3gadRL6BZEGPnMDNTei2wO36C7qTovA-bsGjOBBcKg/edit |
 | 動画・サムネ | 台本の監査合格後 | — |
