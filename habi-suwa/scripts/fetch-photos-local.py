@@ -63,7 +63,7 @@ for pid, title in order:
         if size:
             m = re.match(r'(https://upload\.wikimedia\.org/wikipedia/commons/)(\w/\w\w/)(.+)$', orig)
             name = m.group(3)
-            url = f'{m.group(1)}thumb/{m.group(2)}{name}/{size}px-{name}' + ('.png' if is_svg else '')
+            url = f'https://thumb.wikimedia.org/wikipedia/commons/thumb/{m.group(2)}{name}/{size}px-{name}' + ('.png' if is_svg else '')  # 縮小版の配信先（2026年11月から）
         else:
             url = orig
         im = Image.open(io.BytesIO(get(url))).convert('RGB')
