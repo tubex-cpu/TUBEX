@@ -93,6 +93,33 @@ def insects(n):
     return out / 3
 
 
+def _project_telops():
+    if not os.environ.get('NEKO_TELOPS'):
+        return None
+    import importlib
+    sys.path.insert(0, os.environ['NEKO_PROJECT_DIR'])
+    return importlib.import_module(os.environ['NEKO_TELOPS'])
+
+
+def heartbeats(n, bpm1=72.0, bpm2=63.0):
+    """二つの心臓の鼓動（ドクン・トクン）を少しずらして重ねる。左右に分けて返す"""
+    t = np.arange(n) / SR
+    def beat(bpm, f0):
+        out = np.zeros(n, np.float32); period = 60.0 / bpm
+        k = np.arange(int(0.18 * SR)) / SR
+        lub = (np.sin(2 * np.pi * f0 * k) * np.exp(-k / 0.045)).astype(np.float32)
+        dub = (np.sin(2 * np.pi * (f0 * 1.25) * k) * np.exp(-k / 0.035) * 0.7).astype(np.float32)
+        x = 0.0
+        while x < n / SR:
+            for off, w in ((0.0, lub), (0.28, dub)):
+                a = int((x + off) * SR); e = min(n, a + len(w))
+                if a < n:
+                    out[a:e] += w[:e - a]
+            x += period
+        return out
+    return beat(bpm1, 55.0), beat(bpm2, 48.0)
+
+
 def bank(nv=24):
     """鳴き声の素材を前もって作る（高さ違い）"""
     out = []
@@ -175,6 +202,10 @@ def sfx():
                 v = reverb(fn(), 0.2, 0.05) * gain * g
                 pan = rng.uniform(-0.5, 0.5); e = min(N, pos + len(v)); v = v[:e - pos]
                 L[pos:e] += v * (1 - pan) * 0.7; Rr[pos:e] += v * (1 + pan) * 0.7
+        hb = m.get('beats', 0)  # 心臓が2つ：二つの鼓動
+        if hb > 0:
+            b1, b2 = heartbeats(n)
+            L[s0:s1] += b1 * 0.35 * hb; Rr[s0:s1] += b2 * 0.35 * hb
         ins = m.get('insects', 0)
         if ins > 0:
             b = insects(n) * 0.05 * ins
@@ -197,8 +228,8 @@ def stop_time(tl):
         m = json.load(open(p))
         if m.get('silent_from'):
             return m['start'] + m['silent_from'] / FPS
-    if VER == 'v5':
-        return None  # 改稿は鳴きやまない
+    if VER == 'v5' or os.environ.get('NEKO_TELOPS'):
+        return None  # 改稿・別企画は鳴きやむ場面がない
     raise SystemExit('silent_from のカットがない')
 
 
@@ -220,6 +251,10 @@ def bgm():
                 6: ('night', 'A'), 7: ('night', 'A'), 8: ('tense', 'F'), 9: ('light', 'C'), 10: ('light', 'G'), 11: ('tense', 'E'),
                 12: ('sad', 'G'), 13: ('wide', 'C'), 14: ('night', 'A'), 15: ('tense', 'F'), 16: ('wide', 'D'), 17: ('sad', 'E'),
                 18: ('warm', 'D'), 19: ('warm', 'G'), 20: ('warm', 'D'), 21: ('warm', 'D')}
+    PIANO_FROM = 18 if VER == 'v5' else 0
+    PT = _project_telops()
+    if PT is not None and hasattr(PT, 'MOOD'):  # 別企画：章ごとの雰囲気とピアノの入り
+        MOOD = PT.MOOD; PIANO_FROM = getattr(PT, 'PIANO_FROM', 0)
     ROOT = {'C': 48, 'D': 50, 'E': 52, 'F': 53, 'G': 55, 'A': 57}
     PROG = {'myst': [(0, 'm'), (8, 'M'), (5, 'M'), (10, 'M')], 'wide': [(0, 'M'), (7, 'M'), (9, 'm'), (5, 'M')],
             'light': [(0, 'M'), (5, 'M'), (7, 'M'), (0, 'M')], 'tense': [(0, 'm'), (5, 'm'), (8, 'M'), (7, 'M')],
@@ -252,7 +287,7 @@ def bgm():
             # ピアノの分散和音
             step = bar / 8
             arp = [chord[0] + 12, chord[1] + 12, chord[2] + 12, chord[1] + 24, chord[2] + 12, chord[1] + 12, chord[0] + 24, chord[2] + 12]
-            piano_ok = VER != 'v5' or c['no'] >= 18
+            piano_ok = c['no'] >= PIANO_FROM
             if piano_ok and mood in ('light', 'warm', 'wide', 'myst', 'sad', 'night', 'tense'):
                 for k in range(8):
                     if mood in ('night', 'sad') and k % 2:

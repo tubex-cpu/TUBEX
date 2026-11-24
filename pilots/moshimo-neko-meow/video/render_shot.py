@@ -5,7 +5,11 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 OUT = os.environ.get('NEKO_OUT', '/home/user/work_neko/out')
 import kit
 from kit import *
-if os.environ.get('NEKO_VER') == 'v5':
+if os.environ.get('NEKO_SHOTS'):  # 別企画のカット表（NEKO_PROJECT_DIR にあるモジュール名）
+    import importlib
+    sys.path.insert(0, os.environ['NEKO_PROJECT_DIR'])
+    S = importlib.import_module(os.environ['NEKO_SHOTS'])
+elif os.environ.get('NEKO_VER') == 'v5':
     import shots_v5 as S  # 改稿（2026-11-21）のカット表
 else:
     import shots as S

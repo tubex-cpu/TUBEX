@@ -21,6 +21,10 @@ SUB_FONT, SUB_SIZE, SUB_TRACK, SUB_MAXC = 'NotoSansCJKjp-Black.otf', 76, 3, 20  
 
 _fc = {}
 def _telops():
+    if os.environ.get('NEKO_TELOPS'):  # 別企画のテロップ
+        import importlib
+        sys.path.insert(0, os.environ['NEKO_PROJECT_DIR'])
+        return importlib.import_module(os.environ['NEKO_TELOPS'])
     if VER == 'v5':
         import telops_v5 as T
     else:
@@ -324,7 +328,7 @@ def seg(name):
         clock_on = clock_t0 is not None and is_first_shot and t < clock_t0 + 3.5
         if not in_title and info:
             a = min(1, i / 10, (n - i) / 8) if not (titled and t < t_title1 + 1.2) else min(1, (t - t_title1 - 0.6) / 0.6, (n - i) / 8)
-            when = label if ch['no'] > 0 else '日本時間　午後3時'
+            when = label if ch['no'] > 0 else getattr(T, 'FIRST_WHEN', '日本時間　午後3時')
             paste(base, panel([when, info], [36, 46]), 50, 40, a, anchor='tl')
         # 右上：経過バー
         if titled and not in_title and not clock_on:
@@ -333,7 +337,7 @@ def seg(name):
             paste(base, pg, W - pg.width - 50, 40, a * 0.95, anchor='tl')
         # 冒頭・30日後の時計
         if clock_on:
-            tt = 15 * 3600 + (t - clock_t0)
+            tt = getattr(T, 'CLOCK0', 15) * 3600 + (t - clock_t0)
             hh_, mm, ss = int(tt // 3600) % 24, int(tt // 60) % 60, int(tt) % 60
             a = min(1, (t - ch['start']) / 0.5, (clock_t0 + 3.5 - t) / 0.6)
             paste(base, text_layer([f'{hh_:02d}:{mm:02d}:{ss:02d}'], 64, stroke=4, w='Regular'), W - 330, 50, a, anchor='tl')
