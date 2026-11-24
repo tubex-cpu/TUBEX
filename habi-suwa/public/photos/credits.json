@@ -482,5 +482,82 @@
    1920,
    1280
   ]
+ },
+ "c10-moriya-museum-2": {
+  "file": "c10-moriya-museum-2.jpg",
+  "title": "Jinchokan Moriya Museum.jpg",
+  "artist": "Kenta Mabuchi",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Jinchokan_Moriya_Museum.jpg",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "c10-shingen-letter": {
+  "file": "c10-shingen-letter.jpg",
+  "title": "Honorable letter from Takeda Shingen to M. Kodaira (Honma Museum of Art).jpg",
+  "artist": "掬茶",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Honorable_letter_from_Takeda_Shingen_to_M._Kodaira_(Honma_Museum_of_Art).jpg",
+  "size": [
+   1920,
+   1280
+  ]
+ },
+ "c11-mishaguchi-shrine": {
+  "file": "c11-mishaguchi-shrine.jpg",
+  "title": "Jinchoukan-Moriya-shiryoukan Mishaguchi-jinja-2.jpg",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Jinchoukan-Moriya-shiryoukan_Mishaguchi-jinja-2.jpg",
+  "size": [
+   1920,
+   1275
+  ]
+ },
+ "c11-mimurosha": {
+  "file": "c11-mimurosha.jpg",
+  "title": "Suwa-taisha, Kamisha Maemiya, Mimurosha.jpg",
+  "artist": "Saigen Jiro",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Suwa-taisha,_Kamisha_Maemiya,_Mimurosha.jpg",
+  "size": [
+   1920,
+   1277
+  ]
+ },
+ "c11-yanagita": {
+  "file": "c11-yanagita.jpg",
+  "title": "Kunio Yanagita, 1952.jpg",
+  "artist": "濱谷浩",
+  "license": "Public domain",
+  "page": "https://commons.wikimedia.org/wiki/File:Kunio_Yanagita,_1952.jpg",
+  "size": [
+   1639,
+   2400
+  ]
+ },
+ "c12-jomon-venus": {
+  "file": "c12-jomon-venus.jpg",
+  "title": "2025-03-29 Jomon Venus FrontView.jpg",
+  "artist": "C1815",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:2025-03-29_Jomon_Venus_FrontView.jpg",
+  "size": [
+   1600,
+   2400
+  ]
+ },
+ "c12-mask-goddess": {
+  "file": "c12-mask-goddess.jpg",
+  "title": "2025-03-29 Mask Goddess FrontView.jpg",
+  "artist": "C1815",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:2025-03-29_Mask_Goddess_FrontView.jpg",
+  "size": [
+   1600,
+   2400
+  ]
  }
 }
