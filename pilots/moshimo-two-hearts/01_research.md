@@ -21,25 +21,29 @@
 | F5 | バーナードが1974年に初めて異所性心臓移植を行った。「二重の心臓」を形づくる。1974年11月〜1983年12月に43人に49件 | https://en.wikipedia.org/wiki/Christiaan_Barnard | 確認済み | SCENE 04（語りは「五十年以上前から」） |
 | F6 | 異所性心臓移植の患者の心電図には、二つの心臓それぞれのQRS波（形・軸が違う二組）が出る | 症例報告の検索結果（https://scholarship.miami.edu/esploro/outputs/journalArticle/Two-Hearts/991031578371702976 、https://bjcardio.co.uk/?p=55218 ほか） | 未確認（検索結果のみ） | SCENE 03・04 |
 | F7 | 成人の心臓は安静時に毎分約72回打つ（→1日 約10万3千回）。成人の心臓は250〜350g、握りこぶしほどの大きさ | https://en.wikipedia.org/wiki/Heart | 確認済み（1日の回数は計算） | SCENE 05 |
-| F8 | 最大酸素摂取量は、肺・心拍出量・血液量・筋の毛細血管による「供給」と、ミトコンドリアの「需要」で決まり、鍛えた人は供給で頭打ちになる。一つが劣ると系全体の能力が下がる | https://en.wikipedia.org/wiki/VO2_max （Limiting factors） | 確認済み | SCENE 16 |
+| F8 | 最大酸素摂取量は、肺・心拍出量・血液量・筋の毛細血管による「供給」と、ミトコンドリアの「需要」で決まり、鍛えた人は供給で頭打ちになる。一つが劣ると系全体の能力が下がる | https://en.wikipedia.org/wiki/VO2_max （Limiting factors） | 確認済み | SCENE 17 |
 | F9 | 血圧と伸展が上がると、心臓の中枢は交感神経の刺激を減らし副交感神経の刺激を増やす（心拍を下げる方向）。安静時心拍の正常範囲は50〜90 | https://en.wikipedia.org/wiki/Heart_rate | 確認済み | SCENE 05 |
 | F10 | 安静時のエネルギー消費の内訳：肝臓27%、脳19%、骨格筋18%、腎臓10%、心臓7% | https://en.wikipedia.org/wiki/Basal_metabolic_rate （Energy expenditure breakdown の表） | 確認済み | SCENE 06 |
 | F11 | 日本人の基礎代謝量（基準体重での値）：30〜49歳 男性 1,530kcal/日・女性 1,150kcal/日 ほか | https://ja.wikipedia.org/wiki/基礎代謝 （出典：厚生労働省「日本人の食事摂取基準（2010年版）」） | 確認済み（ウィキペディア上の転載） | SCENE 06 |
 | F12 | ごはん（精白米）100gは156kcal | 検索結果（https://calorie.slism.jp/101088/ 。文部科学省「日本食品標準成分表（八訂）」の原表は開けず） | 未確認（検索結果のみ） | SCENE 06 |
-| F13 | 骨髄が発達すると、体のほとんどの血球をつくる役目を担う。成人では骨盤・頭蓋骨・脊椎・胸骨などでつくられる | https://en.wikipedia.org/wiki/Haematopoiesis | 確認済み | SCENE 13 |
-| F14 | 腕時計（Apple Watch）の不規則な心拍の通知機能は、光学センサーで脈の間隔の不規則さを見つける。米FDAが2018年に分類（De Novo） | 検索結果（https://510k.innolitics.com/device/DEN180042 、apple.com/healthcare） | 未確認（検索結果のみ） | SCENE 01・22（製品名は出さない） |
-| F15 | 心室細動は、異常な拍動を繰り返し、ポンプとしての役割を果たしていない状態。AEDは心電図を自動で解析し、心室細動を検出すると除細動を行う。日本のAEDは2024年9月時点で69万台 | https://ja.wikipedia.org/wiki/自動体外式除細動器 | 確認済み | SCENE 11 |
-| F16 | 2024年の日本の死因順位：1位 悪性新生物（38万4,111人）、2位 心疾患（22万6,388人）、3位 老衰 | 検索結果（生命保険文化センター https://www.jili.or.jp/lifeplan/lifesecurity/1226.html が厚労省「人口動態統計（確定数）」を引用。原表 https://www.mhlw.go.jp/toukei/saikin/hw/jinkou/kakutei24 は開けず） | 未確認（検索結果のみ） | SCENE 12（語りは順位だけ。人数は言わない） |
-| F17 | 日本の心臓移植の待機者は2025年11月末で788人。2022年までに移植を受けた人の平均待機期間は3年9か月 | 検索結果（https://president.jp/articles/-/106914 。日本臓器移植ネットワークの原資料は開けず） | 未確認（検索結果のみ） | SCENE 14（語りは「何年も」） |
-| F18 | クマは冬眠中に食べも飲みもせず、ためた脂肪で過ごす。冬眠の数週間前から活動・心拍・体温がゆっくり下がる | https://en.wikipedia.org/wiki/Hibernation | 確認済み | SCENE 18 |
-| F19 | クマ類の秋の人里への出没と捕獲数の変動は、秋の主なえさであるブナ・ミズナラなど堅果類の結実状況と関連している | 検索結果（環境省「クマ類の出没対応マニュアル」https://www.env.go.jp/nature/choju/docs/docs5-4a/pdfs/manual_full.pdf 、京都府 https://www.pref.kyoto.jp/choujyu/kumanitsuite.html 「冬眠前のクマが餌を求めて集落等へ出没する」） | 未確認（検索結果のみ） | SCENE 18 |
-| F20 | 放置された柿・栗などの果実は、持ち主の了解を得て収穫・撤去するよう呼びかけ | 検索結果（埼玉県 https://www.pref.saitama.lg.jp/a0508/news/page/news20251006.html ） | 未確認（検索結果のみ） | SCENE 18 |
-| F21 | 環境収容力：生態系が養える最大の個体数。制限要因は食べ物や水、巣の場所、空間など。上回った個体群は食べ物などの不足で減る | https://en.wikipedia.org/wiki/Carrying_capacity | 確認済み | SCENE 20・21 |
-| F22 | 動物の個体群密度は体重のおよそ−3/4乗に比例し、個体の必要エネルギーにほぼ反比例する（Damuth 1981、「エネルギー等価則」）。ただし「規則」とすることへの批判もある（Isaac et al. 2013） | 検索結果（https://www.nature.com/articles/290699a0.pdf 、https://www.cts.cuni.cz/~storch/publications/Isaac_et_al_2013.pdf ） | 未確認（検索結果のみ） | SCENE 20・21 の推論の補強（語りでは不使用） |
-| F23 | 生命表は、保険数理で生命保険や年金などの商品価格の計算に使われる。日本の民間生命保険会社の死亡統計による「生保標準生命表」がある。死亡率＝誕生日から次の誕生日までに死ぬ確率 | https://ja.wikipedia.org/wiki/生命表 | 確認済み | SCENE 15 |
+| F13 | 骨髄が発達すると、体のほとんどの血球をつくる役目を担う。成人では骨盤・頭蓋骨・脊椎・胸骨などでつくられる | https://en.wikipedia.org/wiki/Haematopoiesis | 確認済み | SCENE 14 |
+| F14 | 腕時計（Apple Watch）の不規則な心拍の通知機能は、光学センサーで脈の間隔の不規則さを見つける。米FDAが2018年に分類（De Novo） | 検索結果（https://510k.innolitics.com/device/DEN180042 、apple.com/healthcare） | 未確認（検索結果のみ） | SCENE 01・23（製品名は出さない） |
+| F15 | 心室細動は、異常な拍動を繰り返し、ポンプとしての役割を果たしていない状態。AEDは心電図を自動で解析し、心室細動を検出すると除細動を行う。日本のAEDは2024年9月時点で69万台 | https://ja.wikipedia.org/wiki/自動体外式除細動器 | 確認済み | SCENE 12 |
+| F16 | 2024年の日本の死因順位：1位 悪性新生物（38万4,111人）、2位 心疾患（22万6,388人）、3位 老衰 | 検索結果（生命保険文化センター https://www.jili.or.jp/lifeplan/lifesecurity/1226.html が厚労省「人口動態統計（確定数）」を引用。原表 https://www.mhlw.go.jp/toukei/saikin/hw/jinkou/kakutei24 は開けず） | 未確認（検索結果のみ） | SCENE 13（語りは順位だけ。人数は言わない） |
+| F17 | 日本の心臓移植の待機者は2025年11月末で788人。2022年までに移植を受けた人の平均待機期間は3年9か月 | 検索結果（https://president.jp/articles/-/106914 。日本臓器移植ネットワークの原資料は開けず） | 未確認（検索結果のみ） | SCENE 15（語りは「何年も」） |
+| F18 | クマは冬眠中に食べも飲みもせず、ためた脂肪で過ごす。冬眠の数週間前から活動・心拍・体温がゆっくり下がる | https://en.wikipedia.org/wiki/Hibernation | 確認済み | SCENE 19 |
+| F19 | クマ類の秋の人里への出没と捕獲数の変動は、秋の主なえさであるブナ・ミズナラなど堅果類の結実状況と関連している | 検索結果（環境省「クマ類の出没対応マニュアル」https://www.env.go.jp/nature/choju/docs/docs5-4a/pdfs/manual_full.pdf 、京都府 https://www.pref.kyoto.jp/choujyu/kumanitsuite.html 「冬眠前のクマが餌を求めて集落等へ出没する」） | 未確認（検索結果のみ） | SCENE 19 |
+| F20 | 放置された柿・栗などの果実は、持ち主の了解を得て収穫・撤去するよう呼びかけ | 検索結果（埼玉県 https://www.pref.saitama.lg.jp/a0508/news/page/news20251006.html ） | 未確認（検索結果のみ） | SCENE 19 |
+| F21 | 環境収容力：生態系が養える最大の個体数。制限要因は食べ物や水、巣の場所、空間など。上回った個体群は食べ物などの不足で減る | https://en.wikipedia.org/wiki/Carrying_capacity | 確認済み | SCENE 21・22 |
+| F22 | 動物の個体群密度は体重のおよそ−3/4乗に比例し、個体の必要エネルギーにほぼ反比例する（Damuth 1981、「エネルギー等価則」）。ただし「規則」とすることへの批判もある（Isaac et al. 2013） | 検索結果（https://www.nature.com/articles/290699a0.pdf 、https://www.cts.cuni.cz/~storch/publications/Isaac_et_al_2013.pdf ） | 未確認（検索結果のみ） | SCENE 21・22 の推論の補強（語りでは不使用） |
+| F23 | 生命表は、保険数理で生命保険や年金などの商品価格の計算に使われる。日本の民間生命保険会社の死亡統計による「生保標準生命表」がある。死亡率＝誕生日から次の誕生日までに死ぬ確率 | https://ja.wikipedia.org/wiki/生命表 | 確認済み | SCENE 16 |
 | F24 | 心臓は、胎児期にまず2本の心内膜管ができ、それが合わさって1本の管になってできる。受精後約21日で拍動が始まる | https://en.wikipedia.org/wiki/Heart_development | 確認済み | 語りでは不使用（概要欄・ショート用の予備） |
 | F25 | ハチドリの心拍は最大で毎分1,260回 | https://en.wikipedia.org/wiki/Hummingbird | 確認済み | 語りでは不使用（予備） |
 | F26 | ヌタウナギは本来の心臓のほかに、体のあちこちに補助のポンプ（「心臓」）を複数もつ | https://en.wikipedia.org/wiki/Hagfish | 確認済み | 語りでは不使用（予備） |
+| F27 | クラゲの多くは、呼吸・循環のための専用の仕組みを持たない。酸素は体の表皮から十分にしみ込む | https://en.wikipedia.org/wiki/Jellyfish （"Most jellyfish do not have specialized systems for osmoregulation, respiration and circulation" "sufficient oxygen diffuses through the epidermis"） | Wikipedia で確認（2026-11-24）・一次未確認 |
+| F28 | 刺胞動物（クラゲ・イソギンチャク・サンゴ）は消化・循環の器官を持たず、呼吸器官もない。体の細胞の層がまわりの水から直接酸素を取り込む | https://en.wikipedia.org/wiki/Cnidaria （"Digestive and circulatory organs: No" "There are no respiratory organs"） | Wikipedia で確認（2026-11-24）・一次未確認 |
+| F29 | カイメンは循環・呼吸・消化の専用の仕組みを持たず、体を通る水の流れでえさと酸素を得る | https://en.wikipedia.org/wiki/Sponge （"Sponges do not have distinct circulatory, respiratory, digestive, and excretory systems – instead, the water flow system supports all these functions"） | Wikipedia で確認（2026-11-24）・一次未確認 |
+| F30 | 扁形動物（プラナリアなど）は循環・呼吸の専用の器官を持たず、平たい体で酸素がしみ込む | https://en.wikipedia.org/wiki/Flatworm （"having no specialised circulatory and respiratory organs ... by diffusion"） | Wikipedia で確認（2026-11-24）・一次未確認 |
 
 ## 2. 場面ごとの「事実・この世界の仮定・推論」
 
