@@ -18,8 +18,11 @@ URL = 'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'
 OUT_W, OUT_H = 2560, 1440
 # 名前: (中心の経度, 中心の緯度, 横に映す経度の幅, タイルのズーム)
 VIEWS = {
-	'shonai': (139.95, 38.36, 3.2, 9),
-	'japan': (139.1, 37.0, 10.0, 8),
+	'eastasia': (124.5, 36.0, 26.0, 6),
+	'westjapan': (133.2, 34.3, 8.6, 8),
+	'nara': (135.80, 34.605, 0.5, 12),
+	'kyushu': (130.32, 33.43, 1.3, 10),
+	'honshu': (134.6, 35.2, 12.6, 7),
 }
 ONLY = set(sys.argv[1:])
 # 海より高い湖：(経度, 緯度, 湖面の標高m)
