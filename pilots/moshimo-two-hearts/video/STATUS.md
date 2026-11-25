@@ -19,3 +19,8 @@
     - 0:00〜6:43：マリンバと鉄琴、軽く刻む
     - 6:43〜13:48：ナイロンギターと弦、ゆったり
     - 13:48〜終わり：ピアノとオルゴール、弦
+
+## 第2版 完成（2026-11-25）
+- 書き出し（git 外）：`pilots/moshimo-two-hearts/outputs/hearts_v2_full_1080p.mp4`（20分09秒）・`hearts_v2_preview_720p.mp4`
+- 描き直したカット：hPalm・hSponge（字幕「身体中」）、hBedChild・hKidCount・hKidAsleep・hCeiling（寝姿勢）。他の121カットは第1版のまま
+- 音量：-17.0 LUFS（統合）
