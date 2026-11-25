@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[3]
 EPS = {
     "ca": ("chizu-003-canada-housing", "render.py"),
     "bm": ("chizu-005-bermuda-roof-water", "render_v4.py"),
+    "sa": ("chizu-008-salmon-ends", "render.py"),
 }
 key = sys.argv[1]
 EPN, FILE = EPS[key]
@@ -117,7 +118,7 @@ if "--json" in sys.argv:
         fn = s["P"].get("fn")
         shots.append({"i": i, "scene": s["scene"], "kind": s["kind"], "start": round(s["start"], 3), "end": round(s["end"], 3),
                       "P": clean(s["P"]), "big": getattr(fn, "_big", None), "pins": json.loads(pf.read_text()) if pf.exists() else {}})
-    subs = json.loads((R.EP / ("subtitles.json" if key == "ca" else "subtitles_v3.json")).read_text())
+    subs = json.loads((R.EP / ("subtitles_v3.json" if key == "bm" else "subtitles.json")).read_text())
     tim = R.TIM
     doc = {"episode": EPN, "total": R.TOTAL, "fps": FPS, "xf": XF, "shots": shots,
            "cities": {k: list(v) for k, v in R.CITIES.items()},

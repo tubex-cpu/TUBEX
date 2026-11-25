@@ -20,7 +20,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 HERE = Path(__file__).resolve().parents[1]
 ROOT = HERE.parents[1]
-EPS = {"ca": "chizu-003-canada-housing", "bm": "chizu-005-bermuda-roof-water"}
+EPS = {"ca": "chizu-003-canada-housing", "bm": "chizu-005-bermuda-roof-water", "sa": "chizu-008-salmon-ends"}
 KEY = sys.argv[1]
 EPN = EPS[KEY]
 RD = ROOT / "episodes" / EPN / "render"
@@ -512,7 +512,8 @@ HL = None
 def globe_shot(s, tt):
     global GTEX, HL
     if GTEX is None:
-        GTEX = np.array(Image.open(HERE / "public/globe.jpg").convert("RGB")).astype(np.float32)
+        gp = HERE / f"public/globe_{KEY}.jpg"  # per-episode globe texture (salmon: Natural Earth, not shadedrelief)
+        GTEX = np.array(Image.open(gp if gp.exists() else HERE / "public/globe.jpg").convert("RGB")).astype(np.float32)
         hp = HERE / f"public/hl_{KEY}.png"
         HL = np.array(Image.open(hp).convert("RGBA")).astype(np.float32) if hp.exists() else None
     P = s["P"]; d = s["end"] - s["start"]
