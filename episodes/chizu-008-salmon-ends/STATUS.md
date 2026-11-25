@@ -9,5 +9,5 @@
 | リサーチ | 確認済み（2026-11-24 追加確認 G01〜G28：JICA 一次資料・e-Stat・ノルウェー水産物審議会・回転寿司3社の産地表。コストコ・ロピア・スシローの産地は未確認） | `01_research.md` |
 | 企画書 | **ゲートA 承認**（2026-11-24 社長「サーモンの企画進めて」） | `03_plan.md`、`04_titles.md` |
 | 台本 | **v2 作成済み（2026-11-24）**、Codex 監査待ち。語り約5,000字・実尺15分07秒（社長「15〜30分は担保」を受け、確認済みの事実 H01〜H33 で章を追加） | `05_script.md`、Google ドキュメント https://docs.google.com/document/d/1y3gadRL6BZEGPnMDNTei2wO36C7qTovA-bsGjOBBcKg/edit |
-| 動画 | **3D版を制作中（2026-11-25、社長「動画を制作して」）**。ナレーション 15分07秒（VOICEVOX:雀松朱司）、字幕212枚、88ショット。台本の Codex 監査はまだ（監査で語りが変わったら作り直す） | `audio/`、`subtitles.json`、`render/render.py`、`pilots/chizu-3d/scripts/pipeline_sa.sh`、`07_description.md`（概要欄の初稿） |
+| 動画 | **3D版 書き出し済み（2026-11-25、社長「動画を制作して」）**。15分09秒・1920×1080・-15.2 LUFS（ピーク -1.0 dBTP）。確認用の軽量版 `preview_3d.mp4`（480p）。フル画質は `pilots/chizu-3d/out/sa/chizu-008-salmon-ends_full_3d.mp4`（159MB、git に入れない。Google ドライブはここから10MB を超えるファイルを上げられず未アップロード）。ナレーション 15分07秒（VOICEVOX:雀松朱司）、字幕212枚、88ショット。台本の Codex 監査はまだ（監査で語りが変わったら作り直す） | `audio/`、`subtitles.json`、`render/render.py`、`pilots/chizu-3d/scripts/pipeline_sa.sh`、`07_description.md`（概要欄の初稿） |
 | サムネ | 未着手（3組のコピーとタイトルは `04_titles.md`。Codex へ依頼する） | — |
