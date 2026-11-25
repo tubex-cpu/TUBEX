@@ -246,8 +246,13 @@ def night_bedroom(n, kid_asleep_at=None, seed=50):
     room(5, 4.5, 2.5, floor=hexc('#7a6650'), wall=hexc('#c8c4d0'), window=True, night=True)
     bed((0, 0.6, 0), quilt=hexc('#6a7aa0'))
     you = person((-0.15, 0.85, 0.5), hexc('#8a9ab8'), pose='lie', rot_z=0, name='you')
-    kid = person((0.28, 0.75, 0.52), hexc('#e8a33d'), pants=hexc('#4a6aa0'), pose='lie', rot_z=0.35, s=0.6, name='kid')
+    kid = person((0.3, 0.8, 0.52), hexc('#e8a33d'), pants=hexc('#4a6aa0'), pose='lie', rot_z=0.12, s=0.6, name='kid')
     box((0.0, 1.15, 0.57), (1.14, 1.0, 0.07), hexc('#6a7aa0'), bevel=0.03)  # 掛け布団
+    # 寝た姿勢では頭も仰向けに（社長指摘 2026-11-24「頭と胴体がねじれて見えている」：頭だけ立った向きのままだった）
+    for p in (you, kid):
+        nk = bpy.data.objects[p['neck']]
+        nk.location.y += 0.04; nk.location.z += 0.02
+        nk.rotation_euler = (-math.pi / 2, 0, 0)
     hearts(you, n, bpm=(48, 42), size=1.4, up=4.0, out=1.2)
     hearts(kid, n, bpm=(70, 62), size=1.4, up=4.0, out=1.2)
     wall_clock((-1.4, 2.19, 1.8), n, 22.0, 22.0 + n / FPS / 3600.0)

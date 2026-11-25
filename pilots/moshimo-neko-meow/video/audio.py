@@ -255,6 +255,16 @@ def bgm():
     PT = _project_telops()
     if PT is not None and hasattr(PT, 'MOOD'):  # 別企画：章ごとの雰囲気とピアノの入り
         MOOD = PT.MOOD; PIANO_FROM = getattr(PT, 'PIANO_FROM', 0)
+    # 区間ごとに楽器・弾き方を変える（別企画の SECTIONS。社長 2026-11-25「動画全体をおおよそ３分割してBGMをそれぞれ変更して」）
+    SECTIONS = getattr(PT, 'SECTIONS', None) if PT is not None else None
+    def section(no):
+        if not SECTIONS:
+            return None
+        cur = SECTIONS[0]
+        for sc in SECTIONS:
+            if no >= sc['from']:
+                cur = sc
+        return cur
     ROOT = {'C': 48, 'D': 50, 'E': 52, 'F': 53, 'G': 55, 'A': 57}
     PROG = {'myst': [(0, 'm'), (8, 'M'), (5, 'M'), (10, 'M')], 'wide': [(0, 'M'), (7, 'M'), (9, 'm'), (5, 'M')],
             'light': [(0, 'M'), (5, 'M'), (7, 'M'), (0, 'M')], 'tense': [(0, 'm'), (5, 'm'), (8, 'M'), (7, 'M')],
@@ -270,10 +280,18 @@ def bgm():
         tracks[name][2].append((sec2tick(start), 1, pitch, vel)); tracks[name][2].append((sec2tick(start + dur), 0, pitch, 0))
     r = np.random.default_rng(3)
     t_stop = stop_time(tl)
+    cur_sec = None
     for c in tl['chapters']:
         mood, key = MOOD[c['no']]; root = ROOT[key]
         t = c['start']; end = c['end']
         bar = 4 * spb * (1.5 if mood in ('night', 'sad', 'silence') else 1.0)
+        sc = section(c['no'])
+        if sc is not None:
+            bar *= sc.get('bar', 1.0)
+            if sc is not cur_sec:
+                cur_sec = sc
+                for name, pg in sc['programs'].items():
+                    tracks[name][2].append((sec2tick(t), -1, pg, 0))
         i = 0
         while t < end - 0.5:
             deg, q = PROG[mood][i % 4]
@@ -287,20 +305,32 @@ def bgm():
             # ピアノの分散和音
             step = bar / 8
             arp = [chord[0] + 12, chord[1] + 12, chord[2] + 12, chord[1] + 24, chord[2] + 12, chord[1] + 12, chord[0] + 24, chord[2] + 12]
+            if sc is not None and sc.get('arp'):
+                arp = [chord[j % 3] + 12 * (1 + j // 3) for j in sc['arp']]
+                step = bar / len(arp)
             piano_ok = c['no'] >= PIANO_FROM
             if piano_ok and mood in ('light', 'warm', 'wide', 'myst', 'sad', 'night', 'tense'):
-                for k in range(8):
+                pv = sc.get('piano_vel', (38, 52)) if sc is not None else (38, 52)
+                for k in range(len(arp)):
                     if mood in ('night', 'sad') and k % 2:
                         continue
-                    note('piano', t + k * step, step * 1.6, arp[k], int(r.integers(38, 52)))
-            if mood in ('light', 'wide') and i % 2 == 0:
+                    note('piano', t + k * step, step * 1.6, arp[k], int(r.integers(*pv)))
+            if sc is not None and sc.get('bell'):
+                # 区間ごとの短い旋律（和音の音を上がって下りる）
+                mel = [chord[2] + 24, chord[1] + 24, chord[0] + 24, chord[1] + 24] if i % 2 else [chord[0] + 24, chord[1] + 24, chord[2] + 24, chord[0] + 36]
+                for k, pch in enumerate(mel):
+                    note('cel', t + k * bar / 4, bar / 4 * 0.9, pch, sc['bell'])
+            elif mood in ('light', 'wide') and i % 2 == 0:
                 note('cel', t + bar * 0.75, step * 2, chord[2] + 24, 36)
             t += d; i += 1
     for name, (tr, ch, ev) in tracks.items():
         ev.sort(key=lambda e: (e[0], e[1]))
         last = 0
         for tick, on, p, v in ev:
-            tr.append(mido.Message('note_on' if on else 'note_off', note=int(p), velocity=int(v), channel=ch, time=tick - last))
+            if on == -1:
+                tr.append(mido.Message('program_change', program=int(p), channel=ch, time=tick - last))
+            else:
+                tr.append(mido.Message('note_on' if on else 'note_off', note=int(p), velocity=int(v), channel=ch, time=tick - last))
             last = tick
     mid.save(f'{OUT}/bgm.mid')
     subprocess.run(['fluidsynth', '-ni', '-g', '0.6', '-r', str(SR), '-F', f'{OUT}/bgm_raw.wav', '/usr/share/sounds/sf2/FluidR3_GM.sf2', f'{OUT}/bgm.mid'],
