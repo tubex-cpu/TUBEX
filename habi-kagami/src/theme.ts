@@ -5,10 +5,13 @@ import {staticFile} from 'remotion';
 // public/fonts のフォントは scripts/subset-fonts.py で使用文字だけに絞ったもの
 export const minchoFamily = 'Shippori Mincho B1';
 export const gothicFamily = 'Zen Kaku Gothic New';
+// 画面下の字幕用（テレビの大画面でも読みやすい太いゴシック）
+export const subtitleFamily = 'Noto Sans JP';
 
 loadFont({family: minchoFamily, url: staticFile('fonts/ShipporiMinchoB1-ExtraBold.woff2'), weight: '800'});
 loadFont({family: gothicFamily, url: staticFile('fonts/ZenKakuGothicNew-Bold.woff2'), weight: '700'});
 loadFont({family: gothicFamily, url: staticFile('fonts/ZenKakuGothicNew-Black.woff2'), weight: '900'});
+loadFont({family: subtitleFamily, url: staticFile('fonts/NotoSansJP-Black.woff2'), weight: '900'});
 
 // 「閉園後の法廷」：夜の藍色、木の法壇、金の装飾、粘土板の土色
 export const colors = {

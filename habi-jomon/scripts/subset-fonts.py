@@ -11,6 +11,8 @@ FONTS = {
     'ShipporiMinchoB1-ExtraBold': 'shipporiminchob1',
     'ZenKakuGothicNew-Bold': 'zenkakugothicnew',
     'ZenKakuGothicNew-Black': 'zenkakugothicnew',
+    # 字幕用（テレビでも読みやすい太さ）。Google Fonts には可変フォントしかないので、太さ900を切り出す
+    'NotoSansJP-Black': 'notosansjp',
 }
 
 chars = set()
@@ -28,6 +30,10 @@ out = ROOT / 'public/fonts'
 out.mkdir(parents=True, exist_ok=True)
 for name, folder in FONTS.items():
     ttf = src / f'{name}.ttf'
+    if not ttf.exists() and name == 'NotoSansJP-Black':
+        var = src / 'NotoSansJP-var.ttf'
+        urllib.request.urlretrieve('https://raw.githubusercontent.com/google/fonts/main/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf', var)
+        subprocess.run(['python3', '-m', 'fontTools.varLib.instancer', str(var), 'wght=900', '-o', str(ttf)], check=True)
     if not ttf.exists():
         urllib.request.urlretrieve(f'https://raw.githubusercontent.com/google/fonts/main/ofl/{folder}/{name}.ttf', ttf)
     subprocess.run(['pyftsubset', str(ttf), f'--text={text}', '--flavor=woff2', f'--output-file={out / (name + ".woff2")}'], check=True)

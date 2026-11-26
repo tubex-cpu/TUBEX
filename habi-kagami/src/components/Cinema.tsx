@@ -45,7 +45,7 @@ export const Telop: React.FC<{readonly text: string; readonly bottom?: boolean; 
 				position: 'absolute',
 				left: 0,
 				right: 0,
-				...(bottom ? {bottom: 170} : {top: 128}),
+				...(bottom ? {bottom: 215} : {top: 128}), // 下の帯は、大きい字幕（84px）に重ならない高さ
 				height: size + 70,
 				display: 'flex',
 				alignItems: 'center',

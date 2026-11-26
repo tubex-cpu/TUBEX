@@ -32,8 +32,8 @@ IDS = ['Intro', 'JudgeEntrance', 'Clue1Nagasa', 'Clue2Doki', 'Clue3Kawari', 'Clu
 # 読み上げ用の置き換え（字幕はそのまま）。長いものから先に置き換える
 READING = [('青谷上寺地', 'アオヤカミジチ'), ('大平山元', 'オオダイヤマモト'), ('下宅部', 'シモヤケベ'), ('外ヶ浜町', 'ソトガハマチョウ'), ('若狭町', 'ワカサチョウ'), ('照り返し', 'テリカエシ'), ('冷たさ', 'ツメタサ'), ('一か所', 'イッカショ'), ('真ん中', 'マンナカ'), ('鬼界', 'キカイ'), ('日本', 'ニホン'), ('柵', 'サク'), ('○', ''), ('△', ''), ('×', '')]
 
-# 字幕1行の最大文字数（字幕の幅と文字サイズに合わせる）
-LINE_MAX = 25
+# 字幕1行の最大文字数（字幕の幅と文字サイズに合わせる。84pxで19字）
+LINE_MAX = 19
 
 CACHE = ROOT / 'scripts/.voice-cache'
 CACHE.mkdir(exist_ok=True)
@@ -100,9 +100,12 @@ def split_line(text: str) -> list[str]:
         elif re.match(r'[ぁ-ん]', prev) and not re.match(r'[ぁ-ん]', nxt):
             cost[i] = 9
         elif prev in 'はがをにでともへや' and re.match(r'[ぁ-ん]', nxt):
-            cost[i] = 14
+            cost[i] = 30
         else:
             cost[i] = 40
+        # 数字の直前（「東へ｜約2キロ」）・「と｜いう」・「1本の｜柱」で切ると読みにくい
+        if re.match(r'[0-9０-９約]', nxt) or text[i:i + 2] == 'いう' or prev == 'の':
+            cost[i] += 25
     # 動的計画法：1行に収まり、切れ目のコスト＋行数＋短すぎる行の罰点が最小になる分け方
     n = len(text)
     best = [(0.0, -1)] + [(float('inf'), -1)] * n
