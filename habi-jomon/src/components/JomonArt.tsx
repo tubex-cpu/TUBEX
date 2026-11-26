@@ -55,7 +55,7 @@ export const StoragePit: React.FC<{readonly tone?: Tone}> = ({tone = 'ember'}) =
 // クリの花粉は重く、林の近くにしか落ちない
 export const PollenFall: React.FC<{readonly tone?: Tone}> = ({tone = 'moss'}) => {
 	const frame = useCurrentFrame();
-	const ground = 820;
+	const ground = 760;
 	const trees = [180, 330, 480];
 	const dots = Array.from({length: 160}, (_, i) => {
 		const dist = Math.pow(rand(i + 7), 2.6) * 1300; // 近いほど多い
@@ -76,10 +76,10 @@ export const PollenFall: React.FC<{readonly tone?: Tone}> = ({tone = 'moss'}) =>
 			{dots.map((d, i) => (
 				<circle key={i} cx={d.x} cy={d.y} r={7} fill="#f4e27a" opacity={d.o * 0.9} />
 			))}
-			<Label x={330} y={ground + 90} text="クリの林" at={10} anchor="middle" color={colors.goldSoft} size={50} />
-			<line x1={560} y1={ground + 60} x2={1840} y2={ground + 60} stroke="rgba(239,230,210,0.5)" strokeWidth={4} opacity={fade(frame, 120)} />
-			<Label x={1200} y={ground + 130} text="林から離れるほど、花粉は届かない" at={140} anchor="middle" />
-			<Label x={720} y={250} text="重い花粉" at={40} anchor="middle" color="#f4e27a" />
+			<Label x={330} y={ground + 80} text="クリの林" at={10} anchor="middle" color={colors.goldSoft} size={50} />
+			<line x1={560} y1={ground + 30} x2={1840} y2={ground + 30} stroke="rgba(239,230,210,0.5)" strokeWidth={4} opacity={fade(frame, 120)} />
+			<Label x={1200} y={ground + 100} text="林から離れるほど、花粉は届かない" at={140} anchor="middle" />
+			<Label x={720} y={400} text="重い花粉" at={40} anchor="middle" color="#f4e27a" />
 		</Canvas>
 	);
 };
@@ -124,21 +124,21 @@ export const VillagePlan: React.FC<{readonly tone?: Tone}> = ({tone = 'night'}) 
 // ストーンサークル：石の並びが夏至の日の入りの方向を指す。石の下には墓の穴
 export const SunLine: React.FC<{readonly tone?: Tone; readonly graves?: boolean}> = ({tone = 'ember', graves: showGraves = false}) => {
 	const frame = useCurrentFrame();
-	const c1 = {x: 820, y: 640};
-	const c2 = {x: 1260, y: 420};
+	const c1 = {x: 640, y: 720};
+	const c2 = {x: 1060, y: 580};
 	const stones = (c: {x: number; y: number}, r: number, n: number, k: number) =>
 		Array.from({length: n}, (_, i) => {
 			const a = (i / n) * Math.PI * 2;
 			return <ellipse key={`${k}-${i}`} cx={c.x + Math.cos(a) * r} cy={c.y + Math.sin(a) * r * 0.7} rx={22} ry={14} fill="#9a8f7a" stroke="#2a241a" strokeWidth={3} opacity={fade(frame, 6 + i)} />;
 		});
 	const line = interpolate(frame, [40, 100], [0, 1], easeInOut);
-	const sx = c1.x + (c2.x - c1.x) * 2.4 * line;
-	const sy = c1.y + (c2.y - c1.y) * 2.4 * line;
+	const sx = c1.x + (c2.x - c1.x) * 2.5 * line;
+	const sy = c1.y + (c2.y - c1.y) * 2.5 * line;
 	const graves = showGraves ? fade(frame, 130, 30) : 0;
 	return (
 		<Canvas tone={tone}>
-			<circle cx={1700} cy={180} r={70} fill="#ffb04a" opacity={fade(frame, 80) * 0.9} />
-			<Label x={1700} y={300} text="夏至の日の入り" at={90} anchor="middle" color="#ffcf8a" />
+			<circle cx={1730} cy={370} r={70} fill="#ffb04a" opacity={fade(frame, 80) * 0.9} />
+			<Label x={1730} y={500} text="夏至の日の入り" at={90} anchor="middle" color="#ffcf8a" />
 			{stones(c1, 190, 26, 1)}
 			{stones(c2, 150, 22, 2)}
 			<circle cx={c1.x} cy={c1.y} r={16} fill={colors.gold} />
@@ -162,7 +162,7 @@ export const PopWave: React.FC<{readonly marks: readonly WaveMark[]; readonly to
 	const x = (y: number) => 200 + ((16000 - y) / 13500) * 1520;
 	const base = 820;
 	const curve = (y: number) => {
-		const a = Math.exp(-Math.pow((y - 5000) / 1700, 2)) * 430;
+		const a = Math.exp(-Math.pow((y - 5000) / 1700, 2)) * 370;
 		const b = Math.exp(-Math.pow((y - 9000) / 1500, 2)) * 120;
 		return base - 40 - a - b;
 	};
@@ -182,8 +182,8 @@ export const PopWave: React.FC<{readonly marks: readonly WaveMark[]; readonly to
 				const at = 60 + i * 26;
 				return (
 					<g key={i} opacity={fade(frame, at)}>
-						<line x1={x(m.year)} y1={base} x2={x(m.year)} y2={260} stroke={m.red ? '#e0604f' : '#7fa7d0'} strokeWidth={4} strokeDasharray="10 8" />
-						<text x={x(m.year)} y={230 - (i % 2) * 0} textAnchor="middle" {...svgGothic(40, m.red ? '#ffb3a6' : '#cfe2ff', 900)}>
+						<line x1={x(m.year)} y1={base} x2={x(m.year)} y2={360} stroke={m.red ? '#e0604f' : '#7fa7d0'} strokeWidth={4} strokeDasharray="10 8" />
+						<text x={x(m.year)} y={340} textAnchor="middle" {...svgGothic(40, m.red ? '#ffb3a6' : '#cfe2ff', 900)}>
 							{m.label}
 						</text>
 					</g>
@@ -199,9 +199,9 @@ export const PopWave: React.FC<{readonly marks: readonly WaveMark[]; readonly to
 // 二つの流れが混ざり合う（縄文の人々 ＋ 海を渡ってきた人々 → いまの日本人）
 export const MixStream: React.FC<{readonly a: string; readonly b: string; readonly out: string; readonly tone?: Tone}> = ({a, b, out, tone = 'night'}) => {
 	const frame = useCurrentFrame();
-	const pa = 'M 120 360 C 600 360 800 560 1180 600';
-	const pb = 'M 900 1000 C 1000 800 1050 640 1180 600';
-	const po = 'M 1180 600 L 1800 600';
+	const pa = 'M 140 460 C 600 460 800 640 1180 660';
+	const pb = 'M 780 860 C 920 820 1050 720 1180 660';
+	const po = 'M 1180 660 L 1800 660';
 	const da = interpolate(frame, [6, 70], [1600, 0], clamp);
 	const db = interpolate(frame, [50, 110], [900, 0], clamp);
 	const dout = interpolate(frame, [100, 150], [700, 0], clamp);
@@ -216,13 +216,13 @@ export const MixStream: React.FC<{readonly a: string; readonly b: string; readon
 					<stop offset="1" stopColor="#8fb0a0" />
 				</linearGradient>
 			</defs>
-			<text x={140} y={290} {...svgMincho(60, '#ffd98a')} opacity={fade(frame, 10)}>
+			<text x={140} y={410} {...svgMincho(60, '#ffd98a')} opacity={fade(frame, 10)}>
 				{a}
 			</text>
-			<text x={940} y={1010} {...svgMincho(52, '#a8d0ff')} opacity={fade(frame, 60)}>
+			<text x={740} y={880} textAnchor="end" {...svgMincho(52, '#a8d0ff')} opacity={fade(frame, 60)}>
 				{b}
 			</text>
-			<text x={1780} y={520} textAnchor="end" {...svgMincho(64, '#fbf6ea')} opacity={fade(frame, 120)}>
+			<text x={1780} y={590} textAnchor="end" {...svgMincho(64, '#fbf6ea')} opacity={fade(frame, 120)}>
 				{out}
 			</text>
 		</Canvas>
@@ -239,7 +239,7 @@ export const SpanCompare: React.FC<{readonly spans: readonly {readonly label: st
 				const at = 10 + i * 40;
 				const g = interpolate(frame, [at, at + 60], [0, 1], easeOut);
 				const y = 380 + i * 260;
-				const w = (s.years / max) * 1500 * g;
+				const w = (s.years / max) * 1180 * g;
 				return (
 					<g key={i} opacity={fade(frame, at)}>
 						<text x={210} y={y - 30} {...svgGothic(52, '#efe6d2', 900)}>
