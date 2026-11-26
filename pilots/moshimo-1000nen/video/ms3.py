@@ -56,7 +56,7 @@ def kAshForest(n):  # 東京の森に、灰が降り積もる
     s = bpy.context.scene
     sky_keys([(1, hexc('#a8c0d8')), (n, hexc('#a8a6a0'))])
     cam = camera(30)
-    cam_path(cam, [(0, (-10, -40, 22), (0, 40, 10)), (1, (-6, -36, 20), (0, 40, 10))], n)
+    cam_path(cam, [(0, (-10, -80, 60), (0, 60, 10)), (1, (-6, -74, 56), (0, 60, 10))], n)
     return MB('wind')
 
 
@@ -132,7 +132,7 @@ def kCollapse(n):  # ビルが、一棟ずつ、崩れていく（人はいな�
     light_dir((0.5, -0.4, 0.7)); s.display.shading.shadow_intensity = 0.45
     ground(size=600, rgb=hexc('#5a6a40'))
     rnd = random.Random(7)
-    ever_trees([(rnd.uniform(-90, 90), rnd.uniform(-30, 120)) for _ in range(300)], seed=7, s=(1.4, 2.2), trunk=False,
+    ever_trees([p for p in [(rnd.uniform(-90, 90), rnd.uniform(-30, 120)) for _ in range(300)] if not (abs(p[0]) < 50 and p[1] < 48)], seed=7, s=(1.4, 2.2), trunk=False,
                cols=[hexc('#5a6a50'), hexc('#6a7a5a'), hexc('#4f5f48')])
     for k, (x, y, h) in enumerate([(-30, 20, 26), (0, 36, 32), (28, 18, 24)]):
         f = int(n * (0.08 + 0.3 * k))
@@ -153,8 +153,8 @@ def temple_forest(n, seed=51, moss=0.0, people=False):
     box((0, 0, 0.01), (30, 30, 0.02), hexc('#d8d0bc'))  # 境内の砂
     rnd = random.Random(seed)
     pts = [(rnd.uniform(-90, 90), rnd.uniform(-60, 120)) for _ in range(380)]
-    pts = [p for p in pts if max(abs(p[0]), abs(p[1])) > 18]
-    ever_trees(pts, seed=seed, s=(1.6, 2.6))
+    pts = [p for p in pts if max(abs(p[0]), abs(p[1])) > 40]
+    ever_trees(pts, seed=seed, s=(1.2, 2.0))
     root, tiers = pagoda((0, 4, 0), moss=moss)
     return root, tiers
 
@@ -162,7 +162,7 @@ def temple_forest(n, seed=51, moss=0.0, people=False):
 def kPagoda(n):  # 五百年後。奈良の森の中に、古い五重塔がある
     temple_forest(n, moss=0.5)
     cam = camera(28)
-    cam_path(cam, [(0, (-30, -60, 30), (0, 4, 14)), (1, (-24, -52, 22), (0, 4, 14))], n)
+    cam_path(cam, [(0, (-22, -34, 16), (0, 4, 14)), (1, (-18, -30, 12), (0, 4, 14))], n)
     return MB('garden', insects=0.3)
 
 
@@ -209,7 +209,7 @@ def kRepair(n):  # この寺は、何百年かごとに、人が解体して、�
             beam = box((0, -0.3, 1.5), (0.2, 2.6, 0.2), hexc('#c8a070'))
             link(beam, p)
     cam = camera(30)
-    cam_path(cam, [(0, (-28, -40, 14), (2, 2, 10)), (1, (-22, -36, 12), (2, 2, 10))], n)
+    cam_path(cam, [(0, (-22, -34, 12), (2, 2, 10)), (1, (-18, -32, 11), (2, 2, 10))], n)
     return MB('garden', insects=0.2)
 
 
@@ -248,7 +248,7 @@ def kRepairCycle(n):  # 千年もつ建物は、千年、人が直し続けて�
         f_in = int(n * (0.08 + 0.22 * k)); f_out = f_in + int(n * 0.12)
         visible(sc, f_in, f_out)
     cam = camera(26)
-    cam_path(cam, [(0, (40, -50, 22), (0, 4, 13)), (1, (30, -56, 20), (0, 4, 13))], n)
+    cam_path(cam, [(0, (26, -30, 16), (0, 4, 13)), (1, (22, -34, 14), (0, 4, 13))], n)
     return MB('garden')
 
 
@@ -337,10 +337,10 @@ def kNoCity(n):  # 鉄とコンクリートの街は、消えた（森と苔む�
     for k in range(16):
         x, y = rnd.uniform(-80, 80), rnd.uniform(-10, 160)
         moss_stones([(x + rnd.uniform(-6, 6), y + rnd.uniform(-6, 6)) for _ in range(10)], seed=k, r=(1.0, 2.6))
-    pts = [(rnd.uniform(-200, 200), rnd.uniform(-40, 300)) for _ in range(700)]
-    ever_trees(pts, seed=9, s=(1.6, 2.8))
+    pts = [(rnd.uniform(-200, 200), rnd.uniform(-40, 300)) for _ in range(450)]
+    ever_trees(pts, seed=9, s=(1.0, 1.8))
     cam = camera(30)
-    cam_path(cam, [(0, (0, -60, 30), (0, 60, 0)), (1, (10, -50, 24), (0, 60, 0))], n)
+    cam_path(cam, [(0, (0, -70, 50), (0, 60, 0)), (1, (10, -60, 42), (0, 60, 0))], n)
     return MB('garden')
 
 
@@ -399,7 +399,7 @@ def kEyeOpen(n):  # 森の中で、誰かが、目を開ける
     h = O[p['head']].matrix_world.translation
     cam = camera(50, dof=0.75, fstop=2.0)
     d = Vector((math.sin(w['lie_rot']), -math.cos(w['lie_rot']), 0))
-    cam_path(cam, [(0, tuple(h + d * 0.55 + Vector((0, 0, 0.55))), tuple(h)), (1, tuple(h + d * 0.45 + Vector((0, 0, 0.45))), tuple(h))], n)
+    cam_path(cam, [(0, tuple(h + d * 0.3 + Vector((0, 0, 0.6))), tuple(h)), (1, tuple(h + d * 0.25 + Vector((0, 0, 0.5))), tuple(h))], n)
     return MB('garden', insects=0.4)
 
 
@@ -454,7 +454,7 @@ def kMossStones(n):  # 苔に覆われた石と、高い木々が、並んでい
     setmat(ph, hexc('#3a4030'))
     msph([(x + 0.04, y + 0.02, 0.015, 0.05, 1.2, 1, 0.4), (x - 0.03, y - 0.05, 0.015, 0.04, 1, 1, 0.4)], hexc('#5f8a3a'), 'pmoss')
     cam = camera(40, dof=1.2, fstop=2.4)
-    cam_path(cam, [(0, (x - 0.9, y - 0.9, 0.9), (x, y, 0.0)), (1, (x - 1.0, y - 1.2, 1.6), (x + 2, y + 4, 1.4))], n)
+    cam_path(cam, [(0, (x - 0.9, y - 0.9, 0.9), (x, y, 0.0)), (1, (x - 1.5, y - 3.0, 2.8), (x + 3, y + 8, 2.6))], n)
     return MB('garden', insects=0.4)
 
 
@@ -497,7 +497,7 @@ def kMilkyWay(n):  # 渋谷の空に、天の川が、かかっている。千�
 def kLookUp(n):  # 人々は、空を見上げます
     night_forest_cross(n, look=int(n * 0.1))
     cam = camera(30)
-    cam_path(cam, [(0, (-10, -16, 3.2), (0, 2, 2.5)), (1, (-8, -14, 2.8), (0, 2, 3.5))], n)
+    cam_path(cam, [(0, (-3, -9, 1.1), (0, 2, 3.0)), (1, (-2.5, -8, 1.0), (0, 2, 4.0))], n)
     return MB('night', insects=0.6)
 
 
@@ -535,5 +535,5 @@ def kPickStone(n):  # 一人が、足元の石を、拾い上げる。千年ぶ�
 def kEnd(n):  # エンドカード：天の川と、森の交差点
     night_forest_cross(n, look=1)
     cam = camera(24)
-    cam_path(cam, [(0, (-30, -40, 8), (0, 30, 30)), (1, (-34, -46, 10), (0, 30, 40))], n)
+    cam_path(cam, [(0, (-8, -24, 2.0), (-8, 60, 40)), (1, (-8, -26, 2.0), (-8, 60, 52))], n)
     return MB('night', insects=0.5)

@@ -32,8 +32,9 @@ def _new_obj(bm, name):
 
 def f_box(loc, size, rgb, rot=(0, 0, 0), name='box', bevel=0.0):
     bm = bmesh.new()
-    bmesh.ops.create_cube(bm, size=1.0, matrix=Matrix.Diagonal((size[0], size[1], size[2], 1)))
-    o = _new_obj(bm, name); o.location = loc; o.rotation_euler = rot
+    # bpy.ops 版と同じく、位置・回転・大きさをメッシュに焼き込む（物体は原点）
+    bmesh.ops.create_cube(bm, size=1.0, matrix=Matrix.Translation(loc) @ Euler(rot).to_matrix().to_4x4() @ Matrix.Diagonal((size[0], size[1], size[2], 1)))
+    o = _new_obj(bm, name)
     if bevel:
         m = o.modifiers.new('b', 'BEVEL'); m.width = bevel; m.segments = 2
     return setmat(o, rgb)
@@ -65,8 +66,8 @@ def f_cone(loc, r, h, rgb, rot=(0, 0, 0), verts=12, name='cone'):
 
 def f_plane(loc, size, rgb, rot=(0, 0, 0), name='plane'):
     bm = bmesh.new()
-    bmesh.ops.create_grid(bm, x_segments=1, y_segments=1, size=0.5, matrix=Matrix.Diagonal((size[0], size[1], 1, 1)))
-    o = _new_obj(bm, name); o.location = loc; o.rotation_euler = rot
+    bmesh.ops.create_grid(bm, x_segments=1, y_segments=1, size=0.5, matrix=Matrix.Translation(loc) @ Euler(rot).to_matrix().to_4x4() @ Matrix.Diagonal((size[0], size[1], 1, 1)))
+    o = _new_obj(bm, name)
     return setmat(o, rgb)
 
 
@@ -82,7 +83,20 @@ def MB(amb='city', **kw):
     m = M([], 0.0, amb=amb)
     m['beats'] = 0
     m.update(kw)
+    shadow_budget()
     return m
+
+
+SHADOW_POLYS = 12000
+
+
+def shadow_budget():
+    """Workbench の影（シャドウボリューム）は CPU 描画で三角形の数に比例して重い（10万面で1コマ25秒）。
+    面の多い場面では影を切る（切ると1コマ3秒ほど）"""
+    s = bpy.context.scene
+    polys = sum(len(o.data.polygons) for o in bpy.data.objects if o.type == 'MESH')
+    if polys > SHADOW_POLYS:
+        s.display.shading.show_shadows = False
 
 
 # ---------------- まとめて作る（一つのメッシュ） ----------------
@@ -276,7 +290,7 @@ def star_dome(n, k=300, R=900.0, seed=7, f0=None, f1=None, size=(1.0, 2.4), min_
             if v.z < math.sin(min_el):
                 continue
             v.normalize()
-            pts.append((math.atan2(v.y, v.x), math.asin(v.z), rnd.uniform(0.5, 1.2)))
+            pts.append((math.atan2(v.y, v.x), math.asin(v.z), rnd.uniform(0.9, 1.8)))
     rnd.shuffle(pts)
     objs = []
     G = groups if f0 is not None else 1
@@ -293,12 +307,14 @@ def star_dome(n, k=300, R=900.0, seed=7, f0=None, f1=None, size=(1.0, 2.4), min_
     return objs
 
 
-def milky_way(az0=0.6, tilt=1.1, R=880.0, seed=8, a=0.16, center=(0, 0, 0), f0=None):
-    """天の川のぼんやりした光（半透明の楕円をつなぐ）"""
+def milky_way(az0=0.6, tilt=1.1, R=880.0, seed=8, a=0.07, center=(0, 0, 0), f0=None):
+    """天の川：帯に集めた小さな星（星の数で見せる。半透明の楕円は使わない）"""
+    return star_dome(1, k=0, seed=seed + 100, size=(0.5, 1.0), band=(az0, tilt), band_k=2600, R=R * 1.01, center=center,
+                     c=(0.85, 0.88, 1.0), f0=f0, f1=(f0 + 24) if f0 is not None else None, groups=3)
     rnd = random.Random(seed)
     out = []
-    for i in range(26):
-        u = math.pi * (i + 0.5) / 26
+    for i in range(48):
+        u = math.pi * (i + 0.5) / 48
         v = Vector((math.cos(u), math.sin(u), 0))
         v = Matrix.Rotation(tilt, 3, 'X') @ v
         v = Matrix.Rotation(az0, 3, 'Z') @ v
@@ -309,9 +325,9 @@ def milky_way(az0=0.6, tilt=1.1, R=880.0, seed=8, a=0.16, center=(0, 0, 0), f0=N
         tdir = (Matrix.Rotation(az0, 3, 'Z') @ (Matrix.Rotation(tilt, 3, 'X') @ Vector((-math.sin(u), math.cos(u), 0))))
         q = Vector((1, 0, 0)).rotation_difference(tdir)
         o.rotation_mode = 'QUATERNION'; o.rotation_quaternion = q
-        o.scale = (R * 0.09, R * rnd.uniform(0.035, 0.06), R * 0.02)
+        o.scale = (R * 0.07, R * rnd.uniform(0.045, 0.075), R * 0.006)
         if f0 is not None:
-            appear(o, f0 + i * 3)
+            appear(o, f0 + i)
         out.append(o)
     return out
 
@@ -347,7 +363,7 @@ def add_eyes(p, closed=True):
     h = O[p['head']]
     eyes = []
     for sx in (-1, 1):
-        e = sphere((sx * 0.045, -0.112, 0.015), 0.018, hexc('#1a1414'), scale=(1.0, 0.5, 0.12 if closed else 1.0), seg=10, name='eye')
+        e = sphere((sx * 0.045, -0.115, 0.0), 0.022, hexc('#1a1414'), scale=(1.0, 0.5, 0.12 if closed else 1.0), seg=10, name='eye')
         link(e, h); eyes.append(e)
     return eyes
 
@@ -361,8 +377,10 @@ def open_eyes(eyes, f):
 def tilt_head(p):
     """首と頭の間に「傾き」の空を入れる（animate_life の首振りとは別に、見上げる・うつむくを付ける）"""
     nk = O[p['neck']]; h = O[p['head']]
-    t = empty((0, 0, 0), 'tilt'); link(t, nk)
-    h.parent = t
+    # 回す軸を頭の中心から首の付け根へずらす（頭の中心で回すと、玉が回るだけで傾いて見えない）
+    off = Vector((0, 0, -0.15)) if p.get('kind') == 'person' else Vector((0, 0.12, -0.06))
+    t = empty(tuple(h.location + off), 'tilt'); link(t, nk)
+    h.parent = t; h.location = -off
     return t
 
 
@@ -430,9 +448,19 @@ def person_of(w, pose, name, loc=None, rot=None):
                   rot_z=w['heading'] if rot is None else rot, pose=pose, name=name)
 
 
+def lie_limbs(p, shirt, skin):
+    """寝た人に腕と靴を足す（kit の寝姿勢は胴と脚だけ）"""
+    rig = O[p['rig']]
+    for sx in (-1, 1):
+        link(cyl((sx * 0.28, -0.36, 0.11), 0.055, 0.56, shirt, rot=(math.pi / 2, 0, 0), verts=10), rig)
+        link(sphere((sx * 0.28, -0.05, 0.1), 0.05, skin, seg=10), rig)
+        link(box((sx * 0.1, 0.98, 0.16), (0.11, 0.08, 0.2), hexc('#222222')), rig)
+
+
 def sleeper(w, name='sl', z=0.0):
     p = person_of(w, 'lie', name, loc=(w['stop'][0], w['stop'][1], z), rot=w['lie_rot'])
     lie_fix(p)
+    lie_limbs(p, w['shirt'], w['skin'])
     return p
 
 
@@ -835,7 +863,7 @@ def crossing(n, stage=0, lit=0.45, sleepers=True, sig='green', seed=1, skip_slee
     for i, (x, y, w, d, h, c) in enumerate(BLDG):
         if year >= 1000:
             continue
-        L = bldg_block(x, y, w, d, h, c, lit=lit if stage == 0 else 0.0, seed=i, screen=(i % 3 == 0),
+        L = bldg_block(x, y, w, d, h, c if stage != 'night' else '#3a3e46', lit=lit if stage == 0 else 0.0, seed=i, screen=(i % 3 == 0),
                        dark_win=hexc('#2a3038') if stage == 'night' else (hexc('#5a6a72') if year >= 10 else None))
         if L and L[0]:
             out['lit'].append(L[0])
@@ -1010,12 +1038,12 @@ def platform(n, water_f0=None, water_f1=None, wz0=-1.2, wz1=-0.45, seep=True, se
             y = -5.24 if wall else 6.04
             ztop = rnd.uniform(2.4, 3.4) if wall else rnd.uniform(2.8, 3.5)
             Lh = ztop + (1.3 if wall else 0.0)
-            o = streak((x, y, ztop), rnd.uniform(0.3, 1.0), Lh, hexc('#6a6a62'), a=0.85, name='wet')
+            o = streak((x, y, ztop), rnd.uniform(0.6, 1.6), Lh, hexc('#3e4448'), a=0.9, name='wet')
             f0 = 1 + rnd.randint(0, int(n * 0.3))
             o.scale = (1, 1, wet0); o.keyframe_insert('scale', frame=1); o.keyframe_insert('scale', frame=f0)
             o.scale = (1, 1, 1); o.keyframe_insert('scale', frame=min(n, f0 + int(n * 0.6)))
             sts.append((x, y + (0.08 if wall else -0.08)))
-        drips(n, [(x, y) for (x, y) in sts[:14]], 3.0, -1.2, period=28, seed=seed)
+        drips(n, [(x, y) for (x, y) in sts[:14]], 3.0, -1.2, period=28, seed=seed, r=0.06)
     w = None
     if water_f0 is not None:
         w = water((0, -2.6), (L, 5.3), wz0, wz1, water_f0, water_f1, c=hexc('#4f7f90'), a=0.72)
@@ -1052,7 +1080,7 @@ def pump_room(n):
 TWR_R = hexc('#e2552c'); TWR_W = hexc('#f2efe8'); RUST = hexc('#7a4a2a')
 
 
-def lattice_tower(H=60.0, W0=9.0, W1=0.9, bands=10, rust_f0=None, rust_f1=None, rust_k=0, seed=3):
+def lattice_tower(H=60.0, W0=9.0, W1=0.9, bands=10, rust_f0=None, rust_f1=None, rust_k=0, seed=3, rust_z=None):
     """格子の鉄塔（赤と白の帯）。rust_k>0 で茶色い錆の筋が rust_f0〜rust_f1 に順に浮かぶ"""
     def half(z):
         u = z / H
@@ -1090,10 +1118,11 @@ def lattice_tower(H=60.0, W0=9.0, W1=0.9, bands=10, rust_f0=None, rust_f1=None, 
     if rust_k:
         rnd = random.Random(seed)
         for i in range(rust_k):
-            z = rnd.uniform(1, H * 0.95); hh = half(z)
+            z = rnd.uniform(*(rust_z or (1, H * 0.95))); hh = half(z)
             sx, sy = rnd.choice([-1, 1]), rnd.choice([-1, 1])
-            L = rnd.uniform(0.8, 3.0)
-            o = streak((sx * (hh + 0.22), sy * (hh + 0.22), z), rnd.uniform(0.12, 0.3), L, RUST if rnd.random() < 0.7 else hexc('#9a5a30'), name='rust',
+            L = rnd.uniform(2.0, 6.0)
+            rr = 0.32 * (1 - z / H) + 0.08
+            o = streak((sx * (hh + rr * 0.72), sy * (hh + rr * 0.72), z), rnd.uniform(0.18, 0.4), L, RUST if rnd.random() < 0.7 else hexc('#6a3a1e'), name='rust',
                        axis_y=rnd.random() < 0.5)
             f = int(rust_f0 + (rust_f1 - rust_f0) * i / max(1, rust_k - 1))
             o.scale = (0, 0, 0); o.keyframe_insert('scale', frame=1); o.keyframe_insert('scale', frame=max(1, f))
@@ -1120,12 +1149,14 @@ def bamboo_items(pts, rnd, h=(9, 14), r=0.07, z_of=None):
         H = rnd.uniform(*h); lean = (rnd.uniform(-0.08, 0.08), rnd.uniform(-0.08, 0.08))
         top = (x + lean[0] * H, y + lean[1] * H, z + H)
         culms.append(((x, y, z), top, r * rnd.uniform(0.8, 1.2), r * 0.6))
+        for k in range(9):
+            u = rnd.uniform(0.45, 1.0)
+            leaves.append((x + lean[0] * H * u + rnd.uniform(-0.7, 0.7), y + lean[1] * H * u + rnd.uniform(-0.7, 0.7), z + H * u,
+                           rnd.uniform(0.3, 0.55), rnd.uniform(0.8, 1.8), rnd.uniform(0.8, 1.8), 0.6))
         for k in range(1, int(H / 1.2)):
             u = k * 1.2 / H
             nodes.append(((x + lean[0] * H * u, y + lean[1] * H * u, z + H * u - 0.03), (x + lean[0] * H * u, y + lean[1] * H * u, z + H * u + 0.03), r * 1.25))
-        for k in range(5):
-            u = rnd.uniform(0.55, 1.0)
-            leaves.append((x + lean[0] * H * u + rnd.uniform(-0.8, 0.8), y + lean[1] * H * u + rnd.uniform(-0.8, 0.8), z + H * u, rnd.uniform(0.6, 1.1), 1.4, 1.0, 0.45))
+
     return culms, leaves, nodes
 
 
@@ -1195,8 +1226,8 @@ def tanuki(loc, s=1.3, rot_z=0.0, pose='walk', name='tanuki'):
 
 
 def graze(a, n, f0=1, down=0.9, seed=1):
-    """首を下げて草を食べる（ときどき顔を上げる）"""
-    nk = O[a['neck']]
+    """首を下げて草を食べる（ときどき顔を上げる）。animate_life の首振りとぶつからないよう、頭の間の空を動かす"""
+    nk = tilt_head(a)
     rnd = random.Random(seed)
     base = nk.rotation_euler.x
     f = f0
@@ -1205,10 +1236,10 @@ def graze(a, n, f0=1, down=0.9, seed=1):
         nk.rotation_euler.x = base + down; nk.keyframe_insert('rotation_euler', index=0, frame=f)
         nk.rotation_euler.x = base + down + 0.12; nk.keyframe_insert('rotation_euler', index=0, frame=f + 8)
         nk.rotation_euler.x = base + down; nk.keyframe_insert('rotation_euler', index=0, frame=f + 16)
-        f2 = f + rnd.randint(40, 80)
+        f2 = f + rnd.randint(70, 110)
         nk.rotation_euler.x = base + down; nk.keyframe_insert('rotation_euler', index=0, frame=f2)
         nk.rotation_euler.x = base; nk.keyframe_insert('rotation_euler', index=0, frame=f2 + 10)
-        f = f2 + rnd.randint(20, 40)
+        f = f2 + rnd.randint(16, 26)
     nk.rotation_euler.x = base
 
 
@@ -1280,11 +1311,12 @@ def keyhole_mound(loc=(0, 0, 0), s=1.0, seed=3):
     o1 = sphere((x0, y0 + 30 * s, 0.0), 30 * s, hexc('#4f7a3c'), scale=(1, 1, 0.32), seg=32)
     o2 = box((x0, y0 - 8 * s, 4.5 * s), (56 * s, 40 * s, 9 * s), hexc('#4f7a3c'))
     # 台形にする（手前を広く）
-    for v in o2.data.vertices:
-        if v.co.y > 0:
-            v.co.x *= 0.62
-        if v.co.z > 0:
-            v.co.x *= 0.85; v.co.y *= 0.92
+    cy2, cz2 = y0 - 8 * s, 4.5 * s
+    for v in o2.data.vertices:  # 位置は焼き込み済み：中心からの距離で台形にする
+        if v.co.y > cy2:
+            v.co.x = x0 + (v.co.x - x0) * 0.62
+        if v.co.z > cz2:
+            v.co.x = x0 + (v.co.x - x0) * 0.85; v.co.y = cy2 + (v.co.y - cy2) * 0.92
     rnd = random.Random(seed)
     pts = []
     for i in range(380):
@@ -1339,7 +1371,7 @@ def rice_bowl(loc, s=1.0, rise=None):
     link(cyl((0, 0, 0.035), 0.06, 0.03, hexc('#e8e4da'), verts=24, r2=0.05), root)  # 高台
     o = link(cyl((0, 0, 0.11), 0.07, 0.13, hexc('#f0ece2'), verts=28, r2=0.125), root)
     link(cyl((0, 0, 0.12), 0.1, 0.03, hexc('#3a5a8a'), verts=28, r2=0.108), root)  # 藍の帯
-    link(cyl((0, 0, 0.165), 0.112, 0.02, hexc('#4a4038'), verts=28), root)  # 中の土
+    link(cyl((0, 0, 0.18), 0.117, 0.006, hexc('#4a4038'), verts=28), root)  # 中の土
     if rise:
         f0, f1, z0 = rise
         root.location.z = z0; root.keyframe_insert('location', index=2, frame=1); root.keyframe_insert('location', index=2, frame=f0)
@@ -1421,7 +1453,11 @@ def ruin_building(loc, w=10, d=8, h=24, seed=1, f_fall=None, n=240, crack_f=None
                 link(box((0, -0.21 if side == 0 else (0.21 if side == 1 else 0), 0.2), (sz[0] * 0.6 if side < 2 else 0.02, 0.02 if side < 2 else sz[1] * 0.6, 1.1),
                          hexc('#3a3e44')), o)  # 窓（割れて暗い）
                 panels.append((o, k, side))
-    box((x0, y0, h / 2), (w - 0.8, d - 0.8, h), hexc('#5a5650'))  # 中身（暗い）
+    core = boxc((x0, y0, h / 2), (w - 0.8, d - 0.8, h), hexc('#5a5650'))  # 中身（暗い）
+    if f_fall is not None:
+        core.keyframe_insert('scale', frame=f_fall + 8); core.keyframe_insert('location', frame=f_fall + 8)
+        core.scale = (1.15, 1.15, 0.08); core.location.z = h * 0.04
+        core.keyframe_insert('scale', frame=f_fall + 40); core.keyframe_insert('location', frame=f_fall + 40)
     if moss:
         mbox([(x0 + rnd.uniform(-w / 2, w / 2), y0 + rnd.choice([-1, 1]) * (d / 2 + 0.25), rnd.uniform(0, h * 0.5), rnd.uniform(0.5, 1.5), 0.2, rnd.uniform(1, 3))
               for _ in range(30)], hexc('#5f8a3a'), 'ivy')
@@ -1448,15 +1484,15 @@ def ruin_building(loc, w=10, d=8, h=24, seed=1, f_fall=None, n=240, crack_f=None
     return panels
 
 
-def dust_cloud(loc, n, f0, k=24, seed=5, c=hexc('#a8a49a'), r=6.0):
+def dust_cloud(loc, n, f0, k=14, seed=5, c=hexc('#9a9284'), r=6.0):
     rnd = random.Random(seed)
     for i in range(k):
         o = sphere(loc, 1.0, c, seg=10, name='dust')
         o.scale = (0, 0, 0); o.keyframe_insert('scale', frame=1); o.keyframe_insert('scale', frame=f0 + i)
         end = (loc[0] + rnd.uniform(-r, r) * 2, loc[1] + rnd.uniform(-r, r), loc[2] + rnd.uniform(0, r))
-        o.scale = (r * 0.3,) * 3; o.keyframe_insert('scale', frame=f0 + i + 1)
+        o.scale = (r * 0.15,) * 3; o.keyframe_insert('scale', frame=f0 + i + 1)
         o.keyframe_insert('location', frame=f0 + i + 1)
-        o.location = end; o.scale = (r * rnd.uniform(0.6, 1.0),) * 3
+        o.location = end; o.scale = (r * rnd.uniform(0.3, 0.5),) * 3
         o.keyframe_insert('location', frame=f0 + i + 60); o.keyframe_insert('scale', frame=f0 + i + 60)
         set_interp(o, 'CONSTANT', 'scale', {1, f0 + i})
 
@@ -1482,7 +1518,7 @@ def low_town(nx=8, ny=8, pitch=11.0, seed=3, cx=0, cy=0, skip=None, wall_k=None)
 def levee(x, y0, y1, w=10, h=7.0, c=hexc('#7a9a5a')):
     """堤防（台形）"""
     o = box((x, (y0 + y1) / 2, h / 2), (w, abs(y1 - y0), h), c)
-    for v in o.data.vertices:
-        if v.co.z > 0:
-            v.co.x *= 0.4
+    for v in o.data.vertices:  # box() は位置をメッシュに焼き込むので、中心からの距離で細める
+        if v.co.z > h / 2:
+            v.co.x = x + (v.co.x - x) * 0.4
     return o

@@ -30,7 +30,7 @@ def paddy_field(n, f0, f1, seed=4):
     for i in range(-3, 4):
         for j in range(-2, 4):
             x, y = i * 16, j * 12
-            w = plane((x, y, 0.03), (15, 11), hexc('#7a8a7a')); plots.append(w)
+            plane((x, y, 0.03), (15, 11), hexc('#7a8a7a')); plots.append((x, y))
             box((x, y + 5.9, 0.15), (16, 0.8, 0.3), hexc('#8a7a5a'))
             box((x + 7.9, y, 0.15), (0.8, 12, 0.3), hexc('#8a7a5a'))
     # 遠くの家と山
@@ -40,11 +40,12 @@ def paddy_field(n, f0, f1, seed=4):
     # 草が広がる（区画ごとに順に）
     order = list(range(len(plots))); rnd.shuffle(order)
     for k, idx in enumerate(order):
-        x, y = plots[idx].location.x, plots[idx].location.y
+        x, y = plots[idx]
         f = int(f0 + (f1 - f0) * k / len(order))
         pts = [(x + rnd.uniform(-7, 7), y + rnd.uniform(-5, 5)) for _ in range(40)]
         gs = grass_tufts(pts, seed=k, h=(0.4, 1.1), per=3, name='pg')
-        cover = plane((x, y, 0.05), (15, 11), rnd.choice([hexc('#7a9a50'), hexc('#8aa858'), hexc('#6a8a48')]))
+        cover = plane((0, 0, 0), (15, 11), rnd.choice([hexc('#7a9a50'), hexc('#8aa858'), hexc('#6a8a48')]))
+        cover.location = (x, y, 0.05)
         for o in gs + [cover]:
             grow(o, f, f + 30, axis='z' if o is not cover else None)
         if rnd.random() < 0.55:
@@ -74,7 +75,7 @@ def kFieldTrees(n):  # 放っておかれた畑は、数年で草に覆われ、
 def kTokyoGreen(n):  # 東京に、林が、戻り始める（交差点を高い所から）
     crossing(n, 10)
     cam = camera(28)
-    cam_path(cam, [(0, (5, -70, 40), (0, 0, 0)), (1, (-5, -80, 50), (0, 0, 0))], n)
+    cam_path(cam, [(0, (0, -52, 20), (0, 0, 0)), (1, (0, -46, 18), (0, 4, 0))], n)
     return MB('day', insects=0.5)
 
 
@@ -171,7 +172,6 @@ def kBambooDark(n):  # 竹の林の下は、昼でも、薄暗いまま
     msph([(rnd.uniform(-20, 20), rnd.uniform(-10, 30), 0.0, rnd.uniform(0.6, 1.6), 1, 1, 0.05) for _ in range(80)], hexc('#8a7a4a'), 'leaves')
     mbar([((x, y, 0), (x, y, rnd.uniform(0.3, 0.8)), 0.02) for x, y in [(rnd.uniform(-6, 6), rnd.uniform(0, 12)) for _ in range(12)]], hexc('#6a5a3a'), 'sapling')
     # 細い光の筋
-    light_shafts(k=5, seed=3, h=14)
     cam = camera(28)
     cam_path(cam, [(0, (0, -10, 1.6), (0, 20, 3.5)), (1, (0.8, -6, 1.6), (0.5, 20, 5.5))], n)
     return MB('wind')
@@ -226,7 +226,7 @@ def kDeerStreet(n):  # 三十年後。住宅地の道を、シカの群れが歩
     residential(n)
     deer_herd(n, lambda u: (7.0, -18 + 26 * u), k=6, seed=1)
     cam = camera(32)
-    cam_path(cam, [(0, (2.0, 14, 2.4), (7.0, -6, 0.8)), (1, (1.0, 12, 2.2), (7.0, 0, 0.8))], n)
+    cam_path(cam, [(0, (7.5, 16, 2.4), (7.0, -6, 0.8)), (1, (7.0, 14, 2.2), (7.0, 0, 0.8))], n)
     return MB('day')
 
 
@@ -242,7 +242,7 @@ def kDeerGraze(n):  # シカは、森の下草を、根元まで食べてしま�
     herd = []
     for i in range(5):
         a = animal((-4 + i * 2.0, rnd.uniform(0, 6), 0), 'deer' if i != 2 else 'fawn', rot_z=rnd.uniform(-1, 1), pose='walk', name=f'gd{i}')
-        graze(a, n, f0=rnd.randint(3, 30), down=0.85, seed=i)
+        graze(a, n, f0=rnd.randint(3, 30), down=1.2, seed=i)
     cam = camera(35)
     cam_path(cam, [(0, (-3, -9, 1.6), (0, 3, 0.6)), (1, (-1, -8, 1.5), (0, 3, 0.6))], n)
     return MB('day')
@@ -269,7 +269,7 @@ def kBareSlope(n):  # 下草のなくなった山では、雨のたびに、土�
     a = animal((4, 6, slope(4, 6)), 'deer', rot_z=0.6, pose='walk', name='sd')
     graze(a, n, f0=10, down=0.9)
     cam = camera(30)
-    cam_path(cam, [(0, (-6, -16, 6), (2, 14, 6)), (1, (-4, -14, 6.5), (2, 14, 6))], n)
+    cam_path(cam, [(0, (-1, -4, 1.0), (4, 6, 4.0)), (1, (0, -3, 1.2), (4, 6, 4.0))], n)
     return MB('wind')
 
 
@@ -302,7 +302,7 @@ def dig_spots(n, pts, f0, seed=3):
 
 def boar_dig(a, n, seed=1):
     """鼻で地面を掘る（首を下げて小刻みに）"""
-    nk = O[a['neck']]
+    nk = tilt_head(a)
     rnd = random.Random(seed)
     base = nk.rotation_euler.x
     f = rnd.randint(1, 10)
@@ -322,7 +322,7 @@ def kBoarPlaza(n):  # 駅前では、イノシシが、地面を掘り返して�
         u = boar((4 + k * 0.9, -6 + (k % 2) * 0.8, 0), baby=True, rot_z=0.2 + k * 0.4, name=f'uribo{k}'); boar_dig(u, n, 5 + k)
     dig_spots(n, [(2.5, -5.5), (4.5, -7), (1, -3.5), (5.5, -5), (3, -8)], 5)
     cam = camera(35)
-    cam_path(cam, [(0, (-6, -14, 2.2), (3, -5, 0.4)), (1, (-4, -13, 2.0), (3, -5, 0.4))], n)
+    cam_path(cam, [(0, (-1.5, -12, 1.5), (3, -5.5, 0.3)), (1, (-0.5, -11, 1.4), (3, -5.5, 0.3))], n)
     return MB('day')
 
 
@@ -335,7 +335,7 @@ def kBoarTown(n):  # 人がいなくなった町には、イノシシが、広�
         b.keyframe_insert('location', frame=1); b.location.y += rnd.uniform(6, 12); b.keyframe_insert('location', frame=n)
         linear(b, 'location')
     cam = camera(28)
-    cam_path(cam, [(0, (-30, -40, 22), (0, 0, 0)), (1, (-26, -36, 20), (0, 2, 0))], n)
+    cam_path(cam, [(0, (-7, -42, 10), (0, -5, 0)), (1, (-7, -38, 9), (0, -2, 0))], n)
     return MB('day')
 
 
@@ -438,7 +438,7 @@ def kTanuki(n):  # 林の中では、タヌキが、木の実を探している
     t2 = tanuki((1.8, 3.0, 0), rot_z=2.4, pose='walk', name='tanuki2', s=1.2)
     graze(t2, n, f0=5, down=0.6, seed=3)
     cam = camera(35)
-    cam_path(cam, [(0, (-1, -6, 1.2), (0, 1.5, 0.3)), (1, (0.2, -5.2, 1.1), (0.5, 1.5, 0.3))], n)
+    cam_path(cam, [(0, (-0.5, -3.5, 0.9), (0.5, 1.5, 0.3)), (1, (0.3, -3.0, 0.8), (1.0, 1.5, 0.3))], n)
     return MB('garden', insects=0.4)
 
 
@@ -488,7 +488,6 @@ def kMeijiForest(n):  # 明治神宮の森。人の手を借りずに続いて�
     ever_trees([(rnd.uniform(-30, 30), rnd.uniform(-5, 40)) for _ in range(60)], seed=9, s=(0.6, 1.0))  # 低い木
     box((0, 20, 0.02), (6, 80, 0.04), hexc('#c8bea8'))  # 参道の砂利
     msph([(rnd.uniform(-30, 30), rnd.uniform(-5, 40), 0.0, rnd.uniform(0.8, 2.0), 1, 1, 0.05) for _ in range(80)], hexc('#6a5a3a'), 'leaves')
-    light_shafts(k=6, seed=4, h=24)
     cam = camera(28)
     cam_path(cam, [(0, (0, -8, 1.7), (0, 30, 6)), (1, (0, -2, 1.7), (0, 30, 9))], n)
     return MB('garden')

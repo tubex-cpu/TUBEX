@@ -91,7 +91,7 @@ def tShadowPass(n):  # 雨が上がる。庭の上を、大きな影が横切る
 
 def tSparrow(n):  # スズメが地面に降りて、虫をついばむ。体は背の十倍以上
     garden()
-    b = sparrow_k((2, 34, 0), rot_z=math.pi * 0.85)
+    b = sparrow_k((2, 34, 0), rot_z=math.pi * 0.42)
     peck(b, n, random.Random(4))
     for k in range(4):
         bug((2 + RT.uniform(-6, 6), 26 + RT.uniform(-4, 4), 0), s=60, rot_z=RT.uniform(0, 6))
@@ -141,7 +141,8 @@ def tPotHide(n):  # 植木鉢の陰に、隠れる
 # ---------------- SCENE 11 減らないおにぎり（章10） ----------------
 def tJapanDots(n):  # 一週間後。日本中の人の一日の食事を、合わせる：日本地図に小さな光の点が広がる
     space_globe()
-    dots(land_points(129, 146, 30.5, 45.5, 320, seed=3), 10, int(n * 0.7), size=0.025)
+    pts = [(lo, la) for lo, la in land_points(129, 146, 30.5, 45.5, 600, seed=3) if not (la > 41.6 and lo < 139.6) and not (lo < 130.6 and la > 33.6)][:320]
+    dots(pts, 10, int(n * 0.7), size=0.025)
     cam = cam1(50, clip=(0.1, 3000))
     cam_path(cam, [(0, P(137, 37, 13.5), P(137, 37, 0)), (1, P(137, 36, 11.0), P(137, 36, 0))], n)
     return MB(amb='space')
@@ -185,7 +186,7 @@ def tOnigiriShelf(n):  # コンビニのおにぎりの棚は、ほとんど減�
 def rice_plant(loc, rnd):
     x, y = loc
     root = empty((x, y, 0), 'ine')
-    for k in range(5):
+    for k in range(3):
         a = rnd.uniform(0, 6.28)
         top = Vector((x + math.cos(a) * 0.05, y + math.sin(a) * 0.05, 0.85 + rnd.uniform(-0.08, 0.06)))
         bar((x, y, 0), tuple(top), 0.006, hexc('#b8a24a'))
@@ -197,9 +198,9 @@ def rice_plant(loc, rnd):
 def tRiceField(n):  # 刈る人のいない田んぼで、稲が実っていく。余った食べ物の匂いに、集まってくるもの
     meadow(rgb=hexc('#8a7a4a'), sky_c=hexc('#cfe0ee'), exp=0.45)
     rnd = random.Random(3)
-    for i in range(22):
-        for j in range(16):
-            rice_plant((-6 + i * 0.55 + rnd.uniform(-0.04, 0.04), 1 + j * 0.45 + rnd.uniform(-0.04, 0.04)), rnd)
+    for i in range(16):
+        for j in range(9):
+            rice_plant((-5 + i * 0.6 + rnd.uniform(-0.04, 0.04), 1 + j * 0.55 + rnd.uniform(-0.04, 0.04)), rnd)
     plane((0, 0.3, 0.005), (30, 0.7), hexc('#9a8a6a'))
     for k in range(6):
         tree((-12 + k * 5, 14, 0), s=1.1)
@@ -279,7 +280,7 @@ def tHolding(n):  # 物陰で、小さな人たちが、息を止める
 # ---------------- SCENE 13 金色の目が光る（章12） ----------------
 def glow_eyes(c, a=0.35):
     for sx in (-1, 1):
-        ball((sx * 0.042, -0.09, 0.024), 0.034, (1.0, 0.85, 0.3), a=a, seg=16, parent=O[c['head']], name='eglow').visible_shadow = False
+        ball((sx * 0.042, -0.09, 0.024), 0.026, (1.0, 0.85, 0.3), a=0.22, seg=16, parent=O[c['head']], name='eglow').visible_shadow = False
 
 
 def night_cat(loc, pose='crouch', rot_z=0.0, name='tora'):
@@ -292,7 +293,7 @@ def tGoldEyes(n):  # 暗がりで、金色の目が二つ光る。家の猫
     kitchen(night=True)
     sky(hexc('#06080e')); bpy.context.scene.view_settings.exposure = -0.6
     rice_bag()
-    c = night_cat((-40, 120, 0), pose='crouch', rot_z=math.pi * 0.95)
+    c = night_cat((-40, 120, 0), pose='crouch', rot_z=0.15)
     cat_still(c, n, seed=7, head_amp=0.02)
     e = eye_world(c, 1)
     cam = cam1(40)
@@ -304,7 +305,7 @@ def tCatCrouch(n):  # 猫は、低くかがむ
     kitchen(night=True)
     sky(hexc('#06080e')); bpy.context.scene.view_settings.exposure = -0.35
     rice_bag()
-    c = night_cat((-60, 110, 0), pose='crouch', rot_z=math.pi * 0.85)
+    c = night_cat((-60, 110, 0), pose='crouch', rot_z=0.89)
     r = rat((14, 50, 0), s=200, rot_z=math.pi * 0.9); rat_live(r, n, seed=2)
     cam = cam1(26)
     cam_path(cam, [(0, (-90, 40, 6), (-40, 100, 14)), (1, (-80, 50, 5), (-30, 95, 12))], n)
@@ -316,9 +317,9 @@ def tPounce(n):  # 一瞬で、ネズミに飛びかかる。ネズミが台所�
     sky(hexc('#06080e')); bpy.context.scene.view_settings.exposure = -0.3
     rice_bag()
     fj = int(n * 0.22)
-    c1 = night_cat((-60, 110, 0), pose='crouch', rot_z=math.pi * 0.8, name='tora_c')
+    c1 = night_cat((-60, 110, 0), pose='crouch', rot_z=0.89, name='tora_c')
     vanish(c1, fj)
-    c2 = night_cat((-60, 110, 0), pose='walk', rot_z=math.pi * 0.8, name='tora_w')
+    c2 = night_cat((-60, 110, 0), pose='walk', rot_z=0.89, name='tora_w')
     appear(c2, fj)
     c2.keyframe_insert('location', frame=fj)
     c2.location = (-30, 80, 40); c2.keyframe_insert('location', frame=fj + 6)
@@ -381,7 +382,7 @@ def tShelfLife(n):  # 一か月後。人々は、猫のいる家の棚の上で�
     S = shelf_set()
     shelf_life(S)
     cam = cam1(26)
-    cam_path(cam, [(0, (-60, 132, S + 10), (-20, 158, S + 1)), (1, (10, 128, S + 9), (14, 158, S + 1))], n)
+    cam_path(cam, [(0, (-34, 141, S + 5), (-22, 157, S + 0.5)), (1, (14, 140, S + 5), (24, 156, S + 0.5))], n)
     return MB(amb='room')
 
 
@@ -397,8 +398,10 @@ def tCatSleep(n):  # 棚の下では、猫が丸くなって眠っている。�
     S = shelf_set()
     shelf_life(S)
     c = sleep_cat((-20, 60, 0), rot_z=math.pi * 0.6)
-    cam = cam1(26)
-    cam_path(cam, [(0, (-12, 150, S + 6), (-20, 70, 10)), (1, (-6, 148, S + 7), (-20, 64, 8))], n)
+    for k in range(3):
+        q = floor_sit(family((-22 + k * 2.6, 125.8, S), k, rot_z=0, pose='sit')); look_up(q, 0.5)
+    cam = cam1(24)
+    cam_path(cam, [(0, (-48, 116, S + 6), (-20, 66, 10)), (1, (-44, 114, S + 8), (-20, 62, 8))], n)
     return MB(amb='room', purr=0.4)
 
 
@@ -416,9 +419,9 @@ def tWindowCats(n):  # 窓辺の猫が、外の通りを見張っている（ふ
             if (i + k) % 2:
                 continue
             box((x + wx, -1.15, 1.0), (1.7, 0.4, 0.06), hexc('#e8e2d6'))
-            c = cat((x + wx, -1.15, 1.03), coats[(i + k) % 6], s=0.5, rot_z=rnd.uniform(-0.3, 0.3))
+            c = cat((x + wx, -1.2, 1.03), coats[(i + k) % 6], s=0.75, rot_z=rnd.uniform(-0.3, 0.3))
     cam = cam1(32, clip=(0.05, 2000))
-    cam_path(cam, [(0, (-20, -14, 1.6), (-10, 0, 1.3)), (1, (0, -14, 1.7), (10, 0, 1.4))], n)
+    cam_path(cam, [(0, (-29, -4.2, 1.4), (-25.5, -1.2, 1.25)), (1, (-20, -4.6, 1.5), (-13, -1.2, 1.25))], n)
     return MB(amb='day')
 
 
@@ -427,12 +430,12 @@ def tNeighbor(n):  # 一番こわかった猫が、一番頼れる隣人にな�
     shelf_life(S)
     c = tora((10, 90, 0), pose='crouch', rot_z=math.pi * 0.95)
     nk = O[c['neck']]; nk.rotation_euler.x = -0.35
-    edge = [you((4 + k * 2.4, 138.5, S), rot_z=0, name=f'e{k}') if k == 1 else family((4 + k * 2.4, 138.5, S), k, rot_z=0) for k in range(3)]
+    edge = [you((4 + k * 2.4, 124.6, S), rot_z=0, name=f'e{k}') if k == 1 else family((4 + k * 2.4, 124.6, S), k, rot_z=0) for k in range(3)]
     for q in edge:
-        look_up(q, 0.4)
+        look_up(q, 0.6)
     arm_up(edge[1], 1)
-    cam = cam1(28)
-    cam_path(cam, [(0, (7, 146, S + 2.5), (8, 100, 12)), (1, (12, 147, S + 4), (9, 95, 16))], n)
+    cam = cam1(30)
+    cam_path(cam, [(0, (-12, 117, S + 5), (8, 95, S - 70)), (1, (-14, 116, S + 7), (8, 92, S - 80))], n)
     return MB(amb='room', purr=0.3)
 
 
@@ -443,9 +446,9 @@ tEye2 = None  # shots_1cm.py で tEye を使い回す
 def tEyeClose(n):  # 猫は前足を上げずに、そのまま目を閉じる。のどが大きく鳴る
     Q, c, y = morning_bed(n, slit=(1, 2, 0.28, 0.28))
     look_up(y, -0.5)
-    cat_still(c, n, seed=9, head_amp=0.01)
     close_eyes(c, int(n * 0.3))
     c['eyes'] = []
+    cat_still(c, n, seed=9, head_amp=0.01)
     e = eye_world(c, 1); e2 = eye_world(c, -1); mid = (e + e2) / 2
     fwd = (cat_world(c, (0, -1.0, 0)) - cat_world(c, (0, 0, 0))).normalized()
     cam = cam1(40)
@@ -456,20 +459,15 @@ def tEyeClose(n):  # 猫は前足を上げずに、そのまま目を閉じる�
 def fur_bed(n):
     Q = bedroom()
     c = sleep_cat((100, 150, Q), rot_z=math.pi * 0.5)
-    p = you((106, 136, Q + 2.0), pose='lie', rot_z=math.pi * 0.55)
+    p = you((103, 134.0, Q + 0.2), pose='lie', rot_z=math.pi * 0.5)
     lie_fix(p)
-    rnd = random.Random(3)
-    for k in range(40):  # 腹の毛
-        a = rnd.uniform(-1.2, 1.2)
-        cone((100 + 12 * math.sin(a) + rnd.uniform(-1, 1), 140 + rnd.uniform(-3, 3), Q + rnd.uniform(1, 5)), 0.8, 3.0, hexc('#f3e2c8'),
-             rot=(rnd.uniform(-0.6, 0.6), rnd.uniform(-0.6, 0.6), 0), verts=4)
     return Q, c, p
 
 
 def tFurSleep(n):  # 温かい毛の中で、あなたは、もう一度、眠る（窓から朝の光）
     Q, c, p = fur_bed(n)
     cam = cam1(28)
-    cam_path(cam, [(0, (110, 128, Q + 3), (106, 137, Q + 2)), (1, (150, 70, Q + 50), (100, 145, Q + 10))], n)
+    cam_path(cam, [(0, (112, 124, Q + 4), (102, 140, Q + 5)), (1, (150, 80, Q + 45), (100, 145, Q + 10))], n)
     return MB(amb='room', purr=0.9)
 
 

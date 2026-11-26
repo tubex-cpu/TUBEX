@@ -72,10 +72,10 @@ def tNose(n):  # あなたの体は、猫の鼻先より小さい：肩ごしに
     look_up(y, -0.6)
     cat_still(c, n, seed=5, head_amp=0.03)
     nose = cat_world(c, (0, -0.125, -0.005))
-    cam = cam1(22)
+    cam = cam1(16)
     yh = (100, 134, Q + 1.0)
-    p0 = (102.5, 129.0, Q + 0.8); p1 = (101.8, 128.2, Q + 0.6)
-    cam_path(cam, [(0, p0, aim(p0, yh, nose, 0.55)), (1, p1, aim(p1, yh, nose, 0.5))], n)
+    p0 = (103.2, 123.0, Q + 0.9); p1 = (102.6, 125.0, Q + 0.8)
+    cam_path(cam, [(0, p0, aim(p0, yh, nose, 0.6)), (1, p1, aim(p1, yh, nose, 0.55))], n)
     return MB(amb='room')
 
 
@@ -92,10 +92,10 @@ def tPawUp(n):  # 猫の前足が、ゆっくり持ち上がる（見上げる�
     look_up(y, -0.55)
     paw_lift(c, 1, 8, int(n * 0.55), up=1.15)
     cat_still(c, n, seed=6, head_amp=0.03)
-    cam = cam1(20)
-    yh = (100, 134, Q + 1.2); paw = (100.5, 140, Q + 14)
-    p0 = (96.5, 127.5, Q + 0.8); p1 = (96.0, 126.5, Q + 0.7)
-    cam_path(cam, [(0, p0, aim(p0, yh, paw, 0.5)), (1, p1, aim(p1, yh, paw, 0.6))], n)
+    cam = cam1(15)
+    yh = (100, 134, Q + 1.2); face = cat_world(c, (0, -0.06, 0.0))
+    p0 = (97.5, 124.0, Q + 0.9); p1 = (97.0, 123.0, Q + 0.8)
+    cam_path(cam, [(0, p0, aim(p0, yh, face, 0.5)), (1, p1, aim(p1, yh, face, 0.55))], n)
     return MB(amb='room')
 
 
@@ -260,8 +260,9 @@ def tStairTop(n):  # 廊下の先に階段。一段の高さは、背の二十�
     move(p, [(1, (10, -24, top)), (int(n * 0.45), (10, -2.0, top))])
     nk = O[p['neck']]
     nk.keyframe_insert('rotation_euler', frame=int(n * 0.45)); nk.rotation_euler.x = 0.5; nk.keyframe_insert('rotation_euler', frame=int(n * 0.45) + 12)
-    cam = cam1(24)
-    cam_path(cam, [(0, (40, -40, top + 6), (10, 0, top - 4)), (1, (150, 40, top - 10), (5, 18, top - 30))], n)
+    cam = cam1(26)
+    cam_path(cam, [(0, (22, -42, top + 3), (10, -10, top + 0.5)), (0.35, (36, -12, top + 4), (8, 10, top - 8)),
+                   (1, (230, 110, top - 20), (0, 90, top - 70))], n)
     return MB(amb='room')
 
 
@@ -273,7 +274,7 @@ def tFamilyBelow(n):  # 下の階から小さな声。家族も、同じ大き�
         look_up(q, -0.5)
     arm_up(ps[1], 1); arm_up(ps[0], 0)
     cam = cam1(22)
-    cam_path(cam, [(0, (12, y0 + 14, 3.0), (0, y0 - 40, 50)), (1, (16, y0 + 12, 2.2), (0, y0 - 60, 90))], n)
+    cam_path(cam, [(0, (8, y0 + 9, 2.4), (0, y0 - 10, 4)), (1, (12, y0 + 11, 2.0), (0, y0 - 60, 60))], n)
     return MB(amb='room')
 
 
@@ -297,8 +298,13 @@ def tStairJump(n):  # 一段ずつ、飛び降りていく。落ちるのは、�
         car_.location = (20, yy, zz); car_.keyframe_insert('location', frame=min(fr, n + 20))
     arm_to(p, 1, (0.5, -0.1, 1.5)); arm_to(p, 0, (-0.5, -0.1, 1.5))
     cam = cam1(26)
-    yA, zA = seq[0][1]; yB, zB = seq[-1][1]
-    cam_path(cam, [(0, (150, yA + 10, zA + 6), (20, yA + 20, zA - 14)), (1, (150, yB, zB + 10), (20, yB + 6, zB - 10))], n)
+    keys = []
+    for k in range(9):  # 下の段の前から、跳んでくるあなたを見上げる
+        fr = 1 + (n - 1) * k / 8
+        j = max(i for i in range(len(seq)) if seq[i][0] <= fr or i == 0)
+        yy, zz = seq[j][1]
+        keys.append((k / 8, (34, yy + 30, zz + 3), (20, yy, zz + 1)))
+    cam_path(cam, keys, n)
     return MB(amb='room')
 
 

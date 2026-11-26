@@ -61,7 +61,7 @@ def kDriver(n):  # 車も止まる。運転席の人も眠っている
     d = person((0, 0, 0), hexc('#3d5a80'), skin=SKIN[1], hair=hexc('#2b2420'), pose='sit', s=0.9, name='driver')
     link(d, car); d.location = (-0.4, 0.15, 0.35)
     t = tilt_head(d)
-    t.rotation_euler = (0.45, 0.3, 0.2)
+    t.rotation_euler = (0.7, 0.0, 0.5)
     cam = camera(35)
     cam_path(cam, [(0, (-10.5, -37.0, 1.7), (-8.2, -40.2, 1.25)), (1, (-10.1, -37.6, 1.6), (-8.2, -40.2, 1.2))], n)
     return MB('city')
@@ -132,7 +132,7 @@ def kFewStars(n):  # 都会の夜空に見える星は、それまで、数十�
     bl, L = night_city(n, lit=0.6, seed=14)
     star_dome(n, k=45, seed=5, size=(1.2, 2.2))
     cam = camera(24)
-    cam_path(cam, [(0, (0, -150, 30), (0, 200, 260)), (1, (6, -150, 30), (0, 200, 280))], n)
+    cam_path(cam, [(0, (0, -215, 22), (0, 200, 250)), (1, (6, -215, 22), (0, 200, 270))], n)
     return MB('night')
 
 
@@ -143,7 +143,7 @@ def kManyStars(n):  # この夜、東京の空には、その百倍の星が出�
     star_dome(n, k=2600, seed=6, f0=2, f1=int(n * 0.35), groups=6, size=(0.7, 2.0), band=(0.4, 1.0), band_k=1400)
     milky_way(az0=0.4, tilt=1.0, f0=int(n * 0.35))
     cam = camera(24)
-    cam_path(cam, [(0, (0, -150, 30), (0, 200, 280)), (1, (-6, -150, 30), (0, 200, 300))], n)
+    cam_path(cam, [(0, (0, -215, 22), (0, 200, 270)), (1, (-6, -215, 22), (0, 200, 290))], n)
     return MB('night')
 
 
@@ -167,7 +167,7 @@ def kPlatformSeep(n):  # 一週間後。地下鉄の駅の壁から、水がし�
 def kSeepWall(n):  # 大きな街の地下には、晴れた日でも、毎日、水がしみ出している
     platform(n, seed=2, wet0=0.2)
     cam = camera(45, dof=4.0, fstop=3.0)
-    cam_path(cam, [(0, (-2, -1.0, 1.0), (1.0, -5.2, 2.0)), (1, (0.5, -1.2, 1.0), (3.0, -5.2, 1.8))], n)
+    cam_path(cam, [(0, (-7, 0.5, 1.7), (2, -5.2, 1.2)), (1, (-5, 0.3, 1.6), (4, -5.2, 1.1))], n)
     return MB('room')
 
 
@@ -195,7 +195,7 @@ def section_view(n, water_rise=None):
     for x in (-30, -12, 8, 26):
         box((x, 1, 1.0 + 5), (8, 4, 10), hexc('#c8c4ba'))
     # 土の層（手前の切り口）
-    layers = [(-6, hexc('#a88a64')), (-14, hexc('#9a7a58')), (-24, hexc('#8a6e50')), (-36, hexc('#7a6448'))]
+    layers = [(-6, hexc('#a88a64')), (-14, hexc('#9a7a58')), (-24, hexc('#8a6e50')), (-36, hexc('#7a6448')), (-70, hexc('#6a5640'))]
     top = 0.0
     for z, c in layers:
         box((0, 0, (top + z) / 2), (90, 6, top - z), c)
@@ -208,13 +208,12 @@ def section_view(n, water_rise=None):
     items = [(-17 + k * 2.6, -3.2, -32.0, 2.2, 0.6, 2.2) for k in range(14)]
     mbox(items, hexc('#6a6c70'), 'weights')
     # 地上からの階段の線
-    box((-22, -3.0, -14), (1.0, 0.3, 26), hexc('#c8c4ba'), rot=(0, 0.4, 0))
 
 
 def kUenoSection(n):  # 地下深くのホームは、床の下に重りを並べている（断面・模式）
     section_view(n)
     cam = camera(35)
-    cam_path(cam, [(0, (0, -70, -14), (0, 0, -18)), (1, (-6, -58, -22), (-2, 0, -28))], n)
+    cam_path(cam, [(0, (0, -75, -12), (0, 0, -16)), (1, (-4, -62, -20), (-2, 0, -26))], n)
     return MB('room')
 
 
@@ -230,7 +229,7 @@ def water_wall(n, z0, z1, f0, f1):
 
 def kWaterRise(n):  # その重りの上まで、水が、上がってくる
     section_view(n)
-    water_wall(n, -34.5, -30.6, int(n * 0.1), int(n * 0.85))
+    water_wall(n, -34.5, -29.8, int(n * 0.1), int(n * 0.85))
     cam = camera(40)
     cam_path(cam, [(0, (-4, -44, -28), (-2, 0, -31)), (1, (-2, -40, -29), (-2, 0, -31))], n)
     return MB('room')
@@ -244,9 +243,9 @@ def town_low_env(n, rainy=True, wet=False):
     ground(size=600, rgb=hexc('#8a8a80'))
     low_town(nx=9, ny=7, pitch=11, seed=3, cx=0, cy=0)
     # 川（東側）と堤防
-    plane((70, 0, 3.2), (36, 400), hexc('#5a7a90'), name='river')
-    levee(48, -200, 200, w=12, h=7)
-    levee(92, -200, 200, w=12, h=7)
+    plane((80, 0, 4.5), (36, 400), hexc('#5a7a90'), name='river')
+    levee(60, -200, 200, w=12, h=7)
+    levee(100, -200, 200, w=12, h=7)
     if rainy:
         rain(n, (-60, 60), (-50, 50), top=30, k=1400, L=1.4, period=10)
 
@@ -272,7 +271,7 @@ def kBelowSea(n):  # この町の広い範囲は、海より低い土地（高�
 def kLevee(n):  # 地面が、大人の背の二倍以上、沈んだ場所もある（堤防の外の川の方が高い）
     town_low_env(n, rainy=False)
     cam = camera(32)
-    cam_path(cam, [(0, (22, -40, 2.0), (60, 10, 5.0)), (1, (26, -38, 2.2), (60, 14, 5.5))], n)
+    cam_path(cam, [(0, (52, -62, 1.7), (58, 30, 5.0)), (1, (52, -56, 1.7), (60, 30, 5.5))], n)
     return MB('wind')
 
 
@@ -288,9 +287,9 @@ def pump_station(loc):
 
 def kPumpStation(n):  # 雨の水を、川へ汲み出していたポンプは、止まったまま
     town_low_env(n)
-    pump_station((35, 0))
+    pump_station((30, -50))
     cam = camera(32)
-    cam_path(cam, [(0, (10, -38, 9), (40, 0, 4)), (1, (14, -36, 9), (42, 2, 4))], n)
+    cam_path(cam, [(0, (6, -80, 12), (36, -48, 4)), (1, (10, -78, 12), (38, -46, 4))], n)
     return MB('wind')
 
 
@@ -298,7 +297,7 @@ def kStreetFlood(n):  # 道路に、水が広がっていく（家の一階が�
     town_low_env(n)
     water((0, 0), (300, 300), 0.02, 2.4, int(n * 0.05), n, c=hexc('#5f7f88'), a=0.82)
     cam = camera(30)
-    cam_path(cam, [(0, (-5.5, -24, 2.6), (-5.5, 10, 2.0)), (1, (-5.5, -20, 2.8), (-5.5, 12, 2.0))], n)
+    cam_path(cam, [(0, (-42, 5.5, 3.4), (30, 5.5, 1.6)), (1, (-38, 5.5, 3.6), (30, 5.5, 1.6))], n)
     return MB('wind')
 
 
@@ -311,16 +310,24 @@ def kShallowLake(n):  # 百五十万人が暮らしていた町が、浅い湖�
 
 
 # ---------------- SCENE 05 錆びていく鉄塔（章4） ----------------
-def tower_env(n, rust=0, f0=1, f1=None, sea=True):
+def tower_env(n, rust=0, f0=1, f1=None, sea=True, rust_z=None):
     s = bpy.context.scene
     sky(hexc('#a8c8e4')); s.view_settings.exposure = 0.35
     light_dir((0.6, -0.4, 0.6)); s.display.shading.shadow_intensity = 0.45
     ground(size=900, rgb=hexc('#8a9a78'))
-    city_blocks(nx=9, ny=9, pitch=26, seed=21, lit=0.0, night=False, hr=(10, 30), skip=lambda x, y: abs(x) < 30 and abs(y) < 30)
+    city_blocks(nx=11, ny=11, pitch=26, seed=21, lit=0.0, night=False, hr=(10, 30), skip=lambda x, y: abs(x) < 45 and abs(y) < 45)
+    plane((0, 0, 0.03), (80, 80), hexc('#7a9a5a'))
     if sea:
         bay(y0=120)
-    t = lattice_tower(H=60, rust_k=rust, rust_f0=f0, rust_f1=f1 or n)
+    before = set(bpy.data.objects.keys())
+    t = lattice_tower(H=60, rust_k=rust, rust_f0=f0, rust_f1=f1 or n, rust_z=rust_z)
     box((0, 0, 0.5), (16, 16, 1), hexc('#a8a49a'))
+    # 塔の部品をまとめて2倍にする（高さ120）
+    par = empty((0, 0, 0), 'twr'); par.scale = (2, 2, 2)
+    for k in set(bpy.data.objects.keys()) - before:
+        o = bpy.data.objects[k]
+        if o.parent is None and o is not par:
+            o.parent = par
     clouds_ = clouds(k=10, R=700, el=(0.08, 0.3), seed=5, c=(1, 1, 1), a=0.8)
     for c in clouds_:
         c.keyframe_insert('location', frame=1); c.location.x += 40; c.keyframe_insert('location', frame=n)
@@ -331,14 +338,14 @@ def tower_env(n, rust=0, f0=1, f1=None, sea=True):
 def kTowerWide(n):  # 一年後。（鉄塔）
     tower_env(n)
     cam = camera(30)
-    cam_path(cam, [(0, (-60, -110, 18), (0, 0, 32)), (1, (-48, -104, 16), (0, 0, 34))], n)
+    cam_path(cam, [(0, (-70, -160, 62), (0, 0, 62)), (1, (-56, -150, 58), (0, 0, 66))], n)
     return MB('wind')
 
 
 def kRustStreaks(n):  # 赤い鉄骨に、茶色い筋が浮かぶ。錆
-    tower_env(n, rust=70, f0=int(n * 0.12), f1=int(n * 0.8))
+    tower_env(n, rust=90, f0=int(n * 0.12), f1=int(n * 0.8), rust_z=(2, 22))
     cam = camera(45)
-    cam_path(cam, [(0, (-9, -13, 8), (0, 0, 13)), (1, (-7, -11, 9), (0, 0, 14))], n)
+    cam_path(cam, [(0, (-16, -26, 12), (0, 0, 24)), (1, (-13, -22, 14), (0, 0, 26))], n)
     return MB('wind')
 
 
@@ -348,40 +355,41 @@ def kSeaWind(n):  # 海からの風が、鉄を錆びさせる
     rnd = random.Random(4)
     starts = [(rnd.uniform(-30, 30), 120 + rnd.uniform(0, 40), rnd.uniform(5, 50)) for _ in range(60)]
     ends = [(x + rnd.uniform(-5, 5), -40, z + rnd.uniform(-3, 3)) for (x, y, z) in starts]
+    starts = [(x * 2, y, z * 2) for (x, y, z) in starts]; ends = [(x * 2, y, z * 2) for (x, y, z) in ends]
     particles_flow(n, starts, ends, rgb=(0.95, 0.97, 1.0), size=0.18, period=72, seed=4, a=0.7)
     cam = camera(26)
-    cam_path(cam, [(0, (40, -70, 14), (0, 60, 28)), (1, (46, -66, 15), (0, 70, 28))], n)
+    cam_path(cam, [(0, (60, -110, 34), (0, 60, 55)), (1, (66, -104, 36), (0, 70, 55))], n)
     return MB('wind')
 
 
 def kPainters(n):  # このタワーは、五年ごとに、一年かけて、すべてを塗り直してきた
     tower_env(n)
     # 足場の板と、塗る人（過去の場面）
-    z = 15.0
-    box((0, -6.3, z), (7, 1.2, 0.15), hexc('#d8c8a0'))
-    mbar([((-3.5, -6.9, z + 1.1), (3.5, -6.9, z + 1.1), 0.04)], hexc('#d8c8a0'), 'rail')
+    z = 30.0
+    box((0, -7.6, z), (8, 1.4, 0.15), hexc('#d8c8a0'))
+    mbar([((-4, -8.25, z + 1.1), (4, -8.25, z + 1.1), 0.04)], hexc('#d8c8a0'), 'rail')
     for k in range(3):
-        p = person((-2 + k * 2, -6.2, z + 0.08), hexc('#e8e2d6'), pants=hexc('#5a6a8a'), rot_z=math.pi, act='talk', s=1.0, name=f'pt{k}')
+        p = person((-2 + k * 2, -7.5, z + 0.08), hexc('#e8e2d6'), pants=hexc('#5a6a8a'), rot_z=math.pi, act='talk', s=1.0, name=f'pt{k}')
         link(sphere((0, 0.01, 0.07), 0.145, hexc('#f2f2ee'), scale=(1, 1.05, 0.75)), O[p['head']])  # ヘルメット
     cam = camera(40)
-    cam_path(cam, [(0, (-3, -16, 16.2), (0, -6, 16)), (1, (2, -16, 16.6), (0, -6, 16))], n)
+    cam_path(cam, [(0, (-3, -19, 31.4), (0, -7, 31)), (1, (2, -19, 31.8), (0, -7, 31))], n)
     return MB('wind')
 
 
 def kEmptyGondola(n):  # 塗り直す人は、眠っている（足場には誰もいない）
     tower_env(n)
-    z = 15.0
-    box((0, -6.3, z), (7, 1.2, 0.15), hexc('#d8c8a0'))
-    mbar([((-3.5, -6.9, z + 1.1), (3.5, -6.9, z + 1.1), 0.04)], hexc('#d8c8a0'), 'rail')
+    z = 30.0
+    box((0, -7.6, z), (8, 1.4, 0.15), hexc('#d8c8a0'))
+    mbar([((-4, -8.25, z + 1.1), (4, -8.25, z + 1.1), 0.04)], hexc('#d8c8a0'), 'rail')
     for k in range(2):
-        cyl((-1.5 + k * 3, -6.0, z + 0.35), 0.18, 0.5, hexc('#c8c4bc'))  # ペンキの缶
+        cyl((-1.5 + k * 3, -7.3, z + 0.35), 0.18, 0.5, hexc('#c8c4bc'))  # ペンキの缶
     cam = camera(40)
-    cam_path(cam, [(0, (-3, -16, 16.2), (0, -6, 16)), (1, (-5, -17, 16.8), (0, -6, 16))], n)
+    cam_path(cam, [(0, (-3, -19, 31.4), (0, -7, 31)), (1, (-5, -20, 32), (0, -7, 31))], n)
     return MB('wind')
 
 
 def kRustSpread(n):  # 錆の筋は、毎年、広がっていく
     tower_env(n, rust=220, f0=int(n * 0.05), f1=int(n * 0.9))
     cam = camera(32)
-    cam_path(cam, [(0, (-30, -48, 10), (0, 0, 22)), (1, (-24, -42, 12), (0, 0, 26))], n)
+    cam_path(cam, [(0, (-36, -42, 24), (0, 0, 66)), (1, (-34, -40, 28), (0, 0, 74))], n)
     return MB('wind')

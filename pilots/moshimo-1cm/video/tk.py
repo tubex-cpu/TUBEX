@@ -42,6 +42,7 @@ class giant:
 
 
 def cam1(lens=30, clip=(0.05, 40000)):
+    bpy.context.scene.display.render_aa = '5'  # 描画時間を短く（8 → 5）
     c = camera(lens)
     c.data.clip_start, c.data.clip_end = clip
     return c
@@ -296,8 +297,8 @@ def hanky(loc, w=8.0, d=10.0, c=hexc('#7fb3d5'), c2=hexc('#f2f2f2')):
 
 def onigiri(loc, s=1.0, rot_z=0.0):
     root = empty(loc, 'onigiri'); root.scale = (s, s, s); root.rotation_euler = (0, 0, rot_z)
-    link(cyl((0, 0, 0.045), 0.055, 0.035, hexc('#f7f5ee'), rot=(math.pi / 2, 0, 0), verts=3), root).rotation_euler = (math.pi / 2, 0, math.pi / 2)
-    link(box((0, 0, 0.018), (0.034, 0.037, 0.036), hexc('#1f2a22')), root)
+    link(cyl((0, 0, 0.04), 0.05, 0.035, hexc('#f7f5ee'), verts=3, name='oni'), root).rotation_euler = (0, -math.pi / 2, math.pi / 2)
+    link(box((0, -0.0185, 0.022), (0.032, 0.003, 0.04), hexc('#1f2a22')), root)
     return root
 
 
@@ -556,7 +557,7 @@ def stairs_set(steps=8, riser=0.2, tread=0.25, width=0.85):
         z = top - (i + 1) * R
         y0 = i * T
         if z > 0:
-            box((0, y0 + T / 2, z / 2), (W, T, z), white)                 # 段の下
+            box((0, y0 + T / 2, z / 2), (W, T, z), white if i % 2 else hexc('#d9cdb8'))  # 段の下（一段ずつ色を変えて段の形を見せる）
         box((0, y0 + T / 2, z - 0.6 + 0.6), (W, T, 1.2), wood)            # 踏み板
         box((0, y0 + T - 0.5, z + 0.6), (W, 1.0, 1.2), hexc('#8a6a42'))   # 段の鼻
         rows.append((y0, z))
@@ -627,7 +628,7 @@ def shelf_set(night=False):
         setup_light(hexc('#1a2030'), exp=0.0, ld=(0.3, -0.5, 0.8))
     else:
         setup_light(hexc('#f2e6d0'), exp=0.5, ld=(-0.4, -0.5, 0.7), shadow=0.45)
-    S = 0.9 * K
+    S = 0.91 * K
     with giant():
         box((0, 0, -0.05), (5, 5, 0.1), hexc('#b48a63'))
         box((0, 1.2, 1.3), (5, 0.1, 2.6), hexc('#efe6d6'))
