@@ -13,6 +13,7 @@ EPS = {
     "ca": ("chizu-003-canada-housing", "render.py"),
     "bm": ("chizu-005-bermuda-roof-water", "render_v4.py"),
     "sa": ("chizu-008-salmon-ends", "render.py"),
+    "pc": ("chizu-010-us-pivot-circles", "render.py"),
 }
 key = sys.argv[1]
 EPN, FILE = EPS[key]

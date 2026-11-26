@@ -20,7 +20,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 HERE = Path(__file__).resolve().parents[1]
 ROOT = HERE.parents[1]
-EPS = {"ca": "chizu-003-canada-housing", "bm": "chizu-005-bermuda-roof-water", "sa": "chizu-008-salmon-ends"}
+EPS = {"ca": "chizu-003-canada-housing", "bm": "chizu-005-bermuda-roof-water", "sa": "chizu-008-salmon-ends", "pc": "chizu-010-us-pivot-circles"}
 KEY = sys.argv[1]
 EPN = EPS[KEY]
 RD = ROOT / "episodes" / EPN / "render"

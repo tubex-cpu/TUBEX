@@ -35,6 +35,39 @@
 | U23 | 日本のとうもろこし輸入（2023年）約1,490万トンのうち、米国が約46％、ブラジルが約45％ | https://www.nippon.com/en/japan-data/h02395/ （財務省貿易統計から） | ⚠ 2024年の値は未取得 |
 | U24 | 日本の小麦輸入（2024年）は米国211万t・カナダ201万t・豪州109万t | https://www.maff.go.jp/tokai/tokei/hon/attach/pdf/index-106.pdf | ⚠ |
 | U25 | 日本の輸入品がハイプレーンズ産だと直接示す出典 | — | ❌ 見つからない。言えるのは「日本は米国から輸入している」まで |
+| U26 | 1/4セクション（160エーカー）の一辺は約800m（半マイル） | U05 と同じ（NDSU） | ⚠ 計算（2,640フィート＝約805m） |
+| U27 | 日本の年平均降水量は約1,700mm | https://www.mlit.go.jp/hakusyo/mlit/h14/H14/html/E2042310.html （国土交通白書 平成14年） | ⚠ ガーデンシティ約497mm は約3分の1（計算） |
+| U28 | 地下の水の層は、主に砂と礫（小石）に、シルトと粘土が混じったもの。固まっていない地層で、ロッキー山脈から東へ流れた川が運んだ。飽和した厚さは最大約1,000フィート（約300m）、平均約200フィート（約60m） | https://ne.water.usgs.gov/projects/HPA/hpa.html ／ https://www.usgs.gov/centers/colorado-water-science-center/science/nawqa-high-plains-regional-groundwater-study ／ https://pubs.usgs.gov/ha/ha730/ch_e/E-text5.html | ⚠ 「すき間にしみこんだ水」は地層の説明からの言い換え |
+| U29 | 1935年4月14日、中央の大平原を砂嵐が襲った（「黒い日曜日」）。ダッジシティではその4月、濃い砂ぼこりの日が14日あった | https://www.weather.gov/ddc/BlackSunday1935 （米国立気象局ダッジシティ） | ⚠ |
+| U30 | 日本の国土面積は約37.8万平方キロメートル | https://www.gsi.go.jp/KOKUJYOHO/MENCHO-title.htm （国土地理院「全国都道府県市区町村別面積調」） | ⚠ 地下の水の層（約17.5万平方マイル＝約45万平方キロメートル）は約1.2倍（計算） |
+| U31 | 琵琶湖の貯水量は約275億立方メートル | https://www.pref.shiga.lg.jp/de51/2878.html ／ https://www-1.kkr.mlit.go.jp/river/follwup/jouhou/siryo/pdf/190228/0901gaiyou.pdf | ⚠ U11 の約2億8,640万エーカーフィート＝約3,533億立方メートル（1エーカーフィート＝1,233.5立方メートル）は約12.8杯（計算） |
+| U32 | コルビー（カンザス州北西部）のとうもろこしが一作で使う水は、長い平均で約23インチ（約580mm） | https://www.k-state.edu/irrigate/oow/p04/Lamm.pdf ほか K-State 灌漑の報告 | ⚠ カンザス全体の目安は24〜30インチ（K-State Sunflower 地区 https://www.sunflower.ksu.edu/agronomy/irrigation/limited_irrigation.html ） |
+| U33 | 1980年ごろからのデータでは、乾いた西と湿った東の境は、西経100度から約140マイル（約225km）東の西経98度近くに移った（Seager ほか 2018、Earth Interactions） | https://lamont.columbia.edu/news/100th-meridian-where-great-plains-begin-may-be-shifting ／ https://ocp.ldeo.columbia.edu/res/div/ocp/pub/seager/Seager_etal_100thMeridianPtI.pdf | ⚠ |
+| U34 | 境の東では作物の7割が湿り気を好むとうもろこし、西では乾きに強い小麦が中心。西の農場は数が少なく、大きい | 同上（コロンビア大学ラモント研究所の記事） | ⚠ |
+| U35 | カンザス州シェリダン郡の農家は、2013年から自分たちで地下水のくみ上げを20％減らす計画をつくり、4年で35％減らした | https://www.kgs.ku.edu/General/News/2017/stabilize.html （KGS 2017）／ https://www.kgs.ku.edu/HighPlains/lema/sd6.html | ⚠ 2022年の KGS の記事は「32％」。基準の取り方で数字が違う |
+| U36 | その地域の地下水の水位の低下は、2002〜2012年の年平均2.0フィート（約60cm）から、2013〜2022年の年平均0.5フィート（約15cm）になった | https://kgs.ku.edu/kgs-report-assesses-health-high-plains-aquifer | ⚠ |
+| U37 | サウジアラビア北西部のワディ・アッシルハン盆地では、1984年の衛星画像に畑はなく、2011年には直径約1kmの丸い畑が一面に並んだ | https://science.nasa.gov/earth/earth-observatory/agricultural-fields-wadi-as-sirhan-basin-saudi-arabia-77300 ／ https://earthobservatory.nasa.gov/IOTD/view.php?id=77900 | ⚠ |
+| U38 | サウジアラビアの丸い畑がくむのは、約2万年前の「化石水」。雨は年100〜200mm で、地下の水はほとんど補われない | 同上（NASA Earth Observatory「Crop Circles in the Desert」） | ⚠ |
+| U39 | グレートプレーンズの人口は1950年の490万人から2007年の990万人に増えたが、都市圏に住む人の割合は39％から68％に上がった。カンザス州のグレートプレーンズの58郡のうち46郡が人口を減らした。郡の約6割は、1950年より前に人口のピークを迎えた | https://www.census.gov/library/publications/2009/demo/p25-1137.html （米国勢調査局 P25-1137、2009年） | ⚠ |
+| U40 | センターピボットは、塔ごとに0.5〜1.5馬力の電動機があり、軸で車輪の歯車箱を回す。いちばん外の塔の速さは、1時間に約362〜546フィート（約110〜166m） | https://content.ces.ncsu.edu/selection-and-management-of-efficient-center-pivot-and-linear-move-irrigation-systems （NC State）／ https://gfipps.tamu.edu/files/2021/11/AGEN-PU-208-center-pivot-irrigation.pdf （Texas A&M） | ⚠ 半径400mの円の一周（約2.5km）は約15〜23時間（計算） |
+| U41 | 南部のハイプレーンズで、雨が地下の水の層まで届く量は、1年に約11mm、雨の約2％ | https://pubs.usgs.gov/publication/70185383 （USGS 掲載の Groundwater 誌の論文） | ⚠ 方法で値が違う。台本では「約2％」 |
+| U42 | サウジアラビアの砂漠の農業の水の使用量は、1980年の約68億立方メートルから2006年の約210億立方メートルへ、約3倍に増えた | https://earthobservatory.nasa.gov/IOTD/view.php?id=77900 | ⚠ |
+| U43 | サウジアラビアは2008年、化石水が減るのを理由に小麦の補助金をやめ、2016年までに小麦の栽培をやめる方針を出した。2018年に小麦の支援を再開した | https://cb.apps.fao.org/country/SAU/pdf_archive/SAU_Archive.pdf （FAO）／ https://www.nationalgeographic.com/culture/article/gulf-countries-look-to-farm-abroad-as-aquifer-dries-up | ⚠ |
+| U44 | 1785年の土地条例で、西の土地は6マイル四方の「タウンシップ」に分けられ、その中を1マイル四方（640エーカー）の36の区画に分けた | https://history.iowa.gov/sites/default/files/history-education-pss-shapes-landordinance-transcription.b.pdf ／ https://mngeo.state.mn.us/glo/History.htm | ⚠ 160エーカーは640エーカーの4分の1（計算） |
+| U45 | ホームステッド法で個人に渡った土地は約2億7,000万エーカー、アメリカの面積の約10％ | https://home.nps.gov/articles/the-homestead-act.htm （国立公園局）／ https://www.archives.gov/publications/prologue/2012/winter/homestead.pdf | ⚠ |
+| U46 | センターピボットは、昔からの地面に水を流す灌漑より、水と肥料の量を細かく調整できる | https://earthobservatory.nasa.gov/IOTD/view.php?id=77900 ほか NASA Earth Observatory | ⚠ |
+| U47 | とうもろこしなどが一日に使う水は、多い時期で平均0.3〜0.35インチ（約8〜9mm） | https://www.k-state.edu/irrigate/reports/r15/L934.pdf ほか K-State | ⚠ ガーデンシティの雨を一日あたりにすると約1.4mm（497÷365、計算） |
+| U48 | 南部のハイプレーンズでは、地下に届く水の95％が、面積の5％のプラヤ（雨水がたまる浅いくぼ地）の底から入る | https://www.beg.utexas.edu/files/content/beg/research/swr/pubs/GAMSHPAppRech.pdf （テキサス大学 経済地質局。Wood ほか 1997 を引用） | ⚠ |
+| U49 | サウジアラビアの化石水の量の見積もりは252〜870立方キロメートル。くみ上げが採算に合うのは約50年と見られていた | https://earthobservatory.nasa.gov/IOTD/view.php?id=77900 | ⚠ |
+| U50 | 1935年4月14日の砂嵐は、午前中にネブラスカ中部で起こり、翌15日の午前4時ごろまでに約800マイル（約1,290km）南のメキシコ国境の近くまで進んだ | https://www.weather.gov/ddc/BlackSunday1935 （米国立気象局ダッジシティ。気象学者の解説） | ⚠ |
+| U51 | 土の保全を議会で訴えていたヒュー・ハモンド・ベネットの働きかけのあと、1935年4月27日に土壌保全法ができた | https://www.weather.gov/oun/events-19350414 （米国立気象局ノーマン）／ https://blog.newspapers.com/april-14-1935-black-sunday-dust-storm/ | ⚠ 法律の日付は二次資料のみ。照合できなければ削る |
+| U52 | 西経100度の境（「実質の西経100度」）は、今世紀のうちにさらに東へ移ると予測されている（Seager ほか 2018、第2部） | https://lamont.columbia.edu/news/100th-meridian-where-great-plains-begin-may-be-shifting | ⚠ |
+| U53 | ガーデンシティの灌漑に使う水の一部は、氷河期から地下にあった水 | https://svs.gsfc.nasa.gov/11974 | ⚠ スニペットのみ |
+| U54 | 東京ドームの建築面積は46,755平方メートル | https://www.tokyo-dome.co.jp/dome/ （東京ドーム公式） | ⚠ 160エーカー＝約64.7ヘクタールは約14個分（計算） |
+| U55 | ハイプレーンズ帯水層からの灌漑のくみ上げは、1949年の年400万エーカーフィートから、1974年の年1,900万エーカーフィートに増えた | https://ne.water.usgs.gov/projects/HPA/hpa.html （USGS ネブラスカ水科学センター） | ⚠ 約49億→約234億立方メートル、約4.75倍（計算） |
+| U56 | シェリダン郡の取り組みは、作物の生産量を目立って減らさずに、くみ上げを減らした | https://kgs.ku.edu/kgs-report-assesses-health-high-plains-aquifer ／ KGS 2022 の記事 | ⚠ |
+| U57 | 2020年の日本の水の使用量は年約797億立方メートルで、その約3分の2が農業用水 | https://www.maff.go.jp/j/nousin/mizu/kurasi_agwater/k_riyou/index.html （農林水産省） | ⚠ 約3分の2＝約530億立方メートル（計算）。U26 の減った量（約3,530億）は約6.7年分（計算） |
+| U58 | 日本の農業用の地下水は年約28.7億立方メートル（2008年度調査） | https://www.mlit.go.jp/mizukokudo/mizsei/content/001856492.pdf （国土交通省「地下水の利用」） | ⚠ 農業用水の約5％（計算） |
 
 ## 競合（2026-11-26 取得、YouTube Data API v3）
 - 詳細は `02_competitors.md`（作成予定）。要点：

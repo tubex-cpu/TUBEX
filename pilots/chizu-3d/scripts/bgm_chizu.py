@@ -18,7 +18,7 @@ from bgm import Song, chord, N, PIANO, MARIMBA, STRINGS, TREM, PIZZ, SLOWSTR, SY
 from pedalboard import Pedalboard, Reverb, Compressor, HighpassFilter, LowShelfFilter, Gain  # noqa: E402
 
 KEY = sys.argv[1]
-EPN = {"ca": "chizu-003-canada-housing", "bm": "chizu-005-bermuda-roof-water", "sa": "chizu-008-salmon-ends"}[KEY]
+EPN = {"ca": "chizu-003-canada-housing", "bm": "chizu-005-bermuda-roof-water", "sa": "chizu-008-salmon-ends", "pc": "chizu-010-us-pivot-circles"}[KEY]
 NAR = ROOT / "episodes" / EPN / ("audio_v3/narration.wav" if KEY == "bm" else "audio/narration.wav")
 DATA = json.loads((ROOT / "episodes" / EPN / "render/out/plates/timeline3d.json").read_text())
 SR = 48000
