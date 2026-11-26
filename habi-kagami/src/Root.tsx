@@ -1,40 +1,32 @@
 import {AbsoluteFill, Composition, Folder} from 'remotion';
-import {HabiSokushinVideo} from './HabiSokushinVideo';
+import {HabiKagamiVideo} from './HabiKagamiVideo';
 import {sceneDurations as d, TOTAL_FRAMES} from './data/timeline';
 import {Closing} from './scenes/Closing';
-import {Clue10Honmyokai} from './scenes/Clue10Honmyokai';
-import {Clue11Shinnyokai} from './scenes/Clue11Shinnyokai';
-import {Clue12Eye} from './scenes/Clue12Eye';
-import {Clue13Tetsumonkai} from './scenes/Clue13Tetsumonkai';
-import {Clue14Ikeda} from './scenes/Clue14Ikeda';
-import {Clue15Tetsuryukai} from './scenes/Clue15Tetsuryukai';
-import {Clue16Chukai} from './scenes/Clue16Chukai';
-import {Clue17Enmyokai} from './scenes/Clue17Enmyokai';
-import {Clue18Fly} from './scenes/Clue18Fly';
-import {Clue19Processed} from './scenes/Clue19Processed';
-import {Clue1Count} from './scenes/Clue1Count';
-import {Clue20Kouchi} from './scenes/Clue20Kouchi';
-import {Clue21Yutei} from './scenes/Clue21Yutei';
-import {Clue22Fingerprint} from './scenes/Clue22Fingerprint';
-import {Clue23Meiji} from './scenes/Clue23Meiji';
-import {Clue24Bukkai} from './scenes/Clue24Bukkai';
-import {Clue25Excavation} from './scenes/Clue25Excavation';
-import {Clue26Dochu} from './scenes/Clue26Dochu';
-import {Clue27Shitou} from './scenes/Clue27Shitou';
-import {Clue28Zhanggong} from './scenes/Clue28Zhanggong';
-import {Clue29Thailand} from './scenes/Clue29Thailand';
-import {Clue2Yudono} from './scenes/Clue2Yudono';
-import {Clue30Lost} from './scenes/Clue30Lost';
-import {Clue31Myokai} from './scenes/Clue31Myokai';
-import {Clue32Koromo} from './scenes/Clue32Koromo';
-import {Clue33Fame} from './scenes/Clue33Fame';
-import {Clue3Goshintai} from './scenes/Clue3Goshintai';
-import {Clue4Haguro} from './scenes/Clue4Haguro';
-import {Clue5Gyonin} from './scenes/Clue5Gyonin';
-import {Clue6Mokujiki} from './scenes/Clue6Mokujiki';
-import {Clue7Urushi} from './scenes/Clue7Urushi';
-import {Clue8Kane} from './scenes/Clue8Kane';
-import {Clue9Unburied} from './scenes/Clue9Unburied';
+import {Clue10Namari} from './scenes/Clue10Namari';
+import {Clue11Sanjigen} from './scenes/Clue11Sanjigen';
+import {Clue12Kurozuka} from './scenes/Clue12Kurozuka';
+import {Clue13Kannai} from './scenes/Clue13Kannai';
+import {Clue14Kage} from './scenes/Clue14Kage';
+import {Clue15Densei} from './scenes/Clue15Densei';
+import {Clue16Makyo} from './scenes/Clue16Makyo';
+import {Clue17Kami} from './scenes/Clue17Kami';
+import {Clue18Kyodai} from './scenes/Clue18Kyodai';
+import {Clue19Haifu} from './scenes/Clue19Haifu';
+import {Clue1Hyakumai} from './scenes/Clue1Hyakumai';
+import {Clue20Haka} from './scenes/Clue20Haka';
+import {Clue21Hashihaka} from './scenes/Clue21Hashihaka';
+import {Clue22Makimuku} from './scenes/Clue22Makimuku';
+import {Clue23Hirabaru} from './scenes/Clue23Hirabaru';
+import {Clue24Yoshinogari} from './scenes/Clue24Yoshinogari';
+import {Clue25Tenrankai} from './scenes/Clue25Tenrankai';
+import {Clue2Nengo} from './scenes/Clue2Nengo';
+import {Clue3Shisha} from './scenes/Clue3Shisha';
+import {Clue4Keisho3} from './scenes/Clue4Keisho3';
+import {Clue5Seishi} from './scenes/Clue5Seishi';
+import {Clue6Keisho4} from './scenes/Clue6Keisho4';
+import {Clue7Kazu} from './scenes/Clue7Kazu';
+import {Clue8China} from './scenes/Clue8China';
+import {Clue9Mei} from './scenes/Clue9Mei';
 import {Intro} from './scenes/Intro';
 import {JudgeEntrance} from './scenes/JudgeEntrance';
 import {RootsStory} from './scenes/RootsStory';
@@ -42,52 +34,44 @@ import {Summary} from './scenes/Summary';
 import {UnsolvedMystery} from './scenes/UnsolvedMystery';
 
 // 確認版用の720p（1920×1080の画面をそのまま縮小）
-const HabiSokushin720 = () => (
+const HabiKagami720 = () => (
 	<AbsoluteFill style={{width: 1920, height: 1080, transform: 'scale(0.6666667)', transformOrigin: 'top left'}}>
-		<HabiSokushinVideo />
+		<HabiKagamiVideo />
 	</AbsoluteFill>
 );
 
 export const RemotionRoot: React.FC = () => (
 	<>
-		<Composition id="HabiSokushin" component={HabiSokushinVideo} durationInFrames={TOTAL_FRAMES} fps={30} width={1920} height={1080} />
-		<Composition id="HabiSokushin720" component={HabiSokushin720} durationInFrames={TOTAL_FRAMES} fps={30} width={1280} height={720} />
+		<Composition id="HabiKagami" component={HabiKagamiVideo} durationInFrames={TOTAL_FRAMES} fps={30} width={1920} height={1080} />
+		<Composition id="HabiKagami720" component={HabiKagami720} durationInFrames={TOTAL_FRAMES} fps={30} width={1280} height={720} />
 		<Folder name="Scenes">
 			<Composition id="Intro" component={Intro} durationInFrames={d.Intro} fps={30} width={1920} height={1080} />
 			<Composition id="JudgeEntrance" component={JudgeEntrance} durationInFrames={d.JudgeEntrance} fps={30} width={1920} height={1080} />
-			<Composition id="Clue1Count" component={Clue1Count} durationInFrames={d.Clue1Count} fps={30} width={1920} height={1080} />
-			<Composition id="Clue2Yudono" component={Clue2Yudono} durationInFrames={d.Clue2Yudono} fps={30} width={1920} height={1080} />
-			<Composition id="Clue3Goshintai" component={Clue3Goshintai} durationInFrames={d.Clue3Goshintai} fps={30} width={1920} height={1080} />
-			<Composition id="Clue4Haguro" component={Clue4Haguro} durationInFrames={d.Clue4Haguro} fps={30} width={1920} height={1080} />
-			<Composition id="Clue5Gyonin" component={Clue5Gyonin} durationInFrames={d.Clue5Gyonin} fps={30} width={1920} height={1080} />
-			<Composition id="Clue6Mokujiki" component={Clue6Mokujiki} durationInFrames={d.Clue6Mokujiki} fps={30} width={1920} height={1080} />
-			<Composition id="Clue7Urushi" component={Clue7Urushi} durationInFrames={d.Clue7Urushi} fps={30} width={1920} height={1080} />
-			<Composition id="Clue8Kane" component={Clue8Kane} durationInFrames={d.Clue8Kane} fps={30} width={1920} height={1080} />
-			<Composition id="Clue9Unburied" component={Clue9Unburied} durationInFrames={d.Clue9Unburied} fps={30} width={1920} height={1080} />
-			<Composition id="Clue10Honmyokai" component={Clue10Honmyokai} durationInFrames={d.Clue10Honmyokai} fps={30} width={1920} height={1080} />
-			<Composition id="Clue11Shinnyokai" component={Clue11Shinnyokai} durationInFrames={d.Clue11Shinnyokai} fps={30} width={1920} height={1080} />
-			<Composition id="Clue12Eye" component={Clue12Eye} durationInFrames={d.Clue12Eye} fps={30} width={1920} height={1080} />
-			<Composition id="Clue13Tetsumonkai" component={Clue13Tetsumonkai} durationInFrames={d.Clue13Tetsumonkai} fps={30} width={1920} height={1080} />
-			<Composition id="Clue14Ikeda" component={Clue14Ikeda} durationInFrames={d.Clue14Ikeda} fps={30} width={1920} height={1080} />
-			<Composition id="Clue15Tetsuryukai" component={Clue15Tetsuryukai} durationInFrames={d.Clue15Tetsuryukai} fps={30} width={1920} height={1080} />
-			<Composition id="Clue16Chukai" component={Clue16Chukai} durationInFrames={d.Clue16Chukai} fps={30} width={1920} height={1080} />
-			<Composition id="Clue17Enmyokai" component={Clue17Enmyokai} durationInFrames={d.Clue17Enmyokai} fps={30} width={1920} height={1080} />
-			<Composition id="Clue18Fly" component={Clue18Fly} durationInFrames={d.Clue18Fly} fps={30} width={1920} height={1080} />
-			<Composition id="Clue19Processed" component={Clue19Processed} durationInFrames={d.Clue19Processed} fps={30} width={1920} height={1080} />
-			<Composition id="Clue20Kouchi" component={Clue20Kouchi} durationInFrames={d.Clue20Kouchi} fps={30} width={1920} height={1080} />
-			<Composition id="Clue21Yutei" component={Clue21Yutei} durationInFrames={d.Clue21Yutei} fps={30} width={1920} height={1080} />
-			<Composition id="Clue22Fingerprint" component={Clue22Fingerprint} durationInFrames={d.Clue22Fingerprint} fps={30} width={1920} height={1080} />
-			<Composition id="Clue23Meiji" component={Clue23Meiji} durationInFrames={d.Clue23Meiji} fps={30} width={1920} height={1080} />
-			<Composition id="Clue24Bukkai" component={Clue24Bukkai} durationInFrames={d.Clue24Bukkai} fps={30} width={1920} height={1080} />
-			<Composition id="Clue25Excavation" component={Clue25Excavation} durationInFrames={d.Clue25Excavation} fps={30} width={1920} height={1080} />
-			<Composition id="Clue26Dochu" component={Clue26Dochu} durationInFrames={d.Clue26Dochu} fps={30} width={1920} height={1080} />
-			<Composition id="Clue27Shitou" component={Clue27Shitou} durationInFrames={d.Clue27Shitou} fps={30} width={1920} height={1080} />
-			<Composition id="Clue28Zhanggong" component={Clue28Zhanggong} durationInFrames={d.Clue28Zhanggong} fps={30} width={1920} height={1080} />
-			<Composition id="Clue29Thailand" component={Clue29Thailand} durationInFrames={d.Clue29Thailand} fps={30} width={1920} height={1080} />
-			<Composition id="Clue30Lost" component={Clue30Lost} durationInFrames={d.Clue30Lost} fps={30} width={1920} height={1080} />
-			<Composition id="Clue31Myokai" component={Clue31Myokai} durationInFrames={d.Clue31Myokai} fps={30} width={1920} height={1080} />
-			<Composition id="Clue32Koromo" component={Clue32Koromo} durationInFrames={d.Clue32Koromo} fps={30} width={1920} height={1080} />
-			<Composition id="Clue33Fame" component={Clue33Fame} durationInFrames={d.Clue33Fame} fps={30} width={1920} height={1080} />
+			<Composition id="Clue1Hyakumai" component={Clue1Hyakumai} durationInFrames={d.Clue1Hyakumai} fps={30} width={1920} height={1080} />
+			<Composition id="Clue2Nengo" component={Clue2Nengo} durationInFrames={d.Clue2Nengo} fps={30} width={1920} height={1080} />
+			<Composition id="Clue3Shisha" component={Clue3Shisha} durationInFrames={d.Clue3Shisha} fps={30} width={1920} height={1080} />
+			<Composition id="Clue4Keisho3" component={Clue4Keisho3} durationInFrames={d.Clue4Keisho3} fps={30} width={1920} height={1080} />
+			<Composition id="Clue5Seishi" component={Clue5Seishi} durationInFrames={d.Clue5Seishi} fps={30} width={1920} height={1080} />
+			<Composition id="Clue6Keisho4" component={Clue6Keisho4} durationInFrames={d.Clue6Keisho4} fps={30} width={1920} height={1080} />
+			<Composition id="Clue7Kazu" component={Clue7Kazu} durationInFrames={d.Clue7Kazu} fps={30} width={1920} height={1080} />
+			<Composition id="Clue8China" component={Clue8China} durationInFrames={d.Clue8China} fps={30} width={1920} height={1080} />
+			<Composition id="Clue9Mei" component={Clue9Mei} durationInFrames={d.Clue9Mei} fps={30} width={1920} height={1080} />
+			<Composition id="Clue10Namari" component={Clue10Namari} durationInFrames={d.Clue10Namari} fps={30} width={1920} height={1080} />
+			<Composition id="Clue11Sanjigen" component={Clue11Sanjigen} durationInFrames={d.Clue11Sanjigen} fps={30} width={1920} height={1080} />
+			<Composition id="Clue12Kurozuka" component={Clue12Kurozuka} durationInFrames={d.Clue12Kurozuka} fps={30} width={1920} height={1080} />
+			<Composition id="Clue13Kannai" component={Clue13Kannai} durationInFrames={d.Clue13Kannai} fps={30} width={1920} height={1080} />
+			<Composition id="Clue14Kage" component={Clue14Kage} durationInFrames={d.Clue14Kage} fps={30} width={1920} height={1080} />
+			<Composition id="Clue15Densei" component={Clue15Densei} durationInFrames={d.Clue15Densei} fps={30} width={1920} height={1080} />
+			<Composition id="Clue16Makyo" component={Clue16Makyo} durationInFrames={d.Clue16Makyo} fps={30} width={1920} height={1080} />
+			<Composition id="Clue17Kami" component={Clue17Kami} durationInFrames={d.Clue17Kami} fps={30} width={1920} height={1080} />
+			<Composition id="Clue18Kyodai" component={Clue18Kyodai} durationInFrames={d.Clue18Kyodai} fps={30} width={1920} height={1080} />
+			<Composition id="Clue19Haifu" component={Clue19Haifu} durationInFrames={d.Clue19Haifu} fps={30} width={1920} height={1080} />
+			<Composition id="Clue20Haka" component={Clue20Haka} durationInFrames={d.Clue20Haka} fps={30} width={1920} height={1080} />
+			<Composition id="Clue21Hashihaka" component={Clue21Hashihaka} durationInFrames={d.Clue21Hashihaka} fps={30} width={1920} height={1080} />
+			<Composition id="Clue22Makimuku" component={Clue22Makimuku} durationInFrames={d.Clue22Makimuku} fps={30} width={1920} height={1080} />
+			<Composition id="Clue23Hirabaru" component={Clue23Hirabaru} durationInFrames={d.Clue23Hirabaru} fps={30} width={1920} height={1080} />
+			<Composition id="Clue24Yoshinogari" component={Clue24Yoshinogari} durationInFrames={d.Clue24Yoshinogari} fps={30} width={1920} height={1080} />
+			<Composition id="Clue25Tenrankai" component={Clue25Tenrankai} durationInFrames={d.Clue25Tenrankai} fps={30} width={1920} height={1080} />
 			<Composition id="RootsStory" component={RootsStory} durationInFrames={d.RootsStory} fps={30} width={1920} height={1080} />
 			<Composition id="UnsolvedMystery" component={UnsolvedMystery} durationInFrames={d.UnsolvedMystery} fps={30} width={1920} height={1080} />
 			<Composition id="Summary" component={Summary} durationInFrames={d.Summary} fps={30} width={1920} height={1080} />

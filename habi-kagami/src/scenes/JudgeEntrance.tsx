@@ -2,39 +2,13 @@ import type React from 'react';
 import {Audio} from '@remotion/media';
 import {AbsoluteFill, Easing, interpolate, staticFile, useCurrentFrame} from 'remotion';
 import {Beat} from '../components/Beat';
+import {Stage} from '../components/Cinema';
+import {Balance} from '../components/KagamiArt';
 import {CourtImage} from '../components/CourtImage';
 import {Photo} from '../components/Photo';
 import {SceneFrame} from '../components/SceneFrame';
 import {judgeEntranceCaptions as c} from '../data/captions';
 import {colors, gothicFamily, minchoFamily} from '../theme';
-
-const clues = ['数', '湯殿山', '御神体', '羽黒山', '行者', '木食行', '漆', '鉦', '埋めない', '本明海', '真如海', '左目', '鉄門海', '藩士の日記', '鉄竜海', '忠海', '円明海', 'ハエの殻', '死後の加工', '弘智法印', '宥貞法印', '指紋', '明治', '仏海', '発掘', '土中入定', '石頭希遷', '章公祖師', 'タイの僧', '失われた仏', '明海', '衣替え', '明治以降'];
-
-// 今夜の9の手がかり
-const ClueRow = () => {
-	const frame = useCurrentFrame();
-	return (
-		<div style={{position: 'absolute', left: 80, right: 80, top: 170, display: 'flex', flexWrap: 'wrap', gap: 14, justifyContent: 'center'}}>
-			{clues.map((cl, i) => (
-				<div
-					key={cl}
-					style={{
-						width: 160,
-						padding: '14px 0',
-						borderRadius: 16,
-						background: colors.paper,
-						textAlign: 'center',
-						opacity: interpolate(frame, [i * 3, i * 3 + 10], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
-					}}
-				>
-					<div style={{fontFamily: gothicFamily, fontWeight: 900, fontSize: 24, color: colors.clayDark}}>手がかり {i + 1}</div>
-					<div style={{margin: '8px 10px 4px', fontFamily: minchoFamily, fontWeight: 800, fontSize: 40, lineHeight: 1, color: colors.clay}}>？</div>
-					<div style={{fontFamily: minchoFamily, fontWeight: 800, fontSize: 21, whiteSpace: 'nowrap', color: colors.ink}}>{cl}</div>
-				</div>
-			))}
-		</div>
-	);
-};
 
 // 法廷の重い木の扉（左右に開く）
 const DoorLeaf: React.FC<{readonly side: 'left' | 'right'; readonly open: number}> = ({side, open}) => (
@@ -113,21 +87,29 @@ const NamePlate: React.FC = () => {
 	);
 };
 
-// ハビ判事登場：扉が開くと、夜の法廷の判事席にハビ判事
+// ハビ判事登場：扉が開くと、夜の法廷の判事席にハビ判事。二つの問いと、奈良と九州の天秤を置く
 export const JudgeEntrance = () => (
 	<SceneFrame captions={c} voice="JudgeEntrance">
 		<Beat name="扉が開く" captions={c} from={0} to={0}>
 			<DoorReveal />
 		</Beat>
-		<Beat name="証拠だけ" captions={c} from={1} to={1}>
+		<Beat name="証拠だけ" captions={c} from={1} to={2}>
 			<CourtImage shot="court-think" />
 			<NamePlate />
 		</Beat>
-		<Beat name="今夜の問い" captions={c} from={2} to={3}>
-			<Photo id="sojiji-sanmon" move="in" label="本当に生きたまま土に入ったのか？" />
+		<Beat name="一つ目の問い" captions={c} from={3} to={3}>
+			<Photo id="judge-night-lantern" move="in" label="卑弥呼の鏡は、本当にこの鏡なのか" />
 		</Beat>
-		<Beat name="33の手がかり" captions={c} from={4}>
-			<ClueRow />
+		<Beat name="二つ目の問い" captions={c} from={4} to={4}>
+			<Photo id="judge-night-sando" move="in" label="邪馬台国は、どこにあったのか" />
+		</Beat>
+		<Beat name="天秤を置く" captions={c} from={5} to={6}>
+			<Stage label="奈良か、九州か">
+				<Balance from={0.25} to={0} left={[]} right={[]} />
+			</Stage>
+		</Beat>
+		<Beat name="最初の手がかり" captions={c} from={7}>
+			<Photo id="judge-night-torii" move="in" label="すべての始まり" />
 		</Beat>
 	</SceneFrame>
 );
