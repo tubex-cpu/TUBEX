@@ -67,8 +67,16 @@ for pid, title in order:
             name = m.group(3)
             url = f'https://thumb.wikimedia.org/wikipedia/commons/thumb/{m.group(2)}{name}/{size}px-{name}' + ('.png' if is_svg else '')  # 縮小版の配信先（2026年11月から）
         else:
-            url = orig
-        im = Image.open(io.BytesIO(get(url))).convert('RGB')
+            # 原寸が960px未満：原寸の配信は429が続くので、まず原寸と同じ幅の縮小版を頼む
+            m = re.match(r'(https://upload\.wikimedia\.org/wikipedia/commons/)(\w/\w\w/)(.+)$', orig)
+            url = f'https://thumb.wikimedia.org/wikipedia/commons/thumb/{m.group(2)}{m.group(3)}/{ow}px-{m.group(3)}' if m else orig
+        try:
+            data = get(url)
+        except Exception:
+            if url == orig:
+                raise
+            data = get(orig)
+        im = Image.open(io.BytesIO(data)).convert('RGB')
         if ow / oh <= 1.9:
             im.thumbnail((2400, 2400), Image.LANCZOS)
         im.save(OUT / f'{pid}.jpg', quality=88)
