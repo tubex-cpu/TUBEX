@@ -93,6 +93,16 @@ def insects(n):
     return out / 3
 
 
+def purr(n):
+    """猫ののどのゴロゴロ（低いうなりを 25 回/秒ほどで震わせ、息に合わせて強弱）。別企画が meta に 'purr' を入れたときだけ使う"""
+    t = np.arange(n) / SR
+    w = rng.standard_normal(n).astype(np.float32)
+    w = np.convolve(w, np.ones(160) / 160, mode='same') * 6.0
+    am = (0.5 + 0.5 * np.sin(2 * np.pi * 24.0 * t)) ** 2
+    br = 0.55 + 0.45 * np.sin(2 * np.pi * 0.42 * t)
+    return (w * am * br).astype(np.float32)
+
+
 def _project_telops():
     if not os.environ.get('NEKO_TELOPS'):
         return None
@@ -206,6 +216,11 @@ def sfx():
         if hb > 0:
             b1, b2 = heartbeats(n)
             L[s0:s1] += b1 * 0.35 * hb; Rr[s0:s1] += b2 * 0.35 * hb
+        pr = m.get('purr', 0)  # 猫ののどの音（無い企画では何もしない）
+        if pr > 0:
+            b = purr(n) * 0.5 * pr
+            fade = np.minimum(1, np.minimum(np.arange(n), n - np.arange(n)) / (0.4 * SR)).astype(np.float32)
+            L[s0:s1] += b * fade; Rr[s0:s1] += b * fade
         ins = m.get('insects', 0)
         if ins > 0:
             b = insects(n) * 0.05 * ins

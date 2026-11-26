@@ -42,9 +42,16 @@ class giant:
 
 
 def cam1(lens=30, clip=(0.05, 40000)):
+    bpy.context.scene.display.render_aa = '5'  # 描画時間を短く（8 → 5）
     c = camera(lens)
     c.data.clip_start, c.data.clip_end = clip
     return c
+
+
+def aim(pos, a, b, bias=0.5):
+    """pos から見て、点 a と点 b の間（bias）を向く注視点"""
+    pos = Vector(pos); da = (Vector(a) - pos).normalized(); db = (Vector(b) - pos).normalized()
+    return tuple(pos + (da.lerp(db, bias)).normalized() * 10)
 
 
 def follow(cam, n, pts, off, tgt_off=(0, 0, 0), k=8):
@@ -83,6 +90,12 @@ def family(loc, k, rot_z=0.0, pose='stand', s=1.0, name=None):
 
 def crowd(loc, rnd, rot_z=0.0, pose='stand', name='p'):
     return crowd_person(loc, rnd, rot_z=rot_z, pose=pose, name=name)
+
+
+def floor_sit(p, dz=0.42):
+    """kit の sit（いすに座る形）を床に座る形に：腰を床まで下げる（すねは床の下に隠れる）"""
+    p.location.z -= dz
+    return p
 
 
 def lie_fix(p):
@@ -284,8 +297,8 @@ def hanky(loc, w=8.0, d=10.0, c=hexc('#7fb3d5'), c2=hexc('#f2f2f2')):
 
 def onigiri(loc, s=1.0, rot_z=0.0):
     root = empty(loc, 'onigiri'); root.scale = (s, s, s); root.rotation_euler = (0, 0, rot_z)
-    link(cyl((0, 0, 0.045), 0.055, 0.035, hexc('#f7f5ee'), rot=(math.pi / 2, 0, 0), verts=3), root).rotation_euler = (math.pi / 2, 0, math.pi / 2)
-    link(box((0, 0, 0.018), (0.034, 0.037, 0.036), hexc('#1f2a22')), root)
+    link(cyl((0, 0, 0.04), 0.05, 0.035, hexc('#f7f5ee'), verts=3, name='oni'), root).rotation_euler = (0, -math.pi / 2, math.pi / 2)
+    link(box((0, -0.0185, 0.022), (0.032, 0.003, 0.04), hexc('#1f2a22')), root)
     return root
 
 
@@ -457,7 +470,7 @@ def bird_live(b, n, rnd, peck_=True, f1=None):
 
 
 # ---------------- 場所（K 倍の世界） ----------------
-QUILT = hexc('#f4f1ea')
+QUILT = hexc('#fbefd9')
 RUN_Y = 0.8 * K  # 布団の上であなたが走る谷
 
 
@@ -467,12 +480,15 @@ def bedroom(night=False, wall=hexc('#efe6d6'), haze=True, sun=True):
     if night:
         setup_light(hexc('#141a2c'), exp=-0.1, ld=(0.2, 0.6, 0.7), shadow=0.3)
     else:
-        setup_light(hexc('#f2e6d0'), exp=0.5, ld=(-0.55, 0.45, 0.62), shadow=0.5)
+        setup_light(hexc('#f2e6d0'), exp=0.6, ld=(0.3, -0.22, 0.93), shadow=0.45)
+    # 壁の影が部屋じゅうに落ちないよう、光は高いところから。光の側（+x・-y）の壁は遠くに置く
     with giant():
         room(4.4, 4.4, 2.5, floor=hexc('#b48a63'), wall=wall, window=True, night=night)
-        box((0, -2.2, 1.25), (4.4, 0.1, 2.5), wall)          # 手前の壁（振り返る画のため）
-        box((2.2, 0, 1.25), (0.1, 4.4, 2.5), hexc('#e8dfcf'))
-        box((-1.2, -2.12, 1.0), (0.85, 0.05, 2.0), hexc('#9a7a5a'))  # ドア
+        box((0.4, -2.6, -0.05), (8.0, 1.0, 0.1), hexc('#b48a63'))
+        box((2.6, 0.4, -0.05), (1.0, 8.0, 0.1), hexc('#b48a63'))
+        box((0, -3.0, 1.25), (8, 0.1, 2.5), wall)          # 手前の壁（振り返る画のため）
+        box((3.0, 0, 1.25), (0.1, 8, 2.5), hexc('#e8dfcf'))
+        box((-1.2, -2.92, 1.0), (0.85, 0.05, 2.0), hexc('#9a7a5a'))  # ドア
         bed((0.6, 0.6, 0), quilt=QUILT, c=hexc('#ece6da'))
         box((1.85, 1.9, 0.4), (0.5, 0.4, 0.8), hexc('#a77d55'))  # 棚
         box((-1.6, 1.95, 0.6), (0.9, 0.4, 1.2), hexc('#c8b090'))  # たんす
@@ -481,25 +497,37 @@ def bedroom(night=False, wall=hexc('#efe6d6'), haze=True, sun=True):
     Q = 0.57 * K
     rnd = random.Random(11)
     # 布団のしわ（谷と丘）。あなたが走る谷 y=RUN_Y を空けて、x 方向に平行に並べる
-    for i, dy in enumerate((-118, -96, -76, -57, -40, -24, -11, 11, 25, 41, 58, 78, 98)):
+    for i, dy in enumerate((-82, -63, -44, -25, 25, 44, 63, 82, 101)):
         y = RUN_Y + dy
         if not (0.17 * K < y < 1.53 * K):
             continue
-        r = rnd.uniform(5, 9) if abs(dy) > 15 else rnd.uniform(3.5, 5)
+        r = rnd.uniform(7, 10) if abs(dy) > 20 else rnd.uniform(6, 7.5)
         L = rnd.uniform(70, 150); x = rnd.uniform(0.1, 1.1) * K
         x = min(max(x, L / 2 + 4), 1.17 * K - L / 2) if L < 1.1 * K else 0.6 * K
-        o = cyl((x, y, Q - r * 0.25), r, L, QUILT, verts=24)
+        o = cyl((x, y, Q - r * 0.35), r, L, QUILT, verts=28)
         o.rotation_euler = (0, math.pi / 2, rnd.uniform(-0.06, 0.06))
         bpy.ops.object.shade_smooth()
-        o.scale = (0.55, 1, 1)
+        o.scale = (0.85, 1, 1)
+    # 枕の山（kit の枕は隠して、大きくふくらんだ枕にする）
+    for o in bpy.data.objects:
+        if o.type == 'MESH' and o.parent is not None and o.parent.name.startswith('bed'):
+            d = o.dimensions
+            if abs(d.x - 0.6) < 0.05 and abs(d.y - 0.3) < 0.05:
+                o.scale = (0, 0, 0)
+            if abs(d.x - 1.16) < 0.03 and abs(d.y - 1.4) < 0.03:
+                o.data.materials.clear(); o.data.materials.append(mat(QUILT))
+    sphere((0.6 * K, -0.16 * K, 0.5 * K), 1.0, hexc('#fbf8f2'), scale=(0.32 * K, 0.17 * K, 0.17 * K), seg=40)
+    sphere((0.48 * K, -0.12 * K, 0.55 * K), 1.0, hexc('#fbf8f2'), scale=(0.16 * K, 0.12 * K, 0.1 * K), seg=32)
     if haze and not night:
         # 部屋の向こうはかすむ（うすい霞の板）
-        for k, (y, a) in enumerate(((1.9 * K, 0.35), (-1.6 * K, 0.3))):
+        for k, (y, a) in enumerate(((1.9 * K, 0.3), (-1.6 * K, 0.28))):
             pl = plane((0, y, 1.2 * K), (5 * K, 2.6 * K), (1, 1, 1), rot=(math.pi / 2, 0, 0))
             pl.data.materials.clear(); pl.data.materials.append(gmat((0.97, 0.94, 0.88), a, 'haze'))
+            pl.visible_shadow = False
     if sun and not night:
         pl = plane((0.6 * K, 2.13 * K, 1.45 * K), (1.7 * K, 1.1 * K), (1, 1, 1), rot=(math.pi / 2, 0, 0))
         pl.data.materials.clear(); pl.data.materials.append(gmat((1.0, 0.97, 0.86), 1.0, 'sunwin'))
+        pl.visible_shadow = False
     return Q
 
 
@@ -516,23 +544,29 @@ def quilt_edge_x():
 
 
 def stairs_set(steps=8, riser=0.2, tread=0.25, width=0.85):
-    """階段（上から下へ +y 方向に下りる）。上の床の高さ steps*riser*K。返り値：(上の床の z, 各段の (y0, z))"""
-    setup_light(hexc('#e9dfcf'), exp=0.45, ld=(0.45, -0.3, 0.8), shadow=0.5)
+    """階段（上から下へ +y 方向に下りる）。+x 側は手すりだけで開いていて、横から段の形が見える。
+    返り値：(上の床の z, 各段の (y0, z))"""
+    setup_light(hexc('#e9dfcf'), exp=0.5, ld=(0.5, -0.25, 0.83), shadow=0.45)
     R, T, W = riser * K, tread * K, width * K
     top = steps * R
-    wood = hexc('#b98a5a'); wood2 = hexc('#a8794a')
-    box((0, -2.0 * K / 2, top - 0.05 * K / 2), (W + 0.4 * K, 2.0 * K, 0.05 * K), hexc('#c49a6a'))  # 2階の廊下
+    wood = hexc('#b98a5a'); white = hexc('#f1ebe0')
+    box((0, -1.0 * K, top / 2), (W + 0.4 * K, 2.0 * K, top), hexc('#e6dccb'))          # 2階の床の下（壁）
+    box((0, -1.0 * K, top - 0.025 * K), (W + 0.4 * K, 2.0 * K, 0.05 * K), hexc('#c49a6a'))  # 2階の廊下
     rows = []
     for i in range(steps):
         z = top - (i + 1) * R
         y0 = i * T
-        box((0, y0 + T / 2, z / 2 + 0.0), (W, T, z if z > 0 else 0.5), wood if i % 2 else wood2)
-        box((0, y0 + T - 0.6, z + 0.25), (W, 1.2, 0.5), hexc('#8a6a42'))  # 段の鼻
+        if z > 0:
+            box((0, y0 + T / 2, z / 2), (W, T, z), white if i % 2 else hexc('#d9cdb8'))  # 段の下（一段ずつ色を変えて段の形を見せる）
+        box((0, y0 + T / 2, z - 0.6 + 0.6), (W, T, 1.2), wood)            # 踏み板
+        box((0, y0 + T - 0.5, z + 0.6), (W, 1.0, 1.2), hexc('#8a6a42'))   # 段の鼻
         rows.append((y0, z))
-    box((0, steps * T + 3 * K / 2, -0.5), (W + 2 * K, 3 * K + 2 * T, 1.0), hexc('#b48a63'))  # 1階の床
-    for sx in (-1, 1):
-        box((sx * (W / 2 + 4), steps * T / 2, top / 2 + 0.6 * K), (8, steps * T + 3 * K, top + 1.2 * K), hexc('#efe6d6'))
-    box((0, steps * T + 2.6 * K, 1.2 * K), (W + 2 * K, 10, 2.4 * K), hexc('#e8dfcf'))
+    box((0, steps * T + 3 * K / 2, -0.5), (W + 3 * K, 3 * K + 2 * T, 1.0), hexc('#b48a63'))  # 1階の床
+    box((-(W / 2 + 4), steps * T / 2, top / 2 + 0.6 * K), (8, steps * T + 4 * K, top + 1.2 * K), hexc('#efe6d6'))
+    for i in range(steps + 1):  # 手すりの柱（+x 側）
+        y = i * T + 4; z = top - i * R
+        cyl((W / 2 - 3, y, z + 0.45 * K), 1.6, 0.9 * K, hexc('#8a6a42'), verts=10)
+    bar((W / 2 - 3, 4, top + 0.9 * K), (W / 2 - 3, steps * T + 4, 0.9 * K), 2.4, hexc('#8a6a42'))
     return top, rows
 
 
@@ -547,10 +581,10 @@ def kitchen(night=False):
     for i in range(-6, 7):
         for j in range(-4, 9):
             plane((i * t, j * t, 0.0), (t - 0.6, t - 0.6), c1 if (i + j) % 2 else c2)
-    box((0, -4.5 * t, -0.3), (14 * t, 14 * t, 0.6), hexc('#9a958a'))  # 目地
+    box((0, 1.0 * t, -0.4), (14 * t, 14 * t, 0.6), hexc('#9a958a'))  # 目地
     with giant():
         box((0, 1.0, 0.43), (3.6, 0.6, 0.86), hexc('#eae4d8') if not night else hexc('#5a5a66'))  # 戸棚
-        box((0, 0.69, 0.05), (3.6, 0.02, 0.1), hexc('#4a4a52'))  # 幅木
+        box((0, 0.69, 0.05), (3.6, 0.02, 0.1), hexc('#cbbfa8') if not night else hexc('#4a4a56'))  # 幅木
         for x in (-1.2, -0.4, 0.4, 1.2):
             box((x, 0.695, 0.5), (0.76, 0.01, 0.7), hexc('#dcd4c6') if not night else hexc('#50505c'))
             box((x + 0.3, 0.685, 0.72), (0.03, 0.02, 0.12), hexc('#9a9a9a'))
@@ -594,7 +628,7 @@ def shelf_set(night=False):
         setup_light(hexc('#1a2030'), exp=0.0, ld=(0.3, -0.5, 0.8))
     else:
         setup_light(hexc('#f2e6d0'), exp=0.5, ld=(-0.4, -0.5, 0.7), shadow=0.45)
-    S = 0.9 * K
+    S = 0.91 * K
     with giant():
         box((0, 0, -0.05), (5, 5, 0.1), hexc('#b48a63'))
         box((0, 1.2, 1.3), (5, 0.1, 2.6), hexc('#efe6d6'))
@@ -626,8 +660,8 @@ def still_street(n):
             car((x, lane, 0), rot_z=rz)
     for k in range(10):
         x = -60 + k * 13
-        tower((x, 16 + rnd.uniform(0, 6), 0), rnd.uniform(8, 11), 8, rnd.uniform(14, 36), rnd.choice(WALLS))
-        tower((x + 5, -17 - rnd.uniform(0, 6), 0), rnd.uniform(8, 11), 8, rnd.uniform(14, 30), rnd.choice(WALLS))
+        tower((x, 16 + rnd.uniform(0, 6), 0), rnd.uniform(8, 11), 8, rnd.uniform(14, 36), rnd.choice(WALLS), floors=9)
+        tower((x + 5, -17 - rnd.uniform(0, 6), 0), rnd.uniform(8, 11), 8, rnd.uniform(14, 30), rnd.choice(WALLS), floors=8)
     for x in range(-60, 61, 12):
         tree((x, 7.5, 0), s=0.7);
     return s

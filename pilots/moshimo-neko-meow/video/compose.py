@@ -325,6 +325,8 @@ def seg(name):
         # 左上：いつ・どこで・何が
         # 時計：冒頭は章の頭から3秒で 15:00:00、30日後は「鳴き声が、止まります」の行で 15:00:00
         clock_t0 = ch['start'] + 3.0 if ch['no'] == 0 else (ch['lines'][2]['start'] if ch['no'] == last_ch - 1 and VER != 'v5' else None)
+        if getattr(T, 'NO_CLOCK', False):  # 別企画：冒頭の時計を出さない（経過は左上のパネルと経過バーで見せる）
+            clock_t0 = None
         clock_on = clock_t0 is not None and is_first_shot and t < clock_t0 + 3.5
         if not in_title and info:
             a = min(1, i / 10, (n - i) / 8) if not (titled and t < t_title1 + 1.2) else min(1, (t - t_title1 - 0.6) / 0.6, (n - i) / 8)
