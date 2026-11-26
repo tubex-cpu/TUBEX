@@ -10,7 +10,7 @@
 | リサーチ | **⚠ 一次資料の本文と未照合**（U01〜U58。検索の要約・二次資料で確認。一次資料のサイトはこのセッションから開けない） | `01_research.md` |
 | 企画書 | ゲートA：社長「このまま動画制作まで貫通して」 | `03_plan.md`、`04_titles.md` |
 | 台本 | v1 作成（2026-11-26）。Codex 監査待ち | `05_script.md` |
-| 動画 | 制作中 | — |
+| 動画 | 書き出し済み（2026-11-26。3D版 15分52秒、1920×1080、-15.1 LUFS。ナレーション VOICEVOX:雀松朱司 949.8秒）。フル画質は git 外 `pilots/chizu-3d/out/pc/chizu-010-us-pivot-circles_full_3d.mp4`（167MB）。ゲートB 待ち | `preview_3d.mp4`（軽量版）、`audio/`、`subtitles.srt`、`render/render.py`、`07_description.md` |
 | サムネ | 未着手（3組は `04_titles.md`） | — |
 
 ## 公開前QC
