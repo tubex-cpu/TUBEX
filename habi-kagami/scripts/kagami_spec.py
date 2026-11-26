@@ -118,7 +118,7 @@ S = {
  ]),
  'Clue12Kurozuka': ('第12の手がかり', '黒塚古墳では、33枚の鏡が棺を取り囲んでいた？', [
   (0, 1, 'a', "<ReliefMap view='nara' zoom={1.12} focus={P.kurozuka} pins={[{at: P.kurozuka, name: '黒塚古墳', sub: '天理市', big: true, t: 6}, {at: P.hashihaka, name: '箸墓古墳', t: 30}]} />", '長さ130メートル', True),
-  (2, 3, 'a', "<Table head={['西側', '東側', '北の端']} rows={[['17枚', '15枚', '1枚']]} tone='ink' />", '棺の北半分を囲む', False),
+  (2, 3, 'a', "<Figures figs={[{value: '17枚', label: '西側'}, {value: '15枚', label: '東側'}, {value: '1枚', label: '北の端', accent: true}]} tone='bronze' />", '棺の北半分を囲む', False),
   (4, 5, 'p', 'c12-kurozuka-funcho', '布に包まれた鏡', 'in'),
   (6, 6, 'p', 'c12-kurozuka-kouenbu', 'なぜ取り囲んだ？', 'in'),
   (7, None, 'v', 'right'),

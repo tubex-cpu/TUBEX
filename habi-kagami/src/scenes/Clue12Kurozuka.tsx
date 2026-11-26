@@ -1,8 +1,8 @@
 import {useVideoConfig} from 'remotion';
 import {Beat, captionFrame} from '../components/Beat';
 import {Stage} from '../components/Cinema';
+import {Figures} from '../components/IzumoKit';
 import {P, ReliefMap} from '../components/IzumoMap';
-import {Table} from '../components/SokushinArt';
 import {GavelVerdict} from '../components/GavelVerdict';
 import {Photo} from '../components/Photo';
 import {SceneFrame} from '../components/SceneFrame';
@@ -20,7 +20,7 @@ export const Clue12Kurozuka = () => {
 			</Beat>
 			<Beat name="棺の北半分を囲む" captions={c} from={2} to={3}>
 				<Stage label="棺の北半分を囲む">
-					<Table head={['西側', '東側', '北の端']} rows={[['17枚', '15枚', '1枚']]} tone='ink' />
+					<Figures figs={[{value: '17枚', label: '西側'}, {value: '15枚', label: '東側'}, {value: '1枚', label: '北の端', accent: true}]} tone='bronze' />
 				</Stage>
 			</Beat>
 			<Beat name="布に包まれた鏡" captions={c} from={4} to={5}>

@@ -23,21 +23,21 @@ export const Balance: React.FC<{
 	const wobble = Math.sin(frame / 9) * 1.2 * interpolate(frame, [100, 170], [1, 0], clamp);
 	const deg = tilt * 14 + wobble;
 	const cx = W / 2;
-	const py = 330; // 支点
-	const arm = 600;
+	const py = 400; // 支点
+	const arm = 560;
 	const rad = (deg * Math.PI) / 180;
 	const lx = cx - arm * Math.cos(rad);
 	const ly = py - arm * Math.sin(rad);
 	const rx = cx + arm * Math.cos(rad);
 	const ry = py + arm * Math.sin(rad);
 	const pan = (x: number, y: number, label: string, ws: readonly Weight[], side: 'l' | 'r') => {
-		const top = y + 230;
+		const top = y + 190;
 		return (
 			<g>
 				<line x1={x} y1={y} x2={x - 230} y2={top} stroke={colors.goldSoft} strokeWidth={4} opacity={0.8} />
 				<line x1={x} y1={y} x2={x + 230} y2={top} stroke={colors.goldSoft} strokeWidth={4} opacity={0.8} />
 				<path d={`M ${x - 270} ${top} Q ${x} ${top + 90} ${x + 270} ${top}`} fill="rgba(200,160,80,0.25)" stroke={colors.gold} strokeWidth={6} />
-				<text x={x} y={top + 150} textAnchor="middle" {...svgMincho(88, side === 'l' ? '#ffd9a0' : '#a8e0ff')}>
+				<text x={x} y={top + 125} textAnchor="middle" {...svgMincho(80, side === 'l' ? '#ffd9a0' : '#a8e0ff')}>
 					{label}
 				</text>
 				{ws.map((w, i) => {
@@ -59,14 +59,14 @@ export const Balance: React.FC<{
 	};
 	return (
 		<Canvas tone={tone}>
-			<polygon points={`${cx - 70},${H - 110} ${cx + 70},${H - 110} ${cx + 18},${py} ${cx - 18},${py}`} fill="#3a2a14" stroke={colors.gold} strokeWidth={4} />
-			<rect x={cx - 220} y={H - 120} width={440} height={34} rx={8} fill="#4a3518" stroke={colors.gold} strokeWidth={3} />
+			<polygon points={`${cx - 60},${H - 250} ${cx + 60},${H - 250} ${cx + 16},${py} ${cx - 16},${py}`} fill="#3a2a14" stroke={colors.gold} strokeWidth={4} />
+			<rect x={cx - 200} y={H - 260} width={400} height={30} rx={8} fill="#4a3518" stroke={colors.gold} strokeWidth={3} />
 			<line x1={lx} y1={ly} x2={rx} y2={ry} stroke={colors.gold} strokeWidth={16} strokeLinecap="round" />
 			<circle cx={cx} cy={py} r={26} fill={colors.gold} />
 			{pan(lx, ly, '奈良', left, 'l')}
 			{pan(rx, ry, '九州', right, 'r')}
 			{note ? (
-				<text x={cx} y={150} textAnchor="middle" {...svgGothic(40, '#efe6d2', 900)} opacity={interpolate(frame, [70, 90], [0, 1], clamp)}>
+				<text x={cx} y={250} textAnchor="middle" {...svgGothic(40, '#efe6d2', 900)} opacity={interpolate(frame, [70, 90], [0, 1], clamp)}>
 					{note}
 				</text>
 			) : null}
@@ -116,22 +116,22 @@ export const CountBars: React.FC<{readonly bars: readonly Bar[]; readonly unit?:
 export const MirrorAnatomy: React.FC<{readonly tone?: Tone}> = ({tone = 'bronze'}) => {
 	const frame = useCurrentFrame();
 	const cx = 720;
-	const cy = 560;
-	const R = 380;
+	const cy = 600;
+	const R = 320;
 	const glow = (at: number) => interpolate(frame, [at, at + 20], [0.15, 1], clamp);
 	const labels = [
-		{at: 20, text: '三角にとがった縁', y: 250},
-		{at: 60, text: '銘文の帯', y: 420},
-		{at: 100, text: '神と霊獣', y: 590},
+		{at: 20, text: '三角にとがった縁', y: 340},
+		{at: 60, text: '銘文の帯', y: 480},
+		{at: 100, text: '神と霊獣', y: 620},
 		{at: 140, text: 'つまみ（鈕）', y: 760},
 	];
 	return (
 		<Canvas tone={tone}>
 			<circle cx={cx} cy={cy} r={R} fill="#3c4a3e" stroke="#c9a65a" strokeWidth={30} opacity={glow(20)} />
-			<circle cx={cx} cy={cy} r={R - 70} fill="none" stroke="#d9c28a" strokeWidth={22} strokeDasharray="6 10" opacity={glow(60)} />
+			<circle cx={cx} cy={cy} r={R - 60} fill="none" stroke="#d9c28a" strokeWidth={22} strokeDasharray="6 10" opacity={glow(60)} />
 			{Array.from({length: 6}, (_, i) => {
 				const a = (i / 6) * Math.PI * 2 + 0.3;
-				return <circle key={i} cx={cx + Math.cos(a) * 190} cy={cy + Math.sin(a) * 190} r={56} fill="#7d8f6e" stroke="#d9c28a" strokeWidth={4} opacity={glow(100)} />;
+				return <circle key={i} cx={cx + Math.cos(a) * 160} cy={cy + Math.sin(a) * 160} r={48} fill="#7d8f6e" stroke="#d9c28a" strokeWidth={4} opacity={glow(100)} />;
 			})}
 			<circle cx={cx} cy={cy} r={60} fill="#b9975a" opacity={glow(140)} />
 			{labels.map((l, i) => (
