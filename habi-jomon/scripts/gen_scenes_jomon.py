@@ -1,5 +1,5 @@
-"""卑弥呼の鏡判決：冒頭〜まだ解けていない謎の場面ファイル（src/scenes/*.tsx）を作る。
-  python3 scripts/gen_scenes_kagami.py
+"""縄文1万年判決：冒頭〜まだ解けていない謎の場面ファイル（src/scenes/*.tsx）を作る。
+  python3 scripts/gen_scenes_jomon.py
 ビート： (from, to, 種類, ...)  to=None はその場面の最後まで
   ('p', 写真ID, テロップ, 動き)            写真
   ('a', 'JSXの図解', テロップ, 下に置くか)  図解（全画面）
@@ -9,9 +9,9 @@ import json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-MODS = {m: set(re.findall(r'^export const (\w+)', (ROOT / f'src/components/{m}.tsx').read_text(), re.M)) for m in ('SokushinArt', 'IzumoKit', 'IzumoMap', 'KagamiArt')}
+MODS = {m: set(re.findall(r'^export const (\w+)', (ROOT / f'src/components/{m}.tsx').read_text(), re.M)) for m in ('SokushinArt', 'IzumoKit', 'IzumoMap', 'KagamiArt', 'JomonArt')}
 
-from kagami_spec import S
+from jomon_spec import S
 
 INTRO_PHOTOS = set()
 for f in ('JudgeEntrance', 'Summary'):
@@ -81,7 +81,7 @@ for scene, (label, title, beats) in S.items():
     imports.append(f"import {{{var} as c}} from '../data/captions';")
     head = f'label="{label}" title="{title}"' if label else ''
     fps = '\tconst {fps} = useVideoConfig();\n' if has_v else ''
-    src = '\n'.join(imports) + f"\n\n// {title or scene}（素材はすべてこの場面だけで使う。scripts/gen_scenes_kagami.py が作る）\nexport const {scene} = () => {{\n{fps}\treturn (\n\t\t<SceneFrame captions={{c}} voice=\"{scene}\" {head}>\n" + '\n'.join(body) + '\n\t\t</SceneFrame>\n\t);\n};\n'
+    src = '\n'.join(imports) + f"\n\n// {title or scene}（素材はすべてこの場面だけで使う。scripts/gen_scenes_jomon.py が作る）\nexport const {scene} = () => {{\n{fps}\treturn (\n\t\t<SceneFrame captions={{c}} voice=\"{scene}\" {head}>\n" + '\n'.join(body) + '\n\t\t</SceneFrame>\n\t);\n};\n'
     (ROOT / f'src/scenes/{scene}.tsx').write_text(src)
 
 if errors:

@@ -102,7 +102,7 @@ export const CountBars: React.FC<{readonly bars: readonly Bar[]; readonly unit?:
 						) : null}
 						<rect x={x0} y={y + 14} width={w} height={84} rx={8} fill={b.accent ? '#c0392b' : colors.goldSoft} />
 						<text x={x0 + w + 24} y={y + 76} {...svgMincho(64, b.accent ? '#ff8f80' : '#fbf6ea')}>
-							{Math.round(b.value * g)}
+							{(b.value * g).toFixed((String(b.value).split('.')[1] ?? '').length)}
 							{unit}
 						</text>
 					</g>

@@ -1,4 +1,4 @@
-"""public/photos/credits.json から src/data/photos.ts を作る（卑弥呼の鏡判決）。
+"""public/photos/credits.json から src/data/photos.ts を作る（縄文1万年判決）。
   python3 scripts/gen_photos.py
 説明（desc）は写真リストを作ったときの表（scripts/photo-desc.json）を使う。"""
 import json, re
@@ -8,10 +8,10 @@ ROOT = Path(__file__).resolve().parent.parent
 cr = json.loads((ROOT / 'public/photos/credits.json').read_text())
 desc = json.loads((ROOT / 'scripts/photo-desc.json').read_text())
 # 縦長・極端な横長・地図は全体を見せる（contain）。人物の顔がある写真と地図は、テロップを下に置く
-CONTAIN = {'c01-weizhi', 'c23-hirabaru-drawing', 'c05-chausuyama-3d', 'c16-makyo-amida', 'c16-metal-3dprinter'}
+CONTAIN = {'c03-jomon-sea-map', 'c10-dna-helix', 'c19-yoshigo-trench'}
 # 明るい地図は、夜の画面に合うよう色を反転させる
 FILTER = {}
-FACE = {'c16-makyo-amida', 'c17-iwato-hokkei', 'spare-maria-kannon', 'spare-iwato-toshimasa'}
+FACE = {'c04-venus', 'c04-masked-goddess', 'c05-ichikawa-diorama', 'c11-lab', 'c17-chukudogu', 'c17-shakoki-kamegaoka', 'c17-shakoki-face', 'c17-heart-dogu', 'c18-shimoyakebe-dogu', 'c18-gassho', 'c18-isedotai-dogu', 'matome-venus-side', 'spare-shakoki-ebisuda', 'spare-mimizuku', 'spare-plate-dogu'}
 lines = []
 for pid, c in cr.items():
     w, h = c.get('size', [1, 1])
