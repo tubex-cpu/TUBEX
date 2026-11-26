@@ -62,6 +62,7 @@ python3 scripts/build-voice.py        # 変わった行だけ合成し直す（�
 - `scripts/gen_scenes.py` の `S` に場面ごとのビート `(from, to, 'p'写真/'a'図解/'v'判決, ID, テロップ, 動き)` を書き、`src/scenes/*.tsx` を作る。**同じ写真・図解の2回使用はエラーで止まる**（dup）。
 - テロップは答えを言わない疑問形。人の顔に重ねない（顔が上なら `labelBottom`）。
 - `scripts/gen_video.py` で `Habi*Video.tsx`（BGM前半・中盤・後半の区切り）と `Root.tsx`（720p用ラッパーも含む）を作る。
+- 字幕は `src/components/Subtitles.tsx`：Noto Sans JP Black（`theme.ts` の `subtitleFamily`）84px・黒フチ20px、`build-voice.py` の `LINE_MAX = 19`。手本は `habi-suwa/`。字幕の文字数だけ変えたときは、音声はそのままで `python3 scripts/resplit-subs.py`（VOICEVOXが必要）。
 - 文字を変えたら `python3 scripts/subset-fonts.py`、最後に `npx tsc --noEmit`。
 - 確認は静止画で：`npx remotion still <場面ID> out.png --frame=N --scale=0.5 --browser-executable=$(ls -d /opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell /opt/pw-browsers/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell 2>/dev/null | head -1)`（ふつうの chromium は起動しない）。
 

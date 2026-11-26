@@ -1,13 +1,14 @@
 import type {Caption} from '@remotion/captions';
 import type React from 'react';
 import {interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
-import {colors, gothicFamily} from '../theme';
+import {colors, subtitleFamily} from '../theme';
 
 type Props = {
 	readonly captions: Caption[];
 };
 
-// ナレーション字幕（画面下部・常に1行。長い文は scripts/build-voice.py で分割済み）
+// ナレーション字幕（画面下部・常に1行。長い文は scripts/build-voice.py で19字までに分割済み）
+// テレビでも読めるよう、太いゴシック84pxに太いフチ
 export const Subtitles: React.FC<Props> = ({captions}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
@@ -18,7 +19,7 @@ export const Subtitles: React.FC<Props> = ({captions}) => {
 	}
 
 	const local = frame - (current.startMs / 1000) * fps;
-	const size = Math.min(62, Math.floor(1560 / current.text.length));
+	const size = Math.min(84, Math.floor(1640 / current.text.length));
 
 	return (
 		<div
@@ -42,7 +43,7 @@ export const Subtitles: React.FC<Props> = ({captions}) => {
 			<div
 				lang="ja"
 				style={{
-					fontFamily: gothicFamily,
+					fontFamily: subtitleFamily,
 					fontWeight: 900,
 					fontSize: size,
 					lineHeight: 1.3,
@@ -51,7 +52,7 @@ export const Subtitles: React.FC<Props> = ({captions}) => {
 					textAlign: 'center',
 					padding: '18px 40px',
 					// 枠は付けず、黒いフチ取りで写真の上でも読めるようにする
-					WebkitTextStroke: '14px rgba(5, 9, 18, 0.96)',
+					WebkitTextStroke: '20px rgba(5, 9, 18, 0.96)',
 					paintOrder: 'stroke fill',
 					textShadow: '0 4px 14px rgba(0,0,0,0.85)',
 				}}
