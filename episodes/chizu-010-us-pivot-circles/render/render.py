@@ -411,7 +411,7 @@ def d_pivot_side(img, t, d):
         yy = gy - 130 + ((t * 300 + j * 37) % 120)
         dr.ellipse([x - 5, yy - 5, x + 5, yy + 5], fill=WATER + (220,))
     put(img, L, 1.0)
-    label(img, (wx, 900), "地下の水", seg(t, 0.3, 0.9), 42)
+    label(img, (wx + 260, 850), "地下の水", seg(t, 0.3, 0.9), 42)
     label(img, (1200, gy - 210), "車輪のついた塔が、管を支えて回る", seg(t, 0.8, 1.4), 44)
 
 
@@ -468,9 +468,9 @@ def d_sizes(img, t, d):
     put(img, L, 1.0)
     label(img, (x0 + s / 2, y0 + s / 2), "直径 約800m", a1, 38)
     label(img, (x0 + 2 * s, y0 + s), "直径 約1,600m", a2, 44)
-    text(img, (1260, 380), "160エーカーの一辺 ≒ 800m", 44, anchor="lm", alpha=a1)
-    text(img, (1260, 480), "1マイル四方の一辺 ≒ 1,600m", 44, anchor="lm", alpha=a2)
-    text(img, (1260, 600), "丸の大きさ ＝ 碁盤の目の大きさ", 46, anchor="lm", alpha=seg(t, 2.6, 3.2), fill=AM)
+    text(img, (1180, 380), "160エーカーの一辺 ≒ 800m", 42, anchor="lm", alpha=a1)
+    text(img, (1180, 480), "1マイル四方の一辺 ≒ 1,600m", 42, anchor="lm", alpha=a2)
+    text(img, (1180, 600), "丸の大きさ ＝ 碁盤の目の大きさ", 42, anchor="lm", alpha=seg(t, 2.6, 3.2), fill=AM)
 
 
 def d_section(drop=False, zoom=False, thick=False):
@@ -573,9 +573,23 @@ def L_japan(at=(-80.0, 31.0), t0=1.0):
         for poly in R.country("Japan"):
             r = poly[0]
             x, y = geo.laea(r[:, 0], r[:, 1], 137.0, 37.5)
-            dr.polygon(list(zip(ox + x / kmpp, oy - y / kmpp)), fill=RE + (int(200 * a),), outline=(255, 255, 255, int(255 * a)))
+            dr.polygon(list(zip(ox + x / kmpp, oy - y / kmpp)), fill=RE + (int(110 * a),), outline=RE + (int(255 * a),))
         img.alpha_composite(L)
-        text(img, (ox, oy + 170), "日本（同じ縮尺）", 38, anchor="mm", alpha=a, fill=RE)
+        text(img, (ox + 420, oy - 260), "日本（同じ縮尺で重ねる）", 40, anchor="mm", alpha=a, fill=RE)
+    return fn
+
+
+def L_kansas(t0=0.0):
+    """Kansas border, simplified (straight lines; the small north-east corner along the Missouri River is cut straight)."""
+    pts = [(-102.05, 40.0), (-95.3, 40.0), (-94.6, 39.1), (-94.6, 37.0), (-102.05, 37.0)]
+    def fn(img, p, t, d):
+        a = seg(t, t0, t0 + 0.6)
+        if a <= 0:
+            return
+        L = Image.new("RGBA", img.size, (0, 0, 0, 0)); dr = ImageDraw.Draw(L)
+        xy = [p(lo, la)[:2] for lo, la in pts]
+        dr.polygon(xy, fill=AM + (int(40 * a),), outline=AM + (int(255 * a),), width=5)
+        img.alpha_composite(L)
     return fn
 
 
@@ -653,12 +667,12 @@ def shots():
     add("S03", 7, "diag", fn=d_compare("大平原の人口", ("1950年", "490万人", ""), ("2007年", "990万人", "")), why="人口は倍")
     add("S03", 6, "diag", at="都市圏に住む人の割合は", fn=d_bars("都市圏に住む人の割合", [("1950年", 39), ("2007年", 68)], "%"), why="都市へ")
     add("S03", 7, "diag", at="カンザス州の大平原の", fn=d_big("46 / 58郡", "カンザス州の大平原で人口が減った郡（1950→2007年）"), why="カンザス")
-    add("S04", 8, "map", **MAPV(KANSAS), layers=[L_country("United States of America", 0.0, AM, 0.08), dots(["ガーデンシティ"], 0.4), L_text(-98.3, 39.9, "カンザス州", 0.2, 56)], why="ガーデンシティ")
+    add("S04", 8, "map", **MAPV(KANSAS), layers=[L_kansas(0.1), dots(["ガーデンシティ"], 0.4), L_text(-98.3, 40.4, "カンザス州", 0.2, 56)], why="ガーデンシティ")
     add("S04", 6, "diag", at="町を出ると", fn=d_fields(grow=(0.2, 2.0)), why="平らな畑と丸")
     add("S05", 14, "diag", fn=d_years, why="1972→2015 四角から丸へ（模式図）")
     # 第2章
     add("S06", 4, "card", kicker="第2章", title="丸の正体", why="章の扉")
-    add("S06", 10, "diag", at="丸の真ん中には", fn=d_pivot_top, why="井戸と回る管")
+    add("S06", 10, "diag", fn=d_pivot_top, why="井戸と回る管")
     add("S06", 6, "diag", at="管は", fn=d_pivot_side, why="車輪の塔")
     add("S07", 6, "diag", fn=d_pivot_side, why="電動機で車輪を回す")
     add("S07", 6, "diag", at="一番外側の塔が", fn=d_big("1時間に 約110〜170m", "いちばん外側の塔の速さ"), why="速さ")
@@ -676,8 +690,8 @@ def shots():
     add("S13", 4, "card", kicker="第3章", title="雨が足りない", why="章の扉")
     add("S13", 6, "diag", at="答えは", fn=d_big("雨が足りない", "大平原"), why="答え")
     add("S14", 7, "map", **MAPV(USA), layers=[L_meridian(-100, 0.3, RE, "西経100度")], why="西経100度の線")
-    add("S14", 9, "map", at="一八七八年", **MAPV(USA), layers=[L_meridian(-100, 0.0, RE, "西経100度"), L_tint(-125, -100, AM, 0.2, 0.2),
-                                                       L_text(-110, 44.5, "年の雨 約500mm未満", 1.0, 44, AM)], why="パウエルの報告")
+    add("S14", 9, "map", at="一八七八年", **MAPV(USA), layers=[L_meridian(-100, 0.0, RE, "西経100度"), L_tint(-125, -100, AM, 0.2, 0.14, (30, 49)),
+                                                       L_text(-111, 44.5, "年の雨 約500mm未満", 1.0, 48, RE)], why="パウエルの報告")
     add("S15", 8, "diag", fn=d_bars("1年の雨", [("ガーデンシティ", 497), ("日本の平均", 1700)], "mm"), why="約3分の1")
     add("S16", 8, "diag", fn=d_bars("一作で使う水と1年の雨", [("とうもろこし（一作）", 580), ("ガーデンシティの雨（1年）", 497)], "mm"), why="雨だけでは足りない")
     add("S16", 8, "diag", at="一番水を飲む時期には", fn=d_compare("1日あたり", ("とうもろこし（多い時期）", "約9mm", ""), ("ガーデンシティの雨", "約1.4mm", "")), why="6倍以上")
@@ -689,21 +703,21 @@ def shots():
     add("S21", 6, "diag", at="約六十五ヘクタール", fn=d_big("約65ha", "東京ドームの建物　約14個分"), why="広さ")
     add("S21", 5, "diag", at="この法律で", fn=d_big("約1割", "人の手に渡った土地　アメリカの面積の"), why="約1割")
     add("S22", 7, "diag", fn=d_year("1935年4月14日", "黒い日曜日", "大きな砂嵐が中央の大平原をのみこむ"), why="黒い日曜日")
-    add("S22", 7, "map", at="砂嵐は午前中に", **MAPV(USA), layers=[L_states(0.0, 0.0, ["ネブラスカ", "カンザス", "テキサス"], 40), L_text(-100.5, 29.0, "→ 約1,300km 南へ", 0.6, 44, RE)], why="南へ進む")
+    add("S22", 7, "map", at="砂嵐は午前中に", **MAPV(USA), layers=[L_states(0.0, 0.0, ["ネブラスカ", "カンザス", "テキサス"], 40), L_text(-92.0, 34.0, "↓ 約1,300km 南へ", 0.6, 48, RE)], why="南へ進む")
     add("S22", 5, "diag", at="この年の四月", fn=d_big("14日", "濃い砂ぼこりの日　1935年4月　ダッジシティ"), why="14日")
     add("S23", 8, "diag", fn=d_section(), why="足元の水")
     # 第4章
     add("S24", 4, "card", kicker="第4章", title="足元の巨大な水", why="章の扉")
-    add("S24", 8, "map", at="その水の層は", **MAPV(PLAINS), layers=[L_states(0.2, 0.3)], why="8つの州")
-    add("S24", 8, "map", at="広さは", **MAPV(USA), layers=[L_states(0.0, 0.0, size=26), L_japan((-80.0, 33.0), 0.5), L_text(-100.0, 47.8, "約45万km²", 0.3, 48, AM)], why="日本の約1.2倍")
+    add("S24", 8, "map", **MAPV(PLAINS), layers=[L_states(0.2, 0.3)], why="8つの州")
+    add("S24", 8, "map", at="広さは", **MAPV(USA), layers=[L_states(0.0, 0.0, size=26), L_japan((-101.0, 38.5), 0.5), L_text(-100.0, 47.8, "約45万km²", 0.3, 48, AM)], why="日本の約1.2倍")
     add("S25", 6, "diag", fn=d_big("湖ではない", "地下の水の層"), why="湖ではない")
     add("S25", 10, "diag", at="この層は", fn=d_section(zoom=True), why="粒のすき間")
     add("S25", 5, "diag", at="ガーデンシティでくみ上げる", fn=d_big("氷河期の水も", "ガーデンシティでくみ上げる水"), why="氷河期")
     add("S26", 10, "diag", fn=d_section(thick=True), why="厚さ")
     add("S27", 6, "diag", fn=d_big("約3割", "アメリカで畑に使う地下水のうち　この層から"), why="約3割")
-    add("S27", 7, "diag", at="一九四九年から", fn=d_bars("1年にくみ上げる水", [("1949年", 400), ("1974年", 1900)], "万エーカーフィート"), why="約4.8倍")
+    add("S27", 7, "diag", at="一九四九年から", fn=d_bars("1年にくみ上げる水", [("1949年", 49), ("1974年", 234)], "億m³"), why="約4.8倍")
     add("S28", 8, "diag", fn=d_three("丸い畑で育つもの", [("とうもろこし", ""), ("小麦", ""), ("ソルガム", "きびの仲間")]), why="作物")
-    add("S29", 8, "map", **MAPV(KANSAS), layers=[dots(["ガーデンシティ", "ホルコム", "ダッジシティ", "リベラル"], 0.3, 0.4)], why="牛肉の町")
+    add("S29", 8, "map", **MAPV(KANSAS), layers=[L_kansas(0.0), dots(["ガーデンシティ", "ホルコム", "ダッジシティ", "リベラル"], 0.3, 0.4)], why="牛肉の町")
     add("S29", 4, "diag", at="一九八〇年", fn=d_year("1980年", "ホルコム", "当時世界最大の牛肉の工場"), why="1980")
     add("S30", 8, "diag", fn=d_bars("日本のとうもろこしの輸入（2023年）", [("アメリカ", 46), ("ブラジル", 45)], "%"), why="米国46%")
     add("S30", 7, "diag", at="小麦は二〇二四年", fn=d_bars("日本の小麦の輸入（2024年）", [("アメリカ", 211), ("カナダ", 201), ("オーストラリア", 109)], "万トン"), why="小麦")
@@ -717,14 +731,14 @@ def shots():
     add("S33", 9, "diag", fn=d_bars("取り出せる水の変化", [("1950年ごろ→2019年", 3530), ("2017→2019年（増えた分）", 20)], "億m³"), why="戻るのは1%未満")
     add("S34", 10, "diag", fn=d_rain, why="約2%")
     add("S34", 6, "diag", at="地下に届く水の九十五", fn=d_compare("地下に届く水の入り口", ("プラヤ（くぼ地）", "95%", "面積の5%"), ("それ以外", "5%", "面積の95%")), why="プラヤ")
-    add("S35", 8, "map", **MAPV(KANSAS), layers=[L_tint(-102.05, -99.5, RE, 0.4, 0.18, (37.0, 40.0)), L_text(-100.6, 39.95, "25年未満の地域が多い（2000年の地図）", 0.8, 38, RE)], why="KGS（範囲は概略）")
+    add("S35", 8, "map", **MAPV(KANSAS), layers=[L_kansas(0.0), L_tint(-102.05, -99.5, RE, 0.4, 0.18, (37.0, 40.0)), L_text(-98.3, 40.4, "西カンザス：25年未満の地域が多い（2000年の地図）", 0.8, 40, RE)], why="KGS（範囲は概略）")
     add("S36", 7, "diag", fn=d_big("節水型でも", "層は少しずつ干上がる"), why="節水しても")
-    add("S37", 7, "map", **MAPV(KANSAS), layers=[dots(["シェリダン郡"], 0.3)], why="シェリダン郡")
+    add("S37", 7, "map", **MAPV(KANSAS), layers=[L_kansas(0.0), dots(["シェリダン郡"], 0.3)], why="シェリダン郡")
     add("S37", 7, "diag", at="二〇一三年", fn=d_compare("くみ上げる水", ("計画（2013年）", "−20%", ""), ("4年後", "−35%", "")), why="−35%")
     add("S37", 7, "diag", at="地下の水面の下がり方は", fn=d_compare("水面の下がり方（1年あたり）", ("2002〜2012年", "約60cm", ""), ("2013〜2022年", "約15cm", "")), why="60cm→15cm")
     # 第6章
     add("S38", 4, "card", kicker="第6章", title="砂漠の丸", why="章の扉")
-    add("S38", 6, "globe", at="同じ丸い畑は", lon=(262, 403), lat=(38, 27), r=(460, 520), cy=560, why="地球の反対側へ")
+    add("S38", 6, "globe", lon=(262, 403), lat=(38, 27), r=(460, 520), cy=560, why="地球の反対側へ")
     add("S38", 10, "diag", at="一九八四年の", fn=d_sand, why="1984→2011（模式図）")
     add("S39", 8, "diag", fn=d_big("約2万年前の水", "サウジアラビアの井戸がくむ水"), why="化石水")
     add("S39", 6, "diag", at="雨は一年に", fn=d_bars("1年の雨", [("サウジアラビア（100〜200）", 200), ("ガーデンシティ", 497), ("日本の平均", 1700)], "mm"), why="雨100〜200mm（棒は上限）")
@@ -736,6 +750,7 @@ def shots():
     add("S41", 10, "diag", at="西経百度の線の西は", fn=d_three("丸い畑ができるまで", [("雨が足りない", "西経100度の西"), ("四角い区画", "開拓の碁盤"), ("回る機械", "井戸が中心"), ("地下の水", "日本より広い層")]), why="まとめ")
     add("S42", 8, "diag", fn=d_pivot_top, why="真ん中に井戸")
     add("S42", 6, "diag", at="その水は", fn=d_biwa, why="琵琶湖13杯")
+    add("S42", 3, "diag", fn=d_biwa, why="琵琶湖13杯（続き）")
     add("S42", 6, "card", title="地球の事情", sub="地理・歴史・経済で、世界を読み解く", foot="音声：VOICEVOX:雀松朱司", why="締め")
     return S
 

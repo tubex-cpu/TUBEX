@@ -119,7 +119,7 @@ def main():
     out = []
     for sc in tim["scenes"]:
         for se in sc["sentences"]:
-            cards = cards_for(se["text"])
+            cards = cards_for(se["text"].replace("キロメートルから八百", "キロメートルから、八百"))  # chizu-010: split a long phrase for display
             secs = [sum(phrase_secs(p) for p in c) for c in cards]
             tot = sum(secs) or 1
             t = se["start"]
