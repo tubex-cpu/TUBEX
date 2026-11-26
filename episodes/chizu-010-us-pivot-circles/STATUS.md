@@ -11,7 +11,7 @@
 | 企画書 | ゲートA：社長「このまま動画制作まで貫通して」 | `03_plan.md`、`04_titles.md` |
 | 台本 | v1 作成（2026-11-26）。Codex 監査待ち | `05_script.md` |
 | 動画 | 書き出し済み（2026-11-26。3D版 15分52秒、1920×1080、-15.1 LUFS。ナレーション VOICEVOX:雀松朱司 949.8秒）。フル画質は git 外 `pilots/chizu-3d/out/pc/chizu-010-us-pivot-circles_full_3d.mp4`（167MB）。ゲートB 待ち | `preview_3d.mp4`（軽量版）、`audio/`、`subtitles.srt`、`render/render.py`、`07_description.md` |
-| サムネ | 未着手（3組は `04_titles.md`） | — |
+| サムネ | Gemini への依頼文を作成（2026-11-26 社長指示）。社長が Gemini に貼る → 成果物を Claude が監査 | `06_thumbnail.md`、`06_thumbnail_gemini.md` |
 
 ## 公開前QC
 - `01_research.md` の全行（⚠）を一次資料の本文と照合する。とくに U02・U04・U06・U11・U12・U21・U33・U35・U37〜U43・U57
