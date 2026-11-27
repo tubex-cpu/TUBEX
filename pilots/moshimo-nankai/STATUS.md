@@ -4,3 +4,4 @@
 - 2026-11-27 リサーチ `01_research.md`（国交省 南海トラフ巨大地震対策計画 第4版ほか。内閣府・気象庁の原文は未確認）
 - 2026-11-27 企画書 `03_plan.md`、台本 第1稿 `03_script.md`（27場面、見込み約12分）、Google ドキュメント https://docs.google.com/document/d/1YQAEKTmhniLbP5oxgvJ87iOG8sBNNxF6rPxmzLI-54U/edit
 - 次：社長の台本確認 → ナレーション → 3D映像の制作
+- 2026-11-27 台本 第2稿（社長の修正とコメントを反映、最悪の場合に変更、見込み約15分）。Google ドキュメントは同じリンクで更新
