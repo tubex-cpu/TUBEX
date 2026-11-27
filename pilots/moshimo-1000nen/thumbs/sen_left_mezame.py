@@ -42,9 +42,9 @@ def fit(text, w):
     s = 300
     while ImageFont.truetype(FONT, s).getlength(text) > w: s -= 2
     return s
-s1 = fit('目が覚めると', 520); s2 = fit('千年後の世界', 600)
-f, w1, h1 = line([('目が覚めると', MOON)], 36, 46, s1)
-f2, w2, h2 = line([('千年後', GOLD), ('の世界', MOON)], 36, 46 + h1 + 40, s2)
-print('text bottom', 46 + h1 + 40 + h2, 'right', 36 + w2)
+s1 = fit('目が覚めると', 620); s2 = fit('千年後の世界', 700)
+f, w1, h1 = line([('目が覚めると', MOON)], 30, 30, s1)
+f2, w2, h2 = line([('千年後', GOLD), ('の世界', MOON)], 36, 30 + h1 + 24, s2)
+print('text bottom', 30 + h1 + 24 + h2, 'right', 36 + w2)
 img = base.convert('RGB')
 out = 'sen_chic_' + __import__('sys').argv[2] + '.png'; img.save(out); img.resize((320, 180), Image.LANCZOS).save(out.replace('.png', '_320.png')); print(out, s1, s2)
