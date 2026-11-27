@@ -332,3 +332,108 @@ def nNotOver(n):  # 一度揺れたら、終わり、ではない（夕暮れの
     cam_path(cam, [(0, (-40, -50, 26), (0, 12, 2)), (1, (-36, -46, 24), (0, 14, 2))], n)
     shake(cam, int(n * 0.6), n, amp=0.2, rot=0.01, seed=23, ramp=3)
     return NB('city', rumble=[(int(n * 0.6), n, 0.5)])
+
+
+# ---------------- 台本の追記（2）：SCENE 02 の震度7の説明（章1）、SCENE 31 の締め（章30） ----------------
+SHINDO = ['0', '1', '2', '3', '4', '5弱', '5強', '6弱', '6強', '7']
+
+
+def shindo_scale(n, f_lit=1, miyagi=False):
+    """震度の目盛り（十段階）。一番上の 7 が赤く光る（模式）"""
+    s = bpy.context.scene
+    sky(hexc('#1a2232')); s.view_settings.exposure = 0.35; no_shadow()
+    plane((0, 2, -0.1), (200, 200), hexc('#1a2232'))
+    for k, t in enumerate(SHINDO):
+        x = -18 + k * 4.0; h = 1.5 + k * 1.2
+        c = (0.35 + 0.06 * k, 0.4 + 0.03 * k, 0.5 - 0.02 * k) if k < 9 else (0.45, 0.45, 0.5)
+        box((x, 0, h / 2), (3.2, 2.0, h), c)
+        text3d(t, (x, -1.2, h + 0.5), 2.0, (0.92, 0.94, 1.0), rot=(math.pi / 2, 0, 0))
+    top = box((18, -0.02, (1.5 + 9 * 1.2) / 2), (3.3, 2.05, 1.5 + 9 * 1.2 + 0.05), (1.0, 0.18, 0.12))
+    appear(top, f_lit, grow=6)
+    halo = ball((18, 0, 14.4), 1.6, (1.0, 0.35, 0.25), a=0.35, seg=16, name='glow')
+    appear(halo, f_lit + 4, grow=6)
+    if miyagi:
+        text3d('東日本大震災の宮城と同じ', (8, -1.2, 16.5), 1.6, (1, 0.85, 0.8), rot=(math.pi / 2, 0, 0), f=None) if False else \
+            appear(text3d('東日本大震災の宮城と同じ', (8, -1.2, 16.5), 1.6, (1, 0.85, 0.8), rot=(math.pi / 2, 0, 0)), int(n * 0.2), grow=5)
+
+
+def nShindoScale(n):  # 震度7は、日本で使う、十段階の揺れの、一番上（目盛り：模式）
+    shindo_scale(n, f_lit=int(n * 0.35))
+    cam = camera(30)
+    cam_path(cam, [(0, (-4, -42, 7), (0, 0, 6)), (1, (2, -38, 8), (4, 0, 7))], n)
+    return NB('silent')
+
+
+def nShindoMiyagi(n):  # 東日本大震災で、宮城を襲ったのと、同じ揺れ
+    shindo_scale(n, f_lit=1, miyagi=True)
+    cam = camera(32)
+    cam_path(cam, [(0, (10, -30, 11), (14, 0, 11)), (1, (12, -28, 12), (15, 0, 12))], n)
+    return NB('silent')
+
+
+def quake_room(n, cling=True, seed=451):
+    """家の中：たんす・冷蔵庫が床を滑り、テレビが台から跳ねて飛ぶ。床にしがみつく人（けがは描かない）"""
+    s = bpy.context.scene
+    sky(hexc('#c8ccd0')); s.view_settings.exposure = 0.4; no_shadow()
+    interior_box(7, 6, 2.5, hexc('#b48a63'), hexc('#efe8dc'))
+    rnd = random.Random(seed)
+    tansu = empty((-2.6, 2.6, 0), 'tansu'); lbox(tansu, (0, 0, 0.9), (1.2, 0.5, 1.8), hexc('#8a6a48'))
+    for z in (0.4, 0.9, 1.4):
+        lbox(tansu, (0, -0.26, z), (1.0, 0.02, 0.35), hexc('#6a5038'))
+    fridge = empty((2.8, 2.5, 0), 'fridge'); lbox(fridge, (0, 0, 0.9), (0.7, 0.7, 1.8), hexc('#e8ecee'))
+    stand = box((0, 2.7, 0.25), (1.6, 0.45, 0.5), hexc('#6a5040'))
+    tv = empty((0, 2.7, 0.5), 'tvj'); lbox(tv, (0, 0, 0.45), (1.3, 0.08, 0.8), hexc('#1a1a1c')); lbox(tv, (0, -0.045, 0.45), (1.2, 0.01, 0.7), hexc('#2a3a4a'))
+    for o, keys in ((tansu, [(20, 0.3, -0.4), (45, 0.6, -0.9), (80, 0.9, -1.5)]), (fridge, [(25, -0.3, -0.5), (55, -0.5, -1.2), (90, -0.9, -1.8)])):
+        slide(o, n, 6, keys)
+        o.keyframe_insert('rotation_euler', frame=6); o.rotation_euler.z = rnd.uniform(-0.4, 0.4); o.keyframe_insert('rotation_euler', frame=90)
+    f = 14
+    tv.keyframe_insert('location', frame=1); tv.keyframe_insert('location', frame=f); tv.keyframe_insert('rotation_euler', frame=f)
+    for k, (dy, dz, rx) in enumerate([(-0.3, 0.5, -0.4), (-0.8, 0.3, -0.9), (-1.2, -0.45, -1.5)]):
+        tv.location = (0.2 * k, 2.7 + dy, 0.5 + dz); tv.rotation_euler = (rx, 0, 0.2 * k)
+        tv.keyframe_insert('location', frame=f + 4 + k * 4); tv.keyframe_insert('rotation_euler', frame=f + 4 + k * 4)
+    mbox([(rnd.uniform(-3, 3), rnd.uniform(-2, 2.5), 0.03, rnd.uniform(0.1, 0.3), rnd.uniform(0.1, 0.3), 0.05) for _ in range(20)], hexc('#d9c08a'), 'fallen')
+    if cling:
+        for i, (x, y) in enumerate([(-0.8, -0.8), (1.0, -1.2)]):
+            crouch_person((x, y, 0), rnd, rot_z=rnd.uniform(-0.6, 0.6), name=f'qc{i}')
+
+
+def nRoomCling(n):  # 人は、揺れに振り回され、自分の意思では、一歩も動けない
+    quake_room(n)
+    cam = camera(26)
+    cam_path(cam, [(0, (-2.6, -2.6, 1.5), (0.5, 0.5, 0.4)), (1, (-2.4, -2.4, 1.45), (0.5, 0.5, 0.4))], n)
+    shake(cam, 1, n, amp=0.12, rot=0.03, seed=41, ramp=2)
+    return NB('room', rumble=[(1, n, 1.0)])
+
+
+def nFurnitureSlide(n):  # 家の中の家具は、ほとんどが滑り出し、テレビが、跳ねて飛ぶ
+    quake_room(n, seed=452)
+    cam = camera(24)
+    cam_path(cam, [(0, (0.2, -2.6, 1.4), (0, 2.2, 0.8)), (1, (0.1, -2.4, 1.35), (0, 2.2, 0.8))], n)
+    shake(cam, 1, n, amp=0.1, rot=0.025, seed=42, ramp=2)
+    return NB('room', rumble=[(1, n, 1.0)], crash=[(18, 0.7), (40, 0.4)])
+
+
+def nLessonDusk(n):  # 南海トラフの巨大地震は、一度で終わらないことがある（高台から見る夕暮れの海沿いの町）
+    kochi(n, lit=0.25, seed=461)
+    day_light('#e8a878', 0.32)
+    sky_keys([(1, hexc('#e8a878')), (n, hexc('#c08890'))])
+    sun_disc(1.57, 0.05, R=900, r=30, c=(1.0, 0.62, 0.3))
+    y = HILL_Y - 70
+    cam = camera(28)
+    cam_path(cam, [(0, (-30, y, slope_z(y) + 10), (0, 40, 0)), (1, (-24, y + 4, slope_z(y + 4) + 10), (4, 50, 0))], n)
+    return NB('sea')
+
+
+def nLessonHill(n):  # 揺れたら、すぐに高い所へ。巨大地震警戒が出たら、一週間（高台に立つ人々と夕暮れの海）
+    kochi(n, lit=0.25, seed=462)
+    day_light('#d89878', 0.3)
+    sky_keys([(1, hexc('#c08890')), (n, hexc('#7a6a90'))])
+    sun_disc(1.57, 0.03, R=900, r=30, c=(1.0, 0.55, 0.3))
+    rnd = random.Random(463)
+    y = HILL_Y - 62
+    for i in range(10):
+        x = rnd.uniform(-16, -4); yy = y + rnd.uniform(-3, 3)
+        crowd_person((x, yy, slope_z(yy)), rnd, rot_z=math.pi + rnd.uniform(-0.3, 0.3), name=f'lh{i}')
+    cam = camera(30)
+    cam_path(cam, [(0, (-10, y - 10, slope_z(y - 10) + 2.4), (-8, 30, 2)), (1, (-9, y - 9, slope_z(y - 9) + 2.4), (-8, 40, 2))], n)
+    return NB('sea')

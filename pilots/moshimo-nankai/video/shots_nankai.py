@@ -6,7 +6,7 @@ from ns4 import *
 # 章 -> [(その章の何行目から（-1＝章の頭）, カット関数)]
 SHOTS = {
     0: [(-1, nPortNoon), (2, nBento), (3, nPhones), (4, nJolt), (6, nCrawl), (7, nSignsFall), (8, nGlass), (9, nShakeLong)],
-    1: [(-1, nMapQuake), (1, nMapTrough), (2, nMapM91), (3, nMapShindo), (4, nOldHouse)],
+    1: [(-1, nMapQuake), (1, nMapTrough), (2, nMapM91), (3, nMapShindo), (4, nShindoScale), (5, nShindoMiyagi), (6, nRoomCling), (7, nFurnitureSlide), (8, nOldHouse)],
     2: [(-1, nRunOut), (1, nSpeaker), (3, nElderHand), (4, nChildCarry), (5, nTowerRush), (6, nNoTime)],
     3: [(-1, nSeaView), (1, nWhiteSwell), (3, nQuayOver), (4, nBoatCarry)],
     4: [(-1, nWave2), (2, nLeveeOver), (3, nBlackClose), (5, nCarsFloat), (6, nHouseSwept), (7, nRoofsUnder)],
@@ -40,6 +40,6 @@ SHOTS = {
     28: [(-1, nTwoWeeks), (2, nNightWork), (3, nSandbags), (4, nSDFClear), (5, nCombMap), (6, nRoads43k), (7, nRails19k), (8, nMudVolunteers), (9, nSoupKitchen), (10, nTownRepair)],
     29: [(-1, nEdoIntro), (1, nEdoMorning), (2, nKumanoWave), (3, nShimodaShip), (4, nEdoEvening), (5, nEdoMapWest), (6, nKiiVillageWave), (7, nRiceFire), (8, nVillagersClimb),
          (9, nHoeiIntro), (10, nTosaWave), (11, nHighGround), (12, nSameWay)],
-    30: [(-1, nMonthLater), (1, nTomeiOpen), (2, nTrucksFirst), (3, nFreightMoves), (4, nShelvesRefill), (5, nSurvey), (6, nFirstFamily)],
+    30: [(-1, nMonthLater), (1, nTomeiOpen), (2, nTrucksFirst), (3, nFreightMoves), (4, nShelvesRefill), (5, nSurvey), (6, nFirstFamily), (7, nLessonDusk), (9, nLessonHill)],
     31: [(-1, nEnd)],
 }
