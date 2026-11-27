@@ -58,6 +58,8 @@ def tint_all(kind='gray', amt=0.75):
             t = (l * 0.98, l * 0.98, l * 1.02)
         return tuple(c[i] * (1 - amt) + t[i] * amt for i in range(3))
     for m in bpy.data.materials:
+        if m.name.startswith(('glow', 'beam', 'phglow')):
+            continue
         if m.use_nodes and m.node_tree and any(nd.type == 'TEX_IMAGE' for nd in m.node_tree.nodes):
             continue
         c = m.diffuse_color

@@ -130,6 +130,65 @@ def heartbeats(n, bpm1=72.0, bpm2=63.0):
     return beat(bpm1, 55.0), beat(bpm2, 48.0)
 
 
+def _lp(x, k):
+    return np.convolve(x, np.ones(k, np.float32) / k, mode='same').astype(np.float32)
+
+
+def quake_rumble(n):
+    """地鳴り：低くこもったノイズと、30〜40Hz のうなり（強弱がゆっくり変わる）"""
+    t = np.arange(n) / SR
+    w = _lp(_lp(rng.standard_normal(n).astype(np.float32), 300), 300) * 9.0
+    hum = np.sin(2 * np.pi * 34 * t) * 0.35 + np.sin(2 * np.pi * 47 * t + 1) * 0.2
+    env = (0.65 + 0.35 * np.sin(2 * np.pi * 0.7 * t) * np.sin(2 * np.pi * 0.23 * t + 2)).astype(np.float32)
+    fade = np.minimum(1, np.minimum(np.arange(n), n - np.arange(n)) / (0.4 * SR)).astype(np.float32)
+    return ((w + hum.astype(np.float32)) * env * fade * 0.5).astype(np.float32)
+
+
+def water_roar(n):
+    """水の轟音：中低域のノイズを波のようにうねらせる"""
+    t = np.arange(n) / SR
+    w = rng.standard_normal(n).astype(np.float32)
+    b = (_lp(w, 25) - _lp(w, 180)) * 2.5 + _lp(w, 120) * 1.5
+    env = (0.7 + 0.3 * np.sin(2 * np.pi * 0.31 * t) * np.sin(2 * np.pi * 0.11 * t + 1)).astype(np.float32)
+    fade = np.minimum(1, np.minimum(np.arange(n), n - np.arange(n)) / (0.6 * SR)).astype(np.float32)
+    return (b * env * fade * 0.35).astype(np.float32)
+
+
+def crash_hit():
+    """物が崩れ落ちる音（短い低いノイズの塊）"""
+    d = 1.2; n = int(d * SR); t = np.arange(n) / SR
+    w = _lp(rng.standard_normal(n).astype(np.float32), 40) * 3.0
+    env = np.exp(-t / 0.35) * np.minimum(1, t / 0.01)
+    return (w * env * 0.6).astype(np.float32)
+
+
+def alert_tone():
+    """スマホの警報（架空の音）：二つの高さを交互に短く鳴らす"""
+    d = 2.4; n = int(d * SR); t = np.arange(n) / SR
+    f = np.where((t * 4).astype(int) % 2 == 0, 880.0, 1175.0)
+    x = np.sign(np.sin(2 * np.pi * np.cumsum(f) / SR)) * 0.25 + np.sin(2 * np.pi * np.cumsum(f) / SR) * 0.5
+    gate = ((t * 8).astype(int) % 2 == 0).astype(np.float32)
+    env = np.minimum(1, (d - t) / 0.2)
+    return (x * gate * env * 0.22).astype(np.float32)
+
+
+def pa_chime(n):
+    """防災無線・構内放送（遠くの音）：四秒ごとの低いチャイムを残響で遠くに"""
+    out = np.zeros(n, np.float32)
+    k = np.arange(int(1.6 * SR)) / SR
+    tone = lambda f: (np.sin(2 * np.pi * f * k) * np.exp(-k / 0.5)).astype(np.float32)
+    seq = [(0.0, 659.0), (0.5, 523.0), (1.0, 587.0), (1.5, 392.0)]
+    p = 0.3
+    while p < n / SR:
+        for off, f in seq:
+            a = int((p + off) * SR); e = min(n, a + len(k))
+            if a < n:
+                out[a:e] += tone(f)[:e - a]
+        p += 6.0
+    out = reverb(_lp(out, 6), 0.6, 0.12)
+    return out * 0.08
+
+
 def bank(nv=24):
     """鳴き声の素材を前もって作る（高さ違い）"""
     out = []
@@ -225,6 +284,24 @@ def sfx():
         if ins > 0:
             b = insects(n) * 0.05 * ins
             L[s0:s1] += b; Rr[s0:s1] += np.roll(b, 331)
+        # 地震・津波の音（別企画が meta に入れたときだけ。南海トラフの動画）
+        for key, fn in (('rumble', quake_rumble), ('roar', water_roar)):
+            for f0, f1, g in m.get(key, []):
+                a = s0 + int((f0 - 1) / FPS * SR); b = min(s1, s0 + int((f1 - 1) / FPS * SR))
+                if b - a > SR // 10:
+                    x = fn(b - a) * g
+                    L[a:b] += x; Rr[a:b] += np.roll(x, 211)
+        for f, g in m.get('crash', []):
+            pos = s0 + int((f - 1) / FPS * SR); v = crash_hit() * g
+            e = min(N, pos + len(v)); L[pos:e] += v[:e - pos]; Rr[pos:e] += v[:e - pos] * 0.9
+        for f in m.get('alert', []):
+            pos = s0 + int((f - 1) / FPS * SR); v = alert_tone()
+            e = min(N, pos + len(v)); L[pos:e] += v[:e - pos]; Rr[pos:e] += v[:e - pos]
+        for f0, f1 in m.get('speaker', []):
+            a = s0 + int((f0 - 1) / FPS * SR); b = min(s1, s0 + int((f1 - 1) / FPS * SR))
+            if b - a > SR // 2:
+                x = pa_chime(b - a)
+                L[a:b] += x; Rr[a:b] += np.roll(x, 1500)
         # 環境音
         amb = m.get('amb', 'day'); g = AMB_GAIN.get(amb, 0.03)
         if g > 0:

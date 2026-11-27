@@ -858,7 +858,7 @@ def edo_village(n, seed=321, wave=None, flood_z=None, dusk=False, frigate_=False
     plane((0, 150, -0.6), (1200, 300), hexc('#4a7090'), name='sea')
     plane((0, 6, 0.0), (1200, 12), hexc('#d6c8a0'), name='beach')
     def hfn(x, y):
-        return 0.0 if y > 0 else min(40.0, (-y) ** 1.25 * 0.08)
+        return 0.0 if y > 0 else 0.08 * min(-y, 100.0) ** 1.25
     terrain((800, 260), 50, hfn, hexc('#7a8a5a'), 'land', x0=-400, y0=-260)
     rnd = random.Random(seed)
     pine_row(-150, 150, 2, k=36, seed=seed)
@@ -966,7 +966,7 @@ def inamura(n, rnd, k=8, y=-120, x0=-12, f0=1, man=True, hfn=None):
     for i in range(k):
         x = x0 + i * 3.4; yy = y + rnd.uniform(-3, 3)
         cone((x, yy, z + 1.0), 1.0, 2.0, hexc('#c8a050'), verts=10)
-        g = ball((x, yy, z + 2.3), 0.55, (1.0, 0.62, 0.22), a=0.9, seg=10, name='glow')
+        g = ball((x, yy, z + 2.3), 0.55, (1.0, 0.42, 0.08), a=0.95, seg=10, name='glow')
         appear(g, f0 + i * 10, grow=6)
         for f in range(f0 + i * 10, n + 6, 6):
             g.scale = (1.0 + 0.15 * ((f // 6) % 2),) * 3; g.keyframe_insert('scale', frame=f)
@@ -1005,7 +1005,7 @@ def nVillagersClimb(n):  # 村の人は、その火を目印に、高台へ上�
         run_to(p, pts, 1 + rnd.randint(0, 20), speed=rnd.uniform(1.8, 2.6))
     tint_all('washi', 0.5)
     cam = camera(28)
-    cam_path(cam, [(0, (12, -30, hfn(0, -30) + 5), (0, -90, hfn(0, -90) + 2)), (1, (10, -38, hfn(0, -38) + 5), (0, -96, hfn(0, -96) + 2))], n)
+    cam_path(cam, [(0, (8, -4, 7), (0, -60, hfn(0, -60) + 1)), (1, (8, -12, hfn(0, -12) + 7), (0, -70, hfn(0, -70) + 1))], n)
     return NB('night')
 
 
