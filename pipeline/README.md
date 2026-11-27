@@ -3,7 +3,8 @@
 | チャンネル | 設定 | 本数・尺 |
 |---|---|---|
 | ① ハビ判事の都市伝説ジャッジ | `channels/habi-judge/CHANNEL.md` | 週2〜3本・20〜30分 |
-| ②③ 新規2チャンネル（未設計・社長の目標の対象） | `channels/new-channels/CHANNEL.md` | ジャンル選定中（工程0） |
+| ② ヒト図鑑（脳科学・研究と統計で2人を比べる。社長の目標の対象） | `channels/hito-zukan/CHANNEL.md` | 1本 約11〜14分 |
+| ③ 新規チャンネル（未設計・社長の目標の対象） | `channels/new-channels/CHANNEL.md` | ジャンル選定中（工程0） |
 
 構成・口調・判決ルールなどチャンネル固有の決まりは `CHANNEL.md` が正。この README は全チャンネル共通の工程と費用ルール。
 
