@@ -27,7 +27,8 @@ for ((i=0; i<N; i++)); do s=$((i*CH)); e=$((s+CH-1)); [ $e -ge $TOTAL ] && e=$((
     npx remotion render $COMP $C/v$n.mp4 --frames=$s-$e --muted --crf=$CRF --browser-executable=$BR --log=error --concurrency=4; fi
   echo "file 'v$n.mp4'" >> $C/list.txt
 done
-# 2. 音声も10分ずつ（1時間を一度に書き出すとブラウザが落ちる）
+# 2. 音声も10分ずつ（1時間を一度に書き出すとブラウザが落ちる）。まとめた audio.wav があれば（再実行時）とばす
+if [ ! -s $C/audio.wav ]; then
 for ((i=0; i<N; i++)); do s=$((i*CH)); e=$((s+CH-1)); [ $e -ge $TOTAL ] && e=$((TOTAL-1)); n=$(printf %02d $i)
   if [ ! -s $C/a$n.wav ]; then echo "audio $i $(date +%T)"
     npx remotion render $COMP $C/a$n.wav --codec=wav --frames=$s-$e --browser-executable=$BR --log=error --concurrency=4; fi
@@ -37,10 +38,12 @@ echo "encode $(date +%T)"
 ffmpeg -loglevel error -y -f concat -safe 0 -i $C/alist.txt -af loudnorm=I=-14:TP=-1.5:LRA=11 -ar 48000 $C/audio.wav
 # ディスクを節約：区間ごとの音声は、まとめたら消す
 rm -f $C/a[0-9]*.wav
+fi
 
 # 3. 1本の1080pにまとめる（映像 VB kbps・音声128kbps。1150kbpsなら1時間で約580MB）
 F=out/$NAME-1080p.mp4
-ffmpeg -loglevel error -y -f concat -safe 0 -i $C/list.txt -c:v libx264 -preset slow -tune stillimage -b:v ${VB}k -pass 1 -passlogfile out/pass1080 -an -f mp4 /dev/null
+# 1パス目の記録が残っていれば（再実行時）とばす
+[ -s out/pass1080-0.log.mbtree ] || ffmpeg -loglevel error -y -f concat -safe 0 -i $C/list.txt -c:v libx264 -preset slow -tune stillimage -b:v ${VB}k -pass 1 -passlogfile out/pass1080 -an -f mp4 /dev/null
 ffmpeg -loglevel error -y -f concat -safe 0 -i $C/list.txt -i $C/audio.wav -map 0:v -map 1:a -c:v libx264 -preset slow -tune stillimage -b:v ${VB}k -pass 2 -passlogfile out/pass1080 -c:a aac -b:a 128k -shortest -movflags +faststart $F
 echo "full $(du -m $F | cut -f1)MB $(date +%T)"
 rm -f out/pass1080*.mbtree
