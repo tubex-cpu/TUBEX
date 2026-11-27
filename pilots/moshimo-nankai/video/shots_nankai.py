@@ -1,7 +1,7 @@
 """「もしも南海トラフ巨大地震が起きたら」のカット表（render_shot.py が NEKO_SHOTS=shots_nankai のときに読む）。
-部品は nk.py（千年眠る動画の mk.py の上に足す）、カットは ns1.py（章0〜10）・ns2.py（章11〜20）・ns3.py（章21〜30・エンドカード）。
+部品は nk.py（千年眠る動画の mk.py の上に足す）、カットは ns1.py（章0〜10）・ns2.py（章11〜20）・ns3.py（章21〜30・エンドカード）、ns4.py（台本の追記：章13・15・16・18 の追加カット）。
 台本：../03_script.md（SCENE 01〜31 ＝ 章0〜30、章31 ＝ エンドカード）。返り値 meta は nk.NB()"""
-from ns3 import *
+from ns4 import *
 
 # 章 -> [(その章の何行目から（-1＝章の頭）, カット関数)]
 SHOTS = {
@@ -18,12 +18,16 @@ SHOTS = {
     10: [(-1, nNagoyaLow), (2, nMallEntrance), (3, nStairsFall), (4, nClimbUp), (5, nRailGrip), (6, nKneeWaist), (7, nNoExit), (8, nMallDays)],
     11: [(-1, nKantoMap), (1, nBeach40), (3, nBeachOver), (4, nThirdFloor), (5, nTokyoBay), (6, nRiverBack), (7, nIzuIsland)],
     12: [(-1, nStationFull), (1, nGates), (2, nSitFloor), (3, nCalls), (4, nDeadPhone), (5, nBoard), (6, nMillions), (7, nTokyoGate)],
-    13: [(-1, nMapLater), (2, nEastHalf), (3, nWestQuiet), (4, nNewsAlert), (5, nEvacCall)],
+    13: [(-1, nMapLater), (2, nEastHalf), (3, nWestQuiet), (4, nNewsAlert), (5, nEvacCall), (6, nEvacWeek), (8, nWeekWait)],
     14: [(-1, nWalkHome), (1, nWalkAerial), (2, nSidewalk), (3, nKonbiniEmpty), (4, nTowerLit)],
-    15: [(-1, nKochiNight), (2, nFamilyHill), (3, nLightsStay), (4, nWorkPrep), (5, nCareBed), (6, nTVCalm), (7, nHousesLit), (8, nCalmSea), (9, nEerie)],
-    16: [(-1, nPreDawn), (1, nMapWest), (2, nQuake2), (3, nWakeUp), (4, nLightsOut2), (5, nPhoneGlow)],
+    15: [(-1, nYaizuNight), (2, nVoiceRubble), (3, nBlanketHouse), (4, nCrackedPillar), (5, nKochiNight), (7, nFamilyHill), (8, nLightsStay), (9, nWorkPrep),
+         (10, nCareBed), (11, nTVCalm), (12, nHousesLit), (13, nCalmSea), (14, nEerie), (15, nKochiNoon), (17, nShelterLeave), (18, nShutter),
+         (19, nDogHome), (20, nTVKeikai), (21, nSeaDay)],
+    16: [(-1, nPreDawn), (1, nMapWest), (2, nQuake2), (3, nWakeUp), (4, nLightsOut2), (5, nPhoneGlow), (6, nPhoneClose), (7, nMapBelow),
+         (8, nShinjukuDawn), (10, nOfficeCling), (11, nElevAgain)],
     17: [(-1, nOffshoreWall), (1, nWave34), (3, nFlashSlope), (4, nWaveBehind), (5, nHilltopLook), (6, nTownEngulf), (7, nEarlyEvac), (8, nStayedHouses), (9, nDawnWater)],
-    18: [(-1, nYaizuShake2), (1, nHouseFall2), (2, nFireBack), (3, nWaitRubble)],
+    18: [(-1, nYaizuShake2), (1, nHouseFall2), (2, nFireBack), (3, nDoorEscape), (4, nWaitRubble), (5, nAftershocks), (6, nTohokuMemory),
+         (7, nShowaMap), (8, nNotOver)],
     19: [(-1, nTVDisaster), (1, nNoFootage), (2, nNoSignal), (3, nTownList), (4, nHeliGround)],
     20: [(-1, nKiiMount), (1, nSlopeFall), (2, nDamForm), (3, nLakeRise), (4, nDownstream), (5, nVillageLeave)],
     21: [(-1, nGymWide), (2, nCardboard), (3, nArrive), (4, nTapDry), (5, nWaterLine), (6, nToilet), (7, nNightGym)],
