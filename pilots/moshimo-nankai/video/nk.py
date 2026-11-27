@@ -395,11 +395,34 @@ def _split(pts, lon, east=True):
     return sorted(out, key=lambda p: -p[0])
 
 
-def zone(part='all', z=0.3, rgb=(1.0, 0.12, 0.1), a=0.55, f0=None, grow_dur=36, name='zone'):
+def zone(part='all', z=0.3, rgb=(1.0, 0.25, 0.2), a=0.72, f0=None, grow_dur=36, name='zone'):
     """震源域の赤い帯。part='all'/'east'/'west'。f0 を渡すと東から西へ伸びて出る"""
-    up, lo = ZONE_UP, TROUGH
-    if part != 'all':
-        up = _split(ZONE_UP, SPLIT_LON, part == 'east'); lo = _split(TROUGH, SPLIT_LON, part == 'east')
+    def resample(pts, t0, t1, N=28):
+        d = [0.0]
+        for i in range(len(pts) - 1):
+            d.append(d[-1] + math.hypot(pts[i + 1][0] - pts[i][0], pts[i + 1][1] - pts[i][1]))
+        L = d[-1]
+        def at(t):
+            x = t * L
+            for i in range(len(pts) - 1):
+                if d[i] <= x <= d[i + 1] + 1e-9:
+                    u = (x - d[i]) / max(1e-9, d[i + 1] - d[i])
+                    return (pts[i][0] + (pts[i + 1][0] - pts[i][0]) * u, pts[i][1] + (pts[i + 1][1] - pts[i][1]) * u)
+            return pts[-1]
+        return [at(t0 + (t1 - t0) * k / (N - 1)) for k in range(N)]
+    def tsplit(pts):
+        best = 0.5
+        for k in range(1001):
+            t = k / 1000
+            if resample(pts, t, t, 2)[0][0] <= SPLIT_LON:
+                return t
+        return best
+    if part == 'all':
+        up = resample(ZONE_UP, 0, 1); lo = resample(TROUGH, 0, 1)
+    elif part == 'east':
+        up = resample(ZONE_UP, 0, tsplit(ZONE_UP)); lo = resample(TROUGH, 0, tsplit(TROUGH))
+    else:
+        up = resample(ZONE_UP, tsplit(ZONE_UP), 1); lo = resample(TROUGH, tsplit(TROUGH), 1)
     o = _strip_mesh(up, lo, z, rgb, a, name)
     if f0 is not None:
         # 東の端を支点に x 方向へ伸ばす
@@ -622,7 +645,7 @@ def bob_rock(o, n, amp=0.12, rot=0.05, period=60, seed=1):
         o.keyframe_insert('rotation_euler', frame=f)
 
 
-def harbor_town(n, seed=1, people=True, quay_people=True, lit=None, damaged=False, sea_c=SEA, boats=True, shops=True, tower=True):
+def harbor_town(n, seed=1, people=True, quay_people=True, lit=None, damaged=False, sea_c=SEA, boats=True, shops=True, tower=True, far=True):
     """焼津のような港町（模式）。海は +y（y>QY）、岸壁 y=QY、商店街は y=0 を x 方向に走る。
     戻り値 dict：signs（看板の支点）, walls（塀の支点）, wins（窓）, houses（家の root）, boats, people"""
     QY = 26.0
@@ -671,7 +694,8 @@ def harbor_town(n, seed=1, people=True, quay_people=True, lit=None, damaged=Fals
             if j == 0:
                 H['walls'].append(block_wall((x, y + 4.6, 0), 6.0, rot_z=0.0, name=f'bw{i}'))
     utility_poles([x for x in range(-66, 67, 22)], -4.2)
-    far_hills(y=-300)
+    if far:
+        far_hills(y=-300)
     if damaged:
         for r in H['houses'][::3]:
             r.rotation_euler.x += rnd.uniform(-0.06, 0.06); r.rotation_euler.y += rnd.uniform(-0.05, 0.05)
@@ -1291,7 +1315,8 @@ def paper_notice(loc, rot=(math.pi / 2, 0, 0), w=0.42, h=0.3, text='入荷のめ
         for line in text.split('\n'):
             tw = d.textlength(line, font=f)
             d.text(((im.width - tw) / 2, y), line, font=f, fill=(40, 40, 40)); y += int(im.height * 0.3)
-    return tex_board('notice_' + str(abs(hash(text)) % 10000), fn, loc, w, h, rot=rot, size=(600, 430))
+    import zlib
+    return tex_board('notice_' + str(zlib.crc32(text.encode()) % 100000), fn, loc, w, h, rot=rot, size=(600, 430))
 
 
 def cardboard_bed(loc, rot_z=0.0, c=hexc('#c9a26a'), name='cb'):
