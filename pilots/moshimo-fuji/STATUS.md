@@ -5,3 +5,4 @@
 - 2026-11-27 企画書 `03_plan.md`、台本 第1稿 `03_script.md`（26場面、見込み約12分）、Google ドキュメント https://docs.google.com/document/d/1u3S3DKts3TKJBz3_pEPhAe_UJl_60YKNvyz0DMKVXOo/edit
 - 2026-11-27 サムネ3パターンの Gemini 用の文章 `06_thumbnail_gemini_prompts.md`（社長の画像待ち）
 - 次：社長の台本確認、数字の原文確認 → ナレーション → 3D映像
+- 2026-11-27 台本 第2稿 `03_script.md`（社長の南海トラフへの指摘 `channels/moshimo-3d/script_lessons_2026-11-27.md` のルール1〜8を反映：場所と時刻を具体化、東京の最悪の場合〈新宿駅・山手線・停電・断水・閉じ込め・逃げられない東京〉、宝永噴火5場面、30場面、見込み約24〜28分）、読み上げのみ `03_script_narration.txt`、資料表に F84〜F96 を追加。Google ドキュメントも同じリンクで第2稿に差し替え済み

@@ -137,6 +137,27 @@
 | F65 | ツングースカ級が都市の上で起きた場合の試算：ロンドン中心ならM25（環状道路）の内側が壊れる（英国王立博物館群グリニッジのブログ）、保険のモデル会社RMSがマンハッタンに被害範囲を重ねた（Risk & Insurance）、など | 検索結果（https://www.rmg.co.uk/stories/space-astronomy/tunguska-event 、https://riskandinsurance.com/raining-down-destruction/ ） | 検索結果のみ（ホストに接続できず） | **使わない**（死者数の推計を含む。原文未確認） |
 | F66 | 東京を対象にした Imperial College / Purdue「Impact: Earth!」の出力を引いた報道・資料 | 見つからず（ホストに接続できず） | 未確認 | 使わない |
 
+
+### 1-11. 第2稿で足した事実（2026-11-27 追加調査。`action=raw` で原文を開いて読んだもの）
+
+| 番号 | 事実 | 出典 | 確認状態 | 使う場面 |
+|---|---|---|---|---|
+| F67 | チェリャビンスクは平日の朝。チェリャビンスクでは日の出の数分後だった | 英W-チェリャビンスク「several minutes after sunrise in Chelyabinsk」、日W-チェリャビンスク「平日の朝であり、学校で怪我をした児童も多かった」 | 確認済み（ウィキペディア上の記述） | 窓に集まった町 |
+| F68 | 東京駅の1日の乗降人員は約126万人（2024年） | https://ja.wikipedia.org/wiki/東京駅 「1日の乗降人員数は約126万人で（2024年）、日本で6番目に利用者数の多い駅である。」 | 確認済み（ウィキペディア上の記述。JR東日本などの原表は未確認） | 朝8時15分の丸の内 |
+| F69 | チェリャビンスクの強い光で、目の痛みを訴えた人、一時的な閃光盲になった人、日焼けに似た紫外線のやけどを負った人がいた。数日後に皮がむけた人もいた | 英W-チェリャビンスク「The intense light from the meteor … resulting in more than 180 cases of eye pain, and 70 people subsequently reported temporary flash blindness. Twenty people reported ultraviolet burns similar to sunburn」「he sustained so much sunburn from the meteor that the skin flaked only days later」 | 確認済み（ウィキペディア上の記述） | 二つ目の太陽・シャツが燃えるような熱・窓の割れた病院（人数は語らない） |
+| F70 | 教師カルビシェワは立ったままで、窓ガラスで腕と左の太ももに深い傷を負った。机の下に隠れた生徒は誰も切らなかった | 英W-チェリャビンスク「Karbysheva, who remained standing, was seriously lacerated when the blast arrived and window glass severed a tendon in one of her arms and left thigh; none of her students, whom she ordered to hide under their desks, suffered cuts.」 | 確認済み（ウィキペディア上の記述） | まだ音がしない横浜・三十キロ先のガラス・四十四人の机（名前は出さない） |
+| F71 | 爆発のあと車の警報が鳴り、携帯電話の回線が通話で混み合った。オフィスビルから人が避難した。当局は親に子どもを学校から家へ連れて帰るよう求めた（全校休校の記述には要出典の印） | 英W-チェリャビンスク「After the air blast, car alarms went off and mobile phone networks were overloaded with calls. Office buildings in Chelyabinsk were evacuated.」「government officials in Chelyabinsk asked parents to take their children home from schools.」 | 確認済み（ウィキペディア上の記述） | 三十キロ先のガラス・つながらない電話・帰れない人たち・窓に集まった町 |
+| F72 | 3月5日までに損傷した建物は7,200棟を超え、集合住宅約6,040棟、医療施設293、学校・大学718などを含む。修理が済んでいないのは約1.5％だけだった | 英W-チェリャビンスク「By 5 March 2013, the number of damaged buildings was tallied at more than 7,200, which included some 6,040 apartment blocks, 293 medical facilities, 718 schools and universities … of which only about 1.5% had not yet been repaired.」 | 確認済み（ウィキペディア上の記述） | 窓の割れた病院（医療施設も被害）・マイナス十五度の町 |
+| F73 | 爆心のあたりはエヴェンキが暮らし、小さな家族の群れで円すい形のテント（チュム）に住み、トナカイの放牧・狩り・漁で暮らした。ロシア人の農民や商人は川沿いに小さな村を作り、その一つヴァナヴァラは爆心の約60km南 | 英W-ツングースカ「They generally lived in small, scattered family groups, residing in conical tents called chums, and made a livelihood of reindeer herding, hunting, and fishing.」「had established small villages along the rivers, notably Vanavara, located about 60 km south of the epicenter.」 | 確認済み（ウィキペディア上の記述） | テントの中の二人・六十キロ先の交易所 |
+| F74 | 火球を見て、別の惑星が地球にぶつかり世界が終わると受け止めた人がいた。正教徒の住民の中には終末が来たと信じ、死装束を着た人もいた | 英W-ツングースカ「several people interpreted it as another planet colliding with Earth, bringing about the end of the world」「some believed the End times had arrived and prepared for the Apocalypse, even donning their burial garments.」 | 確認済み（ウィキペディア上の記述） | テントの中の二人 |
+| F75 | セミョーノフの証言の冒頭：「おのを振り上げて樽にたがをはめようとしていた」とき、北の空が二つに裂けた。妻が駆け出して彼を小屋へ運んだ。石が空から降るような音、地面が震え、石が当たるのを恐れて頭をおおった。熱い風は地面に小道のような跡を残し、玉ねぎを傷めた | 英W-ツングースカ（F22 と同じ証言）「I had just raised my axe to hoop a cask when suddenly …」「My wife ran out and carried me into the hut.」「I covered my head because I was afraid that stones might hit it.」「It left its mark on the ground in the form of little paths, and damaged onion plants.」 | 確認済み（ウィキペディア上の記述。訳は Claude） | 投げ出される人・六十キロ先の交易所 |
+| F76 | 爆発は第一次世界大戦・ロシア革命の数年前、日露戦争の直後で、国内が混乱しており現地調査はしばらく行われなかった。初の現地調査は爆発から13年後の1921年、クーリック。聞き取りで火球の目撃と、衝撃音が20数回続いたことを確かめた | 日W-ツングースカ「ロシア国内の社会は非常に混乱しており、現地調査はしばらく行われなかった。」「初の現地調査は爆発から13年後、1921年に鉱物学者レオニード・クーリックを中心とする」「落下する火球が目撃され、衝撃音は20数回続いたことを確認した。」、英W-ツングースカ「in part due to the area's isolation and significant political upheaval affecting Russia in the 1910s」 | 確認済み（ウィキペディア上の記述） | 誰も来なかった十三年 |
+| F77 | 1921年の調査隊は中心には行けなかった。クーリックは地元の話から巨大な隕石の衝突と考え、隕鉄を回収できる見込みを理由に、政府に探検の資金を出させた | 英W-ツングースカ「Although they never visited the central blast area, the many local accounts of the event led Kulik to believe that a giant meteorite impact had caused the event. Upon returning, he persuaded the Soviet government to fund an expedition … based on the prospect of salvaging meteoric iron.」 | 確認済み（ウィキペディア上の記述） | 誰も来なかった十三年 |
+| F78 | クーリックは倒木の地帯を回り、木がすべて根を中心に向けて倒れていると確信した。隕石の破片は見つからなかった | https://en.wikipedia.org/wiki/Leonid_Kulik 「He circled the region where the trees had been felled and became convinced that they were all turned with their roots to the center. However he did not find any meteorite fragments from the impact.」（記事全体に「出典不足」の注記あり） | 確認済み（ウィキペディア上の記述。記事に出典不足の注記） | 穴のない爆心 |
+| F79 | その後10年で3回の探検。直径10〜50mの小さな沼を隕石孔と考え、その一つ「スースロフのクレーター」（直径32m）を苦労して排水すると、底に古い木の切り株があり、隕石孔ではないと分かった。1938年に中心部約250km²の空中写真を撮った | 英W-ツングースカ「After a laborious exercise in draining one of these bogs—the so-called "Suslov's crater" of 32 m in diameter—he found an old tree stump on the bottom, ruling out the possibility that it was a meteoric crater. In 1938, Kulik arranged for an aerial photographic survey of the area, covering the 250 km2 central part」 | 確認済み（ウィキペディア上の記述） | 穴のない爆心 |
+| F80 | 日本語版のクーリックの探検：1927年 中心を発見、1928年 スースロフの漏斗の磁気を測定、1929年 漏斗を排水（破片なし）、1939年 南の沼の調査。4回の探検でクレーターも破片も見つからなかった | 日W-ツングースカ「1927年 - 助手G・P・ギューリッヒとともに、大規模な倒木地帯の中心を発見する。」「1929年 - …スースロフの漏斗を排水して調査するが、隕石の破片は見つからなかった。」「4回の探検ではクレーター（隕石孔）や隕石の破片など隕石落下説を裏付ける証拠は発見できなかった。」 | 確認済み（ウィキペディア上の記述） | 穴のない爆心（「四回、森へ通った」） |
+| F81 | 亜鉛工場の屋根 約600m²が崩れた。割れた窓を手近なもので急いでふさいだ（−15℃）。知事によると約10万世帯が影響を受けた | 英W-チェリャビンスク「Approximately 600 m2 of a roof at a zinc factory collapsed during the incident.」「Approximately 100,000 home-owners were affected」（後半に要出典の印） | 確認済み（ウィキペディア上の記述） | 窓に集まった町（屋根の一部が崩れた）。10万世帯は使わない |
+
 ---
 
 ## 2. 計算（確認済みの数字から Claude が計算。出典の数字ではない）
@@ -149,6 +170,7 @@
 | C4 | 窓が割れた半径約200km（F20）は、前橋・水戸・甲府（約100〜108km）のさらに外まで届く。チェリャビンスクのガラスの範囲（南北180km×東西80km、F44）も同じ規模 | F20・F44・C2 |
 | C5 | **音（衝撃波）の到着の目安**（音速343m/sで計算。爆心近くの衝撃波は音より速いので、近い場所ほど実際は早い）：真下の高度5〜10km（F6）まで約15〜29秒、新宿6.1kmまで約18秒、横浜・大宮（約28km）まで約80秒、千葉32kmまで約94秒、60km（成田〜熊谷）まで約3分。チェリャビンスクの実測は閃光から2分25秒〜2分57秒（F39・F40） | F6・F39・F40・F50・C2 |
 | C6 | チェリャビンスクの大気に入り始め（9時20分21秒）から最も明るい瞬間（9時20分33秒）まで約12秒。速さは秒速約19km（F33）＝1秒で東京駅から新宿の3倍以上進む | F33・F37・F51・C2 |
+| C7 | **第2稿で足した距離と音の到着**（F54 の方法で、各記事の座標から計算）：東京駅から銀座1.1km、日比谷公園1.3km、皇居1.3km、秋葉原2.0km、東京タワー3.2km、羽田空港14.3km。爆発が上空5〜10km（F6）なので、音（衝撃波）の道のりは斜めの距離：真下 約15〜29秒、皇居・日比谷公園 約22秒（高度7.5kmで）、新宿 約23〜34秒、渋谷 約24〜35秒、池袋 約26〜36秒、横浜 約81〜85秒、大宮 約83〜87秒、千葉 約95〜99秒、成田 約2分46秒〜2分48秒、熊谷 約3分。爆心近くの衝撃波は音より速いので、近い場所ほど実際は早い。ほかに：秒速11km÷新宿6.1km≒1.8回（F49）、チェリャビンスクの石の大きさ18m÷55m≒1/3（F33・F6）、2013年2月15日→3月5日＝18日後（F72） | F6・F33・F49・F50・F54・F72。座標：皇居 35.6824,139.7527（en「Tokyo Imperial Palace」）、日比谷公園 35°40′25.3″,139°45′21.8″、羽田空港 35°33′12″,139°46′52″、東京タワー 35°39′31″,139°44′44″、銀座 35.671217,139.765007、秋葉原 35°41′54″,139°46′23″（いずれも en.wikipedia.org の各記事） |
 
 ---
 
@@ -160,6 +182,10 @@
 - **R4（東京都がまるごと蝶の形に倒れる）**：F15・F16・C1 から、倒れた範囲は東京都とほぼ同じ面積で、形は円ではなく翼幅70km・胴55kmの蝶形。どちら向きに置くかは F6（南東から来た）を手がかりにした仮定。23区（C1：約3.4倍）はすっぽり内側に入る。
 - **R5（その夜、遠くの街が明るい）**：F27〜F29 から、1日後までの間に、遠く離れた土地で真夜中に新聞が読めるほど空が明るくなる。日本の上空で同じことが起きる場所・明るさの出典はない（ヨーロッパの事実を置き換えた仮定）。
 - **R6（誰も知らなかった）**：F46 と F55〜F59 から、見つかった例でも数時間〜20時間前、チェリャビンスクは見つからないまま来た。「警報がないまま朝が来る」は事実に沿うが、ツングースカ級が今来た場合に何時間前に見つかるかの出典はない（F63 は未確認）。予言にしない。
+
+- **R7（23区の木と熱）**：F17・F18・F19・C2・C7 から、東京駅から半径約4km（銀座・秋葉原・上野・東京タワー）は木が枝をはがれて立ったまま、その外（新宿・渋谷・池袋・品川）は外向きに倒れ、皇居・日比谷公園の芝や松から煙が上がり、30〜50km先の森（八王子など）が燃える、という景色は、ツングースカの範囲を東京駅中心に重ねた仮定。
+- **R8（道・救急・病院）**：F14・F16（倒木）と F41・F69・F72（窓ガラスのけが、目の痛み、医療施設も被害）から、23区の道が倒れた街路樹でふさがれ、救急車が進めず、窓の割れた病院にガラスで切った人が並ぶ、という場面は、木とチェリャビンスクの記録を東京の街に置いた仮定。建物そのものがどう壊れるかの出典はない。
+- **R9（電話・電車・帰れない人）**：F45・F71（携帯電話の混雑、休校、親が子を迎えに）から、関東で電話がつながらない場面は仮定。電車が止まる・帰れない人の場面は出典のない物語の描写。
 
 ## 4. 「落ちた瞬間から1日後まで」の時間軸（事実の番号つき）
 
@@ -182,7 +208,7 @@
 
 ## 5. 台本に使う前の注意（配慮のガイドライン）
 
-1. **死傷者の数を語らない・作らない**：ツングースカの死者（F24）、チェリャビンスクのけが人（F41）の数は語りでもテロップでも出さない。東京で何人が、という推計（F65 など）は使わない・作らない。被害は景色（立ったまま残る骨組み、倒れる街路樹、割れて内側へ落ちるガラス、段ボールで塞いだ窓、明るすぎる夜空）で見せる。犠牲者・負傷者・遺体・助けを求める人の映像は作らない。
+1. **死傷者の数を語らない・作らない**（第2稿 2026-11-27 の補足：社長の指摘を受けた `channels/moshimo-3d/script_lessons_2026-11-27.md` ルール2・4により、けが人・取り残された人・逃げる人は映してよい。傷そのもの・遺体・燃える建物は映さない。数は引き続き出さない）：ツングースカの死者（F24）、チェリャビンスクのけが人（F41）の数は語りでもテロップでも出さない。東京で何人が、という推計（F65 など）は使わない・作らない。被害は景色（立ったまま残る骨組み、倒れる街路樹、割れて内側へ落ちるガラス、段ボールで塞いだ窓、明るすぎる夜空）で見せる。犠牲者・負傷者・遺体・助けを求める人の映像は作らない。
 2. **予言・確率・日付を出さない**：頻度（F64）、2024 YR4 の衝突確率（F60）は語らない。「いつか必ず来る」「次は東京」などあおる言い回しも使わない。台本で具体の日付・年を言わない（ルール⑧）。
 3. **核兵器との比較は使わない**：F10（トリニティ・キャッスル・ブラボー）や「広島の原爆の30倍」（F36）は被爆の記憶に触れるため、語りでもテロップでも使わない。量は身近なものに例える（ルール④）。
 4. **推計の幅に語りで触れない**（ルール②）：大きさ（50〜60m／50〜80m／50〜100m）・エネルギー（3〜30メガトン）・高さ（5〜10km）は企画書で扱い、台本では「ビルほどの岩が、富士山より高い空で」のように言い切れる範囲だけ使う。テロップに数字を出すなら英W-ツングースカ冒頭の値（50〜60m・5〜10km）に限る。
