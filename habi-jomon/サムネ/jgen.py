@@ -1,4 +1,4 @@
-# 縄文サムネ：左右の余白なし（端から20px）。下段は左右いっぱい、上段は下段の0.92倍で字間を広げて左右いっぱい、中段は0.68倍で左寄せ。上下の余白は詰める
+# 縄文サムネ：左右の余白なし（端から20px）。下段は左右いっぱい、上段は下段の0.92倍で中央揃え（字間は広げない）、中段は0.68倍で左寄せ。上下の余白は詰める
 HEAD='''<html><head><style>
 @font-face{font-family:N;src:url(NotoSerifJP-Black.ttf)}
 @font-face{font-family:G;src:url(NotoSansJP-Black.ttf)}
@@ -32,14 +32,14 @@ document.fonts.ready.then(()=>{
   const bot=document.getElementById('bot'), w0=natural(bot,100), B=Math.floor(100*W/w0); natural(bot,B);
   bot.querySelectorAll('.L').forEach(e=>e.style.top=(941-18-B)+'px');
   const top=document.getElementById('top');
-  if(top){const T=Math.min(Math.round(B*0.92),Math.floor(px0(top))); fill(top,T); top.querySelectorAll('.L').forEach(e=>e.style.top='22px');}
+  if(top){const T=Math.min(Math.round(B*0.92),Math.floor(px0(top))); natural(top,T); top.querySelectorAll('.L').forEach(e=>e.style.textAlign='center'); top.querySelectorAll('.L').forEach(e=>e.style.top='22px');}
   const mid=document.getElementById('mid');
   if(mid){const P=Math.round(B*0.68); natural(mid,P); mid.querySelectorAll('.L').forEach(e=>e.style.top=(941-18-B-12-P)+'px');}
   const nw=document.getElementById('news');
   if(nw){ // 速報帯：下段より少し小さく、帯いっぱい
     let px=Math.round(B*0.92); nw.style.fontSize=px+'px';
     const r=nw.scrollWidth; const inner=[...nw.children].reduce((a,c)=>a+c.getBoundingClientRect().width,0)+0.3*px;
-    const ls=(W-inner)/(nw.dataset.n-1)/px; if(ls>0) nw.querySelector('.gw').style.letterSpacing=Math.min(ls,0.12)+'em';
+    const ls=(W-inner)/(nw.dataset.n-1)/px; nw.style.justifyContent='center';nw.style.paddingLeft='0';
     document.querySelector('.band').style.top='14px'; nw.style.top=(14+5+(180-px*1.2)/2)+'px'; nw.style.height=(px*1.2)+'px';
   }
   document.body.dataset.done=1;
