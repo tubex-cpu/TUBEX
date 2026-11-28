@@ -1,0 +1,22 @@
+# 06c サムネ素材の記録
+
+## ラフ3案（2026-11-28、Claude 作成）で使った素材
+| 素材 | 種類 | 出典・ライセンス | 追加費用 | 加工 |
+|---|---|---|---|---|
+| 人物・小道具・部屋の背景 | 自作 SVG（`video/src/HitoThumbnail.tsx`） | 自作 | 0円 | – |
+| 文字（主コピー） | Noto Sans JP 900（@fontsource/noto-sans-jp） | SIL Open Font License 1.1 | 0円 | 二重フチ・影 |
+| 文字（左右ラベル） | Noto Serif JP 900（@fontsource/noto-serif-jp） | SIL Open Font License 1.1 | 0円 | – |
+
+- 実在の人物・他者のサムネ・キャラ・ロゴは使っていない。人物は顔を簡略化した架空の図。
+- ラフは `thumbnail_drafts/A.png`〜`C.png`（320px 縮小版 `*_320.png` つき）。設定は `script.json` の `thumbnailDrafts`。
+
+## 主役の絵を参考サムネ（社長提示、半写実イラスト）に近づける場合
+自作 SVG のままでは、参考の半写実イラストに比べて主役の質感が弱い。追加費用0で上げるには、**社長の Gemini（または ChatGPT）のプラン内の画像生成**で左右の絵を作り、`video/public/thumbs/hito-001-thin-fat-day/left.png`・`right.png` に置く（`thumbnailDrafts` の `leftImage`・`rightImage` に指定すれば、ラベル・コピーはそのまま重なる）。生成したらこの表に「ツール名・プラン内で追加費用0」を追記する。
+
+プロンプト案（各 640×720 の縦長、文字なし）：
+- 共通：同じオフィスで働く35歳の日本人男性の同僚2人。半写実のデジタルイラスト、映画のような局所照明、背景は少しぼかす。**顔ははっきり描かない（ぼかす・影・後ろ姿）**。文字・ロゴ・透かしを入れない。実在の人物に似せない。
+- 左：細身の男性がデスクの横で立って電話している、昼の暖かい窓の光
+- 右：ふくよかな男性がデスクに座ってパソコンに向かっている、少し暗めの寒色の光。2人とも同じ大盛りの定食が手前にある
+
+- 2026-11-28 社長指示：Gemini に依頼してよい。表情をはっきり描いて参考サムネ（顔ぼかし）と差別化する。依頼文は `channels/hito-zukan/gemini_thumbnail_prompts.md`。
+- 2026-11-28 ラフを表情つきの漫画風 SVG（`video/src/HitoCharacter.tsx`）に更新。

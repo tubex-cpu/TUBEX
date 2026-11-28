@@ -1,6 +1,7 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {EpisodeScript, fontBody} from './types';
+import {HitoThumbnail} from './HitoThumbnail';
 
 // Original conceptual illustration, not a specimen photograph or experimental image.
 // Kept local to this composition so the episode's illustrations are unchanged.
@@ -51,7 +52,12 @@ const Jellyfish: React.FC = () => (
   </svg>
 );
 
-export const Thumbnail: React.FC<EpisodeScript> = ({thumbnail}) => {
+export const Thumbnail: React.FC<EpisodeScript> = (props) => {
+  if (props.series === 'ヒト図鑑') return <HitoThumbnail {...props} />;
+  return <ClassicThumbnail {...props} />;
+};
+
+const ClassicThumbnail: React.FC<EpisodeScript> = ({thumbnail}) => {
   const lettering: React.CSSProperties = {
     position:'absolute', left:638, margin:0, fontFamily:fontBody,
     fontWeight:900, lineHeight:1.22, letterSpacing:-5, whiteSpace:'nowrap',

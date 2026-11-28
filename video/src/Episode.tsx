@@ -1,6 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Audio, Easing, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Icon} from './Icons';
+import {HitoEpisode} from './HitoEpisode';
 import {EpisodeScript, Scene, fontBody, fontDisplay, theme} from './types';
 
 const Background: React.FC = () => {
@@ -80,7 +81,7 @@ const SceneView: React.FC<{scene: Scene; durationInFrames: number}> = ({scene, d
           ) : null}
         </div>
         <div style={{transform: `scale(${enter})`}}>
-          <Icon name={scene.icon} t={frame} size={480} />
+          {scene.icon ? <Icon name={scene.icon} t={frame} size={480} /> : null}
         </div>
       </div>
 
@@ -100,6 +101,11 @@ const ProgressBar: React.FC<{total: number}> = ({total}) => {
 const NARRATION_LEAD_IN = 0.4; // keep in sync with LEAD_IN in scripts/make_audio.py
 
 export const Episode: React.FC<EpisodeScript> = (props) => {
+  if (props.series === 'ヒト図鑑') return <HitoEpisode {...props} />;
+  return <ClassicEpisode {...props} />;
+};
+
+const ClassicEpisode: React.FC<EpisodeScript> = (props) => {
   const {fps} = useVideoConfig();
   let from = 0;
   const total = props.scenes.reduce((s, sc) => s + Math.round(sc.seconds * fps), 0);
