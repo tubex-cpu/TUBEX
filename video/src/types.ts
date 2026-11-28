@@ -2,7 +2,7 @@ export type IconName = 'hydra' | 'jellyfish' | 'bird' | 'brain' | 'dna' | 'moon'
 
 export type Layout = 'title' | 'duo' | 'fact' | 'summary' | 'outro';
 
-export type SideState = {caption?: string};
+export type SideState = {caption?: string; face?: 'neutral' | 'happy' | 'worried' | 'surprised' | 'sad'};
 
 export type Character = {
   name: string;

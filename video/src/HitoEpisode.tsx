@@ -3,6 +3,7 @@
 import React from 'react';
 import {AbsoluteFill, Audio, Easing, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Character, EpisodeScript, Scene} from './types';
+import {HitoFigure} from './HitoFigure';
 
 const font = '"Noto Sans JP", sans-serif';
 const c = {
@@ -24,6 +25,8 @@ const stroke = (w: number, color = '#000') =>
     return `${(Math.cos(a) * w).toFixed(1)}px ${(Math.sin(a) * w).toFixed(1)}px 0 ${color}`;
   }).join(',');
 
+const FIG = {left: '#3d6fb5', right: '#7a5c9e'};
+
 const sideBg = (ch: Character | undefined, side: 'left' | 'right') => {
   const tone = ch?.tone ?? 'neutral';
   if (tone === 'warm') return c.warm;
@@ -31,7 +34,7 @@ const sideBg = (ch: Character | undefined, side: 'left' | 'right') => {
   return side === 'left' ? c.neutralL : c.neutralR;
 };
 
-// 架空の人物のシンプルな図（顔は描き込まない＝特定の人に見せない）
+// （旧）架空の人物のシンプルな図。2026-11-28 以降は HitoFigure を使う（顔は描き込まない＝特定の人に見せない）
 const Person: React.FC<{build?: Character['build']; color: string; t: number; size?: number}> = ({build = 'adult', color, t, size = 420}) => {
   const bob = Math.sin(t / 18) * 4;
   const w = build === 'round' ? 150 : build === 'slim' ? 92 : build === 'child' ? 96 : 112;
@@ -94,7 +97,7 @@ const Duo: React.FC<{scene: Scene; chars: EpisodeScript['characters']; t: number
           <Label text={ch?.label ?? ''} color={side === 'left' ? c.red : c.navy} />
         </div>
         <div style={{position: 'relative', transform: `scale(${0.85 + 0.15 * enter})`}}>
-          <Person build={ch?.build} color={side === 'left' ? '#d9774a' : '#5b8fd9'} t={t + (side === 'left' ? 0 : 9)} size={400} />
+          <HitoFigure ch={ch} main={FIG[side]} face={st?.face} t={t + (side === 'left' ? 0 : 9)} size={470} />
         </div>
         <div style={{position: 'relative', fontSize: 40, fontWeight: 900, color: c.ink, textShadow: stroke(3)}}>{ch?.name}</div>
         {st?.caption ? (
@@ -112,11 +115,7 @@ const Duo: React.FC<{scene: Scene; chars: EpisodeScript['characters']; t: number
       </div>
       <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 230, background: 'linear-gradient(transparent, rgba(0,0,0,0.85) 35%)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '20px 80px 30px'}}>
         <Headline text={scene.headline} size={66} appear={textIn} />
-        {scene.body ? <div style={{marginTop: 8, fontSize: 32, color: c.sub, opacity: textIn}}>{scene.body}</div> : null}
       </div>
-      {scene.source ? (
-        <div style={{position: 'absolute', right: 40, top: 56, maxWidth: 760, fontSize: 24, color: c.sub, background: 'rgba(0,0,0,0.55)', padding: '6px 14px', borderRadius: 8, borderLeft: `5px solid ${c.gold}`}}>出典：{scene.source}</div>
-      ) : null}
     </AbsoluteFill>
   );
 };
@@ -128,7 +127,7 @@ const Fact: React.FC<{scene: Scene; chars: EpisodeScript['characters']; t: numbe
         {(['left', 'right'] as const).map((side) => (
           <div key={side} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
             <div style={{fontSize: 30, fontWeight: 900, color: '#fff', background: side === 'left' ? c.red : c.navy, padding: '4px 16px', borderRadius: 8}}>{chars[side].label}</div>
-            <Person build={chars[side].build} color={side === 'left' ? '#d9774a' : '#5b8fd9'} t={t + (side === 'left' ? 0 : 9)} size={300} />
+            <HitoFigure ch={chars[side]} main={FIG[side]} t={t + (side === 'left' ? 0 : 9)} size={300} />
             <div style={{fontSize: 30, fontWeight: 900, textShadow: stroke(3)}}>{chars[side].name}</div>
           </div>
         ))}
@@ -140,11 +139,7 @@ const Fact: React.FC<{scene: Scene; chars: EpisodeScript['characters']; t: numbe
         <div style={{fontWeight: 900, fontSize: 180, color: c.gold, lineHeight: 1.05, textShadow: stroke(6), transform: `scale(${numberPop})`, transformOrigin: 'left center'}}>{scene.bigNumber}</div>
       ) : null}
       <div style={{fontWeight: 900, fontSize: scene.bigNumber ? 70 : 88, lineHeight: 1.3, whiteSpace: 'pre-line', textShadow: stroke(5), opacity: textIn}}>{scene.headline}</div>
-      {scene.body ? <div style={{fontSize: 40, lineHeight: 1.6, color: c.sub, maxWidth: 1050, opacity: textIn}}>{scene.body}</div> : null}
     </div>
-    {scene.source ? (
-      <div style={{alignSelf: 'flex-start', fontSize: 28, color: c.sub, background: 'rgba(0,0,0,0.4)', padding: '8px 18px', borderRadius: 8, borderLeft: `6px solid ${c.gold}`}}>出典：{scene.source}</div>
-    ) : null}
   </AbsoluteFill>
 );
 
@@ -154,7 +149,7 @@ const TitleCard: React.FC<{scene: Scene; chars: EpisodeScript['characters']; t: 
       {(['left', 'right'] as const).map((side) => (
         <div key={side} style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6}}>
           <Label text={chars?.[side].label ?? ''} color={side === 'left' ? c.red : c.navy} />
-          <Person build={chars?.[side].build} color={side === 'left' ? '#d9774a' : '#5b8fd9'} t={t + (side === 'left' ? 0 : 9)} size={360} />
+          <HitoFigure ch={chars?.[side]} main={FIG[side]} t={t + (side === 'left' ? 0 : 9)} size={400} />
           <div style={{fontSize: 40, fontWeight: 900, textShadow: stroke(3)}}>{chars?.[side].name}</div>
         </div>
       ))}
@@ -162,7 +157,6 @@ const TitleCard: React.FC<{scene: Scene; chars: EpisodeScript['characters']; t: 
     <div style={{marginTop: 30, padding: '0 100px'}}>
       <Headline text={scene.headline} size={78} appear={textIn} />
     </div>
-    {scene.body ? <div style={{marginTop: 14, fontSize: 36, color: c.sub, opacity: textIn}}>{scene.body}</div> : null}
   </AbsoluteFill>
 );
 
@@ -170,7 +164,6 @@ const Plain: React.FC<{scene: Scene; textIn: number}> = ({scene, textIn}) => (
   <AbsoluteFill style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '120px 140px'}}>
     <div style={{background: c.gold, color: c.bg1, fontWeight: 900, fontSize: 38, padding: '8px 26px', borderRadius: 999, marginBottom: 36}}>{scene.kicker}</div>
     <Headline text={scene.headline} size={86} appear={textIn} />
-    {scene.body ? <div style={{marginTop: 34, fontSize: 40, lineHeight: 1.6, color: c.sub, textAlign: 'center', whiteSpace: 'pre-line', opacity: textIn}}>{scene.body}</div> : null}
     {scene.credit ? <div style={{position: 'absolute', bottom: 40, fontSize: 22, color: c.sub, opacity: 0.8}}>{scene.credit}</div> : null}
   </AbsoluteFill>
 );
