@@ -502,9 +502,9 @@
     },
     {
       "id": "B",
-      "line1": "親以外の大人が",
-      "line2": "カギ？",
-      "highlight": "カギ",
+      "line1": "親だけで",
+      "line2": "決まる？",
+      "highlight": "決まる？",
       "composition": "center",
       "leftMood": "dim",
       "rightMood": "warm",
@@ -512,7 +512,7 @@
       "rightFace": "happy",
       "leftProp": "talk",
       "rightProp": "talk",
-      "note": "最終章：良い体験が多い人ほど心の不調のオッズが低い（Bethell 2019, #10）"
+      "note": "最終章：親以外の大人などの良い体験が多い人ほど心の不調のオッズが低い（Bethell 2019, #10）。旧案「親以外の大人が／カギ？」は答えが見えるため変更（06b）"
     },
     {
       "id": "C",
