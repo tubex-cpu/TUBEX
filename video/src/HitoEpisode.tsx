@@ -114,6 +114,9 @@ const Duo: React.FC<{scene: Scene; chars: EpisodeScript['characters']; t: number
         <Headline text={scene.headline} size={66} appear={textIn} />
         {scene.body ? <div style={{marginTop: 8, fontSize: 32, color: c.sub, opacity: textIn}}>{scene.body}</div> : null}
       </div>
+      {scene.source ? (
+        <div style={{position: 'absolute', right: 40, top: 56, maxWidth: 760, fontSize: 24, color: c.sub, background: 'rgba(0,0,0,0.55)', padding: '6px 14px', borderRadius: 8, borderLeft: `5px solid ${c.gold}`}}>出典：{scene.source}</div>
+      ) : null}
     </AbsoluteFill>
   );
 };
