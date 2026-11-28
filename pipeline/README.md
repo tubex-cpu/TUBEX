@@ -36,7 +36,7 @@
 
 | # | 工程 | 実施 | 監査 | 成果物（`episodes/<id>/`） | 社長の確認 |
 |---|---|---|---|---|---|
-| 0 | チャンネル設計（新チャンネルのみ） | Claude | Codex | `channels/new-channels/00_genre_research.md`（ジャンル5案・実数値つき） | **ゲート0：ジャンルを2つ選ぶ** |
+| 0 | チャンネル設計（新チャンネルのみ） | Claude | Codex | `channels/new-channels/00_genre_research.md`（ジャンル5案・実数値つき） | **ゲート0：残り1チャンネル（③）のジャンルを1つ選ぶ（② はヒト図鑑に決定済み）** |
 | 1 | リサーチ | Claude | Codex | `01_research.md`（出典付きの事実のみ） | – |
 | 2 | 競合調査 | Claude | Codex | `02_competitors.md` | – |
 | 3 | 企画立案 | Claude | Codex | `03_plan.md` | **ゲートA：企画OK？** |
