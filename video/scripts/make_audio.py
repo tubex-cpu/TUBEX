@@ -4,6 +4,9 @@ Usage: python3 video/scripts/make_audio.py <episode-id>
 
 - Narration: Open JTalk (apt: open-jtalk open-jtalk-mecab-naist-jdic hts-voice-nitech-jp-atr503-m001).
   Voice license CC BY 3.0 (Nagoya Institute of Technology) -> credit is shown in the outro scene.
+  Or VOICEVOX (free, local engine) when script.json has "voice": {"engine": "voicevox", "speaker": <id>,
+  "speed": 1.1}. Start the engine first (video/scripts/voicevox_setup.sh) -> it listens on 127.0.0.1:50021.
+  Credit "VOICEVOX:<キャラ名>" is required (outro scene + description).
 - BGM: synthesized here with numpy (no third-party music, no license issues).
 - Writes video/public/episodes/<id>/*.mp3 and updates script.json (scene.seconds, scene.audio, bgm)
   so captions, narration and duration stay in sync.
@@ -38,7 +41,35 @@ def to_mp3(src: Path, dst: Path) -> None:
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(src), "-codec:a", "libmp3lame", "-b:a", "128k", str(dst)], check=True)
 
 
-def tts(text: str, dst: Path) -> float:
+VOICEVOX = "http://127.0.0.1:50021"
+
+
+def tts_voicevox(text: str, dst: Path, voice: dict) -> float:
+    import urllib.parse
+    import urllib.request
+    q = urllib.parse.urlencode({"text": text, "speaker": voice["speaker"]})
+    req = urllib.request.Request(f"{VOICEVOX}/audio_query?{q}", method="POST")
+    query = json.load(urllib.request.urlopen(req, timeout=120))
+    query["speedScale"] = voice.get("speed", 1.1)
+    query["pitchScale"] = voice.get("pitch", 0.0)
+    query["intonationScale"] = voice.get("intonation", 1.0)
+    query["prePhonemeLength"] = 0.05
+    query["postPhonemeLength"] = 0.1
+    query["outputSamplingRate"] = SR
+    req = urllib.request.Request(
+        f"{VOICEVOX}/synthesis?speaker={voice['speaker']}", data=json.dumps(query).encode(),
+        headers={"Content-Type": "application/json"}, method="POST",
+    )
+    with tempfile.TemporaryDirectory() as tmp:
+        wav = Path(tmp) / "n.wav"
+        wav.write_bytes(urllib.request.urlopen(req, timeout=300).read())
+        to_mp3(wav, dst)
+    return duration(dst)
+
+
+def tts(text: str, dst: Path, voice: dict | None = None) -> float:
+    if voice and voice.get("engine") == "voicevox":
+        return tts_voicevox(text, dst, voice)
     with tempfile.TemporaryDirectory() as tmp:
         wav = Path(tmp) / "n.wav"
         subprocess.run(
@@ -111,7 +142,7 @@ def main() -> None:
     total = 0.0
     for scene in data["scenes"]:
         dst = out_dir / f"{scene['id']}.mp3"
-        d = tts(scene["narration"], dst)
+        d = tts(scene["narration"], dst, data.get("voice"))
         scene["seconds"] = max(5.0, math.ceil((LEAD_IN + d + TAIL) * 2) / 2)
         scene["audio"] = f"episodes/{episode}/{dst.name}"
         total += scene["seconds"]
