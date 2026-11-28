@@ -15,7 +15,7 @@
 | 4 | タイトル | ✅ Claude | ⬜ Codex | 監査待ち（2026-11-28 社長「１話目は制作を進めて」） |
 | 5 | 台本 | ✅ Claude | ⬜ Codex | 監査待ち（script.json・05_script.md・07_description.md。#8〜#11 は 2026-11-28 原著抄録で確認済み） |
 | 6 | サムネ | ⬜ Codex | ⬜ Claude | |
-| 7 | 動画制作 | ⬜ | ⬜ | |
+| 7 | 動画制作 | ✅ Claude | ⬜ Codex | preview.mp4（13:01）。台本の監査結果で直したら再レンダー |
 | – | ゲートB | | | |
 
 差し戻し回数：1
