@@ -25,7 +25,7 @@ def main() -> None:
         t += scene["seconds"]
     desc = ep / "07_description.md"
     lines = desc.read_text(encoding="utf-8").splitlines()
-    pat = re.compile(r"^(\d{1,2}:\d{2}) (\S+?)(?=[：:\s]|$)")
+    pat = re.compile(r"^(\d{1,2}:\d{2}) (\S+?)(?=[：\s]|$)")
     for i, line in enumerate(lines):
         m = pat.match(line)
         if not m:
