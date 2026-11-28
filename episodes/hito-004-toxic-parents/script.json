@@ -8,13 +8,15 @@
       "name": "ことね",
       "label": "つらい関わりの家",
       "tone": "warm",
-      "build": "child"
+      "build": "adult",
+      "hair": "long"
     },
     "right": {
       "name": "ゆな",
       "label": "気持ちを話せる家",
       "tone": "cool",
-      "build": "child"
+      "build": "adult",
+      "hair": "long"
     }
   },
   "thumbnail": {
@@ -506,7 +508,7 @@
       "composition": "center",
       "leftMood": "dim",
       "rightMood": "warm",
-      "leftFace": "worried",
+      "leftFace": "sad",
       "rightFace": "happy",
       "leftProp": "talk",
       "rightProp": "talk",

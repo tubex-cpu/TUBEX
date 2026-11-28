@@ -3,6 +3,7 @@
 import React from 'react';
 import {AbsoluteFill, Img, staticFile} from 'remotion';
 import {Character, EpisodeScript, ThumbDraft, ThumbProp} from './types';
+import {HitoCharacter} from './HitoCharacter';
 
 const font = '"Noto Sans JP", sans-serif';
 const serif = '"Noto Serif JP", serif';
@@ -185,13 +186,13 @@ export const HitoThumbnail: React.FC<EpisodeScript & {draft?: ThumbDraft}> = (pr
     const face = (s === 'left' ? d.leftFace : d.rightFace) ?? 'neutral';
     const prop = s === 'left' ? d.leftProp : d.rightProp;
     const img = s === 'left' ? d.leftImage : d.rightImage;
-    const figTop = comp === 'top' ? 330 : 70;
+    const figTop = comp === 'top' ? 340 : 120;
     return (
       <div style={{position: 'relative', flex: 1, overflow: 'hidden'}}>
         <Room mood={mood} side={s} />
         {img ? <Img src={staticFile(img)} style={{position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover'}} /> : null}
-        {img ? null : <div style={{position: 'absolute', left: 0, right: 0, top: figTop, display: 'flex', justifyContent: 'center', transform: 'scale(0.82)', transformOrigin: 'top center'}}>
-          <Figure ch={ch} shirt={s === 'left' ? '#e2725b' : '#6fa8dc'} mood={face} />
+        {img ? null : <div style={{position: 'absolute', left: 0, right: 0, top: figTop, display: 'flex', justifyContent: 'center', transform: 'scale(0.9)', transformOrigin: 'top center'}}>
+          <HitoCharacter build={ch?.build} expression={face} shirt={s === 'left' ? '#e2725b' : '#5b93d6'} hair={s === 'left' ? '#3a2a22' : '#2a2522'} armPose={(s === 'left' ? d.leftArm : d.rightArm) ?? 'down'} longHair={ch?.hair === 'long'} size={600} />
         </div>}
         {img ? null : <div style={{position: 'absolute', left: s === 'left' ? 20 : undefined, right: s === 'right' ? 20 : undefined, top: comp === 'top' ? 420 : 300}}>
           <Prop kind={prop} />
@@ -219,7 +220,7 @@ export const HitoThumbnail: React.FC<EpisodeScript & {draft?: ThumbDraft}> = (pr
           {copyBlock}
         </div>
       ) : comp === 'center' ? (
-        <div style={{position: 'absolute', left: 0, right: 0, top: 270, display: 'flex', justifyContent: 'center'}}>{copyBlock}</div>
+        <div style={{position: 'absolute', left: 0, right: 0, top: 440, display: 'flex', justifyContent: 'center'}}>{copyBlock}</div>
       ) : (
         <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 300, background: 'linear-gradient(transparent, rgba(0,0,0,0.92) 40%)', display: 'flex', justifyContent: 'center', alignItems: 'flex-end', paddingBottom: 26, paddingRight: 140}}>
           {copyBlock}

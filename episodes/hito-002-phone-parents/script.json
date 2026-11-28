@@ -445,7 +445,9 @@
       "rightMood": "warm",
       "leftProp": "phone",
       "rightProp": "book",
-      "note": "5歳の章：大人と一緒に見ると言葉の発達とプラスの関連（Madigan 2020, #4）"
+      "note": "5歳の章：大人と一緒に見ると言葉の発達とプラスの関連（Madigan 2020, #4）",
+      "leftFace": "shocked",
+      "rightFace": "happy"
     },
     {
       "id": "B",
@@ -458,7 +460,9 @@
       "rightMood": "warm",
       "leftProp": "phone",
       "rightProp": "none",
-      "note": "10歳の章：体積の増え方（Takeuchi 2018, #5）と大規模研究（Paulich 2021, #6）"
+      "note": "10歳の章：体積の増え方（Takeuchi 2018, #5）と大規模研究（Paulich 2021, #6）",
+      "leftFace": "neutral",
+      "rightFace": "happy"
     },
     {
       "id": "C",
@@ -471,7 +475,9 @@
       "rightMood": "warm",
       "leftProp": "phone",
       "rightProp": "talk",
-      "note": "2歳・最終章：画面が押しのける会話（Brushe 2024, #1）"
+      "note": "2歳・最終章：画面が押しのける会話（Brushe 2024, #1）",
+      "leftFace": "neutral",
+      "rightFace": "happy"
     }
   ]
 }

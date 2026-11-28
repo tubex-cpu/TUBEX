@@ -512,8 +512,8 @@
       "composition": "bottom",
       "leftMood": "dim",
       "rightMood": "warm",
-      "leftFace": "worried",
-      "rightFace": "neutral",
+      "leftFace": "sad",
+      "rightFace": "happy",
       "leftProp": "shout",
       "rightProp": "talk",
       "note": "4歳の章：良い結果と結びついたのは理由の説明（Ward 2023, #3）"
@@ -527,8 +527,8 @@
       "badge": "13歳",
       "leftMood": "dim",
       "rightMood": "warm",
-      "leftFace": "worried",
-      "rightFace": "neutral",
+      "leftFace": "sad",
+      "rightFace": "proud",
       "leftProp": "shout",
       "rightProp": "none",
       "note": "13歳の章：親の温かさで結びつきは弱まらなかった（Wang & Kenny 2014, #1）"
@@ -543,7 +543,9 @@
       "badge": "20歳",
       "leftMood": "dim",
       "rightMood": "warm",
-      "note": "20歳の章：見つかったのは大きい違い（Tomoda 2011, #4）"
+      "note": "20歳の章：見つかったのは大きい違い（Tomoda 2011, #4）",
+      "leftFace": "worried",
+      "rightFace": "happy"
     }
   ]
 }

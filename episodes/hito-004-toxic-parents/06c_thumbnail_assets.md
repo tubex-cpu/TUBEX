@@ -11,9 +11,12 @@
 - ラフは `thumbnail_drafts/A.png`〜`C.png`（320px 縮小版 `*_320.png` つき）。設定は `script.json` の `thumbnailDrafts`。
 
 ## 主役の絵を参考サムネ（社長提示、半写実イラスト）に近づける場合
-自作 SVG のままでは、参考の半写実イラストに比べて主役の質感が弱い。追加費用0で上げるには、**社長の ChatGPT プラン内の画像生成**で左右の絵を作り、`video/public/thumbs/hito-004-toxic-parents/left.png`・`right.png` に置く（`thumbnailDrafts` の `leftImage`・`rightImage` に指定すれば、ラベル・コピーはそのまま重なる）。生成したらこの表に「ツール名・プラン内で追加費用0」を追記する。
+自作 SVG のままでは、参考の半写実イラストに比べて主役の質感が弱い。追加費用0で上げるには、**社長の Gemini（または ChatGPT）のプラン内の画像生成**で左右の絵を作り、`video/public/thumbs/hito-004-toxic-parents/left.png`・`right.png` に置く（`thumbnailDrafts` の `leftImage`・`rightImage` に指定すれば、ラベル・コピーはそのまま重なる）。生成したらこの表に「ツール名・プラン内で追加費用0」を追記する。
 
 プロンプト案（各 640×720 の縦長、文字なし）：
 - 共通：日本の30代の母親と幼い子ども。半写実のデジタルイラスト、映画のような局所照明、背景は少しぼかす。**顔ははっきり描かない（ぼかす・影・後ろ姿）**。文字・ロゴ・透かしを入れない。実在の人物に似せない。
 - 左：少し暗い部屋で、疲れた表情の母親が子どもを抱いている（暴力の描写なし）
 - 右：明るい部屋で、母親とパートナーが子どもと一緒に笑っている
+
+- 2026-11-28 社長指示：Gemini に依頼してよい。表情をはっきり描いて参考サムネ（顔ぼかし）と差別化する。依頼文は `channels/hito-zukan/gemini_thumbnail_prompts.md`。
+- 2026-11-28 ラフを表情つきの漫画風 SVG（`video/src/HitoCharacter.tsx`）に更新。

@@ -9,6 +9,7 @@ export type Character = {
   label: string;
   tone?: 'warm' | 'cool' | 'neutral';
   build?: 'slim' | 'round' | 'child' | 'adult';
+  hair?: 'short' | 'long';
 };
 
 export type Scene = {
@@ -41,8 +42,10 @@ export type ThumbDraft = {
   badge?: string; // 時計・年齢（例："7:00"、"15歳"）
   leftMood?: 'warm' | 'cool' | 'dim';
   rightMood?: 'warm' | 'cool' | 'dim';
-  leftFace?: 'happy' | 'neutral' | 'worried';
-  rightFace?: 'happy' | 'neutral' | 'worried';
+  leftFace?: 'happy' | 'neutral' | 'worried' | 'shocked' | 'sad' | 'proud';
+  rightFace?: 'happy' | 'neutral' | 'worried' | 'shocked' | 'sad' | 'proud';
+  leftArm?: 'down' | 'hold' | 'raise';
+  rightArm?: 'down' | 'hold' | 'raise';
   leftProp?: ThumbProp;
   rightProp?: ThumbProp;
   leftImage?: string; // video/public からの相対パス（画像生成・無料写真。06c_thumbnail_assets.md に記録）
