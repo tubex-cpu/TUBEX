@@ -1,0 +1,7 @@
+node_modules/
+out/
+public/audio/mix.wav
+tts_cache/
+out/frames/
+out/frames_tmp/
+node_modules

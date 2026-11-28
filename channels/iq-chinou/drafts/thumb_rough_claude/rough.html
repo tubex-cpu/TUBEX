@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<!-- Claude の参考ラフ（2026-10-31）。自作SVG＋Noto Sans JP（OFL）。採用案ではない。?v=a|b|c で切り替え -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=block" rel="stylesheet">
+<style>
+  html,body{margin:0;width:1280px;height:720px;overflow:hidden;background:#05070d}
+  .v{position:absolute;inset:0;display:none}
+  .t{position:absolute;font-family:'Noto Sans JP';font-weight:900;white-space:nowrap;letter-spacing:-4px;line-height:1}
+  .w{color:#fffdf5;-webkit-text-stroke:0;paint-order:stroke fill;text-shadow:0 0 0 #000,0 6px 0 #000,0 10px 18px #000}
+  .stroke{-webkit-text-stroke:22px #0a0d18}
+</style></head><body>
+
+<!-- A：段階を並べる（4人の頭・光る場所が違う） -->
+<div class="v" id="a">
+  <svg width="1280" height="720">
+    <defs>
+      <radialGradient id="bgA" cx="50%" cy="60%" r="70%"><stop offset="0" stop-color="#18213a"/><stop offset="1" stop-color="#04060c"/></radialGradient>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+      <symbol id="head" viewBox="0 0 200 260"><path d="M100 10c-52 0-88 38-88 88 0 30 12 52 28 68l-4 40c-2 14 8 24 22 24h22v20h80v-40c26-14 40-36 40-66 0-12-6-20-12-26l14-22c4-6 0-12-6-12h-10c-4-44-38-74-86-74z" fill="#0d1222" stroke="#2c3a5e" stroke-width="3"/></symbol>
+    </defs>
+    <rect width="1280" height="720" fill="url(#bgA)"/>
+    <g transform="translate(70,300)">
+      <!-- 4 heads; each glows in a different region -->
+      <g><use href="#head" width="230" height="300"/><circle cx="92" cy="110" r="46" fill="#47c6ff" filter="url(#glow)" opacity=".95"/><circle cx="92" cy="110" r="16" fill="#d8f4ff"/></g>
+      <g transform="translate(300,0)"><use href="#head" width="230" height="300"/><circle cx="140" cy="80" r="46" fill="#ffb648" filter="url(#glow)"/><circle cx="140" cy="80" r="16" fill="#fff0d0"/></g>
+      <g transform="translate(600,0)"><use href="#head" width="230" height="300"/><circle cx="70" cy="70" r="46" fill="#b17bff" filter="url(#glow)"/><circle cx="70" cy="70" r="16" fill="#efe2ff"/></g>
+      <g transform="translate(900,0)"><use href="#head" width="230" height="300"/><circle cx="120" cy="140" r="46" fill="#4cf0a6" filter="url(#glow)"/><circle cx="120" cy="140" r="16" fill="#dcfff0"/></g>
+    </g>
+  </svg>
+  <div class="t stroke" style="left:70px;top:48px;font-size:150px;color:#fffdf5">賢さは4種類</div>
+  <div class="t w" style="left:70px;top:48px;font-size:150px">賢さは4種類</div>
+  <div class="t stroke" style="left:600px;top:212px;font-size:96px;color:#ffd36b">あなたは？</div>
+  <div class="t" style="left:600px;top:212px;font-size:96px;color:#ffd36b;text-shadow:0 0 22px #ffb64866">あなたは？</div>
+</div>
+
+<!-- B：左右比較（言葉が相手の頭に届かず崩れる） -->
+<div class="v" id="b">
+  <svg width="1280" height="720">
+    <defs>
+      <linearGradient id="bgB" x1="0" x2="1"><stop offset="0" stop-color="#0b1a2e"/><stop offset=".5" stop-color="#05070d"/><stop offset="1" stop-color="#2a0b12"/></linearGradient>
+      <filter id="g2"><feGaussianBlur stdDeviation="8"/></filter>
+      <symbol id="prof" viewBox="0 0 260 420"><path d="M120 20c-60 0-100 44-100 104 0 40 20 70 44 88v60c-40 10-64 40-64 80v68h250v-68c0-40-24-70-64-80v-34h22c12 0 20-10 18-22l-6-26 14-18c4-6 2-12-4-14l-14-6c0-74-38-132-96-132z" fill="#0c111d" stroke="#33405f" stroke-width="3"/></symbol>
+    </defs>
+    <rect width="1280" height="720" fill="url(#bgB)"/>
+    <use href="#prof" x="30" y="250" width="300" height="480"/>
+    <g transform="translate(1250,250) scale(-1,1)"><use href="#prof" width="300" height="480" style="filter:hue-rotate(0)"/></g>
+    <!-- words flowing: intact cubes on left, scattered fragments on right -->
+    <g fill="#7fd3ff">
+      <rect x="360" y="400" width="44" height="44" rx="6"/><rect x="430" y="392" width="44" height="44" rx="6"/><rect x="500" y="404" width="44" height="44" rx="6"/>
+      <rect x="360" y="400" width="44" height="44" rx="6" filter="url(#g2)"/><rect x="430" y="392" width="44" height="44" rx="6" filter="url(#g2)"/>
+    </g>
+    <g fill="#ff6b6b" opacity=".9">
+      <rect x="610" y="380" width="26" height="26" rx="4" transform="rotate(20 623 393)"/><rect x="680" y="430" width="20" height="20" rx="4" transform="rotate(-30 690 440)"/>
+      <rect x="740" y="360" width="16" height="16" rx="3" transform="rotate(40 748 368)"/><rect x="790" y="452" width="12" height="12" rx="2"/><rect x="830" y="392" width="9" height="9"/>
+    </g>
+    <text x="905" y="420" font-family="Noto Sans JP" font-weight="900" font-size="90" fill="#ff6b6b" opacity=".9">?</text>
+  </svg>
+  <div class="t stroke" style="left:250px;top:44px;font-size:124px;color:#fff">「話が通じない」</div>
+  <div class="t w" style="left:250px;top:44px;font-size:124px">「話が通じない」</div>
+  <div class="t stroke" style="left:640px;top:200px;font-size:120px;color:#ffd36b">の正体</div>
+  <div class="t" style="left:640px;top:200px;font-size:120px;color:#ffd36b;text-shadow:0 0 22px #ffb64866">の正体</div>
+</div>
+
+<!-- C：チャンネルの印にする「4つのメーター」 -->
+<div class="v" id="c">
+  <svg width="1280" height="720">
+    <defs>
+      <radialGradient id="bgC" cx="70%" cy="55%" r="65%"><stop offset="0" stop-color="#1b1830"/><stop offset="1" stop-color="#04050a"/></radialGradient>
+      <filter id="g3" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
+    </defs>
+    <rect width="1280" height="720" fill="url(#bgC)"/>
+    <g font-family="Noto Sans JP" font-weight="900">
+      <!-- gauges: value angles differ; one is singled out -->
+      <g transform="translate(720,190)"><path d="M-110 0a110 110 0 0 1 220 0" fill="none" stroke="#2a3150" stroke-width="22"/><path d="M-110 0a110 110 0 0 1 190 -55" fill="none" stroke="#47c6ff" stroke-width="22"/><line x1="0" y1="0" x2="78" y2="-62" stroke="#e8f6ff" stroke-width="8" stroke-linecap="round"/></g>
+      <g transform="translate(1030,190)"><path d="M-110 0a110 110 0 0 1 220 0" fill="none" stroke="#2a3150" stroke-width="22"/><path d="M-110 0a110 110 0 0 1 60 -92" fill="none" stroke="#ffb648" stroke-width="22"/><line x1="0" y1="0" x2="-50" y2="-86" stroke="#fff0d0" stroke-width="8" stroke-linecap="round"/></g>
+      <g transform="translate(720,470)"><path d="M-110 0a110 110 0 0 1 220 0" fill="none" stroke="#2a3150" stroke-width="22"/><path d="M-110 0a110 110 0 0 1 220 0" fill="none" stroke="#b17bff" stroke-width="22"/><line x1="0" y1="0" x2="96" y2="-30" stroke="#efe2ff" stroke-width="8" stroke-linecap="round"/></g>
+      <g transform="translate(1030,470)">
+        <path d="M-110 0a110 110 0 0 1 220 0" fill="none" stroke="#ff4d5e" stroke-width="30" filter="url(#g3)" opacity=".7"/>
+        <path d="M-110 0a110 110 0 0 1 220 0" fill="none" stroke="#2a3150" stroke-width="22"/><path d="M-110 0a110 110 0 0 1 12 -109" fill="none" stroke="#ff4d5e" stroke-width="22"/><line x1="0" y1="0" x2="-88" y2="-40" stroke="#ffe1e4" stroke-width="8" stroke-linecap="round"/>
+      </g>
+    </g>
+  </svg>
+  <div class="t stroke" style="left:56px;top:120px;font-size:170px;color:#fff">IQは</div>
+  <div class="t w" style="left:56px;top:120px;font-size:170px">IQは</div>
+  <div class="t stroke" style="left:56px;top:330px;font-size:118px;color:#ffd36b">1つ</div>
+  <div class="t" style="left:56px;top:330px;font-size:118px;color:#ffd36b;text-shadow:0 0 22px #ffb64866">1つ</div>
+  <div class="t stroke" style="left:56px;top:470px;font-size:96px;color:#fff">じゃない</div>
+  <div class="t w" style="left:56px;top:470px;font-size:96px">じゃない</div>
+</div>
+
+<script>
+  const v = new URLSearchParams(location.search).get('v') || 'a';
+  document.getElementById(v).style.display = 'block';
+</script>
+</body></html>
