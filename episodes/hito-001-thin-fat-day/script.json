@@ -1,0 +1,502 @@
+{
+  "episodeId": "hito-001-thin-fat-day",
+  "fps": 30,
+  "title": "痩せている人と太っている人、同じ1日のどこで差がつくのか｜朝7時から夜24時まで研究で追ってみた【脳科学】",
+  "series": "ヒト図鑑",
+  "characters": {
+    "left": {
+      "name": "りょう",
+      "label": "痩せている人",
+      "tone": "neutral",
+      "build": "slim"
+    },
+    "right": {
+      "name": "たくみ",
+      "label": "太っている人",
+      "tone": "neutral",
+      "build": "round"
+    }
+  },
+  "thumbnail": {
+    "line1": "",
+    "line2": "",
+    "sub": "",
+    "icon": "brain"
+  },
+  "scenes": [
+    {
+      "id": "intro-hook",
+      "layout": "title",
+      "chapter": "はじめに",
+      "kicker": "同じ会社の同期2人",
+      "headline": "同じ1日なのに\nどこで差がつく？",
+      "narration": "同じ会社で働く、35歳の同期が2人います。身長はどちらも170センチ。なのに、1人は体重が増え続け、もう1人は昔から体型が変わりません。2人の差は、1日のどこでつくのでしょうか。",
+      "seconds": 18.5,
+      "audio": "episodes/hito-001-thin-fat-day/intro-hook.mp3"
+    },
+    {
+      "id": "intro-two",
+      "layout": "duo",
+      "chapter": "はじめに",
+      "kicker": "たくみとりょう",
+      "headline": "「そんなに\n食べてないのに」",
+      "body": "2人は研究と統計をもとにした架空の人物です",
+      "left": {
+        "caption": "昔から体型が変わらない"
+      },
+      "right": {
+        "caption": "体重が増え続けている"
+      },
+      "narration": "体重が増え続けているのが、たくみ。口ぐせは、そんなに食べてないのに、です。昔から体型が変わらないのが、りょう。特に気をつけているつもりはありません。この2人は、研究と統計をもとにした架空の人物です。実在の誰かではありません。",
+      "seconds": 21.0,
+      "audio": "episodes/hito-001-thin-fat-day/intro-two.mp3"
+    },
+    {
+      "id": "intro-stat",
+      "layout": "fact",
+      "chapter": "はじめに",
+      "kicker": "日本の大人の男性",
+      "headline": "男性の約3人に1人が\n肥満にあたる",
+      "body": "肥満＝BMI25以上。2024年、20歳以上の男性は32.4%、女性は19.3%",
+      "bigNumber": "32.4%",
+      "source": "厚生労働省 令和6年 国民健康・栄養調査・20歳以上・国の調査",
+      "narration": "国の調査によると、2024年、20歳以上の男性のうち、肥満にあたる人は32.4パーセントでした。およそ3人に1人です。たくみのような人は、決して珍しくありません。",
+      "seconds": 16.5,
+      "audio": "episodes/hito-001-thin-fat-day/intro-stat.mp3"
+    },
+    {
+      "id": "intro-plan",
+      "layout": "duo",
+      "chapter": "はじめに",
+      "kicker": "この動画の見方",
+      "headline": "朝7時から夜24時まで\n研究で追う",
+      "body": "研究が示すのは平均の傾向。2人の差の原因は断定できません",
+      "left": {
+        "caption": "同じ1日を追う"
+      },
+      "right": {
+        "caption": "同じ1日を追う"
+      },
+      "narration": "今日は、2人の同じ1日を、朝7時から夜24時まで並べて追い、場面ごとに研究を見ていきます。ただし、研究が示すのは平均の傾向です。2人の差がどこで生まれたのかは断定できません。どれも、考えられる要因の1つとして見てください。",
+      "seconds": 21.0,
+      "audio": "episodes/hito-001-thin-fat-day/intro-plan.mp3"
+    },
+    {
+      "id": "morning-duo",
+      "layout": "duo",
+      "chapter": "7:00",
+      "kicker": "朝ごはん",
+      "headline": "朝ごはんを抜く人と\n食べる人",
+      "left": {
+        "caption": "トーストとコーヒー"
+      },
+      "right": {
+        "caption": "朝ごはんを抜いて出発"
+      },
+      "narration": "朝7時。たくみは、時間がないので、朝ごはんを抜いて家を出ます。りょうは、トーストとコーヒーで朝ごはんを食べます。朝ごはんを抜くと太る。よく聞く話です。では、太っているのは朝を抜いたからだ、と考えていいのでしょうか。",
+      "seconds": 19.5,
+      "audio": "episodes/hito-001-thin-fat-day/morning-duo.mp3"
+    },
+    {
+      "id": "morning-fact",
+      "layout": "fact",
+      "chapter": "7:00",
+      "kicker": "朝ごはんの研究",
+      "headline": "朝ごはんで\n痩せるとは言えない",
+      "body": "朝食を食べた群のほうが体重が0.44kg多く、1日の摂取も約260kcal多かった",
+      "bigNumber": "+0.44kg",
+      "source": "Sievert et al., BMJ (2019)・ランダム化比較試験13本のメタ解析・高所得国",
+      "narration": "13本の実験をまとめた、2019年の研究があります。朝ごはんを食べるグループと、食べないグループに分けて比べると、食べたグループのほうが、体重が平均0.44キロ多く、1日に食べた量も約260キロカロリー多いという結果でした。",
+      "seconds": 26.5,
+      "audio": "episodes/hito-001-thin-fat-day/morning-fact.mp3"
+    },
+    {
+      "id": "morning-caveat",
+      "layout": "fact",
+      "chapter": "7:00",
+      "kicker": "研究の注意",
+      "headline": "抜けば痩せる\nとも言えない",
+      "body": "論文自身が「エビデンスの質は低い」としている。言えるのは「食べれば痩せる、とは言えない」まで",
+      "source": "Sievert et al., BMJ (2019)・ランダム化比較試験13本のメタ解析・高所得国",
+      "narration": "ただし、論文自身が、エビデンスの質は低い、つまり結論の確かさは低いと書いています。ですから、朝ごはんを抜けば痩せる、とも言えません。言えるのは、朝ごはんを食べれば痩せる、とは言えない、というところまでです。",
+      "seconds": 19.0,
+      "audio": "episodes/hito-001-thin-fat-day/morning-caveat.mp3"
+    },
+    {
+      "id": "morning-back",
+      "layout": "duo",
+      "chapter": "7:00",
+      "kicker": "2人に戻ると",
+      "headline": "朝を抜いたから\n太った、ではない",
+      "left": {
+        "caption": "朝は食べた"
+      },
+      "right": {
+        "caption": "朝は抜いた"
+      },
+      "narration": "つまり、たくみが朝を抜いているから太っている、と決めつけることはできません。では、会社に着いてからの2人はどうでしょう。同じ仕事なのに、動き方がまるで違います。",
+      "seconds": 14.5,
+      "audio": "episodes/hito-001-thin-fat-day/morning-back.mp3"
+    },
+    {
+      "id": "desk-duo",
+      "layout": "duo",
+      "chapter": "9:00",
+      "kicker": "デスクワーク",
+      "headline": "同じ仕事なのに\n動き方が違う",
+      "left": {
+        "caption": "ちょこちょこ席を立つ"
+      },
+      "right": {
+        "caption": "昼まで座ったまま"
+      },
+      "narration": "朝9時。2人は同じフロアで、パソコンに向かいます。たくみは、昼まで、ほとんど席を立ちません。りょうは、コピーを取りに行ったり、立ったまま電話をしたりと、ちょこちょこ動きます。どちらも、運動をしているわけではありません。",
+      "seconds": 19.5,
+      "audio": "episodes/hito-001-thin-fat-day/desk-duo.mp3"
+    },
+    {
+      "id": "desk-sit",
+      "layout": "fact",
+      "chapter": "9:00",
+      "kicker": "座っている時間",
+      "headline": "肥満の人は1日\n約2時間長く座っていた",
+      "body": "運動習慣のない20人の姿勢と動きを、10日間0.5秒ごとに記録",
+      "bigNumber": "約2時間",
+      "source": "Levine et al., Science (2005)・痩せ型10人と軽い肥満10人・10日間の観察",
+      "narration": "2005年に、科学雑誌サイエンスに載った研究です。運動の習慣がない、痩せている人10人と、軽い肥満の人10人の姿勢と動きを、10日間、0.5秒ごとに記録しました。すると、肥満の人のほうが、1日平均で約2時間長く座っていました。",
+      "seconds": 21.5,
+      "audio": "episodes/hito-001-thin-fat-day/desk-sit.mp3"
+    },
+    {
+      "id": "desk-same",
+      "layout": "fact",
+      "chapter": "9:00",
+      "kicker": "意外な結果",
+      "headline": "体重が変わっても\n座り方は変わらない",
+      "body": "減量しても、体重を増やしても、座る・立つの配分は変わらなかった。著者は生まれつきの要素を示唆",
+      "source": "Levine et al., Science (2005)・痩せ型10人と軽い肥満10人・10日間の観察",
+      "narration": "意外なのはここからです。肥満の人が体重を減らしても、痩せた人が体重を増やしても、座っている時間と立っている時間の配分は、変わりませんでした。研究者は、生まれつきの要素がある可能性を示しています。ただし、20人の小さな研究です。",
+      "seconds": 20.5,
+      "audio": "episodes/hito-001-thin-fat-day/desk-same.mp3"
+    },
+    {
+      "id": "desk-neat",
+      "layout": "fact",
+      "chapter": "9:00",
+      "kicker": "運動ではない動き",
+      "headline": "同じだけ食べ過ぎても\n太り方は約10倍違う",
+      "body": "8週間、必要量より1日1000kcal多く。増えた消費の3分の2は運動以外の動きだった",
+      "bigNumber": "約10倍",
+      "source": "Levine et al., Science (1999)・太っていない16人・8週間の介入研究",
+      "narration": "1999年には、太っていない16人に、8週間、体重を保つのに必要な量より1日1000キロカロリー多く食べてもらう実験がありました。増えた消費の3分の2は、貧乏ゆすりや姿勢を保つといった、運動ではない動きの増加でした。そしてこの動きの違いが、体脂肪の増え方の約10倍の差を説明していました。",
+      "seconds": 40.0,
+      "audio": "episodes/hito-001-thin-fat-day/desk-neat.mp3"
+    },
+    {
+      "id": "desk-back",
+      "layout": "duo",
+      "chapter": "9:00",
+      "kicker": "2人に戻ると",
+      "headline": "見落としやすい\n運動ではない動き",
+      "left": {
+        "caption": "立って動くことが多い"
+      },
+      "right": {
+        "caption": "ほとんど座ったまま"
+      },
+      "narration": "運動とは呼べない、ちょっとした動き。2人の午前中にも、その違いがありました。ただ、これが2人の差の原因だとは言い切れません。そして昼休み。2人は同じ定食屋に入ります。",
+      "seconds": 16.5,
+      "audio": "episodes/hito-001-thin-fat-day/desk-back.mp3"
+    },
+    {
+      "id": "lunch-duo",
+      "layout": "duo",
+      "chapter": "12:00",
+      "kicker": "昼ごはん",
+      "headline": "大盛りを早く\n普通盛りをゆっくり",
+      "left": {
+        "caption": "普通盛りをゆっくり"
+      },
+      "right": {
+        "caption": "大盛りを約10分で"
+      },
+      "narration": "昼12時。たくみは、大盛りを頼んで、10分ほどで食べ終えます。りょうは、普通盛りを、同僚と話しながら、ゆっくり食べます。たくみにとって大盛りは、いつもの量です。食べ過ぎたという感覚は、あまりありません。",
+      "seconds": 19.0,
+      "audio": "episodes/hito-001-thin-fat-day/lunch-duo.mp3"
+    },
+    {
+      "id": "lunch-speed",
+      "layout": "fact",
+      "chapter": "12:00",
+      "kicker": "食べる速さ",
+      "headline": "早食いの男性は\nBMIが1.47高い",
+      "body": "「とても速い」と答えた人は「普通」の人よりBMIが男性1.47、女性1.34高い。関連で、原因とは言えない",
+      "bigNumber": "+1.47",
+      "source": "Otsuka et al., J Epidemiol (2006)・日本の地方公務員4,742人・横断研究",
+      "narration": "まず、食べる速さです。日本の地方公務員、4742人を調べた2006年の研究では、食べるのがとても速いと答えた男性は、普通と答えた男性より、ビーエムアイが1.47高いという結果でした。女性でも1.34高くなっていました。ただし、ある時点で一度に調べた研究なので、早食いが原因だとまでは言えません。",
+      "seconds": 31.5,
+      "audio": "episodes/hito-001-thin-fat-day/lunch-speed.mp3"
+    },
+    {
+      "id": "lunch-portion",
+      "layout": "fact",
+      "chapter": "12:00",
+      "kicker": "盛りの大きさ",
+      "headline": "盛りが大きいと\n30%多く食べた",
+      "body": "昼食を500〜1000gの4種類の量で出した。性別・BMI・我慢する傾向に関係なく同じ",
+      "bigNumber": "30%",
+      "source": "Rolls et al., Am J Clin Nutr (2002)・51人・昼食の実験",
+      "narration": "次に、盛りの大きさです。2002年の実験では、51人に、昼ごはんのマカロニアンドチーズを、4種類の量のどれかで出し、好きなだけ食べてもらいました。いちばん大きい盛りでは、いちばん小さい盛りより、30パーセント多く食べていました。男女や体型、食事を我慢するタイプかどうかに関係なく、同じ傾向でした。",
+      "seconds": 26.5,
+      "audio": "episodes/hito-001-thin-fat-day/lunch-portion.mp3"
+    },
+    {
+      "id": "lunch-11days",
+      "layout": "fact",
+      "chapter": "12:00",
+      "kicker": "慣れれば戻る？",
+      "headline": "1.5倍の盛りが続いても\n減っていかない",
+      "body": "すべての食事を11日間、普通の盛りと1.5倍の盛りで比較。果物・野菜では効果なし",
+      "bigNumber": "1日423kcal",
+      "source": "Rolls et al., Obesity (2007)・23人・11日間の実験",
+      "narration": "では、大きな盛りが続けば、体が調整してくれるのでしょうか。2007年の実験では、23人のすべての食事を、11日間、1.5倍の盛りにしました。すると、1日に食べた量は平均423キロカロリー増え、11日間ずっと減っていきませんでした。体は、自然には調整しなかったのです。ただし、果物と野菜では、この効果は見られませんでした。",
+      "seconds": 32.0,
+      "audio": "episodes/hito-001-thin-fat-day/lunch-11days.mp3"
+    },
+    {
+      "id": "lunch-back",
+      "layout": "duo",
+      "chapter": "12:00",
+      "kicker": "2人に戻ると",
+      "headline": "どちらも本人には\nいつものお昼",
+      "left": {
+        "caption": "いつもの普通盛り"
+      },
+      "right": {
+        "caption": "いつもの大盛り"
+      },
+      "narration": "大盛りと早食い。どちらも本人には、いつものお昼です。研究では、こうした場面が、食べる量や体重と関係していました。それでも、2人の差を決めたのがこれだとは言えません。そして夕方。注目したいのは、量ではなく中身です。",
+      "seconds": 20.5,
+      "audio": "episodes/hito-001-thin-fat-day/lunch-back.mp3"
+    },
+    {
+      "id": "evening-duo",
+      "layout": "duo",
+      "chapter": "18:00",
+      "kicker": "夕ごはんの中身",
+      "headline": "量ではなく\n食事の中身",
+      "left": {
+        "caption": "魚と野菜を買って帰る"
+      },
+      "right": {
+        "caption": "弁当と菓子パンを買う"
+      },
+      "narration": "夕方6時。残業が決まったたくみは、コンビニで、から揚げ弁当と菓子パンを買います。菓子パンは、そのまま机で食べました。りょうは、魚と野菜を買って帰り、7時に家で夕ごはんです。ここで見たいのは、1日の食事全体の中身です。",
+      "seconds": 21.5,
+      "audio": "episodes/hito-001-thin-fat-day/evening-duo.mp3"
+    },
+    {
+      "id": "evening-hall",
+      "layout": "fact",
+      "chapter": "18:00",
+      "kicker": "超加工食の実験",
+      "headline": "超加工食の期間は\n1日約508kcal多い",
+      "body": "超加工食と未加工食を2週間ずつ。どちらも「好きなだけ食べてよい」条件で、1日あたりの差",
+      "bigNumber": "1日 約508kcal",
+      "source": "Hall et al., Cell Metabolism (2019)・成人20人・入院でのランダム化クロスオーバー試験",
+      "narration": "アメリカの国立衛生研究所が、2019年に行った実験です。大人20人に入院してもらい、超加工食が中心の食事の2週間と、加工の少ない食事の2週間を、両方体験してもらいました。どちらも、好きなだけ食べてよいという条件です。すると、超加工食の期間は、1日あたりに食べた量が、約508キロカロリー多くなりました。",
+      "seconds": 28.5,
+      "audio": "episodes/hito-001-thin-fat-day/evening-hall.mp3"
+    },
+    {
+      "id": "evening-caveat",
+      "layout": "fact",
+      "chapter": "18:00",
+      "kicker": "1食ではなく1日",
+      "headline": "1食の差ではなく\n1日あたりの差",
+      "body": "体重は超加工食の2週で+0.9kg、未加工食の2週で−0.9kg。1食・特定の弁当の比較ではない",
+      "source": "Hall et al., Cell Metabolism (2019)・成人20人・入院でのランダム化クロスオーバー試験",
+      "narration": "体重は、超加工食の2週間で0.9キロ増え、加工の少ない食事の2週間で0.9キロ減りました。注意したいのは、この508キロカロリーは1日全体の差で、1回の食事や、特定のお弁当を比べた数字ではないことです。20人、2週間の実験で、超加工食を食べると必ず太る、とも言えません。",
+      "seconds": 26.5,
+      "audio": "episodes/hito-001-thin-fat-day/evening-caveat.mp3"
+    },
+    {
+      "id": "evening-back",
+      "layout": "duo",
+      "chapter": "18:00",
+      "kicker": "2人に戻ると",
+      "headline": "弁当1つの差は\nこの研究では分からない",
+      "left": {
+        "caption": "家で夕ごはん"
+      },
+      "right": {
+        "caption": "残業へ"
+      },
+      "narration": "たくみのお弁当が、りょうの夕ごはんより何キロカロリー多いのかは、この研究からは分かりません。言えるのは、1日の食事の中身が、食べる量と関係しうる、ということです。そして、たくみがお弁当を食べるのは、もう少し後。夜9時になってからです。",
+      "seconds": 21.5,
+      "audio": "episodes/hito-001-thin-fat-day/evening-back.mp3"
+    },
+    {
+      "id": "night-duo",
+      "layout": "duo",
+      "chapter": "21:00",
+      "kicker": "夜ごはんの時刻",
+      "headline": "夜9時の夕ごはんと\nその後のお菓子",
+      "left": {
+        "caption": "夕ごはんは7時に済んだ"
+      },
+      "right": {
+        "caption": "夜9時に夕ごはん"
+      },
+      "narration": "夜9時。残業を終えたたくみは、家に着いて、ようやくお弁当を食べます。食べ終わると、テレビを見ながら、ポテトチップスをつまみます。りょうは、7時に夕ごはんを済ませ、今はお風呂に入っています。",
+      "seconds": 17.5,
+      "audio": "episodes/hito-001-thin-fat-day/night-duo.mp3"
+    },
+    {
+      "id": "night-late",
+      "layout": "fact",
+      "chapter": "21:00",
+      "kicker": "遅い時刻の食事",
+      "headline": "同じ食事でも\n遅いと空腹を感じやすく",
+      "body": "同じ食事を早い時刻と4時間遅い時刻で。遅い条件は消費が約59kcal（約5%）少ない",
+      "bigNumber": "空腹のオッズ 2.02倍",
+      "source": "Vujović et al., Cell Metabolism (2022)・過体重・肥満の成人16人・ランダム化クロスオーバー試験",
+      "narration": "2022年の実験では、過体重や肥満の大人16人に、まったく同じ食事を、早い時刻と、4時間遅い時刻の2通りで食べてもらいました。遅く食べた条件では、空腹を感じるオッズ、つまり感じやすさの目安が2.02倍になり、起きている間に使うエネルギーも、約59キロカロリー、およそ5パーセント少なくなりました。ただし16人の実験で、食べる量を同じにしているため、遅い食事だけで太るとまでは言えません。",
+      "seconds": 35.0,
+      "audio": "episodes/hito-001-thin-fat-day/night-late.mp3"
+    },
+    {
+      "id": "night-japan",
+      "layout": "fact",
+      "chapter": "21:00",
+      "kicker": "日本の健診データ",
+      "headline": "寝る前2時間に\n夕食をとらない人は",
+      "body": "対象は2型糖尿病の人。夕食後に間食しない人は0.85倍。観察研究で因果は言えない",
+      "bigNumber": "肥満のオッズ 0.90倍",
+      "source": "Hurst & Fukuda, BMJ Open (2018)・2型糖尿病の人59,717人・観察研究（日本の健保データ）",
+      "narration": "日本の健康診断のデータ、約6万人の研究もあります。対象は、2型糖尿病の人です。寝る前2時間以内に夕ごはんを食べない人は、肥満になるオッズが0.90倍、夕ごはんの後に間食をしない人は0.85倍でした。ただし、観察研究なので、これが原因とまでは言えません。",
+      "seconds": 29.0,
+      "audio": "episodes/hito-001-thin-fat-day/night-japan.mp3"
+    },
+    {
+      "id": "night-back",
+      "layout": "duo",
+      "chapter": "21:00",
+      "kicker": "2人に戻ると",
+      "headline": "仕事の後の\nいつもの流れ",
+      "left": {
+        "caption": "お風呂でひと息"
+      },
+      "right": {
+        "caption": "テレビとお菓子"
+      },
+      "narration": "遅い夕ごはんも、夜のお菓子も、たくみにとっては、仕事の後のいつもの流れです。ここも、考えられる要因の1つにすぎません。そして、1日の最後の場面がやってきます。2人が眠りにつく時刻です。",
+      "seconds": 18.0,
+      "audio": "episodes/hito-001-thin-fat-day/night-back.mp3"
+    },
+    {
+      "id": "sleep-duo",
+      "layout": "duo",
+      "chapter": "24:00",
+      "kicker": "寝る時刻",
+      "headline": "11時に眠る人と\n1時までスマホの人",
+      "left": {
+        "caption": "11時に就寝"
+      },
+      "right": {
+        "caption": "夜中1時までスマホ"
+      },
+      "narration": "夜12時。りょうは、11時には布団に入って、もう眠っています。たくみは、スマートフォンで動画を見ているうちに、気づけば夜中の1時を過ぎていました。",
+      "seconds": 14.0,
+      "audio": "episodes/hito-001-thin-fat-day/sleep-duo.mp3"
+    },
+    {
+      "id": "sleep-fact",
+      "layout": "fact",
+      "chapter": "24:00",
+      "kicker": "睡眠を削ると",
+      "headline": "睡眠を削った後\n食べる量が増えた",
+      "body": "摂取は1日約385kcal増、消費には有意な変化なし。短期の実験室研究をまとめたもの",
+      "bigNumber": "1日 約385kcal",
+      "source": "Al Khatib et al., Eur J Clin Nutr (2017)・介入研究17本のレビュー（メタ分析11本・172人）",
+      "narration": "睡眠を一部削る実験をまとめた、2017年の研究です。睡眠を削った後は、1日に食べる量が、平均で約385キロカロリー増えていました。一方で、体が使うエネルギーには、はっきりした変化は見られませんでした。ただし、短い期間の実験です。研究者も、長い目で見て体重増加の一因になる可能性がある、という言い方にとどめています。",
+      "seconds": 31.0,
+      "audio": "episodes/hito-001-thin-fat-day/sleep-fact.mp3"
+    },
+    {
+      "id": "sleep-back",
+      "layout": "duo",
+      "chapter": "24:00",
+      "kicker": "1日の終わり",
+      "headline": "では2人を分けたのは\nどれだったのか",
+      "left": {
+        "caption": "ぐっすり眠っている"
+      },
+      "right": {
+        "caption": "ようやく眠る"
+      },
+      "narration": "こうして、たくみとりょうの1日が終わりました。朝ごはん、座っている時間、盛りと食べる速さ、食事の中身、夕ごはんの時刻、そして睡眠。では、2人を分けたのは、結局どれだったのでしょうか。最後に、もう1つ研究を見ます。",
+      "seconds": 21.0,
+      "audio": "episodes/hito-001-thin-fat-day/sleep-back.mp3"
+    },
+    {
+      "id": "final-genes",
+      "layout": "fact",
+      "chapter": "最終章",
+      "kicker": "体質の違い",
+      "headline": "体重のばらつきには\n遺伝も関わる",
+      "body": "遺伝率＝集団の体重のばらつきのうち遺伝の違いで説明できる割合。「75%は遺伝で決まる」ではない",
+      "bigNumber": "0.47〜0.90",
+      "source": "Elks et al., Front Endocrinol (2012)・双生児研究・家族研究のメタ解析と総説",
+      "narration": "双子や家族を調べた研究をまとめると、ビーエムアイの遺伝率は、双子の研究で0.47から0.90、真ん中の値は0.75でした。遺伝率とは、たくさんの人の体重のばらつきのうち、遺伝の違いで説明できる割合のことです。1人の体重の75パーセントが遺伝で決まる、という意味ではありません。",
+      "seconds": 25.5,
+      "audio": "episodes/hito-001-thin-fat-day/final-genes.mp3"
+    },
+    {
+      "id": "final-will",
+      "layout": "summary",
+      "chapter": "最終章",
+      "kicker": "意志だけの話ではない",
+      "headline": "意志の強さだけで\n決まる話ではない",
+      "body": "座る配分は体重が変わっても同じ（Levine 2005）。同じ食べ過ぎでも太り方は約10倍の差（Levine 1999）",
+      "narration": "ここまでの研究を並べると、体重と関係する場面は、1日の中にいくつもありました。座る時間の配分は、体重が変わっても変わりませんでした。同じだけ食べ過ぎても、太り方は人によって約10倍違いました。体重は、意志の強さだけで決まる話ではなさそうです。",
+      "seconds": 23.0,
+      "audio": "episodes/hito-001-thin-fat-day/final-will.mp3"
+    },
+    {
+      "id": "final-answer",
+      "layout": "summary",
+      "chapter": "最終章",
+      "kicker": "冒頭の問いの答え",
+      "headline": "研究が示すのは\n平均の傾向",
+      "body": "見落としやすい場面に、体重と関係するものが複数あった。どれが効くかは人によって違う",
+      "narration": "では、冒頭の問いです。同じくらい食べているつもりなのに、なぜ差がつくのか。研究が示したのは、見落としやすい場面に、体重と関係するものがいくつもある、ということでした。ただし、それは平均の傾向です。2人の差がどこで生まれたのか、どれが効くのかは、人によって違います。",
+      "seconds": 24.0,
+      "audio": "episodes/hito-001-thin-fat-day/final-answer.mp3"
+    },
+    {
+      "id": "final-one",
+      "layout": "summary",
+      "chapter": "最終章",
+      "kicker": "責めるより",
+      "headline": "責めるより\n1つだけ見直す",
+      "body": "病気や薬による体重の変化は対象外です。この動画は医学的な診断や助言ではありません",
+      "narration": "だから、自分や誰かを責めるより、気になった場面を1つだけ見直してみる。たとえば、お昼を少しゆっくり食べてみる。夕ごはんを、少し早い時刻にしてみる。たくみにも、りょうにも、それぞれの体質と、それぞれの1日があります。",
+      "seconds": 20.5,
+      "audio": "episodes/hito-001-thin-fat-day/final-one.mp3"
+    },
+    {
+      "id": "outro",
+      "layout": "outro",
+      "chapter": "最終章",
+      "kicker": "あなたの1日は？",
+      "headline": "あなたの1日で\n気になった場面は？",
+      "body": "研究の一覧は概要欄へ。2人は研究と統計をもとにした架空の人物です",
+      "credit": "音声：Open JTalk（HTS voice nitech-jp-atr503-m001 / 名古屋工業大学 / CC BY 3.0 https://creativecommons.org/licenses/by/3.0/ ）　BGM：自作",
+      "narration": "あなたの1日で、いちばん気になった場面はどこでしたか。よければ、コメントで教えてください。この動画の2人は、研究と統計をもとにした架空の人物です。研究の一覧は、概要欄にまとめています。よければ、チャンネル登録をお願いします。",
+      "seconds": 21.0,
+      "audio": "episodes/hito-001-thin-fat-day/outro.mp3"
+    }
+  ],
+  "bgm": "episodes/hito-001-thin-fat-day/bgm.mp3"
+}
