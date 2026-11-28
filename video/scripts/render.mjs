@@ -19,7 +19,11 @@ const episodeDir = path.resolve(root, '..', 'episodes', name);
 const inputProps = JSON.parse(fs.readFileSync(path.join(episodeDir, 'script.json'), 'utf8'));
 
 // Use a locally installed Chromium if present, so Remotion does not download one.
-const candidates = [process.env.REMOTION_BROWSER, '/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell'];
+const preinstalled = fs.existsSync('/opt/pw-browsers')
+  ? fs.readdirSync('/opt/pw-browsers').filter((d) => d.startsWith('chromium_headless_shell-')).flatMap((d) =>
+      ['chrome-linux/headless_shell', 'chrome-headless-shell-linux64/chrome-headless-shell'].map((f) => path.join('/opt/pw-browsers', d, f)))
+  : [];
+const candidates = [process.env.REMOTION_BROWSER, ...preinstalled];
 const browserExecutable = candidates.find((p) => p && fs.existsSync(p)) ?? null;
 
 const serveUrl = await bundle({entryPoint: path.join(root, 'src/index.ts')});

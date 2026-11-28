@@ -1,9 +1,24 @@
 export type IconName = 'hydra' | 'jellyfish' | 'bird' | 'brain' | 'dna' | 'moon';
 
+export type Layout = 'title' | 'duo' | 'fact' | 'summary' | 'outro';
+
+export type SideState = {caption?: string};
+
+export type Character = {
+  name: string;
+  label: string;
+  tone?: 'warm' | 'cool' | 'neutral';
+  build?: 'slim' | 'round' | 'child' | 'adult';
+};
+
 export type Scene = {
   id: string;
   seconds: number;
-  icon: IconName;
+  icon?: IconName;
+  layout?: Layout;
+  chapter?: string;
+  left?: SideState;
+  right?: SideState;
   kicker: string;
   headline: string;
   body?: string;
@@ -18,6 +33,8 @@ export type EpisodeScript = {
   episodeId: string;
   fps: number;
   title: string;
+  series?: string;
+  characters?: {left: Character; right: Character};
   thumbnail: {
     line1: string;
     line2: string;
