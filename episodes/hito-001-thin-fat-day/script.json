@@ -498,5 +498,45 @@
       "audio": "episodes/hito-001-thin-fat-day/outro.mp3"
     }
   ],
-  "bgm": "episodes/hito-001-thin-fat-day/bgm.mp3"
+  "bgm": "episodes/hito-001-thin-fat-day/bgm.mp3",
+  "thumbnailDrafts": [
+    {
+      "id": "A",
+      "line1": "太り方が",
+      "line2": "約10倍違う？",
+      "highlight": "約10倍",
+      "highlightColor": "red",
+      "composition": "bottom",
+      "leftMood": "warm",
+      "rightMood": "cool",
+      "leftProp": "plate-big",
+      "rightProp": "plate-big",
+      "note": "同じだけ食べ過ぎても太り方は人により約10倍違った（Levine 1999, #9）。両側に同じ大盛りの皿"
+    },
+    {
+      "id": "B",
+      "line1": "朝ごはん抜くと",
+      "line2": "太る？",
+      "highlight": "太る？",
+      "highlightColor": "red",
+      "composition": "center",
+      "badge": "7:00",
+      "leftMood": "warm",
+      "rightMood": "cool",
+      "leftProp": "toast",
+      "rightProp": "coffee",
+      "note": "7:00 の章（Sievert 2019, #6）。時計で時間軸を見せる"
+    },
+    {
+      "id": "C",
+      "line1": "意志の弱さ",
+      "line2": "のせい？",
+      "highlight": "意志の弱さ",
+      "highlightColor": "yellow",
+      "composition": "top",
+      "leftMood": "warm",
+      "rightMood": "dim",
+      "note": "9:00 の章（Levine 2005, #8：体重が変わっても座る時間の配分は変わらなかった）。文言は右の人物に結び付けない"
+    }
+  ]
 }

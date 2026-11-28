@@ -15,6 +15,7 @@ if (!name) {
   process.exit(1);
 }
 const thumbOnly = process.argv.includes('--thumb-only');
+const thumbDrafts = process.argv.includes('--thumb-drafts');
 const episodeDir = path.resolve(root, '..', 'episodes', name);
 const inputProps = JSON.parse(fs.readFileSync(path.join(episodeDir, 'script.json'), 'utf8'));
 
@@ -28,6 +29,21 @@ const browserExecutable = candidates.find((p) => p && fs.existsSync(p)) ?? null;
 
 const serveUrl = await bundle({entryPoint: path.join(root, 'src/index.ts')});
 fs.mkdirSync(path.join(root, 'out'), {recursive: true});
+
+if (thumbDrafts) {
+  // Rough drafts only: episodes/<id>/thumbnail_drafts/<draft>.png. Never touches thumbnail.png or the video.
+  const dir = path.join(episodeDir, 'thumbnail_drafts');
+  fs.mkdirSync(dir, {recursive: true});
+  for (const draft of inputProps.thumbnailDrafts ?? []) {
+    const props = {...inputProps, draft};
+    const comp = await selectComposition({serveUrl, id: 'Thumbnail', inputProps: props, browserExecutable});
+    const out = path.join(dir, `${draft.id}.png`);
+    await renderStill({serveUrl, composition: comp, inputProps: props, output: out, browserExecutable});
+    execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', out, '-vf', 'scale=320:-1', path.join(dir, `${draft.id}_320.png`)]);
+    console.log('draft:', out);
+  }
+  process.exit(0);
+}
 
 const thumb = await selectComposition({serveUrl, id: 'Thumbnail', inputProps, browserExecutable});
 const thumbPath = path.join(episodeDir, 'thumbnail.png');

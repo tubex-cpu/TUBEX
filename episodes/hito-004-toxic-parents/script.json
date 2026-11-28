@@ -7,12 +7,14 @@
     "left": {
       "name": "ことね",
       "label": "つらい関わりの家",
-      "tone": "warm"
+      "tone": "warm",
+      "build": "child"
     },
     "right": {
       "name": "ゆな",
       "label": "気持ちを話せる家",
-      "tone": "cool"
+      "tone": "cool",
+      "build": "child"
     }
   },
   "thumbnail": {
@@ -479,5 +481,50 @@
       "audio": "episodes/hito-004-toxic-parents/outro.mp3"
     }
   ],
-  "bgm": "episodes/hito-004-toxic-parents/bgm.mp3"
+  "bgm": "episodes/hito-004-toxic-parents/bgm.mp3",
+  "thumbnailDrafts": [
+    {
+      "id": "A",
+      "line1": "やっぱり",
+      "line2": "連鎖する？",
+      "highlight": "連鎖",
+      "composition": "bottom",
+      "badge": "32歳",
+      "leftMood": "dim",
+      "rightMood": "warm",
+      "leftFace": "worried",
+      "rightFace": "happy",
+      "leftProp": "family",
+      "rightProp": "family",
+      "note": "32歳の章：多数は繰り返さない（Greene 2020, #7）と、多く見えた研究（Jaffee 2013, #9）を幅で"
+    },
+    {
+      "id": "B",
+      "line1": "親以外の大人が",
+      "line2": "カギ？",
+      "highlight": "カギ",
+      "composition": "center",
+      "leftMood": "dim",
+      "rightMood": "warm",
+      "leftFace": "worried",
+      "rightFace": "happy",
+      "leftProp": "talk",
+      "rightProp": "talk",
+      "note": "最終章：良い体験が多い人ほど心の不調のオッズが低い（Bethell 2019, #10）"
+    },
+    {
+      "id": "C",
+      "line1": "断ち切った家に",
+      "line2": "あったもの",
+      "highlight": "断ち切った",
+      "highlightColor": "yellow",
+      "composition": "top",
+      "leftMood": "dim",
+      "rightMood": "warm",
+      "leftFace": "neutral",
+      "rightFace": "happy",
+      "rightProp": "family",
+      "note": "最終章：連鎖を断った家族にあった支え（Jaffee 2013, #9）"
+    }
+  ]
 }

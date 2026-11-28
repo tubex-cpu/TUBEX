@@ -7,12 +7,14 @@
     "left": {
       "name": "みなと",
       "label": "渡した家の子",
-      "tone": "warm"
+      "tone": "warm",
+      "build": "child"
     },
     "right": {
       "name": "ひなた",
       "label": "渡さない家の子",
-      "tone": "cool"
+      "tone": "cool",
+      "build": "child"
     }
   },
   "thumbnail": {
@@ -430,5 +432,46 @@
       "audio": "episodes/hito-002-phone-parents/outro.mp3"
     }
   ],
-  "bgm": "episodes/hito-002-phone-parents/bgm.mp3"
+  "bgm": "episodes/hito-002-phone-parents/bgm.mp3",
+  "thumbnailDrafts": [
+    {
+      "id": "A",
+      "line1": "一緒に見ると",
+      "line2": "真逆の結果？",
+      "highlight": "真逆",
+      "composition": "bottom",
+      "badge": "5歳",
+      "leftMood": "cool",
+      "rightMood": "warm",
+      "leftProp": "phone",
+      "rightProp": "book",
+      "note": "5歳の章：大人と一緒に見ると言葉の発達とプラスの関連（Madigan 2020, #4）"
+    },
+    {
+      "id": "B",
+      "line1": "「育たない」は",
+      "line2": "本当？",
+      "highlight": "育たない",
+      "composition": "center",
+      "badge": "10歳",
+      "leftMood": "cool",
+      "rightMood": "warm",
+      "leftProp": "phone",
+      "rightProp": "none",
+      "note": "10歳の章：体積の増え方（Takeuchi 2018, #5）と大規模研究（Paulich 2021, #6）"
+    },
+    {
+      "id": "C",
+      "line1": "時間より",
+      "line2": "大事なものは？",
+      "highlight": "大事なもの",
+      "highlightColor": "yellow",
+      "composition": "top",
+      "leftMood": "cool",
+      "rightMood": "warm",
+      "leftProp": "phone",
+      "rightProp": "talk",
+      "note": "2歳・最終章：画面が押しのける会話（Brushe 2024, #1）"
+    }
+  ]
 }

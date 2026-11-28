@@ -1,6 +1,7 @@
 import '@fontsource/noto-sans-jp/500.css';
 import '@fontsource/noto-sans-jp/900.css';
 import '@fontsource/dela-gothic-one/400.css';
+import '@fontsource/noto-serif-jp/900.css';
 import React from 'react';
 import {Composition, Still} from 'remotion';
 import {Episode} from './Episode';

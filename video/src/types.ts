@@ -29,6 +29,28 @@ export type Scene = {
   credit?: string;
 };
 
+export type ThumbProp = 'plate-big' | 'plate' | 'toast' | 'coffee' | 'phone' | 'book' | 'shout' | 'talk' | 'family' | 'none';
+
+export type ThumbDraft = {
+  id: string;
+  line1: string;
+  line2?: string;
+  highlight?: string; // この語だけ強調色
+  highlightColor?: 'red' | 'yellow';
+  composition?: 'bottom' | 'center' | 'top';
+  badge?: string; // 時計・年齢（例："7:00"、"15歳"）
+  leftMood?: 'warm' | 'cool' | 'dim';
+  rightMood?: 'warm' | 'cool' | 'dim';
+  leftFace?: 'happy' | 'neutral' | 'worried';
+  rightFace?: 'happy' | 'neutral' | 'worried';
+  leftProp?: ThumbProp;
+  rightProp?: ThumbProp;
+  leftImage?: string; // video/public からの相対パス（画像生成・無料写真。06c_thumbnail_assets.md に記録）
+  rightImage?: string;
+  note?: string;
+  [key: string]: unknown;
+};
+
 export type EpisodeScript = {
   episodeId: string;
   fps: number;
@@ -43,6 +65,8 @@ export type EpisodeScript = {
   };
   bgm?: string;
   scenes: Scene[];
+  thumbnailDrafts?: ThumbDraft[];
+  draft?: ThumbDraft;
 };
 
 export const theme = {

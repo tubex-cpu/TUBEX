@@ -7,12 +7,14 @@
     "left": {
       "name": "れん",
       "label": "怒鳴る家",
-      "tone": "warm"
+      "tone": "warm",
+      "build": "child"
     },
     "right": {
       "name": "そら",
       "label": "理由を伝える家",
-      "tone": "cool"
+      "tone": "cool",
+      "build": "child"
     }
   },
   "thumbnail": {
@@ -500,5 +502,48 @@
       "audio": "episodes/hito-003-yelling-parents/outro.mp3"
     }
   ],
-  "bgm": "episodes/hito-003-yelling-parents/bgm.mp3"
+  "bgm": "episodes/hito-003-yelling-parents/bgm.mp3",
+  "thumbnailDrafts": [
+    {
+      "id": "A",
+      "line1": "怒らない家は",
+      "line2": "わがまま？",
+      "highlight": "わがまま",
+      "composition": "bottom",
+      "leftMood": "dim",
+      "rightMood": "warm",
+      "leftFace": "worried",
+      "rightFace": "neutral",
+      "leftProp": "shout",
+      "rightProp": "talk",
+      "note": "4歳の章：良い結果と結びついたのは理由の説明（Ward 2023, #3）"
+    },
+    {
+      "id": "B",
+      "line1": "あとの優しさで",
+      "line2": "帳消し？",
+      "highlight": "帳消し",
+      "composition": "center",
+      "badge": "13歳",
+      "leftMood": "dim",
+      "rightMood": "warm",
+      "leftFace": "worried",
+      "rightFace": "neutral",
+      "leftProp": "shout",
+      "rightProp": "none",
+      "note": "13歳の章：親の温かさで結びつきは弱まらなかった（Wang & Kenny 2014, #1）"
+    },
+    {
+      "id": "C",
+      "line1": "「脳が縮む」は",
+      "line2": "本当？",
+      "highlight": "脳が縮む",
+      "highlightColor": "yellow",
+      "composition": "top",
+      "badge": "20歳",
+      "leftMood": "dim",
+      "rightMood": "warm",
+      "note": "20歳の章：見つかったのは大きい違い（Tomoda 2011, #4）"
+    }
+  ]
 }
