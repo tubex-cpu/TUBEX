@@ -20,9 +20,9 @@ def line(txt,top,size,kind):
     return f'<div class="t rb" style="top:{top}px;font-size:{size}px">{txt}</div>\n<div class="t r" style="top:{top}px;font-size:{size}px">{txt}</div>\n'
 Q='<span class=q>？</span>'
 pages={
- 'j1':('j1.jpg', line('1万年続いた縄文文化',50,132,'w')+line('消滅させたのは何'+Q,736,158,'r')),
- 'j2':('j2.jpg', line('平和主義の縄文人',50,132,'w')+line('1万年もの間',598,104,'w')+line('なぜ争わなかった'+Q,752,134,'r')),
- 'j3':('j3.jpg', '<div class=band></div><div class=tag>速報</div><div class=gw>縄文人のDNA</div>\n'+line('遺伝子が語る',598,104,'w')+line('1万年も生き延びた理由',752,134,'r')),
+ 'j1':('g1.jpg', line('1万年続いた縄文文化',50,132,'w')+line('消滅させたのは何'+Q,736,158,'r')),
+ 'j2':('g2.jpg', line('平和主義の縄文人',50,132,'w')+line('1万年もの間',598,104,'w')+line('なぜ争わなかった'+Q,752,134,'r')),
+ 'j3':('g3.jpg', '<div class=band></div><div class=tag>速報</div><div class=gw>縄文人のDNA</div>\n'+line('遺伝子が語る',598,104,'w')+line('1万年も生き延びた理由',752,134,'r')),
 }
 for k,(bg,body) in pages.items():
     open(k+'.html','w').write(HEAD.replace('BG',bg)+body+'</body></html>')

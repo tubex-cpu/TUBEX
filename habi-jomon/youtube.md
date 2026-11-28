@@ -64,7 +64,7 @@
 ▼クレジット
 ナレーション：VOICEVOX:玄野武宏
 BGM・効果音：オリジナル
-サムネイル：本編の写真（大湯環状列石：掬茶 / CC BY-SA 4.0、三内丸山遺跡：663highland / CC BY 2.5、遮光器土偶：davide ferro / CC BY 2.0）をもとに作成
+サムネイル：画像生成AI（Google Gemini）で制作
 地図：Mapzen Terrain Tiles（SRTM ほか）の標高データをもとに作成
 写真・資料（Wikimedia Commons ほか）
 CC BY-SA 4.0：掬茶、Opqr、Marho、Indiana jo、Mccunicano、Ismoon、Fred Cherrygarden、ブルーノ・プラス、Totti、Kasakasa719、Michael Gunther、Phonon.b、Pekachu、Bariston、G41rn8、Koda6029、Alpsdake、Miyuki Meinaka、NevinThompson、そらみみ、Wc018、Asturio Cantabrio、Komoro no kaze、Aqua Regia 9278
